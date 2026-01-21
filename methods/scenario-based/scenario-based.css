@@ -1,0 +1,274 @@
+/* ===========================================
+   Scenario-Based Method
+   Branching narrative with choice tracking
+   =========================================== */
+
+/* ---------- Scenario Container ---------- */
+.scenario-container {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+}
+
+/* ---------- Scenario Scene ---------- */
+.scenario-scene {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transform: translateY(20px);
+    transition:
+        opacity var(--transition-slow),
+        transform var(--transition-slow),
+        max-height var(--transition-slow);
+}
+
+.scenario-scene.active {
+    opacity: 1;
+    max-height: 3000px;
+    transform: translateY(0);
+    margin-bottom: var(--space-lg);
+}
+
+/* ---------- Scene Content ---------- */
+.scene-content {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-lg);
+    padding: var(--space-xl);
+    position: relative;
+}
+
+.scene-content h2 {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-lg);
+}
+
+.scene-content h2::before {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 24px;
+    background: linear-gradient(180deg, var(--color-accent), var(--color-accent-hover));
+    border-radius: 2px;
+}
+
+/* Scene narrative text */
+.scene-narrative {
+    font-size: var(--font-size-lg);
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-xl);
+}
+
+.scene-narrative strong {
+    color: var(--color-text-primary);
+}
+
+/* ---------- Character/Persona ---------- */
+.scenario-character {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-md);
+    background-color: var(--color-surface-elevated);
+    border-radius: var(--border-radius);
+    margin-bottom: var(--space-lg);
+}
+
+.character-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--color-accent), var(--color-accent-hover));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.character-info {
+    flex: 1;
+}
+
+.character-name {
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-bottom: 2px;
+}
+
+.character-role {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+}
+
+/* ---------- Choice Options ---------- */
+.scenario-choices {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    margin-top: var(--space-xl);
+}
+
+.choice-option {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-md);
+    padding: var(--space-lg);
+    background-color: var(--color-surface-elevated);
+    border: 2px solid var(--color-border);
+    border-radius: var(--border-radius-lg);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    text-align: left;
+    font-family: inherit;
+    font-size: var(--font-size-base);
+    color: var(--color-text-primary);
+}
+
+.choice-option:hover {
+    border-color: var(--color-accent);
+    background-color: rgba(123, 92, 255, 0.1);
+    transform: translateX(4px);
+}
+
+.choice-option:active {
+    transform: translateX(2px);
+}
+
+.choice-option.selected {
+    border-color: var(--color-accent);
+    background-color: rgba(123, 92, 255, 0.15);
+    box-shadow: 0 0 20px var(--color-accent-glow);
+}
+
+.choice-option.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.choice-label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background-color: var(--color-accent);
+    color: white;
+    border-radius: 50%;
+    font-weight: 600;
+    font-size: var(--font-size-sm);
+    flex-shrink: 0;
+}
+
+.choice-text {
+    flex: 1;
+}
+
+.choice-text strong {
+    display: block;
+    margin-bottom: var(--space-xs);
+}
+
+.choice-text p {
+    margin: 0;
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+}
+
+/* ---------- Outcome/Feedback ---------- */
+.scenario-outcome {
+    margin-top: var(--space-lg);
+    padding: var(--space-lg);
+    background-color: var(--color-surface-elevated);
+    border-left: 4px solid var(--color-accent);
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all var(--transition-normal);
+}
+
+.scenario-outcome.visible {
+    opacity: 1;
+    max-height: 500px;
+    margin-top: var(--space-lg);
+}
+
+.outcome-title {
+    font-weight: 600;
+    color: var(--color-accent);
+    margin-bottom: var(--space-sm);
+}
+
+/* ---------- Scene Navigation ---------- */
+.scene-nav {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: var(--space-xl);
+}
+
+.scene-continue {
+    display: none;
+}
+
+.scene-continue.visible {
+    display: inline-flex;
+}
+
+/* ---------- Choice History ---------- */
+.choice-history {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-lg);
+}
+
+.history-item {
+    padding: var(--space-xs) var(--space-sm);
+    background-color: var(--color-surface-elevated);
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+}
+
+.history-item .choice-made {
+    color: var(--color-accent);
+    font-weight: 500;
+}
+
+/* ---------- Scenario Summary ---------- */
+.scenario-summary {
+    text-align: center;
+    padding: var(--space-2xl);
+}
+
+.summary-heading {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--space-lg);
+}
+
+.summary-choices {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    margin: var(--space-xl) 0;
+    text-align: left;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.summary-choice {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-md);
+    background-color: var(--color-surface);
+    border-radius: var(--border-radius);
+}
+
+.summary-choice .icon {
+    color: var(--color-accent);
+}
