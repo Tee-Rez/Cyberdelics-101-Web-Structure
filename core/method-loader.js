@@ -155,7 +155,8 @@ const MethodLoader = (function () {
 
     // ---------- Public API ----------
 
-    return {
+    // Expose globally
+    window.MethodLoader = {
         register,
         unregister,
         initAll,
@@ -170,4 +171,6 @@ const MethodLoader = (function () {
         // Debug access
         _getRegistry: function () { return registry; }
     };
+
+    return window.MethodLoader;
 })();

@@ -1,0 +1,191 @@
+/* Methods: Knowledge Construction */
+
+/* Container for the entire construction activity */
+.knowledge-construction-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1.5rem;
+    background: var(--color-surface, #12121a);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ------------------------------------------------------------------
+   CONSTRUCTION ZONE (Target)
+   ------------------------------------------------------------------ */
+.construction-zone {
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+    border: 2px dashed rgba(255, 255, 255, 0.2);
+    min-height: 150px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.construction-zone.drag-active {
+    border-color: var(--color-accent, #7b5cff);
+    background: rgba(123, 92, 255, 0.05);
+}
+
+/* The slots within the construction text/diagram */
+.kc-slot {
+    display: inline-block;
+    min-width: 120px;
+    height: 2.2rem;
+    vertical-align: middle;
+    background: rgba(0, 0, 0, 0.3);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    margin: 0 0.5rem;
+    padding: 2px 8px;
+    transition: all 0.2s ease;
+    cursor: default;
+    position: relative;
+}
+
+.kc-slot.drag-over {
+    background: rgba(123, 92, 255, 0.2);
+    border-bottom-color: var(--color-accent, #7b5cff);
+    transform: scale(1.05);
+}
+
+.kc-slot.correct {
+    background: rgba(46, 204, 113, 0.2);
+    border-bottom-color: #2ecc71;
+    color: #2ecc71;
+    cursor: default;
+    pointer-events: none;
+    /* Lock it in */
+}
+
+.kc-slot.incorrect {
+    animation: shake 0.4s cubic-bezier(.36, .07, .19, .97) both;
+    border-bottom-color: #e74c3c;
+}
+
+/* ------------------------------------------------------------------
+   SOURCE BANK (Draggables)
+   ------------------------------------------------------------------ */
+.source-bank {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    min-height: 80px;
+    align-items: center;
+}
+
+.source-bank-label {
+    width: 100%;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.kc-item {
+    background: var(--color-surface, #1e1e24);
+    border: 1px solid var(--color-accent, #7b5cff);
+    color: var(--color-text-primary, #e8e8f0);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: grab;
+    user-select: none;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 0.95rem;
+    z-index: 10;
+}
+
+.kc-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(123, 92, 255, 0.3);
+}
+
+.kc-item:active {
+    cursor: grabbing;
+}
+
+.kc-item.dragging {
+    opacity: 0.5;
+    transform: scale(0.95);
+}
+
+/* When item is placed effectively in a slot */
+.kc-slot .kc-item {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    cursor: default;
+}
+
+/* ------------------------------------------------------------------
+   FEEDBACK & UTILS
+   ------------------------------------------------------------------ */
+.kc-feedback {
+    min-height: 2rem;
+    text-align: center;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.kc-feedback.show {
+    opacity: 1;
+}
+
+.kc-feedback.success {
+    color: #2ecc71;
+}
+
+.kc-feedback.error {
+    color: #e74c3c;
+}
+
+@keyframes shake {
+
+    10%,
+    90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%,
+    80% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+
+    40%,
+    60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .kc-slot {
+        min-width: 80px;
+        font-size: 0.9rem;
+    }
+
+    .construction-zone {
+        padding: 1rem;
+        line-height: 2.2rem;
+    }
+}
