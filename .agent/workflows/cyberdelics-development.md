@@ -109,16 +109,52 @@ The Framer bridge is scaffolded but not active. When ready:
 - Events: `cyberdelics-started`, `cyberdelics-progress`, `cyberdelics-complete`
 - Lesson ID passed with each message
 
----
+## VERSION CONTROL (REQUIRED)
 
-## VERSION CONTROL RECOMMENDATION
-Before major changes, consider:
-```bash
-git init
-git add .
-git commit -m "Working state: [description]"
+**Repository:** https://github.com/Tee-Rez/Cyberdelics-101-Web-Structure
+
+### After Completing ANY Section/Feature:
+// turbo
+1. Agent MUST ask: "Would you like to commit and push these changes to GitHub?"
+2. If yes, run:
+   ```bash
+   git add .
+   git commit -m "[SUMMARY]"
+   git push
+   ```
+3. The commit message should summarize what was completed
+
+### Commit Message Format:
 ```
-This creates restore points.
+[TYPE]: Brief description
+
+- Bullet points of specific changes
+- Files added/modified
+```
+
+**Types:**
+- `feat:` New feature or method
+- `fix:` Bug fix
+- `refactor:` Code restructure (no new features)
+- `docs:` Documentation changes
+- `style:` CSS/visual changes
+
+### Example Commit:
+```
+feat: Add Scenario-Based teaching method
+
+- Created methods/scenario-based/scenario-based.css
+- Created methods/scenario-based/scenario-based.js
+- Implements branching narrative with choice tracking
+```
+
+### Quick Commands:
+| Action | Command |
+|--------|---------|
+| Save & push | `git add . && git commit -m "msg" && git push` |
+| View history | `git log --oneline -10` |
+| Revert file | `git checkout -- [file]` |
+| Undo last commit | `git reset --soft HEAD~1` |
 
 ---
 
