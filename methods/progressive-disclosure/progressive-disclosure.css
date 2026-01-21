@@ -1,0 +1,155 @@
+/* ===========================================
+   Progressive Disclosure Method
+   Click-to-reveal content sections
+   =========================================== */
+
+/* ---------- Reveal Sections ---------- */
+.reveal-section {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transform: translateY(20px);
+    transition:
+        opacity var(--transition-slow),
+        transform var(--transition-slow),
+        max-height var(--transition-slow);
+    margin-bottom: 0;
+}
+
+.reveal-section.active {
+    opacity: 1;
+    max-height: 2000px;
+    /* Large enough to contain content */
+    transform: translateY(0);
+    margin-bottom: var(--space-lg);
+}
+
+/* First section should be visible by default */
+.reveal-section:first-of-type {
+    opacity: 1;
+    max-height: 2000px;
+    transform: translateY(0);
+    margin-bottom: var(--space-lg);
+}
+
+/* ---------- Content Cards in Sections ---------- */
+.reveal-section .section-content {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-lg);
+    padding: var(--space-lg);
+}
+
+.reveal-section h2 {
+    color: var(--color-text-primary);
+    margin-bottom: var(--space-md);
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.reveal-section h2::before {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 24px;
+    background: linear-gradient(180deg, var(--color-accent), var(--color-accent-hover));
+    border-radius: 2px;
+}
+
+/* ---------- Reveal Trigger Button ---------- */
+.reveal-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-md) var(--space-lg);
+    margin-top: var(--space-lg);
+    background-color: var(--color-accent);
+    color: white;
+    font-family: inherit;
+    font-size: var(--font-size-base);
+    font-weight: 500;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    box-shadow: 0 0 20px var(--color-accent-glow);
+}
+
+.reveal-trigger:hover {
+    background-color: var(--color-accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 24px var(--color-accent-glow);
+}
+
+.reveal-trigger:active {
+    transform: translateY(0);
+}
+
+/* Arrow icon */
+.reveal-trigger::after {
+    content: '→';
+    font-size: 1.1em;
+    transition: transform var(--transition-fast);
+}
+
+.reveal-trigger:hover::after {
+    transform: translateX(4px);
+}
+
+/* Hide trigger once section is revealed (next section handles continue) */
+.reveal-section.revealed .reveal-trigger {
+    display: none;
+}
+
+/* ---------- Completion Section ---------- */
+.lesson-complete {
+    text-align: center;
+    padding: var(--space-2xl) var(--space-lg);
+}
+
+.lesson-complete h2 {
+    justify-content: center;
+}
+
+.lesson-complete h2::before {
+    display: none;
+}
+
+.complete-lesson-btn {
+    padding: var(--space-lg) var(--space-2xl);
+    font-size: var(--font-size-lg);
+}
+
+/* Completion celebration state */
+.lesson-complete.celebrating {
+    animation: celebrate 0.6s ease;
+}
+
+@keyframes celebrate {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.02);
+    }
+}
+
+/* ---------- Step Counter ---------- */
+.step-counter {
+    display: inline-block;
+    padding: var(--space-xs) var(--space-sm);
+    background-color: var(--color-surface-elevated);
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-md);
+}
+
+.step-counter .current {
+    color: var(--color-accent);
+    font-weight: 600;
+}
