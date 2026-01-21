@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Framer Test Harness - Lesson Completion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+            width: 100%;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .lesson-frame {
+            flex: 1;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .lesson-frame h2 {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        iframe {
+            flex: 1;
+            border: none;
+            width: 100%;
+            min-height: 600px;
+        }
+
+        .console-panel {
+            width: 400px;
+            background: #1e1e1e;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .console-header {
+            background: #2d2d2d;
+            color: #fff;
+            padding: 20px;
+            border-bottom: 1px solid #3d3d3d;
+        }
+
+        .console-header h2 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .console-header p {
+            font-size: 13px;
+            color: #888;
+        }
+
+        .status-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 12px;
+            padding: 8px 12px;
+            background: #3d3d3d;
+            border-radius: 6px;
+            font-size: 13px;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #888;
+            animation: pulse 2s infinite;
+        }
+
+        .status-dot.listening {
+            background: #4ade80;
+        }
+
+        .status-dot.completed {
+            background: #60a5fa;
+            animation: none;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        .console-log {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .log-entry {
+            margin-bottom: 16px;
+            padding: 12px;
+            background: #2d2d2d;
+            border-radius: 6px;
+            border-left: 3px solid #888;
+        }
+
+        .log-entry.event-started {
+            border-left-color: #60a5fa;
+        }
+
+        .log-entry.event-complete {
+            border-left-color: #4ade80;
+            background: #1a3a2a;
+        }
+
+        .log-timestamp {
+            color: #888;
+            font-size: 11px;
+            margin-bottom: 6px;
+        }
+
+        .log-type {
+            color: #60a5fa;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .log-entry.event-complete .log-type {
+            color: #4ade80;
+        }
+
+        .log-data {
+            color: #d4d4d4;
+        }
+
+        .log-key {
+            color: #9cdcfe;
+        }
+
+        .log-string {
+            color: #ce9178;
+        }
+
+        .log-number {
+            color: #b5cea8;
+        }
+
+        .empty-state {
+            color: #666;
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 14px;
+        }
+
+        .completion-highlight {
+            background: #1a3a2a;
+            border: 2px solid #4ade80;
+            padding: 16px;
+            border-radius: 8px;
+            margin-top: 8px;
+        }
+
+        .completion-highlight strong {
+            color: #4ade80;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Lesson iframe (simulates Framer embedding) -->
+        <div class="lesson-frame">
+            <h2>📚 Embedded Lesson (Simulates Framer)</h2>
+            <iframe id="lessonFrame" src="./lessons/introduction/index.html"></iframe>
+        </div>
+
+        <!-- Console panel (simulates Framer message listener) -->
+        <div class="console-panel">
+            <div class="console-header">
+                <h2>Framer Message Console</h2>
+                <p>Listening for lesson completion events</p>
+                <div class="status-indicator">
+                    <span class="status-dot listening" id="statusDot"></span>
+                    <span id="statusText">Waiting for completion...</span>
+                </div>
+            </div>
+            <div class="console-log" id="consoleLog">
+                <div class="empty-state">
+                    👋 Navigate through the lesson and click "Complete Introduction" to see the message appear here.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const consoleLog = document.getElementById('consoleLog');
+        const statusDot = document.getElementById('statusDot');
+        const statusText = document.getElementById('statusText');
+
+        // Listen for messages from the embedded lesson
+        window.addEventListener('message', function (event) {
+            // Only process COMPLETION messages from our course
+            if (event.data &&
+                event.data.source === 'cyberdelics-101' &&
+                event.data.type === 'cyberdelics-complete') {
+
+                // Clear empty state
+                consoleLog.innerHTML = '';
+
+                // Update status indicator
+                statusDot.className = 'status-dot completed';
+                statusText.textContent = '✓ Lesson completed!';
+
+                // Create log entry
+                const logEntry = document.createElement('div');
+                logEntry.className = 'log-entry event-complete';
+
+                // Format timestamp
+                const timestamp = new Date(event.data.timestamp).toLocaleTimeString();
+
+                // Build log content
+                let logHTML = `
+                    <div class="log-timestamp">${timestamp}</div>
+                    <div class="log-type">${event.data.type}</div>
+                    <div class="log-data">
+                        {<br>
+                        &nbsp;&nbsp;<span class="log-key">source</span>: <span class="log-string">"${event.data.source}"</span>,<br>
+                        &nbsp;&nbsp;<span class="log-key">lessonId</span>: <span class="log-string">"${event.data.lessonId}"</span>,<br>
+                        &nbsp;&nbsp;<span class="log-key">timestamp</span>: <span class="log-number">${event.data.timestamp}</span>,<br>
+                        &nbsp;&nbsp;<span class="log-key">completedAt</span>: <span class="log-string">"${event.data.completedAt}"</span><br>
+                        }
+                    </div>
+                `;
+
+                logEntry.innerHTML = logHTML;
+
+                // Highlight completion event
+                const highlight = document.createElement('div');
+                highlight.className = 'completion-highlight';
+                highlight.innerHTML = '<strong>🎉 LESSON COMPLETED!</strong><br>This message can now be sent to Outseta or any other system.';
+                logEntry.appendChild(highlight);
+
+                // Add to console
+                consoleLog.appendChild(logEntry);
+
+                // Log to browser console as well
+                console.log('[Framer received COMPLETION message]', event.data);
+            }
+        });
+
+        console.log('🎯 Framer Test Harness Ready');
+        console.log('📡 Listening for COMPLETION messages only...');
+    </script>
+</body>
+
+</html>
