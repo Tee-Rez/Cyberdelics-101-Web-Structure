@@ -8,7 +8,7 @@
  * - Lesson state management
  */
 
-const CourseCore = (function() {
+const CourseCore = (function () {
     'use strict';
 
     // ---------- Private State ----------
@@ -22,14 +22,14 @@ const CourseCore = (function() {
 
     // ---------- Framer Communication Framework ----------
     // Scaffolded for future integration - logs to console for now
-    
+
     const FramerBridge = {
         /**
          * Send message to Framer parent window
          * @param {string} eventType - Event identifier
          * @param {object} data - Payload to send
          */
-        postMessage: function(eventType, data) {
+        postMessage: function (eventType, data) {
             const message = {
                 source: 'cyberdelics-101',
                 type: eventType,
@@ -53,36 +53,36 @@ const CourseCore = (function() {
          * Send progress update
          * @param {number} progress - Progress value 0-1
          */
-        sendProgress: function(progress) {
+        sendProgress: function (progress) {
             this.postMessage('cyberdelics-progress', { progress });
         },
 
         /**
          * Send lesson completion event
          */
-        sendComplete: function() {
-            this.postMessage('cyberdelics-complete', { 
-                completedAt: new Date().toISOString() 
+        sendComplete: function () {
+            this.postMessage('cyberdelics-complete', {
+                completedAt: new Date().toISOString()
             });
         },
 
         /**
          * Send lesson started event
          */
-        sendStarted: function() {
+        sendStarted: function () {
             this.postMessage('cyberdelics-started', {});
         }
     };
 
     // ---------- Progress Tracking ----------
-    
+
     const Progress = {
         /**
          * Update progress bar UI
          */
-        updateUI: function() {
-            const progressPercent = config.totalSteps > 0 
-                ? Math.round((config.currentStep / config.totalSteps) * 100) 
+        updateUI: function () {
+            const progressPercent = config.totalSteps > 0
+                ? Math.round((config.currentStep / config.totalSteps) * 100)
                 : 0;
 
             // Update progress bar fill
@@ -102,7 +102,7 @@ const CourseCore = (function() {
          * Set total number of steps
          * @param {number} total 
          */
-        setTotal: function(total) {
+        setTotal: function (total) {
             config.totalSteps = total;
             this.updateUI();
         },
@@ -110,11 +110,11 @@ const CourseCore = (function() {
         /**
          * Advance to next step
          */
-        advance: function() {
+        advance: function () {
             if (config.currentStep < config.totalSteps) {
                 config.currentStep++;
                 this.updateUI();
-                
+
                 // Notify Framer of progress
                 const progress = config.currentStep / config.totalSteps;
                 FramerBridge.sendProgress(progress);
@@ -124,27 +124,27 @@ const CourseCore = (function() {
         /**
          * Get current progress (0-1)
          */
-        getProgress: function() {
-            return config.totalSteps > 0 
-                ? config.currentStep / config.totalSteps 
+        getProgress: function () {
+            return config.totalSteps > 0
+                ? config.currentStep / config.totalSteps
                 : 0;
         },
 
         /**
          * Check if all steps are complete
          */
-        isAllComplete: function() {
+        isAllComplete: function () {
             return config.currentStep >= config.totalSteps;
         }
     };
 
     // ---------- Completion ----------
-    
+
     const Completion = {
         /**
          * Enable the completion button
          */
-        enableButton: function() {
+        enableButton: function () {
             const completeBtn = document.querySelector('.complete-lesson-btn');
             if (completeBtn) {
                 completeBtn.disabled = false;
@@ -154,9 +154,9 @@ const CourseCore = (function() {
         /**
          * Mark lesson as complete
          */
-        markComplete: function() {
+        markComplete: function () {
             if (config.isComplete) return;
-            
+
             config.isComplete = true;
             FramerBridge.sendComplete();
 
@@ -167,14 +167,14 @@ const CourseCore = (function() {
     };
 
     // ---------- Public API ----------
-    
+
     return {
         /**
          * Initialize the course core for a lesson
          * @param {string} lessonId - Unique identifier for this lesson
          * @param {object} options - Optional configuration
          */
-        init: function(lessonId, options = {}) {
+        init: function (lessonId, options = {}) {
             config.lessonId = lessonId;
             config.debug = options.debug !== undefined ? options.debug : true;
             config.currentStep = 0;
@@ -199,41 +199,48 @@ const CourseCore = (function() {
         /**
          * Set total steps for progress tracking
          */
-        setTotalSteps: function(total) {
+        setTotalSteps: function (total) {
             Progress.setTotal(total);
         },
 
         /**
          * Advance progress by one step
          */
-        advanceProgress: function() {
+        advanceProgress: function () {
             Progress.advance();
         },
 
         /**
          * Check if all content steps are complete
          */
-        isAllContentComplete: function() {
+        isAllContentComplete: function () {
             return Progress.isAllComplete();
         },
 
         /**
          * Enable the lesson completion button
          */
-        enableCompletion: function() {
+        enableCompletion: function () {
             Completion.enableButton();
         },
 
         /**
          * Get current progress (0-1)
          */
-        getProgress: function() {
+        getProgress: function () {
             return Progress.getProgress();
         },
 
         /**
          * Access to Framer bridge for custom messages
          */
-        framer: FramerBridge
+        framer: FramerBridge,
+
+        /**
+         * Manually trigger lesson completion
+         */
+        completeLesson: function () {
+            Completion.markComplete();
+        }
     };
 })();
