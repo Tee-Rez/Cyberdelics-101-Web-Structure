@@ -157,9 +157,15 @@ window.TimelineZoom = {
 
         // Collect Button Click
         document.querySelector('.tz-collect-btn').addEventListener('click', () => {
+            console.log('[TimelineZoom] Collect clicked. ActiveItem:', this.activeItem);
+
             if (this.activeItem) {
-                this.engine.collectItem(this.activeItem.id);
-                this.updateInfoPanelState(true);
+                if (this.engine) {
+                    this.engine.collectItem(this.activeItem.id);
+                    this.updateInfoPanelState(true);
+                } else {
+                    console.error('[TimelineZoom] No Engine instance found!', this);
+                }
             }
         });
 
@@ -227,7 +233,8 @@ window.TimelineZoom = {
         panel.querySelector('.tz-info-desc').textContent = itemData.description;
 
         // Check if collected
-        const isCollected = this.engine.state.collectedIds.has(itemId);
+        // FIX: Use hasCollected helper instead of direct state access
+        const isCollected = this.engine.hasCollected(itemId);
         this.updateInfoPanelState(isCollected);
 
         panel.classList.add('visible');
@@ -271,7 +278,8 @@ window.TimelineZoom = {
 
     updateEraCount: function (eraId) {
         const era = this.data.eras.find(e => e.id === eraId);
-        const collectedCount = era.items.filter(i => this.engine.state.collectedIds.has(i.id)).length;
+        // FIX: Use hasCollected helper
+        const collectedCount = era.items.filter(i => this.engine.hasCollected(i.id)).length;
 
         const node = document.querySelector(`.tz-era-node[data-id="${eraId}"] .tz-era-count`);
         if (node) {

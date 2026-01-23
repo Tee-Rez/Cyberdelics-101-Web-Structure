@@ -1,0 +1,164 @@
+/* Methods: Interactive Simulation */
+
+/* Main Container */
+.interactive-simulation-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background: var(--color-surface, #12121a);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (min-width: 900px) {
+    .interactive-simulation-container {
+        flex-direction: row;
+        align-items: stretch;
+    }
+}
+
+/* ------------------------------------------------------------------
+   VISUALIZATION VIEWPORT
+   ------------------------------------------------------------------ */
+.sim-viewport {
+    flex: 2;
+    background: #000;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    min-height: 400px;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.sim-canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.sim-overlay {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 0.8rem;
+    color: var(--color-accent, #7b5cff);
+    pointer-events: none;
+}
+
+/* ------------------------------------------------------------------
+   CONTROLS PANEL
+   ------------------------------------------------------------------ */
+.sim-controls {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background: rgba(255, 255, 255, 0.02);
+    padding: 1.5rem;
+    border-radius: 8px;
+    min-width: 250px;
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.control-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+}
+
+.control-value {
+    font-family: monospace;
+    color: var(--color-accent, #7b5cff);
+}
+
+/* Range Inputs (Sliders) */
+input[type=range] {
+    -webkit-appearance: none;
+    width: 100%;
+    background: transparent;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+/* Slider Track */
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    transition: all 0.2s;
+}
+
+input[type=range]:hover::-webkit-slider-runnable-track {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Slider Thumb */
+input[type=range]::-webkit-slider-thumb {
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    background: var(--color-accent, #7b5cff);
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -6px;
+    /* center on track */
+    box-shadow: 0 0 10px rgba(123, 92, 255, 0.5);
+    transition: transform 0.1s;
+}
+
+input[type=range]:active::-webkit-slider-thumb {
+    transform: scale(1.2);
+    background: #9d85ff;
+}
+
+/* Playback Controls */
+.playback-controls {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sim-btn {
+    flex: 1;
+    padding: 0.6rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 0.9rem;
+}
+
+.sim-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.sim-btn.primary {
+    background: var(--color-accent, #7b5cff);
+    border-color: var(--color-accent, #7b5cff);
+}
+
+.sim-btn.primary:hover {
+    background: #6a4ce0;
+}

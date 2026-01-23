@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberdelic Methods Composition Test</title>
+
+    <!-- Shared Styles -->
+    <link rel="stylesheet" href="../../core/styles.css">
+    <link rel="stylesheet" href="interactive-simulation/interactive-simulation.css">
+    <link rel="stylesheet" href="knowledge-construction/knowledge-construction.css">
+
+    <style>
+        body {
+            background-color: #050510;
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #333;
+            padding-bottom: 1rem;
+        }
+
+        h1 {
+            margin: 0;
+            color: #00D9FF;
+        }
+
+        p {
+            color: #aaa;
+        }
+
+        .lesson-container {
+            border: 1px solid #333;
+            border-radius: 8px;
+            padding: 1rem;
+            min-height: 500px;
+            background: #0a0a15;
+            position: relative;
+        }
+
+        .lesson-controls {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem;
+            background: #111;
+            border-radius: 8px;
+        }
+
+        button {
+            background: #222;
+            color: white;
+            border: 1px solid #444;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background: #333;
+        }
+
+        button.primary {
+            background: #00D9FF;
+            color: black;
+            border: none;
+        }
+
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        /* Mock Content for Knowledge Construction */
+        .kc-mock-content {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Method Composition Test</h1>
+        <p>Demonstrating sequential loading and nesting of teaching methods.</p>
+    </header>
+
+    <div class="lesson-controls">
+        <button id="btn-prev" disabled>Previous Step</button>
+        <div id="step-indicator">Step 1: Simulation</div>
+        <button id="btn-next" class="primary">Next Step</button>
+    </div>
+
+    <!-- The Container where methods will be injected -->
+    <div id="active-method-container" class="lesson-container">
+        <!-- Content injected via JS -->
+    </div>
+
+    <!-- Scripts -->
+    <script src="../../core/method-base.js"></script>
+    <script src="interactive-simulation/interactive-simulation.js"></script>
+    <!-- Mock Engine for Simulation -->
+    <script>
+        // Quick Mock Engine for testing
+        window.SimulationEngines = window.SimulationEngines || {};
+        window.SimulationEngines['mock-sim'] = {
+            defaults: { intensity: 50 },
+            config: [{ id: 'intensity', label: 'Intensity', min: 0, max: 100, step: 1 }],
+            init: function (viewport, params) {
+                this.viewport = viewport;
+                this.div = document.createElement('div');
+                this.div.style.width = '100%';
+                this.div.style.height = '100%';
+                this.div.style.display = 'flex';
+                this.div.style.alignItems = 'center';
+                this.div.style.justifyContent = 'center';
+                this.div.style.fontSize = '2rem';
+                this.div.textContent = `Intensity: ${params.intensity}%`;
+                this.div.style.background = `linear-gradient(90deg, #000 ${100 - params.intensity}%, #00D9FF 100%)`;
+                viewport.appendChild(this.div);
+            },
+            update: function (dt, params) {
+                if (this.div) {
+                    this.div.textContent = `Intensity: ${params.intensity}%`;
+                    this.div.style.background = `linear-gradient(90deg, #000 ${100 - params.intensity}%, #00D9FF 100%)`;
+                }
+            },
+            destroy: function () { }
+        };
+    </script>
+    <script src="knowledge-construction/knowledge-construction.js"></script>
+
+    <script>
+        /**
+         * Simple Lesson Controller
+         * Strings together methods
+         */
+        /**
+         * Simple Lesson Controller
+         * Strings together methods with STATE PASSING
+         */
+        const LessonController = {
+            // Shared State Checkboard
+            lessonState: {
+                simIntensity: 50 // Default
+            },
+
+            steps: [
+                {
+                    id: 'step1',
+                    type: 'interactive-simulation',
+                    options: { engine: 'mock-sim' },
+                    template: `
+                        <div class="interactive-simulation-container">
+                            <div class="sim-viewport"></div>
+                            <div class="sim-controls"></div>
+                        </div>
+                    `
+                },
+                {
+                    id: 'step2',
+                    type: 'knowledge-construction',
+                    // Options will be dynamic based on state
+                    options: (state) => ({
+                        items: [
+                            { id: 'cyber', text: 'Cybernetics' },
+                            { id: 'delic', text: 'Psychedelics' },
+                            { id: 'tech', text: 'Technology' },
+                            // Bonus item if intensity is high
+                            ...(state.simIntensity > 80 ? [{ id: 'bonus', text: 'High Intensity Bonus' }] : [])
+                        ]
+                    }),
+                    template: `
+                        <div class="knowledge-construction-container">
+                            <h3>Construct the Definition</h3>
+                            <p>Drag the correct terms into the slots below.</p>
+                            <div class="construction-zone">
+                                <span>Cyberdelics is the fusion of </span>
+                                <span class="kc-slot" data-correct="cyber"></span>
+                                <span> and </span>
+                                <span class="kc-slot" data-correct="delic"></span>
+                                <span> mediated by </span>
+                                <span class="kc-slot" data-correct="tech"></span>
+                                <span>.</span>
+                            </div>
+                            <div class="source-bank"></div>
+                        </div>
+                    `
+                }
+            ],
+            currentStepIndex: 0,
+            activeMethod: null,
+            container: document.getElementById('active-method-container'),
+            nextBtn: document.getElementById('btn-next'),
+            prevBtn: document.getElementById('btn-prev'),
+            indicator: document.getElementById('step-indicator'),
+
+            init: function () {
+                this.loadStep(0);
+
+                this.nextBtn.onclick = () => {
+                    if (this.currentStepIndex < this.steps.length - 1) {
+                        this.loadStep(this.currentStepIndex + 1);
+                    } else {
+                        alert('Lesson Complete!');
+                    }
+                };
+
+                this.prevBtn.onclick = () => {
+                    if (this.currentStepIndex > 0) {
+                        this.loadStep(this.currentStepIndex - 1);
+                    }
+                };
+            },
+
+            loadStep: function (index) {
+                // 1. Cleanup old
+                if (this.activeMethod) {
+                    // Capture State before destroying
+                    if (this.activeMethod._getName() === 'interactive-simulation') {
+                        // Access internal state for demo (in real app, use events)
+                        // FIX: Use _state directly (the instance state), not _getState()
+                        // The structure is activeMethod._state.params.intensity
+                        const simInstance = this.activeMethod;
+                        if (simInstance._state && simInstance._state.params) {
+                            this.lessonState.simIntensity = simInstance._state.params.intensity;
+                            console.log("Captured State:", this.lessonState);
+                        } else {
+                            console.warn("Could not find params in simulation state", simInstance);
+                        }
+                    }
+
+                    this.activeMethod.destroy();
+                    this.activeMethod = null;
+                }
+                this.container.innerHTML = '';
+
+                // 2. Setup New DOM
+                this.currentStepIndex = index;
+                const step = this.steps[index];
+                this.container.innerHTML = step.template;
+
+                // 3. Initialize Method
+                let methodFactory;
+                if (step.type === 'interactive-simulation') methodFactory = window.InteractiveSimulationMethod;
+                if (step.type === 'knowledge-construction') methodFactory = window.KnowledgeConstructionMethod;
+
+                if (methodFactory) {
+                    this.activeMethod = methodFactory;
+
+                    const selector = step.type === 'interactive-simulation'
+                        ? '.interactive-simulation-container'
+                        : '.knowledge-construction-container';
+
+                    const el = this.container.querySelector(selector);
+
+                    // Resolve options (static object or function of state)
+                    let opts = step.options;
+                    if (typeof opts === 'function') {
+                        opts = opts(this.lessonState);
+                    }
+
+                    this.activeMethod.init(el, opts);
+                }
+
+                // 4. Update UI
+                this.indicator.textContent = `Step ${index + 1}: ${step.type}`;
+                this.prevBtn.disabled = index === 0;
+                this.nextBtn.textContent = index === this.steps.length - 1 ? 'Finish' : 'Next Step';
+            }
+        };
+
+        // Start
+        setTimeout(() => LessonController.init(), 100);
+
+    </script>
+</body>
+
+</html>

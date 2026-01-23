@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberdelic Grand Composition Test</title>
+
+    <!-- Shared Styles -->
+    <link rel="stylesheet" href="../../core/styles.css">
+    <link rel="stylesheet" href="interactive-simulation/interactive-simulation.css">
+    <link rel="stylesheet" href="knowledge-construction/knowledge-construction.css">
+    <link rel="stylesheet" href="progressive-disclosure/progressive-disclosure.css">
+    <link rel="stylesheet" href="scenario-based/scenario-based.css">
+    <link rel="stylesheet" href="gamified-exploration/gamified-exploration.css">
+
+    <style>
+        body {
+            background-color: #050510;
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            padding: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #00D9FF;
+        }
+
+        .lesson-container {
+            border: 1px solid #333;
+            border-radius: 8px;
+            padding: 1rem;
+            min-height: 500px;
+            /* Minimal height for consistent layout */
+            background: #0a0a15;
+            position: relative;
+            margin-top: 1rem;
+        }
+
+        .lesson-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #111;
+            padding: 1rem;
+            border-radius: 8px;
+        }
+
+        .debug-console {
+            margin-top: 2rem;
+            background: #111;
+            color: #0f0;
+            font-family: monospace;
+            padding: 1rem;
+            border-radius: 4px;
+            max-height: 150px;
+            overflow-y: auto;
+            border: 1px solid #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Grand Composition Test</h1>
+    <p>A full lesson flow connecting 5 unique teaching methods.</p>
+
+    <div class="lesson-meta">
+        <div id="step-name">Step 1: Introduction</div>
+        <button id="btn-next"
+            style="display:none; padding:0.5rem 1rem; background:#00D9FF; color:black; border:none; border-radius:4px; cursor:pointer;">
+            Force Next >>
+        </button>
+    </div>
+
+    <!-- Active Method Container -->
+    <div id="method-container" class="lesson-container"></div>
+
+    <div class="debug-console" id="debug-log">Waiting for start...</div>
+
+    <!-- Scripts -->
+    <script src="../../core/method-base.js"></script>
+    <script src="interactive-simulation/interactive-simulation.js"></script>
+    <script src="knowledge-construction/knowledge-construction.js"></script>
+    <script src="progressive-disclosure/progressive-disclosure.js"></script>
+    <script src="scenario-based/scenario-based.js"></script>
+    <script src="gamified-exploration/gamified-exploration.js"></script>
+
+    <!-- Mock Engines & Modules -->
+    <script>
+        // Mock Sim
+        window.SimulationEngines = window.SimulationEngines || {};
+        window.SimulationEngines['mock-sim'] = {
+            defaults: { i: 50 },
+            config: [{ id: 'i', label: 'Intensity', min: 0, max: 100, step: 1 }],
+            init: function (viewport, params) {
+                viewport.innerHTML = `<div style="padding:2rem; font-size:2rem; background:linear-gradient(90deg, #000, #0ff);">Sim Running: ${params.i}</div>`;
+            },
+            update: function () { },
+            destroy: function () { }
+        };
+
+        // Mock Game Module
+        const TimelineGame = {
+            name: 'MockTimeline',
+            init: function (engine, data, container) {
+                this.engine = engine;
+                const div = document.createElement('div');
+                div.innerHTML = `<h3>Collect 3 Eras</h3><div style="display:flex; gap:1rem;"><button id="btn-collect">Collect One</button></div>`;
+                container.appendChild(div);
+
+                div.querySelector('#btn-collect').onclick = () => {
+                    // Mock finding a random item
+                    const id = 'item-' + Math.floor(Math.random() * 3);
+                    this.engine.collectItem(id);
+                };
+            },
+            countItems: () => 3
+        };
+    </script>
+
+    <script>
+        const log = (msg) => {
+            const el = document.getElementById('debug-log');
+            el.innerHTML += `<div>> ${msg}</div>`;
+            el.scrollTop = el.scrollHeight;
+        };
+
+        const LessonController = {
+            container: document.getElementById('method-container'),
+            activeMethod: null,
+            currentIndex: 0,
+
+            // The Chain of Responsibility
+            steps: [
+                {
+                    name: 'Progressive Disclosure (Intro)',
+                    type: 'progressive-disclosure',
+                    init: (container) => {
+                        container.innerHTML = `
+                            <div class="progressive-disclosure-container">
+                                <div class="step-counter"></div>
+                                <div class="reveal-section active">
+                                    <div class="section-content">
+                                        <h2>Welcome</h2>
+                                        <p>This is the start of the Mega Lesson.</p>
+                                        <button class="reveal-trigger">Start Journey</button>
+                                    </div>
+                                </div>
+                                <div class="reveal-section lesson-complete">
+                                    <h2>Ready?</h2>
+                                    <p>Proceed to the scenario.</p>
+                                </div>
+                            </div>`;
+                        const m = window.ProgressiveDisclosureMethod;
+                        m.init('.progressive-disclosure-container');
+                        return m;
+                    }
+                },
+                {
+                    name: 'Scenario (Choice)',
+                    type: 'scenario-based',
+                    init: (container) => {
+                        // Dynamically inject template
+                        container.innerHTML = `
+                             <div class="scenario-container">
+                                <div class="scenario-scene active" data-scene-id="1">
+                                    <div class="scene-content">
+                                        <h2>Choose Your Path</h2>
+                                        <p class="scene-narrative">Do you want to focus on Tech or Bio?</p>
+                                        <div class="scenario-choices">
+                                            <div class="choice-option" data-choice-id="tech"><div class="choice-text"><strong>Technology</strong></div></div>
+                                            <div class="choice-option" data-choice-id="bio"><div class="choice-text"><strong>Biology</strong></div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                        const m = window.ScenarioBased;
+                        m.init('.scenario-container');
+                        return m;
+                    }
+                },
+                {
+                    name: 'Simulation (Experience)',
+                    type: 'interactive-simulation',
+                    options: (prevData) => {
+                        // Use data from Scenario?
+                        // Hacky for now, assume default
+                        return { engine: 'mock-sim' };
+                    },
+                    init: (container, opts) => {
+                        container.innerHTML = `
+                            <div class="interactive-simulation-container">
+                                <div class="sim-viewport"></div>
+                                <div class="sim-controls"></div>
+                            </div>`;
+                        const m = window.InteractiveSimulationMethod;
+                        m.init('.interactive-simulation-container', opts);
+                        return m;
+                    }
+                },
+                {
+                    name: 'Gamified Exploration (Unlock)',
+                    type: 'gamified-exploration',
+                    init: (container) => {
+                        // Ensure generic container style
+                        const m = window.GamifiedExplorationMethod;
+                        m.init(container, {
+                            module: TimelineGame,
+                            debug: true
+                        });
+                        return m;
+                    }
+                },
+                {
+                    name: 'Knowledge Construction (Synthesis)',
+                    type: 'knowledge-construction',
+                    init: (container) => {
+                        container.innerHTML = `
+                        <div class="knowledge-construction-container">
+                            <h3>Final Synthesis</h3>
+                            <div class="construction-zone">
+                                <span>We have explored </span><span class="kc-slot" data-correct="all"></span>.
+                            </div>
+                            <div class="source-bank"></div>
+                        </div>`;
+                        const m = window.KnowledgeConstructionMethod;
+                        m.init('.knowledge-construction-container', {
+                            items: [{ id: 'all', text: 'Everything' }]
+                        });
+                        return m;
+                    }
+                }
+            ],
+
+            start: function () {
+                this.loadStep(0);
+
+                // Debug Force Next
+                document.getElementById('btn-next').onclick = () => this.nextStep();
+            },
+
+            loadStep: function (index) {
+                if (index >= this.steps.length) {
+                    alert("Mega Lesson Complete!");
+                    return;
+                }
+
+                this.currentIndex = index;
+                const step = this.steps[index];
+                document.getElementById('step-name').textContent = `Step ${index + 1}: ${step.name}`;
+                log(`Loading ${step.name}...`);
+
+                // Cleanup
+                if (this.activeMethod && this.activeMethod.destroy) {
+                    this.activeMethod.destroy();
+                }
+                this.container.innerHTML = ''; // Clear DOM
+
+                // Init
+                // Note: The 'init' function in step definition is a helper to setup HTML + JS
+                if (step.init) {
+                    this.activeMethod = step.init(this.container, {}); // Pass container
+
+                    // Auto-advance listeners
+                    this.attachAutoAdvance(step.type);
+                }
+            },
+
+            attachAutoAdvance: function (type) {
+                const method = this.activeMethod;
+
+                const handleComplete = () => {
+                    log(`${type} Complete! Advancing...`);
+                    // Delay slightly for visual effect
+                    setTimeout(() => this.nextStep(), 1500);
+                };
+
+                // Map event types
+                if (type === 'progressive-disclosure') method.on('allRevealed', handleComplete);
+                if (type === 'scenario-based') {
+                    // Scenario emits 'sceneChanged' or requires custom logic if single scene
+                    // But in this test we have 1 choice. 
+                    // Let's rely on choiceMade -> transition?
+                    // Or wait? Scenario doesn't auto-complete usually. 
+                    // Let's add a "Continue" button listener if it exists?
+                    // Actually, scenario emits 'choiceMade'. Let's advance on choice for speed.
+                    method.on('choiceMade', handleComplete);
+                }
+                if (type === 'interactive-simulation') {
+                    // Sim doesn't finish. So we show "Next" button in UI or rely on manual force.
+                    document.getElementById('btn-next').style.display = 'block';
+                } else {
+                    document.getElementById('btn-next').style.display = 'none';
+                }
+
+                if (type === 'gamified-exploration') method.on('complete', handleComplete);
+                if (type === 'knowledge-construction') method.on('complete', handleComplete);
+            },
+
+            nextStep: function () {
+                this.loadStep(this.currentIndex + 1);
+            }
+        };
+
+        setTimeout(() => LessonController.start(), 500);
+
+    </script>
+</body>
+
+</html>

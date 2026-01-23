@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Method Demo: Cyberdelic Convergence</title>
+
+    <!-- Core Styles -->
+    <link rel="stylesheet" href="../../core/styles.css">
+
+    <!-- Method & Engine Styles -->
+    <link rel="stylesheet" href="../../methods/interactive-simulation/interactive-simulation.css">
+    <link rel="stylesheet"
+        href="../../methods/interactive-simulation/cyberdelic-convergence/cyberdelic-convergence.css">
+
+    <style>
+        body {
+            background-color: var(--color-bg);
+            color: var(--color-text-primary);
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .lesson-container {
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        header {
+            margin-bottom: 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 1rem;
+        }
+
+        /* Force vertical layout as requested */
+        .interactive-simulation-container {
+            flex-direction: column !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="lesson-container">
+        <header>
+            <h1>Cyberdelic Convergence</h1>
+            <p>Interactive Visualization of Field Integration (2015-2025)</p>
+        </header>
+
+        <!-- INTERACTIVE SIMULATION CONTAINER -->
+        <div class="interactive-simulation-container" data-method="interactive-simulation"
+            data-engine="CyberdelicConvergence">
+
+            <div class="sim-controls">
+                <h3>Time Travel</h3>
+                <!-- Controls auto-generated -->
+            </div>
+
+            <div class="sim-viewport">
+                <!-- SVG Will be injected here by engine -->
+            </div>
+        </div>
+
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="../../core/course-core.js"></script>
+    <script src="../../core/method-base.js"></script>
+    <script src="../../core/method-loader.js"></script>
+
+    <!-- Method Framework -->
+    <script src="../../methods/interactive-simulation/interactive-simulation.js"></script>
+
+    <!-- Specific Simulation Engine -->
+    <script src="../../methods/interactive-simulation/cyberdelic-convergence/cyberdelic-data.js"></script>
+    <script src="../../methods/interactive-simulation/cyberdelic-convergence/cyberdelic-convergence.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            CourseCore.init('demo-convergence');
+            MethodLoader.initAll();
+        });
+    </script>
+</body>
+
+</html>

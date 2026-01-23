@@ -52,6 +52,7 @@
 
     <!-- Scripts -->
     <script src="../../core/course-core.js"></script>
+    <script src="../../core/method-base.js"></script>
     <script src="../../methods/gamified-exploration/gamified-exploration.js"></script>
     <script src="../../methods/gamified-exploration/games/timeline-zoom.js"></script>
 
@@ -135,7 +136,9 @@
             };
 
             // Init Game Engine
-            GamifiedExploration.init({
+            // FIX: Use new Factory Pattern
+            const container = document.getElementById('game-root');
+            window.GamifiedExplorationMethod.init(container, {
                 module: TimelineZoom,
                 data: historyData,
                 debug: true

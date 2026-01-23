@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberdelic Nesting Test</title>
+
+    <!-- Shared Styles -->
+    <link rel="stylesheet" href="../../core/styles.css">
+    <link rel="stylesheet" href="interactive-simulation/interactive-simulation.css">
+    <link rel="stylesheet" href="knowledge-construction/knowledge-construction.css">
+    <link rel="stylesheet" href="progressive-disclosure/progressive-disclosure.css">
+
+    <style>
+        body {
+            background-color: #050510;
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            padding: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #00D9FF;
+        }
+
+        .nested-container {
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 1rem;
+            background: rgba(0, 0, 0, 0.3);
+            margin-top: 1rem;
+        }
+
+        .status-log {
+            font-family: monospace;
+            color: #aaa;
+            margin-top: 2rem;
+            padding: 1rem;
+            background: #111;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Method Nesting Test</h1>
+    <p>Embedding "Knowledge Construction" inside "Progressive Disclosure".</p>
+
+    <div class="progressive-disclosure-container">
+        <!-- Step Counter (Auto-filled) -->
+        <div class="step-counter"></div>
+
+        <!-- Section 1: Intro -->
+        <div class="reveal-section active">
+            <div class="section-content">
+                <h2>1. Introduction</h2>
+                <p>Welcome to the nesting test. The next section contains an embedded interactive method.</p>
+                <button class="reveal-trigger">Continue</button>
+            </div>
+        </div>
+
+        <!-- Section 2: Nested Method -->
+        <div class="reveal-section" id="nested-section">
+            <div class="section-content">
+                <h2>2. Embedded Construction</h2>
+                <p>Complete the definition below to proceed.</p>
+
+                <!-- Container for Nested Method -->
+                <div class="nested-container">
+                    <div class="knowledge-construction-container" id="kc-target">
+                        <div class="construction-zone">
+                            <span>Cyberdelics is </span>
+                            <span class="kc-slot" data-correct="tech"></span>
+                            <span> + </span>
+                            <span class="kc-slot" data-correct="psy"></span>
+                        </div>
+                        <div class="source-bank"></div>
+                    </div>
+                </div>
+
+                <div class="status-log" id="nest-log">Waiting for reveal...</div>
+            </div>
+        </div>
+
+        <!-- Completion -->
+        <div class="reveal-section lesson-complete">
+            <h2>Success!</h2>
+            <p>You have verified nested composition capabilities.</p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../../core/method-base.js"></script>
+    <script src="progressive-disclosure/progressive-disclosure.js"></script>
+    <script src="knowledge-construction/knowledge-construction.js"></script>
+
+    <script>
+        // Init Parent Method
+        const parent = window.ProgressiveDisclosureMethod;
+        parent.init('.progressive-disclosure-container');
+
+        const log = document.getElementById('nest-log');
+
+        // Listen for Reveal Event to Init Child
+        parent.on('revealed', (data) => {
+            if (data.sectionIndex === 1) { // Index 1 is the second section
+                log.textContent = "Section revealed. Initializing nested method...";
+
+                // Init Child Method
+                const child = window.KnowledgeConstructionMethod;
+                child.init(document.getElementById('kc-target'), {
+                    items: [
+                        { id: 'tech', text: 'Technology' },
+                        { id: 'psy', text: 'Psychedelics' },
+                        { id: 'bio', text: 'Biology' } // distractor
+                    ]
+                });
+
+                // Listen for Child Completion
+                child.on('complete', () => {
+                    log.textContent += "\n[OK] Nested method complete! Logic verified.";
+                    // Ideally we would auto-reveal the next section here
+                    parent.revealNext();
+                });
+            }
+        });
+
+    </script>
+</body>
+
+</html>

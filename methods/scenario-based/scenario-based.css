@@ -211,6 +211,27 @@
 
 .scene-continue {
     display: none;
+    padding: var(--space-md) var(--space-xl);
+    background-color: var(--color-accent);
+    /* Main blue/cyan */
+    color: #fff;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-base);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    box-shadow: 0 0 15px rgba(0, 217, 255, 0.2);
+}
+
+.scene-continue:hover {
+    background-color: var(--color-accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 0 25px rgba(0, 217, 255, 0.4);
+}
+
+.scene-continue:active {
+    transform: translateY(0);
 }
 
 .scene-continue.visible {

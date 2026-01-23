@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Method Demo: Interactive Simulation</title>
+
+    <!-- Core Styles -->
+    <link rel="stylesheet" href="../../core/styles.css">
+
+    <!-- Method Styles -->
+    <link rel="stylesheet" href="../../methods/interactive-simulation/interactive-simulation.css">
+
+    <style>
+        body {
+            background-color: var(--color-bg);
+            color: var(--color-text-primary);
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .lesson-container {
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        header {
+            margin-bottom: 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 1rem;
+        }
+
+        h1 {
+            color: var(--color-accent);
+            margin: 0 0 0.5rem 0;
+        }
+
+        .context-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1rem;
+            border-left: 3px solid var(--color-accent);
+            margin-bottom: 2rem;
+        }
+
+        .nav-controls {
+            margin-top: 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .refresh-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .refresh-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="lesson-container">
+        <header>
+            <h1>Interactive Simulation</h1>
+            <p>Method 4: Manipulable Models</p>
+        </header>
+
+        <section class="context-card">
+            <h3>Simulation: Wave Interference</h3>
+            <p>Adjust the controls to explore how two waveforms combine. Observe how "Constructive" and "Destructive"
+                interference works.</p>
+        </section>
+
+        <!-- INTERACTIVE SIMULATION CONTAINER -->
+        <!-- data-engine points to the key in window.SimulationEngines -->
+        <div class="interactive-simulation-container" data-method="interactive-simulation"
+            data-engine="WaveInterference">
+
+            <div class="sim-viewport">
+                <canvas class="sim-canvas"></canvas>
+                <div class="sim-overlay">v1.0.0</div>
+            </div>
+
+            <div class="sim-controls">
+                <h3>Controls</h3>
+                <!-- Controls will be auto-generated here -->
+            </div>
+        </div>
+
+        <div class="nav-controls">
+            <button class="refresh-btn" onclick="location.reload()">Reset Demo</button>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="../../core/course-core.js"></script>
+    <script src="../../core/method-base.js"></script>
+    <script src="../../core/method-loader.js"></script>
+
+    <!-- Method Framework -->
+    <script src="../../methods/interactive-simulation/interactive-simulation.js"></script>
+
+    <!-- Specific Simulation Engine -->
+    <script src="wave-interference.js"></script>
+
+    <script>
+        // Init Lesson
+        document.addEventListener('DOMContentLoaded', () => {
+            CourseCore.init('demo-interactive-simulation');
+
+            // Initialize methods
+            MethodLoader.initAll();
+        });
+    </script>
+</body>
+
+</html>

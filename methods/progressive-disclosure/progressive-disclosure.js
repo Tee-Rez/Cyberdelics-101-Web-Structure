@@ -101,21 +101,25 @@ const ProgressiveDisclosure = createTeachingMethod('progressive-disclosure', {
      * Reveal the next hidden section
      */
     revealNext: function () {
-        const currentStep = this.getCurrentStep();
+        // Current step is "how many triggered". Section 0 is already visible (count 0).
+        // So we want to reveal the section at index = currentStep + 1
+        // (i.e., if 0 steps done, reveal index 1)
+        const nextIndex = this.getCurrentStep() + 1;
 
-        if (currentStep >= this.sections.length) {
+        if (nextIndex >= this.sections.length) {
             this._showCompletion();
             return;
         }
 
-        const section = this.sections[currentStep];
+        const section = this.sections[nextIndex];
 
         // Add active class to trigger CSS animation
         section.classList.add('active');
 
-        // Mark previous as fully revealed
-        if (currentStep > 0) {
-            this.sections[currentStep - 1].classList.add('revealed');
+        // Mark previous as fully revealed (the one at currentStep, or nextIndex-1)
+        // Note: nextIndex-1 should always be valid if nextIndex >= 1
+        if (nextIndex > 0) {
+            this.sections[nextIndex - 1].classList.add('revealed');
         }
 
         // Advance progress (base method handles CourseCore notification)
@@ -126,7 +130,7 @@ const ProgressiveDisclosure = createTeachingMethod('progressive-disclosure', {
 
         // Emit event for composition
         this.emit('revealed', {
-            sectionIndex: currentStep,
+            sectionIndex: nextIndex,
             section: section
         });
 
@@ -135,8 +139,10 @@ const ProgressiveDisclosure = createTeachingMethod('progressive-disclosure', {
             section.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }, 100);
 
-        // Check if all revealed
-        if (this.getCurrentStep() >= this.sections.length) {
+        // Check if all revealed (Using nextIndex vs length - 1)
+        if (nextIndex >= this.sections.length - 1) {
+            // If we just revealed the last one, show completion immediately?
+            // Or wait for another click? Usually immediate flow.
             this._showCompletion();
         }
     },
@@ -217,3 +223,10 @@ ProgressiveDisclosure.init = function (containerSelector, options) {
         _originalInit.call(ProgressiveDisclosure, containerSelector, options);
     }
 };
+
+// Export to Window (for composition tests)
+if (window.MethodLoader) {
+    window.MethodLoader.register('progressive-disclosure', ProgressiveDisclosure);
+} else {
+    window.ProgressiveDisclosureMethod = ProgressiveDisclosure;
+}

@@ -293,3 +293,10 @@ ScenarioBased.init = function (containerSelector, options) {
         _originalScenarioInit.call(ScenarioBased, containerSelector, options);
     }
 };
+
+// Export to Window (for composition)
+if (window.MethodLoader) {
+    window.MethodLoader.register('scenario-based', ScenarioBased);
+} else {
+    window.ScenarioBased = ScenarioBased;
+}
