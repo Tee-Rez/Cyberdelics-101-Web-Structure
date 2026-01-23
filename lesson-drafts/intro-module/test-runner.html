@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro Lesson Verification</title>
+
+    <!-- Shared Styles -->
+    <link rel="stylesheet" href="../../core/styles.css">
+    <link rel="stylesheet" href="../../methods/interactive-simulation/interactive-simulation.css">
+    <link rel="stylesheet" href="../../methods/knowledge-construction/knowledge-construction.css">
+    <link rel="stylesheet" href="../../methods/progressive-disclosure/progressive-disclosure.css">
+    <link rel="stylesheet" href="../../methods/gamified-exploration/gamified-exploration.css">
+    <link rel="stylesheet" href="../../methods/scenario-based/scenario-based.css">
+
+    <!-- Simulation Styles -->
+    <link rel="stylesheet"
+        href="../../methods/interactive-simulation/constellation-personas/constellation-personas.css">
+
+    <style>
+        body {
+            background-color: #050510;
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        #lesson-root {
+            min-height: 600px;
+            border: 1px solid #333;
+            border-radius: 8px;
+            background: #0a0a15;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Mock specific styles for intro */
+        .equation-builder {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.2rem;
+            flex-wrap: wrap;
+        }
+
+        .setup-desk {
+            display: flex;
+            gap: 2rem;
+            padding: 2rem;
+            background: #222;
+            border-radius: 8px;
+            justify-content: center;
+        }
+
+        .setup-desk .kc-slot {
+            width: 100px;
+            height: 100px;
+            border: 2px dashed #555;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            content: attr(data-label);
+        }
+
+        /* Timeline fixes */
+        .tz-artifact-point,
+        .tz-artifact-icon,
+        .tz-point-label,
+        .tz-era-node {
+            user-select: none;
+            -webkit-user-select: none;
+            cursor: pointer !important;
+        }
+
+        /* Reposition info panel above timeline */
+        .tz-shared-info-panel {
+            bottom: auto !important;
+            top: 10% !important;
+        }
+
+        /* Scenario continue button visibility */
+        .scene-continue {
+            display: none;
+        }
+
+        .scene-continue.visible {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Intro Lesson Test Runner</h1>
+    <div id="lesson-root"></div>
+    <div id="debug-log" style="color: #aaa; margin-top: 1rem; font-family: monospace;"></div>
+
+    <!-- Scripts: Loaded in dependency order -->
+    <script src="../../core/method-base.js"></script>
+
+    <!-- Method Factories -->
+    <script src="../../methods/progressive-disclosure/progressive-disclosure.js"></script>
+    <script src="../../methods/interactive-simulation/interactive-simulation.js"></script>
+    <script src="../../methods/knowledge-construction/knowledge-construction.js"></script>
+    <script src="../../methods/gamified-exploration/gamified-exploration.js"></script>
+    <script src="../../methods/gamified-exploration/games/timeline-zoom.js"></script>
+    <script src="../../methods/scenario-based/scenario-based.js"></script>
+
+    <!-- Simulation Engines -->
+    <script src="../../methods/interactive-simulation/constellation-personas/constellation-personas.js"></script>
+
+    <!-- Core Runner (Loaded LAST to ensure factories exist) -->
+    <script src="../../core/lesson-runner.js"></script>
+
+    <script>
+        function log(msg) {
+            console.log(msg);
+            document.getElementById('debug-log').innerHTML += `<div>${msg}</div>`;
+        }
+
+        try {
+            // 1. Register Mock Engines
+            window.SimulationEngines = window.SimulationEngines || {};
+            log('Registering Mock Engines...');
+
+            // Engine: Time Slider
+            window.SimulationEngines['time-slider'] = {
+                defaults: { year: 2025 },
+                init: function (viewport, params) {
+                    this.viewport = viewport;
+                    this.display = document.createElement('div');
+                    this.display.style.fontSize = '2rem';
+                    this.display.style.textAlign = 'center';
+                    this.display.style.marginTop = '20%';
+                    viewport.appendChild(this.display);
+                    this.update(0, params);
+                },
+                update: function (dt, params) {
+                    const year = params.year;
+                    let text = "";
+                    if (year < 2020) text = "Visual: VR is clunky. Research starts.";
+                    else if (year < 2030) text = "Visual: NOW. Convergence. Opportunity.";
+                    else text = "Visual: Future. Established Field.";
+
+                    this.display.innerHTML = `<h2>${year}</h2><p style='color:#00D9FF'>${text}</p>`;
+                },
+                destroy: function () { }
+            };
+
+            // Engine: Balance Scale
+            window.SimulationEngines['balance-scale'] = {
+                defaults: { ratio: 50 },
+                init: function (viewport, params) {
+                    this.viewport = viewport;
+                    this.bar = document.createElement('div');
+                    this.bar.style.width = '80%';
+                    this.bar.style.height = '20px';
+                    this.bar.style.background = '#333';
+                    this.bar.style.margin = '100px auto';
+                    this.bar.style.position = 'relative';
+
+                    this.pivot = document.createElement('div');
+                    this.pivot.style.width = '0';
+                    this.pivot.style.height = '0';
+                    this.pivot.style.borderLeft = '20px solid transparent';
+                    this.pivot.style.borderRight = '20px solid transparent';
+                    this.pivot.style.borderBottom = '40px solid #555';
+                    this.pivot.style.position = 'absolute';
+                    this.pivot.style.bottom = '-40px';
+                    this.pivot.style.left = '50%';
+                    this.pivot.style.transform = 'translateX(-50%)';
+
+                    this.bar.appendChild(this.pivot);
+                    viewport.appendChild(this.bar);
+                    this.update(0, params);
+                },
+                update: function (dt, params) {
+                    const rot = (params.ratio - 50) * 0.5; // -25 to 25 deg
+                    this.bar.style.transform = `rotate(${rot}deg)`;
+                },
+                destroy: function () { }
+            };
+
+            // 2. Embedded Manifest
+            const MANIFEST = {
+                "lessonId": "intro-module",
+                "title": "Cyberdelics 101: Interactive Introduction & Orientation",
+                "modules": [
+                    {
+                        "id": "intro-1-welcome",
+                        "type": "progressive-disclosure",
+                        "title": "Welcome & Course Opening",
+                        "content": {
+                            "sections": [
+                                {
+                                    "id": "welcome-1",
+                                    "content": "<h1>Cyberdelics 101</h1><h2>Foundational Knowledge</h2><p>Where Ancient Wisdom Meets Cutting-Edge Technology</p>"
+                                },
+                                {
+                                    "id": "welcome-2",
+                                    "content": "<p>You're exploring consciousness-technology frontiers.</p><p>4-5 hours of transformative learning ahead.</p>"
+                                },
+                                {
+                                    "id": "welcome-3",
+                                    "content": "<ul><li>VR + AR + Biofeedback = Personal Transformation</li><li>No substances. Pure technology.</li><li>You're among the pioneers.</li></ul>"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "id": "intro-2-course-map",
+                        "type": "gamified-exploration",
+                        "title": "What You're About to Learn",
+                        "content": {
+                            "gameType": "timeline-zoom",
+                            "config": {
+                                "mode": "map",
+                                "backgroundImage": "assets/sacred-geo-map.jpg",
+                                "items": [
+                                    { "id": "m1", "x": 10, "y": 50, "label": "Module 1", "description": "Defining Cyberdelics: Precise definitions & core principles.", "icon": "💠" },
+                                    { "id": "m2", "x": 30, "y": 50, "label": "Module 2", "description": "Historical Foundations: 30-year evolution: Leary to today.", "icon": "📜" },
+                                    { "id": "m3", "x": 50, "y": 50, "label": "Module 3", "description": "Scientific Understanding: Four consciousness theories.", "icon": "🧬" },
+                                    { "id": "m4", "x": 70, "y": 50, "label": "Module 4", "description": "Current Applications: Major platform & use cases.", "icon": "🕶️" },
+                                    { "id": "m5", "x": 90, "y": 50, "label": "Module 5", "description": "Cyberdelic Ecosystem: Challenges & opportunities.", "icon": "🌐" }
+                                ],
+                                "completionCriteria": { "collectedCount": 5 }
+                            }
+                        }
+                    },
+                    {
+                        "id": "intro-3-definition",
+                        "type": "knowledge-construction",
+                        "title": "What Cyberdelics Are",
+                        "content": {
+                            "instruction": "Assemble the definition of Cyberdelics:",
+                            "template": "<div class='equation-builder'><span>Cyberdelics = </span><span class='kc-slot' data-correct='tech'></span><span> + </span><span class='kc-slot' data-correct='state'></span><span> + </span><span class='kc-slot' data-correct='spirit'></span><span> - </span><span class='kc-slot' data-correct='drug'></span></div>",
+                            "items": [
+                                { "id": "tech", "text": "Digital Technologies (VR/AR)" },
+                                { "id": "state", "text": "Altered States" },
+                                { "id": "spirit", "text": "Spiritual Exploration" },
+                                { "id": "drug", "text": "Psychoactive Substances" },
+                                { "id": "distractor1", "text": "Coding Skills" }
+                            ]
+                        }
+                    },
+                    {
+                        "id": "intro-4-personas",
+                        "type": "gamified-exploration",
+                        "title": "Who This Course Is For",
+                        "content": {
+                            "gameType": "timeline-zoom",
+                            "config": {
+                                "mode": "constellation",
+                                "items": [
+                                    { "id": "p1", "x": 50, "y": 50, "label": "YOU", "description": "The Explorer at the center.", "icon": "⭐" },
+                                    { "id": "p2", "x": 20, "y": 20, "label": "Consciousness Workers", "description": "Meditation teachers, yoga instructors. Exploring how technology complements practice.", "icon": "🧘" },
+                                    { "id": "p3", "x": 80, "y": 20, "label": "Tech Enthusiasts", "description": "VR/gaming lovers. Curious about deeper applications.", "icon": "🎮" },
+                                    { "id": "p4", "x": 20, "y": 80, "label": "Healthcare Pros", "description": "Seeking non-pharmacological interventions.", "icon": "⚕️" },
+                                    { "id": "p5", "x": 80, "y": 80, "label": "Researchers", "description": "Building academic foundation.", "icon": "🔬" }
+                                ],
+                                "completionCriteria": { "collectedCount": 5 }
+                            }
+                        }
+                    },
+                    {
+                        "id": "intro-5-features",
+                        "type": "progressive-disclosure",
+                        "title": "Learning Approach",
+                        "content": {
+                            "sections": [
+                                { "id": "f1", "content": "<h3>Course Features</h3><p>We use interactive experiences, not just video.</p>" },
+                                { "id": "f2", "content": "<h3>Visual Data Journeys</h3><p>Explore timelines and data visually.</p>" },
+                                { "id": "f3", "content": "<h3>Total Control</h3><p>Pause, Rewind, Revisit. Your pace.</p>" }
+                            ]
+                        }
+                    },
+                    {
+                        "id": "intro-6-timeline",
+                        "type": "interactive-simulation",
+                        "title": "Why Now? The Current Moment",
+                        "content": {
+                            "engine": "time-slider",
+                            "params": { "year": 2025 },
+                            "config": [
+                                { "id": "year", "label": "Time", "min": 2015, "max": 2035, "step": 1 }
+                            ]
+                        }
+                    },
+                    {
+                        "id": "intro-7-setup",
+                        "type": "knowledge-construction",
+                        "title": "Setting Yourself Up for Success",
+                        "content": {
+                            "instruction": "Prepare your environment. Drag the essential tools to the desk.",
+                            "template": "<div class='setup-desk'><h3>My Desk</h3><div class='kc-slot' data-correct='head'></div><div class='kc-slot' data-correct='note'></div><div class='kc-slot' data-correct='calm'></div></div>",
+                            "items": [
+                                { "id": "head", "text": "Headphones" },
+                                { "id": "note", "text": "Notebook" },
+                                { "id": "calm", "text": "Quiet Block" },
+                                { "id": "phone", "text": "Distraction (Phone)" }
+                            ]
+                        }
+                    },
+                    {
+                        "id": "intro-8-balance",
+                        "type": "interactive-simulation",
+                        "title": "Language & Perspective",
+                        "content": {
+                            "engine": "balance-scale",
+                            "params": { "ratio": 50 },
+                            "config": [
+                                { "id": "ratio", "label": "Science vs Spirit", "min": 0, "max": 100, "step": 10 }
+                            ]
+                        }
+                    },
+                    {
+                        "id": "intro-9-myths",
+                        "type": "scenario-based",
+                        "title": "What This Course Is NOT",
+                        "content": {
+                            "scenes": [
+                                {
+                                    "id": "start",
+                                    "narrative": "Many arrive with misconceptions. Let's clarify.",
+                                    "choices": [
+                                        { "id": "c1", "label": "This course certifies me as a psychedelic therapist.", "outcome": "myth" },
+                                        { "id": "c2", "label": "This provides foundational knowledge for the field.", "outcome": "fact" }
+                                    ]
+                                },
+                                { "id": "myth", "narrative": "INCORRECT. This is a 5-hour foundation. Professional certification takes much longer.", "choices": [] },
+                                { "id": "fact", "narrative": "CORRECT. You are building a solid foundation to launch from.", "choices": [] }
+                            ]
+                        }
+                    },
+                    {
+                        "id": "intro-10-launch",
+                        "type": "progressive-disclosure",
+                        "title": "Your Journey Begins",
+                        "content": {
+                            "sections": [
+                                { "id": "l1", "content": "<p>Journey Preparation Complete.</p><ul><li>Course structure understood</li><li>Personal relevance identified</li></ul>" },
+                                { "id": "l2", "content": "<blockquote>The future is built by pioneers willing to learn deeply. That's you.</blockquote>" },
+                                { "id": "l3", "content": "<button class='btn-primary' onclick='alert(\"Launching Module 1...\")'>BEGIN MODULE 1</button>" }
+                            ]
+                        }
+                    }
+                ]
+            };
+
+            // 3. Run
+            log('Initializing Runner...');
+            const runner = window.LessonRunner;
+            if (runner) {
+                runner.init(document.getElementById('lesson-root'));
+                log('Loading Lesson...');
+                runner.loadLesson(MANIFEST);
+            } else {
+                log('ERROR: LessonRunner not found!');
+            }
+
+        } catch (e) {
+            log('FATAL ERROR: ' + e.message);
+            console.error(e);
+        }
+    </script>
+</body>
+
+</html>

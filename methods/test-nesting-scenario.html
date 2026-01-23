@@ -142,7 +142,7 @@
         };
 
         // Init Scenario
-        const scenario = window.ScenarioBased;
+        const scenario = window.ScenarioBasedFactory();
         scenario.init('.scenario-container');
 
         // Listen for Scene Change to Scene 2
@@ -154,7 +154,7 @@
                 simWrapper.classList.add('active'); // Show it
 
                 // Init Sim inside the wrapper
-                const sim = window.InteractiveSimulationMethod;
+                const sim = window.InteractiveSimulationFactory();
                 sim.init(simWrapper.querySelector('.interactive-simulation-container'), {
                     engine: 'mini-sim'
                 });

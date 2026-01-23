@@ -154,7 +154,7 @@
                                     <p>Proceed to the scenario.</p>
                                 </div>
                             </div>`;
-                        const m = window.ProgressiveDisclosureMethod;
+                        const m = window.ProgressiveDisclosureFactory();
                         m.init('.progressive-disclosure-container');
                         return m;
                     }
@@ -178,7 +178,7 @@
                                 </div>
                             </div>
                         `;
-                        const m = window.ScenarioBased;
+                        const m = window.ScenarioBasedFactory();
                         m.init('.scenario-container');
                         return m;
                     }
@@ -197,7 +197,7 @@
                                 <div class="sim-viewport"></div>
                                 <div class="sim-controls"></div>
                             </div>`;
-                        const m = window.InteractiveSimulationMethod;
+                        const m = window.InteractiveSimulationFactory();
                         m.init('.interactive-simulation-container', opts);
                         return m;
                     }
@@ -207,7 +207,7 @@
                     type: 'gamified-exploration',
                     init: (container) => {
                         // Ensure generic container style
-                        const m = window.GamifiedExplorationMethod;
+                        const m = window.GamifiedExplorationFactory();
                         m.init(container, {
                             module: TimelineGame,
                             debug: true
@@ -227,7 +227,7 @@
                             </div>
                             <div class="source-bank"></div>
                         </div>`;
-                        const m = window.KnowledgeConstructionMethod;
+                        const m = window.KnowledgeConstructionFactory();
                         m.init('.knowledge-construction-container', {
                             items: [{ id: 'all', text: 'Everything' }]
                         });

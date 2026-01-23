@@ -138,7 +138,9 @@
             // Init Game Engine
             // FIX: Use new Factory Pattern
             const container = document.getElementById('game-root');
-            window.GamifiedExplorationMethod.init(container, {
+            const gameInstance = window.GamifiedExplorationFactory();
+
+            gameInstance.init(container, {
                 module: TimelineZoom,
                 data: historyData,
                 debug: true

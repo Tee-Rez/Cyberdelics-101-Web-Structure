@@ -123,21 +123,9 @@
                 this.container.innerHTML = this.scenarioTemplate;
 
                 // Init Scenario Method
-                // Note: scenario-based.js exports 'ScenarioBased' but wrapping it via factory?
-                // Let's check the file content again.
-                // It does `const ScenarioBased = createTeachingMethod(...)`.
-                // It doesn't export to window unless we modify it like we did for Progressive.
-                // WE NEED TO MODIFY scenario-based.js TO EXPORT TO WINDOW FIRST.
-
-                // Assuming we fix scenario-based.js export in the next step:
-                if (window.ScenarioBased) {
-                    this.activeMethod = window.ScenarioBased;
+                if (window.ScenarioBasedFactory) {
+                    this.activeMethod = window.ScenarioBasedFactory();
                     this.activeMethod.init('.scenario-container');
-
-                    // Listen for Completion (Scenario emits 'sceneChanged' or we intercept 'nextScene' logic)
-                    // The standard Scenario method emits 'scenarioComplete'.
-                    // But here we have a "Continue" button on the first scene that usually goes to Scene 2.
-                    // We can hijack 'sceneChanged' if there are no more scenes?
 
                     // Listen for Completion or Scene Change
                     const handleTransition = () => this.transitionToSim();
@@ -145,7 +133,7 @@
                     this.activeMethod.on('sceneChanged', handleTransition);
                     this.activeMethod.on('scenarioComplete', handleTransition);
                 } else {
-                    console.error("ScenarioBased not found on window");
+                    console.error("ScenarioBasedFactory not found on window");
                 }
             },
 
@@ -161,7 +149,7 @@
 
                 // 3. Load Sim
                 this.container.innerHTML = this.simTemplate;
-                this.activeMethod = window.InteractiveSimulationMethod;
+                this.activeMethod = window.InteractiveSimulationFactory();
                 this.activeMethod.init('.interactive-simulation-container', {
                     engine: 'intensity-sim'
                 });

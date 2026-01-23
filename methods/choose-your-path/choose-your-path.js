@@ -2,469 +2,486 @@
  * Choose-Your-Path Method
  * Path selection teaching method with modular content tracks
  * 
- * Usage:
- *   // Via MethodLoader:
- *   MethodLoader.register('choose-your-path', ChooseYourPath);
- *   MethodLoader.initAll(document.body);
+ * Factory Pattern Refactor
  * 
- *   // Direct:
- *   ChooseYourPath.init('.path-container');
+ * Usage:
+ *   const factory = window.ChooseYourPathFactory;
+ *   const instance = factory();
+ *   instance.init('.path-container');
  */
 
-const ChooseYourPath = createTeachingMethod('choose-your-path', {
+(function () {
+    'use strict';
 
-    // ---------- Private State ----------
-    paths: [],
-    currentPath: null,
-    pathSections: [],
-    currentSectionIndex: 0,
-    completedPaths: new Set(), // Track which paths have been completed
-    lessonCompleted: false, // Track if entire lesson was completed (one-time)
+    if (typeof createTeachingMethod === 'undefined') {
+        console.error('Core dependency "method-base.js" missing.');
+        return;
+    }
 
-    // ---------- Lifecycle Hooks ----------
+    const ChooseYourPathFactory = function () {
+        return createTeachingMethod('choose-your-path', {
+            // ---------- Private State ----------
+            paths: [],
+            currentPath: null,
+            pathSections: [],
+            currentSectionIndex: 0,
+            completedPaths: new Set(), // Track which paths have been completed
+            lessonCompleted: false, // Track if entire lesson was completed (one-time)
 
-    onInit: function (container, options) {
-        // Find path options
-        this.paths = container.querySelectorAll('.path-option');
-        this.pathSelection = container.querySelector('.path-selection');
-        this.pathContents = container.querySelectorAll('.path-content');
+            // ---------- Lifecycle Hooks ----------
 
-        // Attach click handlers
-        this._boundClickHandler = this._handleClick.bind(this);
-        container.addEventListener('click', this._boundClickHandler);
+            onInit: function (container, options) {
+                // Find path options
+                this.paths = container.querySelectorAll('.path-option');
+                this.pathSelection = container.querySelector('.path-selection');
+                this.pathContents = container.querySelectorAll('.path-content');
 
-        // Update path UI for completed paths
-        this._updatePathUI();
+                // Attach click handlers
+                this._boundClickHandler = this._handleClick.bind(this);
+                container.addEventListener('click', this._boundClickHandler);
 
-        console.log('[ChooseYourPath] Initialized with', this.paths.length, 'paths');
-    },
+                // Update path UI for completed paths
+                this._updatePathUI();
 
-    onDestroy: function () {
-        const state = this._getState();
-        if (state.container) {
-            state.container.removeEventListener('click', this._boundClickHandler);
-        }
-    },
+                console.log('[ChooseYourPath] Initialized with', this.paths.length, 'paths');
+            },
 
-    onReset: function () {
-        // Hide all path content
-        this.pathContents.forEach(content => {
-            content.classList.remove('active');
-        });
+            onDestroy: function () {
+                const state = this._getState();
+                if (state.container) {
+                    state.container.removeEventListener('click', this._boundClickHandler);
+                }
+            },
 
-        // Reset path sections
-        if (this.pathSections.length > 0) {
-            this.pathSections.forEach(section => {
-                section.classList.remove('active');
-            });
-        }
+            onReset: function () {
+                // Hide all path content
+                this.pathContents.forEach(content => {
+                    content.classList.remove('active');
+                });
 
-        // Show path selection
-        if (this.pathSelection) {
-            this.pathSelection.style.display = 'block';
-        }
+                // Reset path sections
+                if (this.pathSections.length > 0) {
+                    this.pathSections.forEach(section => {
+                        section.classList.remove('active');
+                    });
+                }
 
-        // Reset state
-        this.currentPath = null;
-        this.pathSections = [];
-        this.currentSectionIndex = 0;
+                // Show path selection
+                if (this.pathSelection) {
+                    this.pathSelection.style.display = 'block';
+                }
 
-        // Deselect all paths
-        this.paths.forEach(p => p.classList.remove('selected'));
-    },
+                // Reset state
+                this.currentPath = null;
+                this.pathSections = [];
+                this.currentSectionIndex = 0;
 
-    // ---------- State Hooks ----------
+                // Deselect all paths
+                this.paths.forEach(p => p.classList.remove('selected'));
+            },
 
-    getCustomState: function () {
-        return {
-            currentPath: this.currentPath,
-            currentSectionIndex: this.currentSectionIndex,
-            completedPaths: Array.from(this.completedPaths),
-            lessonCompleted: this.lessonCompleted
-        };
-    },
+            // ---------- State Hooks ----------
 
-    setCustomState: function (savedState) {
-        // Restore completed paths
-        if (savedState.completedPaths) {
-            this.completedPaths = new Set(savedState.completedPaths);
-            this._updatePathUI();
-        }
+            getCustomState: function () {
+                return {
+                    currentPath: this.currentPath,
+                    currentSectionIndex: this.currentSectionIndex,
+                    completedPaths: Array.from(this.completedPaths),
+                    lessonCompleted: this.lessonCompleted
+                };
+            },
 
-        if (savedState.currentPath) {
-            // Restore path selection
-            const pathEl = document.querySelector(`[data-path-id="${savedState.currentPath}"]`);
-            if (pathEl) {
-                this.selectPath(savedState.currentPath);
-                // Restore section progress
-                for (let i = 0; i <= savedState.currentSectionIndex; i++) {
-                    if (this.pathSections[i]) {
-                        this.pathSections[i].classList.add('active');
+            setCustomState: function (savedState) {
+                // Restore completed paths
+                if (savedState.completedPaths) {
+                    this.completedPaths = new Set(savedState.completedPaths);
+                    this._updatePathUI();
+                }
+
+                if (savedState.currentPath) {
+                    // Restore path selection
+                    const pathEl = document.querySelector(`[data-path-id="${savedState.currentPath}"]`);
+                    if (pathEl) {
+                        this.selectPath(savedState.currentPath);
+                        // Restore section progress
+                        for (let i = 0; i <= savedState.currentSectionIndex; i++) {
+                            if (this.pathSections[i]) {
+                                this.pathSections[i].classList.add('active');
+                            }
+                        }
+                        this.currentSectionIndex = savedState.currentSectionIndex;
                     }
                 }
-                this.currentSectionIndex = savedState.currentSectionIndex;
-            }
-        }
-    },
+            },
 
-    // ---------- Method-Specific Functions ----------
+            // ---------- Method-Specific Functions ----------
 
-    /**
-     * Get available paths
-     */
-    getPaths: function () {
-        return Array.from(this.paths).map(p => ({
-            id: p.dataset.pathId,
-            title: p.querySelector('.path-title')?.textContent,
-            description: p.querySelector('.path-description')?.textContent
-        }));
-    },
+            /**
+             * Get available paths
+             */
+            getPaths: function () {
+                return Array.from(this.paths).map(p => ({
+                    id: p.dataset.pathId,
+                    title: p.querySelector('.path-title')?.textContent,
+                    description: p.querySelector('.path-description')?.textContent
+                }));
+            },
 
-    /**
-     * Select a path
-     */
-    selectPath: function (pathId) {
-        // Check if path is already completed
-        if (this.completedPaths.has(pathId)) {
-            console.log('[ChooseYourPath] Path already completed:', pathId);
-            return;
-        }
+            /**
+             * Select a path
+             */
+            selectPath: function (pathId) {
+                // Check if path is already completed
+                if (this.completedPaths.has(pathId)) {
+                    console.log('[ChooseYourPath] Path already completed:', pathId);
+                    return;
+                }
 
-        // Find path elements
-        const pathOption = document.querySelector(`[data-path-id="${pathId}"]`);
-        const pathContent = document.querySelector(`.path-content[data-path="${pathId}"]`);
+                // Find path elements
+                const container = this._getState().container;
+                const pathOption = container.querySelector(`[data-path-id="${pathId}"]`);
+                const pathContent = container.querySelector(`.path-content[data-path="${pathId}"]`);
 
-        if (!pathOption || !pathContent) {
-            console.error('[ChooseYourPath] Path not found:', pathId);
-            return;
-        }
+                if (!pathOption || !pathContent) {
+                    console.error('[ChooseYourPath] Path not found:', pathId);
+                    return;
+                }
 
-        // Update state
-        this.currentPath = pathId;
+                // Update state
+                this.currentPath = pathId;
 
-        // Visual feedback on selection
-        this.paths.forEach(p => p.classList.remove('selected'));
-        pathOption.classList.add('selected');
+                // Visual feedback on selection
+                this.paths.forEach(p => p.classList.remove('selected'));
+                pathOption.classList.add('selected');
 
-        // Hide path selection after brief delay
-        setTimeout(() => {
-            if (this.pathSelection) {
-                this.pathSelection.style.display = 'none';
-            }
+                // Hide path selection after brief delay
+                setTimeout(() => {
+                    if (this.pathSelection) {
+                        this.pathSelection.style.display = 'none';
+                    }
 
-            // Show path content
-            this.pathContents.forEach(c => c.classList.remove('active'));
-            pathContent.classList.add('active');
+                    // Show path content
+                    this.pathContents.forEach(c => c.classList.remove('active'));
+                    pathContent.classList.add('active');
 
-            // Initialize sections for this path
-            this.pathSections = pathContent.querySelectorAll('.path-section');
-            this.setTotalSteps(this.pathSections.length);
+                    // Initialize sections for this path
+                    this.pathSections = pathContent.querySelectorAll('.path-section');
+                    this.setTotalSteps(this.pathSections.length);
 
-            // Show first section
-            if (this.pathSections.length > 0) {
-                this.pathSections[0].classList.add('active');
+                    // Show first section
+                    if (this.pathSections.length > 0) {
+                        this.pathSections[0].classList.add('active');
+                        this.currentSectionIndex = 0;
+                    }
+
+                    this._updateProgress();
+
+                    // Scroll to content
+                    pathContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+                }, 300);
+
+                // Emit event
+                this.emit('pathSelected', {
+                    pathId: pathId,
+                    pathTitle: pathOption.querySelector('.path-title')?.textContent
+                });
+            },
+
+            /**
+             * Get current path ID
+             */
+            getCurrentPath: function () {
+                return this.currentPath;
+            },
+
+            /**
+             * Get progress within current path
+             */
+            getPathProgress: function () {
+                if (!this.pathSections.length) return 0;
+                return (this.currentSectionIndex + 1) / this.pathSections.length;
+            },
+
+            /**
+             * Advance to next section in path
+             */
+            nextSection: function () {
+                const nextIndex = this.currentSectionIndex + 1;
+
+                if (nextIndex >= this.pathSections.length) {
+                    // Path complete
+                    this._showCompletion();
+                    return;
+                }
+
+                // Show next section
+                this.pathSections[nextIndex].classList.add('active');
+                this.currentSectionIndex = nextIndex;
+
+                // Advance progress
+                this.advanceStep();
+                this._updateProgress();
+
+                // Scroll to new section
+                setTimeout(() => {
+                    this.pathSections[nextIndex].scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }, 100);
+
+                this.emit('sectionAdvanced', {
+                    sectionIndex: this.currentSectionIndex,
+                    totalSections: this.pathSections.length
+                });
+            },
+
+            /**
+             * Change to a different path
+             */
+            changePath: function () {
+                // Reset current path content
+                this.pathContents.forEach(c => {
+                    c.classList.remove('active');
+
+                    // Reset all sections within this path
+                    const sections = c.querySelectorAll('.path-section');
+                    sections.forEach(s => s.classList.remove('active'));
+
+                    // Reset completion section
+                    const completion = c.querySelector('.path-complete');
+                    if (completion) {
+                        completion.classList.remove('active');
+                    }
+                });
+
+                // Show path selection
+                if (this.pathSelection) {
+                    this.pathSelection.style.display = 'block';
+                    this.pathSelection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+
+                // Reset state
+                this.currentPath = null;
+                this.pathSections = [];
                 this.currentSectionIndex = 0;
-            }
 
-            this._updateProgress();
+                this.emit('pathChanged', {});
+            },
 
-            // Scroll to content
-            pathContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            // ---------- Private Helpers ----------
 
-        }, 300);
+            _handleClick: function (event) {
+                // Handle path selection
+                const pathOption = event.target.closest('.path-option');
+                if (pathOption && !this.currentPath) {
+                    event.preventDefault();
+                    const pathId = pathOption.dataset.pathId;
+                    if (pathId) {
+                        this.selectPath(pathId);
+                    }
+                    return;
+                }
 
-        // Emit event
-        this.emit('pathSelected', {
-            pathId: pathId,
-            pathTitle: pathOption.querySelector('.path-title')?.textContent
-        });
-    },
+                // Handle section continue
+                const continueBtn = event.target.closest('.path-continue');
+                if (continueBtn) {
+                    event.preventDefault();
+                    this.nextSection();
+                    return;
+                }
 
-    /**
-     * Get current path ID
-     */
-    getCurrentPath: function () {
-        return this.currentPath;
-    },
+                // Handle change path
+                const changeBtn = event.target.closest('.change-path-btn');
+                if (changeBtn) {
+                    event.preventDefault();
+                    this.changePath();
+                    return;
+                }
 
-    /**
-     * Get progress within current path
-     */
-    getPathProgress: function () {
-        if (!this.pathSections.length) return 0;
-        return (this.currentSectionIndex + 1) / this.pathSections.length;
-    },
+                // Handle complete path button
+                const completePathBtn = event.target.closest('.complete-path-btn');
+                if (completePathBtn && !completePathBtn.disabled) {
+                    event.preventDefault();
+                    this.changePath(); // Return to path selection
+                    return;
+                }
 
-    /**
-     * Advance to next section in path
-     */
-    nextSection: function () {
-        const nextIndex = this.currentSectionIndex + 1;
+                // Handle complete lesson button (on path selection screen)
+                const completeLessonBtn = event.target.closest('.complete-lesson-btn');
+                if (completeLessonBtn && !completeLessonBtn.disabled) {
+                    event.preventDefault();
+                    // Lesson complete - could navigate away or show final message
+                    if (typeof CourseCore !== 'undefined') {
+                        CourseCore.completeLesson();
+                    }
+                    return;
+                }
+            },
 
-        if (nextIndex >= this.pathSections.length) {
-            // Path complete
-            this._showCompletion();
-            return;
-        }
+            _updateProgress: function () {
+                const progress = this.getPathProgress() * 100;
 
-        // Show next section
-        this.pathSections[nextIndex].classList.add('active');
-        this.currentSectionIndex = nextIndex;
+                // Update path-specific progress bar
+                // SCOPED LOOKUP
+                const container = this._getState().container;
+                const activeContent = container.querySelector('.path-content.active');
+                if (!activeContent) return;
 
-        // Advance progress
-        this.advanceStep();
-        this._updateProgress();
+                const progressFill = activeContent.querySelector('.path-progress-fill');
+                if (progressFill) {
+                    progressFill.style.width = `${progress}%`;
+                }
 
-        // Scroll to new section
-        setTimeout(() => {
-            this.pathSections[nextIndex].scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }, 100);
+                const progressText = activeContent.querySelector('.path-progress-text');
+                if (progressText) {
+                    progressText.textContent = `${this.currentSectionIndex + 1} of ${this.pathSections.length}`;
+                }
+            },
 
-        this.emit('sectionAdvanced', {
-            sectionIndex: this.currentSectionIndex,
-            totalSections: this.pathSections.length
-        });
-    },
+            _showCompletion: function () {
+                // Find completion section
+                const container = this._getState().container;
+                const activeContent = container.querySelector('.path-content.active');
+                if (!activeContent) return;
 
-    /**
-     * Change to a different path
-     */
-    changePath: function () {
-        // Reset current path content
-        this.pathContents.forEach(c => {
-            c.classList.remove('active');
+                const completion = activeContent.querySelector('.path-complete');
+                if (completion) {
+                    completion.classList.add('active');
+                }
 
-            // Reset all sections within this path
-            const sections = c.querySelectorAll('.path-section');
-            sections.forEach(s => s.classList.remove('active'));
+                // Mark this path as completed
+                if (this.currentPath) {
+                    this.completedPaths.add(this.currentPath);
+                    this._updatePathUI();
+                }
 
-            // Reset completion section
-            const completion = c.querySelector('.path-complete');
-            if (completion) {
-                completion.classList.remove('active');
-            }
-        });
+                // Update CourseCore progress (count completed paths)
+                if (typeof CourseCore !== 'undefined') {
+                    // Set total steps to number of paths
+                    const totalPaths = this.paths.length;
+                    CourseCore.setTotalSteps(totalPaths);
 
-        // Show path selection
-        if (this.pathSelection) {
-            this.pathSelection.style.display = 'block';
-            this.pathSelection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
+                    // Advance progress to match completed paths count
+                    const currentStep = CourseCore.getProgress ?
+                        Math.floor(CourseCore.getProgress() * totalPaths) : 0;
+                    const targetStep = this.completedPaths.size;
 
-        // Reset state
-        this.currentPath = null;
-        this.pathSections = [];
-        this.currentSectionIndex = 0;
+                    for (let i = currentStep; i < targetStep; i++) {
+                        CourseCore.advanceProgress();
+                    }
 
-        this.emit('pathChanged', {});
-    },
+                    // Enable completion button (always enable after any path)
+                    CourseCore.enableCompletion();
+                }
 
-    // ---------- Private Helpers ----------
+                // Check if all paths are now completed (first time)
+                if (this.completedPaths.size >= this.paths.length && !this.lessonCompleted) {
+                    this.lessonCompleted = true;
+                    this.markComplete();
 
-    _handleClick: function (event) {
-        // Handle path selection
-        const pathOption = event.target.closest('.path-option');
-        if (pathOption && !this.currentPath) {
-            event.preventDefault();
-            const pathId = pathOption.dataset.pathId;
-            if (pathId) {
-                this.selectPath(pathId);
-            }
-            return;
-        }
+                    // Show complete lesson button on path selection
+                    this._showLessonCompleteButton();
+                }
 
-        // Handle section continue
-        const continueBtn = event.target.closest('.path-continue');
-        if (continueBtn) {
-            event.preventDefault();
-            this.nextSection();
-            return;
-        }
+                this.emit('pathComplete', {
+                    path: this.currentPath,
+                    sections: this.pathSections.length,
+                    totalCompleted: this.completedPaths.size,
+                    totalPaths: this.paths.length,
+                    lessonCompleted: this.lessonCompleted
+                });
+            },
 
-        // Handle change path
-        const changeBtn = event.target.closest('.change-path-btn');
-        if (changeBtn) {
-            event.preventDefault();
-            this.changePath();
-            return;
-        }
+            /**
+             * Reset a completed path
+             */
+            resetPath: function (pathId) {
+                this.completedPaths.delete(pathId);
+                this._updatePathUI();
 
-        // Handle complete path button
-        const completePathBtn = event.target.closest('.complete-path-btn');
-        if (completePathBtn && !completePathBtn.disabled) {
-            event.preventDefault();
-            this.changePath(); // Return to path selection
-            return;
-        }
+                // Update CourseCore progress
+                if (typeof CourseCore !== 'undefined') {
+                    const totalPaths = this.paths.length;
+                    CourseCore.setTotalSteps(totalPaths);
+                }
 
-        // Handle complete lesson button (on path selection screen)
-        const completeLessonBtn = event.target.closest('.complete-lesson-btn');
-        if (completeLessonBtn && !completeLessonBtn.disabled) {
-            event.preventDefault();
-            // Lesson complete - could navigate away or show final message
-            if (typeof CourseCore !== 'undefined') {
-                CourseCore.completeLesson();
-            }
-            return;
-        }
-    },
+                this.emit('pathReset', { pathId });
+            },
 
-    _updateProgress: function () {
-        const progress = this.getPathProgress() * 100;
+            /**
+             * Update path option UI with checkmarks and reset buttons
+             */
+            _updatePathUI: function () {
+                this.paths.forEach(pathEl => {
+                    const pathId = pathEl.dataset.pathId;
+                    const isCompleted = this.completedPaths.has(pathId);
 
-        // Update path-specific progress bar
-        const progressFill = document.querySelector('.path-content.active .path-progress-fill');
-        if (progressFill) {
-            progressFill.style.width = `${progress}%`;
-        }
+                    // Add/remove completed class
+                    if (isCompleted) {
+                        pathEl.classList.add('completed');
+                    } else {
+                        pathEl.classList.remove('completed');
+                    }
 
-        const progressText = document.querySelector('.path-content.active .path-progress-text');
-        if (progressText) {
-            progressText.textContent = `${this.currentSectionIndex + 1} of ${this.pathSections.length}`;
-        }
-    },
+                    // Add checkmark if not already present
+                    let checkmark = pathEl.querySelector('.path-checkmark');
+                    if (isCompleted && !checkmark) {
+                        checkmark = document.createElement('div');
+                        checkmark.className = 'path-checkmark';
+                        checkmark.innerHTML = '✓';
+                        pathEl.appendChild(checkmark);
+                    } else if (!isCompleted && checkmark) {
+                        checkmark.remove();
+                    }
 
-    _showCompletion: function () {
-        // Find completion section
-        const completion = document.querySelector('.path-content.active .path-complete');
-        if (completion) {
-            completion.classList.add('active');
-        }
+                    // Add reset button if completed
+                    let resetBtn = pathEl.querySelector('.path-reset-btn');
+                    if (isCompleted && !resetBtn) {
+                        resetBtn = document.createElement('button');
+                        resetBtn.className = 'btn btn-secondary path-reset-btn';
+                        resetBtn.textContent = 'Reset';
+                        resetBtn.onclick = (e) => {
+                            e.stopPropagation();
+                            this.resetPath(pathId);
+                        };
+                        pathEl.appendChild(resetBtn);
+                    } else if (!isCompleted && resetBtn) {
+                        resetBtn.remove();
+                    }
+                });
+            },
 
-        // Mark this path as completed
-        if (this.currentPath) {
-            this.completedPaths.add(this.currentPath);
-            this._updatePathUI();
-        }
+            /**
+             * Show the complete lesson button on path selection screen
+             */
+            _showLessonCompleteButton: function () {
+                if (!this.pathSelection) return;
 
-        // Update CourseCore progress (count completed paths)
-        if (typeof CourseCore !== 'undefined') {
-            // Set total steps to number of paths
-            const totalPaths = this.paths.length;
-            CourseCore.setTotalSteps(totalPaths);
-
-            // Advance progress to match completed paths count
-            const currentStep = CourseCore.getProgress ?
-                Math.floor(CourseCore.getProgress() * totalPaths) : 0;
-            const targetStep = this.completedPaths.size;
-
-            for (let i = currentStep; i < targetStep; i++) {
-                CourseCore.advanceProgress();
-            }
-
-            // Enable completion button (always enable after any path)
-            CourseCore.enableCompletion();
-        }
-
-        // Check if all paths are now completed (first time)
-        if (this.completedPaths.size >= this.paths.length && !this.lessonCompleted) {
-            this.lessonCompleted = true;
-            this.markComplete();
-
-            // Show complete lesson button on path selection
-            this._showLessonCompleteButton();
-        }
-
-        this.emit('pathComplete', {
-            path: this.currentPath,
-            sections: this.pathSections.length,
-            totalCompleted: this.completedPaths.size,
-            totalPaths: this.paths.length,
-            lessonCompleted: this.lessonCompleted
-        });
-    },
-
-    /**
-     * Reset a completed path
-     */
-    resetPath: function (pathId) {
-        this.completedPaths.delete(pathId);
-        this._updatePathUI();
-
-        // Update CourseCore progress
-        if (typeof CourseCore !== 'undefined') {
-            const totalPaths = this.paths.length;
-            CourseCore.setTotalSteps(totalPaths);
-        }
-
-        this.emit('pathReset', { pathId });
-    },
-
-    /**
-     * Update path option UI with checkmarks and reset buttons
-     */
-    _updatePathUI: function () {
-        this.paths.forEach(pathEl => {
-            const pathId = pathEl.dataset.pathId;
-            const isCompleted = this.completedPaths.has(pathId);
-
-            // Add/remove completed class
-            if (isCompleted) {
-                pathEl.classList.add('completed');
-            } else {
-                pathEl.classList.remove('completed');
-            }
-
-            // Add checkmark if not already present
-            let checkmark = pathEl.querySelector('.path-checkmark');
-            if (isCompleted && !checkmark) {
-                checkmark = document.createElement('div');
-                checkmark.className = 'path-checkmark';
-                checkmark.innerHTML = '✓';
-                pathEl.appendChild(checkmark);
-            } else if (!isCompleted && checkmark) {
-                checkmark.remove();
-            }
-
-            // Add reset button if completed
-            let resetBtn = pathEl.querySelector('.path-reset-btn');
-            if (isCompleted && !resetBtn) {
-                resetBtn = document.createElement('button');
-                resetBtn.className = 'btn btn-secondary path-reset-btn';
-                resetBtn.textContent = 'Reset';
-                resetBtn.onclick = (e) => {
-                    e.stopPropagation();
-                    this.resetPath(pathId);
-                };
-                pathEl.appendChild(resetBtn);
-            } else if (!isCompleted && resetBtn) {
-                resetBtn.remove();
+                // Check if button already exists
+                let completeLessonBtn = this.pathSelection.querySelector('.complete-lesson-btn');
+                if (!completeLessonBtn) {
+                    // Create and add the button
+                    completeLessonBtn = document.createElement('button');
+                    completeLessonBtn.className = 'btn btn-primary complete-lesson-btn mt-xl';
+                    completeLessonBtn.textContent = 'Complete Lesson';
+                    // Inline styles for simplicity in refactor
+                    completeLessonBtn.style.display = 'block';
+                    completeLessonBtn.style.margin = '20px auto';
+                    this.pathSelection.appendChild(completeLessonBtn);
+                }
             }
         });
-    },
+    };
 
     /**
-     * Show the complete lesson button on path selection screen
+     * Factory Creation
      */
-    _showLessonCompleteButton: function () {
-        if (!this.pathSelection) return;
-
-        // Check if button already exists
-        let completeLessonBtn = this.pathSelection.querySelector('.complete-lesson-btn');
-        if (!completeLessonBtn) {
-            // Create and add the button
-            completeLessonBtn = document.createElement('button');
-            completeLessonBtn.className = 'btn btn-primary complete-lesson-btn mt-xl';
-            completeLessonBtn.textContent = 'Complete Lesson';
-            completeLessonBtn.style.display = 'block';
-            completeLessonBtn.style.margin = '0 auto';
-            completeLessonBtn.style.marginTop = 'var(--space-xl)';
-            this.pathSelection.appendChild(completeLessonBtn);
-        }
-    }
-});
-
-// Legacy init wrapper
-const _originalPathInit = ChooseYourPath.init;
-ChooseYourPath.init = function (containerSelector, options) {
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', () => {
-            _originalPathInit.call(ChooseYourPath, containerSelector, options);
-        });
+    if (window.MethodLoader) {
+        window.MethodLoader.registerFactory('choose-your-path', ChooseYourPathFactory);
     } else {
-        _originalPathInit.call(ChooseYourPath, containerSelector, options);
+        window.ChooseYourPathFactory = ChooseYourPathFactory;
     }
-};
+
+})();

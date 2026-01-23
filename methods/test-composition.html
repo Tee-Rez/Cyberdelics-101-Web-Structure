@@ -249,11 +249,11 @@
 
                 // 3. Initialize Method
                 let methodFactory;
-                if (step.type === 'interactive-simulation') methodFactory = window.InteractiveSimulationMethod;
-                if (step.type === 'knowledge-construction') methodFactory = window.KnowledgeConstructionMethod;
+                if (step.type === 'interactive-simulation') methodFactory = window.InteractiveSimulationFactory;
+                if (step.type === 'knowledge-construction') methodFactory = window.KnowledgeConstructionFactory;
 
                 if (methodFactory) {
-                    this.activeMethod = methodFactory;
+                    this.activeMethod = methodFactory();
 
                     const selector = step.type === 'interactive-simulation'
                         ? '.interactive-simulation-container'

@@ -100,7 +100,7 @@
 
     <script>
         // Init Parent Method
-        const parent = window.ProgressiveDisclosureMethod;
+        const parent = window.ProgressiveDisclosureFactory();
         parent.init('.progressive-disclosure-container');
 
         const log = document.getElementById('nest-log');
@@ -111,7 +111,7 @@
                 log.textContent = "Section revealed. Initializing nested method...";
 
                 // Init Child Method
-                const child = window.KnowledgeConstructionMethod;
+                const child = window.KnowledgeConstructionFactory();
                 child.init(document.getElementById('kc-target'), {
                     items: [
                         { id: 'tech', text: 'Technology' },

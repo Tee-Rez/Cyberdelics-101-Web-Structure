@@ -3,30 +3,50 @@
  * Enhanced with Visual Ruler, Directional Zoom, and Detail Panel.
  */
 
-window.TimelineZoom = {
+// Ensure Registry Exists
+window.GameModules = window.GameModules || {};
+
+// Register Module
+window.GameModules['timeline-zoom'] = {
     name: 'Timeline Zoom',
     engine: null,
     data: null,
     activeEra: null,
     activeItem: null,
 
-    init: function (engine, data) {
+    init: function (engine, data, container) {
         this.engine = engine;
-        this.data = data;
+        this.container = container || document.body;
+
+        // Normalize Data: If flat items provided, wrap in a default 'era'
+        if (!data.eras && data.items) {
+            this.data = {
+                eras: [{
+                    id: 'main-map',
+                    label: 'Explore',
+                    items: data.items
+                }]
+            };
+        } else {
+            this.data = data;
+        }
+
         this.render();
         this.setupListeners();
     },
 
     countItems: function (data) {
+        // Handle normalized or raw data if passed directly
+        const eras = data.eras || (data.items ? [{ items: data.items }] : []);
         let count = 0;
-        data.eras.forEach(era => {
+        eras.forEach(era => {
             if (era.items) count += era.items.length;
         });
         return count;
     },
 
     render: function () {
-        const root = document.getElementById('game-root');
+        const root = this.container || document.getElementById('game-root');
         if (!root) return;
 
         root.className = 'tz-container view-macro';
@@ -94,60 +114,83 @@ window.TimelineZoom = {
 
     generateTimelineContent: function (era) {
         let html = '';
-        const span = era.yearEnd - era.yearStart;
 
-        // Generate Ticks
-        for (let y = era.yearStart; y <= era.yearEnd; y++) {
-            const offset = y - era.yearStart;
-            const percent = (offset / span) * 90 + 5; // 5% padding
+        // Mode 1: Timeline (Years) - only if era has year data
+        if (era.yearStart !== undefined && era.yearEnd !== undefined) {
+            const span = era.yearEnd - era.yearStart;
 
-            const isDecade = y % 10 === 0;
-            const isMid = y % 5 === 0;
-            const isMajor = isDecade || isMid;
+            // Generate Ticks
+            for (let y = era.yearStart; y <= era.yearEnd; y++) {
+                const offset = y - era.yearStart;
+                const percent = (offset / span) * 90 + 5; // 5% padding
 
-            let label = '';
-            if (isDecade) label = `<div class="tz-tick-label">${y}</div>`;
-            else if (isMid && span < 20) label = `<div class="tz-tick-label">${y}</div>`; // Show 5s if short era by count? Or just always 10s.
+                const isDecade = y % 10 === 0;
+                const isMid = y % 5 === 0;
+                const isMajor = isDecade || isMid;
 
-            html += `
+                let label = '';
+                if (isDecade) label = `<div class="tz-tick-label">${y}</div>`;
+                else if (isMid && span < 20) label = `<div class="tz-tick-label">${y}</div>`; // Show 5s if short era by count? Or just always 10s.
+
+                html += `
                 <div class="tz-tick ${isMajor ? 'major' : ''}" style="left: ${percent}%">
                     ${isDecade ? `<div class="tz-tick-label">${y}</div>` : ''}
                 </div>
             `;
-        }
+            }
 
-        // Generate Items
-        era.items.forEach(item => {
-            const offset = item.year - era.yearStart;
-            const percent = (offset / span) * 90 + 5;
+            // Generate Items
+            era.items.forEach(item => {
+                const offset = item.year - era.yearStart;
+                const percent = (offset / span) * 90 + 5;
 
-            html += `
+                html += `
                 <div class="tz-artifact-point" style="left: ${percent}%" data-id="${item.id}" data-year="${item.year}">
                     <div class="tz-artifact-icon">${item.icon || '❓'}</div>
                 </div>
             `;
-        });
+            });
+        } else {
+            // Mode 2: Spatial Map (X/Y coordinates)
+            if (era.items) {
+                era.items.forEach(item => {
+                    const x = item.x || 50;
+                    const y = item.y || 50;
+                    const isCollected = this.engine && this.engine.hasCollected(item.id);
+                    const stateClass = isCollected ? 'collected' : '';
+
+                    html += `
+                        <div class="tz-artifact-point ${stateClass}" 
+                             style="left: ${x}%; top: ${y}%; position: absolute;"
+                             data-id="${item.id}">
+                            <div class="tz-artifact-icon">${item.icon || '●'}</div>
+                            <div class="tz-point-label" style="position:absolute; top:110%; left:50%; transform:translateX(-50%); white-space:nowrap; font-size: 0.75em; color: #aaa;">${item.label || ''}</div>
+                        </div>
+                    `;
+                });
+            }
+        }
 
         return html;
     },
 
     setupListeners: function () {
         // Node Click (Zoom In)
-        document.querySelectorAll('.tz-era-node').forEach(node => {
+        this.container.querySelectorAll('.tz-era-node').forEach(node => {
             node.addEventListener('click', (e) => {
                 this.zoomIn(node.dataset.id, e.currentTarget);
             });
         });
 
         // Back Click (Zoom Out)
-        document.querySelectorAll('.tz-back-btn').forEach(btn => {
+        this.container.querySelectorAll('.tz-back-btn').forEach(btn => {
             btn.addEventListener('click', () => {
                 this.zoomOut();
             });
         });
 
         // Artifact Click (Inspect)
-        document.querySelectorAll('.tz-artifact-point').forEach(point => {
+        this.container.querySelectorAll('.tz-artifact-point').forEach(point => {
             point.addEventListener('click', (e) => {
                 e.stopPropagation(); // Prevent bubbling if needed
                 const id = point.dataset.id;
@@ -156,31 +199,37 @@ window.TimelineZoom = {
         });
 
         // Collect Button Click
-        document.querySelector('.tz-collect-btn').addEventListener('click', () => {
-            console.log('[TimelineZoom] Collect clicked. ActiveItem:', this.activeItem);
+        const collectBtn = this.container.querySelector('.tz-collect-btn');
+        if (collectBtn) {
+            collectBtn.addEventListener('click', () => {
+                console.log('[TimelineZoom] Collect clicked. ActiveItem:', this.activeItem);
 
-            if (this.activeItem) {
-                if (this.engine) {
-                    this.engine.collectItem(this.activeItem.id);
-                    this.updateInfoPanelState(true);
-                } else {
-                    console.error('[TimelineZoom] No Engine instance found!', this);
+                if (this.activeItem) {
+                    if (this.engine) {
+                        this.engine.collectItem(this.activeItem.id);
+                        this.updateInfoPanelState(true);
+                    } else {
+                        console.error('[TimelineZoom] No Engine instance found!', this);
+                    }
                 }
-            }
-        });
+            });
+        }
 
         // Hide panel when clicking background
-        document.querySelector('.tz-micro-container').addEventListener('click', (e) => {
-            if (!e.target.closest('.tz-artifact-point') && !e.target.closest('.tz-shared-info-panel')) {
-                this.hideInfoPanel();
-            }
-        });
+        const microContainer = this.container.querySelector('.tz-micro-container');
+        if (microContainer) {
+            microContainer.addEventListener('click', (e) => {
+                if (!e.target.closest('.tz-artifact-point') && !e.target.closest('.tz-shared-info-panel')) {
+                    this.hideInfoPanel();
+                }
+            });
+        }
     },
 
     zoomIn: function (eraId, nodeElement) {
         this.activeEra = eraId;
-        const root = document.getElementById('game-root');
-        const container = document.querySelector('.tz-micro-container');
+        const root = this.container;
+        const container = root.querySelector('.tz-micro-container');
 
         // Determine Transform Origin based on node position relative to screen width
         const rect = nodeElement.getBoundingClientRect();
@@ -198,15 +247,16 @@ window.TimelineZoom = {
         root.classList.add('view-micro');
 
         // Activate Detail ID
-        document.querySelectorAll('.tz-era-detail').forEach(el => el.classList.remove('active'));
-        document.getElementById(`detail-${eraId}`).classList.add('active');
+        this.container.querySelectorAll('.tz-era-detail').forEach(el => el.classList.remove('active'));
+        const detailEl = this.container.querySelector(`#detail-${eraId}`);
+        if (detailEl) detailEl.classList.add('active');
     },
 
     zoomOut: function () {
         this.activeEra = null;
         this.hideInfoPanel();
 
-        const root = document.getElementById('game-root');
+        const root = this.container;
         root.classList.add('view-macro');
         root.classList.remove('view-micro');
     },

@@ -2,231 +2,211 @@
  * Progressive Disclosure Method
  * Click-to-reveal teaching method implementation
  * 
- * Now uses createTeachingMethod for consistent interface.
+ * Factory Pattern Refactor
  * 
  * Usage:
- *   // Via MethodLoader (recommended):
- *   MethodLoader.register('progressive-disclosure', ProgressiveDisclosure);
- *   MethodLoader.initAll(document.body);
- * 
- *   // Direct initialization:
- *   ProgressiveDisclosure.init('.lesson-container');
+ *   const factory = window.ProgressiveDisclosureFactory;
+ *   const instance = factory();
+ *   instance.init('.lesson-container');
  */
 
-const ProgressiveDisclosure = createTeachingMethod('progressive-disclosure', {
+(function () {
+    'use strict';
 
-    // ---------- Private State (method-specific) ----------
-    sections: [],
-    completionSection: null,
-
-    // ---------- Lifecycle Hooks ----------
-
-    onInit: function (container, options) {
-        const state = this._getState();
-
-        // Find all reveal sections (excluding completion)
-        this.sections = container.querySelectorAll('.reveal-section:not(.lesson-complete)');
-        this.completionSection = container.querySelector('.lesson-complete');
-
-        // Set total steps for progress tracking
-        this.setTotalSteps(this.sections.length);
-
-        // Set up CourseCore if available (for legacy support)
-        if (typeof CourseCore !== 'undefined') {
-            CourseCore.setTotalSteps(this.sections.length);
-        }
-
-        // First section visible by default
-        if (this.sections.length > 0) {
-            this.sections[0].classList.add('active');
-        }
-
-        // Update step counter UI
-        this._updateStepCounter();
-
-        // Attach click handler
-        this._handleClick = this._handleClick.bind(this);
-        container.addEventListener('click', this._handleClick);
-
-        console.log('[ProgressiveDisclosure] Initialized with', this.sections.length, 'sections');
-    },
-
-    onDestroy: function () {
-        const state = this._getState();
-        if (state.container) {
-            state.container.removeEventListener('click', this._handleClick);
-        }
-    },
-
-    onReset: function () {
-        // Remove active/revealed classes from all sections
-        this.sections.forEach(section => {
-            section.classList.remove('active', 'revealed');
-        });
-
-        // Reset completion section
-        if (this.completionSection) {
-            this.completionSection.classList.remove('active', 'celebrating');
-        }
-
-        // Show first section
-        if (this.sections.length > 0) {
-            this.sections[0].classList.add('active');
-        }
-
-        this._updateStepCounter();
-    },
-
-    // ---------- State Hooks ----------
-
-    getCustomState: function () {
-        return {
-            revealedCount: this.getCurrentStep()
-        };
-    },
-
-    setCustomState: function (savedState) {
-        // Restore revealed sections up to saved point
-        for (let i = 0; i < savedState.revealedCount; i++) {
-            if (this.sections[i]) {
-                this.sections[i].classList.add('active', 'revealed');
-            }
-        }
-        this._updateStepCounter();
-    },
-
-    // ---------- Method-Specific Functions ----------
-
-    /**
-     * Reveal the next hidden section
-     */
-    revealNext: function () {
-        // Current step is "how many triggered". Section 0 is already visible (count 0).
-        // So we want to reveal the section at index = currentStep + 1
-        // (i.e., if 0 steps done, reveal index 1)
-        const nextIndex = this.getCurrentStep() + 1;
-
-        if (nextIndex >= this.sections.length) {
-            this._showCompletion();
-            return;
-        }
-
-        const section = this.sections[nextIndex];
-
-        // Add active class to trigger CSS animation
-        section.classList.add('active');
-
-        // Mark previous as fully revealed (the one at currentStep, or nextIndex-1)
-        // Note: nextIndex-1 should always be valid if nextIndex >= 1
-        if (nextIndex > 0) {
-            this.sections[nextIndex - 1].classList.add('revealed');
-        }
-
-        // Advance progress (base method handles CourseCore notification)
-        this.advanceStep();
-
-        // Update UI
-        this._updateStepCounter();
-
-        // Emit event for composition
-        this.emit('revealed', {
-            sectionIndex: nextIndex,
-            section: section
-        });
-
-        // Scroll to section
-        setTimeout(() => {
-            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }, 100);
-
-        // Check if all revealed (Using nextIndex vs length - 1)
-        if (nextIndex >= this.sections.length - 1) {
-            // If we just revealed the last one, show completion immediately?
-            // Or wait for another click? Usually immediate flow.
-            this._showCompletion();
-        }
-    },
-
-    /**
-     * Reveal all sections at once (for debugging)
-     */
-    revealAll: function () {
-        while (this.getCurrentStep() < this.sections.length) {
-            this.revealNext();
-        }
-    },
-
-    /**
-     * Check if all sections are revealed
-     */
-    isAllRevealed: function () {
-        return this.getCurrentStep() >= this.sections.length;
-    },
-
-    // ---------- Private Helpers ----------
-
-    _handleClick: function (event) {
-        const trigger = event.target.closest('.reveal-trigger');
-        if (!trigger) return;
-
-        event.preventDefault();
-
-        // Find which section this trigger belongs to
-        const section = trigger.closest('.reveal-section');
-        const sectionIndex = Array.from(this.sections).indexOf(section);
-
-        // Only reveal if clicking the current section's trigger
-        if (sectionIndex === this.getCurrentStep() - 1 ||
-            (sectionIndex === 0 && this.getCurrentStep() === 0)) {
-            this.revealNext();
-        }
-    },
-
-    _updateStepCounter: function () {
-        const counter = document.querySelector('.step-counter');
-        if (counter) {
-            const current = Math.min(this.getCurrentStep() + 1, this.sections.length);
-            counter.innerHTML = `Step <span class="current">${current}</span> of ${this.sections.length}`;
-        }
-    },
-
-    _showCompletion: function () {
-        if (this.completionSection) {
-            this.completionSection.classList.add('active');
-
-            // Enable completion button
-            if (typeof CourseCore !== 'undefined') {
-                CourseCore.enableCompletion();
-            }
-
-            // Celebration animation
-            setTimeout(() => {
-                this.completionSection.classList.add('celebrating');
-            }, 400);
-
-            // Mark method complete
-            this.markComplete();
-
-            this.emit('allRevealed', {});
-        }
+    if (typeof createTeachingMethod === 'undefined') {
+        console.error('Core dependency "method-base.js" missing.');
+        return;
     }
-});
 
-// Legacy support: wrap init for DOMContentLoaded handling
-const _originalInit = ProgressiveDisclosure.init;
-ProgressiveDisclosure.init = function (containerSelector, options) {
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', () => {
-            _originalInit.call(ProgressiveDisclosure, containerSelector, options);
+    const ProgressiveDisclosureFactory = function () {
+        return createTeachingMethod('progressive-disclosure', {
+
+            // ---------- Private State (method-specific) ----------
+            sections: [],
+            completionSection: null,
+
+            // ---------- Lifecycle Hooks ----------
+
+            onInit: function (container, options) {
+                // Find all reveal sections (excluding completion)
+                this.sections = container.querySelectorAll('.reveal-section:not(.lesson-complete)');
+                this.completionSection = container.querySelector('.lesson-complete');
+
+                // Set total steps for progress tracking
+                this.setTotalSteps(this.sections.length);
+
+                // Set up CourseCore if available (for legacy support)
+                if (typeof CourseCore !== 'undefined') {
+                    CourseCore.setTotalSteps(this.sections.length);
+                }
+
+                // First section visible by default
+                if (this.sections.length > 0) {
+                    this.sections[0].classList.add('active');
+                }
+
+                // Update step counter UI
+                this._updateStepCounter();
+
+                // Attach click handler
+                this._handleClick = this._handleClick.bind(this);
+                container.addEventListener('click', this._handleClick);
+
+                console.log('[ProgressiveDisclosure] Initialized with', this.sections.length, 'sections');
+            },
+
+            onDestroy: function () {
+                const state = this._getState();
+                if (state.container) {
+                    state.container.removeEventListener('click', this._handleClick);
+                }
+            },
+
+            onReset: function () {
+                // Remove active/revealed classes from all sections
+                this.sections.forEach(section => {
+                    section.classList.remove('active', 'revealed');
+                });
+
+                // Reset completion section
+                if (this.completionSection) {
+                    this.completionSection.classList.remove('active', 'celebrating');
+                }
+
+                // Show first section
+                if (this.sections.length > 0) {
+                    this.sections[0].classList.add('active');
+                }
+
+                this._updateStepCounter();
+            },
+
+            // ---------- State Hooks ----------
+
+            getCustomState: function () {
+                return {
+                    revealedCount: this.getCurrentStep()
+                };
+            },
+
+            setCustomState: function (savedState) {
+                // Restore revealed sections up to saved point
+                for (let i = 0; i < savedState.revealedCount; i++) {
+                    if (this.sections[i]) {
+                        this.sections[i].classList.add('active', 'revealed');
+                    }
+                }
+                this._updateStepCounter();
+            },
+
+            // ---------- Method-Specific Functions ----------
+
+            /**
+             * Reveal the next hidden section
+             */
+            revealNext: function () {
+                const nextIndex = this.getCurrentStep() + 1;
+
+                if (nextIndex >= this.sections.length) {
+                    this._showCompletion();
+                    return;
+                }
+
+                const section = this.sections[nextIndex];
+
+                // Add active class to trigger CSS animation
+                section.classList.add('active');
+
+                // Mark previous as fully revealed
+                if (nextIndex > 0) {
+                    this.sections[nextIndex - 1].classList.add('revealed');
+                }
+
+                // Advance progress
+                this.advanceStep();
+
+                // Update UI
+                this._updateStepCounter();
+
+                // Emit event for composition
+                this.emit('revealed', {
+                    sectionIndex: nextIndex,
+                    section: section
+                });
+
+                // Scroll to section
+                setTimeout(() => {
+                    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 100);
+
+                // Check if all revealed
+                if (nextIndex >= this.sections.length - 1) {
+                    this._showCompletion();
+                }
+            },
+
+            revealAll: function () {
+                while (this.getCurrentStep() < this.sections.length) {
+                    this.revealNext();
+                }
+            },
+
+            isAllRevealed: function () {
+                return this.getCurrentStep() >= this.sections.length;
+            },
+
+            // ---------- Private Helpers ----------
+
+            _handleClick: function (event) {
+                const trigger = event.target.closest('.reveal-trigger');
+                if (!trigger) return;
+
+                event.preventDefault();
+
+                // Find which section this trigger belongs to
+                const section = trigger.closest('.reveal-section');
+                const sectionIndex = Array.from(this.sections).indexOf(section);
+
+                // Only reveal if clicking the current section's trigger
+                if (sectionIndex === this.getCurrentStep()) {
+                    this.revealNext();
+                }
+            },
+
+            _updateStepCounter: function () {
+                // Determine scope: only look inside our container
+                const container = this._getState().container;
+                const counter = container.querySelector('.step-counter');
+                if (counter) {
+                    const current = Math.min(this.getCurrentStep() + 1, this.sections.length);
+                    counter.innerHTML = `Step <span class="current">${current}</span> of ${this.sections.length}`;
+                }
+            },
+
+            _showCompletion: function () {
+                if (this.completionSection) {
+                    this.completionSection.classList.add('active');
+
+                    if (typeof CourseCore !== 'undefined') {
+                        CourseCore.enableCompletion();
+                    }
+
+                    setTimeout(() => {
+                        this.completionSection.classList.add('celebrating');
+                    }, 400);
+
+                    this.markComplete();
+                    this.emit('allRevealed', {});
+                }
+            }
         });
+    };
+
+    // Export Factory
+    if (window.MethodLoader) {
+        window.MethodLoader.registerFactory('progressive-disclosure', ProgressiveDisclosureFactory);
     } else {
-        _originalInit.call(ProgressiveDisclosure, containerSelector, options);
+        window.ProgressiveDisclosureFactory = ProgressiveDisclosureFactory;
     }
-};
 
-// Export to Window (for composition tests)
-if (window.MethodLoader) {
-    window.MethodLoader.register('progressive-disclosure', ProgressiveDisclosure);
-} else {
-    window.ProgressiveDisclosureMethod = ProgressiveDisclosure;
-}
+})();

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson Runner Manifest Test</title>
+
+    <!-- Core Styles -->
+    <link rel="stylesheet" href="../../core/styles.css">
+
+    <!-- Method Styles -->
+    <link rel="stylesheet" href="progressive-disclosure/progressive-disclosure.css">
+    <link rel="stylesheet" href="scenario-based/scenario-based.css">
+    <link rel="stylesheet" href="interactive-simulation/interactive-simulation.css">
+
+    <style>
+        body {
+            background: #0f172a;
+            color: #e2e8f0;
+            padding: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        #lesson-root {
+            border: 1px solid #334155;
+            padding: 2rem;
+            border-radius: 12px;
+            background: #1e293b;
+            min-height: 400px;
+        }
+
+        .debug-panel {
+            margin-top: 2rem;
+            padding: 1rem;
+            background: #000;
+            color: #0f0;
+            font-family: monospace;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Manifest Runner Test</h1>
+    <p>Verifying the <strong>LessonRunner</strong> engine with a JSON Manifest.</p>
+
+    <div id="lesson-root"></div>
+
+    <div class="debug-panel">
+        <div>> System Ready.</div>
+    </div>
+
+    <!-- 1. Core Dependencies -->
+    <script src="../../core/method-base.js"></script>
+
+    <!-- 2. Method Factories -->
+    <script src="progressive-disclosure/progressive-disclosure.js"></script>
+    <script src="scenario-based/scenario-based.js"></script>
+    <script src="interactive-simulation/interactive-simulation.js"></script>
+
+    <!-- 3. The Engine -->
+    <script src="../../core/lesson-runner.js"></script>
+
+    <!-- 4. Test Script -->
+    <script>
+        // Mock Engine for Sim
+        window.SimulationEngines = window.SimulationEngines || {};
+        window.SimulationEngines['test-sim'] = {
+            defaults: { intensity: 50 },
+            config: [{ id: 'intensity', label: 'Intensity', min: 0, max: 100, step: 10 }],
+            init: function (viewport, params, instance) {
+                viewport.innerHTML = `<div style="text-align:center; padding: 3rem; font-size: 1.5rem; color: #38bdf8;">
+                    Simulation Running<br>Intensity: <span id="sim-val">${params.intensity}</span>%
+                    <div style="margin-top:1rem"><button class="btn btn-primary" id="btn-finish-sim">Complete Task</button></div>
+                </div>`;
+
+                viewport.querySelector('#btn-finish-sim').onclick = () => {
+                    if (instance && instance.markComplete) {
+                        instance.markComplete();
+                        // Also emit 'complete' just in case, though base handles it? 
+                        // Base 'markComplete' usually emits, let's check method-base.
+                        // We will rely on markComplete.
+                    } else {
+                        console.error('Instance context missing or invalid');
+                    }
+                };
+            },
+            onParamChange: function (id, val) {
+                const el = document.getElementById('sim-val');
+                if (el) el.textContent = val;
+            },
+            update: function () { },
+            destroy: function () { console.log('Sim Destroyed'); }
+        };
+
+        // THE MANIFEST
+        const TestManifest = {
+            id: "manifest_001",
+            title: "Cyberdelics 101: System Check",
+            theme: {
+                primaryColor: "#38bdf8",
+                fontBody: "Inter, sans-serif"
+            },
+            modules: [
+                {
+                    id: "mod_intro",
+                    type: "progressive-disclosure",
+                    contentHTML: `
+                        <div class="progressive-disclosure-container">
+                            <div class="step-counter"></div>
+                            <div class="reveal-section active">
+                                <div class="section-content">
+                                    <h2>Phase 1: Initialization</h2>
+                                    <p>The Lesson Runner has successfully loaded the manifest.</p>
+                                    <button class="reveal-trigger btn btn-primary">Proceed</button>
+                                </div>
+                            </div>
+                            <div class="reveal-section">
+                                <div class="section-content">
+                                    <h2>Phase 2: Confirmation</h2>
+                                    <p>State isolation confirmed. Preparing Simulation.</p>
+                                    <button class="reveal-trigger btn btn-primary">Launch Sim</button>
+                                </div>
+                            </div>
+                            <div class="reveal-section lesson-complete">
+                                <h2>Complete</h2>
+                            </div>
+                        </div>
+                    `,
+                    config: {}
+                },
+                {
+                    id: "mod_sim",
+                    type: "interactive-simulation",
+                    contentHTML: `
+                        <div class="interactive-simulation-container">
+                             <div class="sim-viewport"></div>
+                             <div class="sim-controls"></div>
+                        </div>
+                    `,
+                    config: {
+                        engine: "test-sim"
+                    }
+                },
+                {
+                    id: "mod_choice",
+                    type: "scenario-based",
+                    contentHTML: `
+                         <div class="scenario-container">
+                            <div class="scenario-scene active" data-scene-id="start">
+                                <div class="scene-content">
+                                    <h2>Final Check</h2>
+                                    <p class="scene-narrative">Did the system perform as expected?</p>
+                                    <div class="scenario-choices">
+                                        <div class="choice-option" data-choice-id="yes" data-outcome="good">
+                                            <div class="choice-text"><strong>Yes, All Green</strong></div>
+                                        </div>
+                                        <div class="choice-option" data-choice-id="no" data-outcome="bad">
+                                            <div class="choice-text"><strong>No, Report Bugs</strong></div>
+                                        </div>
+                                    </div>
+                                    <div class="scenario-outcome" data-outcome-id="good">
+                                        <p>Excellent. The architecture is sound.</p>
+                                        <button class="scene-continue btn btn-primary">Finish</button>
+                                    </div>
+                                    <div class="scenario-outcome" data-outcome-id="bad">
+                                        <p>Noted. Please check console logs.</p>
+                                        <button class="scene-continue btn btn-primary">Finish</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `,
+                    config: {}
+                }
+            ]
+        };
+
+        // Run
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('Initializing Runner...');
+            LessonRunner.init('#lesson-root');
+
+            setTimeout(() => {
+                LessonRunner.loadLesson(TestManifest);
+            }, 500);
+        });
+
+    </script>
+</body>
+
+</html>

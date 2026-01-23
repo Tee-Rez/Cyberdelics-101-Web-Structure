@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constellation Personas Test</title>
+    <style>
+        body {
+            background-color: #050510;
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            padding: 2rem;
+        }
+
+        #test-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: #0a0a15;
+            border-radius: 12px;
+            border: 1px solid #333;
+        }
+
+        h1 {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .sim-viewport {
+            min-height: 600px;
+        }
+
+        .btn-continue {
+            display: block;
+            margin: 1rem auto;
+            padding: 0.75rem 2rem;
+            background: rgba(150, 100, 255, 0.3);
+            border: 2px solid rgba(150, 100, 255, 0.6);
+            color: #fff;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-continue:hover {
+            background: rgba(150, 100, 255, 0.5);
+            box-shadow: 0 0 20px rgba(150, 100, 255, 0.4);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="test-container">
+        <h1>🌟 Constellation Personas Test</h1>
+
+        <div class="interactive-simulation-container">
+            <h3>Who This Course Is For</h3>
+            <div class="sim-viewport"></div>
+            <div class="sim-controls"></div>
+            <button class="btn-continue">Continue</button>
+        </div>
+    </div>
+
+    <!-- Dependencies -->
+    <link rel="stylesheet" href="../methods/interactive-simulation/constellation-personas/constellation-personas.css">
+    <script src="../core/method-base.js"></script>
+    <script src="../methods/interactive-simulation/interactive-simulation.js"></script>
+    <script src="../methods/interactive-simulation/constellation-personas/constellation-personas.js"></script>
+
+    <script>
+        console.log('[Test] Starting Constellation Personas Test');
+
+        // Verify engine is registered
+        if (window.SimulationEngines && window.SimulationEngines['constellation-personas']) {
+            console.log('[Test] ✓ Constellation engine registered');
+        } else {
+            console.error('[Test] ✗ Constellation engine NOT found!');
+        }
+
+        // Create instance
+        const container = document.querySelector('.interactive-simulation-container');
+        const instance = window.InteractiveSimulationFactory();
+
+        // Configuration with persona data
+        // For interactive-simulation, the data needs to be at the top level
+        const config = {
+            engine: 'constellation-personas',
+            params: {
+                personas: [
+                    {
+                        id: "creator",
+                        name: "Creative Technologist",
+                        icon: "🎨",
+                        description: "You design experiences and want to push the boundaries of what's possible. This course gives you the conceptual framework to create transformative tech."
+                    },
+                    {
+                        id: "healer",
+                        name: "Mindful Practitioner",
+                        icon: "🧘",
+                        description: "You guide others through meditation, therapy, or coaching. Learn how technology can amplify your healing work without replacing human connection."
+                    },
+                    {
+                        id: "explorer",
+                        name: "Consciousness Explorer",
+                        icon: "🔮",
+                        description: "You're personally curious about altered states and self-discovery. This course provides safe, structured pathways for exploration."
+                    },
+                    {
+                        id: "researcher",
+                        name: "Academic Researcher",
+                        icon: "🔬",
+                        description: "You study consciousness, neuroscience, or human-computer interaction. Get the interdisciplinary foundation you need."
+                    },
+                    {
+                        id: "builder",
+                        name: "Entrepreneur",
+                        icon: "🚀",
+                        description: "You're building products in wellness, VR, or mental health tech. Understand the principles that make experiences truly transformative."
+                    }
+                ]
+            }
+        };
+
+        // Initialize
+        instance.init(container, config);
+
+        console.log('[Test] Instance initialized');
+
+        // Wire up continue button
+        document.querySelector('.btn-continue').addEventListener('click', () => {
+            console.log('[Test] Continue clicked');
+            instance.markComplete();
+        });
+
+        // Listen for completion
+        instance.on('complete', () => {
+            console.log('[Test] ✓ Simulation completed!');
+            alert('Constellation exploration complete! Check console for details.');
+        });
+    </script>
+</body>
+
+</html>
