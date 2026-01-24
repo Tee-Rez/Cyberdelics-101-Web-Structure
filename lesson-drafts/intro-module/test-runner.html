@@ -112,6 +112,9 @@
     <!-- Simulation Engines -->
     <script src="../../methods/interactive-simulation/constellation-personas/constellation-personas.js"></script>
 
+    <!-- Core UI -->
+    <script src="../../core/lesson-ui.js"></script>
+
     <!-- Core Runner (Loaded LAST to ensure factories exist) -->
     <script src="../../core/lesson-runner.js"></script>
 
@@ -184,179 +187,28 @@
                 destroy: function () { }
             };
 
-            // 2. Embedded Manifest
-            const MANIFEST = {
-                "lessonId": "intro-module",
-                "title": "Cyberdelics 101: Interactive Introduction & Orientation",
-                "modules": [
-                    {
-                        "id": "intro-1-welcome",
-                        "type": "progressive-disclosure",
-                        "title": "Welcome & Course Opening",
-                        "content": {
-                            "sections": [
-                                {
-                                    "id": "welcome-1",
-                                    "content": "<h1>Cyberdelics 101</h1><h2>Foundational Knowledge</h2><p>Where Ancient Wisdom Meets Cutting-Edge Technology</p>"
-                                },
-                                {
-                                    "id": "welcome-2",
-                                    "content": "<p>You're exploring consciousness-technology frontiers.</p><p>4-5 hours of transformative learning ahead.</p>"
-                                },
-                                {
-                                    "id": "welcome-3",
-                                    "content": "<ul><li>VR + AR + Biofeedback = Personal Transformation</li><li>No substances. Pure technology.</li><li>You're among the pioneers.</li></ul>"
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "id": "intro-2-course-map",
-                        "type": "gamified-exploration",
-                        "title": "What You're About to Learn",
-                        "content": {
-                            "gameType": "timeline-zoom",
-                            "config": {
-                                "mode": "map",
-                                "backgroundImage": "assets/sacred-geo-map.jpg",
-                                "items": [
-                                    { "id": "m1", "x": 10, "y": 50, "label": "Module 1", "description": "Defining Cyberdelics: Precise definitions & core principles.", "icon": "💠" },
-                                    { "id": "m2", "x": 30, "y": 50, "label": "Module 2", "description": "Historical Foundations: 30-year evolution: Leary to today.", "icon": "📜" },
-                                    { "id": "m3", "x": 50, "y": 50, "label": "Module 3", "description": "Scientific Understanding: Four consciousness theories.", "icon": "🧬" },
-                                    { "id": "m4", "x": 70, "y": 50, "label": "Module 4", "description": "Current Applications: Major platform & use cases.", "icon": "🕶️" },
-                                    { "id": "m5", "x": 90, "y": 50, "label": "Module 5", "description": "Cyberdelic Ecosystem: Challenges & opportunities.", "icon": "🌐" }
-                                ],
-                                "completionCriteria": { "collectedCount": 5 }
-                            }
-                        }
-                    },
-                    {
-                        "id": "intro-3-definition",
-                        "type": "knowledge-construction",
-                        "title": "What Cyberdelics Are",
-                        "content": {
-                            "instruction": "Assemble the definition of Cyberdelics:",
-                            "template": "<div class='equation-builder'><span>Cyberdelics = </span><span class='kc-slot' data-correct='tech'></span><span> + </span><span class='kc-slot' data-correct='state'></span><span> + </span><span class='kc-slot' data-correct='spirit'></span><span> - </span><span class='kc-slot' data-correct='drug'></span></div>",
-                            "items": [
-                                { "id": "tech", "text": "Digital Technologies (VR/AR)" },
-                                { "id": "state", "text": "Altered States" },
-                                { "id": "spirit", "text": "Spiritual Exploration" },
-                                { "id": "drug", "text": "Psychoactive Substances" },
-                                { "id": "distractor1", "text": "Coding Skills" }
-                            ]
-                        }
-                    },
-                    {
-                        "id": "intro-4-personas",
-                        "type": "gamified-exploration",
-                        "title": "Who This Course Is For",
-                        "content": {
-                            "gameType": "timeline-zoom",
-                            "config": {
-                                "mode": "constellation",
-                                "items": [
-                                    { "id": "p1", "x": 50, "y": 50, "label": "YOU", "description": "The Explorer at the center.", "icon": "⭐" },
-                                    { "id": "p2", "x": 20, "y": 20, "label": "Consciousness Workers", "description": "Meditation teachers, yoga instructors. Exploring how technology complements practice.", "icon": "🧘" },
-                                    { "id": "p3", "x": 80, "y": 20, "label": "Tech Enthusiasts", "description": "VR/gaming lovers. Curious about deeper applications.", "icon": "🎮" },
-                                    { "id": "p4", "x": 20, "y": 80, "label": "Healthcare Pros", "description": "Seeking non-pharmacological interventions.", "icon": "⚕️" },
-                                    { "id": "p5", "x": 80, "y": 80, "label": "Researchers", "description": "Building academic foundation.", "icon": "🔬" }
-                                ],
-                                "completionCriteria": { "collectedCount": 5 }
-                            }
-                        }
-                    },
-                    {
-                        "id": "intro-5-features",
-                        "type": "progressive-disclosure",
-                        "title": "Learning Approach",
-                        "content": {
-                            "sections": [
-                                { "id": "f1", "content": "<h3>Course Features</h3><p>We use interactive experiences, not just video.</p>" },
-                                { "id": "f2", "content": "<h3>Visual Data Journeys</h3><p>Explore timelines and data visually.</p>" },
-                                { "id": "f3", "content": "<h3>Total Control</h3><p>Pause, Rewind, Revisit. Your pace.</p>" }
-                            ]
-                        }
-                    },
-                    {
-                        "id": "intro-6-timeline",
-                        "type": "interactive-simulation",
-                        "title": "Why Now? The Current Moment",
-                        "content": {
-                            "engine": "time-slider",
-                            "params": { "year": 2025 },
-                            "config": [
-                                { "id": "year", "label": "Time", "min": 2015, "max": 2035, "step": 1 }
-                            ]
-                        }
-                    },
-                    {
-                        "id": "intro-7-setup",
-                        "type": "knowledge-construction",
-                        "title": "Setting Yourself Up for Success",
-                        "content": {
-                            "instruction": "Prepare your environment. Drag the essential tools to the desk.",
-                            "template": "<div class='setup-desk'><h3>My Desk</h3><div class='kc-slot' data-correct='head'></div><div class='kc-slot' data-correct='note'></div><div class='kc-slot' data-correct='calm'></div></div>",
-                            "items": [
-                                { "id": "head", "text": "Headphones" },
-                                { "id": "note", "text": "Notebook" },
-                                { "id": "calm", "text": "Quiet Block" },
-                                { "id": "phone", "text": "Distraction (Phone)" }
-                            ]
-                        }
-                    },
-                    {
-                        "id": "intro-8-balance",
-                        "type": "interactive-simulation",
-                        "title": "Language & Perspective",
-                        "content": {
-                            "engine": "balance-scale",
-                            "params": { "ratio": 50 },
-                            "config": [
-                                { "id": "ratio", "label": "Science vs Spirit", "min": 0, "max": 100, "step": 10 }
-                            ]
-                        }
-                    },
-                    {
-                        "id": "intro-9-myths",
-                        "type": "scenario-based",
-                        "title": "What This Course Is NOT",
-                        "content": {
-                            "scenes": [
-                                {
-                                    "id": "start",
-                                    "narrative": "Many arrive with misconceptions. Let's clarify.",
-                                    "choices": [
-                                        { "id": "c1", "label": "This course certifies me as a psychedelic therapist.", "outcome": "myth" },
-                                        { "id": "c2", "label": "This provides foundational knowledge for the field.", "outcome": "fact" }
-                                    ]
-                                },
-                                { "id": "myth", "narrative": "INCORRECT. This is a 5-hour foundation. Professional certification takes much longer.", "choices": [] },
-                                { "id": "fact", "narrative": "CORRECT. You are building a solid foundation to launch from.", "choices": [] }
-                            ]
-                        }
-                    },
-                    {
-                        "id": "intro-10-launch",
-                        "type": "progressive-disclosure",
-                        "title": "Your Journey Begins",
-                        "content": {
-                            "sections": [
-                                { "id": "l1", "content": "<p>Journey Preparation Complete.</p><ul><li>Course structure understood</li><li>Personal relevance identified</li></ul>" },
-                                { "id": "l2", "content": "<blockquote>The future is built by pioneers willing to learn deeply. That's you.</blockquote>" },
-                                { "id": "l3", "content": "<button class='btn-primary' onclick='alert(\"Launching Module 1...\")'>BEGIN MODULE 1</button>" }
-                            ]
-                        }
-                    }
-                ]
-            };
-
-            // 3. Run
+            // 3. Fetch and Run
             log('Initializing Runner...');
             const runner = window.LessonRunner;
+
             if (runner) {
                 runner.init(document.getElementById('lesson-root'));
-                log('Loading Lesson...');
-                runner.loadLesson(MANIFEST);
+
+                log('Fetching manifest.json...');
+                fetch('./manifest.json')
+                    .then(response => {
+                        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                        return response.json();
+                    })
+                    .then(manifest => {
+                        log('Manifest loaded successfully.');
+                        log('Loading Lesson...');
+                        runner.loadLesson(manifest);
+                    })
+                    .catch(err => {
+                        log('ERROR loading manifest: ' + err.message);
+                        console.error(err);
+                    });
             } else {
                 log('ERROR: LessonRunner not found!');
             }

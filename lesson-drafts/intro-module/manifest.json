@@ -117,38 +117,40 @@
             "title": "Who This Course Is For",
             "content": {
                 "engine": "constellation-personas",
-                "personas": [
-                    {
-                        "id": "creator",
-                        "name": "Creative Technologist",
-                        "icon": "🎨",
-                        "description": "You design experiences and want to push the boundaries of what's possible. This course gives you the conceptual framework to create transformative tech."
-                    },
-                    {
-                        "id": "healer",
-                        "name": "Mindful Practitioner",
-                        "icon": "🧘",
-                        "description": "You guide others through meditation, therapy, or coaching. Learn how technology can amplify your healing work without replacing human connection."
-                    },
-                    {
-                        "id": "explorer",
-                        "name": "Consciousness Explorer",
-                        "icon": "🔮",
-                        "description": "You're personally curious about altered states and self-discovery. This course provides safe, structured pathways for exploration."
-                    },
-                    {
-                        "id": "researcher",
-                        "name": "Academic Researcher",
-                        "icon": "🔬",
-                        "description": "You study consciousness, neuroscience, or human-computer interaction. Get the interdisciplinary foundation you need."
-                    },
-                    {
-                        "id": "builder",
-                        "name": "Entrepreneur",
-                        "icon": "🚀",
-                        "description": "You're building products in wellness, VR, or mental health tech. Understand the principles that make experiences truly transformative."
-                    }
-                ]
+                "params": {
+                    "personas": [
+                        {
+                            "id": "creator",
+                            "name": "Creative Technologist",
+                            "icon": "🎨",
+                            "description": "You design experiences and want to push the boundaries of what's possible. This course gives you the conceptual framework to create transformative tech."
+                        },
+                        {
+                            "id": "healer",
+                            "name": "Mindful Practitioner",
+                            "icon": "🧘",
+                            "description": "You guide others through meditation, therapy, or coaching. Learn how technology can amplify your healing work without replacing human connection."
+                        },
+                        {
+                            "id": "explorer",
+                            "name": "Consciousness Explorer",
+                            "icon": "🔮",
+                            "description": "You're personally curious about altered states and self-discovery. This course provides safe, structured pathways for exploration."
+                        },
+                        {
+                            "id": "researcher",
+                            "name": "Academic Researcher",
+                            "icon": "🔬",
+                            "description": "You study consciousness, neuroscience, or human-computer interaction. Get the interdisciplinary foundation you need."
+                        },
+                        {
+                            "id": "builder",
+                            "name": "Entrepreneur",
+                            "icon": "🚀",
+                            "description": "You're building products in wellness, VR, or mental health tech. Understand the principles that make experiences truly transformative."
+                        }
+                    ]
+                }
             }
         },
         {

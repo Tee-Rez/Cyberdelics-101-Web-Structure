@@ -56,8 +56,16 @@
             // Apply Global Theme
             this._applyTheme(manifest.theme);
 
-            // Clear Container
-            this.container.innerHTML = '';
+            // Initialize UI (Cyberdeck Hull)
+            if (window.LessonUI) {
+                console.log('[LessonRunner] Found LessonUI, initializing...');
+                window.LessonUI.init(this.container);
+                window.LessonUI.update(manifest.title, 0);
+            } else {
+                console.warn('[LessonRunner] LessonUI NOT found, using fallback.');
+                // Fallback if UI not loaded
+                this.container.innerHTML = '';
+            }
 
             // Start First Module
             this.nextModule();
@@ -98,12 +106,21 @@
                 return;
             }
 
-            // 1. Create Container for this module
-            this.container.innerHTML = ''; // Clear previous
+            // 1. Determine Target Container
+            let targetContainer = this.container;
+            if (window.LessonUI) {
+                targetContainer = window.LessonUI.getContentContainer();
+                // Update Progress on UI
+                const progress = (this.activeModuleIndex) / (this.currentLesson.modules.length);
+                window.LessonUI.update(null, progress);
+            }
+
+            // 1b. Create Container for this module
+            targetContainer.innerHTML = ''; // Clear previous module content
             const moduleContainer = document.createElement('div');
             moduleContainer.className = `module-container module-${type}`;
             moduleContainer.id = moduleConfig.id;
-            this.container.appendChild(moduleContainer);
+            targetContainer.appendChild(moduleContainer);
 
             // 2. Inject Content (HTML) if provided in config
             // Many methods like Progressive Disclosure need their HTML structure first
@@ -120,6 +137,7 @@
                         const isFirst = idx === 0 ? 'active' : '';
                         html += `
                             <div class="reveal-section ${isFirst}" id="${sec.id}">
+                                ${this._generateMediaHTML(sec.media)}
                                 <div class="section-content">${sec.content}</div>
                                 ${idx < moduleConfig.content.sections.length - 1 ? '<button class="reveal-trigger">Next</button>' : ''}
                             </div>
@@ -169,6 +187,7 @@
 
                         scenesHTML += `
                             <div class="scenario-scene ${isFirst}" id="scene-${scene.id}">
+                                ${this._generateMediaHTML(scene.media)}
                                 <div class="scenario-narrative">${scene.narrative || ''}</div>
                                 ${choicesHTML}
                             </div>
@@ -243,6 +262,25 @@
             const root = this.container;
             if (theme.primaryColor) root.style.setProperty('--primary-color', theme.primaryColor);
             if (theme.fontBody) root.style.setProperty('--font-body', theme.fontBody);
+        }
+
+        _generateMediaHTML(media) {
+            if (!media) return '';
+
+            const positionClass = media.position ? `media-${media.position}` : 'media-inline';
+            const style = media.style ? `style="${media.style}"` : '';
+
+            let content = '';
+            if (media.type === 'image') {
+                content = `<img src="${media.src}" alt="${media.alt || ''}" class="sim-media-image">`;
+            } else if (media.type === 'video') {
+                const autoplay = media.autoplay !== false ? 'autoplay loop muted playsinline' : 'controls';
+                content = `<video src="${media.src}" ${autoplay} class="sim-media-video"></video>`;
+            } else if (media.type === 'threejs') {
+                content = `<div class="threejs-canvas" data-engine="${media.engine}"></div>`;
+            }
+
+            return `<div class="media-container ${positionClass}" ${style}>${content}</div>`;
         }
 
         // Helper: progressive-disclosure -> ProgressiveDisclosure

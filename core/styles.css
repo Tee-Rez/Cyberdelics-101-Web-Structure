@@ -10,15 +10,15 @@
     --color-surface: #12121a;
     --color-surface-elevated: #1a1a24;
     --color-border: #2a2a3a;
-    
+
     --color-text-primary: #e8e8f0;
     --color-text-secondary: #9090a0;
     --color-text-muted: #606070;
-    
+
     --color-accent: #7b5cff;
     --color-accent-hover: #9177ff;
     --color-accent-glow: rgba(123, 92, 255, 0.3);
-    
+
     /* Typography */
     --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     --font-size-base: 16px;
@@ -27,7 +27,7 @@
     --font-size-xl: 24px;
     --font-size-2xl: 32px;
     --line-height: 1.6;
-    
+
     /* Spacing */
     --space-xs: 4px;
     --space-sm: 8px;
@@ -35,12 +35,12 @@
     --space-lg: 24px;
     --space-xl: 32px;
     --space-2xl: 48px;
-    
+
     /* Layout */
     --container-max-width: 720px;
     --border-radius: 8px;
     --border-radius-lg: 12px;
-    
+
     /* Transitions */
     --transition-fast: 150ms ease;
     --transition-normal: 250ms ease;
@@ -48,7 +48,9 @@
 }
 
 /* ---------- Reset & Base ---------- */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -70,16 +72,29 @@ body {
 }
 
 /* ---------- Typography ---------- */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: var(--color-text-primary);
     font-weight: 600;
     line-height: 1.3;
     margin-bottom: var(--space-md);
 }
 
-h1 { font-size: var(--font-size-2xl); }
-h2 { font-size: var(--font-size-xl); }
-h3 { font-size: var(--font-size-lg); }
+h1 {
+    font-size: var(--font-size-2xl);
+}
+
+h2 {
+    font-size: var(--font-size-xl);
+}
+
+h3 {
+    font-size: var(--font-size-lg);
+}
 
 p {
     margin-bottom: var(--space-md);
@@ -193,7 +208,8 @@ strong {
 }
 
 /* ---------- Lists ---------- */
-ul, ol {
+ul,
+ol {
     margin-bottom: var(--space-md);
     padding-left: var(--space-lg);
 }
@@ -208,19 +224,49 @@ li strong {
 }
 
 /* ---------- Utility Classes ---------- */
-.text-center { text-align: center; }
-.text-muted { color: var(--color-text-muted); }
-.text-accent { color: var(--color-accent); }
+.text-center {
+    text-align: center;
+}
 
-.mt-sm { margin-top: var(--space-sm); }
-.mt-md { margin-top: var(--space-md); }
-.mt-lg { margin-top: var(--space-lg); }
-.mt-xl { margin-top: var(--space-xl); }
+.text-muted {
+    color: var(--color-text-muted);
+}
 
-.mb-sm { margin-bottom: var(--space-sm); }
-.mb-md { margin-bottom: var(--space-md); }
-.mb-lg { margin-bottom: var(--space-lg); }
-.mb-xl { margin-bottom: var(--space-xl); }
+.text-accent {
+    color: var(--color-accent);
+}
+
+.mt-sm {
+    margin-top: var(--space-sm);
+}
+
+.mt-md {
+    margin-top: var(--space-md);
+}
+
+.mt-lg {
+    margin-top: var(--space-lg);
+}
+
+.mt-xl {
+    margin-top: var(--space-xl);
+}
+
+.mb-sm {
+    margin-bottom: var(--space-sm);
+}
+
+.mb-md {
+    margin-bottom: var(--space-md);
+}
+
+.mb-lg {
+    margin-bottom: var(--space-lg);
+}
+
+.mb-xl {
+    margin-bottom: var(--space-xl);
+}
 
 /* ---------- Responsive ---------- */
 @media (max-width: 768px) {
@@ -229,8 +275,358 @@ li strong {
         --font-size-2xl: 28px;
         --space-xl: 24px;
     }
-    
+
     .lesson-container {
         padding: var(--space-lg);
     }
+}
+
+/* ---------- Media Injection System ---------- */
+.media-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+}
+
+.media-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Ensure content sits above background */
+.media-background+.section-content,
+.media-background+.scenario-narrative,
+.media-background+.sim-viewport {
+    position: relative;
+    z-index: 1;
+}
+
+.media-inline {
+    width: 100%;
+    margin-bottom: var(--space-md);
+    border: 1px solid var(--color-border);
+}
+
+.sim-media-image,
+.sim-media-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.threejs-canvas {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* ---------- Cyberdeck UI Shell ---------- */
+
+/* Shell Grid Layout */
+.cyberdeck-shell {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background: var(--color-bg);
+    overflow: hidden;
+    position: relative;
+    /* Ensure it stays within parent flow */
+}
+
+.cyberdeck-body {
+    display: flex;
+    flex: 1;
+    /* Take remaining height */
+    overflow: hidden;
+    position: relative;
+}
+
+.cyberdeck-main {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+    padding: var(--space-lg);
+    /* Subtle grid background for tech feel */
+    background-image:
+        linear-gradient(rgba(18, 18, 26, 0.8) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(18, 18, 26, 0.8) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+/* Top Bar */
+.cyberdeck-header {
+    height: 60px;
+    background: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 var(--space-lg);
+    z-index: 100;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.cd-brand {
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: var(--color-accent);
+    text-shadow: 0 0 10px var(--color-accent-glow);
+}
+
+.cd-header-center {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+}
+
+.cd-lesson-title {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cd-progress-track {
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.cd-progress-fill {
+    height: 100%;
+    background: var(--color-accent);
+    width: 0%;
+    transition: width 0.5s ease;
+    box-shadow: 0 0 10px var(--color-accent);
+}
+
+.cd-status {
+    font-family: monospace;
+    color: #4ade80;
+    /* Green */
+    font-size: 12px;
+    border: 1px solid #4ade80;
+    padding: 2px 6px;
+    border-radius: 4px;
+    animation: blink 4s infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    90%,
+    100% {
+        opacity: 1;
+    }
+
+    95% {
+        opacity: 0.5;
+    }
+}
+
+/* Sidebars */
+.cyberdeck-sidebar {
+    width: 260px;
+    background: var(--color-surface);
+    border-right: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 90;
+}
+
+.cd-sidebar-right {
+    border-right: none;
+    border-left: 1px solid var(--color-border);
+}
+
+.cyberdeck-sidebar.collapsed {
+    width: 40px;
+}
+
+.cd-sidebar-header {
+    height: 40px;
+    border-bottom: 1px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 var(--space-sm);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.cd-sidebar-title {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--color-text-muted);
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.cyberdeck-sidebar.collapsed .cd-sidebar-title {
+    display: none;
+}
+
+.cd-toggle-btn {
+    background: none;
+    border: none;
+    color: var(--color-text-secondary);
+    cursor: pointer;
+    font-size: 10px;
+    padding: 4px;
+}
+
+.cd-sidebar-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: var(--space-md);
+    opacity: 1;
+    transition: opacity 0.2s;
+}
+
+.cyberdeck-sidebar.collapsed .cd-sidebar-content {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.cd-empty-state {
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+    font-style: italic;
+    margin-top: var(--space-xl);
+}
+
+.cd-profile-summary {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: var(--border-radius);
+    padding: var(--space-md);
+}
+
+.cd-archetype-label {
+    color: var(--color-accent);
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: var(--space-sm);
+}
+
+.cd-stat-row {
+    display: flex;
+    justify-content: space-between;
+    font-family: monospace;
+    font-size: 12px;
+    color: var(--color-text-secondary);
+}
+
+/* Bottom Bar & Visualizer */
+.cyberdeck-footer {
+    height: 80px;
+    /* Reduced specific height */
+    background: var(--color-surface);
+    border-top: 1px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.cd-wave-container {
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+}
+
+#wave-canvas {
+    flex: 1;
+    height: 100%;
+    background: #050508;
+    border: 1px solid #333;
+    border-radius: 4px;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+.cd-slider-container {
+    height: 100%;
+    padding: 4px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    /* Horizontal layout: Button | Sliders */
+    align-items: center;
+    gap: 10px;
+}
+
+.cd-slider-group {
+    display: flex;
+    gap: 1px;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    min-width: 100px;
+}
+
+/* 
+ * Robust Vertical Sliders via Rotation 
+ * Standard appearance-vertical often fails across browsers.
+ * Rotation is reliable but requires careful sizing.
+ */
+.wave-slider {
+    appearance: none;
+    -webkit-appearance: none;
+    /* Critical for Chrome/Edge */
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    width: 40px !important;
+    /* Force small visual height */
+    height: 4px !important;
+    outline: none;
+    transform: rotate(-90deg);
+    margin: 0 -40px;
+    /* Tighter spacing */
+    cursor: pointer;
+}
+
+.wave-slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    background: var(--color-accent);
+    border-radius: 50%;
+    cursor: grab;
+    transition: background 0.2s;
+}
+
+.wave-selector-btn {
+    width: 24px;
+    height: 80%;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    background: #333;
+    color: #888;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    font-family: inherit;
 }
