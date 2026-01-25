@@ -1,0 +1,199 @@
+/**
+ * Option Selector Method - Styles
+ * Scoped to .os-* prefix per lesson_isolation.md
+ */
+
+/* Container */
+.os-container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: var(--space-lg);
+}
+
+/* Question */
+.os-question {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--color-text-primary);
+    text-align: center;
+    margin-bottom: var(--space-xl);
+    line-height: 1.4;
+}
+
+/* Options Grid */
+.os-options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: var(--space-md);
+    margin-bottom: var(--space-xl);
+}
+
+/* Individual Option */
+.os-option {
+    background: var(--color-surface);
+    border: 2px solid var(--color-border);
+    border-radius: var(--border-radius-lg);
+    padding: var(--space-lg);
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-sm);
+    user-select: none;
+    caret-color: transparent;
+}
+
+.os-option:hover {
+    border-color: var(--color-accent);
+    background: var(--color-surface-elevated);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(123, 92, 255, 0.2);
+}
+
+.os-option.selected {
+    border-color: var(--color-accent);
+    background: rgba(123, 92, 255, 0.15);
+    box-shadow: 0 0 20px var(--color-accent-glow);
+}
+
+.os-option.selected::after {
+    content: '✓';
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    font-size: 12px;
+    color: var(--color-accent);
+}
+
+/* Option Icon */
+.os-option-icon {
+    font-size: 2rem;
+    margin-bottom: var(--space-xs);
+}
+
+/* Option Label */
+.os-option-label {
+    font-size: var(--font-size-base);
+    color: var(--color-text-secondary);
+    font-weight: 500;
+}
+
+.os-option.selected .os-option-label {
+    color: var(--color-text-primary);
+}
+
+/* Response Area */
+.os-response-area {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-lg);
+    padding: var(--space-xl);
+    margin-top: var(--space-lg);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.os-response-area.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.os-response-area p {
+    margin-bottom: var(--space-md);
+}
+
+.os-response-area p:last-child {
+    margin-bottom: 0;
+}
+
+/* Divider for synthesized responses */
+.os-divider {
+    border: none;
+    border-top: 1px solid var(--color-border);
+    margin: var(--space-md) 0;
+}
+
+/* Confirm Button */
+.os-confirm-btn {
+    display: block;
+    margin: var(--space-lg) auto 0;
+    min-width: 200px;
+}
+
+.os-confirm-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+/* Animation for selection */
+@keyframes os-pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.02);
+    }
+}
+
+.os-option.selected {
+    animation: os-pulse 0.3s ease;
+}
+
+/* ========== QUIZ STYLE (Text-Only List) ========== */
+.os-options-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-xl);
+}
+
+.os-option-quiz {
+    background: var(--color-surface);
+    border: 2px solid var(--color-border);
+    border-radius: var(--border-radius);
+    padding: var(--space-md) var(--space-lg);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+}
+
+.os-option-quiz::before {
+    content: '';
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--color-border);
+    border-radius: 50%;
+    margin-right: var(--space-md);
+    flex-shrink: 0;
+    transition: all 0.2s ease;
+}
+
+.os-option-quiz:hover {
+    border-color: var(--color-accent);
+    background: var(--color-surface-elevated);
+}
+
+.os-option-quiz.selected {
+    border-color: var(--color-accent);
+    background: rgba(123, 92, 255, 0.1);
+}
+
+.os-option-quiz.selected::before {
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+    box-shadow: 0 0 8px var(--color-accent-glow);
+}
+
+.os-option-quiz .os-option-label {
+    font-size: var(--font-size-base);
+    color: var(--color-text-primary);
+}

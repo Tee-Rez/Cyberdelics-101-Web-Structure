@@ -187,16 +187,37 @@
                 if (this.completionSection) {
                     this.completionSection.classList.add('active');
 
-                    if (typeof CourseCore !== 'undefined') {
-                        CourseCore.enableCompletion();
-                    }
-
+                    // Animation logic
                     setTimeout(() => {
                         this.completionSection.classList.add('celebrating');
                     }, 400);
 
-                    this.markComplete();
-                    this.emit('allRevealed', {});
+                    // REQUIRE USER INPUT: Wait for "Continue" button click
+                    // Check if button exists in content, otherwise inject it
+                    let btn = this.completionSection.querySelector('.btn-continue');
+
+                    if (!btn) {
+                        btn = document.createElement('button');
+                        btn.className = 'btn-primary btn-continue';
+                        btn.innerText = 'CONTINUE ▶';
+                        // Insert at end of completion section
+                        this.completionSection.appendChild(btn);
+                    }
+
+                    // Remove any old listeners (if re-running) to prevent duplicates
+                    const newBtn = btn.cloneNode(true);
+                    btn.parentNode.replaceChild(newBtn, btn);
+
+                    newBtn.addEventListener('click', () => {
+                        console.log('[ProgressiveDisclosure] User clicked Continue');
+
+                        // NOW we signal completion to the Runner
+                        if (typeof CourseCore !== 'undefined') {
+                            CourseCore.enableCompletion();
+                        }
+                        this.markComplete();
+                        this.emit('allRevealed', {});
+                    });
                 }
             }
         });

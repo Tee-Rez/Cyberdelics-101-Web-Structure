@@ -222,61 +222,6 @@
             }
         },
         {
-            "id": "intro-8-balance",
-            "type": "interactive-simulation",
-            "title": "Language & Perspective",
-            "content": {
-                "engine": "balance-scale",
-                "params": {
-                    "ratio": 50
-                },
-                "config": [
-                    {
-                        "id": "ratio",
-                        "label": "Science vs Spirit",
-                        "min": 0,
-                        "max": 100,
-                        "step": 10
-                    }
-                ]
-            }
-        },
-        {
-            "id": "intro-9-myths",
-            "type": "scenario-based",
-            "title": "What This Course Is NOT",
-            "content": {
-                "scenes": [
-                    {
-                        "id": "start",
-                        "narrative": "Many arrive with misconceptions. Let's clarify.",
-                        "choices": [
-                            {
-                                "id": "c1",
-                                "label": "This course certifies me as a psychedelic therapist.",
-                                "outcome": "myth"
-                            },
-                            {
-                                "id": "c2",
-                                "label": "This provides foundational knowledge for the field.",
-                                "outcome": "fact"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "myth",
-                        "narrative": "INCORRECT. This is a 5-hour foundation. Professional certification takes much longer.",
-                        "choices": []
-                    },
-                    {
-                        "id": "fact",
-                        "narrative": "CORRECT. You are building a solid foundation to launch from.",
-                        "choices": []
-                    }
-                ]
-            }
-        },
-        {
             "id": "intro-10-launch",
             "type": "progressive-disclosure",
             "title": "Your Journey Begins",

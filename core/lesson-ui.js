@@ -184,6 +184,47 @@ class LessonUI {
     }
 
     /**
+     * Add an artifact to the Left Sidebar (Inventory)
+     * @param {string} id - Unique ID of the artifact
+     * @param {object} data - { icon, label, description }
+     */
+    addArtifact(id, data) {
+        if (!this.elements.sidebarLeft) return;
+
+        const contentArea = this.elements.sidebarLeft.querySelector('.cd-sidebar-content');
+        if (!contentArea) return;
+
+        // 1. Remove Empty State if present
+        const emptyState = contentArea.querySelector('.cd-empty-state');
+        if (emptyState) {
+            emptyState.remove();
+        }
+
+        // 2. Avoid Duplicates
+        if (contentArea.querySelector(`[data-artifact-id="${id}"]`)) return;
+
+        // 3. Create Artifact Element
+        const item = document.createElement('div');
+        item.className = 'cd-artifact-item';
+        item.dataset.artifactId = id;
+
+        // Icon is always visible. Label/Desc visible only when expanded (handled by CSS)
+        // User Requirement: "when leftside bar opens up, it will center itself... with text describing what it is"
+        item.innerHTML = `
+            <div class="cd-artifact-icon">${data.icon || '📦'}</div>
+            <div class="cd-artifact-details">
+                <div class="cd-artifact-title">${data.label || 'Unknown Artifact'}</div>
+                <div class="cd-artifact-desc">${data.description || ''}</div>
+            </div>
+        `;
+
+        // 4. Append
+        contentArea.appendChild(item);
+
+        // Optional: Animation or Sound effect here
+    }
+
+    /**
      * Get the container where Method Modules should be rendered
      * @returns {HTMLElement}
      */

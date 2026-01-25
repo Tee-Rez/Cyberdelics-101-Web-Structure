@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Option Selector - Test Harness</title>
+
+    <!-- Core Styles -->
+    <link rel="stylesheet" href="../../core/styles.css">
+    <link rel="stylesheet" href="option-selector.css">
+</head>
+
+<body>
+    <div class="lesson-container">
+        <h1>Option Selector Method Test</h1>
+
+        <h2>Test 1: Single Choice</h2>
+        <div id="test-single" class="content-card"></div>
+
+        <h2>Test 2: Multi Choice with Synthesis</h2>
+        <div id="test-multi" class="content-card"></div>
+
+        <h2>Test 3: Quiz Single Choice (Text Only)</h2>
+        <div id="test-quiz-single" class="content-card"></div>
+
+        <h2>Test 4: Quiz Multi Choice (Text Only)</h2>
+        <div id="test-quiz-multi" class="content-card"></div>
+    </div>
+
+    <!-- Core Dependencies -->
+    <script src="../../core/method-base.js"></script>
+    <script src="option-selector.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // ========== TEST 1: Single Choice ==========
+            const singleInstance = window.OptionSelectorFactory();
+            singleInstance.init(document.getElementById('test-single'), {
+                mode: 'single',
+                question: 'What best describes your primary interest in Cyberdelics?',
+                options: [
+                    {
+                        id: 'research',
+                        icon: '🔬',
+                        label: 'Research & Academia',
+                        response: '<p><strong>Research Focus</strong></p><p>You approach this field with scientific rigor. Module 3 (Scientific Understanding) will be particularly valuable for you.</p>'
+                    },
+                    {
+                        id: 'practice',
+                        icon: '🧘',
+                        label: 'Personal Practice',
+                        response: '<p><strong>Personal Explorer</strong></p><p>You seek direct experience and self-discovery. Module 4 (Applications) will show you practical tools.</p>'
+                    },
+                    {
+                        id: 'build',
+                        icon: '🛠️',
+                        label: 'Building & Creating',
+                        response: '<p><strong>Creator Mindset</strong></p><p>You want to design transformative experiences. The full course will give you the conceptual foundation to innovate.</p>'
+                    },
+                    {
+                        id: 'curious',
+                        icon: '✨',
+                        label: 'Just Curious',
+                        response: '<p><strong>Open Explorer</strong></p><p>Curiosity is the best starting point. Let the journey unfold!</p>'
+                    }
+                ]
+            });
+
+            singleInstance.on('selectionMade', (data) => {
+                console.log('[Test 1] Selection:', data);
+            });
+
+            // ========== TEST 2: Multi Choice with Synthesis ==========
+            const multiInstance = window.OptionSelectorFactory();
+            multiInstance.init(document.getElementById('test-multi'), {
+                mode: 'multi',
+                question: 'Which technologies interest you? (Select all that apply)',
+                confirmButtonText: 'See My Profile',
+                options: [
+                    { id: 'vr', icon: '🥽', label: 'Virtual Reality', response: '<p>VR creates fully immersive environments for consciousness exploration.</p>' },
+                    { id: 'bio', icon: '💓', label: 'Biofeedback', response: '<p>Biofeedback provides real-time data about your physiological states.</p>' },
+                    { id: 'audio', icon: '🎧', label: 'Audio/Binaural', response: '<p>Sound frequencies can entrain brainwaves into altered states.</p>' },
+                    { id: 'ai', icon: '🤖', label: 'AI Companions', response: '<p>AI can personalize and guide transformative experiences.</p>' }
+                ],
+                synthesis: {
+                    'bio+vr': '<p><strong>Immersive Biofeedback Pioneer</strong></p><p>You combine full immersion with body awareness. This is the cutting edge of cyberdelic design.</p>',
+                    'audio+bio': '<p><strong>Somatic Sound Explorer</strong></p><p>You understand the body-mind connection through sound and sensation.</p>',
+                    'ai+vr': '<p><strong>Synthetic Guide Seeker</strong></p><p>You see AI as the future of personalized consciousness work.</p>',
+                    'audio+bio+vr': '<p><strong>Full-Stack Consciousness Engineer</strong></p><p>You want the complete toolkit. Module 3 and 4 will be essential for you.</p>',
+                    'ai+audio+bio+vr': '<p><strong>Cyberdelic Maximalist</strong></p><p>You are ready for the full convergence. This course will give you the foundation to integrate all modalities.</p>'
+                },
+                fallbackSynthesis: '<p>You have a unique combination of interests. The course will help you find unexpected connections.</p>'
+            });
+
+            multiInstance.on('selectionMade', (data) => {
+                console.log('[Test 2] Selection:', data);
+            });
+
+            // ========== TEST 3: Quiz Single Choice ==========
+            const quizSingleInstance = window.OptionSelectorFactory();
+            quizSingleInstance.init(document.getElementById('test-quiz-single'), {
+                mode: 'single',
+                style: 'quiz',
+                question: 'Which statement best describes the relationship between technology and consciousness?',
+                confirmButtonText: 'Submit Answer',
+                options: [
+                    {
+                        id: 'a',
+                        label: 'Technology is purely a tool with no impact on consciousness',
+                        response: '<p><strong>Incorrect.</strong> While technology can be viewed as a tool, research shows it actively shapes our cognitive patterns and states of awareness.</p>'
+                    },
+                    {
+                        id: 'b',
+                        label: 'Technology can be designed to facilitate altered states of consciousness',
+                        response: '<p><strong>Correct!</strong> This is the core premise of Cyberdelics. VR, biofeedback, and immersive audio are all being used to reliably induce altered states.</p>'
+                    },
+                    {
+                        id: 'c',
+                        label: 'Only psychoactive substances can alter consciousness',
+                        response: '<p><strong>Incorrect.</strong> Meditation, sensory deprivation, and technological tools can all induce altered states without substances.</p>'
+                    }
+                ]
+            });
+
+            // ========== TEST 4: Quiz Multi Choice ==========
+            const quizMultiInstance = window.OptionSelectorFactory();
+            quizMultiInstance.init(document.getElementById('test-quiz-multi'), {
+                mode: 'multi',
+                style: 'quiz',
+                question: 'Select ALL technologies that are considered part of the Cyberdelic toolkit:',
+                confirmButtonText: 'Check Answers',
+                options: [
+                    { id: 'vr', label: 'Virtual Reality Headsets', response: '✓ VR is a core cyberdelic technology.' },
+                    { id: 'bio', label: 'Biofeedback Sensors', response: '✓ Biofeedback enables body-mind awareness.' },
+                    { id: 'lsd', label: 'LSD', response: '✗ Substances are NOT part of cyberdelics.' },
+                    { id: 'audio', label: 'Binaural Audio', response: '✓ Sound frequencies can entrain brainwaves.' }
+                ],
+                synthesis: {
+                    'audio+bio+vr': '<p><strong>Perfect!</strong> You correctly identified all three cyberdelic technologies and excluded the substance.</p>',
+                },
+                fallbackSynthesis: '<p>Review your selections. Remember: Cyberdelics uses technology, not substances.</p>'
+            });
+        });
+    </script>
+</body>
+
+</html>

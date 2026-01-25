@@ -50,7 +50,11 @@
                 // Support multiple data formats: options.data (legacy), options.config (manifest), or options itself
                 const gameData = options.data || options.config || options;
                 this._state.totalItems = this._countItems(gameData);
-                this.setTotalSteps(this._state.totalItems);
+                // Store full item data for retrieval later
+                this._state.itemsMap = new Map();
+                if (gameData.items && Array.isArray(gameData.items)) {
+                    gameData.items.forEach(item => this._state.itemsMap.set(item.id, item));
+                }
 
                 if (this._state.debug) {
                     console.log(`[GE] Init. Module: ${this._state.gameModule.name}. Items: ${this._state.totalItems}`);
@@ -110,6 +114,11 @@
 
                 // UI visual
                 this._updateHUD();
+
+                // Sync to Global UI (Sidebar)
+                if (window.LessonUI && this._state.itemsMap.has(itemId)) {
+                    window.LessonUI.addArtifact(itemId, this._state.itemsMap.get(itemId));
+                }
 
                 // Progress Logic
                 this.advanceStep(); // Updates base method progress
