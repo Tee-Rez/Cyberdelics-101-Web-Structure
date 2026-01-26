@@ -1,6 +1,38 @@
 {
     "lessonId": "intro-module",
     "title": "Cyberdelics 101: Interactive Introduction & Orientation",
+    "artifacts": [
+        {
+            "id": "m1",
+            "icon": "<img src='../../assets/Icons/Cyberdelic-define.png' style='width:100%;height:100%;object-fit:contain;' alt='Define'>",
+            "label": "Module 1",
+            "description": "Defining Cyberdelics"
+        },
+        {
+            "id": "m2",
+            "icon": "<img src='../../assets/Icons/Cyberdelic-History.png' style='width:100%;height:100%;object-fit:contain;' alt='History'>",
+            "label": "Module 2",
+            "description": "Historical Foundations"
+        },
+        {
+            "id": "m3",
+            "icon": "<img src='../../assets/Icons/Cyberdelic-science.png' style='width:100%;height:100%;object-fit:contain;' alt='Science'>",
+            "label": "Module 3",
+            "description": "Scientific Understanding"
+        },
+        {
+            "id": "m4",
+            "icon": "<img src='../../assets/Icons/Cyberdelic-current.png' style='width:100%;height:100%;object-fit:contain;' alt='Current'>",
+            "label": "Module 4",
+            "description": "Current Applications"
+        },
+        {
+            "id": "m5",
+            "icon": "<img src='../../assets/Icons/Cyberdelic-ecosystem.png' style='width:100%;height:100%;object-fit:contain;' alt='Ecosystem'>",
+            "label": "Module 5",
+            "description": "Cyberdelic Ecosystem"
+        }
+    ],
     "modules": [
         {
             "id": "intro-1-welcome",
@@ -39,7 +71,7 @@
                             "y": 50,
                             "label": "Module 1",
                             "description": "Defining Cyberdelics: Precise definitions & core principles.",
-                            "icon": "💠"
+                            "icon": "<img src='../../assets/Icons/Cyberdelic-define.png' style='width:100%;height:100%;object-fit:contain;' alt='Define'>"
                         },
                         {
                             "id": "m2",
@@ -47,7 +79,7 @@
                             "y": 50,
                             "label": "Module 2",
                             "description": "Historical Foundations: 30-year evolution: Leary to today.",
-                            "icon": "📜"
+                            "icon": "<img src='../../assets/Icons/Cyberdelic-History.png' style='width:100%;height:100%;object-fit:contain;' alt='History'>"
                         },
                         {
                             "id": "m3",
@@ -55,7 +87,7 @@
                             "y": 50,
                             "label": "Module 3",
                             "description": "Scientific Understanding: Four consciousness theories.",
-                            "icon": "🧬"
+                            "icon": "<img src='../../assets/Icons/Cyberdelic-science.png' style='width:100%;height:100%;object-fit:contain;' alt='Science'>"
                         },
                         {
                             "id": "m4",
@@ -63,7 +95,7 @@
                             "y": 50,
                             "label": "Module 4",
                             "description": "Current Applications: Major platform & use cases.",
-                            "icon": "🕶️"
+                            "icon": "<img src='../../assets/Icons/Cyberdelic-current.png' style='width:100%;height:100%;object-fit:contain;' alt='Current'>"
                         },
                         {
                             "id": "m5",
@@ -71,7 +103,7 @@
                             "y": 50,
                             "label": "Module 5",
                             "description": "Cyberdelic Ecosystem: Challenges & opportunities.",
-                            "icon": "🌐"
+                            "icon": "<img src='../../assets/Icons/Cyberdelic-ecosystem.png' style='width:100%;height:100%;object-fit:contain;' alt='Ecosystem'>"
                         }
                     ],
                     "completionCriteria": {

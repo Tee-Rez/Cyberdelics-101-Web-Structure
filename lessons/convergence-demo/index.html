@@ -55,33 +55,37 @@
         <div class="interactive-simulation-container" data-method="interactive-simulation"
             data-engine="CyberdelicConvergence">
 
-            <div class="sim-controls">
+            <div class="sim-controls" id="timeline-container">
                 <h3>Time Travel</h3>
                 <!-- Controls auto-generated -->
             </div>
 
             <div class="sim-viewport">
-                <!-- SVG Will be injected here by engine -->
+                <canvas class="sim-canvas"></canvas>
+                <!-- SVG layer will be injected here -->
             </div>
-        </div>
 
+        </div>
     </div>
 
-    <!-- SCRIPTS -->
+    <!-- Core Scripts -->
     <script src="../../core/course-core.js"></script>
     <script src="../../core/method-base.js"></script>
     <script src="../../core/method-loader.js"></script>
+    <script src="../../core/tutorial-overlay.js"></script>
 
-    <!-- Method Framework -->
+    <!-- Method Scripts -->
     <script src="../../methods/interactive-simulation/interactive-simulation.js"></script>
-
-    <!-- Specific Simulation Engine -->
     <script src="../../methods/interactive-simulation/cyberdelic-convergence/cyberdelic-data.js"></script>
     <script src="../../methods/interactive-simulation/cyberdelic-convergence/cyberdelic-convergence.js"></script>
 
+    <!-- Initialization -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            CourseCore.init('demo-convergence');
+            if (typeof CourseCore !== 'undefined') {
+                CourseCore.init('demo-convergence');
+            }
+            // Initialize all methods
             MethodLoader.initAll();
         });
     </script>

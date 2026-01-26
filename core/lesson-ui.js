@@ -56,7 +56,9 @@ class LessonUI {
         topBar.className = 'cyberdeck-header';
         topBar.innerHTML = `
                 <div class="cd-header-left">
-                    <span class="cd-brand">CYBER.NEXUS</span>
+                    <div class="cd-header-image">
+                       <img src="../../assets/Gifs/rotating-string.gif" alt="Cyberdelic Asset" />
+                    </div>
                 </div>
                 <div class="cd-header-center">
                     <div class="cd-lesson-title">Loading...</div>
@@ -80,8 +82,10 @@ class LessonUI {
         sideLeft.innerHTML = `
                 <div class="cd-sidebar-header">
                     <span class="cd-sidebar-title">ARTIFACTS</span>
+                    <span class="cd-artifact-counter">0/5</span>
                     <button class="cd-toggle-btn">◄</button>
                 </div>
+                <div class="cd-collapsed-icons"></div>
                 <div class="cd-sidebar-content">
                     <!-- Inventory Grid goes here -->
                     <div class="cd-empty-state">No artifacts detected.</div>
@@ -101,23 +105,20 @@ class LessonUI {
         main.id = 'cyberdeck-content-port'; // Target for LessonRunner
         body.appendChild(main);
 
-        // Right Sidebar (Stats/Archetype)
+        // Right Sidebar (Audio Player)
         const sideRight = document.createElement('div');
         sideRight.className = 'cyberdeck-sidebar cd-sidebar-right collapsed';
         sideRight.innerHTML = `
                 <div class="cd-sidebar-header">
                     <button class="cd-toggle-btn">►</button>
-                    <span class="cd-sidebar-title">IDENTITY</span>
+                    <span class="cd-sidebar-title">AMBIENT</span>
+                </div>
+                <div class="cd-mini-controls">
+                    <button class="cd-mini-play-btn" title="Play/Pause">▶</button>
                 </div>
                 <div class="cd-sidebar-content">
-                    <!-- Stats go here -->
-                    <div class="cd-profile-summary">
-                        <div class="cd-archetype-label">UNKNOWN</div>
-                        <div class="cd-stat-row">
-                            <span>SYNC</span>
-                            <span>0%</span>
-                        </div>
-                    </div>
+                    <!-- Audio Player will be injected here -->
+                    <div id="cd-audio-player-container"></div>
                 </div>
             `;
         // Toggle Logic
@@ -126,22 +127,39 @@ class LessonUI {
             const btn = sideRight.querySelector('.cd-toggle-btn');
             btn.textContent = sideRight.classList.contains('collapsed') ? '◄' : '►';
         });
+
+        // Mini Play Button - connect to audio player
+        const miniPlayBtn = sideRight.querySelector('.cd-mini-play-btn');
+        miniPlayBtn.addEventListener('click', (e) => {
+            e.stopPropagation(); // Don't toggle sidebar
+            if (this.audioPlayer) {
+                this.audioPlayer.toggle();
+            }
+        });
+        this.elements.miniPlayBtn = miniPlayBtn;
+
         body.appendChild(sideRight);
 
-        // 3. Bottom Bar (Wave Visualizer)
+        // 3. Bottom Bar (Wave Visualizer + Asset)
         const bottomBar = document.createElement('div');
         bottomBar.className = 'cyberdeck-footer';
         bottomBar.innerHTML = `
                 <div class="cd-wave-container">
-                    <div class="cd-slider-container">
-                        <button id="wave-selector" class="wave-selector-btn" title="Toggle Wave Control"></button>
-                        <div class="cd-slider-group">
-                            <input type="range" class="wave-slider" id="wave-freq" min="1" max="25" value="10" title="Frequency">
-                            <input type="range" class="wave-slider" id="wave-amp" min="10" max="100" value="50" title="Amplitude">
-                            <input type="range" class="wave-slider" id="wave-speed" min="1" max="25" value="5" title="Speed">
+                    <div class="cd-visualizer-wrapper">
+                        <div class="cd-slider-container">
+                            <button id="wave-selector" class="wave-selector-btn" title="Toggle Wave Control"></button>
+                            <div class="cd-slider-group">
+                                <input type="range" class="wave-slider" id="wave-freq" min="1" max="25" value="10" title="Frequency">
+                                <input type="range" class="wave-slider" id="wave-amp" min="10" max="100" value="50" title="Amplitude">
+                                <input type="range" class="wave-slider" id="wave-speed" min="1" max="25" value="5" title="Speed">
+                            </div>
                         </div>
+                        <canvas id="wave-canvas"></canvas>
                     </div>
-                    <canvas id="wave-canvas"></canvas>
+                    
+                    <div class="cd-footer-image">
+                        <img src="../../assets/Gifs/rotating-string.gif" alt="Cyberdelic Asset" />
+                    </div>
                 </div>
             `;
         this.shell.appendChild(bottomBar);
@@ -168,6 +186,24 @@ class LessonUI {
             bottomBar.querySelector('#wave-speed'),
             bottomBar.querySelector('#wave-selector')
         );
+
+        // Initialize Audio Player (if AudioPlayer class is available)
+        const audioContainer = sideRight.querySelector('#cd-audio-player-container');
+        if (audioContainer && typeof AudioPlayer !== 'undefined') {
+            this.audioPlayer = new AudioPlayer(audioContainer, {
+                basePath: '../../assets/audio/binaural/',
+                autoLoad: true,
+                loop: true
+            });
+
+            // Sync mini button with audio state
+            this.audioPlayer.onPlayStateChange = (playing) => {
+                if (this.elements.miniPlayBtn) {
+                    this.elements.miniPlayBtn.innerHTML = playing ? '❚❚' : '▶';
+                    this.elements.miniPlayBtn.classList.toggle('playing', playing);
+                }
+            };
+        }
     }
 
     /**
@@ -184,44 +220,165 @@ class LessonUI {
     }
 
     /**
-     * Add an artifact to the Left Sidebar (Inventory)
-     * @param {string} id - Unique ID of the artifact
-     * @param {object} data - { icon, label, description }
+     * Pre-register all expected artifacts (shown as locked/greyed out)
+     * @param {Array} artifacts - Array of { id, icon, label, description }
      */
-    addArtifact(id, data) {
+    registerArtifacts(artifacts) {
         if (!this.elements.sidebarLeft) return;
 
         const contentArea = this.elements.sidebarLeft.querySelector('.cd-sidebar-content');
         if (!contentArea) return;
 
-        // 1. Remove Empty State if present
+        // Clear empty state
         const emptyState = contentArea.querySelector('.cd-empty-state');
-        if (emptyState) {
-            emptyState.remove();
+        if (emptyState) emptyState.remove();
+
+        // Store expected artifacts
+        this._registeredArtifacts = artifacts;
+        this._foundArtifacts = new Set();
+
+        // Render all as locked
+        artifacts.forEach(data => {
+            const item = document.createElement('div');
+            item.className = 'cd-artifact-item cd-artifact-locked';
+            item.dataset.artifactId = data.id;
+            item.innerHTML = `
+                <div class="cd-artifact-icon">${data.icon || '❓'}</div>
+                <div class="cd-artifact-details">
+                    <div class="cd-artifact-title">${data.label || '???'}</div>
+                    <div class="cd-artifact-desc">Not yet discovered</div>
+                </div>
+            `;
+            contentArea.appendChild(item);
+        });
+
+        // Update counter
+        this._updateArtifactCounter();
+    }
+
+    /**
+     * Unlock/find an artifact (changes from greyed to revealed)
+     * @param {string} id - Unique ID of the artifact
+     * @param {object} data - Optional override { icon, label, description }
+     */
+    addArtifact(id, data = {}) {
+        if (!this.elements.sidebarLeft) return;
+
+        const contentArea = this.elements.sidebarLeft.querySelector('.cd-sidebar-content');
+        if (!contentArea) return;
+
+        // Check if already found
+        if (this._foundArtifacts && this._foundArtifacts.has(id)) return;
+
+        // Find registered artifact data
+        const registeredData = this._registeredArtifacts?.find(a => a.id === id) || data;
+        const finalData = { ...registeredData, ...data };
+
+        // Try to find existing locked artifact element
+        const existingItem = contentArea.querySelector(`[data-artifact-id="${id}"]`);
+
+        if (existingItem) {
+            // Unlock existing item
+            existingItem.classList.remove('cd-artifact-locked');
+            existingItem.innerHTML = `
+                <div class="cd-artifact-icon">${finalData.icon || '📦'}</div>
+                <div class="cd-artifact-details">
+                    <div class="cd-artifact-title">${finalData.label || 'Unknown Artifact'}</div>
+                    <div class="cd-artifact-desc">${finalData.description || ''}</div>
+                </div>
+            `;
+        } else {
+            // Remove empty state if present
+            const emptyState = contentArea.querySelector('.cd-empty-state');
+            if (emptyState) emptyState.remove();
+
+            // Create new artifact element
+            const item = document.createElement('div');
+            item.className = 'cd-artifact-item';
+            item.dataset.artifactId = id;
+            item.innerHTML = `
+                <div class="cd-artifact-icon">${finalData.icon || '📦'}</div>
+                <div class="cd-artifact-details">
+                    <div class="cd-artifact-title">${finalData.label || 'Unknown Artifact'}</div>
+                    <div class="cd-artifact-desc">${finalData.description || ''}</div>
+                </div>
+            `;
+            contentArea.appendChild(item);
         }
 
-        // 2. Avoid Duplicates
-        if (contentArea.querySelector(`[data-artifact-id="${id}"]`)) return;
+        // Add to found set
+        if (this._foundArtifacts) {
+            this._foundArtifacts.add(id);
+        }
 
-        // 3. Create Artifact Element
-        const item = document.createElement('div');
-        item.className = 'cd-artifact-item';
-        item.dataset.artifactId = id;
+        // Add icon to collapsed strip (only for found artifacts)
+        const collapsedIcons = this.elements.sidebarLeft.querySelector('.cd-collapsed-icons');
+        if (collapsedIcons && !collapsedIcons.querySelector(`[data-artifact-id="${id}"]`)) {
+            const miniIcon = document.createElement('div');
+            miniIcon.className = 'cd-collapsed-icon';
+            miniIcon.dataset.artifactId = id;
+            miniIcon.innerHTML = finalData.icon || '📦';
+            miniIcon.title = finalData.label || 'Artifact';
+            collapsedIcons.appendChild(miniIcon);
+        }
 
-        // Icon is always visible. Label/Desc visible only when expanded (handled by CSS)
-        // User Requirement: "when leftside bar opens up, it will center itself... with text describing what it is"
-        item.innerHTML = `
-            <div class="cd-artifact-icon">${data.icon || '📦'}</div>
-            <div class="cd-artifact-details">
-                <div class="cd-artifact-title">${data.label || 'Unknown Artifact'}</div>
-                <div class="cd-artifact-desc">${data.description || ''}</div>
-            </div>
-        `;
+        // Update Counter
+        this._artifactCount = (this._artifactCount || 0) + 1;
+        this._updateArtifactCounter();
 
-        // 4. Append
-        contentArea.appendChild(item);
+        // Check for audio unlock
+        const totalExpected = this._registeredArtifacts?.length || 5;
+        if (this._artifactCount >= totalExpected && !this._audioUnlocked) {
+            this.unlockAudio();
+        }
+    }
 
-        // Optional: Animation or Sound effect here
+    /**
+     * Update the artifact counter display
+     */
+    _updateArtifactCounter() {
+        const counter = this.elements.sidebarLeft?.querySelector('.cd-artifact-counter');
+        if (counter) {
+            counter.textContent = `${this._artifactCount || 0}/5`;
+        }
+    }
+
+    /**
+     * Unlock the audio player and show notification
+     */
+    unlockAudio() {
+        if (this._audioUnlocked) return;
+        this._audioUnlocked = true;
+
+        // Unlock the AudioPlayer
+        if (this.audioPlayer && typeof this.audioPlayer.unlock === 'function') {
+            this.audioPlayer.unlock();
+        }
+
+        // Show toast notification
+        this.showToast('🔓 New Audio Track Unlocked!');
+
+        console.log('[LessonUI] Audio unlocked!');
+    }
+
+    /**
+     * Display a toast notification
+     * @param {string} message
+     */
+    showToast(message) {
+        const toast = document.createElement('div');
+        toast.className = 'cd-toast';
+        toast.textContent = message;
+        this.shell.appendChild(toast);
+
+        // Animate in
+        requestAnimationFrame(() => toast.classList.add('show'));
+
+        // Remove after delay
+        setTimeout(() => {
+            toast.classList.remove('show');
+            setTimeout(() => toast.remove(), 300);
+        }, 3000);
     }
 
     /**

@@ -1,0 +1,12 @@
+{
+    "tracks": [
+        {
+            "id": "awake-focus",
+            "name": "Awake Focus",
+            "description": "10 Hz Alpha - Focused awareness state",
+            "file": "awake-focus-5min-10hz.wav",
+            "duration": "5:00",
+            "unlockRequirement": 5
+        }
+    ]
+}

@@ -61,6 +61,11 @@
                 console.log('[LessonRunner] Found LessonUI, initializing...');
                 window.LessonUI.init(this.container);
                 window.LessonUI.update(manifest.title, 0);
+
+                // Register Artifacts if present
+                if (manifest.artifacts && window.LessonUI.registerArtifacts) {
+                    window.LessonUI.registerArtifacts(manifest.artifacts);
+                }
             } else {
                 console.warn('[LessonRunner] LessonUI NOT found, using fallback.');
                 // Fallback if UI not loaded

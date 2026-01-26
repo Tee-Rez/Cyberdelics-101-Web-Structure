@@ -100,6 +100,7 @@
 
     <!-- Scripts: Loaded in dependency order -->
     <script src="../../core/method-base.js"></script>
+    <script src="../../core/tutorial-overlay.js"></script>
 
     <!-- Method Factories -->
     <script src="../../methods/progressive-disclosure/progressive-disclosure.js"></script>
@@ -113,6 +114,7 @@
     <script src="../../methods/interactive-simulation/constellation-personas/constellation-personas.js"></script>
 
     <!-- Core UI -->
+    <script src="../../core/audio-player.js"></script>
     <script src="../../core/lesson-ui.js"></script>
 
     <!-- Core Runner (Loaded LAST to ensure factories exist) -->
@@ -211,6 +213,100 @@
                     });
             } else {
                 log('ERROR: LessonRunner not found!');
+            }
+
+            // 4. Intro Tutorial Logic
+            let tutorialHasRun = false;
+            const observer = new MutationObserver((mutations) => {
+                const intro2 = document.getElementById('intro-2-course-map');
+                if (intro2 && !tutorialHasRun) {
+                    tutorialHasRun = true;
+                    setTimeout(runIntroTutorial, 1000); // Wait for UI to settle
+                }
+            });
+
+            observer.observe(document.getElementById('lesson-root'), { childList: true, subtree: true });
+
+            function runIntroTutorial() {
+                log('Starting Intro Tutorial...');
+                const container = document.body;
+                const overlay = new TutorialOverlay(container);
+
+                const steps = [
+                    // Step 1: Open Left Sidebar
+                    {
+                        title: 'Interactive Mode',
+                        text: 'We have hidden tools available. <strong>Open the Left Sidebar</strong> to reveal your inventory.',
+                        target: '.cd-sidebar-left .cd-toggle-btn',
+                        position: 'right',
+                        spotlightSize: 60, // Small spotlight for button
+                        showSkip: false,
+                        showNext: false // Blocking: user must open sidebar
+                    },
+                    // Step 2: Inventory (Triggered after open)
+                    {
+                        title: 'Artifact Inventory',
+                        text: 'Excellent. This is where your collected digital artifacts will be stored.',
+                        target: '.cd-sidebar-left',
+                        position: 'right',
+                        spotlightShape: 'rect',
+                        showSkip: false
+                    },
+                    // Step 3: Open Right Sidebar
+                    {
+                        title: 'Neural Interface',
+                        text: 'Now, let\'s check your status. <strong>Open the Right Sidebar</strong>.',
+                        target: '.cd-sidebar-right .cd-toggle-btn',
+                        position: 'left',
+                        spotlightSize: 60,
+                        showSkip: false,
+                        showNext: false // Blocking
+                    },
+                    // Step 4: Audio Player
+                    {
+                        title: 'Ambient Controls',
+                        text: 'This panel contains the Binaural Audio Player. It is currently locked.',
+                        target: '.cd-sidebar-right',
+                        position: 'left',
+                        spotlightShape: 'rect',
+                        showSkip: false
+                    },
+                    // Step 5: Unlock Instructions
+                    {
+                        title: 'Mission Objective',
+                        text: 'To unlock the audio tracks, you must collect <strong>5 Artifacts</strong> hidden within this map. Explore the timeline nodes to find them.',
+                        target: '#intro-2-course-map',
+                        position: 'center',
+                        spotlightShape: 'rect',
+                        showSkip: false,
+                        showNext: true // User can finish
+                    }
+                ];
+
+                // Start Tutorial
+                overlay.start(steps);
+
+                // --- Event Listeners for Blocking Steps ---
+
+                // Watch for Left Sidebar Open (Step 1 -> 2)
+                const leftSidebar = document.querySelector('.cd-sidebar-left');
+                const checkLeftOpen = setInterval(() => {
+                    // Check if NOT collapsed (meaning it's open)
+                    // Note: Initially it has 'collapsed' class.
+                    if (leftSidebar && !leftSidebar.classList.contains('collapsed') && overlay.currentStepIndex === 0) {
+                        clearInterval(checkLeftOpen);
+                        overlay.nextStep();
+                    }
+                }, 500);
+
+                // Watch for Right Sidebar Open (Step 3 -> 4)
+                const rightSidebar = document.querySelector('.cd-sidebar-right');
+                const checkRightOpen = setInterval(() => {
+                    if (rightSidebar && !rightSidebar.classList.contains('collapsed') && overlay.currentStepIndex === 2) {
+                        clearInterval(checkRightOpen);
+                        overlay.nextStep();
+                    }
+                }, 500);
             }
 
         } catch (e) {

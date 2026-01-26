@@ -22,6 +22,15 @@ const MethodLoader = (function () {
         console.log(`[MethodLoader] Registered: ${methodName}`);
     }
 
+    function registerFactory(methodName, factoryFn) {
+        try {
+            const MethodClass = factoryFn();
+            register(methodName, MethodClass);
+        } catch (e) {
+            console.error(`[MethodLoader] Failed to register factory for ${methodName}:`, e);
+        }
+    }
+
     function unregister(methodName) {
         delete registry[methodName];
     }
@@ -158,6 +167,7 @@ const MethodLoader = (function () {
     // Expose globally
     window.MethodLoader = {
         register,
+        registerFactory,
         unregister,
         initAll,
         initContainer,

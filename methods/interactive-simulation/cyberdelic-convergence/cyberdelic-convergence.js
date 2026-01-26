@@ -771,157 +771,52 @@
 
         // ========== TUTORIAL ==========
 
-        tutorialStep: 0,
         tutorialOverlay: null,
 
         initTutorial: function () {
             if (this.tutorialOverlay) return;
 
-            // Create Overlay
-            const overlay = document.createElement('div');
-            overlay.className = 'tutorial-overlay';
-            overlay.innerHTML = `
-                <div class="tutorial-spotlight"></div>
-                <div class="tutorial-card">
-                    <h3 id="tut-title">Title</h3>
-                    <p id="tut-text">Text</p>
-                    <div class="tutorial-controls">
-                        <button class="btn-tutorial" id="tut-skip">Skip</button>
-                        <button class="btn-tutorial primary" id="tut-next">Next</button>
-                    </div>
-                </div>
-            `;
-
-            // Append to the container passed in Init (we need to store it)
-            // But we didn't store container in 'this'. We used it in init.
-            // Let's assume we can append to the parent of the SVG or we need to Modify Init to store container.
-            // For now, let's look for .interactive-sim-container or just append to body if needed, 
-            // BUT proper way is to modify init to store 'this.container = container;'
-
-            // HACK: We will use the parent of our SVG
-            if (this.svg && this.svg.parentNode) {
-                this.svg.parentNode.appendChild(overlay);
-                // Ensure parent is relative for absolute positioning
-                if (getComputedStyle(this.svg.parentNode).position === 'static') {
-                    this.svg.parentNode.style.position = 'relative';
-                }
+            // Check if TutorialOverlay is available
+            if (typeof TutorialOverlay === 'undefined') {
+                console.warn('[CyberdelicConvergence] TutorialOverlay not found.');
+                return;
             }
 
-            this.tutorialOverlay = overlay;
+            // Find container (parent of SVG)
+            const container = this.svg && this.svg.parentNode ? this.svg.parentNode : document.body;
 
-            // Bind Events
-            overlay.querySelector('#tut-next').onclick = () => this.nextTutorialStep();
-            overlay.querySelector('#tut-skip').onclick = () => this.endTutorial();
+            this.tutorialOverlay = new TutorialOverlay(container);
 
-            // Auto-start if first time? Or waiting for user?
-            // Let's start it after a short delay
+            // Auto-start after delay
             setTimeout(() => this.startTutorial(), 1000);
         },
 
         startTutorial: function () {
-            if (!DATA.tutorialSteps) return;
-            this.tutorialStep = 0;
-            this.tutorialOverlay.classList.add('active');
-            this.showTutorialStep(0);
-        },
+            if (!DATA.tutorialSteps || !this.tutorialOverlay) return;
 
-        showTutorialStep: function (index) {
-            const step = DATA.tutorialSteps[index];
-            if (!step) {
-                this.endTutorial();
-                return;
-            }
+            // Map data steps to TutorialOverlay format if needed
+            // Currently they share structure { title, text, target, position }
+            // But we need to handle specific targets that are selectors vs elements
 
-            // Update Text
-            this.tutorialOverlay.querySelector('#tut-title').textContent = step.title;
-            this.tutorialOverlay.querySelector('#tut-text').innerHTML = step.text; // allow html
+            const steps = DATA.tutorialSteps.map(step => {
+                let target = step.target;
 
-            // Update Button Text
-            const nextBtn = this.tutorialOverlay.querySelector('#tut-next');
-            nextBtn.textContent = (index === DATA.tutorialSteps.length - 1) ? 'Finish' : 'Next';
-
-            // Position Spotlight & Card
-            const spotlight = this.tutorialOverlay.querySelector('.tutorial-spotlight');
-            const card = this.tutorialOverlay.querySelector('.tutorial-card');
-
-            // Allow CSS transition to handle movement
-
-            if (step.target) {
-                // Find target
-                let targetEl = null;
-                if (step.target === '.domain-node') {
-                    // Just pick one for demo, e.g., the first one, or center
-                    // Actually logic said "highlightMultiple", but CSS spotlight is a single circle.
-                    // We'll highlight the center one or just the first domain.
-                    targetEl = this.svg.querySelector(step.target);
-                } else if (step.target === '#timeline-container') {
-                    targetEl = document.querySelector(step.target);
+                // If target is a selector for an element inside SVG, we need to find it
+                if (typeof target === 'string' && target !== '#timeline-container') {
+                    // Try to find in SVG first
+                    const el = this.svg.querySelector(target);
+                    if (el) target = el;
                 }
 
-                if (targetEl) {
-                    const rect = targetEl.getBoundingClientRect();
-                    const containerRect = this.tutorialOverlay.getBoundingClientRect(); // relative to container
+                return {
+                    ...step,
+                    target: target,
+                    spotlightSize: step.id === 'domains' ? 600 : undefined
+                };
+            });
 
-                    // Center relative to container
-                    const cx = rect.left + rect.width / 2 - containerRect.left;
-                    const cy = rect.top + rect.height / 2 - containerRect.top;
-
-                    // Size
-                    let size = Math.max(rect.width, rect.height) + 40;
-                    if (step.id === 'domains') size = 600; // Custom big spotlight for all domains
-
-                    spotlight.style.width = size + 'px';
-                    spotlight.style.height = size + 'px';
-                    spotlight.style.left = (cx - size / 2) + 'px';
-                    spotlight.style.top = (cy - size / 2) + 'px';
-                    spotlight.style.opacity = 1;
-
-                    // Position Card nearby
-                    // Check available space
-                    if (step.position === 'bottom') {
-                        card.style.top = (cy + size / 2 + 20) + 'px';
-                        card.style.left = (containerRect.width / 2 - 150) + 'px';
-                    } else if (step.position === 'center') {
-                        card.style.top = (containerRect.height / 2 - 100) + 'px';
-                        card.style.left = (containerRect.width / 2 - 150) + 'px';
-                    } else {
-                        // Default center
-                        card.style.top = (cy + size / 2 + 20) + 'px';
-                        card.style.left = (cx - 150) + 'px';
-                    }
-
-                } else {
-                    // Fallback center
-                    this._centerTutorialParams(spotlight, card);
-                }
-            } else {
-                // No target (Welcome)
-                this._centerTutorialParams(spotlight, card);
-                spotlight.style.opacity = 0; // Hide spotlight for welcome
-            }
+            this.tutorialOverlay.start(steps);
         },
-
-        _centerTutorialParams: function (spotlight, card) {
-            const containerRect = this.tutorialOverlay.getBoundingClientRect();
-            const size = 100;
-            spotlight.style.width = size + 'px';
-            spotlight.style.height = size + 'px';
-            spotlight.style.left = (containerRect.width / 2 - size / 2) + 'px';
-            spotlight.style.top = (containerRect.height / 2 - size / 2) + 'px';
-
-            card.style.left = (containerRect.width / 2 - 150) + 'px';
-            card.style.top = (containerRect.height / 2 - 50) + 'px';
-        },
-
-        nextTutorialStep: function () {
-            this.tutorialStep++;
-            this.showTutorialStep(this.tutorialStep);
-        },
-
-        endTutorial: function () {
-            this.tutorialOverlay.classList.remove('active');
-            // Cleanup highlights if any
-        }
     };
 
 })();

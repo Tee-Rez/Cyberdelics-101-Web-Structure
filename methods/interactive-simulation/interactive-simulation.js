@@ -45,11 +45,11 @@
                     resetBtn: container.querySelector('.btn-reset')
                 };
 
-                // 1. Setup Canvas (Optional)
-                if (this._elements.canvas) {
+                // 1. Setup Canvas / Viewport sizing
+                if (this._elements.viewport) {
                     this._resizeCanvas();
                     window.addEventListener('resize', () => this._resizeCanvas());
-                } else if (!this._elements.viewport) {
+                } else {
                     // We need at least a viewport
                     console.error('[InteractiveSimulation] No .sim-viewport found in', container);
                     return;
@@ -258,8 +258,15 @@
                     }
 
                     // Draw
-                    if (this._state.engine.draw && this._elements.canvas) {
-                        this._state.engine.draw(this._elements.canvas.getContext('2d'), this._state.params);
+                    if (this._state.engine.draw) {
+                        // 2D Canvas Mode
+                        if (this._elements.canvas) {
+                            this._state.engine.draw(this._elements.canvas.getContext('2d'), this._state.params);
+                        }
+                        // Generic/3D Mode (Engine handles its own rendering)
+                        else {
+                            this._state.engine.draw(dt, this._state.params);
+                        }
                     }
                 }
 
@@ -286,16 +293,22 @@
             },
 
             _resizeCanvas: function () {
-                const canvas = this._elements.canvas;
-                if (!canvas) return;
+                const viewport = this._elements.viewport;
+                if (!viewport) return;
 
-                const rect = canvas.parentElement.getBoundingClientRect();
-                canvas.width = rect.width;
-                canvas.height = rect.height;
+                const rect = viewport.getBoundingClientRect();
+                const width = rect.width;
+                const height = rect.height;
 
-                // Notify engine
+                // Resize 2D Canvas if present
+                if (this._elements.canvas) {
+                    this._elements.canvas.width = width;
+                    this._elements.canvas.height = height;
+                }
+
+                // Notify engine (Crucial for Three.js to update Aspect Ratio/Renderer size)
                 if (this._state.engine && this._state.engine.resize) {
-                    this._state.engine.resize(canvas.width, canvas.height);
+                    this._state.engine.resize(width, height);
                 }
             }
         });
