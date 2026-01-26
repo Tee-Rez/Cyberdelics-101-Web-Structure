@@ -67,10 +67,16 @@ class LessonUI {
                     </div>
                 </div>
                 <div class="cd-header-right">
+                    <button class="cd-fullscreen-btn" title="Toggle Full Screen">⛶</button>
                     <span class="cd-status">ONLINE</span>
                 </div>
             `;
         this.shell.appendChild(topBar);
+
+        // Bind Full Screen Toggle
+        const fsBtn = topBar.querySelector('.cd-fullscreen-btn');
+        fsBtn.addEventListener('click', () => this.toggleFullScreen());
+        this.elements.fsBtn = fsBtn;
 
         // 2. Main Body (Sidebars + Content)
         const body = document.createElement('div');
@@ -359,6 +365,22 @@ class LessonUI {
         this.showToast('🔓 New Audio Track Unlocked!');
 
         console.log('[LessonUI] Audio unlocked!');
+    }
+
+    /**
+     * Toggle Full Screen Mode
+     * Useful for Framer embeds to break out of scrollbars
+     */
+    toggleFullScreen() {
+        if (!document.fullscreenElement) {
+            document.documentElement.requestFullscreen().catch(err => {
+                console.warn(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+            });
+        } else {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            }
+        }
     }
 
     /**
