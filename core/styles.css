@@ -41,15 +41,71 @@
     /* Expanded from 720px */
     --border-radius: 8px;
     --border-radius-lg: 12px;
-    --header-height: 135px;
-    /* Expanded from 60px */
-    --footer-height: 135px;
-    /* Expanded from 80px */
+    --border-radius-lg: 12px;
+    --header-height: 50px;
+    /* Skinny Header */
+    --logo-size: 120px;
+    /* Restoration of original size */
+    --footer-height: 80px;
+    /* Footer Restored */
 
     /* Transitions */
     --transition-fast: 150ms ease;
     --transition-normal: 250ms ease;
     --transition-slow: 400ms ease;
+}
+
+/* ---------- App Shell Layout ---------- */
+
+.cyberdeck-top-section {
+    position: relative;
+    z-index: 300;
+    display: flex;
+    flex: 0 0 120px;
+    /* Force rigid height/basis */
+    width: 100%;
+    align-items: center;
+    height: 120px;
+    /* Hardcoded fallack */
+    height: var(--logo-size);
+    min-height: 120px;
+    /* Prevent collapse */
+    border-bottom: 1px solid var(--color-border);
+    background: var(--color-bg);
+}
+
+.cd-top-logo-container {
+    width: var(--logo-size);
+    height: var(--logo-size);
+    background: var(--color-surface-elevated);
+    border-right: 1px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.cd-top-logo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Updated Top Bar */
+.cyberdeck-header {
+    flex: 1;
+    height: var(--header-height);
+    background: var(--color-surface);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 var(--space-lg);
+    z-index: 100;
+}
+
+/* Footer Restored */
+.cyberdeck-footer {
+    /* display: none !important; */
 }
 
 /* ---------- Reset & Base ---------- */
@@ -74,6 +130,16 @@ body {
     min-height: 100vh;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---------- Layout Root ---------- */
+#lesson-root {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    /* Ensure it fills viewport or parent iframe */
+    overflow: hidden;
+    /* Prevent scroll */
 }
 
 /* ---------- Typography ---------- */
@@ -110,6 +176,12 @@ strong {
     color: var(--color-text-primary);
     font-weight: 600;
 }
+
+
+
+
+/* ---------- Cyberdeck Core Layout (Safe) ---------- */
+
 
 /* ---------- Lesson Container ---------- */
 .lesson-container {
@@ -336,15 +408,17 @@ li strong {
 /* ---------- Cyberdeck UI Shell ---------- */
 
 /* Shell Grid Layout */
+/* Shell Grid Layout */
 .cyberdeck-shell {
     display: flex;
     flex-direction: column;
-    height: 100%;
-    width: 100%;
+    /* height: 100%; width: 100%; replaced by inset */
+    position: absolute;
+    inset: 0;
+    /* Force fill parent */
     background: var(--color-bg);
     overflow: hidden;
-    position: relative;
-    /* Ensure it stays within parent flow */
+    /* ensure hidden matches parent */
 }
 
 .cyberdeck-body {
@@ -361,16 +435,32 @@ li strong {
     overflow-x: hidden;
     position: relative;
     padding: var(--space-lg);
+    scrollbar-gutter: stable;
+    /* Reserve space for scrollbar */
+    overscroll-behavior: none;
+    /* Prevent parent scroll */
     /* Subtle grid background for tech feel */
     background-image:
         linear-gradient(rgba(18, 18, 26, 0.8) 1px, transparent 1px),
         linear-gradient(90deg, rgba(18, 18, 26, 0.8) 1px, transparent 1px);
     background-size: 40px 40px;
+    height: 100%;
+    /* Ensure full height */
+}
+
+.module-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
 }
 
 /* Top Bar */
 .cyberdeck-header {
     height: var(--header-height);
+    flex-shrink: 0;
+    /* Prevent collapsing */
     background: var(--color-surface);
     border-bottom: 1px solid var(--color-border);
     display: flex;
@@ -379,6 +469,27 @@ li strong {
     padding: 0 var(--space-lg);
     z-index: 100;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.cd-header-left {
+    display: flex;
+    align-items: center;
+    width: 120px;
+    /* Fixed width for image container */
+}
+
+/* ... (unchanged lines) ... */
+/* Bottom Bar & Visualizer */
+.cyberdeck-footer {
+    height: var(--footer-height);
+    flex-shrink: 0;
+    /* Prevent collapsing */
+    background: var(--color-surface);
+    border-top: 1px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
 }
 
 .cd-header-left {
@@ -1065,7 +1176,7 @@ li strong {
     font-weight: 700;
     color: var(--color-accent);
     margin-left: auto;
-    margin-right: var(--space-sm);
+    margin-right: auto;
 }
 
 /* Toast Notifications */
@@ -1223,4 +1334,409 @@ li strong {
 .btn-tutorial.primary {
     background: #00D9FF;
     color: #000;
+}
+
+/* Opening Screen Overlay */
+.opening-screen {
+    position: absolute;
+    /* Changed from fixed to stay inside lesson-root */
+    inset: 0;
+    background: #000;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: opacity 0.8s ease;
+}
+
+.opening-screen.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.opening-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    background: linear-gradient(45deg, var(--color-accent), #f0f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.opening-subtitle {
+    font-size: 1.2rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 40px;
+}
+
+.opening-action {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+}
+
+.opening-fs-btn {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid var(--color-accent);
+    color: var(--color-accent);
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 2;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.opening-fs-btn:hover {
+    background: var(--color-accent);
+    color: #000;
+    transform: scale(1.1);
+}
+
+.opening-pulse {
+    position: absolute;
+    inset: -10px;
+    border-radius: 50%;
+    border: 2px solid var(--color-accent);
+    opacity: 0;
+    z-index: 1;
+    animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+@keyframes pulse-ring {
+    0% {
+        transform: scale(0.8);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+.opening-hint {
+    color: #444;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Bottom Sidebar (Overlay) */
+.cd-sidebar-bottom {
+    width: 100%;
+    height: 300px;
+    /* Expanded Height */
+    left: 0;
+    bottom: var(--footer-height, 60px);
+    /* Position above footer */
+    top: auto;
+    border-right: none;
+    border-top: 1px solid var(--color-border);
+    transition: height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 95;
+    position: absolute;
+}
+
+.cd-sidebar-bottom.collapsed {
+    width: 100%;
+    height: 40px;
+    /* Header Height */
+}
+
+/* Interactive Simulation - Expanded Layout */
+/* User asked where to edit size: HERE. */
+.interactive-simulation-container {
+    width: 100%;
+    height: 100%;
+    /* Ensure it fills parent */
+    min-height: 500px;
+    /* Force a minimum height if parent is small */
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    overflow: hidden;
+}
+
+.sim-viewport {
+    flex: 1;
+    /* Grow to fill space */
+    width: 100%;
+    min-height: 0;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.sim-controls {
+    /* Style controls container if needed */
+    padding: 10px;
+}
+
+/* Continue Button - Explicit Selector */
+button.btn-continue,
+.interactive-simulation-container .btn-continue {
+    margin-top: 1rem;
+    align-self: flex-end;
+    background: transparent;
+    border: 1px solid var(--color-accent) !important;
+    color: var(--color-accent) !important;
+    padding: 10px 24px;
+    font-family: 'Space Mono', monospace;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 217, 255, 0.2);
+    display: none;
+    /* Hidden by default, JS toggles it */
+}
+
+button.btn-continue:hover,
+.interactive-simulation-container .btn-continue:hover {
+    background: var(--color-accent) !important;
+    color: #000 !important;
+    box-shadow: 0 0 20px rgba(0, 217, 255, 0.6);
+}
+
+/* Interactive Simulation - Scoped Fix */
+.interactive-simulation-container {
+    /* Ensure it takes available space without forcing overflow */
+    flex: 1;
+    height: 100%;
+    /* Force full height of parent */
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Continue Button - Scoped to Sim */
+.interactive-simulation-container .btn-continue {
+    margin-top: 1rem;
+    align-self: flex-end;
+    background: transparent;
+    border: 1px solid var(--color-accent);
+    color: var(--color-accent);
+    padding: 8px 24px;
+    font-family: 'Space Mono', monospace;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    /* Neon Glow */
+    box-shadow: 0 0 5px rgba(0, 217, 255, 0.2);
+    /* Hidden by default (logic toggles display:block) */
+    display: none;
+}
+
+.interactive-simulation-container .btn-continue:hover {
+    background: var(--color-accent);
+    color: #000;
+    box-shadow: 0 0 15px rgba(0, 217, 255, 0.6);
+}
+
+/* Bottom Sidebar (Overlay - Bottom Left Corner) */
+.cd-sidebar-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    /* Start small (square) */
+    height: 40px;
+    /* Start small (square) */
+
+    /* Expansion Constraints */
+    max-width: 500px;
+    max-height: 770px;
+    /* 4:3ish ratio limit */
+
+    background: var(--color-surface-elevated);
+    border-top: 1px solid var(--color-border);
+    border-right: 1px solid var(--color-border);
+    border-top-right-radius: 12px;
+    z-index: 200;
+
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    /* Critical for hiding content */
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+
+    /* Ensure no padding on parent messes up collapsed size */
+    padding: 0;
+}
+
+.cd-sidebar-bottom.collapsed {
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 0 12px 0 0;
+    /* Keep the corner style */
+}
+
+/* When expanded, override the small size */
+/* When expanded, override the small size */
+.cd-sidebar-bottom:not(.collapsed) {
+    width: 480px;
+    max-width: 90vw;
+    height: auto;
+    padding-bottom: 10px;
+    /* Add breathing room for content */
+}
+
+/* Ensure Video Responsive Scaling */
+.video-container video {
+    width: 100% !important;
+    height: auto !important;
+    display: block;
+    object-fit: contain;
+}
+
+/* Hide video content completely when collapsed so it takes no space */
+.cd-sidebar-bottom.collapsed .video-container {
+    display: none;
+}
+
+.cd-sidebar-bottom .cd-sidebar-header {
+    height: 40px;
+    flex-shrink: 0;
+    padding: 0 8px;
+    /* Slight padding for button centering relative to box */
+    justify-content: center;
+    /* Center the toggle button in collapsed state */
+    cursor: pointer;
+    /* Click header to toggle too? */
+    border-bottom: 1px solid var(--color-border);
+}
+
+/* When expanded, adjust header alignment */
+.cd-sidebar-bottom:not(.collapsed) .cd-sidebar-header {
+    justify-content: space-between;
+    padding: 0 16px;
+}
+
+/* Utility to kill animation on startup */
+.no-transition {
+    transition: none !important;
+}
+
+/* Artifact Nodes */
+.cd-artifact-node {
+    /* Positioned by inline styles */
+}
+
+.cd-artifact-node .artifact-core {
+    width: 100%;
+    height: 100%;
+    background: var(--color-accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    font-weight: bold;
+    box-shadow: 0 0 10px var(--color-accent);
+    position: relative;
+    z-index: 2;
+}
+
+.cd-artifact-node .artifact-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color-accent);
+    border-radius: 50%;
+    opacity: 0.5;
+    animation: artifact-pulse 2s infinite;
+    z-index: 1;
+}
+
+@keyframes artifact-pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+}
+
+/* Timeline/Map Markers */
+.map-marker-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--color-accent);
+    background: #000;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.map-marker-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.map-marker-label {
+    margin-top: 8px;
+    font-size: 0.8rem;
+    color: var(--color-text-dim);
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2px 6px;
+    border-radius: 4px;
+    opacity: 0.8;
+}
+
+.timeline-node:hover .map-marker-icon {
+    transform: scale(1.2);
+    box-shadow: 0 0 15px var(--color-accent);
+}
+
+.timeline-node:hover .map-marker-label {
+    opacity: 1;
+    color: #fff;
+}
+
+.timeline-node.collected .map-marker-icon {
+    border-color: #0f0;
+    box-shadow: 0 0 10px #0f0;
+    opacity: 0.5;
+    /* Dim slightly */
+}
+
+.timeline-node.collected .map-marker-label::after {
+    content: ' [SYNC]';
+    color: #0f0;
+}
+
+.video-container {
+    width: 400px;
+    /* Reduced from 600px per request */
+    max-width: 100%;
+    margin: 0 auto;
+    background: #000;
+    line-height: 0;
+    border: 1px solid var(--color-border);
+    /* Add a subtle frame */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }

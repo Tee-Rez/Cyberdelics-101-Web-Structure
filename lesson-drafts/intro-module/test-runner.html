@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="../../methods/interactive-simulation/interactive-simulation.css">
     <link rel="stylesheet" href="../../methods/knowledge-construction/knowledge-construction.css">
     <link rel="stylesheet" href="../../methods/progressive-disclosure/progressive-disclosure.css">
-    <link rel="stylesheet" href="../../methods/gamified-exploration/gamified-exploration.css">
+
+    <link rel="stylesheet" href="../../methods/interactive-simulation/engines/node-zoom.css">
     <link rel="stylesheet" href="../../methods/scenario-based/scenario-based.css">
 
     <!-- Simulation Styles -->
@@ -29,7 +30,9 @@
         }
 
         #lesson-root {
-            min-height: 600px;
+            height: 90vh;
+            /* Increased from 80vh per user request for larger container */
+            /* Was min-height: 600px. Adjusted per user request for better fit. */
             border: 1px solid #333;
             border-radius: 8px;
             background: #0a0a15;
@@ -94,7 +97,7 @@
 
 <body>
 
-    <h1>Intro Lesson Test Runner</h1>
+    <!-- Header Removed -->
     <div id="lesson-root"></div>
     <div id="debug-log" style="color: #aaa; margin-top: 1rem; font-family: monospace;"></div>
 
@@ -106,16 +109,17 @@
     <script src="../../methods/progressive-disclosure/progressive-disclosure.js"></script>
     <script src="../../methods/interactive-simulation/interactive-simulation.js"></script>
     <script src="../../methods/knowledge-construction/knowledge-construction.js"></script>
-    <script src="../../methods/gamified-exploration/gamified-exploration.js"></script>
-    <script src="../../methods/gamified-exploration/games/timeline-zoom.js"></script>
+    <script src="../../methods/interactive-simulation/engines/node-zoom.js"></script>
     <script src="../../methods/scenario-based/scenario-based.js"></script>
 
     <!-- Simulation Engines -->
     <script src="../../methods/interactive-simulation/constellation-personas/constellation-personas.js"></script>
 
+
     <!-- Core UI -->
     <script src="../../core/audio-player.js"></script>
     <script src="../../core/lesson-ui.js"></script>
+    <script src="../../core/artifact-system.js"></script>
 
     <!-- Core Runner (Loaded LAST to ensure factories exist) -->
     <script src="../../core/lesson-runner.js"></script>
@@ -127,67 +131,8 @@
         }
 
         try {
-            // 1. Register Mock Engines
-            window.SimulationEngines = window.SimulationEngines || {};
-            log('Registering Mock Engines...');
-
-            // Engine: Time Slider
-            window.SimulationEngines['time-slider'] = {
-                defaults: { year: 2025 },
-                init: function (viewport, params) {
-                    this.viewport = viewport;
-                    this.display = document.createElement('div');
-                    this.display.style.fontSize = '2rem';
-                    this.display.style.textAlign = 'center';
-                    this.display.style.marginTop = '20%';
-                    viewport.appendChild(this.display);
-                    this.update(0, params);
-                },
-                update: function (dt, params) {
-                    const year = params.year;
-                    let text = "";
-                    if (year < 2020) text = "Visual: VR is clunky. Research starts.";
-                    else if (year < 2030) text = "Visual: NOW. Convergence. Opportunity.";
-                    else text = "Visual: Future. Established Field.";
-
-                    this.display.innerHTML = `<h2>${year}</h2><p style='color:#00D9FF'>${text}</p>`;
-                },
-                destroy: function () { }
-            };
-
-            // Engine: Balance Scale
-            window.SimulationEngines['balance-scale'] = {
-                defaults: { ratio: 50 },
-                init: function (viewport, params) {
-                    this.viewport = viewport;
-                    this.bar = document.createElement('div');
-                    this.bar.style.width = '80%';
-                    this.bar.style.height = '20px';
-                    this.bar.style.background = '#333';
-                    this.bar.style.margin = '100px auto';
-                    this.bar.style.position = 'relative';
-
-                    this.pivot = document.createElement('div');
-                    this.pivot.style.width = '0';
-                    this.pivot.style.height = '0';
-                    this.pivot.style.borderLeft = '20px solid transparent';
-                    this.pivot.style.borderRight = '20px solid transparent';
-                    this.pivot.style.borderBottom = '40px solid #555';
-                    this.pivot.style.position = 'absolute';
-                    this.pivot.style.bottom = '-40px';
-                    this.pivot.style.left = '50%';
-                    this.pivot.style.transform = 'translateX(-50%)';
-
-                    this.bar.appendChild(this.pivot);
-                    viewport.appendChild(this.bar);
-                    this.update(0, params);
-                },
-                update: function (dt, params) {
-                    const rot = (params.ratio - 50) * 0.5; // -25 to 25 deg
-                    this.bar.style.transform = `rotate(${rot}deg)`;
-                },
-                destroy: function () { }
-            };
+            // 1. Engines Loaded Externally
+            log('Engines loaded.');
 
             // 3. Fetch and Run
             log('Initializing Runner...');

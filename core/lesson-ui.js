@@ -25,9 +25,11 @@ class LessonUI {
             progressFill: null,
             mainArea: null,
             sidebarLeft: null,
-            sidebarRight: null
+            sidebarRight: null,
+            sidebarBottom: null
         };
         console.log('[LessonUI] Constructed');
+        this._foundArtifacts = new Set();
     }
 
     /**
@@ -51,15 +53,20 @@ class LessonUI {
         this.shell = document.createElement('div');
         this.shell.className = 'cyberdeck-shell';
 
-        // 1. Top Bar
+        // 1. Top Section (Logo + Header)
+        const topSection = document.createElement('div');
+        topSection.className = 'cyberdeck-top-section';
+
+        // Logo Container (Left)
+        const logoContainer = document.createElement('div');
+        logoContainer.className = 'cd-top-logo-container';
+        logoContainer.innerHTML = `<img src="../../assets/Gifs/rotating-string.gif" alt="Cyberdelic Asset" />`;
+        topSection.appendChild(logoContainer);
+
+        // Header Bar (Right)
         const topBar = document.createElement('div');
         topBar.className = 'cyberdeck-header';
         topBar.innerHTML = `
-                <div class="cd-header-left">
-                    <div class="cd-header-image">
-                       <img src="../../assets/Gifs/rotating-string.gif" alt="Cyberdelic Asset" />
-                    </div>
-                </div>
                 <div class="cd-header-center">
                     <div class="cd-lesson-title">Loading...</div>
                     <div class="cd-progress-track">
@@ -71,7 +78,8 @@ class LessonUI {
                     <span class="cd-status">ONLINE</span>
                 </div>
             `;
-        this.shell.appendChild(topBar);
+        topSection.appendChild(topBar);
+        this.shell.appendChild(topSection);
 
         // Bind Full Screen Toggle
         const fsBtn = topBar.querySelector('.cd-fullscreen-btn');
@@ -81,6 +89,16 @@ class LessonUI {
         // 2. Main Body (Sidebars + Content)
         const body = document.createElement('div');
         body.className = 'cyberdeck-body';
+        // ... (body creation remains same, handled by existing code if I slice carefully) ... 
+
+        /* 
+           NOTE: I cannot slice mid-function easily with replace_file_content if I don't include the whole block. 
+           I will assume the Body content generation follows immediately after.
+           Wait, I need to match the END of the replace block to valid code.
+           The original code had `this.shell.appendChild(topBar);` ... `const body = ...`
+        */
+
+        // ... (Let's continue Body setup in next lines) ...
 
         // Left Sidebar (Inventory)
         const sideLeft = document.createElement('div');
@@ -88,16 +106,14 @@ class LessonUI {
         sideLeft.innerHTML = `
                 <div class="cd-sidebar-header">
                     <span class="cd-sidebar-title">ARTIFACTS</span>
-                    <span class="cd-artifact-counter">0/5</span>
                     <button class="cd-toggle-btn">◄</button>
                 </div>
+                <div class="cd-artifact-counter">0/5</div>
                 <div class="cd-collapsed-icons"></div>
                 <div class="cd-sidebar-content">
-                    <!-- Inventory Grid goes here -->
                     <div class="cd-empty-state">No artifacts detected.</div>
                 </div>
             `;
-        // Toggle Logic
         sideLeft.querySelector('.cd-toggle-btn').addEventListener('click', () => {
             sideLeft.classList.toggle('collapsed');
             const btn = sideLeft.querySelector('.cd-toggle-btn');
@@ -105,10 +121,18 @@ class LessonUI {
         });
         body.appendChild(sideLeft);
 
-        // Main Content Area (Where methods live)
+        // Main Content Area (The "View Port")
         const main = document.createElement('div');
         main.className = 'cyberdeck-main';
-        main.id = 'cyberdeck-content-port'; // Target for LessonRunner
+        main.id = 'cyberdeck-content-port';
+
+        // Inner Container for Teaching Modules (This is what gets cleared by LessonRunner)
+        const moduleRoot = document.createElement('div');
+        moduleRoot.id = 'module-root';
+        moduleRoot.style.cssText = 'width: 100%; height: 100%; position: relative;';
+        main.appendChild(moduleRoot);
+        this.elements.moduleRoot = moduleRoot;
+
         body.appendChild(main);
 
         // Right Sidebar (Audio Player)
@@ -123,56 +147,110 @@ class LessonUI {
                     <button class="cd-mini-play-btn" title="Play/Pause">▶</button>
                 </div>
                 <div class="cd-sidebar-content">
-                    <!-- Audio Player will be injected here -->
                     <div id="cd-audio-player-container"></div>
                 </div>
             `;
-        // Toggle Logic
         sideRight.querySelector('.cd-toggle-btn').addEventListener('click', () => {
             sideRight.classList.toggle('collapsed');
             const btn = sideRight.querySelector('.cd-toggle-btn');
             btn.textContent = sideRight.classList.contains('collapsed') ? '◄' : '►';
         });
 
-        // Mini Play Button - connect to audio player
+        // Mini Play Button
         const miniPlayBtn = sideRight.querySelector('.cd-mini-play-btn');
         miniPlayBtn.addEventListener('click', (e) => {
-            e.stopPropagation(); // Don't toggle sidebar
-            if (this.audioPlayer) {
-                this.audioPlayer.toggle();
-            }
+            e.stopPropagation();
+            if (this.audioPlayer) this.audioPlayer.toggle();
         });
         this.elements.miniPlayBtn = miniPlayBtn;
 
         body.appendChild(sideRight);
 
-        // 3. Bottom Bar (Wave Visualizer + Asset)
+        // 3. Bottom Bar (Restored)
         const bottomBar = document.createElement('div');
         bottomBar.className = 'cyberdeck-footer';
         bottomBar.innerHTML = `
-                <div class="cd-wave-container">
-                    <div class="cd-visualizer-wrapper">
-                        <div class="cd-slider-container">
-                            <button id="wave-selector" class="wave-selector-btn" title="Toggle Wave Control"></button>
-                            <div class="cd-slider-group">
-                                <input type="range" class="wave-slider" id="wave-freq" min="1" max="25" value="10" title="Frequency">
-                                <input type="range" class="wave-slider" id="wave-amp" min="10" max="100" value="50" title="Amplitude">
-                                <input type="range" class="wave-slider" id="wave-speed" min="1" max="25" value="5" title="Speed">
-                            </div>
-                        </div>
-                        <canvas id="wave-canvas"></canvas>
-                    </div>
-                    
-                    <div class="cd-footer-image">
-                        <img src="../../assets/Gifs/rotating-string.gif" alt="Cyberdelic Asset" />
+            <div class="cd-wave-container">
+                <!-- Left Side: Controls -->
+                 <div class="cd-slider-container" style="order: -1;">
+                    <button id="wave-selector" class="wave-selector-btn" title="Color Mode"></button>
+                    <div class="cd-slider-group">
+                        <input type="range" id="wave-freq" class="wave-slider" min="1" max="50" value="10" title="Frequency">
+                        <input type="range" id="wave-amp" class="wave-slider" min="1" max="100" value="50" title="Amplitude">
+                        <input type="range" id="wave-speed" class="wave-slider" min="1" max="20" value="5" title="Speed">
                     </div>
                 </div>
-            `;
+                
+                <div class="cd-visualizer-wrapper">
+                     <canvas id="wave-canvas"></canvas>
+                </div>
+            </div>
+        `;
         this.shell.appendChild(bottomBar);
+
+        // 3. Bottom Sidebar (Video Overlay)
+        const sideBottom = document.createElement('div');
+        sideBottom.className = 'cyberdeck-sidebar cd-sidebar-bottom collapsed no-transition'; // Start with no-transition
+        sideBottom.innerHTML = `
+                <div class="cd-sidebar-header">
+                    <span class="cd-sidebar-title">SOPHIA TEASER</span>
+                    <button class="cd-toggle-btn">▲</button>
+                </div>
+                <!-- Content injected lazily to prevent layout shift -->
+            `;
+        // Toggle Logic
+        sideBottom.querySelector('.cd-toggle-btn').addEventListener('click', () => {
+            // Lazy Inject Content
+            if (!sideBottom.querySelector('.cd-sidebar-content')) {
+                const contentDiv = document.createElement('div');
+                contentDiv.className = 'cd-sidebar-content';
+                contentDiv.innerHTML = `
+                    <div class="video-container">
+                        <video controls style="width: 100%; border-radius: 4px;">
+                            <source src="../../assets/Video/sophia-teaser.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>`;
+                sideBottom.appendChild(contentDiv);
+            }
+
+            const isCollapsed = sideBottom.classList.toggle('collapsed');
+            const btn = sideBottom.querySelector('.cd-toggle-btn');
+            const video = sideBottom.querySelector('video');
+
+            // If collapsed (down), show Up arrow to open. Also Pause and Reset.
+            // If open (up), show Down arrow to close. Also Play from start.
+            if (isCollapsed) {
+                btn.textContent = '▲';
+                if (video) {
+                    video.pause();
+                    video.currentTime = 0; // Reset to start
+                }
+            } else {
+                btn.textContent = '▼';
+                if (video) {
+                    video.currentTime = 0; // Ensure start from beginning
+                    video.play().catch(err => console.log('Auto-play prevent:', err));
+                }
+            }
+        });
+        this.elements.sidebarBottom = sideBottom;
+        main.appendChild(sideBottom); // Changed parent to Main Area to position relative to content port
+        // body.appendChild(sideBottom);
+        // this.shell.appendChild(sideBottom); // Reverted per layout issue
+
+        // Force Reflow to fix initial positioning glitch
+        void sideBottom.offsetHeight;
+
+        // Remove no-transition after a brief moment to enable animations
+        setTimeout(() => {
+            sideBottom.classList.remove('no-transition');
+        }, 500);
 
         // Assemble
         this.shell.appendChild(body);
-        this.shell.appendChild(bottomBar); // Move bottom bar after body
+        this.shell.appendChild(body);
+        this.shell.appendChild(bottomBar);
         this.container.appendChild(this.shell);
 
         // Store references
@@ -241,6 +319,7 @@ class LessonUI {
 
         // Store expected artifacts
         this._registeredArtifacts = artifacts;
+        // Reset found artifacts on registration (effectively a level reset)
         this._foundArtifacts = new Set();
 
         // Render all as locked
@@ -277,7 +356,14 @@ class LessonUI {
         if (this._foundArtifacts && this._foundArtifacts.has(id)) return;
 
         // Find registered artifact data
-        const registeredData = this._registeredArtifacts?.find(a => a.id === id) || data;
+        const registeredData = this._registeredArtifacts?.find(a => a.id === id);
+
+        // VALIDATION: If this ID is not in our manifest/registered list, it's not a collectable artifact.
+        if (!registeredData) {
+            console.log(`[LessonUI] Ignored non-artifact ID: ${id}`);
+            return;
+        }
+
         const finalData = { ...registeredData, ...data };
 
         // Try to find existing locked artifact element
@@ -326,6 +412,43 @@ class LessonUI {
             miniIcon.innerHTML = finalData.icon || '📦';
             miniIcon.title = finalData.label || 'Artifact';
             collapsedIcons.appendChild(miniIcon);
+        }
+    }
+
+    /**
+     * Unlock a specific artifact in the sidebar
+     * @param {string} id - Artifact ID
+     */
+    unlockArtifact(id) {
+        if (!this.elements.sidebarLeft) return;
+
+        // Find the specific item row
+        const item = this.elements.sidebarLeft.querySelector(`.cd-artifact-item[data-artifact-id="${id}"]`);
+        if (item) {
+            item.classList.remove('cd-artifact-locked');
+            // Add a highlight animation?
+            item.style.borderColor = 'var(--color-accent)';
+
+            // Add icon to collapsed strip
+            const collapsedIcons = this.elements.sidebarLeft.querySelector('.cd-collapsed-icons');
+            if (collapsedIcons && !collapsedIcons.querySelector(`[data-artifact-id="${id}"]`)) {
+                // Find registered data for icon
+                const data = this._registeredArtifacts?.find(a => a.id === id);
+                const iconHtml = data ? (data.icon || '📦') : '📦';
+                const titleText = data ? (data.label || 'Artifact') : 'Artifact';
+
+                const miniIcon = document.createElement('div');
+                miniIcon.className = 'cd-collapsed-icon';
+                miniIcon.dataset.artifactId = id;
+                miniIcon.innerHTML = iconHtml;
+                miniIcon.title = titleText;
+                collapsedIcons.appendChild(miniIcon);
+            }
+
+            // Also update the internal counter if not already handled
+            // (Our ArtifactSystem calls this, so let's rely on that flow)
+        } else {
+            console.warn(`[LessonUI] Artifact ID "${id}" not found in sidebar.`);
         }
 
         // Update Counter
@@ -408,7 +531,7 @@ class LessonUI {
      * @returns {HTMLElement}
      */
     getContentContainer() {
-        return this.elements.mainArea;
+        return this.elements.moduleRoot || this.elements.mainArea;
     }
 }
 
@@ -480,8 +603,9 @@ class SineWaveVisualizer {
     }
 
     resize() {
-        this.canvas.width = this.canvas.parentElement.offsetWidth - 180;
-        this.canvas.height = this.canvas.parentElement.offsetHeight;
+        if (!this.canvas.parentElement) return;
+        this.canvas.width = this.canvas.parentElement.clientWidth;
+        this.canvas.height = this.canvas.parentElement.clientHeight;
     }
 
     animate() {

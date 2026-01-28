@@ -17,7 +17,7 @@
         'progressive-disclosure': window.ProgressiveDisclosureFactory,
         'interactive-simulation': window.InteractiveSimulationFactory,
         'scenario-based': window.ScenarioBasedFactory,
-        'gamified-exploration': window.GamifiedExplorationFactory,
+        // 'gamified-exploration': window.GamifiedExplorationFactory, // Removed
         'knowledge-construction': window.KnowledgeConstructionFactory,
         'choose-your-path': window.ChooseYourPathFactory
     };
@@ -56,30 +56,72 @@
             // Apply Global Theme
             this._applyTheme(manifest.theme);
 
-            // Initialize UI (Cyberdeck Hull)
-            if (window.LessonUI) {
-                console.log('[LessonRunner] Found LessonUI, initializing...');
-                window.LessonUI.init(this.container);
-                window.LessonUI.update(manifest.title, 0);
+            // Render Opening Screen before starting modules
+            this._showOpeningScreen(manifest.title, () => {
+                // Initialize UI (Cyberdeck Hull) AFTER Opening Screen
+                if (window.LessonUI) {
+                    console.log('[LessonRunner] Found LessonUI, initializing...');
+                    window.LessonUI.init(this.container);
+                    window.LessonUI.update(manifest.title, 0);
 
-                // Register Artifacts if present
-                if (manifest.artifacts && window.LessonUI.registerArtifacts) {
-                    window.LessonUI.registerArtifacts(manifest.artifacts);
+                    // Register Artifacts if present
+                    if (manifest.artifacts && window.LessonUI.registerArtifacts) {
+                        window.LessonUI.registerArtifacts(manifest.artifacts);
+                    }
+                } else {
+                    console.warn('[LessonRunner] LessonUI NOT found, using fallback.');
+                    // Fallback if UI not loaded
+                    this.container.innerHTML = '';
                 }
-            } else {
-                console.warn('[LessonRunner] LessonUI NOT found, using fallback.');
-                // Fallback if UI not loaded
-                this.container.innerHTML = '';
-            }
 
-            // Start First Module
-            this.nextModule();
+                // Start First Module
+                this.nextModule();
+            });
+        }
+
+        /**
+         * Render the Full Screen Prompt / Opening Title
+         */
+        _showOpeningScreen(title, onStart) {
+            this.container.innerHTML = '';
+            const screen = document.createElement('div');
+            screen.className = 'opening-screen';
+            screen.innerHTML = `
+                <div class="opening-content">
+                    <h1>Welcome to Cyberdelics 101</h1>
+                    <p class="opening-subtitle">This class works best within full screen mode.</p>
+                    <div class="opening-action">
+                        <button class="opening-fs-btn" title="Enter Full Screen">⛶</button>
+                        <div class="opening-pulse"></div>
+                    </div>
+                    <p class="opening-hint">Click the icon to begin</p>
+                </div>
+            `;
+            this.container.appendChild(screen);
+
+            const btn = screen.querySelector('.opening-fs-btn');
+            btn.addEventListener('click', () => {
+                // Try to enter fullscreen
+                if (!document.fullscreenElement && document.documentElement.requestFullscreen) {
+                    document.documentElement.requestFullscreen().catch(err => {
+                        console.warn('Fullscreen request denied:', err);
+                    });
+                }
+
+                // Fade out
+                screen.classList.add('fade-out');
+                setTimeout(() => {
+                    screen.remove();
+                    onStart();
+                }, 800); // Wait for transition
+            });
         }
 
         /**
          * Advance to the next module in the manifest
          */
         nextModule() {
+            console.log('[LessonRunner] nextModule called. Current Index:', this.activeModuleIndex);
             if (!this.currentLesson) return;
 
             // Cleanup previous
@@ -109,6 +151,11 @@
                 console.error(`[LessonRunner] Unknown Method Type: ${type}`);
                 this.container.innerHTML = `<div class="error">Error: Unknown Module ${type}</div>`;
                 return;
+            }
+
+            // 0. Cleanup Previous
+            if (window.ArtifactSystem) {
+                window.ArtifactSystem.unmount();
             }
 
             // 1. Determine Target Container
@@ -153,7 +200,7 @@
                 html += `
                     <div class="reveal-section lesson-complete">
                         <h2>Section Complete</h2>
-                        <button class="reveal-trigger" onclick="/* handled by instance */">Continue</button>
+                        <button class="btn-primary btn-continue">CONTINUE ▶</button>
                     </div>
                 `;
                 moduleContainer.innerHTML = html;
@@ -168,8 +215,6 @@
                         <div class="source-bank"></div>
                     </div>
                 `;
-                // Dictionary items are passed in config, not HTML, usually.
-                // But the Factory.init takes options. We need to pass 'content' as options to init.
             } else if (moduleConfig.content && type === 'scenario-based') {
                 // Auto-generate scenes from content.scenes
                 const c = moduleConfig.content;
@@ -200,17 +245,17 @@
                     });
                 }
                 moduleContainer.innerHTML = `<div class="scenario-container">${scenesHTML}</div>`;
-            } else if (moduleConfig.content && type === 'gamified-exploration') {
-                // The Game factory usually builds its own UI.
-                moduleContainer.innerHTML = `<div class="gamified-exploration-container"></div>`;
-            } else if (moduleConfig.content && type === 'interactive-simulation') {
+            } else if (type === 'interactive-simulation') {
                 // Sim factory needs viewport and controls
+                const showContinue = !moduleConfig.hideContinueButton;
                 moduleContainer.innerHTML = `
-                    <div class="interactive-simulation-container">
-                        <h3>${moduleConfig.title || ''}</h3>
-                        <div class="sim-viewport"></div>
-                        <div class="sim-controls"></div>
-                        <button class="btn-continue" style="margin-top: 1rem;">Continue</button>
+                    <div class="interactive-simulation-container" style="display: flex; flex-direction: column; height: 100%;">
+                        <div class="sim-header" style="flex: 0 0 auto; padding-bottom: 0.5rem;">
+                            <h3>${moduleConfig.title || ''}</h3>
+                        </div>
+                        <div class="sim-viewport" style="flex: 1; border: 1px solid #333; position: relative; overflow: hidden;"></div>
+                        <div class="sim-controls" style="flex: 0 0 auto;"></div>
+                        <button class="btn-continue" style="margin-top: 1rem; ${showContinue ? '' : 'display:none;'}">Continue</button>
                     </div>
                 `;
             }
@@ -228,7 +273,12 @@
 
             instance.init(moduleContainer, options);
 
-            // 4. Attach Listeners for Completion
+            // 4. Mount Artifacts (if any)
+            if (window.ArtifactSystem && moduleConfig.artifacts) {
+                window.ArtifactSystem.mount(moduleContainer, moduleConfig.artifacts);
+            }
+
+            // 5. Attach Listeners for Completion
             // Most methods emit 'complete' or we can listen for specific events
             instance.on('complete', () => {
                 console.log(`[LessonRunner] Module ${moduleConfig.id} Complete`);

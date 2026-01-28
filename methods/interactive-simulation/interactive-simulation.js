@@ -56,6 +56,7 @@
                 }
 
                 // 2. Load Engine
+                console.log('[InteractiveSimulation] Loading Engine:', this._state.enginePath);
                 if (this._state.enginePath) {
                     this._loadEngine(this._state.enginePath);
                 } else {
@@ -124,6 +125,11 @@
                     ...EngineClass.defaults,
                     ...(this._state.options.params || {})
                 };
+
+                // CRITICAL FIX: Pass data from options into params so engines can access it
+                if (this._state.options.data) {
+                    this._state.params.data = this._state.options.data;
+                }
 
                 // Build UI for Params
                 this._buildControls(EngineClass.config);

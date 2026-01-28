@@ -86,7 +86,7 @@
     <script src="knowledge-construction/knowledge-construction.js"></script>
     <script src="progressive-disclosure/progressive-disclosure.js"></script>
     <script src="scenario-based/scenario-based.js"></script>
-    <script src="gamified-exploration/gamified-exploration.js"></script>
+    <!-- <script src="gamified-exploration/gamified-exploration.js"></script> -->
 
     <!-- Mock Engines & Modules -->
     <script>
@@ -202,19 +202,14 @@
                         return m;
                     }
                 },
-                {
+                /* {
                     name: 'Gamified Exploration (Unlock)',
                     type: 'gamified-exploration',
                     init: (container) => {
-                        // Ensure generic container style
-                        const m = window.GamifiedExplorationFactory();
-                        m.init(container, {
-                            module: TimelineGame,
-                            debug: true
-                        });
-                        return m;
+                        // REMOVED
+                        return null;
                     }
-                },
+                }, */
                 {
                     name: 'Knowledge Construction (Synthesis)',
                     type: 'knowledge-construction',

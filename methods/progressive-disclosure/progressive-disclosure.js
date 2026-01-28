@@ -135,8 +135,23 @@
                 });
 
                 // Scroll to section
+                // Scroll container to section (without shifting page)
                 setTimeout(() => {
-                    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    const container = section.closest('.cyberdeck-main') || section.parentElement;
+                    if (container) {
+                        const sectionTop = section.offsetTop;
+                        // const containerTop = container.offsetTop; 
+                        // offsetTop is relative to offsetParent. 
+                        // In the cyberdeck, offsetParent is likely the container itself (if relative).
+
+                        container.scrollTo({
+                            top: sectionTop - 20, // 20px padding
+                            behavior: 'smooth'
+                        });
+                    } else {
+                        // Fallback but use 'nearest' to avoid jumps
+                        section.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    }
                 }, 100);
 
                 // Check if all revealed
@@ -208,13 +223,21 @@
                     const newBtn = btn.cloneNode(true);
                     btn.parentNode.replaceChild(newBtn, btn);
 
-                    newBtn.addEventListener('click', () => {
-                        console.log('[ProgressiveDisclosure] User clicked Continue');
+                    // Force visibility (overriding generic display:none rules if present)
+                    newBtn.style.display = 'inline-block';
 
-                        // NOW we signal completion to the Runner
-                        if (typeof CourseCore !== 'undefined') {
-                            CourseCore.enableCompletion();
-                        }
+                    newBtn.addEventListener('click', (e) => {
+                        // Prevent multi-click
+                        if (e.target.disabled) return;
+                        e.target.disabled = true;
+                        e.target.textContent = 'Processing...';
+
+                        console.log('[ProgressiveDisclosure] User clicked Continue - Signaling Complete');
+
+                        // Signal completion (LessonRunner listens for this event)
+                        // By default LessonRunner waits 1250ms then advances.
+                        // If we want faster advance, we should change LessonRunner config, 
+                        // but removing the manual call prevents double-jump.
                         this.markComplete();
                         this.emit('allRevealed', {});
                     });
