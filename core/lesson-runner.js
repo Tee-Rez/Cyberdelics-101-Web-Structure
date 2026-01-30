@@ -13,13 +13,13 @@
     'use strict';
 
     // Registry of available method factories (populated by MethodLoader or manually)
+    // Using getters to avoid timing issues with script loading
     const MethodRegistry = {
-        'progressive-disclosure': window.ProgressiveDisclosureFactory,
-        'interactive-simulation': window.InteractiveSimulationFactory,
-        'scenario-based': window.ScenarioBasedFactory,
-        // 'gamified-exploration': window.GamifiedExplorationFactory, // Removed
-        'knowledge-construction': window.KnowledgeConstructionFactory,
-        'choose-your-path': window.ChooseYourPathFactory
+        get 'progressive-disclosure'() { return window.ProgressiveDisclosureFactory; },
+        get 'interactive-simulation'() { return window.InteractiveSimulationFactory; },
+        get 'scenario-based'() { return window.ScenarioBasedFactory; },
+        get 'knowledge-construction'() { return window.KnowledgeConstructionFactory; },
+        get 'choose-your-path'() { return window.ChooseYourPathFactory; }
     };
 
     class LessonRunner {
@@ -121,6 +121,17 @@
          * Advance to the next module in the manifest
          */
         nextModule() {
+            if (this.isTransitioning) {
+                console.log('[LessonRunner] nextModule ignored (transitioning)');
+                return;
+            }
+            this.isTransitioning = true;
+
+            // Release lock after a short delay
+            setTimeout(() => {
+                this.isTransitioning = false;
+            }, 1000);
+
             console.log('[LessonRunner] nextModule called. Current Index:', this.activeModuleIndex);
             if (!this.currentLesson) return;
 
@@ -137,6 +148,7 @@
             }
 
             const moduleConfig = this.currentLesson.modules[this.activeModuleIndex];
+            console.log(`[LessonRunner] Loading module ${this.activeModuleIndex}:`, moduleConfig.id, moduleConfig.title);
             this._runModule(moduleConfig);
         }
 
@@ -145,6 +157,7 @@
          */
         _runModule(moduleConfig) {
             const type = moduleConfig.type;
+
             const factory = MethodRegistry[type] || window[this._toPascalCase(type) + 'Factory'];
 
             if (!factory) {
@@ -183,15 +196,17 @@
                 moduleContainer.innerHTML = moduleConfig.contentHTML;
             } else if (moduleConfig.content && type === 'progressive-disclosure') {
                 // Auto-generate HTML for Progressive Disclosure
-                let html = '<div class="step-counter"></div>';
+                let html = `<h1 class="module-title">${moduleConfig.title || ''}</h1>`;
+                html += '<div class="step-counter"></div>';
                 if (moduleConfig.content.sections) {
                     moduleConfig.content.sections.forEach((sec, idx) => {
                         const isFirst = idx === 0 ? 'active' : '';
                         html += `
                             <div class="reveal-section ${isFirst}" id="${sec.id}">
+                                ${sec.title ? `<h2>${sec.title}</h2>` : ''}
                                 ${this._generateMediaHTML(sec.media)}
                                 <div class="section-content">${sec.content}</div>
-                                ${idx < moduleConfig.content.sections.length - 1 ? '<button class="reveal-trigger">Next</button>' : ''}
+                                ${idx < moduleConfig.content.sections.length - 1 ? `<button class="reveal-trigger">${sec.triggerLabel || 'Next'}</button>` : ''}
                             </div>
                         `;
                     });
@@ -273,17 +288,44 @@
 
             instance.init(moduleContainer, options);
 
+            // 3b. Handle onEnter Actions
+            if (moduleConfig.onEnter && window.LessonUI) {
+                if (moduleConfig.onEnter.action === 'openBottomSidebar') {
+                    // Slight delay to ensure UI is ready
+                    setTimeout(() => window.LessonUI.toggleBottomPanel(true), 500);
+                }
+            }
+
             // 4. Mount Artifacts (if any)
-            if (window.ArtifactSystem && moduleConfig.artifacts) {
-                window.ArtifactSystem.mount(moduleContainer, moduleConfig.artifacts);
+            // Combine module-level artifacts with any specific to the config
+            let combinedArtifacts = [];
+            if (moduleConfig.artifacts) {
+                combinedArtifacts = combinedArtifacts.concat(moduleConfig.artifacts);
+            }
+            // Some method configs might have nested artifacts (e.g. simulation nodes acting as artifacts)
+            if (moduleConfig.config && moduleConfig.config.artifacts) {
+                combinedArtifacts = combinedArtifacts.concat(moduleConfig.config.artifacts);
+            }
+
+            if (window.ArtifactSystem && combinedArtifacts.length > 0) {
+                window.ArtifactSystem.mount(moduleContainer, combinedArtifacts);
             }
 
             // 5. Attach Listeners for Completion
             // Most methods emit 'complete' or we can listen for specific events
             instance.on('complete', () => {
                 console.log(`[LessonRunner] Module ${moduleConfig.id} Complete`);
+
+                // Check for artifacts to collect on completion
+                if (moduleConfig.artifacts) {
+                    moduleConfig.artifacts.forEach(art => {
+                        if (art.trigger === 'step_complete' && window.ArtifactSystem) {
+                            window.ArtifactSystem.collect(art);
+                        }
+                    });
+                }
+
                 // Auto-advance or wait for user?
-                // For now, let's wait a moment and advance
                 setTimeout(() => this.nextModule(), 1250);
             });
 

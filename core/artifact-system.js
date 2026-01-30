@@ -21,6 +21,8 @@
             //     this._state.collectedIds = new Set(JSON.parse(saved));
             // }
             this._state.collectedIds = new Set(); // Ensure fresh start
+            this._state.fragmentMap = {}; // Map fragmentID -> parentArtifactID
+            this._state.activeConfigs = []; // Store current configs for lookup
             this._updateInventoryUI();
         },
 
@@ -29,6 +31,8 @@
         },
 
         getCount: function () {
+            // Only count actual artifacts, not fragments?
+            // For now, size includes fragments. We might want to filter later if needed.
             return this._state.collectedIds.size;
         },
 
@@ -38,8 +42,23 @@
          * @param {Array} artifactConfigs - Metadata from Lesson Manifest.
          */
         mount: function (hostContainer, artifactConfigs) {
+            console.log('[ArtifactSystem] Mount called with configs:', artifactConfigs);
             this._state.hostContainer = hostContainer;
             this._state.activeArtifacts = [];
+            this._state.activeConfigs = artifactConfigs || [];
+            this._state.fragmentMap = {};
+
+            // Build Fragment Map
+            if (this._state.activeConfigs) {
+                this._state.activeConfigs.forEach(config => {
+                    if (config.fragments && Array.isArray(config.fragments)) {
+                        config.fragments.forEach(fragId => {
+                            this._state.fragmentMap[fragId] = config.id;
+                        });
+                    }
+                });
+            }
+            console.log('[ArtifactSystem] Fragment Map built:', this._state.fragmentMap);
 
             // Create Overlay Layer
             const overlay = document.createElement('div');
@@ -55,7 +74,10 @@
             if (artifactConfigs && Array.isArray(artifactConfigs)) {
                 artifactConfigs.forEach(config => {
                     if (!this._state.collectedIds.has(config.id)) {
-                        this._spawnArtifact(config);
+                        // Only spawn if it has a physical position
+                        if (config.position) {
+                            this._spawnArtifact(config);
+                        }
                     }
                 });
             }
@@ -103,15 +125,47 @@
             this._state.activeArtifacts.push(el);
         },
 
-        collect: function (config) {
-            console.log('[ArtifactSystem] collect called for:', config.id);
+        collect: function (configOrId) {
+            // Support passing just ID or full config object
+            const id = typeof configOrId === 'string' ? configOrId : configOrId.id;
+            const config = typeof configOrId === 'object' ? configOrId : { id: id };
+
+            console.log('[ArtifactSystem] collect called for:', id);
+
+            if (this._state.collectedIds.has(id)) {
+                console.log('[ArtifactSystem] Already collected:', id);
+                return;
+            }
+
+            // CHECK: Is this a fragment?
+            if (this._state.fragmentMap[id]) {
+                const parentId = this._state.fragmentMap[id];
+                console.log(`[ArtifactSystem] Collected fragment: ${id} for parent ${parentId}`);
+                this._state.collectedIds.add(id);
+                this._saveState();
+
+                // Show Feedback for Fragment
+                this._showNotification(`Data Fragment: ${config.label || config.name || id} Acquired`);
+
+                // Check Parent Completion
+                const parentConfig = this._state.activeConfigs.find(c => c.id === parentId);
+                if (parentConfig && parentConfig.fragments) {
+                    const allCollected = parentConfig.fragments.every(fid => this._state.collectedIds.has(fid));
+                    if (allCollected) {
+                        console.log(`[ArtifactSystem] All fragments collected for ${parentId}. Triggering parent.`);
+                        this.collect(parentConfig);
+                    }
+                }
+                return; // Fragments are silent (no notification, no UI unlock for the fragment itself)
+            }
 
             // VALIDATION: Check against LessonUI registered artifacts
             // If LessonUI has a registry, we must match it.
             if (window.LessonUI && window.LessonUI._registeredArtifacts) {
-                const isValid = window.LessonUI._registeredArtifacts.some(a => a.id === config.id);
+                const isValid = window.LessonUI._registeredArtifacts.some(a => a.id === id);
                 if (!isValid) {
-                    console.log(`[ArtifactSystem] Ignore '${config.id}' - Not in manifest artifacts.`);
+                    console.log(`[ArtifactSystem] Ignore '${id}' - Not in manifest artifacts.`);
+                    console.log('[ArtifactSystem] Debug - Current Fragment Map Keys:', Object.keys(this._state.fragmentMap));
                     return;
                 }
             }

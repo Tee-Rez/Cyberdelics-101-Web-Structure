@@ -323,9 +323,9 @@
     // Register
     if (typeof window.MethodLoader !== 'undefined') {
         window.MethodLoader.registerFactory('interactive-simulation', InteractiveSimulationFactory);
-    } else {
-        window.InteractiveSimulationFactory = InteractiveSimulationFactory;
     }
+    // Always export to window for legacy support
+    window.InteractiveSimulationFactory = InteractiveSimulationFactory;
 
     // Ensure Registry for Engines exists
     window.SimulationEngines = window.SimulationEngines || {};

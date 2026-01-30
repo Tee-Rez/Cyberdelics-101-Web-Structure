@@ -135,27 +135,19 @@
                 });
 
                 // Scroll to section
-                // Scroll container to section (without shifting page)
+                // Wait for CSS transition (400ms) to complete before scrolling
+                // This ensures we calculate based on the final expanded size
                 setTimeout(() => {
                     const container = section.closest('.cyberdeck-main') || section.parentElement;
                     if (container) {
-                        const sectionTop = section.offsetTop;
-                        // const containerTop = container.offsetTop; 
-                        // offsetTop is relative to offsetParent. 
-                        // In the cyberdeck, offsetParent is likely the container itself (if relative).
-
-                        container.scrollTo({
-                            top: sectionTop - 20, // 20px padding
-                            behavior: 'smooth'
-                        });
-                    } else {
-                        // Fallback but use 'nearest' to avoid jumps
                         section.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
                     }
-                }, 100);
+                }, 450);
 
-                // Check if all revealed
-                if (nextIndex >= this.sections.length - 1) {
+                // Check if all sections are now revealed (after advanceStep was called)
+                // If we are on the last step (or beyond), show completion
+                if (this.getCurrentStep() >= this.sections.length - 1) {
+                    console.log('[ProgressiveDisclosure] Last section reached, showing completion');
                     this._showCompletion();
                 }
             },
@@ -171,6 +163,7 @@
             },
 
             // ---------- Private Helpers ----------
+
 
             _handleClick: function (event) {
                 const trigger = event.target.closest('.reveal-trigger');
@@ -249,8 +242,8 @@
     // Export Factory
     if (window.MethodLoader) {
         window.MethodLoader.registerFactory('progressive-disclosure', ProgressiveDisclosureFactory);
-    } else {
-        window.ProgressiveDisclosureFactory = ProgressiveDisclosureFactory;
     }
+    // ALWAYS export to window for direct access by LessonRunner (legacy path)
+    window.ProgressiveDisclosureFactory = ProgressiveDisclosureFactory;
 
 })();

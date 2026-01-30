@@ -198,57 +198,20 @@ class LessonUI {
                 </div>
                 <!-- Content injected lazily to prevent layout shift -->
             `;
+
         // Toggle Logic
         sideBottom.querySelector('.cd-toggle-btn').addEventListener('click', () => {
-            // Lazy Inject Content
-            if (!sideBottom.querySelector('.cd-sidebar-content')) {
-                const contentDiv = document.createElement('div');
-                contentDiv.className = 'cd-sidebar-content';
-                contentDiv.innerHTML = `
-                    <div class="video-container">
-                        <video controls style="width: 100%; border-radius: 4px;">
-                            <source src="../../assets/Video/sophia-teaser.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>`;
-                sideBottom.appendChild(contentDiv);
-            }
-
-            const isCollapsed = sideBottom.classList.toggle('collapsed');
-            const btn = sideBottom.querySelector('.cd-toggle-btn');
-            const video = sideBottom.querySelector('video');
-
-            // If collapsed (down), show Up arrow to open. Also Pause and Reset.
-            // If open (up), show Down arrow to close. Also Play from start.
-            if (isCollapsed) {
-                btn.textContent = '▲';
-                if (video) {
-                    video.pause();
-                    video.currentTime = 0; // Reset to start
-                }
-            } else {
-                btn.textContent = '▼';
-                if (video) {
-                    video.currentTime = 0; // Ensure start from beginning
-                    video.play().catch(err => console.log('Auto-play prevent:', err));
-                }
-            }
+            this.toggleBottomPanel();
         });
+
         this.elements.sidebarBottom = sideBottom;
-        main.appendChild(sideBottom); // Changed parent to Main Area to position relative to content port
-        // body.appendChild(sideBottom);
-        // this.shell.appendChild(sideBottom); // Reverted per layout issue
+        body.appendChild(sideBottom); // Move to body to avoid scrolling with main content
 
-        // Force Reflow to fix initial positioning glitch
+        // Force Reflow
         void sideBottom.offsetHeight;
-
-        // Remove no-transition after a brief moment to enable animations
-        setTimeout(() => {
-            sideBottom.classList.remove('no-transition');
-        }, 500);
+        setTimeout(() => sideBottom.classList.remove('no-transition'), 500);
 
         // Assemble
-        this.shell.appendChild(body);
         this.shell.appendChild(body);
         this.shell.appendChild(bottomBar);
         this.container.appendChild(this.shell);
@@ -262,7 +225,7 @@ class LessonUI {
         this.elements.sidebarLeft = sideLeft;
         this.elements.sidebarRight = sideRight;
 
-        // Initialize Visualizer
+        // Visualizer & Audio setup
         this.visualizer = new SineWaveVisualizer(
             bottomBar.querySelector('#wave-canvas'),
             bottomBar.querySelector('#wave-freq'),
@@ -287,6 +250,53 @@ class LessonUI {
                     this.elements.miniPlayBtn.classList.toggle('playing', playing);
                 }
             };
+        }
+    }
+
+    /**
+     * Programmatically toggle the bottom panel (Video)
+     * @param {boolean} [forceOpen] - If true, force open. If false, force close. If undefined, toggle.
+     */
+    toggleBottomPanel(forceOpen) {
+        const sideBottom = this.elements.sidebarBottom;
+        if (!sideBottom) return;
+
+        // Lazy Inject Content if needed
+        if (!sideBottom.querySelector('.cd-sidebar-content')) {
+            const contentDiv = document.createElement('div');
+            contentDiv.className = 'cd-sidebar-content';
+            contentDiv.innerHTML = `
+                 <div class="video-container">
+                     <video controls style="width: 100%; border-radius: 4px;">
+                         <source src="../../assets/Video/sophia-teaser.mp4" type="video/mp4">
+                         Your browser does not support the video tag.
+                     </video>
+                 </div>`;
+            sideBottom.appendChild(contentDiv);
+        }
+
+        const isCurrentlyCollapsed = sideBottom.classList.contains('collapsed');
+        const shouldOpen = forceOpen !== undefined ? forceOpen : isCurrentlyCollapsed;
+
+        if (shouldOpen) {
+            sideBottom.classList.remove('collapsed');
+            const btn = sideBottom.querySelector('.cd-toggle-btn');
+            if (btn) btn.textContent = '▼';
+
+            const video = sideBottom.querySelector('video');
+            if (video) {
+                video.currentTime = 0;
+                video.play().catch(err => console.log('Auto-play prevent:', err));
+            }
+        } else {
+            sideBottom.classList.add('collapsed');
+            const btn = sideBottom.querySelector('.cd-toggle-btn');
+            if (btn) btn.textContent = '▲';
+
+            const video = sideBottom.querySelector('video');
+            if (video) {
+                video.pause();
+            }
         }
     }
 

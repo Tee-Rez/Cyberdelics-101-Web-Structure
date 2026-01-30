@@ -100,6 +100,15 @@ window.SimulationEngines['constellation-personas'] = {
     },
 
     togglePersona: function (id) {
+        // Trigger Artifact Collection (silent fragment or main)
+        if (window.ArtifactSystem) {
+            const persona = this.personas.find(p => p.id === id);
+            window.ArtifactSystem.collect({
+                id: id,
+                label: persona ? persona.name : id
+            });
+        }
+
         if (this.selected.has(id)) {
             this.selected.delete(id);
         } else {
@@ -108,6 +117,7 @@ window.SimulationEngines['constellation-personas'] = {
 
         this.updateUI();
         this.synthesizeInsights();
+        this.checkCompletion();
     },
 
     updateUI: function () {
@@ -282,8 +292,15 @@ window.SimulationEngines['constellation-personas'] = {
         return `These personas complement each other beautifully. This course offers something unique for each perspective you've selected, creating a rich multifaceted learning experience.`;
     },
 
-    update: function (delta) {
-        // Optional: Add subtle animations like twinkling stars
+    checkCompletion: function () {
+        // Check if the community_connection artifact is collected
+        if (window.ArtifactSystem && window.ArtifactSystem.has('community_connection')) {
+            const btn = document.querySelector('.interactive-simulation-container .btn-continue');
+            if (btn) {
+                btn.style.display = 'block';
+                btn.classList.add('fade-in-up');
+            }
+        }
     },
 
     reset: function () {

@@ -13,6 +13,9 @@
 (function () {
     'use strict';
 
+    console.log('[ScenarioBased] Script loading...');
+    console.log('[ScenarioBased] createTeachingMethod exists:', typeof createTeachingMethod !== 'undefined');
+
     if (typeof createTeachingMethod === 'undefined') {
         console.error('Core dependency "method-base.js" missing.');
         return;
@@ -29,24 +32,27 @@
             // ---------- Lifecycle Hooks ----------
 
             onInit: function (container, options) {
-                // Find all scenes
-                this.scenes = container.querySelectorAll('.scenario-scene');
-                this.currentSceneIndex = 0;
+                console.log('[ScenarioBased] onInit called with options:', options);
+
+                // Store scene data from manifest (it's at options.scenes, not options.content.scenes)
+                this.sceneData = options.scenes || [];
+                this.currentSceneId = this.sceneData.length > 0 ? this.sceneData[0].id : null;
                 this.choiceHistory = [];
 
-                // Set total steps (one per scene)
-                this.setTotalSteps(this.scenes.length);
+                console.log('[ScenarioBased] Loaded', this.sceneData.length, 'scenes');
+                console.log('[ScenarioBased] First scene ID:', this.currentSceneId);
 
-                // Show first scene
-                if (this.scenes.length > 0) {
-                    this.scenes[0].classList.add('active');
+                // Set total steps
+                this.setTotalSteps(this.sceneData.length);
+
+                // Render first scene
+                if (this.currentSceneId) {
+                    this._renderScene(this.currentSceneId);
                 }
 
                 // Attach click handler
                 this._boundClickHandler = this._handleClick.bind(this);
                 container.addEventListener('click', this._boundClickHandler);
-
-                console.log('[ScenarioBased] Initialized with', this.scenes.length, 'scenes');
             },
 
             onDestroy: function () {
@@ -241,12 +247,79 @@
 
             // ---------- Private Helpers ----------
 
+            _renderScene: function (sceneId) {
+                console.log('[ScenarioBased] Rendering scene:', sceneId);
+
+                const scene = this.sceneData.find(s => s.id === sceneId);
+                if (!scene) {
+                    console.error('[ScenarioBased] Scene not found:', sceneId);
+                    return;
+                }
+
+                const container = this._getState().container;
+
+                // Build scene HTML
+                let html = `<div class="scenario-scene active" data-scene-id="${scene.id}">`;
+                html += `<div class="scenario-narrative">${scene.narrative || ''}</div>`;
+
+                // Add choices if they exist
+                if (scene.choices && scene.choices.length > 0) {
+                    html += `<div class="scenario-choices">`;
+                    scene.choices.forEach(choice => {
+                        console.log('[ScenarioBased] Rendering choice:', choice);
+                        const nextSceneAttr = choice.outcome ? `data-next-scene="${choice.outcome}"` : '';
+                        html += `
+                            <div class="choice-option" data-choice-id="${choice.id}" ${nextSceneAttr}>
+                                <div class="choice-text"><strong>${choice.label}</strong></div>
+                            </div>
+                        `;
+                    });
+                    html += `</div>`;
+                }
+
+                html += `</div>`;
+
+                // Replace container content
+                container.innerHTML = html;
+
+                this.currentSceneId = sceneId;
+
+                // If this is the final scene (no choices), add a continue button
+                if (!scene.choices || scene.choices.length === 0) {
+                    console.log('[ScenarioBased] Final scene reached, adding continue button');
+                    const sceneEl = container.querySelector('.scenario-scene');
+                    const continueBtn = document.createElement('button');
+                    continueBtn.className = 'scene-continue visible';
+                    continueBtn.textContent = 'Continue';
+                    continueBtn.addEventListener('click', (e) => {
+                        e.target.disabled = true;
+                        e.target.textContent = 'Loading...';
+                        this.markComplete();
+                    });
+                    sceneEl.appendChild(continueBtn);
+                }
+            },
+
             _handleClick: function (event) {
                 // Handle choice clicks
                 const choiceEl = event.target.closest('.choice-option');
                 if (choiceEl && !choiceEl.classList.contains('disabled')) {
                     event.preventDefault();
-                    this.selectOption(choiceEl);
+
+                    const nextSceneId = choiceEl.dataset.nextScene;
+                    console.log('[ScenarioBased] Choice clicked, next scene:', nextSceneId);
+
+                    // Disable all choices
+                    const allChoices = choiceEl.closest('.scenario-scene').querySelectorAll('.choice-option');
+                    allChoices.forEach(c => c.classList.add('disabled'));
+                    choiceEl.classList.add('selected');
+
+                    if (nextSceneId) {
+                        // Navigate to the next scene
+                        setTimeout(() => {
+                            this._renderScene(nextSceneId);
+                        }, 300);
+                    }
                     return;
                 }
 
@@ -270,11 +343,11 @@
                     const choicesList = summary.querySelector('.summary-choices');
                     if (choicesList) {
                         choicesList.innerHTML = this.choiceHistory.map(choice => `
-                            <div class="summary-choice">
+                            < div class="summary-choice" >
                                 <span class="icon">✓</span>
                                 <span>${choice.choiceText}</span>
-                            </div>
-                        `).join('');
+                            </div >
+        `).join('');
                     }
                 }
 
@@ -295,10 +368,17 @@
     };
 
     // Export Factory
+    console.log('[ScenarioBased] Registering factory...');
+    console.log('[ScenarioBased] window.MethodLoader exists:', !!window.MethodLoader);
+
+    // Always set window property for LessonRunner's MethodRegistry
+    window.ScenarioBasedFactory = ScenarioBasedFactory;
+    console.log('[ScenarioBased] Set window.ScenarioBasedFactory');
+
+    // Also register with MethodLoader if available
     if (window.MethodLoader) {
         window.MethodLoader.registerFactory('scenario-based', ScenarioBasedFactory);
-    } else {
-        window.ScenarioBasedFactory = ScenarioBasedFactory;
+        console.log('[ScenarioBased] Registered with MethodLoader');
     }
 
 })();

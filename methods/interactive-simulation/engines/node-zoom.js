@@ -152,6 +152,7 @@
                 </div>
                 <!-- Only children get label usually? Or parent too? -->
                 <div class="nz-node-label">${node.label || node.title || 'Unknown'}</div>
+                ${node.description ? `<div class="nz-node-desc">${node.description}</div>` : ''}
                 ${type === 'parent' ? '<div class="nz-back-hint">Click to Zoom Out</div>' : ''}
             `;
 
@@ -193,7 +194,7 @@
 
             // Set new state
             this.activeParent = node;
-            this.currentNodes = node.children;
+            this.currentNodes = node.children || []; // Default to empty array if undefined
 
             this.renderLevel();
         },
@@ -226,13 +227,17 @@
         },
 
         checkCompletion: function () {
-            const count = window.ArtifactSystem.getCount();
-            if (count >= 5) { // Hardcoded goal matching manifest artifacts
+            // Check if the main artifact for this step ("course_navigator") is collected
+            // Use has() because fragments logic in ArtifactSystem will auto-collect the parent
+            if (window.ArtifactSystem.has('course_navigator')) {
                 const btn = document.querySelector('.interactive-simulation-container .btn-continue');
                 if (btn) {
                     btn.style.display = 'block';
                     btn.classList.add('fade-in-up'); // Add animation class if exists
                 }
+            } else {
+                // Fallback: If not "course_navigator", maybe check for generic count (or do nothing)
+                // Keeping it specific for now as requested.
             }
         },
 

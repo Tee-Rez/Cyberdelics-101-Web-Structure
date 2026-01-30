@@ -55,21 +55,29 @@
     height: 80px;
     /* Base size */
     border-radius: 50%;
-    background: rgba(10, 10, 25, 0.8);
-    border: 2px solid var(--color-accent, #00D9FF);
+    background: rgba(0, 0, 0, 0.8);
+    /* Matched label bg */
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    /* Subtle border like label hover */
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 2.5rem;
-    box-shadow: 0 0 15px rgba(0, 217, 255, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    /* Deep shadow */
     transition: all 0.3s;
     user-select: none;
     backdrop-filter: blur(4px);
+    color: var(--color-text-dim, #AAA);
+    /* Matched label color */
 }
 
 .nz-node:hover .nz-node-icon {
-    background: rgba(0, 217, 255, 0.2);
-    box-shadow: 0 0 25px rgba(0, 217, 255, 0.6);
+    background: rgba(20, 20, 30, 0.9);
+    border-color: rgba(255, 255, 255, 0.5);
+    color: #FFF;
+    box-shadow: 0 0 20px rgba(0, 217, 255, 0.3);
+    /* Subtle accent glow */
 }
 
 .nz-node.collected .nz-node-icon {
