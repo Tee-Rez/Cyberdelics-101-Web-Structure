@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberdelics 101: Test Harness</title>
+    <!-- Core Styles -->
+    <link rel="stylesheet" href="../../core/styles.css">
+    <!-- Method Styles -->
+    <link rel="stylesheet" href="../../methods/progressive-disclosure/progressive-disclosure.css">
+    <link rel="stylesheet" href="../../methods/scenario-based/scenario-based.css">
+    <link rel="stylesheet" href="../../methods/interactive-simulation/interactive-simulation.css">
+    <link rel="stylesheet" href="../../methods/interactive-simulation/engines/node-zoom.css">
+
+    <style>
+        body {
+            background-color: #000;
+            margin: 0;
+            overflow: hidden;
+            font-family: 'Rajdhani', sans-serif;
+        }
+
+        #lesson-root {
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="lesson-root"></div>
+
+    <!-- 1. Core Dependencies -->
+    <script src="../../core/method-base.js"></script>
+    <script src="../../core/method-loader.js"></script>
+    <script src="../../core/lesson-ui.js"></script>
+    <script src="../../core/artifact-system.js"></script>
+    <script src="../../core/course-core.js"></script>
+    <script src="../../core/state-manager.js"></script>
+
+    <!-- 2. Method Factories -->
+    <script src="../../methods/progressive-disclosure/progressive-disclosure.js"></script>
+    <script src="../../methods/scenario-based/scenario-based.js"></script>
+    <script src="../../methods/interactive-simulation/interactive-simulation.js"></script>
+    <script src="../../methods/interactive-simulation/engines/node-zoom.js"></script>
+
+    <!-- 3. The Engine -->
+    <script src="../../core/lesson-runner.js"></script>
+
+    <!-- 4. The Manifest -->
+    <script src="manifest.js"></script>
+
+    <!-- 5. Boot Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            console.log('[TestHarness] Booting...');
+            LessonRunner.init('#lesson-root');
+            if (window.CourseManifest) {
+                LessonRunner.loadLesson(window.CourseManifest);
+            }
+
+            // Auto-start StateManager
+            if (window.StateManager) {
+                StateManager.init();
+            }
+        });
+    </script>
+</body>
+
+</html>

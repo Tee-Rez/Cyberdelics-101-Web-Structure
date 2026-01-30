@@ -74,8 +74,18 @@
                     this.container.innerHTML = '';
                 }
 
-                // Start First Module
-                this.nextModule();
+                // SIGNAL READY TO START
+                // This gives StateManager a chance to intercept and call jumpTo() if restoring
+                const event = new CustomEvent('lesson-ready', { detail: { runner: this } });
+                window.dispatchEvent(event);
+
+                // If StateManager didn't trigger a jump within the event loop, default to start
+                setTimeout(() => {
+                    if (this.activeModuleIndex === -1) {
+                        console.log('[LessonRunner] No restore detected, starting fresh.');
+                        this.nextModule();
+                    }
+                }, 100);
             });
         }
 
@@ -149,6 +159,28 @@
 
             const moduleConfig = this.currentLesson.modules[this.activeModuleIndex];
             console.log(`[LessonRunner] Loading module ${this.activeModuleIndex}:`, moduleConfig.id, moduleConfig.title);
+            this._runModule(moduleConfig);
+        }
+
+        /**
+         * Jump to a specific module index (Used for state restoration)
+         * @param {number} index 
+         */
+        jumpTo(index) {
+            if (!this.currentLesson || index < 0 || index >= this.currentLesson.modules.length) {
+                console.warn(`[LessonRunner] Cannot jump to index ${index}`);
+                return;
+            }
+
+            console.log(`[LessonRunner] Jumping to module index: ${index}`);
+
+            // Cleanup previous
+            if (this.activeModule && this.activeModule.destroy) {
+                this.activeModule.destroy();
+            }
+
+            this.activeModuleIndex = index;
+            const moduleConfig = this.currentLesson.modules[this.activeModuleIndex];
             this._runModule(moduleConfig);
         }
 

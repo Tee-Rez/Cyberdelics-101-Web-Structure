@@ -44,6 +44,8 @@
     <script src="../../core/method-loader.js"></script>
     <script src="../../core/lesson-ui.js"></script>
     <script src="../../core/artifact-system.js"></script>
+    <script src="../../core/course-core.js"></script>
+    <script src="../../core/state-manager.js"></script>
     <script src="../../core/audio-player.js"></script>
     <script src="../../core/tutorial-overlay.js"></script>
 
@@ -170,7 +172,7 @@
                     },
                     {
                         title: 'Mission Objective',
-                        text: 'To unlock the audio tracks, you must collect <strong>5 Artifacts</strong> hidden within this map. Explore the timeline nodes to find them.',
+                        text: 'To unlock the audio tracks, you must collect all the <strong> Artifacts</strong> hidden within the lesson.',
                         target: '.cyberdeck-main', // Updated target
                         position: 'center',
                         spotlightShape: 'rect',
@@ -200,6 +202,41 @@
                     }
                 }, 500);
             }
+
+            // DEV: Add State Manager Toolbar
+            const devBar = document.createElement('div');
+            devBar.style.cssText = `
+                position: fixed; bottom: 10px; left: 50%; transform: translateX(-50%);
+                background: rgba(0,0,0,0.8); border: 1px solid #333; padding: 5px 10px;
+                border-radius: 20px; z-index: 9999; display: flex; gap: 10px;
+                font-family: monospace; font-size: 12px; pointer-events: auto;
+            `;
+            devBar.innerHTML = `
+                <span style="color: #666; align-self: center;">DEV:</span>
+                <button id="dev-save">SAVE</button>
+                <button id="dev-load">LOAD</button>
+                <button id="dev-reset">RESET</button>
+            `;
+            document.body.appendChild(devBar);
+
+            document.getElementById('dev-save').addEventListener('click', () => {
+                StateManager.save();
+                alert('State Saved!');
+            });
+            document.getElementById('dev-load').addEventListener('click', () => {
+                const saved = localStorage.getItem('cd101_save_state');
+                if (saved) {
+                    StateManager.restore(JSON.parse(saved));
+                    alert('State Restored!');
+                } else {
+                    alert('No save found.');
+                }
+            });
+            document.getElementById('dev-reset').addEventListener('click', () => {
+                localStorage.removeItem('cd101_save_state');
+                location.reload();
+            });
+
         });
     </script>
 

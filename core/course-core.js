@@ -20,6 +20,10 @@ const CourseCore = (function () {
         debug: true  // Set to false in production
     };
 
+    // ---------- Public Getters ----------
+    function getLessonId() { return config.lessonId; }
+
+
     // ---------- Framer Communication Framework ----------
     // Scaffolded for future integration - logs to console for now
 
@@ -194,7 +198,14 @@ const CourseCore = (function () {
             if (config.debug) {
                 console.log('[CourseCore] Initialized:', lessonId);
             }
+
+            // Initialize State Manager
+            if (window.StateManager) {
+                window.StateManager.init();
+            }
         },
+
+        getLessonId: function () { return config.lessonId; },
 
         /**
          * Set total steps for progress tracking

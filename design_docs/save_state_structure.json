@@ -1,0 +1,38 @@
+{
+    "timestamp": 1738210000000,
+    "schemaVersion": "1.0",
+    "course": {
+        "lessonId": "intro-module",
+        "progress": 0.45,
+        "isComplete": false
+    },
+    "navigation": {
+        "activeModuleIndex": 2,
+        "activeModuleId": "intro.3"
+    },
+    "inventory": {
+        "collectedIds": [
+            "welcome_pioneer",
+            "course_navigator"
+        ]
+    },
+    "modules": {
+        "interactive-simulation": {
+            "name": "interactive-simulation",
+            "currentStep": 3,
+            "totalSteps": 5,
+            "isComplete": false,
+            "visitedNodes": [
+                "root",
+                "module_intro",
+                "intro_1",
+                "intro_2"
+            ],
+            "zoomLevel": 2.5,
+            "pan": {
+                "x": 150,
+                "y": 200
+            }
+        }
+    }
+}

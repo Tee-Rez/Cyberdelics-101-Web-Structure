@@ -36,6 +36,17 @@
             return this._state.collectedIds.size;
         },
 
+        getCollectedIds: function () {
+            return this._state.collectedIds;
+        },
+
+        setCollectedIds: function (idsArray) {
+            if (Array.isArray(idsArray)) {
+                this._state.collectedIds = new Set(idsArray);
+                this._updateInventoryUI();
+            }
+        },
+
         /**
          * Mounts the artifact overlay on top of the active method.
          * @param {HTMLElement} hostContainer - The container of the active teaching method.
