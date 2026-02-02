@@ -1,0 +1,31 @@
+{
+  "title": "Lesson 1--Testing",
+  "description": "Overview of the module...",
+  "theme": {
+    "primaryColor": "#5900ff",
+    "fontBody": "Rajdhani, sans-serif"
+  },
+  "modules": [
+    {
+      "id": "module_ml5qre0q",
+      "title": "Does it work?",
+      "type": "progressive-disclosure",
+      "content": {
+        "sections": [
+          {
+            "title": "Yes it does",
+            "content": "yipee",
+            "triggerLabel": "BOSS"
+          },
+          {
+            "title": "Cool beads",
+            "content": "for necklaces",
+            "triggerLabel": "Next"
+          }
+        ]
+      },
+      "artifacts": []
+    }
+  ],
+  "artifacts": []
+}
