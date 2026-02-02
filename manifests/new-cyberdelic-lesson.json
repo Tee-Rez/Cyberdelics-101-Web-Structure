@@ -1,0 +1,44 @@
+{
+  "title": "New Cyberdelic Lesson",
+  "description": "Overview of the module...",
+  "theme": {
+    "primaryColor": "#00d9ff",
+    "fontBody": "Rajdhani, sans-serif"
+  },
+  "modules": [
+    {
+      "id": "Woot",
+      "title": "What are cyberdelics",
+      "type": "progressive-disclosure",
+      "content": {
+        "sections": [
+          {
+            "title": "Lets break it down",
+            "content": "first word \"cyber\" means to organize and structure",
+            "triggerLabel": "Next",
+            "media": {
+              "type": "image",
+              "src": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%2Fid%2FOIP.qaQvPAsItddh5u7XaU6UwwHaEK%3Fpid%3DApi&f=1&ipt=80297fa042fa2c0bab0f1ff2caa8641adc9b0e5858753abb211e59d165428cf3&ipo=images"
+            }
+          },
+          {
+            "title": "Break it down some more",
+            "content": "Delic means to manifest",
+            "triggerLabel": "really?",
+            "media": {
+              "type": "image",
+              "src": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%2Fid%2FOIP.ptGu2FYnVNL9sm7I-VozgwHaDF%3Fpid%3DApi&f=1&ipt=9b61f354c23b5b342a7102cd38e162c15345689d747b93f2bec5c839c6376c06&ipo=images"
+            }
+          },
+          {
+            "title": "Yes thats all it is",
+            "content": "Content thats cyberdelic",
+            "triggerLabel": "Next"
+          }
+        ]
+      },
+      "artifacts": []
+    }
+  ],
+  "artifacts": []
+}
