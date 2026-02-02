@@ -405,6 +405,16 @@
             } else if (media.type === 'video') {
                 const autoplay = media.autoplay !== false ? 'autoplay loop muted playsinline' : 'controls';
                 content = `<video src="${media.src}" ${autoplay} class="sim-media-video"></video>`;
+            } else if (media.type === 'youtube') {
+                // Convert watch URL to embed if necessary, though Builder should ideally handle this.
+                // Simple regex to extract ID if user pastes full link
+                let src = media.src;
+                const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+                const match = src.match(regExp);
+                if (match && match[2].length === 11) {
+                    src = `https://www.youtube.com/embed/${match[2]}?autoplay=1&mute=1&controls=0&loop=1`;
+                }
+                content = `<iframe class="sim-media-video" src="${src}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
             } else if (media.type === 'threejs') {
                 content = `<div class="threejs-canvas" data-engine="${media.engine}"></div>`;
             }

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberdelic Lesson Project Architect</title>
+    <!-- Use the same course font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="app-layout">
+        <!-- SIDEBAR: TOOLBOX -->
+        <aside class="sidebar">
+            <div class="brand">
+                <h1>PROJECT ARCHITECT</h1>
+                <p>Construct Reality</p>
+            </div>
+
+            <div class="meta-section">
+                <label>Lesson Title</label>
+                <input type="text" id="lesson-title" value="New Cyberdelic Lesson">
+                <label>Description</label>
+                <textarea id="lesson-desc">Overview of the module...</textarea>
+                <label>Theme Color</label>
+                <input type="color" id="lesson-color" value="#00d9ff">
+            </div>
+
+            <div class="toolbox">
+                <h3>MODULE TYPES</h3>
+                <div class="tool-item" draggable="true" data-type="progressive-disclosure">
+                    <span class="icon">📑</span> Progressive Disclosure
+                </div>
+                <div class="tool-item" draggable="true" data-type="scenario-based">
+                    <span class="icon">🎭</span> Scenario Based
+                </div>
+                <!-- Interactive Sim is too complex for V1 drag drop, strictly JSON for now? 
+                     Actually user asked for "place new type here" mechanics. -->
+                <div class="tool-item" draggable="true" data-type="interactive-simulation">
+                    <span class="icon">🕸️</span> Interactive Simulation
+                </div>
+            </div>
+
+            <div class="actions">
+                <button id="btn-export" class="primary-btn">EXPORT JSON</button>
+            </div>
+        </aside>
+
+        <!-- MAIN: CANVAS -->
+        <main class="canvas-area">
+            <div id="canvas-container" class="canvas-container">
+                <!-- Modules will be dropped here -->
+                <div id="drop-hint" class="drop-hint">
+                    <div class="drop-target">
+                        <span>+ DRIVE NEW TYPE HERE</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="builder.js"></script>
+</body>
+
+</html>

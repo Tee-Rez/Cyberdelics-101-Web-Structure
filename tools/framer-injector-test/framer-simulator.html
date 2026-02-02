@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Framer Manifest Simulator</title>
+    <title>Framer Manifest Simulator - Full Intro</title>
     <style>
         body {
             background: #222;
@@ -38,7 +38,7 @@
 
 <body>
     <div class="header">
-        <h1>Framer Code Component Simulator</h1>
+        <h1>Framer Simulator: Full Intro Lesson</h1>
         <p>Status: <span id="status" style="color: yellow">Waiting for Player...</span></p>
         <button onclick="sendManifest()">Force Resend Manifest</button>
     </div>
@@ -50,65 +50,143 @@
 
     <script>
         // -------------------------------------------------------
-        // 1. THE "LOCAL" MANIFEST (What you would type in Framer)
+        // 1. THE "LOCAL" MANIFEST (Full Intro Content)
         // -------------------------------------------------------
         const TEST_MANIFEST = {
-            "title": "Injected Lesson Demo",
-            "description": "This content was injected via postMessage from the parent window.",
-            "theme": { "primaryColor": "#ff0088", "fontBody": "Rajdhani, sans-serif" },
+            "title": "Cyberdelics 101: Introduction",
+            "description": "Orient learners to the enhanced interactive learning system while introducing course scope.",
+            "theme": { "primaryColor": "#00d9ff", "fontBody": "Rajdhani, sans-serif" },
             "modules": [
                 {
-                    "id": "inject.1",
-                    "title": "Injection Successful",
+                    "id": "intro.1",
+                    "title": "Welcome & Course Opening",
                     "type": "progressive-disclosure",
                     "content": {
                         "sections": [
                             {
-                                "title": "System Online",
-                                "content": "<p>If you are reading this, the <strong>Universal Player</strong> successfully received the JSON payload from the parent window.</p>",
-                                "triggerLabel": "Test Interaction"
+                                "title": "Video Introduction",
+                                "content": "<h2>Welcome Pioneer</h2><p>Please watch the introduction video below to begin your journey.</p><div class='video-instruction-hint'>Click the ▲ arrow in the bottom bar to open the video panel.</div>",
+                                "triggerLabel": "Begin Journey"
                             },
                             {
-                                "title": "Media Test",
-                                "content": "<p>Since this manifest is remote (in theory), we must test remote assets.</p><p><em>(In this local test, we still assume relative paths work because we are in the same folder structure, but in Framer, these must be absolute URLs.)</em></p>",
-                                "triggerLabel": "Finish"
+                                "title": "What Makes This Course Different",
+                                "content": "<p>Traditional online courses are passive: you watch videos, maybe take a quiz, and hope the information sticks. Research shows this leads to only 10-20% retention.</p><h3>Cyberdelics 101 is built on a revolutionary approach:</h3><ul><li><strong>ACTIVE ENGAGEMENT</strong> - You interact with every concept</li><li><strong>ARTIFACT COLLECTION</strong> - Tangible knowledge gathering</li><li><strong>BINAURAL REWARDS</strong> - Unlock consciousness tools</li><li><strong>MULTIPLE PATHWAYS</strong> - Choose your learning journey</li><li><strong>EMBODIED LEARNING</strong> - Experience what you study</li></ul><p>This approach leads to 70-90% retention—and more importantly, genuine understanding you can apply.</p>",
+                                "triggerLabel": "Why This Matters"
+                            },
+                            {
+                                "title": "Your Learning Interface",
+                                "content": "<div id='intro-tutorial-root'><p>Look at your screen. You'll notice three key areas:</p><div class='interface-highlight-grid'><div class='highlight-item'><strong>📍 LEFT SIDEBAR - Artifact Collection</strong><p>Here you'll see all the knowledge artifacts available in each lesson. As you engage with content, you'll collect these artifacts—each representing mastery of a key concept.</p></div><div class='highlight-item'><strong>📍 CENTER PANEL (Where you are now)</strong><p>Your primary learning space. Interactive content, simulations, scenarios, and videos appear here. You control the pace and depth of exploration.</p></div><div class='highlight-item'><strong>📍 RIGHT SIDEBAR - Binaural Beat Player</strong><p>Notice the locked binaural beat? Collect all artifacts in a lesson to unlock its associated frequency. These aren't just rewards—they're functional consciousness tools.</p></div></div></div>",
+                                "triggerLabel": "Explore Interface"
                             }
                         ]
                     },
                     "artifacts": [
-                        { "id": "injected_token", "label": "Injection Token", "icon": "💉", "trigger": "step_complete" }
+                        { "id": "welcome_pioneer", "label": "Welcome Pioneer", "description": "You've taken your first step into the cyberdelic frontier.", "icon": "✨", "trigger": "step_complete" }
                     ]
                 },
-                // MODULE 2: Asset Test
                 {
-                    "id": "inject.2",
-                    "title": "Asset Stream Test",
-                    "type": "progressive-disclosure",
-                    "content": {
-                        "sections": [
-                            {
-                                "title": "Remote Visuals",
-                                "content": "<p>Testing image asset loading via injected JSON.</p>",
-                                "triggerLabel": "Check Video",
-                                "media": {
-                                    "type": "image",
-                                    "src": "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=600&auto=format&fit=crop",
-                                    "position": "right",
-                                    "alt": "Cyberpunk Connection"
+                    "id": "intro.2",
+                    "title": "Course Structure Overview",
+                    "type": "interactive-simulation",
+                    "config": {
+                        "engine": "node-zoom",
+                        "layout": "circular",
+                        "zoomSpeed": 0.8,
+                        "data": {
+                            "nodes": [
+                                {
+                                    "id": "root", "label": "Cyberdelics 101", "icon": "🌌", "children": [
+                                        {
+                                            "id": "module_intro", "label": "Introduction", "icon": "🚩", "x": 50, "y": 20, "children": [
+                                                { "id": "intro_1", "label": "Welcome", "icon": "✨" },
+                                                { "id": "intro_2", "label": "Structure", "icon": "🗺️" },
+                                                { "id": "intro_3", "label": "Personas", "icon": "👥" },
+                                                { "id": "intro_4", "label": "Methods", "icon": "🛠️" },
+                                                { "id": "intro_5", "label": "Begin", "icon": "🚀" }
+                                            ]
+                                        },
+                                        {
+                                            "id": "module_1", "label": "Module 1: Defining Cyberdelics", "icon": "1️⃣", "x": 80, "y": 35, "children": [
+                                                { "id": "m1_1", "label": "Definition", "icon": "📖" },
+                                                { "id": "m1_2", "label": "Pillars", "icon": "🏛️" },
+                                                { "id": "m1_3", "label": "Spectrum", "icon": "🌈" },
+                                                { "id": "m1_4", "label": "Tech", "icon": "💻" },
+                                                { "id": "m1_5", "label": "Synthesis", "icon": "🔄" }
+                                            ]
+                                        },
+                                        {
+                                            "id": "module_2", "label": "Module 2: Historical Foundations", "icon": "📜", "x": 80, "y": 65, "children": [
+                                                { "id": "m2_1", "label": "Rituals", "icon": "🔥" },
+                                                { "id": "m2_2", "label": "Alchemy", "icon": "⚗️" },
+                                                { "id": "m2_3", "label": "Counterculture", "icon": "☮️" },
+                                                { "id": "m2_4", "label": "Early VR", "icon": "🕶️" },
+                                                { "id": "m2_5", "label": "Evolution", "icon": "🧬" }
+                                            ]
+                                        },
+                                        {
+                                            "id": "module_3", "label": "Module 3: Scientific Understanding", "icon": "🧠", "x": 50, "y": 80, "children": [
+                                                { "id": "m3_1", "label": "Neuroscience", "icon": "🧠" },
+                                                { "id": "m3_2", "label": "Immersion", "icon": "🌊" },
+                                                { "id": "m3_3", "label": "States", "icon": "🌀" },
+                                                { "id": "m3_4", "label": "Plasticity", "icon": "🧩" },
+                                                { "id": "m3_5", "label": "Research", "icon": "📊" }
+                                            ]
+                                        },
+                                        {
+                                            "id": "module_4", "label": "Module 4: Current Applications", "icon": "🛠️", "x": 20, "y": 65, "children": [
+                                                { "id": "m4_1", "label": "VR/AR", "icon": "👓" },
+                                                { "id": "m4_2", "label": "Biofeedback", "icon": "💓" },
+                                                { "id": "m4_3", "label": "Entrainment", "icon": "〰️" },
+                                                { "id": "m4_4", "label": "Therapy", "icon": "⚕️" },
+                                                { "id": "m4_5", "label": "Art", "icon": "🎨" }
+                                            ]
+                                        },
+                                        {
+                                            "id": "module_5", "label": "Module 5: Cyberdelic Ecosystem", "icon": "🌐", "x": 20, "y": 35, "children": [
+                                                { "id": "m5_1", "label": "Community", "icon": "🤝" },
+                                                { "id": "m5_2", "label": "Festivals", "icon": "🎪" },
+                                                { "id": "m5_3", "label": "Ethics", "icon": "⚖️" },
+                                                { "id": "m5_4", "label": "Future", "icon": "🔮" },
+                                                { "id": "m5_5", "label": "Integration", "icon": "🌱" }
+                                            ]
+                                        }
+                                    ]
                                 }
-                            },
-                            {
-                                "title": "Video Stream",
-                                "content": "<p>Testing remote video asset playback.</p>",
-                                "media": {
-                                    "type": "video",
-                                    "src": "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
-                                    "autoplay": true
-                                }
-                            }
-                        ]
-                    }
+                            ]
+                        }
+                    },
+                    "artifacts": [
+                        { "id": "course_navigator", "label": "Course Navigator", "description": "You understand the path ahead.", "icon": "🧭", "fragments": ["module_intro", "module_1", "module_2", "module_3", "module_4", "module_5"], "trigger": "step_complete" }
+                    ]
+                },
+                {
+                    "id": "intro.3",
+                    "title": "Who This Course Is For",
+                    "type": "interactive-simulation",
+                    "config": {
+                        "engine": "constellation-personas",
+                        "hideContinueButton": true,
+                        "params": {
+                            "personas": [
+                                { "id": "creator", "name": "Creative Technologist", "icon": "🎨", "description": "You design experiences and want to push the boundaries of what's possible." },
+                                { "id": "healer", "name": "Mindful Practitioner", "icon": "🧘", "description": "You guide others through meditation, therapy, or coaching." },
+                                { "id": "explorer", "name": "Consciousness Explorer", "icon": "🔮", "description": "You're personally curious about altered states and self-discovery." },
+                                { "id": "researcher", "name": "Academic Researcher", "icon": "🔬", "description": "You study consciousness, neuroscience, or human-computer interaction." },
+                                { "id": "builder", "name": "Entrepreneur", "icon": "🚀", "description": "You're building products in wellness, VR, or mental health tech." }
+                            ]
+                        },
+                    },
+                    "artifacts": [
+                        { "id": "community_connection", "label": "Community Connection", "description": "You recognize yourself among fellow pioneers.", "icon": "🤝", "fragments": ["creator", "healer", "explorer", "researcher", "builder"], "trigger": "step_complete" }
+                    ]
                 }
+            ],
+            "artifacts": [
+                { "id": "welcome_pioneer", "label": "Welcome Pioneer", "icon": "✨", "description": "First step into the frontier." },
+                { "id": "course_navigator", "label": "Course Navigator", "icon": "🧭", "description": "Full course structure explored.", "fragments": ["module_intro", "module_1", "module_2", "module_3", "module_4", "module_5"] },
+                { "id": "community_connection", "label": "Community Connection", "icon": "🤝", "description": "Connected to the community.", "fragments": ["creator", "healer", "explorer", "researcher", "builder"] },
+                { "id": "method_explorer", "label": "Method Explorer", "icon": "🛠️", "description": "Mastered learning methods." },
+                { "id": "journey_initiator", "label": "Journey Initiator", "icon": "🚀", "description": "Ready to launch." }
             ]
         };
 
@@ -121,25 +199,19 @@
         function sendManifest() {
             status.textContent = 'Sending Manifest...';
             status.style.color = 'cyan';
-
-            // Send to Iframe
             frame.contentWindow.postMessage({
                 type: 'LOAD_MANIFEST',
                 manifest: TEST_MANIFEST
             }, '*');
         }
 
-        // Listen for "PLAYER_READY" signal
         window.addEventListener('message', (event) => {
             if (event.data && event.data.type === 'PLAYER_READY') {
                 console.log('[Simulator] Player signaled READY.');
                 status.textContent = 'Player Ready. Sending Data...';
-
-                // Slight delay to simulate network/parsing time
                 setTimeout(sendManifest, 500);
             }
         });
-
     </script>
 </body>
 
