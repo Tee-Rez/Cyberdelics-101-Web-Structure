@@ -290,3 +290,152 @@ exportBtn.addEventListener('click', () => {
 
 // Initial Render
 renderCanvas();
+
+// --- GITHUB CLOUD SAVE LOGIC ---
+
+const ghModal = document.getElementById('gh-modal');
+const ghUserInp = document.getElementById('gh-user');
+const ghRepoInp = document.getElementById('gh-repo');
+const ghTokenInp = document.getElementById('gh-token');
+
+// Load settings on startup
+function loadGhSettings() {
+    const s = localStorage.getItem('cd101_gh_config');
+    if (s) {
+        const config = JSON.parse(s);
+        ghUserInp.value = config.user || '';
+        ghRepoInp.value = config.repo || '';
+        ghTokenInp.value = config.token || '';
+    }
+}
+loadGhSettings();
+
+// Settings Button
+document.getElementById('btn-gh-settings').onclick = () => {
+    ghModal.style.display = 'flex';
+};
+
+// Cancel Settings
+document.getElementById('gh-cancel').onclick = () => {
+    ghModal.style.display = 'none';
+};
+
+// Save Settings
+document.getElementById('gh-save').onclick = () => {
+    const config = {
+        user: ghUserInp.value.trim(),
+        repo: ghRepoInp.value.trim(),
+        token: ghTokenInp.value.trim()
+    };
+    if (!config.user || !config.repo || !config.token) {
+        alert('Please fill all fields');
+        return;
+    }
+    localStorage.setItem('cd101_gh_config', JSON.stringify(config));
+    ghModal.style.display = 'none';
+    alert('GitHub Settings Saved!');
+};
+
+// --- CORE SAVE FUNCTION ---
+document.getElementById('btn-cloud-save').onclick = async () => {
+    // 1. Check Config
+    const s = localStorage.getItem('cd101_gh_config');
+    if (!s) {
+        alert('Please configure GitHub Settings first!');
+        ghModal.style.display = 'flex';
+        return;
+    }
+    const config = JSON.parse(s);
+
+    // 2. Prepare Data
+    // Update Meta first
+    STATE.meta.title = document.getElementById('lesson-title').value;
+    STATE.meta.description = document.getElementById('lesson-desc').value;
+    STATE.meta.theme = {
+        primaryColor: document.getElementById('lesson-color').value,
+        fontBody: "Rajdhani, sans-serif"
+    };
+    const manifest = {
+        title: STATE.meta.title,
+        description: STATE.meta.description,
+        theme: STATE.meta.theme,
+        modules: STATE.modules,
+        artifacts: []
+    };
+
+    // 3. Generate Filename (Slugify Title)
+    const slug = STATE.meta.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
+    const filename = `${slug}.json`;
+    const path = `manifests/${filename}`;
+
+    // 4. Encode Content
+    const content = JSON.stringify(manifest, null, 2);
+    const contentEncoded = btoa(unescape(encodeURIComponent(content))); // Robust Base64
+
+    // 5. GitHub API Request (PUT)
+    const url = `https://api.github.com/repos/${config.user}/${config.repo}/contents/${path}`;
+
+    document.getElementById('btn-cloud-save').textContent = "UPLOADING...";
+    document.getElementById('btn-cloud-save').disabled = true;
+
+    try {
+        // First, check if file exists (to get SHA for update)
+        let sha = null;
+        try {
+            const check = await fetch(url, {
+                headers: {
+                    'Authorization': `token ${config.token}`,
+                    'Accept': 'application/vnd.github.v3+json'
+                }
+            });
+            if (check.ok) {
+                const checkJson = await check.json();
+                sha = checkJson.sha;
+            }
+        } catch (e) { console.log('File likely does not exist yet'); }
+
+        // PUT Request
+        const body = {
+            message: `feat: update lesson ${filename} via builder`,
+            content: contentEncoded
+        };
+        if (sha) body.sha = sha;
+
+        const res = await fetch(url, {
+            method: 'PUT',
+            headers: {
+                'Authorization': `token ${config.token}`,
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(body)
+        });
+
+        if (!res.ok) throw new Error(await res.text());
+
+        // SUCCESS
+        alert(`SUCCESS! Saved to: ${path}`);
+
+        // Show Helper Info
+        const rawUrl = `https://raw.githubusercontent.com/${config.user}/${config.repo}/main/${path}`;
+        const helperMsg = `
+        ------------------------------------------------
+        ✅ UPLOAD COMPLETE
+        ------------------------------------------------
+        
+        IN FRAMER:
+        1. Paste this into "Lesson Title/ID": ${slug}
+        
+        OR if using URL mode:
+        2. Paste this URL: ${rawUrl}
+        `;
+        console.log(helperMsg);
+        alert(helperMsg);
+
+    } catch (err) {
+        console.error(err);
+        alert('UPLOAD FAILED: ' + err.message);
+    } finally {
+        document.getElementById('btn-cloud-save').textContent = "☁ SAVE TO GITHUB";
+        document.getElementById('btn-cloud-save').disabled = false;
+    }
+};
