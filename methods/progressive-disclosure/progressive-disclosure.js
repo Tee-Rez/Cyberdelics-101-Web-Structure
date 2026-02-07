@@ -52,6 +52,20 @@
                 this._handleClick = this._handleClick.bind(this);
                 container.addEventListener('click', this._handleClick);
 
+                // Auto-show completion for single-section modules (e.g., placeholders)
+                // If there's only one section and it has no trigger button, show completion immediately
+                if (this.sections.length === 1) {
+                    const firstSection = this.sections[0];
+                    const hasTrigger = firstSection.querySelector('.reveal-trigger');
+                    if (!hasTrigger) {
+                        console.log('[ProgressiveDisclosure] Single section without trigger - auto-showing completion');
+                        // Advance step to mark it complete
+                        this.advanceStep();
+                        // Show completion section
+                        this._showCompletion();
+                    }
+                }
+
                 console.log('[ProgressiveDisclosure] Initialized with', this.sections.length, 'sections');
             },
 

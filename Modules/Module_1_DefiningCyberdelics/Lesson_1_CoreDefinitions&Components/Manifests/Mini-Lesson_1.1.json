@@ -1,0 +1,194 @@
+{
+    "title": "Breaking Down 'Cyberdelics'",
+    "description": "Understanding the etymology and origins of the term 'cyberdelics'",
+    "theme": {
+        "primaryColor": "#5900ff",
+        "fontBody": "Rajdhani, sans-serif"
+    },
+    "modules": [
+        {
+            "id": "etymology_1.1",
+            "title": "Etymology of Cyberdelics",
+            "type": "progressive-disclosure",
+            "content": {
+                "sections": [
+                    {
+                        "title": "A Fusion Word",
+                        "content": "<p>The word \"cyberdelics\" isn't random—it's a deliberate fusion of two powerful concepts. Understanding where this word comes from helps us grasp what the field actually is. Let's break it down piece by piece.</p>",
+                        "triggerLabel": "Break It Down"
+                    },
+                    {
+                        "title": "\"Cyber\" - The Digital Realm",
+                        "media": {
+                            "type": "image",
+                            "src": "assets/images/module1/cyber-typography.jpg",
+                            "caption": "AI IMAGE PLACEHOLDER: The word 'CYBER' in bold futuristic typography with circuit board patterns and digital nodes flowing through the letters, electric blue and white color scheme, representing technology and digital systems, clean modern design with subtle binary code in background, 16:9 aspect ratio"
+                        },
+                        "mediaLayout": "left",
+                        "content": "<p>\"Cyber\" comes from \"cybernetics,\" coined by Norbert Wiener in 1948. It refers to systems of communication and control, particularly involving technology and feedback loops.</p><p>In modern usage, \"cyber\" represents the digital, technological, and virtual dimensions of experience. It's the realm of VR, AR, biofeedback devices, and human-computer interaction.</p>",
+                        "triggerLabel": "Next Word"
+                    },
+                    {
+                        "title": "\"Delic\" - Mind-Manifesting",
+                        "media": {
+                            "type": "image",
+                            "src": "assets/images/module1/delic-typography.jpg",
+                            "caption": "AI IMAGE PLACEHOLDER: The word 'DELIC' in flowing organic typography with mandala patterns, sacred geometry (Flower of Life), and radiating light waves emanating from the letters, purple and teal color scheme, representing consciousness and inner exploration, mystical yet modern aesthetic, 16:9 aspect ratio"
+                        },
+                        "mediaLayout": "right",
+                        "content": "<p>\"Delic\" comes from \"psychedelic,\" which literally means \"mind-manifesting\" (from Greek: psyche = mind/soul, delos = manifest/reveal).</p><p>This suffix carries the essence of consciousness exploration, expanded awareness, and transformative experiences. It's about revealing what's hidden in consciousness, making the invisible visible.</p>",
+                        "triggerLabel": "See The Fusion"
+                    },
+                    {
+                        "title": "The Fusion",
+                        "content": "<p>When you combine \"cyber\" and \"delic,\" you get a field that uses digital technology (cyber) to manifest and explore consciousness (delic). It's technology in service of inner revelation.</p><p>The word itself tells you what the field is about—using computers and sensors as tools for mind-manifesting experiences.</p>",
+                        "triggerLabel": "Historical Context"
+                    },
+                    {
+                        "title": "Historical Context",
+                        "media": {
+                            "type": "image",
+                            "src": "assets/images/module1/timothy-leary-portrait.jpg",
+                            "caption": "AI IMAGE PLACEHOLDER: Black and white archival-style portrait of Timothy Leary from the 1990s era, looking thoughtful and visionary, with subtle double-exposure overlay of early computer graphics and VR wireframes, representing the bridge between psychedelic era and digital future, documentary photography style, 16:9 aspect ratio"
+                        },
+                        "mediaLayout": "full",
+                        "content": "<p>The term \"cyberdelics\" was popularized by Timothy Leary in the 1990s. Leary, known for his earlier psychedelic research, recognized that technology could serve similar consciousness-expanding purposes as substances.</p><p>He foresaw a future where virtual reality and digital tools would become valid paths for inner exploration. We're now living in that future he envisioned.</p>",
+                        "triggerLabel": "Continue"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "quiz_1.1",
+            "title": "Etymology Quiz",
+            "type": "scenario-based",
+            "content": {
+                "scenes": [
+                    {
+                        "id": "q1",
+                        "narrative": "<h3>Question 1 of 2</h3><p><strong>What does the \"cyber\" in cyberdelics primarily refer to?</strong></p><p><em>Understanding the technological component of the term.</em></p>",
+                        "choices": [
+                            {
+                                "id": "q1_a",
+                                "label": "Cybersecurity and protecting digital information",
+                                "outcome": "q1_wrong_a"
+                            },
+                            {
+                                "id": "q1_b",
+                                "label": "Digital technology and virtual environments as tools for experience",
+                                "outcome": "q2"
+                            },
+                            {
+                                "id": "q1_c",
+                                "label": "Social media and online communication platforms",
+                                "outcome": "q1_wrong_c"
+                            },
+                            {
+                                "id": "q1_d",
+                                "label": "Artificial intelligence and machine learning systems",
+                                "outcome": "q1_wrong_d"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "q1_wrong_a",
+                        "narrative": "<p>While \"cyber\" is used in cybersecurity, that's not what it means in cyberdelics. Here, \"cyber\" refers to the broader realm of digital technology, virtual environments, and human-computer interaction—the tools we use to facilitate consciousness exploration. Think cybernetics and feedback systems, not security.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "q1"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "q1_wrong_c",
+                        "narrative": "<p>While social media exists in the digital realm, \"cyber\" in cyberdelics specifically refers to immersive and biofeedback technologies used for consciousness exploration. Social platforms are about external communication, while cyberdelics focus on internal exploration using specialized tech.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "q1"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "q1_wrong_d",
+                        "narrative": "<p>AI and machine learning might be tools within cyberdelic experiences, but \"cyber\" here primarily refers to the immersive digital technologies (VR, AR, biofeedback) that create the environment for consciousness exploration. It's about the interface between human and technology, not about autonomous intelligent systems.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "q1"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "q2",
+                        "narrative": "<h3>Question 2 of 2</h3><p>✓ Correct!</p><p><strong>What does \"delic\" (from psychedelic) literally mean?</strong></p><p><em>Understanding the consciousness exploration component.</em></p>",
+                        "choices": [
+                            {
+                                "id": "q2_a",
+                                "label": "Creating hallucinations or visual distortions",
+                                "outcome": "q2_wrong_a"
+                            },
+                            {
+                                "id": "q2_b",
+                                "label": "Mind-manifesting or revealing consciousness",
+                                "outcome": "quiz_complete"
+                            },
+                            {
+                                "id": "q2_c",
+                                "label": "Causing euphoria and pleasure",
+                                "outcome": "q2_wrong_c"
+                            },
+                            {
+                                "id": "q2_d",
+                                "label": "Altering brain chemistry through substances",
+                                "outcome": "q2_wrong_d"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "q2_wrong_a",
+                        "narrative": "<p>This is a common misconception. \"Delic\" comes from Greek words meaning \"mind-manifesting\" or \"revealing the mind/soul.\" It's about making consciousness visible and exploring inner dimensions, not just creating visual effects. Hallucinations might occur, but they're not the definition—revelation of consciousness is.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "q2"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "q2_wrong_c",
+                        "narrative": "<p>While consciousness exploration might involve pleasurable states, \"delic\" doesn't mean pleasure. It means \"mind-manifesting\"—revealing and exploring consciousness. The focus is on revelation and awareness expansion, not just feeling good. Transformation might be challenging, not always euphoric.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "q2"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "q2_wrong_d",
+                        "narrative": "<p>That's one method of creating mind-manifesting experiences (psychedelics), but \"delic\" itself just means \"mind-manifesting\"—it doesn't specify the method. This is why cyberdelics can use the same suffix—both psychedelics and cyberdelics aim to manifest consciousness, just through different means (substances vs. technology).</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "q2"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "quiz_complete",
+                        "narrative": "<h3>✓ Quiz Complete!</h3><p>Excellent! You understand the etymology of \"cyberdelics.\" You're ready to move forward.</p>",
+                        "choices": []
+                    }
+                ]
+            }
+        }
+    ]
+}

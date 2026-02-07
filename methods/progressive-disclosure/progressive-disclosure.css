@@ -49,7 +49,6 @@
 }
 
 .reveal-section h2::before {
-    content: '';
     display: inline-block;
     width: 4px;
     height: 24px;
@@ -190,4 +189,86 @@
 .step-counter .current {
     color: var(--color-accent);
     font-weight: 600;
+}
+
+/* ===========================================
+   Progressive Disclosure Layouts 
+   (Left/Right/Full Image Support)
+   Note: Top/Bottom layouts deprecated by design choice.
+   =========================================== */
+
+/* Inner Flex Wrapper (lives inside .section-content) */
+.pd-flex-wrapper {
+    display: flex;
+    gap: var(--space-lg);
+    align-items: center;
+    /* Centered as requested */
+    width: 100%;
+}
+
+/* Container for Image/Video */
+.pd-media-container {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--color-border-dim);
+    border-radius: var(--border-radius);
+    padding: var(--space-sm);
+    /* User Request: A little padding */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+}
+
+.pd-media-container img,
+.pd-media-container video {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    border-radius: 4px;
+}
+
+/* Text Content Area */
+.pd-text-content {
+    flex: 1;
+    min-width: 0;
+    /* Prevent flex overflow */
+}
+
+/* --- Layout: Left --- */
+/* Image takes 30%, Content takes 70% */
+.pd-layout-left .pd-flex-wrapper {
+    flex-direction: row;
+}
+
+.pd-layout-left .pd-media-container {
+    width: 30%;
+    flex-shrink: 0;
+}
+
+/* --- Layout: Right --- */
+/* Image takes 30% (on right), Content takes 70% */
+.pd-layout-right .pd-flex-wrapper {
+    flex-direction: row-reverse;
+}
+
+.pd-layout-right .pd-media-container {
+    width: 30%;
+    flex-shrink: 0;
+}
+
+/* --- Layout: Full (Single Image) --- */
+/* If no content, media takes full width */
+.pd-layout-full .pd-flex-wrapper {
+    flex-direction: column;
+}
+
+.pd-layout-full .pd-media-container {
+    width: 100%;
+    margin-bottom: var(--space-sm);
+}
+
+.pd-layout-full .pd-text-content {
+    width: 100%;
 }

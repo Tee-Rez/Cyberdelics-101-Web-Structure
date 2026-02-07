@@ -98,7 +98,7 @@
             screen.className = 'opening-screen';
             screen.innerHTML = `
                 <div class="opening-content">
-                    <h1>Welcome to Cyberdelics 101</h1>
+                    <h1>${title || 'Cyberdelics 101'}</h1>
                     <p class="opening-subtitle">This class works best within full screen mode.</p>
                     <div class="opening-action">
                         <button class="opening-fs-btn" title="Enter Full Screen">⛶</button>
@@ -235,7 +235,7 @@
                         const isFirst = idx === 0 ? 'active' : '';
                         html += `
                             <div class="reveal-section ${isFirst}" id="${sec.id}">
-                                ${sec.title ? `<h2>${sec.title}</h2>` : ''}
+                                ${sec.title ? `<h2 class="section-title">${sec.title}</h2>` : ''}
                                 ${this._generateMediaHTML(sec.media)}
                                 <div class="section-content">${sec.content}</div>
                                 ${idx < moduleConfig.content.sections.length - 1 ? `<button class="reveal-trigger">${sec.triggerLabel || 'Next'}</button>` : ''}
@@ -265,7 +265,7 @@
             } else if (moduleConfig.content && type === 'scenario-based') {
                 // Auto-generate scenes from content.scenes
                 const c = moduleConfig.content;
-                let scenesHTML = '';
+                let scenesHTML = `<h1 class="module-title">${moduleConfig.title || ''}</h1>`;
                 if (c.scenes && Array.isArray(c.scenes)) {
                     c.scenes.forEach((scene, idx) => {
                         const isFirst = idx === 0 ? 'active' : '';

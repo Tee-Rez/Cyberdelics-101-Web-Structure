@@ -1805,3 +1805,169 @@ button.btn-continue:hover,
     margin-bottom: var(--space-sm);
     font-size: 1.1em;
 }
+
+/* ========== Module & Section Titles ========== */
+.module-title {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--color-accent);
+    text-align: center;
+    margin: 0 0 var(--space-xl) 0;
+    padding-bottom: var(--space-md);
+    border-bottom: 2px solid var(--color-border);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 20px var(--color-accent-glow);
+}
+
+.section-title {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--color-accent);
+    text-align: center;
+    margin: var(--space-xl) auto var(--space-lg) auto;
+    padding: var(--space-md) var(--space-lg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-lg);
+    max-width: 600px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ========== Progressive Disclosure Content Styling ========== */
+.section-content {
+    line-height: 1.8;
+    color: var(--color-text-secondary);
+    margin: var(--space-lg) 0;
+}
+
+.section-content p {
+    margin-bottom: var(--space-lg);
+}
+
+.section-content p:last-child {
+    margin-bottom: 0;
+}
+
+.section-content strong {
+    color: var(--color-accent);
+    font-weight: 600;
+}
+
+.section-content em {
+    color: var(--color-text-primary);
+    font-style: italic;
+}
+
+/* ========== Scenario-Based Narrative Styling ========== */
+.scenario-narrative {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-lg);
+    padding: var(--space-xl);
+    margin: var(--space-lg) 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    position: relative;
+    line-height: 1.8;
+    color: var(--color-text-secondary);
+    transition: all var(--transition-normal);
+}
+
+.scenario-narrative::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--color-accent), transparent);
+    border-radius: var(--border-radius-lg) 0 0 var(--border-radius-lg);
+}
+
+.scenario-narrative:hover {
+    border-color: var(--color-accent);
+    box-shadow: 0 6px 16px rgba(123, 92, 255, 0.15);
+}
+
+.scenario-narrative h3 {
+    color: var(--color-text-primary);
+    margin-bottom: var(--space-md);
+    font-size: var(--font-size-lg);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.scenario-narrative p {
+    margin-bottom: var(--space-md);
+}
+
+.scenario-narrative p:last-child {
+    margin-bottom: 0;
+}
+
+.scenario-narrative strong {
+    color: var(--color-accent);
+    font-weight: 600;
+}
+
+.scenario-narrative em {
+    color: var(--color-text-muted);
+    font-style: italic;
+    font-size: var(--font-size-sm);
+}
+
+/* ========== Opening Screen Title Styling ========== */
+.opening-screen h1 {
+    font-size: clamp(24px, 5vw, 48px);
+    font-weight: 800;
+    color: var(--color-accent);
+    text-align: center;
+    margin-bottom: var(--space-md);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 30px var(--color-accent-glow), 0 0 60px var(--color-accent-glow);
+    animation: titlePulse 3s ease-in-out infinite;
+}
+
+@keyframes titlePulse {
+
+    0%,
+    100% {
+        text-shadow: 0 0 30px var(--color-accent-glow), 0 0 60px var(--color-accent-glow);
+    }
+
+    50% {
+        text-shadow: 0 0 40px var(--color-accent-glow), 0 0 80px var(--color-accent-glow), 0 0 100px var(--color-accent-glow);
+    }
+}
+
+/* ========== Temporarily Disable Artifact & Audio Features ========== */
+/* Hide sidebar toggle buttons */
+.cd-toggle-btn {
+    display: none !important;
+}
+
+/* Hide artifact counter in collapsed state */
+.cd-artifact-counter {
+    display: none !important;
+}
+
+/* Progressive-disclosure section visibility */
+.reveal-section {
+    display: none;
+}
+
+.reveal-section.active,
+.reveal-section:last-child {
+    display: block;
+}
+
+/* Hide mini audio controls in collapsed state */
+.cd-mini-controls {
+    display: none !important;
+}

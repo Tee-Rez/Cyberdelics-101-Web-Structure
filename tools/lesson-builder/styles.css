@@ -362,3 +362,166 @@ input[type="color"] {
     background: none;
     border: none;
 }
+
+/* INTERACTIVE SIMULATION EDITOR */
+.sim-node {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: #222;
+    border: 2px solid #00d9ff;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 217, 255, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+    user-select: none;
+    transform: translate(-50%, -50%);
+    /* Center on coordinate */
+}
+
+.sim-node:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 217, 255, 0.5);
+    z-index: 10;
+}
+
+.sim-node.selected {
+    background: #004d5a;
+    border-color: #fff;
+    z-index: 20;
+}
+
+.sim-node-icon {
+    font-size: 20px;
+}
+
+.sim-node-label {
+    position: absolute;
+    bottom: -20px;
+    font-size: 10px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 2px 4px;
+    border-radius: 2px;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+.zoom-indicator {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 16px;
+    height: 16px;
+    background: #ff0055;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 0 5px #ff0055;
+}
+
+/* Floating Menu */
+.sim-floating-menu {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(17, 17, 17, 0.9);
+    border: 1px solid #333;
+    padding: 10px 15px;
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.sim-floating-menu .menu-title {
+    font-size: 10px;
+    color: #666;
+    letter-spacing: 1px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Overlay Back Button */
+.sim-back-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid #00d9ff;
+    color: #00d9ff;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 100;
+    font-weight: bold;
+    font-size: 12px;
+    transition: all 0.2s;
+}
+
+.sim-back-btn:hover {
+    background: #00d9ff;
+    color: #000;
+}
+
+/* Media Containers */
+.sim-container-box {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid #444;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.sim-container-header {
+    height: 24px;
+    background: #222;
+    border-bottom: 1px solid #444;
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+    cursor: grab;
+}
+
+.sim-container-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-size: 11px;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+
+.sim-container-content:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+}
+
+.sim-resize-handle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(135deg, transparent 50%, #666 50%);
+    cursor: nwse-resize;
+    z-index: 5;
+}

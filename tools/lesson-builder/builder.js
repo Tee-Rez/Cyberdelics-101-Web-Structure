@@ -132,6 +132,21 @@ function renderCanvas() {
             renderProgressiveEditor(mod, editorContainer);
         } else if (mod.type === 'scenario-based') {
             renderScenarioEditor(mod, editorContainer);
+        } else if (mod.type === 'interactive-simulation') {
+            // New Interactive Editor Button
+            const btnEdit = document.createElement('button');
+            btnEdit.className = 'primary-btn';
+            btnEdit.style.width = '100%';
+            btnEdit.style.marginTop = '10px';
+            btnEdit.innerHTML = '⚡ EDIT SIMULATION';
+            btnEdit.onclick = () => InteractiveBuilder.open(mod);
+            editorContainer.appendChild(btnEdit);
+
+            // Preview Stats (optional)
+            const stats = document.createElement('div');
+            const nodeCount = (mod.content.data && mod.content.data.nodes) ? mod.content.data.nodes.length : 0;
+            stats.innerHTML = `<p style="color:#666; font-size:12px; margin-top:5px;">${nodeCount} root nodes defined.</p>`;
+            editorContainer.appendChild(stats);
         } else {
             editorContainer.innerHTML = `<p style="color:#666; font-style:italic;">Editor for ${mod.type} not yet implemented.</p>`;
         }
@@ -214,22 +229,85 @@ function renderProgressiveEditor(module, container) {
             </div>
             <div class="form-group">
                 <label>Media Asset</label>
-                <div style="display:flex; gap:5px;">
-                    <select class="inp-media-type" style="background:#000; border:1px solid #333; color:#fff; width: 100px;">
-                        <option value="image" ${section.media && section.media.type === 'image' ? 'selected' : ''}>Image</option>
-                        <option value="video" ${section.media && section.media.type === 'video' ? 'selected' : ''}>Video (MP4)</option>
-                        <option value="youtube" ${section.media && section.media.type === 'youtube' ? 'selected' : ''}>YouTube</option>
-                    </select>
-                    <input type="text" placeholder="URL (e.g. https://...)" value="${section.media ? section.media.src : ''}" class="inp-media-src" style="flex:1;">
+                <div style="display:flex; flex-direction: column; gap: 5px;">
+                    <!-- Media Source Row -->
+                    <div style="display:flex; gap:5px;">
+                        <select class="inp-media-type" style="background:#000; border:1px solid #333; color:#fff; width: 100px;">
+                            <option value="image" ${section.media && section.media.type === 'image' ? 'selected' : ''}>Image</option>
+                            <option value="video" ${section.media && section.media.type === 'video' ? 'selected' : ''}>Video (MP4)</option>
+                            <option value="youtube" ${section.media && section.media.type === 'youtube' ? 'selected' : ''}>YouTube</option>
+                        </select>
+                        <input type="text" placeholder="URL (e.g. https://...)" value="${section.media ? section.media.src : ''}" class="inp-media-src" style="flex:1;">
+                    </div>
+                
+                    <!-- Layout Row -->
+                    <div class="layout-controls" style="display:flex; align-items:center; gap:10px; margin-top:5px;">
+                        <label style="font-size:11px; color:#aaa; margin:0;">Position:</label>
+                        <select class="inp-media-layout" style="background:#000; border:1px solid #333; color:#fff; width: 100px;">
+                            <option value="left" ${section.mediaLayout === 'left' ? 'selected' : ''}>Left</option>
+                            <option value="right" ${section.mediaLayout === 'right' ? 'selected' : ''}>Right</option>
+                            <option value="full" ${section.mediaLayout === 'full' ? 'selected' : ''}>Center (Full)</option>
+                        </select>
+                        <span class="layout-warning" style="font-size:10px; color:#ffcc00; display:none;">
+                            *Center only allowed with NO content.
+                        </span>
+                    </div>
                 </div>
             </div>
             <button class="delete-btn" style="margin-top:5px;">Remove Section</button>
         `;
 
         // BIND EVENTS (Directly updating reference object)
+        const inpContent = li.querySelector('.inp-content');
+        const inpLayout = li.querySelector('.inp-media-layout');
+        const layoutWarning = li.querySelector('.layout-warning');
+
+        // Layout Validation Logic
+        const validateLayout = () => {
+            const hasContent = inpContent.value && inpContent.value.trim().length > 0;
+            const isCenter = inpLayout.value === 'full';
+
+            // Find "Center" option to disable/enable it
+            const centerOption = inpLayout.querySelector('option[value="full"]');
+
+            if (hasContent) {
+                // Determine if we need to force switch away from Center
+                if (isCenter) {
+                    inpLayout.value = 'left';
+                    section.mediaLayout = 'left';
+                }
+                centerOption.disabled = true;
+                if (isCenter || inpLayout.value === 'full') {
+                    layoutWarning.style.display = 'inline';
+                } else {
+                    layoutWarning.style.display = 'none';
+                    // Show warning if user *tries* to see it? Actually just show text if disabled?
+                    // Let's just show warning if the option is disabled so they know why
+                    centerOption.innerText = "Center (No text only)";
+                }
+            } else {
+                centerOption.disabled = false;
+                centerOption.innerText = "Center (Full)";
+                layoutWarning.style.display = 'none';
+            }
+        };
+
         li.querySelector('.inp-title').onchange = (e) => section.title = e.target.value;
-        li.querySelector('.inp-content').onchange = (e) => section.content = e.target.value;
+
+        inpContent.onchange = (e) => {
+            section.content = e.target.value;
+            validateLayout();
+        };
+
         li.querySelector('.inp-trigger').onchange = (e) => section.triggerLabel = e.target.value;
+
+        inpLayout.onchange = (e) => {
+            section.mediaLayout = e.target.value;
+            validateLayout(); // Re-check just in case
+        };
+
+        // Initial validation run
+        validateLayout();
 
         // Media Logic
         const mediaType = li.querySelector('.inp-media-type');

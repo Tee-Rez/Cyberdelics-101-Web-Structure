@@ -505,8 +505,11 @@ class LessonUI {
      * Useful for Framer embeds to break out of scrollbars
      */
     toggleFullScreen() {
+        // Use the shell element instead of documentElement for iframe compatibility
+        const targetElement = this.shell || document.documentElement;
+
         if (!document.fullscreenElement) {
-            document.documentElement.requestFullscreen().catch(err => {
+            targetElement.requestFullscreen().catch(err => {
                 console.warn(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
             });
         } else {

@@ -1,0 +1,188 @@
+{
+    "title": "Technology as Medium, Not Message",
+    "description": "Understanding that the same technology can serve different purposes—entertainment or transformation",
+    "theme": {
+        "primaryColor": "#5900ff",
+        "fontBody": "Rajdhani, sans-serif"
+    },
+    "modules": [
+        {
+            "id": "module_scenario_evaluation",
+            "title": "Evaluating VR Experiences",
+            "type": "progressive-disclosure",
+            "content": {
+                "sections": [
+                    {
+                        "title": "⚠️ Interactive Scenario Coming Soon",
+                        "content": "<p><strong>Placeholder: Interactive Scenario Method</strong></p><p>This interactive scenario will present three VR experiences for evaluation:</p><ul><li><strong>Virtual Temple Meditation</strong> - A VR meditation environment with guided breathwork, biofeedback-adjusted lighting, and minimal serene visuals. Users practice present-moment awareness as technology fades into background.</li><li><strong>VR Roller Coaster</strong> - A thrilling VR roller coaster with loops, drops, and high-speed turns. Heart rate monitoring displays excitement level as a score.</li><li><strong>Social VR Hangout</strong> - A VR platform for socializing, attending events, playing casual games, and connecting with others.</li></ul><p>For each experience, you'll answer: 'Is this cyberdelic?' and receive feedback based on whether the experience has all three essential components (technology, altered states, transformational intent).</p><p><em>This will be implemented as a custom interactive method in a future update.</em></p>"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "module_medium_message_progressive",
+            "title": "Technology Serves Purpose",
+            "type": "progressive-disclosure",
+            "content": {
+                "sections": [
+                    {
+                        "title": "The McLuhan Principle",
+                        "content": "\"The medium is the message\" is a famous phrase, but in cyberdelics, it's reversed. The technology is the medium, but consciousness exploration is the message. The tool doesn't define the purpose—the purpose defines how the tool is used.",
+                        "triggerLabel": "Continue"
+                    },
+                    {
+                        "title": "Asking the Right Question",
+                        "content": "When evaluating any technology-based experience, ask: What is this designed to facilitate? Entertainment or transformation? External engagement or internal exploration? Distraction or presence? The answer reveals whether it's cyberdelic.",
+                        "triggerLabel": "Continue"
+                    },
+                    {
+                        "title": "Same Headset, Different Worlds",
+                        "content": "The same VR headset can transport you into a zombie shooter or into a guided journey through your own consciousness. The same biofeedback sensor can gamify productivity or reveal patterns in your meditative practice. Hardware is neutral—intention determines category.",
+                        "image": {
+                            "src": "placeholder-medium-comparison.jpg",
+                            "alt": "Same VR technology serving meditation vs entertainment",
+                            "position": "full-width",
+                            "aiPrompt": "Split comparison image: left side shows a serene VR meditation temple with soft glowing lotus flowers and a peaceful figure in meditation pose, right side shows a dynamic VR roller coaster with motion blur and excitement, both clearly using VR headsets, contrasting peaceful vs. thrilling experiences, symbolic representation of different intentions using same technology, 16:9 aspect ratio"
+                        },
+                        "triggerLabel": "Test Understanding"
+                    }
+                ]
+            },
+            "artifacts": []
+        },
+        {
+            "id": "module_medium_quiz",
+            "title": "Medium vs Message Check",
+            "type": "scenario-based",
+            "content": {
+                "scenes": [
+                    {
+                        "id": "q1",
+                        "narrative": "<h3>Question 1 of 2</h3><p>A developer wants to create a cyberdelic experience. What should they prioritize in their design?</p><p><em>Understanding that design intent, not technical specs, determines cyberdelic nature.</em></p>",
+                        "choices": [
+                            {
+                                "id": "q1_a",
+                                "label": "The highest resolution graphics and most realistic environments possible",
+                                "outcome": "q1_wrong_a"
+                            },
+                            {
+                                "id": "q1_b",
+                                "label": "Facilitating inward exploration and consciousness shifts, with technology supporting that purpose",
+                                "outcome": "q2"
+                            },
+                            {
+                                "id": "q1_c",
+                                "label": "Making the experience as entertaining and engaging as possible to keep users interested",
+                                "outcome": "q1_wrong_c"
+                            },
+                            {
+                                "id": "q1_d",
+                                "label": "Adding as many technological features as possible to seem cutting-edge",
+                                "outcome": "q1_wrong_d"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "q1_wrong_a",
+                        "narrative": "<p>Graphics quality doesn't determine whether something is cyberdelic. Some of the most effective consciousness exploration tools use simple visuals. What matters is whether the experience facilitates inner exploration and transformation, not how photorealistic it looks. You can have stunning graphics serving entertainment or simple visuals serving deep transformation. Try again.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "q1"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "q1_wrong_c",
+                        "narrative": "<p>Entertainment and engagement are different from transformation. While cyberdelic experiences can be engaging, entertainment shouldn't be the primary goal. Entertainment focuses on external stimulation and distraction, while cyberdelics focus on inner exploration and presence. These are fundamentally different design intentions. Try again.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "q1"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "q1_wrong_d",
+                        "narrative": "<p>More technology doesn't equal more cyberdelic. You could have a simple breath-awareness experience with minimal tech that's deeply cyberdelic, or a feature-packed VR game with every sensor imaginable that's pure entertainment. Technology serves the purpose—it isn't the purpose itself. Try again.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "q1"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "q2",
+                        "narrative": "<h3>Question 2 of 2</h3><p>✓ Exactly right! The primary design goal should be facilitating consciousness exploration and transformation.</p><p><strong>What's the key difference between a VR roller coaster and a VR meditation experience?</strong></p><p><em>Both use immersive VR technology, but serve entirely different purposes.</em></p>",
+                        "choices": [
+                            {
+                                "id": "q2_a",
+                                "label": "The meditation experience is slower-paced",
+                                "outcome": "q2_wrong_a"
+                            },
+                            {
+                                "id": "q2_b",
+                                "label": "The roller coaster is more immersive and engaging",
+                                "outcome": "q2_wrong_b"
+                            },
+                            {
+                                "id": "q2_c",
+                                "label": "The meditation experience is designed for inward exploration, while the roller coaster is designed for external entertainment",
+                                "outcome": "quiz_complete"
+                            },
+                            {
+                                "id": "q2_d",
+                                "label": "The meditation experience requires biofeedback sensors",
+                                "outcome": "q2_wrong_d"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "q2_wrong_a",
+                        "narrative": "<p>Pacing alone doesn't determine what's cyberdelic. Some consciousness exploration experiences might be dynamic and fast-moving, while some entertainment experiences might be slow and contemplative. What matters is the intention behind the design—whether it's facilitating inner exploration or external entertainment. Try again.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "q2"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "q2_wrong_b",
+                        "narrative": "<p>Both can be equally immersive. Immersion and engagement don't determine what's cyberdelic—purpose does. A VR roller coaster creates immersion for entertainment, while VR meditation creates immersion for consciousness exploration. Both are immersive, but serve different intentions. Try again.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "q2"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "q2_wrong_d",
+                        "narrative": "<p>Not all cyberdelic experiences require biofeedback sensors, and not all experiences with biofeedback are cyberdelic. Sensors are one possible tool, but what makes something cyberdelic is the intention to facilitate consciousness exploration and transformation, not the specific technologies used. Try again.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "q2"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "quiz_complete",
+                        "narrative": "<h3>✓ Quiz Complete!</h3><p>Exactly. The fundamental difference is design intention. The meditation experience uses technology to facilitate turning attention inward and exploring consciousness. The roller coaster uses technology to create external thrills and entertainment. Same medium, different messages.</p><p>This is what distinguishes cyberdelic from non-cyberdelic uses of technology.</p>",
+                        "choices": []
+                    }
+                ]
+            },
+            "artifacts": []
+        }
+    ],
+    "artifacts": []
+}

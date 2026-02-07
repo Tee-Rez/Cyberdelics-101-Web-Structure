@@ -19,19 +19,36 @@ window.CourseManifest = {
             "content": {
                 "sections": [
                     {
-                        "title": "Video Introduction",
-                        "content": "<h2>Welcome Pioneer</h2><p>Please watch the introduction video below to begin your journey.</p><div class='video-instruction-hint'>Click the ▲ arrow in the bottom bar to open the video panel.</div>",
-                        "triggerLabel": "Begin Journey"
+                        "title": "Left Layout Test",
+                        "media": {
+                            "type": "image",
+                            "src": "https://placehold.co/600x400/00d9ff/000000?text=Left+Layout",
+                            "caption": "Image on Left"
+                        },
+                        "mediaLayout": "left",
+                        "content": "<p>This content should appear on the <strong>RIGHT</strong>. The image takes up 30% of the card width on the left side.</p><p>We are testing the flex-row behavior inside the card content area.</p>",
+                        "triggerLabel": "Next Test"
                     },
                     {
-                        "title": "What Makes This Course Different",
-                        "content": "<p>Traditional online courses are passive: you watch videos, maybe take a quiz, and hope the information sticks. Research shows this leads to only 10-20% retention.</p><h3>Cyberdelics 101 is built on a revolutionary approach:</h3><ul><li><strong>ACTIVE ENGAGEMENT</strong> - You interact with every concept</li><li><strong>ARTIFACT COLLECTION</strong> - Tangible knowledge gathering</li><li><strong>BINAURAL REWARDS</strong> - Unlock consciousness tools</li><li><strong>MULTIPLE PATHWAYS</strong> - Choose your learning journey</li><li><strong>EMBODIED LEARNING</strong> - Experience what you study</li></ul><p>This approach leads to 70-90% retention—and more importantly, genuine understanding you can apply.</p>",
-                        "triggerLabel": "Why This Matters"
+                        "title": "Right Layout Test",
+                        "media": {
+                            "type": "image",
+                            "src": "https://placehold.co/600x400/ff0055/ffffff?text=Right+Layout",
+                            "caption": "Image on Right"
+                        },
+                        "mediaLayout": "right",
+                        "content": "<p>This content should appear on the <strong>LEFT</strong>. The image takes up 30% of the card width on the right side.</p><p>We are testing the flex-row-reverse behavior.</p>",
+                        "triggerLabel": "Next Test"
                     },
                     {
-                        "title": "Your Learning Interface",
-                        "content": "<div id='intro-tutorial-root'><p>Look at your screen. You'll notice three key areas:</p><div class='interface-highlight-grid'><div class='highlight-item'><strong>📍 LEFT SIDEBAR - Artifact Collection</strong><p>Here you'll see all the knowledge artifacts available in each lesson. As you engage with content, you'll collect these artifacts—each representing mastery of a key concept.</p></div><div class='highlight-item'><strong>📍 CENTER PANEL (Where you are now)</strong><p>Your primary learning space. Interactive content, simulations, scenarios, and videos appear here. You control the pace and depth of exploration.</p></div><div class='highlight-item'><strong>📍 RIGHT SIDEBAR - Binaural Beat Player</strong><p>Notice the locked binaural beat? Collect all artifacts in a lesson to unlock its associated frequency. These aren't just rewards—they're functional consciousness tools.</p></div></div></div>",
-                        "triggerLabel": "Explore Interface"
+                        "title": "Single Image No Content Test",
+                        "media": {
+                            "type": "image",
+                            "src": "https://placehold.co/800x400/9900ff/ffffff?text=Full+Width+Image",
+                            "caption": "Full Width (No Content)"
+                        },
+                        // No content provided, should default to 'full' layout
+                        "triggerLabel": "Finish Tests"
                     }
                 ]
             },

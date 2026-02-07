@@ -114,6 +114,63 @@
     </main>
     </div>
 
+    <!-- INTERACTIVE SIMULATION BUILDER MODAL -->
+    <div id="sim-builder-modal"
+        style="display:none; position:fixed; inset:0; background:#000; z-index:2000; flex-direction:column;">
+
+        <!-- HEADER -->
+        <header
+            style="height:50px; border-bottom:1px solid #333; display:flex; align-items:center; padding:0 20px; background:#111;">
+            <button onclick="InteractiveBuilder.close()"
+                style="background:none; border:none; color:#ffff; cursor:pointer;">✖ CLOSE EDITOR</button>
+            <div style="margin-left:20px; font-weight:bold; color:#00d9ff;">Interactive Simulation Editor</div>
+            <div id="sim-breadcrumbs" style="margin-left:20px; color:#666; font-size:12px; display:flex; gap:5px;">
+            </div>
+        </header>
+
+        <!-- MAIN EDITOR AREA -->
+        <div style="flex:1; display:flex; overflow:hidden; position:relative;">
+
+            <!-- OVERLAY UI -->
+            <!-- 1. Floating Menu -->
+            <div id="sim-floating-menu" class="sim-floating-menu">
+                <div class="menu-title">TOOLS</div>
+                <div style="display:flex; gap:10px;">
+                    <button onclick="InteractiveBuilder.spawnNode()" class="btn-small">● SPAWN NODE</button>
+                    <button onclick="InteractiveBuilder.spawnContainer()" class="btn-small">⬜ SPAWN CONTAINER</button>
+                </div>
+            </div>
+
+            <!-- 2. Back Button (Top Left of Canvas) -->
+            <button id="sim-back-btn" onclick="InteractiveBuilder.zoomOut()" class="sim-back-btn" style="display:none;">
+                ⬅ BACK TO PREVIOUS LAYER
+            </button>
+
+            <!-- CANVAS VIEWPORT -->
+            <div id="sim-builder-view"
+                style="flex:1; position:relative; overflow:hidden; background:#050505; cursor:grab;">
+                <!-- Moving Content Layer -->
+                <div id="sim-builder-content"
+                    style="position:absolute; width:100%; height:100%; top:0; left:0; transform-origin: 0 0;">
+                    <!-- Nodes Render Here -->
+                </div>
+            </div>
+
+            <!-- INSPECTOR PANEL -->
+            <aside id="sim-inspector-panel"
+                style="width:250px; background:#111; border-left:1px solid #333; padding:20px; z-index:10;">
+                <p style="color:#666; font-style:italic;">Select a node to edit details.</p>
+            </aside>
+        </div>
+    </div>
+    style="width:250px; background:#111; border-left:1px solid #333; padding:20px;">
+    <p style="color:#666; font-style:italic;">Select a node to edit details.</p>
+    </aside>
+    </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="interactive-builder.js"></script>
     <script src="builder.js"></script>
 </body>
 

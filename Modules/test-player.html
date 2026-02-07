@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini-Lesson Test Harness</title>
+
+    <!-- CORE STYLES -->
+    <link rel="stylesheet" href="../core/styles.css">
+
+    <!-- METHOD STYLES (Load all potential method styles) -->
+    <link rel="stylesheet" href="../methods/progressive-disclosure/progressive-disclosure.css">
+    <link rel="stylesheet" href="../methods/scenario-based/scenario-based.css">
+    <link rel="stylesheet" href="../methods/interactive-simulation/interactive-simulation.css">
+    <link rel="stylesheet" href="../methods/interactive-simulation/engines/node-zoom.css">
+    <link rel="stylesheet" href="../methods/interactive-simulation/constellation-personas/constellation-personas.css">
+
+    <style>
+        body {
+            margin: 0;
+            background: #000;
+            overflow: hidden;
+            font-family: 'Rajdhani', sans-serif;
+        }
+
+        #lesson-root {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        /* Loading State Overlay */
+        #loader {
+            position: fixed;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: #000;
+            color: #0ff;
+            z-index: 9999;
+            transition: opacity 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="loader">
+        <h2>LOADING TEST MANIFEST...</h2>
+        <div class="spinner">Initializing Player...</div>
+    </div>
+
+    <div id="lesson-root"></div>
+
+    <!-- CORE DEPENDENCIES -->
+    <script src="../core/method-base.js"></script>
+    <script src="../core/method-loader.js"></script>
+    <script src="../core/lesson-ui.js"></script>
+    <script src="../core/artifact-system.js"></script>
+    <script src="../core/course-core.js"></script>
+    <script src="../core/state-manager.js"></script>
+    <script src="../core/audio-player.js"></script>
+
+    <!-- METHOD FACTORIES -->
+    <script src="../methods/progressive-disclosure/progressive-disclosure.js"></script>
+    <script src="../methods/scenario-based/scenario-based.js"></script>
+    <script src="../methods/interactive-simulation/interactive-simulation.js"></script>
+    <script src="../methods/interactive-simulation/engines/node-zoom.js"></script>
+    <script src="../methods/interactive-simulation/constellation-personas/constellation-personas.js"></script>
+
+    <!-- THE ENGINE -->
+    <script src="../core/lesson-runner.js"></script>
+
+    <!-- LOCAL TEST SCRIPT -->
+    <script>
+        (function () {
+            console.log('[TestHarness] Initializing local test...');
+
+            // 1. Initialize Engine
+            LessonRunner.init('#lesson-root');
+
+            // 2. Initialize StateManager
+            if (window.StateManager) window.StateManager.init();
+
+            // 3. Load test-manifest.json from same directory
+            fetch('./test-manifest.json')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`Failed to load manifest: ${response.status} ${response.statusText}`);
+                    }
+                    return response.json();
+                })
+                .then(manifest => {
+                    console.log('[TestHarness] Manifest loaded successfully:', manifest);
+
+                    // Remove Loader
+                    const loader = document.getElementById('loader');
+                    loader.style.opacity = '0';
+                    setTimeout(() => loader.remove(), 500);
+
+                    // START THE LESSON
+                    LessonRunner.loadLesson(manifest);
+                })
+                .catch(error => {
+                    console.error('[TestHarness] Error loading manifest:', error);
+                    document.getElementById('loader').innerHTML = `
+                        <h2 style="color:red">ERROR LOADING MANIFEST</h2>
+                        <pre>${error.message}</pre>
+                        <p style="color:#666; font-size:14px;">Make sure test-manifest.json exists in the Modules folder.</p>
+                    `;
+                });
+        })();
+    </script>
+</body>
+
+</html>

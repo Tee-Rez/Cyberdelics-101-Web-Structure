@@ -125,40 +125,6 @@
                 window.parent.postMessage({ type: 'PLAYER_READY' }, '*');
             }, 500);
 
-            // DEV: Add Save/Load Toolbar for Testing
-            const devBar = document.createElement('div');
-            devBar.style.cssText = `
-                position: fixed; bottom: 10px; left: 50%; transform: translateX(-50%);
-                background: rgba(0,0,0,0.8); border: 1px solid #333; padding: 5px 10px;
-                border-radius: 20px; z-index: 9999; display: flex; gap: 10px;
-                font-family: monospace; font-size: 12px; pointer-events: auto;
-            `;
-            devBar.innerHTML = `
-                <span style="color: #666; align-self: center;">INJECTOR TEST:</span>
-                <button id="dev-save">SAVE</button>
-                <button id="dev-load">LOAD</button>
-            `;
-            document.body.appendChild(devBar);
-
-            document.getElementById('dev-save').addEventListener('click', () => {
-                if (window.StateManager) {
-                    window.StateManager.save();
-                    alert('State Snapshot Captured! Check Console.');
-                }
-            });
-
-            document.getElementById('dev-load').addEventListener('click', () => {
-                // In a real injected scenario, "Load" technically means "Re-inject with restored data"
-                // But for this test, we can try local restore if StateManager put it in localStorage
-                const saved = localStorage.getItem('cd101_save_state');
-                if (saved && window.StateManager) {
-                    window.StateManager.restore(JSON.parse(saved));
-                    alert('State Restored from Local Storage!');
-                } else {
-                    alert('No local save found.');
-                }
-            });
-
         })();
     </script>
 </body>

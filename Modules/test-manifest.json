@@ -1,0 +1,83 @@
+{
+    "title": "The 'Without Substances' Principle",
+    "description": "Understanding how cyberdelics offer a substance-free path to consciousness exploration",
+    "theme": {
+        "primaryColor": "#5900ff",
+        "fontBody": "Rajdhani, sans-serif"
+    },
+    "modules": [
+        {
+            "id": "module_without_substances_progressive",
+            "title": "Defining the Boundary",
+            "type": "progressive-disclosure",
+            "content": {
+                "sections": [
+                    {
+                        "title": "Defining Boundary",
+                        "content": "Cyberdelics are defined by the absence of psychoactive substances. This isn't a limitation or compromise—it's a defining characteristic that creates unique advantages. Technology replaces chemistry as the catalyst for consciousness exploration.",
+                        "triggerLabel": "Why This Matters"
+                    },
+                    {
+                        "title": "Why This Matters",
+                        "content": "This distinction means cyberdelics are legal worldwide, physically safer for those with health conditions or medications, don't involve physical dependency risks, and can be stopped or adjusted at any moment. These aren't minor details—they fundamentally change who can access consciousness exploration and how.",
+                        "image": {
+                            "src": "placeholder-without-substances.jpg",
+                            "alt": "Technology-based vs substance-based consciousness exploration",
+                            "position": "right",
+                            "aiPrompt": "Symbolic comparison showing VR headset and biofeedback sensors on left side, clear visual separator in middle, and common substances (pills, mushrooms) with a subtle prohibition circle overlay on right side, clean infographic style, educational and non-judgmental tone, blue and white color scheme emphasizing the technology path, 16:9 aspect ratio"
+                        },
+                        "triggerLabel": "Continue"
+                    },
+                    {
+                        "title": "Not Replacement, But Alternative",
+                        "content": "Cyberdelics aren't trying to replace psychedelics. They offer a different path to similar territory—consciousness exploration, transformational experiences, and personal growth. Some people will choose psychedelics, some will choose cyberdelics, some will use both at different times for different purposes. All paths are valid.",
+                        "triggerLabel": "Continue"
+                    },
+                    {
+                        "title": "Research Validation",
+                        "content": "Studies show that properly designed cyberdelic experiences can produce effects comparable to traditional psychedelics, including mystical experiences, perspective shifts, and therapeutic breakthroughs. The \"without substances\" approach isn't theoretical—it's research-validated and clinically tested.",
+                        "triggerLabel": "Explore Real Scenarios"
+                    }
+                ]
+            },
+            "artifacts": []
+        },
+        {
+            "id": "module_scenarios_three_people",
+            "title": "Real-World Access Stories",
+            "type": "progressive-disclosure",
+            "content": {
+                "sections": [
+                    {
+                        "title": "⚠️ Interactive Scenario Coming Soon",
+                        "content": "<p><strong>Placeholder: Three Paths to Consciousness Work</strong></p><p>This interactive scenario presents three people exploring consciousness work for different reasons:</p><ul><li><strong>Medical Contraindications</strong> - Someone with a heart condition and blood pressure medication who's been advised against psychedelics but wants consciousness exploration for healing.</li><li><strong>Legal Restrictions</strong> - Someone living where psychedelics remain illegal, unwilling to break the law, wondering if they must wait years or travel internationally.</li><li><strong>Preference for Control</strong> - Someone anxious about loss of control with substances, preferring experiences they can pause, adjust, or stop in real-time.</li></ul><p>For each person, you'll evaluate what options are available and how the 'without substances' principle affects their journey.</p><p><em>This will be implemented as a custom interactive method in a future update.</em></p>"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "module_final_reflection",
+            "title": "Expanding Access",
+            "type": "progressive-disclosure",
+            "content": {
+                "sections": [
+                    {
+                        "title": "Opening Doors",
+                        "content": "The \"without substances\" principle isn't about limitation—it's about expansion. Medical safety, legal accessibility, and personal preference all become non-issues with technology-based approaches. This fundamentally changes who can access consciousness exploration.",
+                        "image": {
+                            "src": "placeholder-peaceful-journey.jpg",
+                            "alt": "Person in VR-enhanced meditation with sacred geometry",
+                            "position": "full-width",
+                            "aiPrompt": "Person wearing VR headset with gentle bioluminescent biofeedback sensors, sitting in peaceful meditation pose, surrounded by soft ethereal sacred geometry patterns and flowing light, sense of deep inner journey and transformation, peaceful and profound atmosphere, purple and teal color palette, representing consciousness exploration through technology, 16:9 aspect ratio"
+                        },
+                        "triggerLabel": "Complete Lesson"
+                    }
+                ]
+            },
+            "artifacts": []
+        }
+    ],
+    "artifacts": [],
+    "lessonComplete": true,
+    "nextLesson": "Module_1_Lesson_2"
+}
