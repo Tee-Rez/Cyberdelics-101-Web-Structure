@@ -459,16 +459,15 @@
                         You have finished: <br>
                         <strong style="color:white;">${this.currentLesson.title}</strong>
                     </p>
-                    <div style="display:flex; gap:1rem;">
-                        <button class="btn-primary" onclick="LessonRunner.prevModule()">◀ REVIEW</button>
-                        <button class="btn-primary" onclick="location.reload()">RESTART ↻</button>
+                    <div style="display:flex; justify-content:center;">
+                        <button class="btn-primary" onclick="if(document.fullscreenElement) document.exitFullscreen(); location.reload();">RETURN ⮌</button>
                     </div>
                 </div>
             `;
 
-            // Ensure Back button is handled in UI header too in case they want to use that
+            // Ensure Back button is hidden or disabled in UI header
             if (window.LessonUI && window.LessonUI.setBackAction) {
-                window.LessonUI.setBackAction(() => this.prevModule());
+                window.LessonUI.setBackAction(null);
             }
 
             console.log('[LessonRunner] Lesson Complete');

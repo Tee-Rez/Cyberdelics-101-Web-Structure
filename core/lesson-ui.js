@@ -60,7 +60,7 @@ class LessonUI {
         // Logo Container (Left)
         const logoContainer = document.createElement('div');
         logoContainer.className = 'cd-top-logo-container';
-        logoContainer.innerHTML = `<img src="../../assets/Gifs/rotating-string.gif" alt="Cyberdelic Asset" />`;
+        logoContainer.innerHTML = `<img src="../assets/Gifs/rotating-string.gif" alt="Cyberdelic Asset" />`;
         topSection.appendChild(logoContainer);
 
         // Header Bar (Right)
