@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venn Diagram Combiner Demo</title>
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Engine Styles -->
+    <link rel="stylesheet" href="venn-diagram-combiner.css">
+
+    <!-- Demo Styles -->
+    <style>
+        body {
+            background-color: #0a0a0f;
+            color: #ffffff;
+            font-family: 'Space Mono', monospace;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #00D9FF, #FF006E);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .controls {
+            margin-bottom: 20px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        button {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-family: 'Orbitron', sans-serif;
+            transition: all 0.2s;
+        }
+
+        button:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: #00D9FF;
+        }
+
+        button.active {
+            background: #00D9FF;
+            color: #000;
+            border-color: #00D9FF;
+        }
+
+        /* Simulation Container Mockup */
+        .interactive-simulation-container {
+            width: 100%;
+            max-width: 1000px;
+            height: 600px;
+            /* Specific height for demo */
+            background: #12121a;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .sim-viewport {
+            flex: 1;
+            position: relative;
+            background: #000;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .sim-controls {
+            display: flex;
+            gap: 20px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            align-items: center;
+        }
+
+        .control-group {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        input[type=range] {
+            width: 100%;
+        }
+    </style>
+
+    <!-- Dependencies -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+
+<body>
+
+    <h1>Venn Diagram Combiner Engine</h1>
+
+    <div class="controls">
+        <button onclick="loadExample('cyberdelicsCombined')" id="btn-cyber">Combined: Cyberdelics</button>
+        <button onclick="loadExample('mindBodyVesica')" id="btn-vesica">Vesica Piscis: Mind-Body</button>
+        <button onclick="loadExample('artScience')" id="btn-art">Combined: Art-Science</button>
+    </div>
+
+    <div class="interactive-simulation-container">
+        <div class="sim-viewport" id="viewport"></div>
+
+        <div class="sim-controls">
+            <div class="control-group">
+                <label>Merge Progress: <span id="progress-val">0%</span></label>
+                <input type="range" min="0" max="100" value="0" id="progress-slider" data-id="mergeProgress">
+            </div>
+            <button onclick="resetSim()">Reset</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="example-data.js"></script>
+    <script src="venn-diagram-combiner.js"></script>
+
+    <script>
+        // Mock Host Environment
+        const viewport = document.getElementById('viewport');
+        const slider = document.getElementById('progress-slider');
+        const progressVal = document.getElementById('progress-val');
+        let currentEngine = null;
+        let animationFrame = null;
+        let lastTime = 0;
+
+        // Init
+        window.addEventListener('load', () => {
+            loadExample('cyberdelicsCombined');
+        });
+
+        function loadExample(key) {
+            // Update UI
+            document.querySelectorAll('.controls button').forEach(b => b.classList.remove('active'));
+            const btn = document.getElementById({
+                'cyberdelicsCombined': 'btn-cyber',
+                'mindBodyVesica': 'btn-vesica',
+                'artScience': 'btn-art'
+            }[key]);
+            if (btn) btn.classList.add('active');
+
+            // Cleanup
+            if (currentEngine && currentEngine.destroy) {
+                currentEngine.destroy();
+                viewport.innerHTML = '';
+            }
+            if (animationFrame) cancelAnimationFrame(animationFrame);
+
+            // Params
+            const exampleData = window.VennDiagramExamples[key];
+            const Mode = window.SimulationEngines['VennDiagramCombiner'];
+
+            // Instantiate (Factory pattern emulation)
+            currentEngine = Object.create(Mode);
+
+            // Init
+            const params = {
+                mode: exampleData.mode,
+                data: exampleData,
+                circleRadius: exampleData.visualization.circleRadius,
+                maxDistance: exampleData.visualization.maxDistance,
+                // ... map other Viz params
+                ...exampleData.visualization
+            };
+
+            currentEngine.init(viewport, params, {
+                // Host callbacks mockup
+            });
+
+            // Set Slider
+            slider.value = 0;
+            updateSliderLabel(0);
+
+            // Loop
+            lastTime = performance.now();
+            loop();
+        }
+
+        function loop(timestamp) {
+            if (!currentEngine) return;
+            const dt = (timestamp - lastTime) / 1000 || 0.016;
+            lastTime = timestamp;
+
+            // Param sync
+            const params = currentEngine.params;
+            // In real app, host manages params state source of truth
+
+            currentEngine.update(dt, params);
+
+            animationFrame = requestAnimationFrame(loop);
+        }
+
+        // Controls
+        slider.addEventListener('input', (e) => {
+            if (currentEngine) {
+                currentEngine.params.mergeProgress = parseFloat(e.target.value);
+                updateSliderLabel(e.target.value);
+            }
+        });
+
+        function updateSliderLabel(val) {
+            progressVal.textContent = Math.round(val) + '%';
+        }
+
+        function resetSim() {
+            if (currentEngine) {
+                slider.value = 0;
+                currentEngine.params.mergeProgress = 0;
+                updateSliderLabel(0);
+            }
+        }
+
+        // Resize
+        window.addEventListener('resize', () => {
+            if (currentEngine && currentEngine.resize) {
+                currentEngine.resize(viewport.clientWidth, viewport.clientHeight);
+            }
+        });
+
+    </script>
+</body>
+
+</html>

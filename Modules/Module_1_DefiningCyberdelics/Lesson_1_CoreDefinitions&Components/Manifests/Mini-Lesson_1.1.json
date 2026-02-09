@@ -21,8 +21,7 @@
                         "title": "\"Cyber\" - The Digital Realm",
                         "media": {
                             "type": "image",
-                            "src": "assets/images/module1/cyber-typography.jpg",
-                            "caption": "AI IMAGE PLACEHOLDER: The word 'CYBER' in bold futuristic typography with circuit board patterns and digital nodes flowing through the letters, electric blue and white color scheme, representing technology and digital systems, clean modern design with subtle binary code in background, 16:9 aspect ratio"
+                            "src": "../assets/images/module1/cyber-typography.jpg"
                         },
                         "mediaLayout": "left",
                         "content": "<p>\"Cyber\" comes from \"cybernetics,\" coined by Norbert Wiener in 1948. It refers to systems of communication and control, particularly involving technology and feedback loops.</p><p>In modern usage, \"cyber\" represents the digital, technological, and virtual dimensions of experience. It's the realm of VR, AR, biofeedback devices, and human-computer interaction.</p>",
@@ -32,8 +31,7 @@
                         "title": "\"Delic\" - Mind-Manifesting",
                         "media": {
                             "type": "image",
-                            "src": "assets/images/module1/delic-typography.jpg",
-                            "caption": "AI IMAGE PLACEHOLDER: The word 'DELIC' in flowing organic typography with mandala patterns, sacred geometry (Flower of Life), and radiating light waves emanating from the letters, purple and teal color scheme, representing consciousness and inner exploration, mystical yet modern aesthetic, 16:9 aspect ratio"
+                            "src": "../assets/images/module1/delic-typography.jpg"
                         },
                         "mediaLayout": "right",
                         "content": "<p>\"Delic\" comes from \"psychedelic,\" which literally means \"mind-manifesting\" (from Greek: psyche = mind/soul, delos = manifest/reveal).</p><p>This suffix carries the essence of consciousness exploration, expanded awareness, and transformative experiences. It's about revealing what's hidden in consciousness, making the invisible visible.</p>",
@@ -48,14 +46,65 @@
                         "title": "Historical Context",
                         "media": {
                             "type": "image",
-                            "src": "assets/images/module1/timothy-leary-portrait.jpg",
-                            "caption": "AI IMAGE PLACEHOLDER: Black and white archival-style portrait of Timothy Leary from the 1990s era, looking thoughtful and visionary, with subtle double-exposure overlay of early computer graphics and VR wireframes, representing the bridge between psychedelic era and digital future, documentary photography style, 16:9 aspect ratio"
+                            "src": "../assets/images/module1/tim_leary.jpg"
                         },
                         "mediaLayout": "full",
                         "content": "<p>The term \"cyberdelics\" was popularized by Timothy Leary in the 1990s. Leary, known for his earlier psychedelic research, recognized that technology could serve similar consciousness-expanding purposes as substances.</p><p>He foresaw a future where virtual reality and digital tools would become valid paths for inner exploration. We're now living in that future he envisioned.</p>",
                         "triggerLabel": "Continue"
                     }
                 ]
+            }
+        },
+        {
+            "id": "venn_1.1",
+            "title": "Synthesis Visualization",
+            "type": "interactive-simulation",
+            "content": {
+                "engine": "VennDiagramCombiner",
+                "params": {
+                    "mode": "combined",
+                    "data": {
+                        "leftCircle": {
+                            "label": "CYBER",
+                            "color": "#00D9FF",
+                            "etymology": {
+                                "title": "CYBER",
+                                "greek": "κυβερνητικός",
+                                "greekTransliteration": "(kybernētikós)",
+                                "meanings": [
+                                    "Greek: 'of or for steering, governance'",
+                                    "Modern: 'relating to computers, IT'"
+                                ],
+                                "concept": "Control • Navigation"
+                            }
+                        },
+                        "rightCircle": {
+                            "label": "DELIC",
+                            "color": "#9D4EDD",
+                            "etymology": {
+                                "title": "DELIC",
+                                "greek": "ψυχή + δῆλος",
+                                "greekTransliteration": "(psychē + dēlos)",
+                                "meanings": [
+                                    "Greek: 'soul/mind' + 'manifest/visible'",
+                                    "Translation: 'mind-manifesting'"
+                                ],
+                                "concept": "Consciousness"
+                            }
+                        },
+                        "merged": {
+                            "label": "CYBERDELICS",
+                            "color": "#FFD700",
+                            "greek": "cyber + delic = cyberdelics",
+                            "meaning": "The art and science of using technology to guide consciousness into expanded states of awareness",
+                            "synthesis": [
+                                "Navigation (cyber) of Consciousness (delic)",
+                                "Technological tools for inner exploration",
+                                "Precision guidance for transformative experiences"
+                            ]
+                        }
+                    }
+                }
             }
         },
         {

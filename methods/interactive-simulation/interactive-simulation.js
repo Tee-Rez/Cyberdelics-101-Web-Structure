@@ -65,6 +65,12 @@
 
                 // 3. Setup Controls
                 this._setupControls();
+
+                // CHECK FOR RESTORE FLAG
+                if (options.restore) {
+                    console.log('[InteractiveSimulation] Restoring state: Resetting engine.');
+                    this.onReset();
+                }
             },
 
             onDestroy: function () {

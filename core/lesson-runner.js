@@ -19,7 +19,6 @@
         get 'interactive-simulation'() { return window.InteractiveSimulationFactory; },
         get 'scenario-based'() { return window.ScenarioBasedFactory; },
         get 'knowledge-construction'() { return window.KnowledgeConstructionFactory; },
-        get 'choose-your-path'() { return window.ChooseYourPathFactory; }
     };
 
     class LessonRunner {
@@ -163,6 +162,30 @@
         }
 
         /**
+         * Go back to the previous module
+         */
+        prevModule() {
+            if (this.isTransitioning) return;
+            if (this.activeModuleIndex <= 0) return;
+
+            this.isTransitioning = true;
+            setTimeout(() => { this.isTransitioning = false; }, 1000);
+
+            console.log('[LessonRunner] prevModule called. Current Index:', this.activeModuleIndex);
+
+            // Cleanup
+            if (this.activeModule && this.activeModule.destroy) {
+                this.activeModule.destroy();
+            }
+
+            this.activeModuleIndex--;
+            const moduleConfig = this.currentLesson.modules[this.activeModuleIndex];
+
+            // RUN WITH RESTORE FLAG
+            this._runModule(moduleConfig, { restore: true });
+        }
+
+        /**
          * Jump to a specific module index (Used for state restoration)
          * @param {number} index 
          */
@@ -187,8 +210,22 @@
         /**
          * Instantiate and Run a specific Module
          */
-        _runModule(moduleConfig) {
+        /**
+         * Instantiate and Run a specific Module
+         * @param {Object} moduleConfig 
+         * @param {Object} [runtimeOptions] - Extra options like { restore: true }
+         */
+        _runModule(moduleConfig, runtimeOptions = {}) {
             const type = moduleConfig.type;
+
+            // UPDATE UI BACK BUTTON VISIBILITY
+            if (window.LessonUI && window.LessonUI.setBackAction) {
+                if (this.activeModuleIndex > 0) {
+                    window.LessonUI.setBackAction(() => this.prevModule());
+                } else {
+                    window.LessonUI.setBackAction(null); // Hide on first module
+                }
+            }
 
             const factory = MethodRegistry[type] || window[this._toPascalCase(type) + 'Factory'];
 
@@ -233,11 +270,47 @@
                 if (moduleConfig.content.sections) {
                     moduleConfig.content.sections.forEach((sec, idx) => {
                         const isFirst = idx === 0 ? 'active' : '';
-                        html += `
-                            <div class="reveal-section ${isFirst}" id="${sec.id}">
+
+                        // Parse layout: 'left' | 'right' | 'full' (default)
+                        const layout = sec.mediaLayout || 'full';
+                        const layoutClass = `pd-layout-${layout}`;
+
+                        // Generate Media HTML (if any)
+                        // Note: _generateMediaHTML returns a div with class 'media-container'
+                        // We might need to wrap it in 'pd-media-container' for specific styling or reuse existing
+                        let mediaHTML = this._generateMediaHTML(sec.media);
+
+                        // Adjust class for PD specific styling if needed, or rely on existing
+                        // The CSS expects .pd-media-container. Let's start with a replace or wrap.
+                        if (mediaHTML) {
+                            mediaHTML = mediaHTML.replace('media-container', 'pd-media-container');
+                        }
+
+                        let contentHTML = '';
+
+                        // Structure based on Layout
+                        if (layout === 'full') {
+                            // Stacked: Title -> Media -> Content
+                            contentHTML = `
                                 ${sec.title ? `<h2 class="section-title">${sec.title}</h2>` : ''}
-                                ${this._generateMediaHTML(sec.media)}
-                                <div class="section-content">${sec.content}</div>
+                                ${mediaHTML}
+                                <div class="pd-text-content section-content">${sec.content}</div>
+                            `;
+                        } else {
+                            // Split: Title -> Flex Wrapper (Media + Content)
+                            // Note: CSS uses flex-direction:row-reverse for 'right' layout
+                            contentHTML = `
+                                ${sec.title ? `<h2 class="section-title">${sec.title}</h2>` : ''}
+                                <div class="pd-flex-wrapper">
+                                    ${mediaHTML}
+                                    <div class="pd-text-content section-content">${sec.content}</div>
+                                </div>
+                            `;
+                        }
+
+                        html += `
+                            <div class="reveal-section ${isFirst} ${layoutClass}" id="${sec.id || 'sec-' + idx}">
+                                ${contentHTML}
                                 ${idx < moduleConfig.content.sections.length - 1 ? `<button class="reveal-trigger">${sec.triggerLabel || 'Next'}</button>` : ''}
                             </div>
                         `;
@@ -311,7 +384,8 @@
             const instance = factory();
 
             // Merge config and content for options (some factories look for items in options)
-            const options = { ...moduleConfig.config, ...moduleConfig.content };
+            // Also merge runtimeOptions (like restore: true)
+            const options = { ...moduleConfig.config, ...moduleConfig.content, ...runtimeOptions };
 
             // Special case for Knowledge Construction items which might be in content.items
             if (type === 'knowledge-construction' && moduleConfig.content && moduleConfig.content.items) {
@@ -376,13 +450,27 @@
         }
 
         _finishLesson() {
-            this.container.innerHTML = `
-                <div class="lesson-complete-screen">
-                    <h1>Lesson Complete</h1>
-                    <p>You have finished: ${this.currentLesson.title}</p>
-                    <button onclick="location.reload()">Restart</button>
+            const container = window.LessonUI ? window.LessonUI.getContentContainer() : this.container;
+
+            container.innerHTML = `
+                <div class="lesson-complete-screen" style="display:flex; flex-direction:column; align-items:center; justify-content:center; height:100%; text-align:center;">
+                    <h1 style="font-size:3rem; margin-bottom:1rem; color:var(--color-accent);">LESSON COMPLETE</h1>
+                    <p style="font-size:1.2rem; margin-bottom:2rem; max-width:600px;">
+                        You have finished: <br>
+                        <strong style="color:white;">${this.currentLesson.title}</strong>
+                    </p>
+                    <div style="display:flex; gap:1rem;">
+                        <button class="btn-primary" onclick="LessonRunner.prevModule()">◀ REVIEW</button>
+                        <button class="btn-primary" onclick="location.reload()">RESTART ↻</button>
+                    </div>
                 </div>
             `;
+
+            // Ensure Back button is handled in UI header too in case they want to use that
+            if (window.LessonUI && window.LessonUI.setBackAction) {
+                window.LessonUI.setBackAction(() => this.prevModule());
+            }
+
             console.log('[LessonRunner] Lesson Complete');
         }
 

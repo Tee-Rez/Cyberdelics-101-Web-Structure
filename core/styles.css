@@ -479,13 +479,66 @@ li strong {
     padding: 0 var(--space-lg);
     z-index: 100;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    position: relative;
+    /* For absolute centering if needed */
 }
 
+/* Left Section (Back Button) */
 .cd-header-left {
     display: flex;
     align-items: center;
-    width: 120px;
-    /* Fixed width for image container */
+    min-width: 120px;
+    /* Ensure balance with right side */
+    z-index: 2;
+    /* Above absolute center */
+}
+
+.cd-back-btn {
+    background: rgba(0, 217, 255, 0.1);
+    border: 1px solid var(--color-accent);
+    color: var(--color-accent);
+    padding: 4px 12px;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.cd-back-btn:hover {
+    background: var(--color-accent);
+    color: #000;
+    box-shadow: 0 0 10px var(--color-accent);
+}
+
+/* Center Section (Title & Progress) */
+.cd-header-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    /* Wide enough for title */
+    max-width: 600px;
+    pointer-events: none;
+    /* Let clicks pass through if empty areas overlap */
+    z-index: 1;
+}
+
+/* Right Section (Fullscreen & Status) */
+.cd-header-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    min-width: 120px;
+    /* Balance with left */
+    z-index: 2;
 }
 
 /* ... (unchanged lines) ... */
@@ -502,46 +555,9 @@ li strong {
     z-index: 100;
 }
 
-.cd-header-left {
-    display: flex;
-    align-items: center;
-    width: 120px;
-    /* Fixed width for image container */
-}
+/* Removed .cd-header-left .cd-header-image blocks as they were replaced */
 
-.cd-header-image {
-    width: 120px;
-    height: 120px;
-    background: rgba(0, 0, 0, 0.3);
-    border: 1px dashed var(--color-border);
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.cd-header-image img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-}
-
-/* Replaced by Image Container
-.cd-brand {
-    font-weight: 800;
-    letter-spacing: 2px;
-    color: var(--color-accent);
-    text-shadow: 0 0 10px var(--color-accent-glow);
-} */
-
-.cd-header-center {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 500px;
-}
+/* .cd-header-center was here, replaced above */
 
 .cd-lesson-title {
     font-size: var(--font-size-sm);

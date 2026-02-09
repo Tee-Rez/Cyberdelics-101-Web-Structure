@@ -67,6 +67,9 @@ class LessonUI {
         const topBar = document.createElement('div');
         topBar.className = 'cyberdeck-header';
         topBar.innerHTML = `
+                <div class="cd-header-left">
+                    <button class="cd-back-btn" style="display:none;" title="Go Back">◀ BACK</button>
+                </div>
                 <div class="cd-header-center">
                     <div class="cd-lesson-title">Loading...</div>
                     <div class="cd-progress-track">
@@ -79,6 +82,9 @@ class LessonUI {
                 </div>
             `;
         topSection.appendChild(topBar);
+
+        // Store reference
+        this.elements.backBtn = topBar.querySelector('.cd-back-btn');
         this.shell.appendChild(topSection);
 
         // Bind Full Screen Toggle
@@ -310,6 +316,22 @@ class LessonUI {
         if (typeof progress === 'number') {
             const pct = Math.min(100, Math.max(0, progress * 100));
             this.elements.progressFill.style.width = `${pct}%`;
+        }
+    }
+
+    /**
+     * Configure the Back Button
+     * @param {Function} [onClick] - Callback when clicked. If null, hides button.
+     */
+    setBackAction(onClick) {
+        if (!this.elements.backBtn) return;
+
+        if (typeof onClick === 'function') {
+            this.elements.backBtn.style.display = 'block';
+            this.elements.backBtn.onclick = onClick;
+        } else {
+            this.elements.backBtn.style.display = 'none';
+            this.elements.backBtn.onclick = null;
         }
     }
 

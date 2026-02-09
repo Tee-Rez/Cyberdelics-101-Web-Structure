@@ -66,6 +66,13 @@
                     }
                 }
 
+                // CHECK FOR RESTORE FLAG
+                if (options.restore) {
+                    console.log('[ProgressiveDisclosure] Restoring state: Resetting to start (First section only).');
+                    // Ensure we are reset
+                    this.onReset();
+                }
+
                 console.log('[ProgressiveDisclosure] Initialized with', this.sections.length, 'sections');
             },
 
@@ -174,6 +181,23 @@
 
             isAllRevealed: function () {
                 return this.getCurrentStep() >= this.sections.length;
+            },
+
+            /**
+             * Reveal all sections (for restoration or debug)
+             */
+            revealAll: function () {
+                this.sections.forEach(sec => {
+                    sec.classList.add('active');
+                    sec.classList.remove('hidden');
+                });
+
+                // Also show completion section if exists
+                const completeSec = this._getState().container.querySelector('.lesson-complete');
+                if (completeSec) completeSec.classList.add('active');
+
+                this.currentStep = this.sections.length;
+                this.updateProgress();
             },
 
             // ---------- Private Helpers ----------

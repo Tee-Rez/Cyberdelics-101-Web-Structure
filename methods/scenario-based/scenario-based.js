@@ -53,6 +53,12 @@
                 // Attach click handler
                 this._boundClickHandler = this._handleClick.bind(this);
                 container.addEventListener('click', this._boundClickHandler);
+
+                // CHECK FOR RESTORE FLAG
+                if (options.restore) {
+                    console.log('[ScenarioBased] Restoring state: Resetting to start.');
+                    this.onReset();
+                }
             },
 
             onDestroy: function () {
