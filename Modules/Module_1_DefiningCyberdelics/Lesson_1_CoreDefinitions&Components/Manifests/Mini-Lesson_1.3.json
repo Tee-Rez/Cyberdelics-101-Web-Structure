@@ -197,7 +197,7 @@
                 "sections": [
                     {
                         "title": "The McLuhan Principle",
-                        "content": "\"The medium is the message\" is a famous phrase, but in cyberdelics, it's reversed. The technology is the medium, but consciousness exploration is the message. The tool doesn't define the purpose—the purpose defines how the tool is used.",
+                        "content": "\"The medium is the message\" is a famous phrase, but in cyberdelics, it's reversed. The technology is the medium, but consciousness exploration is the message. The tool doesn't define the purpose; the purpose defines how the tool is used.",
                         "triggerLabel": "Continue"
                     },
                     {
@@ -207,7 +207,7 @@
                     },
                     {
                         "title": "Same Headset, Different Worlds",
-                        "content": "The same VR headset can transport you into a zombie shooter or into a guided journey through your own consciousness. The same biofeedback sensor can gamify productivity or reveal patterns in your meditative practice. Hardware is neutral—intention determines category.",
+                        "content": "The same VR headset can transport you into a zombie shooter or into a guided journey through your own consciousness. The same biofeedback sensor can gamify productivity or reveal patterns in your meditative practice. Hardware is neutral; intention determines category.",
                         "image": {
                             "src": "placeholder-medium-comparison.jpg",
                             "alt": "Same VR technology serving meditation vs entertainment",

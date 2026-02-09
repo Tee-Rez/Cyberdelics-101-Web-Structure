@@ -346,15 +346,36 @@ li strong {
 }
 
 /* ---------- Responsive ---------- */
-@media (max-width: 768px) {
+@media (max-width: 689px) {
     :root {
         --font-size-base: 15px;
-        --font-size-2xl: 28px;
-        --space-xl: 24px;
+        --font-size-2xl: 24px;
+        /* Smaller H1 */
+        --font-size-xl: 20px;
+        /* Smaller H2 */
+        --space-xl: 20px;
+        --space-2xl: 32px;
     }
 
     .lesson-container {
-        padding: var(--space-lg);
+        padding: var(--space-md);
+        /* Tighter padding */
+    }
+
+    /* Adjust header for mobile */
+    .cyberdeck-header {
+        padding: 0 var(--space-sm);
+    }
+
+    .cd-header-left,
+    .cd-header-right {
+        min-width: 80px;
+        /* Allow more space for center */
+    }
+
+    .cd-back-btn {
+        padding: 4px 8px;
+        font-size: 12px;
     }
 }
 
@@ -711,6 +732,49 @@ li strong {
     font-weight: bold;
     letter-spacing: 1px;
     margin-bottom: var(--space-sm);
+}
+
+/* ---------- Responsive Sidebar & Shell (Mobile/Tablet) ---------- */
+@media (max-width: 1000px) {
+    :root {
+        /* Reduce Header/Footer Sizes */
+        --logo-size: 60px;
+        --header-height: 50px;
+        /* Keep unchanged or slightly smaller */
+        --footer-height: 50px;
+        /* Reduce from 80px */
+    }
+
+    /* Top Section follows logo size */
+    .cyberdeck-top-section {
+        flex-basis: 60px;
+        height: 60px;
+        min-height: 60px;
+    }
+
+    /* Sidebars: Overlay Mode */
+    .cyberdeck-sidebar {
+        position: absolute;
+        height: 100%;
+        z-index: 500;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .cd-sidebar-left {
+        left: 0;
+    }
+
+    .cd-sidebar-right {
+        right: 0;
+    }
+
+    /* When NOT collapsed, they take full width or large partial width on mobile? 
+       Let's keep them 260px but overlaying. */
+
+    /* Ensure content doesn't think sidebars take space */
+    .cyberdeck-body {
+        position: relative;
+    }
 }
 
 .cd-stat-row {

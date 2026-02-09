@@ -272,3 +272,31 @@
 .pd-layout-full .pd-text-content {
     width: 100%;
 }
+
+/* --- Responsive Optimization (Mobile/Tablet < 900px) --- */
+@media (max-width: 900px) {
+
+    /* Force vertical stacking for ALL layouts */
+    .pd-layout-left .pd-flex-wrapper,
+    .pd-layout-right .pd-flex-wrapper {
+        flex-direction: column;
+        gap: var(--space-md);
+    }
+
+    /* Reset widths to full */
+    .pd-layout-left .pd-media-container,
+    .pd-layout-right .pd-media-container,
+    .pd-media-container {
+        width: 100%;
+        margin-bottom: var(--space-sm);
+    }
+
+    .pd-text-content {
+        width: 100%;
+    }
+
+    /* Optimize Padding for smaller screens */
+    .reveal-section .section-content {
+        padding: var(--space-md);
+    }
+}

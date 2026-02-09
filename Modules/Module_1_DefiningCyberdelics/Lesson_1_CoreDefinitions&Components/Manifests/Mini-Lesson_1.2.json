@@ -14,7 +14,7 @@
                 "sections": [
                     {
                         "title": "Opening",
-                        "content": "<p>A cyberdelic experience requires three essential components working together. Remove any one of these, and it's no longer cyberdelic. Think of them as three legs of a stool—all must be present for it to stand.</p>",
+                        "content": "<p>A cyberdelic experience requires three essential components working together. Remove any one of these, and it's no longer cyberdelic. Think of them as three legs of a stool; all must be present for it to stand.</p>",
                         "triggerLabel": "Show Components"
                     },
                     {
@@ -25,7 +25,7 @@
                             "caption": "AI IMAGE PLACEHOLDER: Modern VR headset (Meta Quest style), EEG headband, and HRV chest strap sensor arranged on a minimalist white surface, professional product photography, soft directional lighting, tech-forward aesthetic, subtle Flower of Life sacred geometry pattern faintly visible in background, clean composition, 16:9 aspect ratio"
                         },
                         "mediaLayout": "right",
-                        "content": "<p>The first component is digital technology as the medium. This includes VR headsets, AR experiences, and biofeedback devices like EEG sensors or heart rate monitors.</p><p>But not just any tech use qualifies—the technology must be purposefully designed to facilitate consciousness exploration.</p>",
+                        "content": "<p>The first component is digital technology as the medium. This includes VR headsets, AR experiences, and biofeedback devices like EEG sensors or heart rate monitors.</p><p>But not just any tech use qualifies; the technology must be purposefully designed to facilitate consciousness exploration.</p>",
                         "triggerLabel": "Next Component"
                     },
                     {
@@ -36,7 +36,7 @@
                             "caption": "AI IMAGE PLACEHOLDER: Split-screen composition showing a person in traditional meditation pose with eyes closed on the left side, and the same person wearing a VR headset in similar meditative pose on the right side, both surrounded by soft glowing mandala patterns and sacred geometry, ethereal purple and teal color palette, spiritual atmosphere meeting technology, sense of expanded consciousness, 16:9 aspect ratio"
                         },
                         "mediaLayout": "left",
-                        "content": "<p>The second component is the intentional cultivation of altered or expanded states of consciousness. This isn't accidental entertainment-induced immersion. It's a deliberate shift in awareness—whether that's deep meditative states, expanded perception, or transcendent experiences.</p><p>The technology is used specifically to facilitate these states.</p>",
+                        "content": "<p>The second component is the intentional cultivation of altered or expanded states of consciousness. This isn't accidental entertainment-induced immersion. It's a deliberate shift in awareness, whether that's deep meditative states, expanded perception, or transcendent experiences.</p><p>The technology is used specifically to facilitate these states.</p>",
                         "triggerLabel": "Next Component"
                     },
                     {
@@ -189,24 +189,7 @@
                         "choices": []
                     }
                 ]
-            },
-            "artifacts": [
-                {
-                    "id": "components_master",
-                    "label": "Components Master",
-                    "description": "You can identify the three essential components and recognize when they're all present.",
-                    "icon": "🔺",
-                    "trigger": "step_complete"
-                }
-            ]
-        }
-    ],
-    "artifacts": [
-        {
-            "id": "components_master",
-            "label": "Components Master",
-            "icon": "🔺",
-            "description": "Three components mastered."
+            }
         }
     ]
 }

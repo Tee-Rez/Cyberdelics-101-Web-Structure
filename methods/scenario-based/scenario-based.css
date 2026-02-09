@@ -290,6 +290,32 @@
     border-radius: var(--border-radius);
 }
 
-.summary-choice .icon {
-    color: var(--color-accent);
+
+/* --- Responsive Optimization (Phone < 690px) --- */
+@media (max-width: 689px) {
+    .scenario-choices {
+        gap: var(--space-sm);
+    }
+
+    .choice-option {
+        padding: var(--space-md);
+        /* Larger touch target */
+        flex-direction: column;
+        /* Stack label/text if needed, or keep row but ensure wrap */
+        align-items: flex-start;
+    }
+
+    .choice-label {
+        margin-bottom: var(--space-xs);
+    }
+
+    .choice-text {
+        font-size: var(--font-size-sm);
+        /* Slightly smaller text for density */
+    }
+
+    .scene-content {
+        padding: var(--space-lg);
+        /* Reduce padding from XL */
+    }
 }

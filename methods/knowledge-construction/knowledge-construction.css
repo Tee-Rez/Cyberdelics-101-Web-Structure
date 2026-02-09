@@ -178,7 +178,7 @@
 }
 
 /* Responsive adjustments */
-@media (max-width: 600px) {
+@media (max-width: 689px) {
     .kc-slot {
         min-width: 80px;
         font-size: 0.9rem;

@@ -40,6 +40,22 @@ class LessonUI {
         console.log('[LessonUI] Initializing with container:', container);
         this.container = container;
         this.renderShell();
+
+        // Responsive Check: Auto-collapse sidebars on small screens
+        if (window.innerWidth < 1000) {
+            if (this.elements.sidebarLeft) this.elements.sidebarLeft.classList.add('collapsed');
+            if (this.elements.sidebarRight) this.elements.sidebarRight.classList.add('collapsed');
+
+            // Adjust toggle button text
+            if (this.elements.sidebarLeft) {
+                const btn = this.elements.sidebarLeft.querySelector('.cd-toggle-btn');
+                if (btn) btn.textContent = '►';
+            }
+            if (this.elements.sidebarRight) {
+                const btn = this.elements.sidebarRight.querySelector('.cd-toggle-btn');
+                if (btn) btn.textContent = '◄';
+            }
+        }
     }
 
     /**

@@ -266,7 +266,7 @@
 }
 
 /* Mobile Responsiveness */
-@media (max-width: 600px) {
+@media (max-width: 689px) {
     .venn-label.main {
         font-size: 18px;
     }
