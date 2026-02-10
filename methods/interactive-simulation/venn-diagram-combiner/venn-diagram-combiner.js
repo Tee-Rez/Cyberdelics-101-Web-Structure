@@ -114,6 +114,20 @@
             this._state.centerX = width / 2;
             this._state.centerY = height / 2; // Center vertically
 
+            // Responsive Logic
+            this._state.isMobile = width < 600;
+
+            if (this._state.isMobile) {
+                // Mobile: Smaller circles, Dynamic Radius
+                // Max 60px, or 18% of width (e.g. 67px on 375px)
+                this.params.circleRadius = Math.min(60, width * 0.18);
+                this.params.maxDistance = 0.55; // Use more width
+            } else {
+                // Desktop: Reset to default
+                this.params.circleRadius = this.defaults.circleRadius;
+                this.params.maxDistance = this.defaults.maxDistance;
+            }
+
             // Update SVG ViewBox
             if (this.svg) {
                 this.svg.attr('viewBox', `0 0 ${width} ${height}`);
@@ -477,17 +491,53 @@
             // 2. Move Etymology Boxes
             if (this.leftEtymologyGroup) {
                 const boxW = this.leftEtymologySize.w;
-                // Moved further left and adjusted Y
-                this.leftEtymologyGroup.attr('transform', `translate(${left.x - r - boxW - 30}, ${left.y - 90})`);
-            }
-            if (this.rightEtymologyGroup) {
-                this.rightEtymologyGroup.attr('transform', `translate(${right.x + r + 30}, ${right.y - 90})`);
+                const boxH = this.leftEtymologySize.h;
+
+                if (this._state.isMobile) {
+                    // Mobile: Stack vertically below the interaction area
+                    // Scale down slightly to fit
+                    const scale = 0.8;
+                    const scaledW = boxW * scale;
+                    const scaledH = boxH * scale;
+
+                    // Position Left Box
+                    const xL = (this._state.width - scaledW) / 2;
+                    const yL = this._state.height - (scaledH * 2) - 20; // 2nd from bottom
+
+                    this.leftEtymologyGroup.attr('transform', `translate(${xL}, ${yL}) scale(${scale})`);
+
+                    // Position Right Box (Below Left)
+                    if (this.rightEtymologyGroup) {
+                        const yR = this._state.height - scaledH - 10;
+                        this.rightEtymologyGroup.attr('transform', `translate(${xL}, ${yR}) scale(${scale})`);
+                    }
+
+                    // Hide them if they overlap circles? 
+                    // For now assuming height is sufficient or they fallback to CSS overlay?
+                    // Actually, let's just push them out of the way or opacity them based on state?
+                    // "sideboxes move past the screen" -> Stacking them is safer.
+                } else {
+                    // Desktop
+                    this.leftEtymologyGroup.attr('transform', `translate(${left.x - r - boxW - 30}, ${left.y - 90})`);
+                    if (this.rightEtymologyGroup) {
+                        this.rightEtymologyGroup.attr('transform', `translate(${right.x + r + 30}, ${right.y - 90})`);
+                    }
+                }
             }
 
             // 2b. Move Drag Prompt (if exists)
             if (this.promptGroup) {
-                // Keep relative offset from left circle
-                this.promptGroup.attr('transform', `translate(${left.x + 175}, ${left.y - r + 250})`);
+                if (this._state.isMobile) {
+                    // Mobile: Center it below
+                    this.promptGroup.attr('transform', `translate(${this._state.centerX}, ${this._state.centerY + r + 50})`);
+                    this.promptGroup.select('path').attr('transform', 'rotate(90)'); // Point down? Or just keep it generic?
+                    // Actually, drag direction is horizontal...
+                    // Keep horizontal arrow but position better
+                    this.promptGroup.attr('transform', `translate(${left.x + r + 40}, ${left.y - 40})`);
+                } else {
+                    // Keep relative offset from left circle
+                    this.promptGroup.attr('transform', `translate(${left.x + 175}, ${left.y - r + 250})`);
+                }
             }
 
             // 3. Labels & Opacity logic

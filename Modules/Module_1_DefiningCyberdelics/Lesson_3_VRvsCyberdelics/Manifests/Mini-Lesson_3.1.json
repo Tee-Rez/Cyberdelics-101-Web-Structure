@@ -1,0 +1,320 @@
+{
+    "title": "Entertainment vs. Transformation",
+    "description": "Distinguishing cyberdelic VR from entertainment/gaming VR by understanding purpose and attention direction.",
+    "theme": {
+        "primaryColor": "#5900ff",
+        "fontBody": "Rajdhani, sans-serif"
+    },
+    "modules": [
+        {
+            "id": "entertainment_pd_3.1",
+            "title": "Same Technology, Different Worlds",
+            "type": "progressive-disclosure",
+            "content": {
+                "sections": [
+                    {
+                        "title": "Same Technology, Different Worlds",
+                        "content": "<p>Not all VR is cyberdelic. Most VR is entertainment. What determines the category isn't the hardware—headsets are neutral—but the purpose behind the design.</p>",
+                        "triggerLabel": "Direction of Attention"
+                    },
+                    {
+                        "title": "The Direction of Attention",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module1/lesson3/attention_flow.jpg",
+                            "alt": "Diagram: Outward attention (Entertainment) vs Inward attention (Cyberdelic)"
+                        },
+                        "mediaLayout": "left",
+                        "content": "<p><strong>Entertainment VR</strong> directs attention outward into fantasy, narrative, or stimulation. You engage with external content.<br><br><strong>Cyberdelic VR</strong> directs attention inward toward awareness itself. You explore your own consciousness.</p>",
+                        "triggerLabel": "Questions We Ask"
+                    },
+                    {
+                        "title": "Entertainment Asks: What Can I Experience?",
+                        "content": "<p>Entertainment VR focuses on novelty and excitement: \"What world can I explore? What adventure can I have?\" It's about external engagement.</p>",
+                        "triggerLabel": "Cyberdelics Asks"
+                    },
+                    {
+                        "title": "Cyberdelics Asks: What Can I Discover?",
+                        "content": "<p>Cyberdelic VR focuses on awareness and transformation: \"What patterns exist in my mind? How do I relate to experience?\" The environment serves inner discovery.</p>",
+                        "triggerLabel": "Different Needs"
+                    },
+                    {
+                        "title": "Not Better or Worse, Just Different",
+                        "content": "<p>Entertainment offers joy and fun. Cyberdelics offer growth and insight. Neither is superior; they serve different human needs. Key takeaway: Know which one you're engaging with.</p>",
+                        "triggerLabel": "Test Your Eye"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "entertainment_scenario_3.1",
+            "title": "Is It Cyberdelic?",
+            "type": "scenario-based",
+            "content": {
+                "scenes": [
+                    {
+                        "id": "intro",
+                        "narrative": "<h3>Dev Studio Challenge</h3><p>Evaluate these three VR experiences. Which ones qualify as cyberdelic?</p>",
+                        "choices": [
+                            {
+                                "id": "exp1",
+                                "label": "Review Experience 1",
+                                "outcome": "exp1"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "exp1",
+                        "narrative": "<h3>EXPERIENCE 1: Zombie Apocalypse</h3><p>Fast-paced shooter. Waves of zombies. High scores. Heart rate monitoring shows stress levels.</p><p><strong>Is this cyberdelic?</strong></p>",
+                        "choices": [
+                            {
+                                "id": "e1_a",
+                                "label": "Yes (uses VR + physiology)",
+                                "outcome": "e1_wrong_a"
+                            },
+                            {
+                                "id": "e1_b",
+                                "label": "Yes (biofeedback present)",
+                                "outcome": "e1_wrong_b"
+                            },
+                            {
+                                "id": "e1_c",
+                                "label": "No (purpose is entertainment)",
+                                "outcome": "e1_correct"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "e1_wrong_a",
+                        "narrative": "<h3>Incorrect</h3><p>Adrenaline isn't consciousness exploration. The purpose is fun/stress, not insight.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "exp1"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "e1_wrong_b",
+                        "narrative": "<h3>Incorrect</h3><p>Biofeedback alone doesn't make it cyberdelic if used just for scoring.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "exp1"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "e1_correct",
+                        "narrative": "<h3>Correct!</h3><p>This is entertainment. Attention is directed outward at zombies, not inward at awareness.</p>",
+                        "choices": [
+                            {
+                                "id": "next",
+                                "label": "Review Experience 2",
+                                "outcome": "exp2"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "exp2",
+                        "narrative": "<h3>EXPERIENCE 2: Breathwork Journey</h3><p>Guided breathing. Visuals respond to breath rhythm. Biofeedback tracks coherence. Goal: Altered states via breath.</p><p><strong>Is this cyberdelic?</strong></p>",
+                        "choices": [
+                            {
+                                "id": "e2_a",
+                                "label": "No (breathing isn't tech)",
+                                "outcome": "e2_wrong_a"
+                            },
+                            {
+                                "id": "e2_b",
+                                "label": "Yes (tech serves transformation)",
+                                "outcome": "e2_correct"
+                            },
+                            {
+                                "id": "e2_c",
+                                "label": "Only for experts",
+                                "outcome": "e2_wrong_c"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "e2_correct",
+                        "narrative": "<h3>Correct!</h3><p>Technology + Intentional Altered State + Transformational Purpose = Cyberdelic.</p>",
+                        "choices": [
+                            {
+                                "id": "next",
+                                "label": "Review Experience 3",
+                                "outcome": "exp3"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "e2_wrong_a",
+                        "narrative": "<h3>Incorrect</h3><p>The VR *is* the technology enhancing the breathwork practice.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "exp2"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "e2_wrong_c",
+                        "narrative": "<h3>Incorrect</h3><p>Cyberdelic design intent defines the category, not the user's expertise level.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "exp2"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "exp3",
+                        "narrative": "<h3>EXPERIENCE 3: Mountain Climbing Sim</h3><p>Realistic climbing. Strategy, physical engagement, achievement. Beautiful views.</p><p><strong>Is this cyberdelic?</strong></p>",
+                        "choices": [
+                            {
+                                "id": "e3_a",
+                                "label": "Yes (nature is spiritual)",
+                                "outcome": "e3_wrong_a"
+                            },
+                            {
+                                "id": "e3_b",
+                                "label": "No (adventure entertainment)",
+                                "outcome": "e3_correct"
+                            },
+                            {
+                                "id": "e3_c",
+                                "label": "Depends on user",
+                                "outcome": "e3_wrong_c"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "e3_correct",
+                        "narrative": "<h3>Correct!</h3><p>This is simulation/adventure. The design serves achievement, not inner exploration.</p>",
+                        "choices": []
+                    },
+                    {
+                        "id": "e3_wrong_c",
+                        "narrative": "<h3>Incorrect</h3><p>User mindfulness doesn't change the design category. The simulator is designed for adventure, not explicit consciousness exploration.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "exp3"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "e3_wrong_a",
+                        "narrative": "<h3>Incorrect</h3><p>Beautiful environments don't equal cyberdelic intent. The design focus is climbing achievement.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "exp3"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "entertainment_quiz_3.1",
+            "title": "Transformation vs. Entertainment Quiz",
+            "type": "scenario-based",
+            "content": {
+                "scenes": [
+                    {
+                        "id": "q1",
+                        "narrative": "<h3>Question 1</h3><p><strong>What primarily distinguishes cyberdelic VR from entertainment VR?</strong></p>",
+                        "choices": [
+                            {
+                                "id": "q1_a",
+                                "label": "Advanced technology level",
+                                "outcome": "q1_wrong_a"
+                            },
+                            {
+                                "id": "q1_b",
+                                "label": "Direction of attention & purpose",
+                                "outcome": "q2"
+                            },
+                            {
+                                "id": "q1_c",
+                                "label": "Always uses biofeedback",
+                                "outcome": "q1_wrong_c"
+                            },
+                            {
+                                "id": "q1_d",
+                                "label": "Slower pace",
+                                "outcome": "q1_wrong_d"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "q1_wrong_a",
+                        "narrative": "<p>Incorrect. Tech level doesn't define purpose.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "q1"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "q1_wrong_c",
+                        "narrative": "<p>Incorrect. Biofeedback is common but not required.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "q1"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "q2",
+                        "narrative": "<h3>Question 2</h3><p>Correct! <strong>Can the same VR headset be used for both entertainment and cyberdelic experiences?</strong></p>",
+                        "choices": [
+                            {
+                                "id": "q2_a",
+                                "label": "No, requires different gear",
+                                "outcome": "q2_wrong_a"
+                            },
+                            {
+                                "id": "q2_b",
+                                "label": "Yes, hardware is neutral",
+                                "outcome": "quiz_complete"
+                            },
+                            {
+                                "id": "q2_c",
+                                "label": "Only high-end headsets work",
+                                "outcome": "q2_wrong_c"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "quiz_complete",
+                        "narrative": "<h3>Quiz Complete!</h3><p>You can clearly distinguish the difference between entertainment and transformation.</p>",
+                        "choices": []
+                    },
+                    {
+                        "id": "q2_wrong_a",
+                        "narrative": "<p>Incorrect. The software design determines the category, not the hardware.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "q2"
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

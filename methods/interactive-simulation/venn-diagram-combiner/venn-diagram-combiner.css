@@ -268,19 +268,29 @@
 /* Mobile Responsiveness */
 @media (max-width: 689px) {
     .venn-label.main {
-        font-size: 18px;
+        font-size: 16px;
+        /* Smaller */
     }
 
     .venn-label.merged {
-        font-size: 24px;
+        font-size: 20px;
     }
 
     .etymology-text {
-        font-size: 9px;
+        font-size: 10px;
+        /* Readable minimum */
     }
 
     .venn-info-panel {
         padding: 15px;
         width: 95%;
+        bottom: 10px;
+        max-height: 40vh;
+        /* Prevent covering too much */
+        overflow-y: auto;
+    }
+
+    .venn-complete-btn {
+        width: 80%;
     }
 }

@@ -1,0 +1,178 @@
+{
+    "title": "The Overlap Zone",
+    "description": "Understanding the overlap between meditation tech and cyberdelics, and identifying the tipping point.",
+    "theme": {
+        "primaryColor": "#5900ff",
+        "fontBody": "Rajdhani, sans-serif"
+    },
+    "modules": [
+        {
+            "id": "overlap_pd_4.1",
+            "title": "Significant Common Ground",
+            "type": "progressive-disclosure",
+            "content": {
+                "sections": [
+                    {
+                        "title": "Significant Common Ground",
+                        "content": "<p>Meditation tech and cyberdelics have substantial overlap. Many apps use technology to support contemplation. The boundaries aren't always clear, and that's okay.</p>",
+                        "triggerLabel": "Meditation Tech"
+                    },
+                    {
+                        "title": "Simple Meditation Apps",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module1/lesson4/meditation_apps.jpg",
+                            "alt": "Phone displaying meditation app interface"
+                        },
+                        "mediaLayout": "left",
+                        "content": "<p>Apps like Headspace/Calm are valuable for mindfulness but typically don't use immersive VR or biofeedback to intentionally create altered states. They are <strong>meditation tech</strong>, not cyberdelic.</p>",
+                        "triggerLabel": "Cyberdelic Territory"
+                    },
+                    {
+                        "title": "VR Meditation With Biofeedback",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module1/lesson4/venn_diagram.jpg",
+                            "alt": "Venn Diagram: Meditation Tech vs. Cyberdelics overlap"
+                        },
+                        "mediaLayout": "full",
+                        "content": "<p>When practice moves into immersive VR with biofeedback that responds to your state, enabling profound altered states, you've crossed into <strong>cyberdelic territory</strong>. Tech becomes a catalyst, not just a delivery mechanism.</p>",
+                        "triggerLabel": "Intensity Scale"
+                    },
+                    {
+                        "title": "The Intensity Question",
+                        "content": "<p>It's a spectrum. How immersive is it? How sophisticated is the biofeedback? How profound are the intended states? The more intense and intentional, the more cyberdelic.</p>",
+                        "triggerLabel": "Both Valid"
+                    },
+                    {
+                        "title": "Both Are Valid",
+                        "content": "<p>This isn't about one being better. Simple apps serve millions. Cyberdelics offer deeper exploration. The field benefits from tools at different intensity levels.</p>",
+                        "triggerLabel": "Categorize It"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "venn_categorizer_sim_4.1",
+            "title": "Meditation Tech ∩ Cyberdelics Venn Diagram",
+            "type": "interactive-simulation",
+            "content": {
+                "engine": "VennCategorizer",
+                "placeholder": true,
+                "notes": "Interactive drag-and-drop categorization into 'Meditation Tech', 'Overlap', or 'Cyberdelic'. Development pending.",
+                "graphic_src": "../assets/images/module1/lesson4/venn_categorizer_placeholder.jpg"
+            }
+        },
+        {
+            "id": "overlap_quiz_4.1",
+            "title": "Overlap Quiz",
+            "type": "scenario-based",
+            "content": {
+                "scenes": [
+                    {
+                        "id": "q1",
+                        "narrative": "<h3>Question 1</h3><p><strong>What pushes a meditation app from basic tech into cyberdelic territory?</strong></p>",
+                        "choices": [
+                            {
+                                "id": "q1_a",
+                                "label": "Number of sessions",
+                                "outcome": "q1_wrong_a"
+                            },
+                            {
+                                "id": "q1_b",
+                                "label": "Immersive VR + Biofeedback + Intent",
+                                "outcome": "q2"
+                            },
+                            {
+                                "id": "q1_c",
+                                "label": "Price",
+                                "outcome": "q1_wrong_c"
+                            },
+                            {
+                                "id": "q1_d",
+                                "label": "User count",
+                                "outcome": "q1_wrong_d"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "q1_wrong_a",
+                        "narrative": "<p>Incorrect. Quantity isn't the factor. Immersion and intent matter.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "q1"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "q1_wrong_c",
+                        "narrative": "<p>Incorrect. Cost is irrelevant. Technology and intent define the category.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "q1"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "q2",
+                        "narrative": "<h3>Question 2</h3><p>Correct! <strong>Where would a VR meditation environment without biofeedback fall?</strong></p>",
+                        "choices": [
+                            {
+                                "id": "q2_a",
+                                "label": "Purely meditation tech",
+                                "outcome": "q2_wrong_a"
+                            },
+                            {
+                                "id": "q2_b",
+                                "label": "Overlap zone",
+                                "outcome": "q2_correct"
+                            },
+                            {
+                                "id": "q2_c",
+                                "label": "Purely cyberdelic",
+                                "outcome": "q2_wrong_c"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "q2_correct",
+                        "narrative": "<h3>Correct!</h3><p>It sits in the overlap—more immersive than apps, but less integrated than full cyberdelic protocols.</p>",
+                        "choices": [
+                            {
+                                "id": "finish",
+                                "label": "Finish",
+                                "outcome": "flow_next_module"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "q2_wrong_a",
+                        "narrative": "<p>Incorrect. VR adds immersion that moves it beyond basic apps towards the overlap.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "q2"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "q2_wrong_c",
+                        "narrative": "<p>Incorrect. Without biofeedback/interaction, it likely hasn't crossed fully into independent cyberdelic territory.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "q2"
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

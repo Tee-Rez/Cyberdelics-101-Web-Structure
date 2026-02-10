@@ -32,7 +32,11 @@
     border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.sim-canvas {
+.sim-canvas,
+.sim-viewport svg {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     display: block;

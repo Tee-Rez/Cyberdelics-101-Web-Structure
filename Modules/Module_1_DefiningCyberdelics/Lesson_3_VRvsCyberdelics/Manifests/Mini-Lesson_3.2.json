@@ -1,0 +1,61 @@
+{
+    "title": "Design Features of Cyberdelic Experiences",
+    "description": "Identifying the specific design characteristics that create a cyberdelic experience.",
+    "theme": {
+        "primaryColor": "#5900ff",
+        "fontBody": "Rajdhani, sans-serif"
+    },
+    "modules": [
+        {
+            "id": "design_checklist_sim_3.2",
+            "title": "Cyberdelic Design Feature Evaluator",
+            "type": "interactive-simulation",
+            "content": {
+                "engine": "DesignFeatureChecklist",
+                "placeholder": true,
+                "notes": "Interactive checklist evaluating features: Contemplative Pacing, Minimal Goals, Biofeedback, Inward Attention, Integration, Facilitation. Development pending.",
+                "graphic_src": "../assets/images/module1/lesson3/checklist_placeholder.jpg"
+            }
+        },
+        {
+            "id": "design_pd_3.2",
+            "title": "Recognizing the Patterns",
+            "type": "progressive-disclosure",
+            "content": {
+                "sections": [
+                    {
+                        "title": "Recognizable Patterns",
+                        "content": "<p>Cyberdelic experiences have consistent design characteristics. Seeing these patterns helps you evaluate any technology experience.</p>",
+                        "triggerLabel": "Spectrum View"
+                    },
+                    {
+                        "title": "It's a Spectrum, Not Binary",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module1/lesson3/spectrum_bar.jpg",
+                            "alt": "Spectrum bar: Entertainment (Left) to Cyberdelic (Right)"
+                        },
+                        "mediaLayout": "full",
+                        "content": "<p>Most experiences aren't purely one or the other. A meditation app might have gamified achievements. What matters is the primary intention and which features dominate.</p>",
+                        "triggerLabel": "Purposeful Design"
+                    },
+                    {
+                        "title": "Design Features Serve Purpose",
+                        "content": "<p>These features aren't arbitrary. <br>• <strong>Contemplative Pacing</strong> allows presence.<br>• <strong>Minimal Goals</strong> reduce achievement focus.<br>• <strong>Biofeedback</strong> creates awareness.<br>• <strong>Integration</strong> supports meaning.</p>",
+                        "triggerLabel": "Quality Variance"
+                    },
+                    {
+                        "title": "Quality Varies",
+                        "content": "<p>Presence of features doesn't guarantee quality, but their absence usually indicates an entertainment focus.</p>",
+                        "triggerLabel": "Hybrids"
+                    },
+                    {
+                        "title": "Hybrid Approaches",
+                        "content": "<p>Some experiences blend both. The best hybrids keep entertainment mechanics in service of transformation, not the other way around.</p>",
+                        "triggerLabel": "Complete Lesson"
+                    }
+                ]
+            }
+        }
+    ]
+}

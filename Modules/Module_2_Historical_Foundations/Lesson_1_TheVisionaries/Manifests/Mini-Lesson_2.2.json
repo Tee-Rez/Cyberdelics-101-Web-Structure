@@ -1,0 +1,188 @@
+{
+    "title": "The Pioneer Circle",
+    "description": "Meet the pioneers who established the foundations of VR: Jaron Lanier, Brenda Laurel, and Myron Krueger.",
+    "theme": {
+        "primaryColor": "#5900ff",
+        "fontBody": "Rajdhani, sans-serif"
+    },
+    "modules": [
+        {
+            "id": "pioneers_pd_2.2",
+            "title": "Establishing the Foundations",
+            "type": "progressive-disclosure",
+            "content": {
+                "sections": [
+                    {
+                        "title": "Jaron Lanier—Naming Virtual Reality",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module2/lanier_dataglove.jpg",
+                            "alt": "Jaron Lanier with DataGlove"
+                        },
+                        "mediaLayout": "left",
+                        "content": "<p>In 1987, Jaron Lanier coined the term \"virtual reality\" and founded VPL Research. His systems cost hundreds of thousands of dollars, but he articulated a humanistic vision: \"Virtual reality is the first medium that doesn't narrow us. Instead, it expands what we can be.\" He saw VR as a consciousness expansion tool.</p>",
+                        "triggerLabel": "Transformation"
+                    },
+                    {
+                        "title": "Brenda Laurel—Transformation Through Technology",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module2/brenda_laurel.jpg",
+                            "alt": "Brenda Laurel portrait"
+                        },
+                        "mediaLayout": "right",
+                        "content": "<p>Brenda Laurel argued that human-computer interaction should create transformative experiences. In \"Computers as Theatre\" (1991), she wrote: \"The goal of interaction design should not just be usability, but the transformation of the user through the experience.\" This became core to cyberdelic practice.</p>",
+                        "triggerLabel": "Artificial Reality"
+                    },
+                    {
+                        "title": "Myron Krueger—Artificial Reality",
+                        "content": "<p>Myron Krueger coined \"artificial reality\" for his VIDEOPLACE system (1974-1990). Users moved naturally in space while cameras tracked them. His insight: responsive environments can alter consciousness even without headsets. This influenced later cyberdelic design.</p>",
+                        "triggerLabel": "The Gap"
+                    },
+                    {
+                        "title": "The Gap They Couldn't Cross",
+                        "content": "<p>These pioneers had grand visions, but 1980s-90s technology couldn't deliver. Headsets weighed pounds, resolution was poor, and systems cost over $100,000. The vision existed, the capability didn't.</p>",
+                        "triggerLabel": "Legacy"
+                    },
+                    {
+                        "title": "What They Established",
+                        "content": "<p>Despite limitations, they established crucial foundations: VR as transformative space, embodied interaction, and presence as a psychological state. These insights became proven principles when hardware finally improved.</p>",
+                        "triggerLabel": "Test Understanding"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pioneers_quiz_2.2",
+            "title": "Pioneer Quiz",
+            "type": "scenario-based",
+            "content": {
+                "scenes": [
+                    {
+                        "id": "q1",
+                        "narrative": "<h3>Question 1</h3><p><strong>What key insight did Brenda Laurel contribute to early VR thinking?</strong></p>",
+                        "choices": [
+                            {
+                                "id": "q1_a",
+                                "label": "Headsets should be light",
+                                "outcome": "q1_wrong_a"
+                            },
+                            {
+                                "id": "q1_b",
+                                "label": "Transformation through experience, not just usability",
+                                "outcome": "q2"
+                            },
+                            {
+                                "id": "q1_c",
+                                "label": "VR should replace reality",
+                                "outcome": "q1_wrong_c"
+                            },
+                            {
+                                "id": "q1_d",
+                                "label": "Only gamers should use VR",
+                                "outcome": "q1_wrong_d"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "q1_wrong_a",
+                        "narrative": "<p>Incorrect. Her focus was on design philosophy and transformation, not hardware specs.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "q1"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "q1_wrong_c",
+                        "narrative": "<p>Incorrect. She advocated for augmentation and growth, not replacement.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "q1"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "q1_wrong_d",
+                        "narrative": "<p>Incorrect. She brought theatrical thinking and wanted diverse contributors.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "q1"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "q2",
+                        "narrative": "<h3>Question 2</h3><p>Correct! <strong>Why couldn't early pioneers fully realize their visions?</strong></p>",
+                        "choices": [
+                            {
+                                "id": "q2_a",
+                                "label": "Regulations banned it",
+                                "outcome": "q2_wrong_a"
+                            },
+                            {
+                                "id": "q2_b",
+                                "label": "No interest existed",
+                                "outcome": "q2_wrong_b"
+                            },
+                            {
+                                "id": "q2_c",
+                                "label": "Technology wasn't ready (cost, sickness, poor displays)",
+                                "outcome": "quiz_complete"
+                            },
+                            {
+                                "id": "q2_d",
+                                "label": "Conceptual disagreement",
+                                "outcome": "q2_wrong_d"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "quiz_complete",
+                        "narrative": "<h3>Quiz Complete!</h3><p>You've mastered the history of the early VR pioneers.</p>",
+                        "choices": []
+                    },
+                    {
+                        "id": "q2_wrong_a",
+                        "narrative": "<p>Incorrect. There were no bans. Technical limitation was the barrier.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "q2"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "q2_wrong_b",
+                        "narrative": "<p>Incorrect. Interest was high, but the tech couldn't deliver.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "q2"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "q2_wrong_d",
+                        "narrative": "<p>Incorrect. They generally agreed on the vision; hardware was the issue.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "q2"
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

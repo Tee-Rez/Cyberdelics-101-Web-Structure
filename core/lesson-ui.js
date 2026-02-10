@@ -84,7 +84,7 @@ class LessonUI {
         topBar.className = 'cyberdeck-header';
         topBar.innerHTML = `
                 <div class="cd-header-left">
-                    <button class="cd-back-btn" style="display:none;" title="Go Back">◀ BACK</button>
+                    <button class="cd-back-btn" style="display:none;" title="Go Back">◀ <span class="cd-back-text">BACK</span></button>
                 </div>
                 <div class="cd-header-center">
                     <div class="cd-lesson-title">Loading...</div>
@@ -93,8 +93,8 @@ class LessonUI {
                     </div>
                 </div>
                 <div class="cd-header-right">
+                    <span class="cd-fs-label">FULL SCREEN</span>
                     <button class="cd-fullscreen-btn" title="Toggle Full Screen">⛶</button>
-                    <span class="cd-status">ONLINE</span>
                 </div>
             `;
         topSection.appendChild(topBar);

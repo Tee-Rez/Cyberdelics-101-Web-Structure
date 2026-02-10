@@ -16,11 +16,18 @@
     const DATA = window.CyberdelicData;
 
 
-    const CONFIG = {
+    // Base Config (Defaults)
+    const BASE_CONFIG = {
         svg: { width: 1000, height: 800, centerX: 500, centerY: 400 },
         nodes: { domainRadius: 60, centerRadiusMin: 20, centerRadiusMax: 80, orbitRadius: 300 },
         connections: { minWidth: 1, maxWidth: 8 },
-        timeline: { startYear: 2015, endYear: 2025 }
+        timeline: { startYear: 2015, endYear: 2025 },
+        styles: {
+            labelSize: 10,
+            centerLabelSize: 10,
+            contentHeaderSize: 7,
+            contentTextSize: 5.5
+        }
     };
 
     /**
@@ -46,12 +53,16 @@
         isZoomed: false,
         zoomedNode: null,
         selectedNode: null,
+        simConfig: null, // Instance copy of BASE_CONFIG
 
         init: function (container, params) {
             if (!window.CyberdelicData) {
                 console.error('CyberdelicData not loaded!');
                 return;
             }
+
+            // 0. Clone Config
+            this.simConfig = JSON.parse(JSON.stringify(BASE_CONFIG));
 
             // 1. Create SVG Container if not exists
             let svg = container.querySelector('svg.convergence-viz');
@@ -60,7 +71,7 @@
                 container.innerHTML = '';
                 svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
                 svg.setAttribute('class', 'convergence-viz');
-                svg.setAttribute('viewBox', `0 0 ${CONFIG.svg.width} ${CONFIG.svg.height}`);
+                svg.setAttribute('viewBox', `0 0 ${this.simConfig.svg.width} ${this.simConfig.svg.height}`);
                 svg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
                 svg.style.width = '100%';
                 svg.style.height = '100%';
@@ -94,8 +105,40 @@
         },
 
         resize: function (width, height) {
-            // SVG handles scaling via viewBox, so we mostly ignore this
-            // unless we want to change aspect ratio
+            // Responsive Logic
+            const isMobile = width < 600;
+
+            if (isMobile) {
+                // Mobile Adjustments (Scale up text relative to SVG viewbox)
+                this.simConfig.styles.labelSize = 24;
+                this.simConfig.styles.centerLabelSize = 20;
+                this.simConfig.styles.contentHeaderSize = 14;
+                this.simConfig.styles.contentTextSize = 12;
+            } else {
+                // Desktop Reset
+                this.simConfig.styles.labelSize = 10;
+                this.simConfig.styles.centerLabelSize = 10;
+                this.simConfig.styles.contentHeaderSize = 7;
+                this.simConfig.styles.contentTextSize = 5.5;
+            }
+
+            // Re-render text elements that depend on these sizes
+            // For simplicity, we can re-create the static nodes or update them selectors
+            this.svg.querySelectorAll('.node-label').forEach(txt => {
+                // Assuming standard label
+                txt.setAttribute('font-size', this.simConfig.styles.labelSize); // SVG specific prop
+                // Also might need to adjust spacing
+            });
+
+            // Re-create Center Node to update label
+            const centerGroup = this.svg.getElementById('center-node');
+            if (centerGroup) centerGroup.remove();
+            this._createCenterNode();
+
+            // Refine: Update content rings if zoomed
+            if (this.isZoomed && this.zoomedNode) {
+                this._createContentTags(this.zoomedNode);
+            }
         },
 
         update: function (dt, params) {
@@ -127,8 +170,8 @@
                 const angleRad = (domain.angle * Math.PI) / 180;
                 return {
                     ...domain,
-                    x: CONFIG.svg.centerX + CONFIG.nodes.orbitRadius * Math.cos(angleRad),
-                    y: CONFIG.svg.centerY + CONFIG.nodes.orbitRadius * Math.sin(angleRad)
+                    x: this.simConfig.svg.centerX + this.simConfig.nodes.orbitRadius * Math.cos(angleRad),
+                    y: this.simConfig.svg.centerY + this.simConfig.nodes.orbitRadius * Math.sin(angleRad)
                 };
             });
         },
@@ -185,20 +228,20 @@
 
             const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
             circle.id = 'center-circle';
-            circle.setAttribute('cx', CONFIG.svg.centerX);
-            circle.setAttribute('cy', CONFIG.svg.centerY);
+            circle.setAttribute('cx', this.simConfig.svg.centerX);
+            circle.setAttribute('cy', this.simConfig.svg.centerY);
             circle.setAttribute('fill', 'rgba(255,255,255,0.15)');
             circle.setAttribute('stroke', 'white');
             g.appendChild(circle);
 
             const label = document.createElementNS('http://www.w3.org/2000/svg', 'text');
             label.textContent = 'CYBERDELICS';
-            label.setAttribute('x', CONFIG.svg.centerX);
-            label.setAttribute('y', CONFIG.svg.centerY);
+            label.setAttribute('x', this.simConfig.svg.centerX);
+            label.setAttribute('y', this.simConfig.svg.centerY);
             label.setAttribute('text-anchor', 'middle');
             label.setAttribute('dy', '0.35em');
             label.setAttribute('fill', 'white');
-            label.style.fontSize = '10px';
+            label.setAttribute('font-size', this.simConfig.styles.centerLabelSize); // Dynamic Size
             label.style.pointerEvents = 'none';
             g.appendChild(label);
 
@@ -216,7 +259,7 @@
                 circle.classList.add('node-circle');
                 circle.setAttribute('cx', d.x);
                 circle.setAttribute('cy', d.y);
-                circle.setAttribute('r', CONFIG.nodes.domainRadius);
+                circle.setAttribute('r', this.simConfig.nodes.domainRadius);
                 circle.setAttribute('fill', d.color);
                 circle.setAttribute('fill-opacity', 0.3);
                 circle.setAttribute('stroke', d.color);
@@ -229,9 +272,10 @@
                     const txt = document.createElementNS('http://www.w3.org/2000/svg', 'text');
                     txt.classList.add('node-label');
                     txt.setAttribute('x', d.x);
-                    txt.setAttribute('y', d.y + (i - (lines.length - 1) / 2) * 18);
+                    txt.setAttribute('y', d.y + (i - (lines.length - 1) / 2) * (this.simConfig.styles.labelSize * 1.8)); // Spacing relative to font
                     txt.setAttribute('text-anchor', 'middle');
                     txt.setAttribute('fill', d.color);
+                    txt.setAttribute('font-size', this.simConfig.styles.labelSize); // Dynamic Size
                     txt.textContent = line;
                     g.appendChild(txt);
                 });
@@ -253,7 +297,7 @@
                 const line = this.svg.getElementById(`conn-${i}`);
                 const glow = this.svg.getElementById(`conn-glow-${i}`);
                 if (line && glow) {
-                    const width = CONFIG.connections.minWidth + (CONFIG.connections.maxWidth - CONFIG.connections.minWidth) * strength;
+                    const width = this.simConfig.connections.minWidth + (this.simConfig.connections.maxWidth - this.simConfig.connections.minWidth) * strength;
                     line.setAttribute('stroke-width', width);
                     line.setAttribute('opacity', strength * 0.8);
                     glow.setAttribute('stroke-width', width + 4);
@@ -262,8 +306,8 @@
             });
 
             // Update Center
-            const progress = (year - CONFIG.timeline.startYear) / (CONFIG.timeline.endYear - CONFIG.timeline.startYear);
-            const size = CONFIG.nodes.centerRadiusMin + (CONFIG.nodes.centerRadiusMax - CONFIG.nodes.centerRadiusMin) * progress;
+            const progress = (year - this.simConfig.timeline.startYear) / (this.simConfig.timeline.endYear - this.simConfig.timeline.startYear);
+            const size = this.simConfig.nodes.centerRadiusMin + (this.simConfig.nodes.centerRadiusMax - this.simConfig.nodes.centerRadiusMin) * progress;
             const circle = this.svg.getElementById('center-circle');
             if (circle) circle.setAttribute('r', size);
         },
@@ -299,8 +343,8 @@
             this.particles.push({
                 x: src.x,
                 y: src.y,
-                tx: CONFIG.svg.centerX,
-                ty: CONFIG.svg.centerY,
+                tx: this.simConfig.svg.centerX,
+                ty: this.simConfig.svg.centerY,
                 progress: 0,
                 color: '#00D9FF'
             });
@@ -440,7 +484,7 @@
             const verticalBoxHeight = bounds.height * 0.70;
 
             // Distances from center
-            const radius = CONFIG.nodes.domainRadius + 5;
+            const radius = this.simConfig.nodes.domainRadius + 5;
             const topDist = radius + 20; // Pushed out slightly
             const sideDist = radius + 15;
 
@@ -499,7 +543,7 @@
             header.setAttribute('text-anchor', 'middle');
             header.setAttribute('fill', color);
             header.setAttribute('font-weight', 'bold');
-            header.setAttribute('font-size', '7');
+            header.setAttribute('font-size', this.simConfig.styles.contentHeaderSize); // Dynamic
             g.appendChild(header);
 
             // Divider
@@ -513,7 +557,7 @@
             // Content
             let curY = y + 30;
             const maxY = y + h - 5;
-            const fontSize = 5.5; // Slightly smaller for better fit
+            const fontSize = this.simConfig.styles.contentTextSize; // Dynamic
             const padding = 10;
             const textWidth = w - (padding * 2);
 
@@ -636,7 +680,7 @@
             this.isZoomed = false;
             this.zoomedNode = null;
 
-            this.svg.setAttribute('viewBox', `0 0 ${CONFIG.svg.width} ${CONFIG.svg.height}`);
+            this.svg.setAttribute('viewBox', `0 0 ${this.simConfig.svg.width} ${this.simConfig.svg.height}`);
 
             // Reset opacity
             this.svg.querySelectorAll('.domain-node').forEach(n => {
@@ -695,9 +739,9 @@
         },
 
         _scrubYear: function (direction) {
-            let newYear = (this.lastYear || CONFIG.timeline.startYear) + direction;
-            if (newYear < CONFIG.timeline.startYear) newYear = CONFIG.timeline.startYear;
-            if (newYear > CONFIG.timeline.endYear) newYear = CONFIG.timeline.endYear;
+            let newYear = (this.lastYear || this.simConfig.timeline.startYear) + direction;
+            if (newYear < this.simConfig.timeline.startYear) newYear = this.simConfig.timeline.startYear;
+            if (newYear > this.simConfig.timeline.endYear) newYear = this.simConfig.timeline.endYear;
 
             // We need to update the Host Parameters too, otherwise it will fight back
             // Assuming Host exposes a way or we just update our internal state and let Host sync?

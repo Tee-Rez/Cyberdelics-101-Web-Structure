@@ -1,0 +1,177 @@
+{
+    "title": "Shared Territory",
+    "description": "Explores the common ground between psychedelics and cyberdelics, focusing on shared intentions and outcomes.",
+    "theme": {
+        "primaryColor": "#5900ff",
+        "fontBody": "Rajdhani, sans-serif"
+    },
+    "modules": [
+        {
+            "id": "shared_pd_2.1",
+            "title": "Common Ground",
+            "type": "progressive-disclosure",
+            "content": {
+                "sections": [
+                    {
+                        "title": "Common Ground",
+                        "content": "<p>Psychedelics and cyberdelics share remarkable common ground. Before we explore their differences, it's essential to understand what they have in common. This isn't about competition between two opposing approaches—it's about recognizing two paths toward similar destinations.</p>",
+                        "triggerLabel": "Shared Intention"
+                    },
+                    {
+                        "title": "Shared Intention",
+                        "content": "<p>Both psychedelics and cyberdelics exist for the same fundamental purpose: facilitating consciousness exploration, personal transformation, and spiritual development. Whether using substances or technology, the underlying intention is identical—to expand awareness, facilitate healing, and support personal growth.</p>",
+                        "triggerLabel": "Shared Outcomes"
+                    },
+                    {
+                        "title": "Shared Outcomes",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module1/lesson2/parallel_paths.jpg",
+                            "alt": "Parallel paths merging toward a shared destination"
+                        },
+                        "mediaLayout": "full",
+                        "content": "<p>Research shows that both approaches can produce similar outcomes. Mystical experiences, therapeutic breakthroughs, perspective shifts, emotional healing, and spiritual insights can occur through either path. The phenomenology—what people actually experience—can be remarkably similar.</p>",
+                        "triggerLabel": "Research Validation"
+                    },
+                    {
+                        "title": "Research Validation",
+                        "content": "<p>Studies comparing traditional psychedelic experiences with properly designed cyberdelic experiences show comparable scores on measures of mystical experience, ego dissolution, and therapeutic benefit. This isn't speculation—it's empirically validated. Both approaches can facilitate profound shifts in consciousness when done intentionally and skillfully.</p>",
+                        "triggerLabel": "Test Understanding"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "shared_quiz_2.1",
+            "title": "Shared Territory Quiz",
+            "type": "scenario-based",
+            "content": {
+                "scenes": [
+                    {
+                        "id": "q1",
+                        "narrative": "<h3>Question 1</h3><p><strong>What do psychedelics and cyberdelics primarily share?</strong></p>",
+                        "choices": [
+                            {
+                                "id": "q1_a",
+                                "label": "The specific method used",
+                                "outcome": "q1_wrong_a"
+                            },
+                            {
+                                "id": "q1_b",
+                                "label": "The intention to facilitate transformation",
+                                "outcome": "q2"
+                            },
+                            {
+                                "id": "q1_c",
+                                "label": "Legal status",
+                                "outcome": "q1_wrong_c"
+                            },
+                            {
+                                "id": "q1_d",
+                                "label": "Requirement for medical supervision",
+                                "outcome": "q1_wrong_d"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "q1_wrong_a",
+                        "narrative": "<p>Incorrect. The method is different (substances vs. technology). They share the intention.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "q1"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "q1_wrong_c",
+                        "narrative": "<p>Incorrect. Legal status differs significantly. They share transformational purpose.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "q1"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "q1_wrong_d",
+                        "narrative": "<p>Incorrect. Supervision needs vary. They share the goal of exploration.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "q1"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "q2",
+                        "narrative": "<h3>Question 2</h3><p>Correct! <strong>Can properly designed cyberdelic experiences produce mystical experiences comparable to psychedelics?</strong></p>",
+                        "choices": [
+                            {
+                                "id": "q2_a",
+                                "label": "No, only substances work",
+                                "outcome": "q2_wrong_a"
+                            },
+                            {
+                                "id": "q2_b",
+                                "label": "Yes, research shows comparable scores",
+                                "outcome": "quiz_complete"
+                            },
+                            {
+                                "id": "q2_c",
+                                "label": "Maybe, but less profound",
+                                "outcome": "q2_wrong_c"
+                            },
+                            {
+                                "id": "q2_d",
+                                "label": "Depends on belief system",
+                                "outcome": "q2_wrong_d"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "quiz_complete",
+                        "narrative": "<h3>Quiz Complete!</h3><p>Excellent understanding of the common ground between these approaches.</p>",
+                        "choices": []
+                    },
+                    {
+                        "id": "q2_wrong_a",
+                        "narrative": "<p>Incorrect. Research validates that technology can produce comparable mystical experiences.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "q2"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "q2_wrong_c",
+                        "narrative": "<p>Incorrect. Profundity depends on design and context, not just the medium.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "q2"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "q2_wrong_d",
+                        "narrative": "<p>Incorrect. While belief matters, the technology has measurable effects regardless of belief.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "q2"
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

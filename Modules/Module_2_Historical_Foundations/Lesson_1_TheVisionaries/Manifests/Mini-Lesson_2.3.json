@@ -1,0 +1,67 @@
+{
+    "title": "Cultural Movements That Imagined the Future",
+    "description": "How Cyberpunk, Rave, and Burning Man prepared the cultural soil for cyberdelics.",
+    "theme": {
+        "primaryColor": "#5900ff",
+        "fontBody": "Rajdhani, sans-serif"
+    },
+    "modules": [
+        {
+            "id": "culture_pd_2.3",
+            "title": "Cultural Preparation",
+            "type": "progressive-disclosure",
+            "content": {
+                "sections": [
+                    {
+                        "title": "Cyberpunk—The Fictional Blueprint",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module2/cyberpunk_collage.jpg",
+                            "alt": "Cyberpunk book covers and neon cityscape"
+                        },
+                        "mediaLayout": "full",
+                        "content": "<p>In the 1980s, writers like William Gibson (<em>Neuromancer</em>) and Neal Stephenson (<em>Snow Crash</em>) imagined worlds where technology and consciousness directly interfaced. These novels established cultural templates: neural interfaces, virtual reality, and hackable identities. They made the future feel inevitable.</p>",
+                        "triggerLabel": "Rave Culture"
+                    },
+                    {
+                        "title": "Rave Culture—Electronic Transcendence",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module2/rave_silhouettes.jpg",
+                            "alt": "1990s Rave Scene"
+                        },
+                        "mediaLayout": "left",
+                        "content": "<p>Rave culture showed that technology (lights, electronic music) could facilitate collective transcendence. Ravers discovered that technology could create shared altered states—the same principle cyberdelics would later use, just through different media.</p>",
+                        "triggerLabel": "Burning Man"
+                    },
+                    {
+                        "title": "Burning Man—Art Meets Technology",
+                        "content": "<p>Burning Man became a testing ground for blending technology with radical self-expression. It demonstrated that tech-enhanced experiences could create awe, foster community, and integrate with spirituality rather than oppose it.</p>",
+                        "triggerLabel": "Digital Art"
+                    },
+                    {
+                        "title": "Digital Art and Fractal Culture",
+                        "content": "<p>Artists discovered that algorithms could produce images comparable to mystical visions (fractals). Works like Char Davies' <em>Osmose</em> created contemplative virtual spaces, proving technology could serve spiritual expression.</p>",
+                        "triggerLabel": "Ready for Convergence"
+                    },
+                    {
+                        "title": "Cultural Preparation Complete",
+                        "content": "<p>These movements prepared the cultural soil. They created communities, language, and demand for tech-consciousness fusion. When VR returned in the 2010s, the culture was ready.</p>",
+                        "triggerLabel": "Explore the Map"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "culture_map_2.3",
+            "title": "Culture-Tech Convergence Map",
+            "type": "interactive-simulation",
+            "content": {
+                "engine": "ConvergenceMap",
+                "placeholder": true,
+                "notes": "Interactive visualization of 1980-2020 timeline comparing Cultural Movements vs Tech Development. Development pending.",
+                "graphic_src": "../assets/images/module2/convergence_map_placeholder.jpg"
+            }
+        }
+    ]
+}

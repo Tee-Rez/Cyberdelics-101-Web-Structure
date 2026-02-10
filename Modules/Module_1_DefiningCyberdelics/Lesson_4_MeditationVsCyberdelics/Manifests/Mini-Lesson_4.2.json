@@ -1,0 +1,277 @@
+{
+    "title": "When Tech Becomes Cyberdelic",
+    "description": "Identifying how intention and application shift technology from wellness to cyberdelic.",
+    "theme": {
+        "primaryColor": "#5900ff",
+        "fontBody": "Rajdhani, sans-serif"
+    },
+    "modules": [
+        {
+            "id": "tech_choice_scenario_4.2",
+            "title": "Choosing the Right Tool",
+            "type": "scenario-based",
+            "content": {
+                "scenes": [
+                    {
+                        "id": "intro",
+                        "narrative": "<h3>Consulting Challenge</h3><p>Help three people choose the right technology for their goals.</p>",
+                        "choices": [
+                            {
+                                "id": "p1",
+                                "label": "Person 1: Beginner",
+                                "outcome": "person1"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "person1",
+                        "narrative": "<h3>PERSON 1: Starting Simple</h3><p>New to meditation. Wants simple, accessible practice. Not seeking intensity yet.</p><p><strong>Recommendation?</strong></p>",
+                        "choices": [
+                            {
+                                "id": "p1_a",
+                                "label": "Full Cyberdelic VR",
+                                "outcome": "p1_overwhelm"
+                            },
+                            {
+                                "id": "p1_b",
+                                "label": "Simple Meditation App",
+                                "outcome": "p1_correct"
+                            },
+                            {
+                                "id": "p1_c",
+                                "label": "Not ready yet",
+                                "outcome": "p1_gatekeeping"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "p1_correct",
+                        "narrative": "<h3>Correct!</h3><p>Basic apps meet them where they are. Simple is valid.</p>",
+                        "choices": [
+                            {
+                                "id": "next",
+                                "label": "Person 2: Deep",
+                                "outcome": "person2"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "p1_overwhelm",
+                        "narrative": "<h3>Too much too soon</h3><p>They want simple. Cyberdelics might be overwhelming right now.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "person1"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "p1_gatekeeping",
+                        "narrative": "<h3>Incorrect</h3><p>Simple tools are a perfect start. Don't gatekeep.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "person1"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "person2",
+                        "narrative": "<h3>PERSON 2: Seeking Depth</h3><p>5 years practice. Wants to go deeper. Curious about tech for profound states.</p><p><strong>Recommendation?</strong></p>",
+                        "choices": [
+                            {
+                                "id": "p2_a",
+                                "label": "Avoid tech",
+                                "outcome": "p2_limiting"
+                            },
+                            {
+                                "id": "p2_b",
+                                "label": "Cyberdelic VR + Biofeedback",
+                                "outcome": "p2_correct"
+                            },
+                            {
+                                "id": "p2_c",
+                                "label": "Basic tracking app",
+                                "outcome": "p2_miss"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "p2_correct",
+                        "narrative": "<h3>Excellent</h3><p>Cyberdelics are perfect for experienced practitioners seeking new depth.</p>",
+                        "choices": [
+                            {
+                                "id": "next",
+                                "label": "Person 3: Athlete",
+                                "outcome": "person3"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "p2_limiting",
+                        "narrative": "<h3>Limiting</h3><p>Tech can complement tradition. Why exclude it?</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "person2"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "person3",
+                        "narrative": "<h3>PERSON 3: Athletic Performance</h3><p>Wants focus and anxiety reduction. Measurable outcomes. Not seeking 'spiritual' experience.</p><p><strong>Recommendation?</strong></p>",
+                        "choices": [
+                            {
+                                "id": "p3_a",
+                                "label": "Consciousness Exploration VR",
+                                "outcome": "p3_mismatch"
+                            },
+                            {
+                                "id": "p3_b",
+                                "label": "Wellness Tech / Biofeedback",
+                                "outcome": "p3_correct"
+                            },
+                            {
+                                "id": "p3_c",
+                                "label": "Meditation won't help",
+                                "outcome": "p3_wrong"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "p3_correct",
+                        "narrative": "<h3>Perfect Match</h3><p>Wellness tech focuses on optimization and performance outcomes.</p>",
+                        "choices": [
+                            {
+                                "id": "finish",
+                                "label": "Conclusion",
+                                "outcome": "flow_next_module"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "p3_mismatch",
+                        "narrative": "<h3>Mismatch</h3><p>Cyberdelics aim for exploration, not just performance optimization.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "person3"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "intention_pd_4.2",
+            "title": "The Intention Shift",
+            "type": "progressive-disclosure",
+            "content": {
+                "sections": [
+                    {
+                        "title": "The Intention Shift",
+                        "content": "<p>Tech becomes cyberdelic when intention shifts from <strong>optimization</strong> to <strong>exploration</strong>.</p>",
+                        "triggerLabel": "Process vs Outcome"
+                    },
+                    {
+                        "title": "From Outcome to Process",
+                        "content": "<p>Wellness tech focuses on external outcomes (sleep, stress). Cyberdelics focus on the internal process (relationship to experience).</p>",
+                        "triggerLabel": "Same Device"
+                    },
+                    {
+                        "title": "Same Device, Different Use",
+                        "content": "<p>The same sensor can serve wellness (HRV training for recovery) or cyberdelics (HRV biofeedback for altered states). Context is key.</p>",
+                        "triggerLabel": "User Intention"
+                    },
+                    {
+                        "title": "User Intention Matters",
+                        "content": "<p>How you engage matters. Using a cyberdelic app just to relax makes it wellness tech for you. Deep exploratory intent can transform simple tech.</p>",
+                        "triggerLabel": "Multiple Tools"
+                    },
+                    {
+                        "title": "Multiple Valid Tools",
+                        "content": "<p>Simple apps, wellness tech, and cyberdelics all have their place. Choose based on your actual goal.</p>",
+                        "triggerLabel": "Quiz"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "intention_quiz_4.2",
+            "title": "Intention Quiz",
+            "type": "scenario-based",
+            "content": {
+                "scenes": [
+                    {
+                        "id": "q1",
+                        "narrative": "<h3>Question 1</h3><p><strong>What primarily determines whether it's wellness tech or cyberdelic?</strong></p>",
+                        "choices": [
+                            {
+                                "id": "q1_a",
+                                "label": "Price",
+                                "outcome": "q1_wrong_a"
+                            },
+                            {
+                                "id": "q1_b",
+                                "label": "Focus: Optimization vs. Exploration",
+                                "outcome": "q2"
+                            },
+                            {
+                                "id": "q1_c",
+                                "label": "Sensors used",
+                                "outcome": "q1_wrong_c"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "q1_wrong_a",
+                        "narrative": "<p>Incorrect. Cost is irrelevant.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "q1"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "q2",
+                        "narrative": "<h3>Question 2</h3><p>Correct! <strong>Can the same technology be both wellness tech and cyberdelic?</strong></p>",
+                        "choices": [
+                            {
+                                "id": "q2_a",
+                                "label": "No, intent is fixed",
+                                "outcome": "q2_wrong_a"
+                            },
+                            {
+                                "id": "q2_b",
+                                "label": "Yes, context/user intent matter",
+                                "outcome": "quiz_complete"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "quiz_complete",
+                        "narrative": "<h3>Quiz Complete!</h3><p>You understand how intention shapes technology.</p>",
+                        "choices": []
+                    },
+                    {
+                        "id": "q2_wrong_a",
+                        "narrative": "<p>Incorrect. Flexible tools can serve multiple purposes.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "q2"
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

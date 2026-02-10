@@ -1,0 +1,221 @@
+{
+    "title": "Complementary Relationship",
+    "description": "Understanding how psychedelics and cyberdelics can work together as complementary tools.",
+    "theme": {
+        "primaryColor": "#5900ff",
+        "fontBody": "Rajdhani, sans-serif"
+    },
+    "modules": [
+        {
+            "id": "complementary_scenario_2.3",
+            "title": "Consulting Scenarios",
+            "type": "scenario-based",
+            "content": {
+                "scenes": [
+                    {
+                        "id": "intro",
+                        "narrative": "<h3>Consulting Challenge</h3><p>You're consulting with three different people. Each has unique circumstances. Which approach would you recommend?</p>",
+                        "choices": [
+                            {
+                                "id": "client1",
+                                "label": "Meet Client 1",
+                                "outcome": "client1"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "client1",
+                        "narrative": "<h3>CLIENT 1: Medical Considerations</h3><p>Heart condition, on medication. Wants to explore consciousness. Concerned about safety.</p><p><strong>Recommendation?</strong></p>",
+                        "choices": [
+                            {
+                                "id": "c1_a",
+                                "label": "Psychedelic therapy",
+                                "outcome": "c1_unsafe"
+                            },
+                            {
+                                "id": "c1_b",
+                                "label": "Cyberdelic VR + Biofeedback",
+                                "outcome": "c1_correct"
+                            },
+                            {
+                                "id": "c1_c",
+                                "label": "Not possible for them",
+                                "outcome": "c1_limiting"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "c1_unsafe",
+                        "narrative": "<h3>Unsafe Recommendation</h3><p>Psychedelics interact with heart meds. This could be dangerous.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "client1"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "c1_limiting",
+                        "narrative": "<h3>Unnecessarily Limiting</h3><p>Cyberdelics offer a safe alternative. No reason to exclude them.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "client1"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "c1_correct",
+                        "narrative": "<h3>Correct!</h3><p>Cyberdelics are safe for heart conditions as they don't involve chemical metabolism. Access expanded!</p>",
+                        "choices": [
+                            {
+                                "id": "next",
+                                "label": "Meet Client 2",
+                                "outcome": "client2"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "client2",
+                        "narrative": "<h3>CLIENT 2: Intensive Healing</h3><p>Deep trauma work. No medical issues. Legal access. Wants maximum catalytic intensity.</p><p><strong>Recommendation?</strong></p>",
+                        "choices": [
+                            {
+                                "id": "c2_a",
+                                "label": "Only Cyberdelics",
+                                "outcome": "c2_limiting"
+                            },
+                            {
+                                "id": "c2_b",
+                                "label": "Psychedelic Therapy",
+                                "outcome": "c2_correct"
+                            },
+                            {
+                                "id": "c2_c",
+                                "label": "Both Combined",
+                                "outcome": "c2_good"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "c2_correct",
+                        "narrative": "<h3>Strong Recommendation</h3><p>With no contraindications and deep trauma goals, psychedelic therapy is well-suited.</p>",
+                        "choices": [
+                            {
+                                "id": "next",
+                                "label": "Meet Client 3",
+                                "outcome": "client3"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "c2_good",
+                        "narrative": "<h3>Good Choice</h3><p>Combination can work well—psychedelics for breakthroughs, cyberdelics for integration.</p>",
+                        "choices": [
+                            {
+                                "id": "next",
+                                "label": "Meet Client 3",
+                                "outcome": "client3"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "c2_limiting",
+                        "narrative": "<h3>Limiting</h3><p>Cyberdelics could help, but psychedelic therapy has deeper research support for trauma.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "client2"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "client3",
+                        "narrative": "<h3>CLIENT 3: Regular Practice</h3><p>Wants weekly sessions. Loves tech/control. building a routine.</p><p><strong>Recommendation?</strong></p>",
+                        "choices": [
+                            {
+                                "id": "c3_a",
+                                "label": "Weekly Psychedelics",
+                                "outcome": "c3_tolerance"
+                            },
+                            {
+                                "id": "c3_b",
+                                "label": "Regular Cyberdelics",
+                                "outcome": "c3_correct"
+                            },
+                            {
+                                "id": "c3_c",
+                                "label": "Microdosing",
+                                "outcome": "c3_misses_point"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "c3_tolerance",
+                        "narrative": "<h3>Not Practical</h3><p>Tolerance issues make weekly high-dose psychedelics ineffective.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "client3"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "c3_misses_point",
+                        "narrative": "<h3>Misses the Goal</h3><p>They want immersive, controllable sessions. Microdosing is subtle.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "client3"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "c3_correct",
+                        "narrative": "<h3>Perfect Fit</h3><p>Cyberdelics allow frequent, controllable sessions without tolerance issues.</p>",
+                        "choices": [
+                            {
+                                "id": "finish",
+                                "label": "Finish",
+                                "outcome": "flow_next_module"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "complementary_pd_2.3",
+            "title": "Both/And",
+            "type": "progressive-disclosure",
+            "content": {
+                "sections": [
+                    {
+                        "title": "Both/And, Not Either/Or",
+                        "content": "<p>Psychedelics and cyberdelics are complementary. This isn't a debate about which is better. Both are valid approaches with unique strengths.</p>",
+                        "triggerLabel": "Different Tools"
+                    },
+                    {
+                        "title": "Different Tools for Different Contexts",
+                        "content": "<p>Some use one, some use both. The choice depends on medical factors, legal access, and personal goals.</p>",
+                        "triggerLabel": "Expanding Access"
+                    },
+                    {
+                        "title": "Expanding Access",
+                        "content": "<p>Cyberdelics make consciousness exploration accessible to those who can't use substances (medical/legal reasons).</p>",
+                        "triggerLabel": "Conclusion"
+                    },
+                    {
+                        "title": "Personal Choice",
+                        "content": "<p>There's no universal right answer. Both paths can lead to transformation. The field benefits from having multiple valid methodologies.</p>",
+                        "triggerLabel": "Complete Lesson"
+                    }
+                ]
+            }
+        }
+    ]
+}

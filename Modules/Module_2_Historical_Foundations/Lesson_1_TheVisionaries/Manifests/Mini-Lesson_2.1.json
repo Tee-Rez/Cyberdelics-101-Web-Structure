@@ -1,0 +1,256 @@
+{
+    "title": "Timothy Leary's Digital Prophecy",
+    "description": "Understanding how Timothy Leary evolved from psychedelic researcher to digital visionary who predicted the cyberdelic future.",
+    "theme": {
+        "primaryColor": "#5900ff",
+        "fontBody": "Rajdhani, sans-serif"
+    },
+    "modules": [
+        {
+            "id": "leary_pd_2.1",
+            "title": "The Evolution of a Visionary",
+            "type": "progressive-disclosure",
+            "content": {
+                "sections": [
+                    {
+                        "title": "The Evolution Nobody Knows About",
+                        "content": "<p>Most people know Timothy Leary for his 1960s psychedelic research at Harvard. But by the 1990s, Leary had completely evolved his thinking. He became fascinated by personal computers and virtual reality, seeing in them the potential to achieve what psychedelics promised: consciousness expansion, reality hacking, liberation from consensus limitations—but through digital means.</p>",
+                        "triggerLabel": "The Prophecy"
+                    },
+                    {
+                        "title": "The Prophetic Quote (1994)",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module2/leary_split.jpg",
+                            "alt": "Split-screen: 1960s Leary vs 1990s VR Leary"
+                        },
+                        "mediaLayout": "full",
+                        "content": "<p>In 1994, Leary made his most prescient prediction: \"The PC is the LSD of the 1990s.\" Think about what this meant. He was declaring that personal computers would become tools for consciousness exploration comparable to psychedelic substances. In 1994, VR was primitive, consumer internet was brand new, there were no smartphones. Yet Leary saw where it was heading.</p>",
+                        "triggerLabel": "Key Concepts"
+                    },
+                    {
+                        "title": "Key Concepts He Introduced",
+                        "content": "<p>Leary articulated several foundational ideas:</p><ul><li><strong>Electronic Spirituality:</strong> Technology serving consciousness development.</li><li><strong>Digital Shamanism:</strong> Programmers as navigators of new realities.</li><li><strong>Reality Hacking:</strong> Using digital tools to reshape perception.</li><li><strong>Neurological Self-Determination:</strong> Consciously designing your own consciousness through technology.</li></ul>",
+                        "triggerLabel": "Right But Early"
+                    },
+                    {
+                        "title": "Why He Was Early, Not Wrong",
+                        "content": "<p>Leary died in 1996, decades before seeing his vision validated. The technology he imagined took 20-30 more years to mature. Research proving VR could produce mystical experiences wouldn't emerge until 2020. But he got the essential insight right: technology could serve consciousness exploration, not just productivity.</p>",
+                        "triggerLabel": "His Legacy"
+                    },
+                    {
+                        "title": "His Legacy Lives On",
+                        "content": "<p>Every time we talk about using VR for transformation, we're echoing Leary's vision. The term \"cyberdelic\" itself combines his psychedelic thinking with cyber technology. He planted seeds that took 30 years to sprout.</p>",
+                        "triggerLabel": "Experience 1995"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "leary_scenario_2.1",
+            "title": "1995: The Conference",
+            "type": "scenario-based",
+            "content": {
+                "scenes": [
+                    {
+                        "id": "start",
+                        "narrative": "<h3>1995 Tech Conference</h3><p>It's 1995. You're at a technology conference where Timothy Leary is presenting. Most attendees are skeptical—VR has failed commercially, and this former psychedelic advocate is making wild claims about computers becoming consciousness tools.</p><p><strong>How do you react to Leary's vision?</strong></p>",
+                        "choices": [
+                            {
+                                "id": "choice_a",
+                                "label": "Dismiss it as unrealistic fantasy",
+                                "outcome": "outcome_a"
+                            },
+                            {
+                                "id": "choice_b",
+                                "label": "Recognize the vision but doubt the timeline",
+                                "outcome": "outcome_b"
+                            },
+                            {
+                                "id": "choice_c",
+                                "label": "Get inspired to work toward the vision",
+                                "outcome": "outcome_c"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "outcome_a",
+                        "narrative": "<h3>Outcome: The Skeptic</h3><p>You join the majority in dismissing him. Fast forward to 2020: The Isness VR study validates exactly what Leary predicted. You realize you witnessed prophecy but mistook it for fantasy.</p><p><em>Reflection: Vision often looks like delusion until technology catches up.</em></p>",
+                        "choices": [
+                            {
+                                "id": "next",
+                                "label": "Continue",
+                                "outcome": "quiz_intro"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "outcome_b",
+                        "narrative": "<h3>Outcome: The Realist</h3><p>You see the potential but think the tech is 20-30 years away. You're exactly right. Leary's vision was correct, but the timeline was off. The technology needed smartphones, GPUs, and clearer displays.</p><p><em>Reflection: Great visions require patience. The gap between possibility and viability can span decades.</em></p>",
+                        "choices": [
+                            {
+                                "id": "next",
+                                "label": "Continue",
+                                "outcome": "quiz_intro"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "outcome_c",
+                        "narrative": "<h3>Outcome: The Pioneer</h3><p>You get inspired and spend the next 20 years working in fringe labs. By 2020, when the tech catches up, you're an established expert who helped bridge the gap.</p><p><em>Reflection: Someone has to keep the vision alive during the wilderness years.</em></p>",
+                        "choices": [
+                            {
+                                "id": "next",
+                                "label": "Continue",
+                                "outcome": "quiz_intro"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "quiz_intro",
+                        "narrative": "<h3>Scenario Complete</h3><p>You've experienced the gap between vision and reality. Now, let's test your understanding of Leary's contribution.</p>",
+                        "choices": [
+                            {
+                                "id": "finish_scenario",
+                                "label": "Start Quiz",
+                                "outcome": "FLOW_NEXT_MODULE"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "leary_quiz_2.1",
+            "title": "Visionary Quiz",
+            "type": "scenario-based",
+            "content": {
+                "scenes": [
+                    {
+                        "id": "q1",
+                        "narrative": "<h3>Question 1</h3><p><strong>What was Timothy Leary's most famous prediction about technology and consciousness?</strong></p>",
+                        "choices": [
+                            {
+                                "id": "q1_a",
+                                "label": "VR would replace physical reality by 2000",
+                                "outcome": "q1_wrong_a"
+                            },
+                            {
+                                "id": "q1_b",
+                                "label": "\"The PC is the LSD of the 1990s\"",
+                                "outcome": "q2"
+                            },
+                            {
+                                "id": "q1_c",
+                                "label": "Abandon meditation for technology",
+                                "outcome": "q1_wrong_c"
+                            },
+                            {
+                                "id": "q1_d",
+                                "label": "Psychedelics would be legalized worldwide",
+                                "outcome": "q1_wrong_d"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "q1_wrong_a",
+                        "narrative": "<p>Incorrect. Leary didn't predict replacement; he predicted that computers would become tools for consciousness exploration.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "q1"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "q1_wrong_c",
+                        "narrative": "<p>Incorrect. Leary advocated for technology as an *additional* path, not a replacement for traditional methods.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "q1"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "q1_wrong_d",
+                        "narrative": "<p>Incorrect. While he might have wanted that, his specific *tech* prediction was about the computer's role in consciousness.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "q1"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "q2",
+                        "narrative": "<h3>Question 2</h3><p>Correct! Now, <strong>Why was Leary \"right but early\" with his 1994 prediction?</strong></p>",
+                        "choices": [
+                            {
+                                "id": "q2_a",
+                                "label": "The technology didn't mature until 2016-2020",
+                                "outcome": "quiz_complete"
+                            },
+                            {
+                                "id": "q2_b",
+                                "label": "He underestimated cultural acceptance",
+                                "outcome": "q2_wrong_b"
+                            },
+                            {
+                                "id": "q2_c",
+                                "label": "Government regulations banned it",
+                                "outcome": "q2_wrong_c"
+                            },
+                            {
+                                "id": "q2_d",
+                                "label": "Nobody was interested",
+                                "outcome": "q2_wrong_d"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "quiz_complete",
+                        "narrative": "<h3>Quiz Complete!</h3><p>Excellent. You understand the gap between Leary's vision and the technological reality of his time.</p>",
+                        "choices": []
+                    },
+                    {
+                        "id": "q2_wrong_b",
+                        "narrative": "<p>Incorrect. Culture wasn't the main barrier; the hardware simply wasn't good enough (headaches, low res) to deliver the experience.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "q2"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "q2_wrong_c",
+                        "narrative": "<p>Incorrect. There were no bans. The technology just wasn't ready.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "q2"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "q2_wrong_d",
+                        "narrative": "<p>Incorrect. Interest was high, but the tech failed to deliver.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "q2"
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}
