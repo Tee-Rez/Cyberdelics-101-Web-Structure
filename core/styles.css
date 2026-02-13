@@ -668,6 +668,28 @@ li strong {
     box-shadow: 0 0 10px rgba(123, 92, 255, 0.2);
 }
 
+/* Subtle Glow for Recommended Fullscreen */
+/* Subtle Glow for Recommended Fullscreen */
+.fs-recommended-glow .cd-fullscreen-btn {
+    text-shadow: 0 0 5px rgba(123, 92, 255, 0.8);
+    border-color: rgba(123, 92, 255, 0.8);
+    color: var(--color-accent);
+    animation: intensePulse 1.5s infinite alternate;
+    background: rgba(123, 92, 255, 0.1);
+}
+
+@keyframes intensePulse {
+    0% {
+        box-shadow: 0 0 4px rgba(123, 92, 255, 0.4);
+        border-color: rgba(123, 92, 255, 0.4);
+    }
+
+    100% {
+        box-shadow: 0 0 15px rgba(123, 92, 255, 0.8), 0 0 5px rgba(123, 92, 255, 0.4) inset;
+        border-color: var(--color-accent);
+    }
+}
+
 /* Sidebars */
 .cyberdeck-sidebar {
     display: none !important;

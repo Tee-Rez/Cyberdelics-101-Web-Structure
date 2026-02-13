@@ -110,12 +110,8 @@
 
             const btn = screen.querySelector('.opening-fs-btn');
             btn.addEventListener('click', () => {
-                // Try to enter fullscreen
-                if (!document.fullscreenElement && document.documentElement.requestFullscreen) {
-                    document.documentElement.requestFullscreen().catch(err => {
-                        console.warn('Fullscreen request denied:', err);
-                    });
-                }
+                // Just start the lesson without forcing fullscreen
+                // User can toggle it manually via the header button
 
                 // Fade out
                 screen.classList.add('fade-out');

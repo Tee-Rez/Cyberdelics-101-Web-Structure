@@ -11,10 +11,9 @@
             "title": "Psychedelic ↔ Cyberdelic Spectrum Explorer",
             "type": "interactive-simulation",
             "content": {
-                "engine": "SpectrumExplorer",
-                "placeholder": true,
-                "notes": "Slider interface moving between Psychedelic and Cyberdelic, dynamically updating variables (Method, Legality, Safety, Control). Development pending.",
-                "graphic_src": "../assets/images/module1/lesson2/spectrum_placeholder.jpg"
+                "engine": "spectrum-explorer",
+                "startValue": 50,
+                "hideContinueButton": true
             }
         },
         {

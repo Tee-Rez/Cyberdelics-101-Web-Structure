@@ -1,240 +1,385 @@
 {
-    "title": "Breaking Down 'Cyberdelics'",
-    "description": "Understanding the etymology and origins of the term 'cyberdelics'",
+    "title": "Design Features of Cyberdelic Experiences",
+    "description": "Identifying the specific design characteristics that create a cyberdelic experience.",
     "theme": {
         "primaryColor": "#5900ff",
         "fontBody": "Rajdhani, sans-serif"
     },
     "modules": [
         {
-            "id": "etymology_1.1",
-            "title": "Etymology of Cyberdelics",
+            "id": "progressive_disclosure_3.2",
+            "title": "The Six Dimensions of Cyberdelic Experience",
             "type": "progressive-disclosure",
             "content": {
                 "sections": [
                     {
-                        "title": "A Fusion Word",
-                        "content": "<p>The word \"cyberdelics\" isn't random; it's a deliberate fusion of two powerful concepts. Understanding where this word comes from helps us grasp what the field actually is. Let's break it down piece by piece.</p>",
-                        "triggerLabel": "Break It Down"
+                        "title": "The Transformation System",
+                        "content": "<p>Every cyberdelic experience is designed across six dimensions. Together they answer one question: how is this experience built to create transformation? Let's walk through each one.</p>",
+                        "triggerLabel": "Dimension 1: Reality"
                     },
                     {
-                        "title": "\"Cyber\" - The Digital Realm",
+                        "title": "REALITY — Where does the experience live?",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module1/cyber-typography.jpg"
+                            "src": "../assets/images/module1/reality-types.jpg"
                         },
                         "mediaLayout": "left",
-                        "content": "<p>\"Cyber\" comes from \"cybernetics,\" coined by Norbert Wiener in 1948. It refers to systems of communication and control, particularly involving technology and feedback loops.</p><p>In modern usage, \"cyber\" represents the digital, technological, and virtual dimensions of experience. It's the realm of VR, AR, biofeedback devices, and human-computer interaction.</p>",
-                        "triggerLabel": "Next Word"
+                        "content": "<p>Cyberdelic designers choose which planes of reality the experience inhabits. <strong>Virtual reality</strong> replaces your environment entirely. <strong>Augmented reality</strong> layers digital content over the physical world. <strong>Mixed reality</strong> blends both. <strong>Generative reality</strong> uses AI or procedural systems to create environments that respond and evolve. <strong>Biological reality</strong> works with the body itself — breath, heart rate, brainwaves — as the environment. <strong>Cognitive reality</strong> operates entirely in the mind through guided imagery or hypnagogic states. Most powerful experiences combine more than one.</p>",
+                        "triggerLabel": "Dimension 2: Sensory"
                     },
                     {
-                        "title": "\"Delic\" - Mind-Manifesting",
+                        "title": "SENSORY — What does the body receive?",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module1/delic-typography.jpg"
+                            "src": "../assets/images/module1/sensory-types.jpg"
                         },
                         "mediaLayout": "right",
-                        "content": "<p>\"Delic\" comes from \"psychedelic,\" which literally means \"mind-manifesting\" (from Greek: psyche = mind/soul, delos = manifest/reveal).</p><p>This suffix carries the essence of consciousness exploration, expanded awareness, and transformative experiences. It's about revealing what's hidden in consciousness, making the invisible visible.</p>",
-                        "triggerLabel": "See The Fusion"
+                        "content": "<p>Sensory design determines which senses the experience engages. <strong>Visual</strong> is the most common — environments, light, color, movement. <strong>Auditory</strong> includes music, spatial sound, binaural beats, guided voice. <strong>Haptic</strong> brings physical sensation through vibration, temperature, or touch feedback. <strong>Olfactory</strong> uses scent to bypass cognition and access emotion directly. <strong>Gustatory</strong> — taste — is rare but powerful in ceremonial or embodied contexts. The more senses engaged intentionally, the deeper the immersion. But more isn't always better. Sometimes one sense, used with precision, creates more transformation than five used carelessly.</p>",
+                        "triggerLabel": "Dimension 3: Presence"
                     },
                     {
-                        "title": "The Fusion",
-                        "content": "<p>When you combine \"cyber\" and \"delic,\" you get a field that uses digital technology (cyber) to manifest and explore consciousness (delic). It's technology in service of inner revelation.</p><p>The word itself tells you what the field is about: using computers and sensors as tools for mind-manifesting experiences.</p>",
-                        "triggerLabel": "Historical Context"
-                    },
-                    {
-                        "title": "Historical Context",
+                        "title": "PRESENCE — What kind of awareness is being cultivated?",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module1/tim_leary.jpg"
+                            "src": "../assets/images/module1/presence-types.jpg"
                         },
-                        "mediaLayout": "full",
-                        "content": "<p>The term \"cyberdelics\" was popularized by Timothy Leary in the 1990s. Leary, known for his earlier psychedelic research, recognized that technology could serve similar consciousness-expanding purposes as substances.</p><p>He foresaw a future where virtual reality and digital tools would become valid paths for inner exploration. We're now living in that future he envisioned.</p>",
-                        "triggerLabel": "Continue"
+                        "mediaLayout": "left",
+                        "content": "<p>This is one of the most important design decisions. Presence isn't just \"feeling immersed\" — it's about what type of inner awareness the experience is designed to grow. <strong>Mental presence</strong> sharpens cognitive clarity and focused attention. <strong>Emotional presence</strong> deepens feeling states and self-awareness. <strong>Social presence</strong> cultivates connection — to others or to something larger. <strong>Embodied presence</strong> brings attention into the physical body, breath, and sensation. <strong>Environmental presence</strong> expands awareness outward to interconnection with surroundings. A well-designed cyberdelic experience doesn't just put you somewhere — it cultivates a specific quality of being there.</p>",
+                        "triggerLabel": "Dimension 4: States"
+                    },
+                    {
+                        "title": "STATES — What transient experiences are designed in?",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module1/states-type.jpg"
+                        },
+                        "mediaLayout": "right",
+                        "content": "<p>States are the temporary shifts in consciousness the experience is intentionally designed to move you through. Think of them as the interior weather of the journey. <strong>Cognitive states</strong> include expanded thinking, pattern recognition, creative insight, or heightened focus. <strong>Emotional states</strong> include awe, grief, joy, compassion, or release. <strong>Somatic states</strong> include deep relaxation, body dissolution, energetic activation, or breath-linked trance. <strong>Relational states</strong> include felt unity, empathy expansion, or the dissolution of self-other boundaries. The designer's job is to ask: what state serves transformation here, and how do we create the conditions for it to arise?</p>",
+                        "triggerLabel": "Dimension 5: Traits"
+                    },
+                    {
+                        "title": "TRAITS — What lasting change is the goal?",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module1/traits-type.jpg"
+                        },
+                        "mediaLayout": "left",
+                        "content": "<p>States are temporary. Traits are what remain. The most thoughtfully designed cyberdelic experiences aren't just creating peak moments — they're using those moments to cultivate lasting change in who you are. <strong>Cognitive traits</strong> might include increased creativity, expanded perspective-taking, or reduced cognitive rigidity. <strong>Emotional traits</strong> might include greater emotional regulation, increased capacity for compassion, or reduced anxiety. <strong>Somatic traits</strong> might include improved body awareness, reduced chronic tension, or a more settled nervous system. <strong>Relational traits</strong> might include greater empathy, reduced isolation, or deeper capacity for connection. The question that separates profound design from shallow design is: what kind of person does this experience grow?</p>",
+                        "triggerLabel": "Dimension 6: Meaning"
+                    },
+                    {
+                        "title": "MEANING — What gives the experience coherence and depth?",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module1/meaning-type.jpg"
+                        },
+                        "mediaLayout": "right",
+                        "content": "<p>Meaning is what separates a technically impressive experience from a genuinely transformational one. <strong>The World</strong> is the reality the experience inhabits — its aesthetic, its cosmology, its sensory texture. Is it rooted in nature, sacred geometry, the cosmos, the body, the future? <strong>The Story</strong> is the narrative arc or thematic journey the experience takes you on — even if wordless, there is always a movement from one state to another that carries meaning. <strong>The Magic</strong> is the core technology or practice enabling the designed change — binaural beats entraining brainwaves, breathwork altering blood chemistry, sacred geometry activating pattern-recognition, biofeedback creating real-time self-awareness loops. When world, story, and magic align, the experience becomes coherent enough to transform.</p>",
+                        "triggerLabel": "Synthesis"
+                    },
+                    {
+                        "title": "The Six Together",
+                        "content": "<p>No single dimension defines a cyberdelic experience. Reality sets the stage. Sensory design immerses the body. Presence guides the quality of awareness. States create the interior journey. Traits define what endures. Meaning makes the whole thing coherent. When a designer thinks across all six, what they build isn't just an experience — it's a transformation system. Now let's see how this plays out in practice.</p>",
+                        "triggerLabel": "Start Evaluation"
                     }
                 ]
             }
         },
         {
-            "id": "venn_1.1",
-            "title": "Synthesis Visualization",
-            "type": "interactive-simulation",
-            "content": {
-                "engine": "VennDiagramCombiner",
-                "params": {
-                    "mode": "combined",
-                    "data": {
-                        "leftCircle": {
-                            "label": "CYBER",
-                            "color": "#00D9FF",
-                            "etymology": {
-                                "title": "CYBER",
-                                "greek": "κυβερνητικός",
-                                "greekTransliteration": "(kybernētikós)",
-                                "meanings": [
-                                    "Greek: 'of or for steering, governance'",
-                                    "Modern: 'relating to computers, IT'"
-                                ],
-                                "concept": "Control • Navigation"
-                            }
-                        },
-                        "rightCircle": {
-                            "label": "DELIC",
-                            "color": "#9D4EDD",
-                            "etymology": {
-                                "title": "DELIC",
-                                "greek": "ψυχή + δῆλος",
-                                "greekTransliteration": "(psychē + dēlos)",
-                                "meanings": [
-                                    "Greek: 'soul/mind' + 'manifest/visible'",
-                                    "Translation: 'mind-manifesting'"
-                                ],
-                                "concept": "Consciousness"
-                            }
-                        },
-                        "merged": {
-                            "label": "CYBERDELICS",
-                            "color": "#FFD700",
-                            "greek": "cyber + delic = cyberdelics",
-                            "meaning": "The art and science of using technology to guide consciousness into expanded states of awareness",
-                            "synthesis": [
-                                "Navigation (cyber) of Consciousness (delic)",
-                                "Technological tools for inner exploration",
-                                "Precision guidance for transformative experiences"
-                            ]
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "id": "quiz_1.1",
-            "title": "Etymology Quiz",
+            "id": "scenario_evaluation_3.2",
+            "title": "Scenario: The Evaluation",
             "type": "scenario-based",
             "content": {
                 "scenes": [
                     {
-                        "id": "q1",
-                        "narrative": "<h3>Question 1 of 2</h3><p><strong>What does the \"cyber\" in cyberdelics primarily refer to?</strong></p><p><em>Understanding the technological component of the term.</em></p>",
+                        "id": "intro",
+                        "narrative": "<div class='scenario-character'><div class='character-avatar'>P</div><div class='character-info'><div class='character-name'>Priya</div><div class='character-role'>Program Director</div></div></div><p>Meet Priya, a program director at a corporate wellness company. She's been tasked with selecting one VR experience to add to their new \"Mind Reset\" offering.</p><p>She's smart, well-meaning, and genuinely wants to choose something that actually works. But she doesn't yet have a clear framework for what \"actually works\" in this context.</p><p>You've just completed your training on the six dimensions of cyberdelic design. Priya has asked you to review two pitches and give her your honest assessment.</p>",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module1/lesson3/priya_portrait.jpg",
+                            "alt": "Portrait of Priya, a confident South Asian woman in her mid-30s, warm and thoughtful expression, sitting at a modern wellness office desk."
+                        },
+                        "choices": [
+                            {
+                                "id": "view_pitches",
+                                "label": "Review the Pitches",
+                                "outcome": "pitches"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "pitches",
+                        "narrative": "<h3>Pitch A — Studio Luminos: \"SHIFT\"</h3><p>A 20-minute VR experience where users enter a sleek, abstract digital space. The environment responds to movement — faster movement creates dynamic visuals. Tracks engagement scores and provides a \"Mind Performance Report\" comparing users.</p><hr><h3>Pitch B — Studio Verdant: \"ROOTS\"</h3><p>A 25-minute VR + binaural audio experience set in an evolving forest. Users wear a biofeedback HRV sensor. The forest responds to heart rate variability — calm nervous system brightens the forest. No scores. Ends with an integration period.</p>",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module1/lesson3/pitch_comparison.jpg",
+                            "alt": "Side-by-side comparison: Sleek geometric digital environment (SHIFT) vs. Soft dawn forest scene (ROOTS)."
+                        },
+                        "choices": [
+                            {
+                                "id": "discuss",
+                                "label": "Discuss with Priya",
+                                "outcome": "decision_1"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "decision_1",
+                        "narrative": "<div class='scenario-character'><div class='character-avatar'>P</div><div class='character-info'><div class='character-name'>Priya</div><div class='character-role'>Program Director</div></div></div><p>Priya reads both pitches and immediately leans toward SHIFT.</p><p>\"Honestly,\" she tells you, \"SHIFT feels more credible to me. It has data, it tracks engagement, there's a performance report. That's something I can show to our board. ROOTS sounds beautiful, but how do I know it's actually doing anything?\"</p><p><strong>How do you respond?</strong></p>",
+                        "choices": [
+                            {
+                                "id": "d1_a",
+                                "label": "\"You're right — measurable engagement data makes SHIFT the stronger choice.\"",
+                                "outcome": "d1_outcome_a"
+                            },
+                            {
+                                "id": "d1_b",
+                                "label": "\"The data in SHIFT is measuring the wrong things. Let's evaluate using the six dimensions.\"",
+                                "outcome": "d1_outcome_b"
+                            },
+                            {
+                                "id": "d1_c",
+                                "label": "\"Both have merits. It really depends on what your board is looking for.\"",
+                                "outcome": "d1_outcome_c"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "d1_outcome_a",
+                        "narrative": "<p>That instinct makes business sense, but it's pointing at the wrong thing. SHIFT's metrics — movement tracking, engagement scores — are measuring external behavior, not internal transformation.</p><p>ROOTS's biofeedback loop is actually the more scientifically grounded measurement — it's reading the nervous system directly. That's not soft or immeasurable. That's precise.</p><p><em>Reflection: Data that measures external behavior and data that tracks internal state are very different things. Cyberdelic evaluation requires the latter.</em></p>",
+                        "choices": [
+                            {
+                                "id": "retry_d1",
+                                "label": "Try Again",
+                                "outcome": "decision_1"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "d1_outcome_b",
+                        "narrative": "<p>Exactly right. Priya's instinct toward accountability is valid, but the metrics she's attracted to in SHIFT are entertainment metrics.</p><p>Walking Priya through the six dimensions gives her a defensible framework that actually maps to transformation outcomes. This is the logic that separates a genuine cyberdelic program from a wellness gimmick.</p><p><em>Reflection: A good cyberdelic consultant doesn't just evaluate experiences — they help clients ask better questions.</em></p>",
+                        "choices": [
+                            {
+                                "id": "next_d2",
+                                "label": "Continue Evaluation",
+                                "outcome": "decision_2"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "d1_outcome_c",
+                        "narrative": "<p>This is diplomatic but ultimately unhelpful. \"What the board is looking for\" and \"what creates genuine transformation\" aren't necessarily the same thing.</p><p>As someone trained in cyberdelic design, your value is that you have a principled framework. Defaulting to \"it depends\" leaves her without the guidance she needs.</p><p><em>Reflection: Having a clear design framework means you don't have to hedge. Use it.</em></p>",
+                        "choices": [
+                            {
+                                "id": "retry_d1",
+                                "label": "Try Again",
+                                "outcome": "decision_1"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "decision_2",
+                        "narrative": "<p>You walk Priya through the dimensions. She pauses at <strong>Meaning</strong>.</p><p>\"Okay, so ROOTS has a story — Arrival, Descent, Return. But what's the <strong>magic</strong> that's actually making anything happen? How does walking through a virtual forest actually change someone?\"</p><p><strong>How do you explain it?</strong></p>",
+                        "choices": [
+                            {
+                                "id": "d2_a",
+                                "label": "\"The magic is the HRV biofeedback loop creating a conversation between nervous system and environment.\"",
+                                "outcome": "d2_outcome_a"
+                            },
+                            {
+                                "id": "d2_b",
+                                "label": "\"The magic is the immersive visuals — the forest environment naturally reduces stress.\"",
+                                "outcome": "d2_outcome_b"
+                            },
+                            {
+                                "id": "d2_c",
+                                "label": "\"The research on VR and stress reduction is strong enough that the mechanism doesn't matter.\"",
+                                "outcome": "d2_outcome_c"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "d2_outcome_a",
+                        "narrative": "<p>This is the clearest answer. You've identified that ROOTS's magic operates on two levels: the <strong>biofeedback loop</strong> trains nervous system regulation (somatic mechanism), and the <strong>narrative arc</strong> creates the emotional container (meaning mechanism).</p><p>This is sophisticated cyberdelic design, and you've articulated exactly why it works.</p><p><em>Reflection: \"The magic\" is always the specific mechanism connecting technology to transformation.</em></p>",
+                        "choices": [
+                            {
+                                "id": "next_final",
+                                "label": "Final Synthesis",
+                                "outcome": "final_reflection"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "d2_outcome_b",
+                        "narrative": "<p>This undersells what ROOTS is doing. A calming aesthetic creates mood, but that's not the mechanism of change.</p><p>What makes ROOTS cyberdelic is that the HRV biofeedback creates a responsive loop that trains the nervous system. The forest is the world. The biofeedback loop is the magic.</p><p><em>Reflection: Beautiful environments create mood. Biofeedback loops create change. Know the difference.</em></p>",
+                        "choices": [
+                            {
+                                "id": "retry_d2",
+                                "label": "Try Again",
+                                "outcome": "decision_2"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "d2_outcome_c",
+                        "narrative": "<p>Outcome data matters, but Priya is asking about mechanism. If you can't articulate the causal chain — biofeedback loop training regulation — then you can't evaluate if the design is sound.</p><p>Mechanism is exactly what the Meaning dimension asks you to look for.</p><p><em>Reflection: \"The research supports this\" is not the same as understanding why it works.</em></p>",
+                        "choices": [
+                            {
+                                "id": "retry_d2",
+                                "label": "Try Again",
+                                "outcome": "decision_2"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "final_reflection",
+                        "narrative": "<div class='scenario-character'><div class='character-avatar'>P</div><div class='character-info'><div class='character-name'>Priya</div><div class='character-role'>Program Director</div></div></div><p>Priya nods slowly. \"Okay. I actually get it now. SHIFT is a stimulation experience dressed up as wellness. ROOTS is genuinely designed around transformation.\"</p><p>She pauses. \"One more thing — is there anything in SHIFT that has cyberdelic potential? Or is it a lost cause?\"</p><p><strong>Your Answer:</strong> \"SHIFT isn't a lost cause. If they replaced the competitive score with a biofeedback state tracker, and added a Presence dimension focused on embodied awareness, they'd be moving toward something cyberdelic. The bones are there.\"</p><p><em>Reflection: No experience is permanently beyond the reach of good design. The six dimensions aren't a pass/fail test — they're a design roadmap.</em></p>",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module1/lesson3/priya_realization_v2.jpg",
+                            "alt": "Priya's expression shifting to clarity and understanding, warm realization on her face."
+                        },
+                        "choices": [
+                            {
+                                "id": "start_quiz",
+                                "label": "Start Knowledge Check",
+                                "outcome": "quiz_q1"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "quiz_q1",
+                        "narrative": "<h3>Question 1</h3><p>You're reviewing a new VR experience called \"PULSE.\" It uses a heart rate sensor to display your HRV data as a pulsing light sphere. Users are encouraged to \"beat their personal best HRV score\" each session.</p><p><strong>Which dimension reveals the most critical problem?</strong></p>",
                         "choices": [
                             {
                                 "id": "q1_a",
-                                "label": "Cybersecurity and protecting digital information",
-                                "outcome": "q1_wrong_a"
+                                "label": "Reality — Only uses Virtual not Biological reality.",
+                                "outcome": "q1_feedback_a"
                             },
                             {
                                 "id": "q1_b",
-                                "label": "Digital technology and virtual environments as tools for experience",
-                                "outcome": "q2"
+                                "label": "States — Designed around a competitive Cognitive state.",
+                                "outcome": "q1_correct"
                             },
                             {
                                 "id": "q1_c",
-                                "label": "Social media and online communication platforms",
-                                "outcome": "q1_wrong_c"
+                                "label": "Sensory — Only engages visual/auditory senses.",
+                                "outcome": "q1_feedback_c"
                             },
                             {
                                 "id": "q1_d",
-                                "label": "Artificial intelligence and machine learning systems",
-                                "outcome": "q1_wrong_d"
+                                "label": "Meaning — Missing clear story arc.",
+                                "outcome": "q1_feedback_d"
                             }
                         ]
                     },
                     {
-                        "id": "q1_wrong_a",
-                        "narrative": "<p>While \"cyber\" is used in cybersecurity, that's not what it means in cyberdelics. Here, \"cyber\" refers to the broader realm of digital technology, virtual environments, and human-computer interaction—the tools we use to facilitate consciousness exploration. Think cybernetics and feedback systems, not security.</p>",
+                        "id": "q1_feedback_a",
+                        "narrative": "<p><strong>Incorrect.</strong> PULSE actually <em>does</em> incorporate Biological reality — the sensor is reading the body directly. The issue lies elsewhere in the design.</p>",
                         "choices": [
                             {
-                                "id": "retry",
+                                "id": "retry_q1",
                                 "label": "Try Again",
-                                "outcome": "q1"
+                                "outcome": "quiz_q1"
                             }
                         ]
                     },
                     {
-                        "id": "q1_wrong_c",
-                        "narrative": "<p>While social media exists in the digital realm, \"cyber\" in cyberdelics specifically refers to immersive and biofeedback technologies used for consciousness exploration. Social platforms are about external communication, while cyberdelics focus on internal exploration using specialized tech.</p>",
+                        "id": "q1_correct",
+                        "narrative": "<p><strong>Correct!</strong> PULSE harnesses biofeedback for the wrong state. By framing HRV as a score to beat, it activates a competitive, achievement-oriented cognitive state which works against nervous system regulation.</p>",
                         "choices": [
                             {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "q1"
+                                "id": "next_q2",
+                                "label": "Next Question",
+                                "outcome": "quiz_q2"
                             }
                         ]
                     },
                     {
-                        "id": "q1_wrong_d",
-                        "narrative": "<p>AI and machine learning might be tools within cyberdelic experiences, but \"cyber\" here primarily refers to the immersive digital technologies (VR, AR, biofeedback) that create the environment for consciousness exploration. It's about the interface between human and technology, not about autonomous intelligent systems.</p>",
+                        "id": "q1_feedback_c",
+                        "narrative": "<p><strong>Incorrect.</strong> Many cyberdelic experiences work beautifully with only visual/auditory input. The issue isn't <em>what</em> senses are used, but <em>how</em>.</p>",
                         "choices": [
                             {
-                                "id": "retry",
+                                "id": "retry_q1",
                                 "label": "Try Again",
-                                "outcome": "q1"
+                                "outcome": "quiz_q1"
                             }
                         ]
                     },
                     {
-                        "id": "q2",
-                        "narrative": "<h3>Question 2 of 2</h3><p>✓ Correct!</p><p><strong>What does \"delic\" (from psychedelic) literally mean?</strong></p><p><em>Understanding the consciousness exploration component.</em></p>",
+                        "id": "q1_feedback_d",
+                        "narrative": "<p><strong>Incorrect.</strong> Not every cyberdelic experience needs a three-act story. The issue runs deeper—think about the state it's cultivating.</p>",
+                        "choices": [
+                            {
+                                "id": "retry_q1",
+                                "label": "Try Again",
+                                "outcome": "quiz_q1"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "quiz_q2",
+                        "narrative": "<h3>Question 2</h3><p>An experience uses photorealistic forest visuals, binaural beats, and a body scan. It is designed to help users arrive at a state of <strong>embodied stillness</strong>, and build the lasting trait of <strong>interoceptive awareness</strong>.</p><p><strong>Which dimension pair best shows this is well-designed?</strong></p>",
                         "choices": [
                             {
                                 "id": "q2_a",
-                                "label": "Creating hallucinations or visual distortions",
-                                "outcome": "q2_wrong_a"
+                                "label": "Reality and Sensory",
+                                "outcome": "q2_feedback_a"
                             },
                             {
                                 "id": "q2_b",
-                                "label": "Mind-manifesting or revealing consciousness",
-                                "outcome": "quiz_complete"
+                                "label": "States and Traits",
+                                "outcome": "q2_correct"
                             },
                             {
                                 "id": "q2_c",
-                                "label": "Causing euphoria and pleasure",
-                                "outcome": "q2_wrong_c"
+                                "label": "Presence and Meaning",
+                                "outcome": "q2_feedback_c"
                             },
                             {
                                 "id": "q2_d",
-                                "label": "Altering brain chemistry through substances",
-                                "outcome": "q2_wrong_d"
+                                "label": "Sensory and Meaning",
+                                "outcome": "q2_feedback_d"
                             }
                         ]
                     },
                     {
-                        "id": "q2_wrong_a",
-                        "narrative": "<p>This is a common misconception. \"Delic\" comes from Greek words meaning \"mind-manifesting\" or \"revealing the mind/soul.\" It's about making consciousness visible and exploring inner dimensions, not just creating visual effects. Hallucinations might occur, but they're not the definition—revelation of consciousness is.</p>",
+                        "id": "q2_feedback_a",
+                        "narrative": "<p><strong>Incorrect.</strong> Technology sophistication (VR, binaural) indicates tools, but doesn't prove the design is effective or intentional.</p>",
                         "choices": [
                             {
-                                "id": "retry",
+                                "id": "retry_q2",
                                 "label": "Try Again",
-                                "outcome": "q2"
+                                "outcome": "quiz_q2"
                             }
                         ]
                     },
                     {
-                        "id": "q2_wrong_c",
-                        "narrative": "<p>While consciousness exploration might involve pleasurable states, \"delic\" doesn't mean pleasure. It means \"mind-manifesting\"—revealing and exploring consciousness. The focus is on revelation and awareness expansion, not just feeling good. Transformation might be challenging, not always euphoric.</p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "q2"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "q2_wrong_d",
-                        "narrative": "<p>That's one method of creating mind-manifesting experiences (psychedelics), but \"delic\" itself just means \"mind-manifesting\"—it doesn't specify the method. This is why cyberdelics can use the same suffix—both psychedelics and cyberdelics aim to manifest consciousness, just through different means (substances vs. technology).</p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "q2"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "quiz_complete",
-                        "narrative": "<h3>✓ Quiz Complete!</h3><p>Excellent! You understand the etymology of \"cyberdelics.\" You're ready to move forward.</p>",
+                        "id": "q2_correct",
+                        "narrative": "<h3>Lesson Complete!</h3><p><strong>Correct.</strong> This designer has mapped a specific transient state (stillness) to a lasting trait (awareness). That relationship is what separates an intentional transformation system from mere entertainment.</p>",
                         "choices": []
+                    },
+                    {
+                        "id": "q2_feedback_c",
+                        "narrative": "<p><strong>Incorrect.</strong> While it has environmental presence and a story, these don't explain the <em>alignment</em> between intention and outcome.</p>",
+                        "choices": [
+                            {
+                                "id": "retry_q2",
+                                "label": "Try Again",
+                                "outcome": "quiz_q2"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "q2_feedback_d",
+                        "narrative": "<p><strong>Incorrect.</strong> Good magic (binaural beats) matters, but the defining feature here is the clear design chain from state to trait.</p>",
+                        "choices": [
+                            {
+                                "id": "retry_q2",
+                                "label": "Try Again",
+                                "outcome": "quiz_q2"
+                            }
+                        ]
                     }
                 ]
             }

@@ -1,0 +1,454 @@
+# Visual Design Spec
+## Module 1 · Lesson 2 · Mini-Lesson 2.2
+### Psychedelic ↔ Cyberdelic Spectrum Explorer
+
+**Type:** Interactive Simulation  
+**Status:** Design Spec — Ready for Build  
+**Priority:** HIGHEST in Module 1  
+**Target Duration:** 4–5 minutes
+
+---
+
+## 1. DESIGN CONCEPT
+
+### Guiding Metaphor
+Two rivers that share the same source but flow through different terrain before reaching the same ocean. The slider doesn't "choose a side" — it moves through a landscape where some things shift and some things hold perfectly still. The stillness of the constant variables is the emotional and conceptual centerpiece of this simulation.
+
+### Aesthetic Direction
+**Sacred Tech Cartography** — this simulation should feel like an interactive map of consciousness territory. Not a sterile comparison table. Not a corporate slider widget. It's a living instrument that reveals hidden structure. Inspired by the STAR Arts brand: sacred geometry meets cutting-edge technology, with a deep reverence for what consciousness exploration actually means.
+
+### Tone
+Contemplative but precise. The visual language should feel like something you'd encounter in a well-designed consciousness research center, not a product demo. There's weight to what this slider is showing. The design should honor that.
+
+---
+
+## 2. COLOR SYSTEM
+
+### Primary Palette
+| Token | Hex | Usage |
+|-------|-----|-------|
+| `--deep-space` | `#0D0A1A` | Main background |
+| `--void-dark` | `#120F22` | Card backgrounds |
+| `--card-surface` | `#1C1830` | Elevated surfaces |
+| `--border-subtle` | `#2A2545` | Default borders |
+| `--border-glow` | `#4A3F7A` | Active/hover borders |
+
+### Psychedelic Side (Left)
+| Token | Hex | Usage |
+|-------|-----|-------|
+| `--psych-core` | `#8B5CF6` | Primary purple — Psychedelic anchor |
+| `--psych-glow` | `#A78BFA` | Lighter purple — text/icons on this side |
+| `--psych-bloom` | `#6D28D9` | Deeper purple — slider track left |
+| `--psych-mist` | `#4C1D95` | Dark purple — background tint left |
+
+### Cyberdelic Side (Right)
+| Token | Hex | Usage |
+|-------|-----|-------|
+| `--cyber-core` | `#14B8A6` | Primary teal — Cyberdelic anchor |
+| `--cyber-glow` | `#5EEAD4` | Lighter teal — text/icons on this side |
+| `--cyber-bloom` | `#0D9488` | Deeper teal — slider track right |
+| `--cyber-mist` | `#042F2E` | Dark teal — background tint right |
+
+### Constant Zone (Center Column)
+| Token | Hex | Usage |
+|-------|-----|-------|
+| `--gold-light` | `#F59E0B` | Amber — shared territory label |
+| `--gold-glow` | `#FCD34D` | Lighter amber — constant variable labels |
+| `--gold-surface` | `#1C1505` | Very dark amber — constant zone background |
+| `--gold-border` | `#78350F` | Amber border — constant zone frame |
+
+### Typography
+| Token | Hex | Usage |
+|-------|-----|-------|
+| `--text-primary` | `#F0ECFF` | Main readable text |
+| `--text-secondary` | `#A89EC9` | Supporting text, labels |
+| `--text-muted` | `#6B5F8A` | Disabled/placeholder states |
+
+---
+
+## 3. TYPOGRAPHY
+
+### Font Pairings
+- **Display / Headers:** `Cinzel` (Google Fonts) — Roman-inspired serif with sacred geometry feeling. Used for column headers, simulation title, and discovery moment headlines.
+- **Body / Labels:** `DM Mono` (Google Fonts) — Technical, precise, readable. Used for attribute labels, tooltip text, and variable descriptions.
+- **Accent / Status:** `Orbitron` (Google Fonts) — Futuristic but grounded. Used only for the slider position indicator and artifact unlock announcement.
+
+### Type Scale
+| Role | Font | Size | Weight | Color |
+|------|------|------|--------|-------|
+| Simulation title | Cinzel | 28px / 1.75rem | 600 | `--text-primary` |
+| Column headers | Cinzel | 16px / 1rem | 700 | Side color (purple or teal) |
+| Attribute labels | DM Mono | 14px / 0.875rem | 500 | `--text-primary` |
+| Variable states | DM Mono | 13px / 0.8125rem | 400 | Side-specific glow color |
+| Tooltip text | DM Mono | 12px / 0.75rem | 400 | `--text-secondary` |
+| Slider position | Orbitron | 11px / 0.6875rem | 400 | `--text-muted` |
+| Artifact unlock | Orbitron | 14px / 0.875rem | 700 | `--gold-light` |
+
+---
+
+## 4. LAYOUT ARCHITECTURE
+
+### Overall Container
+The component lives in a **rounded-corner card** with a subtle outer glow that shifts color as the slider moves. At the psychedelic end, the glow is purple. At the cyberdelic end, the glow is teal. In the middle, both glows coexist at reduced opacity.
+
+```
+┌─────────────────────────────────────────────────────────┐
+│  SIMULATION TITLE                              [status] │
+│─────────────────────────────────────────────────────────│
+│                                                         │
+│   ◀ PSYCHEDELIC ─────────[●]─────────── CYBERDELIC ▶   │
+│                        SLIDER                           │
+│─────────────────────────────────────────────────────────│
+│                                                         │
+│  ┌─── WHAT CHANGES ───┐  ┌─── SHARED ───┐  ┌─────────┐│
+│  │                     │  │ TERRITORY    │  │         ││
+│  │  Method             │  │              │  │         ││
+│  │  ────────────────   │  │  Intention   │  │         ││
+│  │  [Dynamic State]    │  │  Outcomes    │  │         ││
+│  │                     │  │  Integration │  │         ││
+│  │  Legality           │  │  Guidance    │  │         ││
+│  │  ────────────────   │  │  Set+Setting │  │         ││
+│  │  [Dynamic State]    │  │              │  │         ││
+│  │                     │  │              │  │         ││
+│  │  [+ 4 more]         │  │              │  │         ││
+│  └─────────────────────┘  └──────────────┘  └─────────┘│
+│                                                         │
+│  [Discovery Card — appears at key positions]            │
+└─────────────────────────────────────────────────────────┘
+```
+
+### Column Structure
+The layout uses a **3-column grid** with specific proportional weighting:
+
+| Column | Width | Content |
+|--------|-------|---------|
+| Left "What Changes" | 45% | Dynamic variables that update with slider |
+| Center "Shared Territory" | 32% | Constant variables — visually anchored |
+| Right "Exploration Prompt" | 23% | Interaction guidance and progress indicator |
+
+On mobile (under 768px), this collapses to a **vertical stack**: Slider → What Changes → Shared Territory → Exploration Prompt.
+
+---
+
+## 5. THE SLIDER
+
+### Visual Design
+The slider track is **full-width across the component**, 8px tall with rounded ends. The track itself is a live gradient that updates with position:
+
+- **Left zone (0–30%):** Solid `--psych-bloom` → `--border-subtle`
+- **Center zone (30–70%):** Gradient blend of both colors on their respective halves
+- **Right zone (70–100%):** `--border-subtle` → `--cyber-bloom`
+
+The **thumb handle** is a circle, 28px diameter, with:
+- A white inner circle (8px) — the "eye" or focal point
+- An outer ring that glows in the dominant color of its current position
+- On hover: slight scale increase (1.1x) and stronger glow pulse
+- On drag: the glow brightens and a faint radial wave emanates outward (CSS animation)
+
+### Endpoint Labels
+- Left label: `PSYCHEDELIC` in `--psych-glow` using Cinzel, with a small molecular/organic icon to its left
+- Right label: `CYBERDELIC` in `--cyber-glow` using Cinzel, with a small circuit/signal icon to its right
+- Both labels have a faint underline that glows in their respective color when slider is on that side
+
+### Behavior
+- Starts at center position (50%) on load
+- Smooth CSS transitions on all dependent elements (150ms ease-out)
+- Subtle haptic feedback on mobile at the three "discovery positions" (0%, 50%, 100%)
+
+---
+
+## 6. WHAT CHANGES COLUMN
+
+### Card Design
+Each attribute lives in its own **micro-card** — a contained unit with:
+- Background: `--card-surface`
+- Border: `--border-subtle` by default, transitions to side-dominant color when slider leans that way
+- Border-radius: 8px
+- Padding: 12px 16px
+- A thin left-side color bar (4px wide) that reflects the current dominant color
+
+### Attribute Card Anatomy
+```
+┌────────────────────────────────────┐
+│ ████  METHOD                    ⓘ │  ← label row
+│                                    │
+│  Chemical substance               │  ← state display
+│  ─────────────────────────        │  ← transition line
+│  Digital technology               │  ← opposing state (faded)
+└────────────────────────────────────┘
+```
+
+When the slider moves toward one side, the active state **brightens and moves to the top** while the other state **dims and moves to the bottom**. This creates a clear visual hierarchy without hard cuts. The transition is a **crossfade + vertical nudge** (100ms).
+
+### The Info Icon (ⓘ)
+Each attribute card has a small info icon in the top-right corner. On click/tap:
+- A tooltip card slides up from below the attribute card
+- Contains a single-sentence explanation of why this attribute differs
+- Closes when tapping elsewhere or clicking the icon again
+- Tracking: the system logs which tooltips have been opened (needed for artifact unlock logic)
+
+### The 6 Attributes in Order
+The attributes display in this order from top to bottom, because the sequence builds conceptual understanding:
+
+1. **Method** — the most obvious, entry-level distinction
+2. **Legality** — immediately practical consequence of Method
+3. **Physical Safety** — second practical consequence
+4. **Duration Control** — where cyberdelic advantage becomes tangible
+5. **Repeatability** — deeper implication of the approach difference
+6. **Accessibility** — the societal/community-level consequence
+
+### State Text for Each Attribute
+These are the exact text strings that display at each end:
+
+| Attribute | Psychedelic State | Cyberdelic State |
+|-----------|------------------|-----------------|
+| Method | Chemical substance ingestion | Digital technology immersion |
+| Legality | Restricted in most jurisdictions | Legal worldwide, no restrictions |
+| Physical Safety | Metabolic processing required | No chemical metabolism involved |
+| Duration Control | Fixed once ingested | Adjustable in real-time |
+| Repeatability | Tolerance reduces effects over time | Consistent and freely repeatable |
+| Accessibility | Medical screening often required | Broadly accessible to most people |
+
+At the center position (slider at 50%), both states display with equal opacity — a visual representation of "both paths exist."
+
+---
+
+## 7. SHARED TERRITORY COLUMN
+
+### Design Intent
+This column must *feel different* from the left column. Its stillness should be perceptible — something about this zone communicates permanence and anchor.
+
+### Column Container
+- Background: `--gold-surface` — a very dark amber that separates it from the surrounding deep space
+- Border: 1px solid `--gold-border` on all sides
+- A subtle **vertical glow line** runs along both the left and right edges of this column — amber, 1px wide, pulsing very slowly (3s cycle, 40–70% opacity)
+- Header label: "SHARED TERRITORY" in Cinzel, 11px, uppercase, `--gold-light`, with a small ≈ symbol to its left
+
+### Constant Variable Items
+Each item is displayed as a **simple label row** with no dynamic behavior:
+- A small amber dot (6px circle) to the left
+- Label text in DM Mono, `--text-primary`
+- On hover: a tooltip expands with a one-sentence explanation of *why* this is shared
+
+The items list:
+1. **Intention** — Consciousness exploration and transformation
+2. **Potential Outcomes** — Mystical experiences, therapeutic breakthroughs
+3. **Integration Need** — Processing and meaning-making afterward
+4. **Value of Guidance** — Skilled facilitation enhances outcomes
+5. **Set and Setting** — Context matters profoundly
+
+### The "Stillness Effect"
+The most important design choice: while the left column animates with slider movement, the right column **does nothing visually** when the slider moves. No color shifts. No animation. This contrast is intentional and should be noticeable. A learner who interacts with the slider repeatedly will start to notice that the amber column never reacts — and that observation *is* the learning moment.
+
+---
+
+## 8. DISCOVERY MOMENTS
+
+### What They Are
+At three specific slider positions, a **Discovery Card** appears below the main grid. This is a temporary overlay card that surfaces a key insight. It auto-dismisses after 6 seconds or on any click.
+
+### Trigger Positions
+
+**Position: Far Left (slider at 0–5%)**
+- Trigger: Slider first reaches the psychedelic extreme
+- Card title: "Fully Psychedelic Territory"
+- Card content: "Notice the Shared Territory column. Still amber. Unchanged. The method is different — but the destination is the same."
+- Visual: A faint molecular structure renders briefly in the background of the card
+
+**Position: Center (slider at 48–52%)**  
+- Trigger: Slider first passes through the center zone
+- Card title: "The Meeting Point"
+- Card content: "Right here, both paths are equally present. Different roads. Same map. Same intention."
+- Visual: Both a molecular structure and circuit node pattern render side-by-side, blending at the seam
+
+**Position: Far Right (slider at 95–100%)**
+- Trigger: Slider first reaches the cyberdelic extreme
+- Card title: "Fully Cyberdelic Territory"
+- Card content: "Six attributes changed. But count the Shared Territory items. All five. Still there. The approach changed — the purpose didn't."
+- Visual: A faint circuit/signal pattern renders briefly in the card background
+
+### Discovery Card Anatomy
+```
+┌─────────────────────────────────────────────────────┐
+│ ✦  DISCOVERY                              [dismiss] │
+│                                                     │
+│     "The Meeting Point"                             │
+│                                                     │
+│     Right here, both paths are equally present.    │
+│     Different roads. Same map. Same intention.      │
+│                                                     │
+│     [faint background visual — dissolves in/out]    │
+└─────────────────────────────────────────────────────┘
+```
+
+- Background: `--void-dark` with 95% opacity backdrop blur
+- Border: 1px `--border-glow` with ambient glow
+- Appears with a **slide-up + fade-in** animation (300ms)
+- Dismisses with **fade-out** (200ms)
+- The ✦ symbol pulses gently while card is visible
+
+---
+
+
+
+## 10. EXPLORATION PROMPT COLUMN (RIGHT)
+
+### Purpose
+This narrow column serves as a **live guide** that adapts its suggestions based on slider position and interaction state. It prevents learners from just dragging the slider once and considering it done.
+
+### States
+
+**Initial State (on load):**
+```
+EXPLORE
+
+Move the slider to
+begin. Try starting
+at either extreme.
+```
+
+**After first movement:**
+```
+KEEP GOING
+
+Try the other end.
+What stays constant
+when everything
+else shifts?
+```
+
+**After center pass:**
+```
+THE ANCHOR
+
+Tap the info icons
+on any attribute
+to go deeper.
+```
+
+**After full exploration:**
+```
+ALMOST THERE
+
+Open 3 more info
+cards to unlock
+your artifact.
+```
+
+**After artifact unlock:**
+```
+COLLECTED ✓
+
+Spectrum Navigator
+added to your
+collection.
+```
+
+- Font: DM Mono, 12px, `--text-secondary`
+- Header label: Cinzel, 11px, `--text-muted`
+- Updates with a gentle **crossfade** (200ms) when state changes
+- No animations beyond the crossfade — this column should feel like a quiet companion, not a distraction
+
+---
+
+## 11. RESPONSIVE BEHAVIOR
+
+### Desktop (1024px+)
+Full 3-column layout as described. Slider sits above the columns, full-width within the card.
+
+### Tablet (768px–1023px)
+The right "Exploration Prompt" column collapses into a **thin status bar** that sits below the slider, above the two-column grid. The main grid becomes left+center columns only.
+
+### Mobile (under 768px)
+Full vertical stack:
+- Title
+- Slider (full width)
+- Exploration prompt (1 line, centered)
+- What Changes (full-width, cards stack vertically)
+- Shared Territory (full-width, items stack vertically)
+
+On mobile, Discovery Cards appear as a **bottom sheet** (slides up from bottom edge) rather than an inline card.
+
+---
+
+## 12. MICRO-INTERACTIONS SUMMARY
+
+| Trigger | Reaction | Duration | Easing |
+|---------|----------|----------|--------|
+| Slider drag | Attribute states crossfade | 150ms | ease-out |
+| Slider drag | Card left-border color shifts | 150ms | ease-out |
+| Slider drag | Outer container glow shifts | 300ms | ease-in-out |
+| Slider thumb hover | Scale 1.0 → 1.1, glow brightens | 100ms | ease-out |
+| Info icon click | Tooltip slides up | 200ms | ease-out |
+| Info icon click (close) | Tooltip slides down | 150ms | ease-in |
+| Discovery position hit | Discovery card slides up + fades in | 300ms | ease-out |
+| Discovery card dismiss | Discovery card fades out | 200ms | ease-in |
+| Artifact unlock trigger | Container glow pulse | 600ms | ease-in-out |
+| Artifact card entry | Slides up from bottom | 400ms | cubic-bezier(0.34, 1.56, 0.64, 1) |
+
+---
+
+## 13. ACCESSIBILITY
+
+- Slider is fully keyboard-accessible (arrow keys move in 1% increments, Page Up/Down in 10%)
+- All tooltip content is readable by screen readers
+- Discovery cards are announced via `aria-live="polite"`
+- Artifact unlock is announced via `aria-live="assertive"`
+- Color is never the *only* signal — text labels accompany all color states
+- Minimum touch target size: 44px for all interactive elements
+- Focus indicator: visible 2px outline in `--cyber-glow` for all focusable elements
+
+---
+
+## 14. AI IMAGE ASSETS NEEDED
+
+### Image 1 — Component Header Background
+**Prompt:** "Abstract horizontal spectrum visualization, left side showing organic molecular structures and warm purple crystalline light, right side showing circuit patterns and cool teal digital light, both sides blending seamlessly at the center where they share the same luminous core, dark background, sacred geometry undertones, no text, 16:9 aspect ratio, suitable as a subtle header background texture"
+
+**Usage:** Very low opacity (8–12%) background texture behind the simulation title area
+
+### Image 2 — Artifact Icon (Spectrum Navigator)
+**Prompt:** "Compass rose icon where north and south points are colored purple and teal respectively, east and west points are amber gold, the compass center contains a sacred geometry mandala pattern, dark background, glowing subtle lines, suitable as a small square icon, 1:1 aspect ratio, symbolic and elegant"
+
+**Usage:** The artifact card icon (displayed at approximately 64×64px)
+
+---
+
+## 15. COMPONENT BOUNDARIES
+
+**This component does NOT include:**
+- The intro description paragraph (that lives in Framer above the embedded component)
+- The Quiz that follows (that is a separate component in the method chain)
+- Any progress bar or lesson completion tracking (handled by Framer/Outsetta)
+
+**This component DOES include:**
+- All slider logic and visual states
+- All six attribute cards with tooltips
+- Shared Territory column with tooltips
+- All three Discovery Moments
+- Artifact unlock sequence and animation
+- Exploration Prompt column with state transitions
+- Responsive layout handling
+- Local state tracking for artifact unlock conditions
+
+---
+
+## 16. BUILD HANDOFF CHECKLIST
+
+Before coding begins, confirm:
+- [ ] Google Fonts loaded: Cinzel, DM Mono, Orbitron
+- [ ] Color tokens defined as CSS variables
+- [ ] All 6 attribute tooltip copy written and reviewed
+- [ ] All 5 shared territory tooltip copy written and reviewed
+- [ ] Discovery moment copy finalized (3 cards)
+- [ ] Artifact icon generated (AI image prompt above)
+- [ ] Header background texture generated (AI image prompt above)
+- [ ] Audio file for artifact unlock sourced (binaural/ambient tone, ~1.5 sec)
+- [ ] Responsive breakpoints confirmed with Framer layout
+- [ ] Outsetta artifact tracking endpoint confirmed
+
+---
+
+*Spec Version: 1.0*  
+*Ready for: React component build*  
+*Next step: M1_L2_ML2_SpectrumExplorer_ComponentBuild*

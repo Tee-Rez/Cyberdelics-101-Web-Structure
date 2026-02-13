@@ -30,6 +30,22 @@ class LessonUI {
         };
         console.log('[LessonUI] Constructed');
         this._foundArtifacts = new Set();
+
+        // Bind fullscreen listener once
+        this._boundFsUpdate = this._updateFullScreenStatus.bind(this);
+        document.addEventListener('fullscreenchange', this._boundFsUpdate);
+    }
+
+    _updateFullScreenStatus() {
+        // Toggle "Recommended" Glow
+        const isFs = !!document.fullscreenElement;
+        if (this.elements && this.elements.headerRight) {
+            if (!isFs) {
+                this.elements.headerRight.classList.add('fs-recommended-glow');
+            } else {
+                this.elements.headerRight.classList.remove('fs-recommended-glow');
+            }
+        }
     }
 
     /**
@@ -107,6 +123,10 @@ class LessonUI {
         const fsBtn = topBar.querySelector('.cd-fullscreen-btn');
         fsBtn.addEventListener('click', () => this.toggleFullScreen());
         this.elements.fsBtn = fsBtn;
+        this.elements.headerRight = topBar.querySelector('.cd-header-right');
+
+        // Initial check
+        this._updateFullScreenStatus();
 
         // 2. Main Body (Sidebars + Content)
         const body = document.createElement('div');
