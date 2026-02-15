@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venn Diagram V2 Test</title>
+    <link rel="stylesheet" href="../../../core/styles.css">
+    <link rel="stylesheet" href="venn-diagram-combiner.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        body {
+            background: #0a0a12;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #simulation-container {
+            flex: 1;
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .controls {
+            padding: 10px;
+            background: #1a1a2e;
+            display: flex;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="controls">
+        <button onclick="viz.reset()">Reset</button>
+        <label>Progress: <input type="range" id="progress" min="0" max="100" value="0"
+                oninput="updateProgress(this.value)"></label>
+    </div>
+    <div id="simulation-container"></div>
+
+    <script src="venn-diagram-combiner.js"></script>
+    <script>
+        const config = {
+            mode: "vesica-piscis",
+            data: {
+                leftCircle: {
+                    id: "c1",
+                    label: "Science",
+                    color: "#00D9FF",
+                    subWords: ["Empirical", "Measurement", "Objective", "Hypothesis", "Data", "Analysis"],
+                    etymology: { title: "Test Etym", concept: "Concept" }
+                },
+                rightCircle: {
+                    id: "c2",
+                    label: "Spirituality",
+                    color: "#9D4EDD",
+                    subWords: ["Subjective", "Experience", "Meaning", "Transcendence", "Faith", "Soul"],
+                    etymology: { title: "Test Etym", concept: "Concept" }
+                },
+                merged: {
+                    label: "Cyberdelics",
+                    color: "#FFD700",
+                    definition: "The technological induction of altered states of consciousness, validating spiritual experiences through scientific measurement."
+                }
+            }
+        };
+
+        const container = document.getElementById('simulation-container');
+        // Fix: Access from Registry
+        const Engine = window.SimulationEngines['VennDiagramCombiner'];
+        window.viz = Object.create(Engine);
+
+        // Mock Host
+        const host = {
+            markComplete: () => console.log('Simulation Complete!'),
+            advanceStep: () => console.log('Step Advanced')
+        };
+
+        window.viz.init(container, config, host);
+
+        function updateProgress(val) {
+            window.viz.update(0.016, { mergeProgress: parseInt(val) });
+        }
+
+        // Loop - Let engine preserve its own progress, don't override
+        function animate(t) {
+            // Only pass config without mergeProgress to avoid resetting drag values
+            window.viz.update(0.016, {});
+            requestAnimationFrame(animate);
+        }
+        animate();
+    </script>
+</body>
+
+</html>

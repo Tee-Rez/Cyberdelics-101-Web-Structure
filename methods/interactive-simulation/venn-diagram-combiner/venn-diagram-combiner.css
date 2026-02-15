@@ -1,17 +1,33 @@
-/* Venn Diagram Combiner Styles */
+/* Venn Diagram Combiner Styles (V2) */
 
 .venn-combiner-viz {
     width: 100%;
     height: 100%;
+    display: block;
+    /* Remove inline baseline gap */
+    position: absolute;
+    /* Take out of flow to prevent flex height growth */
+    top: 0;
+    left: 0;
     overflow: visible;
     user-select: none;
 }
 
 /* Circles */
+.venn-group.locked .venn-circle {
+    filter: grayscale(1) opacity(0.5);
+    /* Dim but clean */
+    stroke-dasharray: 10, 5;
+}
+
 .venn-circle {
     cursor: grab;
-    transition: filter 0.3s ease;
+    transition: filter 0.3s ease, stroke 0.3s ease, stroke-dasharray 0.3s ease;
 }
+
+/* .venn-group:not(.locked) .venn-circle {
+    stroke: none;
+} - REMOVED to show stroke always */
 
 .venn-circle:hover {
     filter: brightness(1.3);
@@ -21,8 +37,12 @@
     cursor: grabbing;
 }
 
-.venn-circle.merged {
-    cursor: default;
+.venn-lock-icon {
+    font-size: 48px;
+    opacity: 0.8;
+    pointer-events: none;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    transition: opacity 0.5s;
 }
 
 /* Labels */
@@ -41,12 +61,22 @@
 }
 
 .venn-label.merged {
-    font-size: 32px;
     letter-spacing: 4px;
-    opacity: 0;
+    /* opacity controlled by JavaScript */
     transition: opacity 0.5s;
     pointer-events: none;
 }
+
+/* Sub-Words (Floating) */
+.venn-subword {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    pointer-events: none;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+    letter-spacing: 1px;
+}
+
 
 /* Drag Prompt */
 .venn-drag-prompt {
@@ -88,17 +118,27 @@
 
 /* Complete Button */
 .venn-complete-btn {
-    /* Layout Overrides for Standard Button */
     position: relative;
     display: block !important;
-    /* Force visible */
     margin: 20px auto;
     z-index: 1000;
-
-    /* Animation State */
+    padding: 12px 24px;
+    background: linear-gradient(90deg, #ff00ea, #5900ff);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(89, 0, 255, 0.5);
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.venn-complete-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(89, 0, 255, 0.8);
 }
 
 .venn-complete-btn.visible {
@@ -112,119 +152,12 @@
     mix-blend-mode: screen;
 }
 
-/* Etymology Boxes (Floating) */
-.etymology-floating {
-    pointer-events: none;
-    transition: opacity 0.5s ease;
-}
-
-.etymology-bg {
-    fill: rgba(20, 20, 30, 0.95);
-    stroke-width: 2px;
-    rx: 8px;
-    ry: 8px;
-}
-
-.etymology-title {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 14px;
-    font-weight: 700;
-}
-
-.etymology-text {
-    font-family: 'Space Mono', monospace;
-    font-size: 11px;
-    fill: #ffffff;
-}
-
-.etymology-text.italic {
-    font-style: italic;
-    fill: #aaaaaa;
-}
-
-.etymology-text.bold {
-    font-weight: 700;
-}
-
-/* Info Panel (Bottom) */
-.venn-info-panel {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%) translateY(20px);
-    width: 90%;
-    max-width: 600px;
-    background: rgba(20, 20, 30, 0.9);
-    border: 2px solid #FF006E;
-    /* Default, overridden by JS */
-    border-radius: 12px;
-    padding: 20px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    transition: all 0.5s ease;
-    pointer-events: none;
-    text-align: center;
-    z-index: 10;
-}
-
-.venn-info-panel.visible {
-    opacity: 1;
-    transform: translateX(-50%) translateY(0);
-    pointer-events: auto;
-}
-
-.info-title {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    color: #ffffff;
-}
-
-.info-greek {
-    font-family: 'Space Mono', monospace;
-    font-size: 1rem;
-    margin: 8px 0;
-    color: rgba(255, 255, 255, 0.8);
-}
-
-.info-meaning {
-    font-family: 'Space Mono', monospace;
-    color: #ccc;
-    margin: 15px 0;
-    line-height: 1.5;
-    font-size: 0.95rem;
-}
-
-.info-list {
-    text-align: left;
-    display: inline-block;
-    margin-top: 10px;
-    font-size: 0.9rem;
-    color: #ddd;
-}
-
-.info-list-item {
-    margin: 5px 0;
-}
-
 /* Vesica Piscis Specifics */
 .sacred-geometry-path {
-    fill-opacity: 0.2;
-    stroke-width: 2px;
+    fill-opacity: 0.6;
+    stroke: #FFD700;
+    stroke-width: 1px;
     transition: all 0.5s ease;
-}
-
-.vesica-content {
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    pointer-events: none;
-}
-
-.vesica-content.visible {
-    opacity: 1;
 }
 
 /* Animations */
@@ -232,62 +165,33 @@
 
     0%,
     100% {
-        opacity: 0.6;
-        transform: scale(1);
+        opacity: 0.8;
+        /* Removed transform: scale(1) - conflicts with JS transforms */
     }
 
     50% {
         opacity: 1;
-        transform: scale(1.05);
+        /* Removed transform: scale(1.02) - conflicts with JS transforms */
     }
 }
 
 .venn-pulsing {
-    animation: venn-pulse 2s ease-in-out infinite;
-    transform-origin: center;
-    /* Important for SVG scaling */
-    transform-box: fill-box;
-}
-
-@keyframes venn-float {
-
-    0%,
-    100% {
-        transform: translateY(0px);
-    }
-
-    50% {
-        transform: translateY(-5px);
-    }
-}
-
-.venn-floating {
-    animation: venn-float 3s ease-in-out infinite;
+    animation: venn-pulse 3s ease-in-out infinite;
+    /* Removed transform-origin and transform-box - no longer needed */
 }
 
 /* Mobile Responsiveness */
 @media (max-width: 689px) {
     .venn-label.main {
         font-size: 16px;
-        /* Smaller */
     }
 
     .venn-label.merged {
         font-size: 20px;
     }
 
-    .etymology-text {
+    .venn-subword {
         font-size: 10px;
-        /* Readable minimum */
-    }
-
-    .venn-info-panel {
-        padding: 15px;
-        width: 95%;
-        bottom: 10px;
-        max-height: 40vh;
-        /* Prevent covering too much */
-        overflow-y: auto;
     }
 
     .venn-complete-btn {

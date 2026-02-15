@@ -62,46 +62,34 @@
             "content": {
                 "engine": "VennDiagramCombiner",
                 "params": {
-                    "mode": "combined",
+                    "mode": "vesica-piscis",
                     "data": {
                         "leftCircle": {
+                            "id": "c1",
                             "label": "CYBER",
                             "color": "#00D9FF",
-                            "etymology": {
-                                "title": "CYBER",
-                                "greek": "κυβερνητικός",
-                                "greekTransliteration": "(kybernētikós)",
-                                "meanings": [
-                                    "Greek: 'of or for steering, governance'",
-                                    "Modern: 'relating to computers, IT'"
-                                ],
-                                "concept": "Control • Navigation"
-                            }
+                            "subWords": [
+                                "Digital",
+                                "Technology",
+                                "Feedback",
+                                "Systems"
+                            ]
                         },
                         "rightCircle": {
+                            "id": "c2",
                             "label": "DELIC",
                             "color": "#9D4EDD",
-                            "etymology": {
-                                "title": "DELIC",
-                                "greek": "ψυχή + δῆλος",
-                                "greekTransliteration": "(psychē + dēlos)",
-                                "meanings": [
-                                    "Greek: 'soul/mind' + 'manifest/visible'",
-                                    "Translation: 'mind-manifesting'"
-                                ],
-                                "concept": "Consciousness"
-                            }
+                            "subWords": [
+                                "Mind",
+                                "Consciousness",
+                                "Transformation",
+                                "Awareness"
+                            ]
                         },
                         "merged": {
                             "label": "CYBERDELICS",
                             "color": "#FFD700",
-                            "greek": "cyber + delic = cyberdelics",
-                            "meaning": "The art and science of using technology to guide consciousness into expanded states of awareness",
-                            "synthesis": [
-                                "Navigation (cyber) of Consciousness (delic)",
-                                "Technological tools for inner exploration",
-                                "Precision guidance for transformative experiences"
-                            ]
+                            "definition": "The art and science of using technology to guide consciousness into expanded states of awareness"
                         }
                     }
                 }

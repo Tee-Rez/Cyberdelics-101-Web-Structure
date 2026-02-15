@@ -1,86 +1,147 @@
 {
-    "title": "The Competition Arrives—Vive, PSVR, and the Consumer VR Explosion",
-    "description": "How the emergence of competing platforms (HTC Vive, PlayStation VR, Samsung Gear VR) accelerated innovation and created a viable ecosystem for cyberdelics.",
+    "title": "Breaking Down 'Cyberdelics'",
+    "description": "Understanding the etymology and origins of the term 'cyberdelics'",
     "theme": {
         "primaryColor": "#5900ff",
         "fontBody": "Rajdhani, sans-serif"
     },
     "modules": [
         {
-            "id": "vr_competition_pd_3.2",
-            "title": "A Competitive Revolution",
+            "id": "etymology_1.1",
+            "title": "Etymology of Cyberdelics",
             "type": "progressive-disclosure",
             "content": {
                 "sections": [
                     {
-                        "title": "HTC Vive—Room-Scale Revolution",
+                        "title": "A Fusion Word",
+                        "content": "<p>The word \"cyberdelics\" isn't random; it's a deliberate fusion of two powerful concepts. Understanding where this word comes from helps us grasp what the field actually is. Let's break it down piece by piece.</p>",
+                        "triggerLabel": "Break It Down"
+                    },
+                    {
+                        "title": "\"Cyber\" - The Digital Realm",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module2/lesson3/htc_vive_roomscale.jpg",
-                            "alt": "Person using HTC Vive in a cleared living room space, demonstrating room-scale VR with hand controllers, visible base station sensors in corners, sense of freedom and natural movement, representing the room-scale revolution."
+                            "src": "../assets/images/module1/cyber-typography.jpg"
                         },
                         "mediaLayout": "left",
-                        "content": "<p>HTC partnered with game company Valve to create the HTC Vive (2015), offering room-scale tracking allowing users to walk around virtual space, tracked hand controllers for natural interaction, SteamVR platform with growing content library, and higher quality but more expensive than Oculus ($799 vs $599). The Vive proved VR could be more than seated experiences. Walking and using your hands naturally created unprecedented presence. This established room-scale as VR standard, raising the bar for immersion.</p>",
-                        "triggerLabel": "Mass Market"
+                        "content": "<p>\"Cyber\" comes from \"cybernetics,\" coined by Norbert Wiener in 1948. It refers to systems of communication and control, particularly involving technology and feedback loops.</p><p>In modern usage, \"cyber\" represents the digital, technological, and virtual dimensions of experience. It's the realm of VR, AR, biofeedback devices, and human-computer interaction.</p>",
+                        "triggerLabel": "Next Word"
                     },
                     {
-                        "title": "PlayStation VR—Mass Market Accessibility",
-                        "content": "<p>Sony entered with PlayStation VR (2016), leveraging 100+ million PlayStation 4 owners, offering lower cost and easier setup than PC VR ($399), bringing VR to console gamers who might never buy gaming PC, and selling millions of units (far more than PC VR initially). PlayStation VR proved VR could reach beyond early adopters and tech enthusiasts. Accessibility mattered as much as capability. Mass market potential existed if barriers were lowered.</p>",
-                        "triggerLabel": "Mobile"
+                        "title": "\"Delic\" - Mind-Manifesting",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module1/delic-typography.jpg"
+                        },
+                        "mediaLayout": "right",
+                        "content": "<p>\"Delic\" comes from \"psychedelic,\" which literally means \"mind-manifesting\" (from Greek: psyche = mind/soul, delos = manifest/reveal).</p><p>This suffix carries the essence of consciousness exploration, expanded awareness, and transformative experiences. It's about revealing what's hidden in consciousness, making the invisible visible.</p>",
+                        "triggerLabel": "See The Fusion"
                     },
                     {
-                        "title": "Samsung Gear VR—Mobile's Promise",
-                        "content": "<p>Samsung Gear VR used Samsung phones in simple headset holder, developed with Oculus technology providing decent mobile VR, extremely accessible at $99 with free content, selling millions of units quickly. Quality was lower than PC VR, but convenience was much higher. It introduced VR to people who would never set up PC rig or buy console. Mobile VR showed different use cases: media consumption, casual experiences, accessible meditation and relaxation apps.</p>",
-                        "triggerLabel": "Ecosystem"
+                        "title": "The Fusion",
+                        "content": "<p>When you combine \"cyber\" and \"delic,\" you get a field that uses digital technology (cyber) to manifest and explore consciousness (delic). It's technology in service of inner revelation.</p><p>The word itself tells you what the field is about: using computers and sensors as tools for mind-manifesting experiences.</p>",
+                        "triggerLabel": "Historical Context"
                     },
                     {
-                        "title": "The Ecosystem Effect",
-                        "content": "<p>Competition accelerated innovation faster than any single company could: Oculus focused on ease of use and social features. Vive pushed room-scale and controller innovation. PlayStation prioritized content and accessibility. Samsung explored mobile and media use cases. Each company's different approach expanded VR's possibilities and proved viability for different audiences and applications. Rising tide lifted all boats.</p>",
-                        "triggerLabel": "Cyberdelics Arrive"
-                    },
-                    {
-                        "title": "For Cyberdelics: The Door Opens",
-                        "content": "<p>By 2016, multiple conditions aligned: consumer VR headsets existed at various price points from $99 (Gear VR) to $799 (Vive), content development tools were accessible (Unity, Unreal), distribution platforms existed (Steam, Oculus Store, PlayStation Store), millions of users owned headsets, and cultural acceptance of consciousness tech was established (meditation apps). The pieces were finally in position. Developers could create cyberdelic experiences knowing hardware existed, users existed, and distribution existed. The 30-year journey from Leary's vision reached the point where execution was possible.</p>",
-                        "triggerLabel": "Start Quiz"
+                        "title": "Historical Context",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module1/tim_leary.jpg"
+                        },
+                        "mediaLayout": "full",
+                        "content": "<p>The term \"cyberdelics\" was popularized by Timothy Leary in the 1990s. Leary, known for his earlier psychedelic research, recognized that technology could serve similar consciousness-expanding purposes as substances.</p><p>He foresaw a future where virtual reality and digital tools would become valid paths for inner exploration. We're now living in that future he envisioned.</p>",
+                        "triggerLabel": "Continue"
                     }
                 ]
             }
         },
         {
-            "id": "vr_competition_quiz_3.2",
-            "title": "Knowledge Check: The Competitive Landscape",
+            "id": "venn_1.1",
+            "title": "Synthesis Visualization",
+            "type": "interactive-simulation",
+            "content": {
+                "engine": "VennDiagramCombiner",
+                "params": {
+                    "mode": "vesica-piscis",
+                    "data": {
+                        "leftCircle": {
+                            "id": "c1",
+                            "label": "CYBER",
+                            "color": "#00D9FF",
+                            "subWords": [
+                                "Digital",
+                                "Virtual",
+                                "Technology",
+                                "Interface",
+                                "Feedback",
+                                "Systems"
+                            ],
+                            "etymology": {
+                                "title": "Test Etym",
+                                "concept": "Concept"
+                            }
+                        },
+                        "rightCircle": {
+                            "id": "c2",
+                            "label": "DELIC",
+                            "color": "#9D4EDD",
+                            "subWords": [
+                                "Mind",
+                                "Consciousness",
+                                "Experience",
+                                "Revelation",
+                                "Transformation",
+                                "Awareness"
+                            ],
+                            "etymology": {
+                                "title": "Test Etym",
+                                "concept": "Concept"
+                            }
+                        },
+                        "merged": {
+                            "label": "CYBERDELICS",
+                            "color": "#FFD700",
+                            "definition": "The art and science of using technology to guide consciousness into expanded states of awareness"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "id": "quiz_1.1",
+            "title": "Etymology Quiz",
             "type": "scenario-based",
             "content": {
                 "scenes": [
                     {
                         "id": "q1",
-                        "narrative": "<h3>Question 1</h3><p><strong>What was the main contribution of the HTC Vive to VR development?</strong></p>",
+                        "narrative": "<h3>Question 1 of 2</h3><p><strong>What does the \"cyber\" in cyberdelics primarily refer to?</strong></p><p><em>Understanding the technological component of the term.</em></p>",
                         "choices": [
                             {
                                 "id": "q1_a",
-                                "label": "It was the cheapest VR option available",
-                                "outcome": "q1_feedback_a"
+                                "label": "Cybersecurity and protecting digital information",
+                                "outcome": "q1_wrong_a"
                             },
                             {
                                 "id": "q1_b",
-                                "label": "It introduced room-scale tracking, allowing users to walk around and use hand controllers naturally",
-                                "outcome": "q1_correct"
+                                "label": "Digital technology and virtual environments as tools for experience",
+                                "outcome": "q2"
                             },
                             {
                                 "id": "q1_c",
-                                "label": "It eliminated the need for powerful gaming computers",
-                                "outcome": "q1_feedback_c"
+                                "label": "Social media and online communication platforms",
+                                "outcome": "q1_wrong_c"
                             },
                             {
                                 "id": "q1_d",
-                                "label": "It was the first VR headset ever created",
-                                "outcome": "q1_feedback_d"
+                                "label": "Artificial intelligence and machine learning systems",
+                                "outcome": "q1_wrong_d"
                             }
                         ]
                     },
                     {
-                        "id": "q1_feedback_a",
-                        "narrative": "<p><strong>Incorrect.</strong> Actually, the Vive was the most expensive consumer option at $799. Its contribution wasn't affordability but innovation: room-scale tracking allowing natural walking and hand controllers creating unprecedented presence. It proved VR could be more than seated experiences. Quality and capability, not low price, was its contribution.</p>",
+                        "id": "q1_wrong_a",
+                        "narrative": "<p>While \"cyber\" is used in cybersecurity, that's not what it means in cyberdelics. Here, \"cyber\" refers to the broader realm of digital technology, virtual environments, and human-computer interaction—the tools we use to facilitate consciousness exploration. Think cybernetics and feedback systems, not security.</p>",
                         "choices": [
                             {
                                 "id": "retry",
@@ -90,19 +151,8 @@
                         ]
                     },
                     {
-                        "id": "q1_correct",
-                        "narrative": "<p><strong>Correct!</strong> The Vive's major innovation was room-scale VR with base stations tracking your position as you walked around a room, plus hand controllers allowing natural gestures and interaction. This created deeper presence than seated experiences. The Vive showed VR could support natural movement, establishing room-scale as desirable standard and pushing the entire industry toward more immersive experiences.</p>",
-                        "choices": [
-                            {
-                                "id": "next",
-                                "label": "Next Question",
-                                "outcome": "q2"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "q1_feedback_c",
-                        "narrative": "<p><strong>Incorrect.</strong> The Vive actually required powerful gaming PCs, just like the Oculus Rift. It didn't reduce computing requirements. Its innovation was room-scale tracking and hand controllers, not lowering hardware barriers. PlayStation VR and mobile VR addressed accessibility; Vive focused on premium immersion.</p>",
+                        "id": "q1_wrong_c",
+                        "narrative": "<p>While social media exists in the digital realm, \"cyber\" in cyberdelics specifically refers to immersive and biofeedback technologies used for consciousness exploration. Social platforms are about external communication, while cyberdelics focus on internal exploration using specialized tech.</p>",
                         "choices": [
                             {
                                 "id": "retry",
@@ -112,8 +162,8 @@
                         ]
                     },
                     {
-                        "id": "q1_feedback_d",
-                        "narrative": "<p><strong>Incorrect.</strong> The Vive (2015) came after decades of VR development and after Oculus's Kickstarter (2012). It wasn't first; it was the first consumer headset with room-scale tracking. Its contribution was innovation in tracking and interaction, not being historically first.</p>",
+                        "id": "q1_wrong_d",
+                        "narrative": "<p>AI and machine learning might be tools within cyberdelic experiences, but \"cyber\" here primarily refers to the immersive digital technologies (VR, AR, biofeedback) that create the environment for consciousness exploration. It's about the interface between human and technology, not about autonomous intelligent systems.</p>",
                         "choices": [
                             {
                                 "id": "retry",
@@ -124,33 +174,33 @@
                     },
                     {
                         "id": "q2",
-                        "narrative": "<h3>Question 2</h3><p><strong>Why did having multiple competing VR platforms (Oculus, Vive, PSVR, mobile) benefit the field?</strong></p>",
+                        "narrative": "<h3>Question 2 of 2</h3><p>✓ Correct!</p><p><strong>What does \"delic\" (from psychedelic) literally mean?</strong></p><p><em>Understanding the consciousness exploration component.</em></p>",
                         "choices": [
                             {
                                 "id": "q2_a",
-                                "label": "It confused consumers and slowed VR adoption",
-                                "outcome": "q2_feedback_a"
+                                "label": "Creating hallucinations or visual distortions",
+                                "outcome": "q2_wrong_a"
                             },
                             {
                                 "id": "q2_b",
-                                "label": "Different platforms served different audiences, accelerated innovation, and validated VR as viable market",
-                                "outcome": "q2_correct"
+                                "label": "Mind-manifesting or revealing consciousness",
+                                "outcome": "quiz_complete"
                             },
                             {
                                 "id": "q2_c",
-                                "label": "It prevented any VR content from being developed",
-                                "outcome": "q2_feedback_c"
+                                "label": "Causing euphoria and pleasure",
+                                "outcome": "q2_wrong_c"
                             },
                             {
                                 "id": "q2_d",
-                                "label": "Only one platform should have existed to avoid waste",
-                                "outcome": "q2_feedback_d"
+                                "label": "Altering brain chemistry through substances",
+                                "outcome": "q2_wrong_d"
                             }
                         ]
                     },
                     {
-                        "id": "q2_feedback_a",
-                        "narrative": "<p><strong>Incorrect.</strong> While multiple platforms created some confusion, the net effect was positive: different platforms served different audiences and use cases, accelerating overall adoption. Competition drove innovation faster than monopoly would. Different price points ($99-$799) made VR accessible to various markets. Each platform's innovations pushed others to improve. Competition benefited the field overall.</p>",
+                        "id": "q2_wrong_a",
+                        "narrative": "<p>This is a common misconception. \"Delic\" comes from Greek words meaning \"mind-manifesting\" or \"revealing the mind/soul.\" It's about making consciousness visible and exploring inner dimensions, not just creating visual effects. Hallucinations might occur, but they're not the definition—revelation of consciousness is.</p>",
                         "choices": [
                             {
                                 "id": "retry",
@@ -160,31 +210,31 @@
                         ]
                     },
                     {
-                        "id": "q2_correct",
-                        "narrative": "<h3>Lesson Complete!</h3><p><strong>Correct.</strong> Competition created ecosystem benefits: different platforms served different needs (Vive for enthusiasts, PSVR for console gamers, mobile for accessibility), each company's innovations pushed others to improve (room-scale, social features, accessibility), multiple companies investing validated VR as real market not just one company's bet, and varied price points ($99-$799) made VR accessible to different audiences. Competition accelerated development and adoption.</p>",
+                        "id": "q2_wrong_c",
+                        "narrative": "<p>While consciousness exploration might involve pleasurable states, \"delic\" doesn't mean pleasure. It means \"mind-manifesting\"—revealing and exploring consciousness. The focus is on revelation and awareness expansion, not just feeling good. Transformation might be challenging, not always euphoric.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "q2"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "q2_wrong_d",
+                        "narrative": "<p>That's one method of creating mind-manifesting experiences (psychedelics), but \"delic\" itself just means \"mind-manifesting\"—it doesn't specify the method. This is why cyberdelics can use the same suffix—both psychedelics and cyberdelics aim to manifest consciousness, just through different means (substances vs. technology).</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "q2"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "quiz_complete",
+                        "narrative": "<h3>✓ Quiz Complete!</h3><p>Excellent! You understand the etymology of \"cyberdelics.\" You're ready to move forward.</p>",
                         "choices": []
-                    },
-                    {
-                        "id": "q2_feedback_c",
-                        "narrative": "<p><strong>Incorrect.</strong> Actually, multiple platforms encouraged more content development, not less. Developers could reach larger combined audience across platforms. Game engines like Unity made cross-platform development easier. Content libraries grew rapidly 2015-2016 across all platforms. Competition expanded the content ecosystem, not constrained it.</p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "q2"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "q2_feedback_d",
-                        "narrative": "<p><strong>Incorrect.</strong> This might seem efficient, but monopolies rarely drive innovation as effectively as competition. The rapid improvements 2012-2016 came from companies trying to outdo each other. Different approaches (room-scale vs. seated, PC vs. console vs. mobile) explored possibility space faster than single company could. Competition, not monopoly, accelerated VR's development.</p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "q2"
-                            }
-                        ]
                     }
                 ]
             }

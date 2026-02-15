@@ -36,8 +36,9 @@ Follow this interactive process to build a robust, pedagogically sound lesson.
 ## Phase 3: Manifest Generation
 **Once the Blueprint is approved:**
 1.  Create `lesson-drafts/[lesson-slug]/manifest.json`.
-2.  Construct the JSON object adhering to the schema used in `test-manifest-runner.html`.
-3.  Define specific configuration for each module (e.g., Simulation `config` params, Knowledge Construction `items` and `slots`).
+3.  **Read Guide**: Read `Modules/MANIFEST_CREATION_GUIDE.md` to ensure correct schema.
+4.  Construct the JSON object adhering strictly to the guide (NO extra metadata like manifestVersion).
+5.  Define specific configuration for each module (e.g., Simulation `config` params, Knowledge Construction `items` and `slots`).
 
 ## Phase 4: Content Fabrication
 **Flesh out the Manifest:**

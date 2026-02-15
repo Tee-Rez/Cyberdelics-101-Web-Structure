@@ -17,10 +17,10 @@
 
         defaults: {
             mode: 'combined', // 'combined' | 'vesica-piscis'
-            circleRadius: 70,
+            circleRadius: 210,
             maxDistance: 0.45, // % of width
             particleCount: 20,
-            particleDistance: 20,
+            particleDistance: 60, // Scaled with radius (was 20 for r=70, now 60 for r=210)
             labelFadeThreshold: 0.8,
             mergeProgress: 0
         },
@@ -48,9 +48,9 @@
         init: function (container, params, host) {
             this.container = container;
             this.params = { ...this.defaults, ...params };
-            this.host = host; // Reference to host for callbacks
+            this.host = host;
 
-            // Initialize State (Fresh per instance)
+            // Initialize State
             this._state = {
                 width: 0,
                 height: 0,
@@ -60,11 +60,16 @@
                 rightPos: { x: 0, y: 0 },
                 isDragging: false,
                 particles: [],
+                subWords: [], // Floating words
+                circles: {
+                    left: { locked: true, unlocked: false },
+                    right: { locked: true, unlocked: false }
+                },
                 lastTime: 0,
-                promptShown: true,
+                promptShown: false, // Don't show until both unlocked
                 completed: false,
-                infoPanelShown: false,
-                dragSnapped: false
+                dragSnapped: false,
+                lastProgress: -1 // Track last progress to avoid redundant updates
             };
 
             // 1. Setup Container & SVG
@@ -83,60 +88,151 @@
             // 4. Setup Interactions
             this._setupInteractions();
 
-            // 5. Initial Layout
+            // 5. Initial Layout & Observer
             this.resize(container.clientWidth, container.clientHeight);
 
-            console.log('[VennDiagram] Initialized in mode:', this.params.mode);
+            this.resizeObserver = new ResizeObserver(entries => {
+                for (let entry of entries) {
+                    this.resize(entry.contentRect.width, entry.contentRect.height);
+                }
+            });
+            this.resizeObserver.observe(this.container);
+
+            console.log('[VennDiagram] Initialized V2 in mode:', this.params.mode);
         },
 
         update: function (dt, params) {
-            // Update params reference
-            this.params = params;
+            // CRITICAL FIX: The host animation loop passes mergeProgress: 0 every frame.
+            // If user has dragged, _dragProgress is set and takes priority.
+            if (this._state._dragProgress != null) {
+                params = Object.assign({}, params, { mergeProgress: this._state._dragProgress });
+            }
 
-            // Convert slider 0-100 to 0.0-1.0
-            const progress = (params.mergeProgress || 0) / 100;
+            // Merge incoming params with existing to preserve defaults
+            this.params = { ...this.params, ...params };
+            const progress = (this.params.mergeProgress || 0) / 100;
 
-            // Visualization Update
-            this._updatePositions(progress);
-            this._updateVisuals(progress);
+            // Only update visuals if progress changed
+            if (progress !== this._state.lastProgress) {
+                this._state.lastProgress = progress;
+                this._updatePositions(progress);
+                this._updateVisuals(progress);
+            }
 
-            // Particles
+            // Particles & Floating Words (always update for animation)
             this._updateParticles(dt);
+            this._updateSubWords(dt, progress);
         },
 
-        draw: function (ctx, params) {
-            // No-op (SVG based)
-        },
+        draw: function (ctx, params) { },
 
         resize: function (width, height) {
+            // Fallback for 0 dims
+            if (!width || width === 0) width = this.container.clientWidth || 800;
+            if (!height || height === 0) height = this.container.clientHeight || 600;
+
             this._state.width = width;
             this._state.height = height;
             this._state.centerX = width / 2;
-            this._state.centerY = height / 2; // Center vertically
+            this._state.centerY = height / 2;
 
-            // Responsive Logic
             this._state.isMobile = width < 600;
 
             if (this._state.isMobile) {
-                // Mobile: Smaller circles, Dynamic Radius
-                // Max 60px, or 18% of width (e.g. 67px on 375px)
-                this.params.circleRadius = Math.min(60, width * 0.18);
-                this.params.maxDistance = 0.55; // Use more width
+                this.params.circleRadius = Math.min(140, width * 0.35); // Mobile: ~35%
+                this.params.maxDistance = 0.6;
             } else {
-                // Desktop: Reset to default
-                this.params.circleRadius = this.defaults.circleRadius;
-                this.params.maxDistance = this.defaults.maxDistance;
+                this.params.circleRadius = Math.min(300, height * 0.35); // Desktop: ~35% (down from 45%)
+                this.params.maxDistance = 0.55;
             }
 
-            // Update SVG ViewBox
             if (this.svg) {
                 this.svg.attr('viewBox', `0 0 ${width} ${height}`);
             }
 
-            // Recalculate visuals immediately
+            // Don't update positions during active drag - it interferes
+            if (this._state.isDragging) return;
+
+            // Recalculate visuals
             const progress = (this.params.mergeProgress || 0) / 100;
             this._updatePositions(progress);
             this._updateVisuals(progress);
+        },
+
+        // ... (reset, destroy, setupDOM, etc.)
+
+        _updateVisuals: function (progress) {
+            // ... (keep existing moves)
+            const left = this._state.leftPos;
+            const right = this._state.rightPos;
+            const r = this.params.circleRadius;
+
+            // 1. Move Circles & Locks
+            this.leftGroup.attr('transform', `translate(${left.x}, ${left.y})`);
+            this.rightGroup.attr('transform', `translate(${right.x}, ${right.y})`);
+
+            // 2. Labels Position
+            this.leftLabel.attr('x', left.x).attr('y', left.y);
+            this.rightLabel.attr('x', right.x).attr('y', right.y);
+
+            // 3. Merged Label
+            if (progress > 0.95) {
+                this.mergedLabel
+                    .attr('opacity', (progress - 0.95) * 20)
+                    .attr('x', this._state.centerX)
+                    .attr('y', this._state.centerY + 50)
+                    .text(this.data.merged.definition || this.data.merged.label);
+            } else {
+                this.mergedLabel.attr('opacity', 0);
+            }
+
+            // 4. Vesica Shape
+            this._updateVesicaShape(left, right, r, progress);
+
+            // 5. Drag Prompt
+            if (this.promptGroup) {
+                this.promptGroup.attr('transform', `translate(${left.x + r + 40}, ${left.y - 40})`);
+            }
+
+            // 6. Complete Button
+            if (progress >= 0.99 && !this._state.completed) {
+                this._state.completed = true;
+                this._showCompleteButton();
+            }
+        },
+
+        _updateVesicaShape: function (p1, p2, r, progress) {
+            const dx = p2.x - p1.x;
+            const dy = p2.y - p1.y;
+            const d = Math.sqrt(dx * dx + dy * dy);
+
+            // Only draw if overlapping
+            if (d < 2 * r) {
+                const angle = Math.acos(d / (2 * r));
+                const path = d3.path();
+                path.arc(p1.x, p1.y, r, -angle, angle);
+                path.arc(p2.x, p2.y, r, Math.PI - angle, Math.PI + angle);
+                path.closePath();
+
+                this.vesicaPath
+                    .attr('d', path.toString())
+                    // "vesica pieces should be created once they combine"
+                    // User implies it should appear STRONGLY at the end.
+                    // Let's keep it transparent during move, then solid/bright at end.
+                    .attr('opacity', progress > 0.95 ? 1 : progress * 0.3)
+                    .attr('fill', progress > 0.95 ? 'url(#grad-merged)' : 'none') // Only fill at end?
+                    .attr('stroke', progress > 0.95 ? '#FFD700' : 'rgba(255, 215, 0, 0.5)')
+                    .attr('stroke-width', progress > 0.95 ? 3 : 1);
+
+                // If fully merged, maybe pulse?
+                if (progress > 0.99) {
+                    this.vesicaPath.classed('venn-pulsing', true);
+                } else {
+                    this.vesicaPath.classed('venn-pulsing', false);
+                }
+            } else {
+                this.vesicaPath.attr('opacity', 0);
+            }
         },
 
         reset: function () {
@@ -208,10 +304,10 @@
                 ui: this.svg.append('g').attr('class', 'layer-ui')
             };
 
-            // Info Panel (HTML Overlay)
-            this.infoPanel = document.createElement('div');
-            this.infoPanel.className = 'venn-info-panel';
-            this.container.appendChild(this.infoPanel);
+            // Info Panel (HTML Overlay) - Removed in V2
+            // this.infoPanel = document.createElement('div');
+            // this.infoPanel.className = 'venn-info-panel';
+            // this.container.appendChild(this.infoPanel);
         },
 
         _createGradient: function (defs, id, color) {
@@ -232,30 +328,65 @@
 
             // --- Circles ---
             // Left Group
-            this.leftGroup = this.layers.circles.append('g').attr('class', 'venn-group left');
+            this.leftGroup = this.layers.circles.append('g')
+                .attr('class', 'venn-group left locked') // Start locked
+                .attr('cursor', 'pointer'); // Clickable to unlock
+
             this.leftCircle = this.leftGroup.append('circle')
-                .attr('class', 'venn-circle glow venn-pulsing')
+                .attr('class', 'venn-circle venn-pulsing')
                 .attr('r', radius)
-                .attr('fill', 'url(#grad-left)');
+                .attr('fill', 'transparent') // Transparent for clicks
+                .attr('stroke', data.leftCircle.color || '#00FFFF') // Fallback color
+                .attr('stroke-width', 4) // Thicker stroke
+                .attr('stroke-dasharray', '5,5');
+
+            // Lock Icon (Simple Lock Path or Text)
+            this.leftLock = this.leftGroup.append('text')
+                .attr('class', 'venn-lock-icon')
+                .attr('text-anchor', 'middle')
+                .attr('dy', '0.35em')
+                .text('🔒');
 
             // Right Group
-            this.rightGroup = this.layers.circles.append('g').attr('class', 'venn-group right');
-            this.rightCircle = this.rightGroup.append('circle')
-                .attr('class', 'venn-circle glow venn-pulsing')
-                .attr('r', radius)
-                .attr('fill', 'url(#grad-right)');
+            this.rightGroup = this.layers.circles.append('g')
+                .attr('class', 'venn-group right locked')
+                .attr('cursor', 'pointer');
 
-            // --- Labels ---
+            this.rightCircle = this.rightGroup.append('circle')
+                .attr('class', 'venn-circle venn-pulsing')
+                .attr('r', radius)
+                .attr('fill', 'transparent')
+                .attr('stroke', data.rightCircle.color || '#FF00FF')
+                .attr('stroke-width', 4)
+                .attr('stroke-dasharray', '5,5');
+
+            this.rightLock = this.rightGroup.append('text')
+                .attr('class', 'venn-lock-icon')
+                .attr('text-anchor', 'middle')
+                .attr('dy', '0.35em')
+                .text('🔒');
+
+
+            // --- Labels (Main Titles) ---
+            // Initially visible even when locked? Or only after unlock?
+            // "Before they can see the content... they have to unlock"
+            // Maybe show Label but no content? Or just "???"
+            // Lets show Label but dim, or just the lock.
+            // User said: "Each circle will have the main word and then sub words... When unlocked the sub words will drift"
+            // So Main Word might be visible or hidden. Let's make it visible but maybe opacity 0.5?
+
             this.leftLabel = this.layers.labels.append('text')
                 .attr('class', 'venn-label main')
                 .attr('fill', data.leftCircle.color)
-                .attr('dy', '3.55em')
+                .attr('dy', '0.35em') // Center for now logic
+                .attr('opacity', 0) // Hidden until unlock 
                 .text(data.leftCircle.label);
 
             this.rightLabel = this.layers.labels.append('text')
                 .attr('class', 'venn-label main')
                 .attr('fill', data.rightCircle.color)
-                .attr('dy', '3.55em')
+                .attr('dy', '0.35em')
+                .attr('opacity', 0)
                 .text(data.rightCircle.label);
 
             this.mergedLabel = this.layers.labels.append('text')
@@ -264,94 +395,61 @@
                 .attr('dy', '0.35em')
                 .text(data.merged.label);
 
-            // --- Etymology Boxes ---
-            this._createEtymologyBox(this.layers.ui, 'left', data.leftCircle);
-            this._createEtymologyBox(this.layers.ui, 'right', data.rightCircle);
+            // --- Sub-Words Container ---
+            // Moved to 'circles' layer as per user request to be "with the layer-circles"
+            // This ensures they are z-indexed with the circles (maybe behind labels/UI)
+            this.subWordsContainer = this.layers.circles.append('g').attr('class', 'sub-words-container');
 
-            // --- Drag Prompt ---
+            // --- Drag Prompt (Created but hidden initially) ---
             this._createDragPrompt();
         },
 
-        _createEtymologyBox: function (layer, side, data) {
-            if (!data.etymology) return;
+        _unlockCircle: function (side) {
+            if (this._state.circles[side].unlocked) return; // Already unlocked
 
-            const group = layer.append('g')
-                .attr('class', `etymology-floating etymology-${side}`)
-                .attr('opacity', 1); // Initially visible
+            this._state.circles[side].locked = false;
+            this._state.circles[side].unlocked = true;
 
-            const width = 220;
-            const height = 180;
+            // Visual updates
+            const group = side === 'left' ? this.leftGroup : this.rightGroup;
+            const lock = side === 'left' ? this.leftLock : this.rightLock;
 
-            // Background
-            group.append('rect')
-                .attr('class', 'etymology-bg')
-                .attr('width', width).attr('height', height)
-                .attr('stroke', data.color);
+            // Remove Lock
+            lock.transition().duration(500).attr('opacity', 0).remove();
+            group.classed('locked', false);
 
-            // Title
-            group.append('text')
-                .attr('class', 'etymology-title')
-                .attr('x', 15).attr('y', 30)
-                .attr('fill', data.color)
-                .text(data.etymology.title);
+            // Fade in Label
+            const label = side === 'left' ? this.leftLabel : this.rightLabel;
+            label.transition().duration(800).attr('opacity', 1);
 
-            // Lines
-            let y = 55;
-            const lineHeight = 16;
+            // Init Sub-words
+            this._spawnSubWords(side);
 
-            // Greek
-            if (data.etymology.greek) {
-                group.append('text').attr('class', 'etymology-text italic')
-                    .attr('x', 15).attr('y', y).text(data.etymology.greek);
-                y += lineHeight;
+            // Check if both unlocked -> Enable interactions
+            if (this._state.circles.left.unlocked && this._state.circles.right.unlocked) {
+                this._enableDragging();
             }
-            if (data.etymology.greekTransliteration) {
-                group.append('text').attr('class', 'etymology-text')
-                    .attr('x', 15).attr('y', y).text(data.etymology.greekTransliteration);
-                y += lineHeight * 1.5;
-            }
+        },
 
-            // Meanings
-            if (data.etymology.meanings) {
-                data.etymology.meanings.forEach(line => {
-                    // Simple wrap (naive)
-                    if (line.length > 25) {
-                        const words = line.split(' ');
-                        let l = '';
-                        words.forEach(w => {
-                            if ((l + w).length > 25) {
-                                group.append('text').attr('class', 'etymology-text').attr('x', 10).attr('y', y).text(l);
-                                y += lineHeight;
-                                l = w + ' ';
-                            } else {
-                                l += w + ' ';
-                            }
-                        });
-                        if (l) {
-                            group.append('text').attr('class', 'etymology-text').attr('x', 10).attr('y', y).text(l);
-                            y += lineHeight;
-                        }
-                    } else {
-                        group.append('text').attr('class', 'etymology-text').attr('x', 10).attr('y', y).text(line);
-                        y += lineHeight;
-                    }
+        _spawnSubWords: function (side) {
+            const data = side === 'left' ? this.data.leftCircle : this.data.rightCircle;
+            if (!data.subWords) return;
+
+            // Get current center to avoid 0,0 initialization
+            const center = side === 'left' ? this._state.leftPos : this._state.rightPos;
+
+            data.subWords.forEach((word, i) => {
+                this._state.subWords.push({
+                    text: word,
+                    side: side,
+                    x: center.x + (Math.random() - 0.5) * 40, // Start near center with slight spread
+                    y: center.y + (Math.random() - 0.5) * 40,
+                    // Velocity-based drift (brownian motion style)
+                    vx: (Math.random() - 0.5) * 2,
+                    vy: (Math.random() - 0.5) * 2,
+                    phase: Math.random() * Math.PI * 2
                 });
-                y += 5;
-            }
-
-            // Concept
-            if (data.etymology.concept) {
-                group.append('text').attr('class', 'etymology-text bold')
-                    .attr('x', 15).attr('y', y + 5)
-                    .attr('fill', data.color) // Match circle color
-                    .text('→ ' + data.etymology.concept);
-            }
-
-            // Store ref for updates
-            this[`${side}EtymologyGroup`] = group;
-            this[`${side}EtymologySize`] = { w: width, h: height };
-            this[`${side}EtymologyGroup`] = group;
-            this[`${side}EtymologySize`] = { w: width, h: height };
+            });
         },
 
         _createDragPrompt: function () {
@@ -384,28 +482,56 @@
         },
 
         _setupInteractions: function () {
-            const drag = d3.drag()
-                .on('start', (event) => {
-                    this._state.isDragging = true;
-                    this._state.dragSnapped = false; // Reset snap state
+            // Click to Unlock
+            this.leftGroup.on('click', () => this._unlockCircle('left'));
+            this.rightGroup.on('click', () => this._unlockCircle('right'));
+
+            // Dragging - Defined but only enabled when both unlocked
+            // IMPORTANT: Use subject() to prevent D3 from automatically applying transforms
+            this.dragBehavior = d3.drag()
+                .subject(function () {
+                    // Return current element position to prevent D3 auto-transform
+                    const transform = d3.select(this).attr('transform');
+                    return { x: 0, y: 0 }; // We handle positioning ourselves
                 })
-                .on('drag', (event) => this._handleDrag(event))
+                .on('start', (event) => {
+                    if (!this._state.circles.left.unlocked || !this._state.circles.right.unlocked) return;
+                    this._state.isDragging = true;
+                    this._state.dragSnapped = false;
+                    // Store initial mouse position for accurate delta tracking
+                    this._state.dragStartX = event.sourceEvent.clientX;
+                    this._state.dragStartY = event.sourceEvent.clientY;
+                })
+                .on('drag', (event) => {
+                    if (!this._state.circles.left.unlocked || !this._state.circles.right.unlocked) return;
+                    if (this._state.isDragging) {
+                        this._handleDrag(event);
+                    }
+                })
                 .on('end', () => {
                     this._state.isDragging = false;
                     this._state.dragSnapped = false;
                 });
 
             // Interaction to hide prompt
-            // We'll also attach a clear-prompt listener to start
-            drag.on('start.prompt', () => {
+            this.dragBehavior.on('start.prompt', () => {
                 if (this._state.promptShown && this.promptGroup) {
                     this.promptGroup.transition().duration(500).attr('opacity', 0).remove();
                     this._state.promptShown = false;
                 }
             });
+        },
 
-            this.leftGroup.call(drag);
-            this.rightGroup.call(drag);
+        _enableDragging: function () {
+            // Enable drag on groups
+            this.leftGroup.call(this.dragBehavior);
+            this.rightGroup.call(this.dragBehavior);
+
+            // Show prompt
+            if (this.promptGroup) {
+                this.promptGroup.transition().delay(500).duration(500).attr('opacity', 1);
+                this._state.promptShown = true;
+            }
         },
 
         /* =========================================
@@ -414,37 +540,45 @@
 
         _handleDrag: function (event) {
             // SNAP LOGIC: If we already snapped in this session, ignore
-            if (this._state.dragSnapped) return;
+            if (this._state.dragSnapped) {
+                return;
+            }
+
+            // D3 v7: event.x is cumulative delta, not position
+            // Get actual mouse position from sourceEvent and convert to SVG coords
+            const svgNode = this.svg.node();
+            const pt = svgNode.createSVGPoint();
+            pt.x = event.sourceEvent.clientX;
+            pt.y = event.sourceEvent.clientY;
+            const svgP = pt.matrixTransform(svgNode.getScreenCTM().inverse());
 
             // Determine drag relative to center
-            const dist = Math.abs(event.x - this._state.centerX);
+            const dist = Math.abs(svgP.x - this._state.centerX);
             const maxDistPixels = this._state.width * (this.params.maxDistance / 2); // Half-distance from center per circle
 
             // Normalize to 0-1 (0 = wide apart, 1 = center)
-            // Initial Pos = maxDistPixels away
-            // Center = 0 away
-
             let progress = 1 - (dist / maxDistPixels);
             progress = Math.max(0, Math.min(1, progress));
+
+
 
             // SNAP LOGIC: If we hit 100%, stop dragging
             if (progress >= 0.99) {
                 progress = 1;
                 this._state.dragSnapped = true;
                 this._state.isDragging = false;
+
             }
 
-            // Update param via host
-            // Ideally we call a host method to update the param, 
-            // but for smooth drag we visually update immediately then sync
+            // Update param AND track drag progress separately
             this.params.mergeProgress = progress * 100;
+            this._state._dragProgress = progress * 100;
 
-            // Sync with Host (Slider)
-            // Hacky: Dispatch input on slider if found
-            const slider = this.container.closest('.interactive-simulation-container')?.querySelector('input[data-id="mergeProgress"]');
+            // Sync with slider
+            const slider = this.container.closest('.interactive-simulation-container')?.querySelector('input[data-id="mergeProgress"]')
+                || document.getElementById('progress');
             if (slider) {
                 slider.value = progress * 100;
-                // slider.dispatchEvent(new Event('input')); // This loop-backs, careful
             }
 
             this.update(0, this.params);
@@ -459,6 +593,8 @@
 
             this._state.leftPos = { x: this._state.centerX - (currentSeparation / 2), y: centerY };
             this._state.rightPos = { x: this._state.centerX + (currentSeparation / 2), y: centerY };
+
+
 
             // In Vesica Piscis mode, we might stop separation before they fully merge?
             // Actually, Vesica Piscis IS a partial merge. 
@@ -476,7 +612,22 @@
 
                 this._state.leftPos.x = this._state.centerX - (targetSep / 2);
                 this._state.rightPos.x = this._state.centerX + (targetSep / 2);
+
             }
+        },
+
+        _showCompleteButton: function () {
+            // ... (Same as before, simplified for this snippet context? No, just keeping it consistent)
+            const parent = this.container.parentNode;
+            if (parent && parent.querySelector('.venn-complete-btn')) return;
+
+            const btn = document.createElement('button');
+            btn.className = 'venn-complete-btn';
+            btn.textContent = 'SECTION COMPLETE';
+            if (parent) parent.appendChild(btn);
+
+            requestAnimationFrame(() => btn.classList.add('visible'));
+            btn.onclick = () => this.host && this.host.markComplete ? this.host.markComplete() : null;
         },
 
         _updateVisuals: function (progress) {
@@ -484,218 +635,108 @@
             const right = this._state.rightPos;
             const r = this.params.circleRadius;
 
-            // 1. Move Circles
+            // 1. Move Circles & Locks
             this.leftGroup.attr('transform', `translate(${left.x}, ${left.y})`);
             this.rightGroup.attr('transform', `translate(${right.x}, ${right.y})`);
 
-            // 2. Move Etymology Boxes
-            if (this.leftEtymologyGroup) {
-                const boxW = this.leftEtymologySize.w;
-                const boxH = this.leftEtymologySize.h;
+            // Update Radius (Important for resize!)
+            this.leftCircle.attr('r', r);
+            this.rightCircle.attr('r', r);
 
-                if (this._state.isMobile) {
-                    // Mobile: Stack vertically below the interaction area
-                    // Scale down slightly to fit
-                    const scale = 0.8;
-                    const scaledW = boxW * scale;
-                    const scaledH = boxH * scale;
+            // 2. Labels Position
+            // Label stays in center of circle? Or above?
+            this.leftLabel.attr('x', left.x).attr('y', left.y);
+            this.rightLabel.attr('x', right.x).attr('y', right.y);
 
-                    // Position Left Box
-                    const xL = (this._state.width - scaledW) / 2;
-                    const yL = this._state.height - (scaledH * 2) - 20; // 2nd from bottom
-
-                    this.leftEtymologyGroup.attr('transform', `translate(${xL}, ${yL}) scale(${scale})`);
-
-                    // Position Right Box (Below Left)
-                    if (this.rightEtymologyGroup) {
-                        const yR = this._state.height - scaledH - 10;
-                        this.rightEtymologyGroup.attr('transform', `translate(${xL}, ${yR}) scale(${scale})`);
-                    }
-
-                    // Hide them if they overlap circles? 
-                    // For now assuming height is sufficient or they fallback to CSS overlay?
-                    // Actually, let's just push them out of the way or opacity them based on state?
-                    // "sideboxes move past the screen" -> Stacking them is safer.
-                } else {
-                    // Desktop
-                    this.leftEtymologyGroup.attr('transform', `translate(${left.x - r - boxW - 30}, ${left.y - 90})`);
-                    if (this.rightEtymologyGroup) {
-                        this.rightEtymologyGroup.attr('transform', `translate(${right.x + r + 30}, ${right.y - 90})`);
-                    }
-                }
-            }
-
-            // 2b. Move Drag Prompt (if exists)
-            if (this.promptGroup) {
-                if (this._state.isMobile) {
-                    // Mobile: Center it below
-                    this.promptGroup.attr('transform', `translate(${this._state.centerX}, ${this._state.centerY + r + 50})`);
-                    this.promptGroup.select('path').attr('transform', 'rotate(90)'); // Point down? Or just keep it generic?
-                    // Actually, drag direction is horizontal...
-                    // Keep horizontal arrow but position better
-                    this.promptGroup.attr('transform', `translate(${left.x + r + 40}, ${left.y - 40})`);
-                } else {
-                    // Keep relative offset from left circle
-                    this.promptGroup.attr('transform', `translate(${left.x + 175}, ${left.y - r + 250})`);
-                }
-            }
-
-            // 3. Labels & Opacity logic
-            const threshold = this.params.defaults ? this.params.defaults.labelFadeThreshold : 0.8;
-
-            // Fade out individual labels
-            let labelOpacity = 1;
-            if (progress > threshold) {
-                labelOpacity = 1 - ((progress - threshold) / (1 - threshold));
-            }
-            // Vesica Piscis mode keeps labels visible?
-            if (this.params.mode === 'vesica-piscis' && progress > 0.9) {
-                labelOpacity = 0.8; // Keep visible but slightly dim? Or fully visible
-                // Actually user said: "The middle will have the new word, still showing the content of the other circles toward its side."
-            }
-
-            this.leftLabel.attr('opacity', labelOpacity);
-            this.rightLabel.attr('opacity', labelOpacity);
-            this.leftEtymologyGroup.attr('opacity', labelOpacity);
-            this.rightEtymologyGroup.attr('opacity', labelOpacity);
-
-            // FIX: Update Main Labels Position (Above circles)
-            this.leftLabel
-                .attr('x', left.x)
-                .attr('y', left.y - r - 10)
-                .attr('opacity', labelOpacity);
-
-            this.rightLabel
-                .attr('x', right.x)
-                .attr('y', right.y - r - 10)
-                .attr('opacity', labelOpacity);
-
-            // 4. Merged Label
-            let mergedOpacity = 0;
-            if (progress > threshold) {
-                mergedOpacity = (progress - threshold) / (1 - threshold);
-            }
-
-            this.mergedLabel
-                .attr('x', this._state.centerX)
-                .attr('y', this._state.centerY + r + 40) // Below circles
-                .attr('opacity', this.params.mode === 'combined' ? mergedOpacity : 0);
-
-            // 5. Info Panel / Synthesis
-            if (progress > 0.95) {
-                this._showInfoPanel(true);
+            // Hide source labels when merging
+            if (progress > 0.8) {
+                const fade = 1 - (progress - 0.8) * 5; // 0.8->1.0 maps to 1->0
+                this.leftLabel.attr('opacity', Math.max(0, fade));
+                this.rightLabel.attr('opacity', Math.max(0, fade));
             } else {
-                this._showInfoPanel(false);
+                // If unlocked, show. If locked, hide? 
+                // We rely on previous unlock logic setting opacity to 1.
+                // We should only touch opacity if it was already 1. 
+                // Ideally state-based, but for now reset to 1 if fully unlocked.
+                if (this._state.circles.left.unlocked) this.leftLabel.attr('opacity', 1);
+                if (this._state.circles.right.unlocked) this.rightLabel.attr('opacity', 1);
             }
 
-            // 6. Section Complete Button
+            // 3. Merged Label (The Definition)
+            // Shows only at the end
+            if (progress > 0.95) {
+                // Main Term - smaller to fit better
+                const mergedOpacity = Math.min(1, (progress - 0.95) * 20);
+                this.mergedLabel
+                    .attr('opacity', mergedOpacity)
+                    .attr('x', this._state.centerX)
+                    .attr('y', this._state.centerY - 55)
+                    .attr('font-size', '24px') // Reduced from 36px
+                    .text(this.data.merged.label);
+
+                // Definition - fit within vesica shape
+                if (!this.definitionLabel) {
+                    this.definitionLabel = this.layers.labels.append('text')
+                        .attr('class', 'venn-definition')
+                        .attr('text-anchor', 'middle')
+                        .attr('fill', '#ffffff')
+                        .attr('font-size', '13px') // Smaller for better fit
+                        .attr('x', this._state.centerX)
+                        .attr('y', this._state.centerY - 40)
+                        .attr('dy', '0em')
+                        .text(this.data.merged.definition);
+
+                    // Wrap to narrower width to fit vesica shape (lens is narrower than full circle)
+                    // At 100% merge, circles overlap significantly - use ~30% of width
+                    this.definitionLabel.call(this._wrapText.bind(this), this._state.width * 0.2);
+                }
+
+                // Just update opacity, don't re-wrap every frame
+                this.definitionLabel.attr('opacity', Math.min(1, (progress - 0.95) * 20));
+
+            } else {
+                this.mergedLabel.attr('opacity', 0);
+                if (this.definitionLabel) this.definitionLabel.attr('opacity', 0);
+            }
+
+            // 4. Vesica Shape
+            this._updateVesicaShape(left, right, r, progress);
+
+            // 5. Drag Prompt
+            if (this.promptGroup) {
+                this.promptGroup.attr('transform', `translate(${left.x + r + 40}, ${left.y - 40})`);
+            }
+
+            // 6. Complete Button
             if (progress >= 0.99 && !this._state.completed) {
                 this._state.completed = true;
-                this._showFinalButton();
-            }
-
-            // 6. Special Geometry (Vesica Piscis / Merged Shape)
-            if (this.params.mode === 'vesica-piscis') {
-                this._updateVesicaShape(left, right, r, progress);
-            } else {
-                // Combined Mode: Maybe Pulse?
-                if (progress > 0.98) {
-                    this.leftCircle.classed('merged', true);
-                    this.rightCircle.classed('merged', true);
-                } else {
-                    this.leftCircle.classed('merged', false);
-                    this.rightCircle.classed('merged', false);
-                }
+                this._showCompleteButton();
             }
         },
 
         _updateVesicaShape: function (p1, p2, r, progress) {
-            // Draw the intersection lens
             const dx = p2.x - p1.x;
             const dy = p2.y - p1.y;
             const d = Math.sqrt(dx * dx + dy * dy);
 
+            // Only draw if overlapping
             if (d < 2 * r) {
-                // They overlap
-                const path = d3.path();
-                // Simple circle intersection math
-                const a = (r * r - r * r + d * d) / (2 * d);
-                const h = Math.sqrt(r * r - a * a);
-                const x2 = p1.x + a * (p2.x - p1.x) / d;
-                const y2 = p1.y + a * (p2.y - p1.y) / d;
-
-                // Intersection points
-                const x3_1 = x2 + h * (p2.y - p1.y) / d;
-                const y3_1 = y2 - h * (p2.x - p1.x) / d;
-                const x3_2 = x2 - h * (p2.y - p1.y) / d;
-                const y3_2 = y2 + h * (p2.x - p1.x) / d;
-
-                // Draw arc logic... actually D3 has no built-in shape for this easily
-                // Simplified: Circle clip path?
-                // Or: Calculate arc start/end angles
-                // Angle to intersection
+                // Calculate intersection path (lens)
+                // Using simple arc approximation for D3
                 const angle = Math.acos(d / (2 * r));
-
-                // We'll trust the user's provided math from etymology visualizer (modified)
-                // createVesicaPiscis(x1, y1, x2, y2, r)
-
-                const angleRad = Math.atan2(dy, dx);
-
-                path.moveTo(x3_1, y3_1);
-                // Arc from p1 radius
+                const path = d3.path();
                 path.arc(p1.x, p1.y, r, -angle, angle);
-                // Arc from p2 radius
                 path.arc(p2.x, p2.y, r, Math.PI - angle, Math.PI + angle);
                 path.closePath();
 
                 this.vesicaPath
                     .attr('d', path.toString())
-                    .attr('opacity', progress * 0.8);
+                    .attr('opacity', progress > 0.9 ? 1 : progress * 0.5);
 
-                // Show Vesica Label (Center)
-                if (progress > 0.8) {
-                    this.mergedLabel
-                        .attr('opacity', (progress - 0.8) * 5)
-                        .attr('y', this._state.centerY + r + 40) // Below circles!
-                        .style('font-size', '24px') // Larger
-                        .text(this.data.merged.label);
-                }
+                // If fully merged, show specific content?
+                // Visuals handled in updateVisuals
             } else {
                 this.vesicaPath.attr('opacity', 0);
-            }
-        },
-
-        _showInfoPanel: function (show) {
-            if (show) {
-                // Optimization: Only update if not already shown
-                if (this._state.infoPanelShown) return;
-                this._state.infoPanelShown = true;
-
-                this.infoPanel.classList.add('visible');
-                // Content population
-                const d = this.data.merged;
-                let html = `<div class="info-title" style="color:${d.color}">${d.label}</div>`;
-                if (d.greek) html += `<div class="info-greek">${d.greek}</div>`;
-                if (d.meaning) html += `<div class="info-meaning">${d.meaning}</div>`;
-
-                if (d.synthesis && Array.isArray(d.synthesis)) {
-                    html += `<div class="info-list">`;
-                    d.synthesis.forEach(item => {
-                        html += `<div class="info-list-item">• ${item}</div>`;
-                    });
-                    html += `</div>`;
-                } else if (d.description) {
-                    html += `<div class="info-meaning">${d.description}</div>`;
-                }
-
-                this.infoPanel.innerHTML = html;
-                this.infoPanel.style.borderColor = d.color;
-            } else {
-                // Optimization: Only update if shown
-                if (!this._state.infoPanelShown) return;
-                this._state.infoPanelShown = false;
-
-                this.infoPanel.classList.remove('visible');
             }
         },
 
@@ -744,61 +785,109 @@
 
         _spawnParticles: function () {
             const count = this.params.particleCount;
-            const newParticles = [];
+            // Always replenish to target * 2 (as used in update check)
+            const targetTotal = count * 2;
 
-            // Clear if too many (naive init)
-            if (this._state.particles.length === 0) {
-                for (let i = 0; i < count; i++) {
-                    newParticles.push({
-                        target: 'left',
-                        angle: (Math.PI * 2 * i) / count,
-                        speed: 0.01 + Math.random() * 0.01,
-                        x: 0, y: 0,
-                        color: this.data.leftCircle.color
-                    });
-                    newParticles.push({
-                        target: 'right',
-                        angle: (Math.PI * 2 * i) / count,
-                        speed: -0.01 - Math.random() * 0.01, // Counter rotate
-                        x: 0, y: 0,
-                        color: this.data.rightCircle.color
-                    });
-                }
-                this._state.particles = newParticles;
+            while (this._state.particles.length < targetTotal) {
+                // Add pair
+                this._state.particles.push({
+                    target: 'left',
+                    angle: Math.random() * Math.PI * 2,
+                    speed: 0.01 + Math.random() * 0.01,
+                    x: 0, y: 0,
+                    color: this.data.leftCircle.color
+                });
+                this._state.particles.push({
+                    target: 'right',
+                    angle: Math.random() * Math.PI * 2,
+                    speed: -0.01 - Math.random() * 0.01,
+                    x: 0, y: 0,
+                    color: this.data.rightCircle.color
+                });
             }
         },
 
-        _showCompleteButton: function () {
-            const parent = this.container.parentNode;
-            if (parent && parent.querySelector('.venn-complete-btn')) return;
-            if (!parent && this.container.querySelector('.venn-complete-btn')) return;
+        _updateSubWords: function (dt, progress) {
+            const r = this.params.circleRadius;
+            const left = this._state.leftPos;
+            const right = this._state.rightPos;
+            const centerX = this._state.centerX;
+            const centerY = this._state.centerY;
 
-            const btn = document.createElement('button');
-            btn.className = 'venn-complete-btn';
-            btn.textContent = 'SECTION COMPLETE';
+            const t = Date.now() / 1000;
 
-            // Add to container
-            if (parent) parent.appendChild(btn);
-            else this.container.appendChild(btn);
+            const subWordsSelection = this.subWordsContainer.selectAll('.venn-subword')
+                .data(this._state.subWords);
 
-            // Animate in
-            requestAnimationFrame(() => {
-                btn.classList.add('visible');
-            });
+            // Proper D3 enter-update pattern: merge BEFORE position updates
+            subWordsSelection.enter()
+                .append('text')
+                .attr('class', 'venn-subword')
+                .attr('fill', d => d.side === 'left' ? this.data.leftCircle.color : this.data.rightCircle.color)
+                .attr('text-anchor', 'middle')
+                .attr('opacity', 0)
+                .text(d => d.text)
+                .merge(subWordsSelection) // Merge here, BEFORE .each()
+                .each((d, i, nodes) => {
+                    // Brownian motion / random drift logic
+                    const center = d.side === 'left' ? left : right;
+                    const maxRadius = r * 0.75; // Keep within 75% of circle radius
 
-            // Click Handler
-            btn.onclick = () => {
-                console.log('[VennDiagram] Section Complete clicked');
-                if (this.host && this.host.markComplete) {
-                    this.host.markComplete();
-                } else {
-                    // Fallback if host doesn't support markComplete
-                    // Maybe advance step?
-                    if (this.host && this.host.advanceStep) {
-                        this.host.advanceStep();
+                    // Apply random velocity changes (brownian motion)
+                    d.vx += (Math.random() - 0.5) * 0.5;
+                    d.vy += (Math.random() - 0.5) * 0.5;
+
+                    // Damping to prevent excessive speed
+                    const maxSpeed = 3;
+                    const speed = Math.sqrt(d.vx * d.vx + d.vy * d.vy);
+                    if (speed > maxSpeed) {
+                        d.vx = (d.vx / speed) * maxSpeed;
+                        d.vy = (d.vy / speed) * maxSpeed;
                     }
-                }
-            };
+
+                    // Update position
+                    d.x += d.vx;
+                    d.y += d.vy;
+
+                    // Bounce off circle boundaries
+                    const dx = d.x - center.x;
+                    const dy = d.y - center.y;
+                    const distFromCenter = Math.sqrt(dx * dx + dy * dy);
+
+                    if (distFromCenter > maxRadius) {
+                        // Normalize and push back inside
+                        const angle = Math.atan2(dy, dx);
+                        d.x = center.x + Math.cos(angle) * maxRadius;
+                        d.y = center.y + Math.sin(angle) * maxRadius;
+                        // Reverse velocity (bounce)
+                        d.vx *= -0.8;
+                        d.vy *= -0.8;
+                    }
+
+                    // As progress increases, add attraction toward center
+                    if (progress > 0) {
+                        const pullStrength = progress * 0.3;
+                        d.vx += (centerX - d.x) * pullStrength * 0.01;
+                        d.vy += (centerY - d.y) * pullStrength * 0.01;
+                    }
+
+                    let finalX = d.x;
+                    let finalY = d.y;
+
+                    // At high progress, implode to center
+                    if (progress >= 0.95) {
+                        const implosionFactor = (progress - 0.95) * 20; // 0 to 1
+                        finalX = d.x + (centerX - d.x) * implosionFactor;
+                        finalY = d.y + (centerY - d.y) * implosionFactor;
+                    }
+
+                    d3.select(nodes[i])
+                        .attr('x', finalX)
+                        .attr('y', finalY)
+                        .attr('opacity', progress > 0.95 ? 0 : 0.8); // Fade out at end
+                });
+
+            subWordsSelection.exit().remove();
         },
 
         _useFallbackData: function () {
@@ -810,37 +899,38 @@
         },
 
         _showFinalButton: function () {
-            // Find Grandparent (Main Wrapper)
+            // ... (existing code)
             const parent = this.container.parentNode;
-            const grandparent = parent ? parent.parentNode : null;
-            const target = grandparent || parent || this.container;
-
-            if (target.querySelector('.venn-complete-btn')) return;
-
             const btn = document.createElement('button');
-            btn.className = 'btn-continue venn-complete-btn'; // Use standard class + layout override
-            btn.textContent = 'SECTION COMPLETE'; // Keep descriptive text, or use CONTINUE? User implied "button-continue" is the class.
-            // "we should use that instead of ven diagram button"
-            // I'll keep Section Complete text for now as it describes the action.
+            btn.className = 'venn-complete-btn';
+            btn.textContent = 'SECTION COMPLETE';
+            if (parent) parent.appendChild(btn);
+            requestAnimationFrame(() => btn.classList.add('visible'));
+            btn.onclick = () => this.host && this.host.markComplete ? this.host.markComplete() : null;
+        },
 
-            target.appendChild(btn);
-
-            requestAnimationFrame(() => {
-                btn.classList.add('visible');
-            });
-
-            btn.onclick = () => {
-                btn.classList.remove('visible');
-                setTimeout(() => btn.remove(), 300);
-
-                if (this.host && this.host.markComplete) {
-                    this.host.markComplete();
-                } else {
-                    if (this.host && this.host.advanceStep) {
-                        this.host.advanceStep();
+        _wrapText: function (text, width) {
+            text.each(function () {
+                var text = d3.select(this),
+                    words = text.text().split(/\s+/).reverse(),
+                    word,
+                    line = [],
+                    lineNumber = 0,
+                    lineHeight = 1.2, // ems
+                    y = text.attr("y"),
+                    dy = parseFloat(text.attr("dy") || 0),
+                    tspan = text.text(null).append("tspan").attr("x", text.attr("x")).attr("y", y).attr("dy", dy + "em");
+                while (word = words.pop()) {
+                    line.push(word);
+                    tspan.text(line.join(" "));
+                    if (tspan.node().getComputedTextLength() > width) {
+                        line.pop();
+                        tspan.text(line.join(" "));
+                        line = [word];
+                        tspan = text.append("tspan").attr("x", text.attr("x")).attr("y", y).attr("dy", ++lineNumber * lineHeight + dy + "em").text(word);
                     }
                 }
-            };
+            });
         }
     };
 
