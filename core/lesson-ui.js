@@ -258,6 +258,20 @@ class LessonUI {
         this.shell.appendChild(bottomBar);
         this.container.appendChild(this.shell);
 
+        // Initialize Neural Background (Core Integration)
+        // Attached to shell to persist across lessons and support fullscreen
+        if (typeof NeuralBackground !== 'undefined') {
+            console.log('[LessonUI] Initializing Core Neural Background');
+            this.neuralBg = new NeuralBackground(this.shell, {
+                nodeCount: 80,
+                connectionDistance: 150,
+                mouseRadius: 250,
+                particleSpeed: 0.4
+            });
+        } else {
+            console.warn('[LessonUI] NeuralBackground class not found.');
+        }
+
         // Store references
         this.elements.topBar = topBar;
         this.elements.lessonTitle = topBar.querySelector('.cd-lesson-title');

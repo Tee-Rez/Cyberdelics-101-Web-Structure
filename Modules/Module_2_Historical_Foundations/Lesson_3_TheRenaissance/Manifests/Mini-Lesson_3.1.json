@@ -1,0 +1,290 @@
+{
+    "title": "Palmer Luckey and the Duct Tape Revolution",
+    "description": "How a teenage entrepreneur in a garage sparked the VR renaissance using smartphone parts and duct tape, leading to the Oculus Rift and Facebook acquisition.",
+    "theme": {
+        "primaryColor": "#5900ff",
+        "fontBody": "Rajdhani, sans-serif"
+    },
+    "modules": [
+        {
+            "id": "vr_renaissance_pd_3.1",
+            "title": "The Garage Revolution",
+            "type": "progressive-disclosure",
+            "content": {
+                "sections": [
+                    {
+                        "title": "The Garage Prototype",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module2/lesson3/palmer_garage.jpg",
+                            "alt": "Palmer Luckey in 2012 garage workshop holding early duct tape-wrapped Oculus Rift prototype, young and enthusiastic, surrounded by electronic components and tools, documentary photography style, representing grassroots innovation."
+                        },
+                        "mediaLayout": "left",
+                        "content": "<p>In 2012, 19-year-old Palmer Luckey was tinkering in his parents' garage, trying to solve VR's core problems using smartphone parts and duct tape. His key insights: smartphone displays had gotten good enough with high resolution, high refresh rates, and cheap manufacturing. Phone sensors (accelerometers, gyroscopes) could track head movement accurately. Clever lens design could create wide field of view from small screens. Make it affordable by using mass-market components. His prototype, held together with duct tape, actually worked with 90+ degree field of view, low latency head tracking, decent image quality, and potential sub-$300 cost.</p>",
+                        "triggerLabel": "The Kickstarter"
+                    },
+                    {
+                        "title": "The Kickstarter That Changed Everything",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module2/lesson3/oculus_kickstarter.jpg",
+                            "alt": "Kickstarter campaign page for Oculus Rift showing the funding goal dramatically exceeded, excited backer comments, and early prototype images, screen capture style from 2012 with authentic web design."
+                        },
+                        "mediaLayout": "right",
+                        "content": "<p>In August 2012, Luckey launched a Kickstarter campaign for the Oculus Rift with a $250,000 goal. Result: raised $2.4 million from 9,522 backers, sparked massive media coverage and developer interest. What made this different from 1990s VR hype? The technology finally worked. Early backers received development kits (DK1) and confirmed presence felt genuine, motion sickness was manageable, and the experience was compelling. The Kickstarter proved massive pent-up demand with over 9,000 people willing to pay $300 for developer hardware showing consumer VR had potential market.</p>",
+                        "triggerLabel": "The Acquisition"
+                    },
+                    {
+                        "title": "The Facebook Acquisition Shock",
+                        "content": "<p>In March 2014, Facebook acquired Oculus for $2 billion. This shocked the tech world: VR had been dead technology, now one of world's largest tech companies bet billions on it. Mark Zuckerberg's rationale: VR would be the next computing platform after mobile, envisioning social VR, shared experiences, and virtual presence replacing screens. The acquisition provided Oculus with resources to hire top engineers, invest heavily in R&D, subsidize hardware to grow market, and develop compelling content. Love it or hate it, Facebook's involvement accelerated VR development by years.</p>",
+                        "triggerLabel": "Why it Worked"
+                    },
+                    {
+                        "title": "Why This Time Was Different",
+                        "content": "<p>Several key differences explain why this revival succeeded where 1990s failed. <strong>Display technology:</strong> 1080x1200 per eye versus 320x200 in 1990s, 90 Hz refresh versus 30-60 Hz, OLED with fast pixel switching versus slow LCD. <strong>Tracking:</strong> sub-20ms latency versus 50-100ms, sub-millimeter precision, inside-out tracking possible. <strong>Processing power:</strong> GPUs could render complex 3D at 90 FPS, CPUs could handle physics, AI, and networking simultaneously. <strong>Weight and comfort:</strong> ~500 grams versus 2-3 pounds, better weight distribution, improved ventilation. <strong>Cost:</strong> $500-800 complete systems versus $50,000+ in 1990s.</p>",
+                        "triggerLabel": "Convergence"
+                    },
+                    {
+                        "title": "The Convergence Moment",
+                        "content": "<p>Multiple technologies matured simultaneously to make VR viable: smartphone displays provided cheap, good screens. Gaming GPUs could render VR-quality graphics. Motion sensors from phones enabled precise tracking. Game engines democratized development. Internet bandwidth allowed distribution. Cultural readiness existed through meditation apps and gaming acceptance. VR didn't succeed because of single breakthrough but because everything finally came together. This convergence—not just better headsets—created the renaissance.</p>",
+                        "triggerLabel": "Enter Scenario"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "vr_renaissance_scenario_3.1",
+            "title": "Scenario: The True Believer",
+            "type": "scenario-based",
+            "content": {
+                "scenes": [
+                    {
+                        "id": "intro",
+                        "narrative": "<p>It's August 2012. You see the Oculus Rift Kickstarter campaign. VR failed spectacularly in the 1990s. Most people consider it dead technology. But this teenage entrepreneur claims he's solved the problems. Do you back the campaign?</p>",
+                        "choices": [
+                            {
+                                "id": "decision_point",
+                                "label": "Make a Decision",
+                                "outcome": "decision"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "decision",
+                        "narrative": "<h3>What do you do?</h3>",
+                        "choices": [
+                            {
+                                "id": "choice_a",
+                                "label": "Dismiss it as another VR failure waiting to happen",
+                                "outcome": "outcome_a"
+                            },
+                            {
+                                "id": "choice_b",
+                                "label": "Back it cautiously with minimum pledge ($300)",
+                                "outcome": "outcome_b"
+                            },
+                            {
+                                "id": "choice_c",
+                                "label": "Go all-in, become VR developer immediately",
+                                "outcome": "outcome_c"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "outcome_a",
+                        "narrative": "<p>You've been burned by VR hype before. The 1990s promised everything and delivered nothing. You assume this is more of the same and ignore the Kickstarter. VR has failed before; why would this time be different?</p><p>The Kickstarter succeeds massively. Development kits ship and actually work. By 2016, consumer VR headsets are everywhere. You missed being part of the revival because you let past failures blind you to present opportunity.</p><p><em>Reflection: Past failures can create blindness to present breakthroughs. Sometimes \"this time is different\" is actually true.</em></p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Another Path",
+                                "outcome": "decision"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "outcome_b",
+                        "narrative": "<p>You're skeptical but curious. The prototype looks promising, and smartphone components have indeed improved. You pledge $300 for a development kit as a calculated risk. When DK1 arrives in 2013, you're amazed—it actually works. Presence feels real. You start experimenting with VR development.</p><p>By 2016, you have years of VR experience and are positioned as early adopter. Your cautious bet paid off because you were open to possibility despite past failures.</p><p><em>Reflection: Calculated risks based on changed circumstances enable early positioning without recklessness.</em></p>",
+                        "choices": [
+                            {
+                                "id": "continue",
+                                "label": "Continue",
+                                "outcome": "final_reflection"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "outcome_c",
+                        "narrative": "<p>You recognize this as the inflection point. The smartphone revolution has created the foundation VR lacked in the 1990s. You pledge at high tier, start learning Unity immediately, and commit to VR development.</p><p>The next 4 years are uncertain—VR is still unproven market—but by 2016 when consumer headsets launch, you're among the experienced VR developers. You're positioned to build the experiences that will define the medium, including early consciousness applications.</p><p><em>Reflection: Recognizing genuine inflection points and acting boldly despite uncertainty creates first-mover advantage.</em></p>",
+                        "choices": [
+                            {
+                                "id": "continue",
+                                "label": "Continue",
+                                "outcome": "final_reflection"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "final_reflection",
+                        "narrative": "<h3>Final Reflection</h3><p>The Oculus Kickstarter was the moment when 30 years of vision met viable technology. Those who recognized the convergence of smartphone displays, gaming GPUs, and cultural readiness positioned themselves for the renaissance. The lesson: past failures don't guarantee future failures when fundamental conditions change.</p>",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module2/lesson3/vr_evolution_compare.jpg",
+                            "alt": "Before and after comparison: left side shows clunky 1990s VR headset (heavy, wired, primitive), right side shows sleek Oculus Rift CV1 from 2016 (elegant, refined, modern), dramatic contrast representing 20-year evolution."
+                        },
+                        "mediaLayout": "full",
+                        "choices": [
+                            {
+                                "id": "start_quiz",
+                                "label": "Start Quiz",
+                                "outcome": "flow_next_module"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "vr_renaissance_quiz_3.1",
+            "title": "Knowledge Check: The Renaissance",
+            "type": "scenario-based",
+            "content": {
+                "scenes": [
+                    {
+                        "id": "q1",
+                        "narrative": "<h3>Question 1</h3><p><strong>What made Palmer Luckey's Oculus Rift viable when 1990s VR wasn't?</strong></p>",
+                        "choices": [
+                            {
+                                "id": "q1_a",
+                                "label": "He was smarter than all the 1990s pioneers",
+                                "outcome": "q1_feedback_a"
+                            },
+                            {
+                                "id": "q1_b",
+                                "label": "He used cheap smartphone components that had matured through mobile device market",
+                                "outcome": "q1_correct"
+                            },
+                            {
+                                "id": "q1_c",
+                                "label": "Facebook gave him unlimited money to solve the problems",
+                                "outcome": "q1_feedback_c"
+                            },
+                            {
+                                "id": "q1_d",
+                                "label": "Governments finally legalized VR research",
+                                "outcome": "q1_feedback_d"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "q1_feedback_a",
+                        "narrative": "<p><strong>Incorrect.</strong> Intelligence wasn't the differentiator. The 1990s pioneers were brilliant, but the supporting technologies simply didn't exist. Luckey succeeded because smartphone displays, gaming GPUs, and motion sensors had matured through other markets. He leveraged convergence of technologies that didn't exist in the 1990s. Timing and available components, not superior intelligence.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "q1"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "q1_correct",
+                        "narrative": "<p><strong>Correct!</strong> Luckey's innovation was recognizing that smartphone displays (high resolution, high refresh rate, cheap), phone sensors (accurate accelerometers and gyroscopes), and gaming GPUs had evolved to the point where VR was finally viable. He didn't invent new technology; he cleverly assembled mass-market components that hadn't existed in the 1990s. The smartphone revolution created the foundation VR needed.</p>",
+                        "choices": [
+                            {
+                                "id": "next",
+                                "label": "Next Question",
+                                "outcome": "q2"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "q1_feedback_c",
+                        "narrative": "<p><strong>Incorrect.</strong> Facebook acquired Oculus in 2014, but Luckey's breakthrough came in 2012 with a garage prototype before any major funding. The initial Kickstarter raised $2.4 million, not billions. The prototype succeeded because the underlying technologies (displays, sensors, GPUs) had matured, not because of massive capital. Money accelerated development but didn't create the foundational breakthrough.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "q1"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "q1_feedback_d",
+                        "narrative": "<p><strong>Incorrect.</strong> There were never legal barriers to VR research. Both 1990s VR and 2010s VR operated under the same regulations. The difference was purely technological: components had improved dramatically through smartphone and gaming markets. Regulations weren't the barrier or the solution.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "q1"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "q2",
+                        "narrative": "<h3>Question 2</h3><p><strong>Why did Facebook's $2 billion acquisition of Oculus matter for the field?</strong></p>",
+                        "choices": [
+                            {
+                                "id": "q2_a",
+                                "label": "It proved VR was just a fad that would fail again",
+                                "outcome": "q2_feedback_a"
+                            },
+                            {
+                                "id": "q2_b",
+                                "label": "It legitimized VR as serious platform and provided resources to accelerate development",
+                                "outcome": "q2_correct"
+                            },
+                            {
+                                "id": "q2_c",
+                                "label": "It gave Facebook monopoly control over all VR development",
+                                "outcome": "q2_feedback_c"
+                            },
+                            {
+                                "id": "q2_d",
+                                "label": "It prevented anyone else from making VR headsets",
+                                "outcome": "q2_feedback_d"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "q2_feedback_a",
+                        "narrative": "<p><strong>Incorrect.</strong> Actually, Facebook's acquisition had the opposite effect: it validated VR as serious technology worth massive investment. One of the world's largest tech companies betting $2 billion signaled VR's potential. This legitimized the field, attracted talent and additional investment, and accelerated development. It was validation, not dismissal.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "q2"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "q2_correct",
+                        "narrative": "<h3>Lesson Complete!</h3><p><strong>Correct.</strong> Facebook's acquisition accomplished two crucial things: legitimized VR after years of being dismissed as failed technology (if Facebook bet $2 billion, it must be real), and provided resources to hire top engineers, invest in R&D, subsidize hardware to grow market, and develop compelling content. This accelerated VR development by years. Whether you loved or hated Facebook's involvement, it undeniably pushed the field forward.</p>",
+                        "choices": []
+                    },
+                    {
+                        "id": "q2_feedback_c",
+                        "narrative": "<p><strong>Incorrect.</strong> Facebook's acquisition didn't create a monopoly. Competition emerged quickly: HTC Vive (2015), PlayStation VR (2016), and others. Facebook/Oculus became one major player among several, not a monopoly. The acquisition accelerated the field overall by validating the market, which enabled competitors to also get funding and support.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "q2"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "q2_feedback_d",
+                        "narrative": "<p><strong>Incorrect.</strong> The acquisition didn't prevent competition—it sparked it. Seeing Facebook invest $2 billion validated the VR market for other companies. HTC partnered with Valve, Sony developed PlayStation VR, and numerous others entered the space. Facebook's acquisition actually increased competition by proving VR was viable market.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "q2"
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

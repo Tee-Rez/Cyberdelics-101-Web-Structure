@@ -21,7 +21,7 @@
                         "title": "Simple Meditation Apps",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module1/lesson4/meditation_apps.jpg",
+                            "src": "../assets/images/module1/meditation_app.jpg",
                             "alt": "Phone displaying meditation app interface"
                         },
                         "mediaLayout": "left",
@@ -32,7 +32,7 @@
                         "title": "VR Meditation With Biofeedback",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module1/lesson4/venn_diagram.jpg",
+                            "src": "../assets/images/module1/Venn-diagram.jpg",
                             "alt": "Venn Diagram: Meditation Tech vs. Cyberdelics overlap"
                         },
                         "mediaLayout": "full",

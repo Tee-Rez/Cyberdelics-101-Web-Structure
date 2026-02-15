@@ -65,6 +65,7 @@
     <script src="../core/course-core.js"></script>
     <script src="../core/state-manager.js"></script>
     <script src="../core/audio-player.js"></script>
+    <script src="../core/neural-background.js"></script>
 
     <!-- METHOD FACTORIES -->
     <script src="../methods/progressive-disclosure/progressive-disclosure.js"></script>
@@ -80,6 +81,7 @@
     <script>
         (function () {
             console.log('[TestHarness] Initializing local test...');
+
 
             // 1. Initialize Engine
             LessonRunner.init('#lesson-root');
@@ -114,6 +116,10 @@
                         <p style="color:#666; font-size:14px;">Make sure test-manifest.json exists in the Modules folder.</p>
                     `;
                 });
+
+            // 4. Background is now handled by core/lesson-ui.js
+            console.log('[TestHarness] Background initialization delegated to LessonUI.');
+
         })();
     </script>
 </body>

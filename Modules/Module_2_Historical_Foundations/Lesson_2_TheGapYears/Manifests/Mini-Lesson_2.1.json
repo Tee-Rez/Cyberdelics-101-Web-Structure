@@ -1,0 +1,284 @@
+{
+    "title": "The VR Winter—Why It All Fell Apart",
+    "description": "Understanding the commercial failure of VR from 2000-2012 and the essential lessons taught by the gap between vision and viability.",
+    "theme": {
+        "primaryColor": "#5900ff",
+        "fontBody": "Rajdhani, sans-serif"
+    },
+    "modules": [
+        {
+            "id": "vr_winter_pd_2.1",
+            "title": "The Fall and The Void",
+            "type": "progressive-disclosure",
+            "content": {
+                "sections": [
+                    {
+                        "title": "The Spectacular Failures",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module2/lesson2/vr_arcade_abandoned.jpg",
+                            "alt": "Abandoned VR arcade from early 2000s, dusty VR equipment on tables, empty mall space with 'Going Out of Business' sign, representing the commercial failure of 1990s VR, melancholic documentary photography style, faded colors suggesting obsolescence."
+                        },
+                        "mediaLayout": "left",
+                        "content": "<p>Several high-profile VR products failed spectacularly in the mid-to-late 1990s. Nintendo's Virtual Boy (1995) was a disaster: red-only display causing eye strain, no head tracking, uncomfortable design, and discontinued within a year after selling only 770,000 units. VR arcades opened in malls but mostly closed within 2-3 years due to limited experiences, poor comfort, high costs, and low throughput. By 2000, VR was considered a failed technology.</p>",
+                        "triggerLabel": "Why it Failed"
+                    },
+                    {
+                        "title": "Why the Technology Wasn't Ready",
+                        "content": "<p>The technical limitations were overwhelming. <strong>Display technology:</strong> 320x200 resolution or worse, screen door effect like looking through mesh, 30-60 Hz refresh rates causing motion sickness, narrow 40-60 degree field of view. <strong>Computing power:</strong> processors couldn't render complex 3D in real-time, limited to simple cartoonish environments. <strong>Tracking:</strong> 50-100ms latency between head movement and display update, position tracking would drift, required external sensors. <strong>Physical comfort:</strong> 2-3 pound headsets causing neck strain, no ventilation making faces sweaty, thick heavy cables tethering users. <strong>Cost:</strong> professional systems $50,000-$250,000, consumer attempts still $500-$1,000 for terrible experience.</p>",
+                        "triggerLabel": "Cultural Impact"
+                    },
+                    {
+                        "title": "The Cultural Backlash",
+                        "content": "<p>After commercial failures, VR became a joke. Tech media declared VR \"dead\" and \"a failed fantasy.\" Investors fled and funding dried up. Developers moved to other fields. \"VR\" became shorthand for overhyped, underdelivering technology. Pop culture used VR as trope for dystopian futures or ridiculous escapism, not exciting possibility. The vision was dismissed as fantasy.</p>",
+                        "triggerLabel": "The Wilderness Years"
+                    },
+                    {
+                        "title": "The Wilderness Years (2000-2012)",
+                        "content": "<p>VR research and development continued, but barely. Small academic labs kept working on presence research. Military used it for training simulations and PTSD therapy experiments. Medical researchers explored pain management and phobia treatment. A handful of true believers persisted. But there were no consumer products, minimal venture capital, no mainstream awareness, and development velocity slowed to near zero. For anyone passionate about VR's potential, this was a frustrating desert.</p>",
+                        "triggerLabel": "Hidden Progress"
+                    },
+                    {
+                        "title": "What Was Happening Beneath the Surface",
+                        "content": "<p>Important developments were occurring quietly during the gap. <strong>The smartphone revolution:</strong> mobile computing and touchscreens normalized personal technology. <strong>Display technology</strong> advanced dramatically thanks to smartphones: higher resolution OLED screens, lower power consumption, cheaper manufacturing, better refresh rates. <strong>Graphics processing:</strong> gaming drove GPU development with powerful graphics cards becoming consumer-affordable. <strong>Sensors</strong> improved: phone accelerometers and gyroscopes made motion tracking cheap and accurate. <strong>Software ecosystems:</strong> Unity and Unreal game engines matured, making VR development more accessible. These developments—driven by smartphones and gaming—would eventually enable VR renaissance.</p>",
+                        "triggerLabel": "Continue"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "vr_researcher_scenario_2.1",
+            "title": "Scenario: The True Believer",
+            "type": "scenario-based",
+            "content": {
+                "scenes": [
+                    {
+                        "id": "intro",
+                        "narrative": "<p>It's 2005. You're a graduate student passionate about VR for consciousness research, but VR is considered dead technology. Your advisor suggests switching to a \"more viable\" research area. Your peers think VR research is career suicide. You have to decide how to proceed.</p>",
+                        "choices": [
+                            {
+                                "id": "decision_point",
+                                "label": "Make a Decision",
+                                "outcome": "decision"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "decision",
+                        "narrative": "<h3>What do you do?</h3>",
+                        "choices": [
+                            {
+                                "id": "choice_a",
+                                "label": "Switch to mainstream research, abandon VR",
+                                "outcome": "outcome_a"
+                            },
+                            {
+                                "id": "choice_b",
+                                "label": "Continue VR research part-time while maintaining safer backup",
+                                "outcome": "outcome_b"
+                            },
+                            {
+                                "id": "choice_c",
+                                "label": "Fully commit to VR despite the obstacles",
+                                "outcome": "outcome_c"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "outcome_a",
+                        "narrative": "<p>You follow your advisor's suggestion and pivot to mainstream neuroscience research. It's the safe choice. You publish papers, get grants, build a respectable academic career. You occasionally think about VR but dismiss it as youthful idealism.</p><p>In 2012, when Oculus reignites VR, you're caught off guard. By the time you try to return to VR research, others who stayed through the gap years are already established experts. You missed the foundation-building years.</p><p><em>Reflection: Safety can mean missing the inflection point. Those who persist through winters position themselves for spring.</em></p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Another Path",
+                                "outcome": "decision"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "outcome_b",
+                        "narrative": "<p>You split your focus: mainstream publishable research for career security, VR experiments in spare time. You stay connected to the small VR community, attend conferences, collaborate on side projects. It's exhausting maintaining two research tracks, but you keep the flame alive.</p><p>When VR revives in 2012, you're positioned perfectly. You have the academic credentials from mainstream work plus deep VR expertise from your persistence. You become a bridge between established neuroscience and emerging VR consciousness research.</p><p><em>Reflection: Strategic patience—keeping possibilities alive while maintaining viability—enables pivoting when timing shifts.</em></p>",
+                        "choices": [
+                            {
+                                "id": "continue",
+                                "label": "Continue",
+                                "outcome": "final_reflection"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "outcome_c",
+                        "narrative": "<p>You ignore the advice and dive deep into VR research. The next 7 years are difficult. Funding is scarce. Publications are rejected because reviewers consider VR irrelevant. You're seen as eccentric or naive. But you build deep expertise, develop novel methodologies, and establish relationships with the tiny community of VR researchers worldwide.</p><p>When Oculus arrives in 2012, you're among the few experts with years of experience. Your \"wasted\" gap year work suddenly becomes foundational. You help shape the field's emergence because you never stopped believing.</p><p><em>Reflection: True believers who persist through wilderness years make breakthroughs possible. Conviction requires sacrifice, but enables leadership.</em></p>",
+                        "choices": [
+                            {
+                                "id": "continue",
+                                "label": "Continue",
+                                "outcome": "final_reflection"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "final_reflection",
+                        "narrative": "<h3>Final Reflection</h3><p>The gap years tested whether VR—and by extension, cyberdelics—would survive long enough to get its second chance. Those who kept working despite mainstream dismissal built the foundations for later success. The lesson: apparent stagnation often masks necessary preparation. Progress isn't always visible.</p>",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module2/lesson2/gap_years_timeline.jpg",
+                            "alt": "Split timeline showing barren desert landscape representing 2000-2012 gap years (top), with underground root systems growing and strengthening beneath the surface (middle), and green shoots beginning to emerge in 2012 (bottom), metaphor for hidden development during dormant periods, organic illustration style, earthy tones."
+                        },
+                        "mediaLayout": "full",
+                        "choices": [
+                            {
+                                "id": "start_quiz",
+                                "label": "Start Quiz",
+                                "outcome": "flow_next_module"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "vr_winter_quiz_2.1",
+            "title": "Knowledge Check: The VR Winter",
+            "type": "scenario-based",
+            "content": {
+                "scenes": [
+                    {
+                        "id": "q1",
+                        "narrative": "<h3>Question 1</h3><p><strong>What was the primary reason VR failed commercially in the late 1990s-early 2000s?</strong></p>",
+                        "choices": [
+                            {
+                                "id": "q1_a",
+                                "label": "Government regulations banned VR development",
+                                "outcome": "q1_feedback_a"
+                            },
+                            {
+                                "id": "q1_b",
+                                "label": "The technology wasn't ready—poor displays, high latency, motion sickness, and prohibitive costs",
+                                "outcome": "q1_correct"
+                            },
+                            {
+                                "id": "q1_c",
+                                "label": "People weren't interested in virtual experiences",
+                                "outcome": "q1_feedback_c"
+                            },
+                            {
+                                "id": "q1_d",
+                                "label": "Timothy Leary's controversial reputation prevented acceptance",
+                                "outcome": "q1_feedback_d"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "q1_feedback_a",
+                        "narrative": "<p><strong>Incorrect.</strong> There were no regulations banning VR. The failure was purely technical and commercial: the technology simply couldn't deliver compelling experiences that justified the cost. Displays, tracking, computing power, and comfort were all inadequate. It was capability failure, not regulatory barrier.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "q1"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "q1_correct",
+                        "narrative": "<p><strong>Correct!</strong> VR failed because the technology was fundamentally inadequate: displays had terrible resolution (320x200), tracking had 50-100ms latency causing sickness, headsets were heavy and uncomfortable, and systems cost $100,000+ for professional versions or $500-$1,000 for poor consumer attempts. The vision existed but the capability to deliver it didn't. It would take until 2012-2016 for technology to catch up.</p>",
+                        "choices": [
+                            {
+                                "id": "next",
+                                "label": "Next Question",
+                                "outcome": "q2"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "q1_feedback_c",
+                        "narrative": "<p><strong>Incorrect.</strong> Interest existed—that's why companies invested millions trying to make VR work. The problem was that the experiences were so poor (low resolution, motion sickness, limited content) that even interested people couldn't tolerate them. The hardware failed to deliver on the promise, killing interest. Demand existed; capability didn't.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "q1"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "q1_feedback_d",
+                        "narrative": "<p><strong>Incorrect.</strong> Leary's reputation wasn't the barrier. VR failed for purely practical reasons: the technology caused motion sickness, looked terrible, and cost too much. Even if VR had perfect cultural acceptance, the hardware limitations would have prevented success. This was technical failure, not cultural rejection.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "q1"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "q2",
+                        "narrative": "<h3>Question 2</h3><p><strong>What important developments occurred during the VR \"gap years\" (2000-2012)?</strong></p>",
+                        "choices": [
+                            {
+                                "id": "q2_a",
+                                "label": "Nothing—VR was completely abandoned and no progress was made",
+                                "outcome": "q2_feedback_a"
+                            },
+                            {
+                                "id": "q2_b",
+                                "label": "Smartphones advanced display technology, gaming improved GPUs, sensors became cheap, and game engines matured",
+                                "outcome": "q2_correct"
+                            },
+                            {
+                                "id": "q2_c",
+                                "label": "VR became even more expensive and less accessible",
+                                "outcome": "q2_feedback_c"
+                            },
+                            {
+                                "id": "q2_d",
+                                "label": "Governments invested billions in VR research",
+                                "outcome": "q2_feedback_d"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "q2_feedback_a",
+                        "narrative": "<p><strong>Incorrect.</strong> This isn't accurate. While consumer VR disappeared, crucial parallel developments were occurring: smartphone displays improved dramatically, gaming drove GPU advancement, sensors became cheap and accurate, and game engines matured. These developments—in other fields—created the technological foundation for VR's later revival. The gap wasn't empty; it was preparation.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "q2"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "q2_correct",
+                        "narrative": "<h3>Lesson Complete!</h3><p><strong>Correct.</strong> The gap years saw massive advances in supporting technologies driven by smartphones and gaming: OLED displays with high resolution and refresh rates, powerful graphics cards capable of real-time 3D, accurate motion sensors from phones, and mature game engines (Unity, Unreal). These developments—not directly for VR—created the foundation that made VR viable when it returned. Apparent stagnation masked essential preparation.</p>",
+                        "choices": []
+                    },
+                    {
+                        "id": "q2_feedback_c",
+                        "narrative": "<p><strong>Incorrect.</strong> Actually, the opposite was true. While VR itself was dormant, the technologies it needed (displays, GPUs, sensors) were becoming cheaper and better through smartphone and gaming markets. By 2012, components that cost $100,000 in the 1990s could be assembled for under $500. The gap years made VR economically viable, not more expensive.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "q2"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "q2_feedback_d",
+                        "narrative": "<p><strong>Incorrect.</strong> Government investment in VR was minimal during this period. The key developments came from commercial markets: smartphone manufacturers improving displays, game companies advancing GPUs, consumer electronics making sensors cheap. The gap was bridged by market forces in adjacent fields, not government research programs.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "q2"
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

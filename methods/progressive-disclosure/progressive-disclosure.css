@@ -34,7 +34,10 @@
 
 /* ---------- Content Cards in Sections ---------- */
 .reveal-section .section-content {
-    background-color: var(--color-surface);
+    background-color: rgba(18, 18, 26, 0.85);
+    /* Semi-transparent for background visibility */
+    backdrop-filter: blur(4px);
+    /* Glassmorphism */
     border: 1px solid var(--color-border);
     border-radius: var(--border-radius-lg);
     padding: var(--space-lg);
@@ -58,11 +61,12 @@
 
 /* ---------- Reveal Trigger Button ---------- */
 .reveal-trigger {
-    display: inline-flex;
+    display: flex;
+    width: fit-content;
+    margin: var(--space-lg) auto 0 auto;
     align-items: center;
     gap: var(--space-sm);
     padding: var(--space-md) var(--space-lg);
-    margin-top: var(--space-lg);
     background-color: var(--color-accent);
     color: white;
     font-family: inherit;
@@ -143,15 +147,9 @@
     }
 }
 
-/* ---------- Step Counter ---------- */
+/* ---------- Step Counter (Removed by User Request) ---------- */
 .step-counter {
-    display: inline-block;
-    padding: var(--space-xs) var(--space-sm);
-    background-color: var(--color-surface-elevated);
-    border-radius: var(--border-radius);
-    font-size: var(--font-size-sm);
-    color: var(--color-text-muted);
-    margin-bottom: var(--space-md);
+    display: none;
 }
 
 .step-counter .current {
@@ -234,6 +232,18 @@
     flex: 1;
     min-width: 0;
     /* Prevent flex overflow */
+}
+
+/* --- Layout: Text Only (Center Aligned) --- */
+/* When no layout class is present or explicitly no-media */
+.reveal-section:not(:has(.pd-media-container)) .pd-text-content,
+.pd-layout-none .pd-text-content {
+    text-align: center;
+    max-width: 800px;
+    /* Constrain width for readability & side interaction */
+    margin: 0 auto;
+    padding: 0 var(--space-xl);
+    /* Extra padding */
 }
 
 /* --- Layout: Left --- */

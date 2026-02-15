@@ -321,6 +321,13 @@
                     choiceEl.classList.add('selected');
 
                     if (nextSceneId) {
+                        // Check for completion keyword
+                        if (nextSceneId === 'flow_next_module' || nextSceneId === 'complete') {
+                            console.log('[ScenarioBased] Completion keyword encountered:', nextSceneId);
+                            this._showSummary(); // Or just markComplete
+                            return;
+                        }
+
                         // Navigate to the next scene
                         setTimeout(() => {
                             this._renderScene(nextSceneId);

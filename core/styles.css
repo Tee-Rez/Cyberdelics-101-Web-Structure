@@ -450,12 +450,26 @@ li strong {
     display: block;
 }
 
+
 .threejs-canvas {
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
+}
+
+/* Neural Background Canvas */
+.neural-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.6;
+    /* Subtle effect */
 }
 
 /* ---------- Cyberdeck UI Shell ---------- */
@@ -469,7 +483,7 @@ li strong {
     position: absolute;
     inset: 0;
     /* Force fill parent */
-    background: var(--color-bg);
+    background: transparent;
     overflow: hidden;
     /* ensure hidden matches parent */
 }
@@ -494,15 +508,14 @@ li strong {
     /* Reserve space for scrollbar */
     overscroll-behavior: none;
     /* Prevent parent scroll */
-    /* Subtle grid background for tech feel */
-    background-image:
-        linear-gradient(rgba(18, 18, 26, 0.8) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(18, 18, 26, 0.8) 1px, transparent 1px);
-    background-size: 40px 40px;
+    /* Transparent background to let canvas show through */
+    background: transparent;
     height: auto;
     /* Allow flex to control height */
     min-height: 0;
     /* Allow shrinking past content */
+    z-index: 1;
+    /* Content above canvas */
 }
 
 .module-container {

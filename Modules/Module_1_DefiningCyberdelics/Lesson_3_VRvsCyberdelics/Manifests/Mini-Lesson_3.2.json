@@ -23,7 +23,7 @@
                             "type": "image",
                             "src": "../assets/images/module1/reality-types.jpg"
                         },
-                        "mediaLayout": "full",
+                        "mediaLayout": "left",
                         "content": "<p>Cyberdelic designers choose which planes of reality the experience inhabits. <strong>Virtual reality</strong> replaces your environment entirely. <strong>Augmented reality</strong> layers digital content over the physical world. <strong>Mixed reality</strong> blends both. <strong>Generative reality</strong> uses AI or procedural systems to create environments that respond and evolve. <strong>Biological reality</strong> works with the body itself — breath, heart rate, brainwaves — as the environment. <strong>Cognitive reality</strong> operates entirely in the mind through guided imagery or hypnagogic states. Most powerful experiences combine more than one.</p>",
                         "triggerLabel": "Dimension 2: Sensory"
                     },
@@ -53,7 +53,7 @@
                             "type": "image",
                             "src": "../assets/images/module1/states-type.jpg"
                         },
-                        "mediaLayout": "full",
+                        "mediaLayout": "right",
                         "content": "<p>States are the temporary shifts in consciousness the experience is intentionally designed to move you through. Think of them as the interior weather of the journey. <strong>Cognitive states</strong> include expanded thinking, pattern recognition, creative insight, or heightened focus. <strong>Emotional states</strong> include awe, grief, joy, compassion, or release. <strong>Somatic states</strong> include deep relaxation, body dissolution, energetic activation, or breath-linked trance. <strong>Relational states</strong> include felt unity, empathy expansion, or the dissolution of self-other boundaries. The designer's job is to ask: what state serves transformation here, and how do we create the conditions for it to arise?</p>",
                         "triggerLabel": "Dimension 5: Traits"
                     },
@@ -63,7 +63,7 @@
                             "type": "image",
                             "src": "../assets/images/module1/traits-type.jpg"
                         },
-                        "mediaLayout": "right",
+                        "mediaLayout": "left",
                         "content": "<p>States are temporary. Traits are what remain. The most thoughtfully designed cyberdelic experiences aren't just creating peak moments — they're using those moments to cultivate lasting change in who you are. <strong>Cognitive traits</strong> might include increased creativity, expanded perspective-taking, or reduced cognitive rigidity. <strong>Emotional traits</strong> might include greater emotional regulation, increased capacity for compassion, or reduced anxiety. <strong>Somatic traits</strong> might include improved body awareness, reduced chronic tension, or a more settled nervous system. <strong>Relational traits</strong> might include greater empathy, reduced isolation, or deeper capacity for connection. The question that separates profound design from shallow design is: what kind of person does this experience grow?</p>",
                         "triggerLabel": "Dimension 6: Meaning"
                     },
@@ -73,7 +73,7 @@
                             "type": "image",
                             "src": "../assets/images/module1/meaning-type.jpg"
                         },
-                        "mediaLayout": "full",
+                        "mediaLayout": "right",
                         "content": "<p>Meaning is what separates a technically impressive experience from a genuinely transformational one. <strong>The World</strong> is the reality the experience inhabits — its aesthetic, its cosmology, its sensory texture. Is it rooted in nature, sacred geometry, the cosmos, the body, the future? <strong>The Story</strong> is the narrative arc or thematic journey the experience takes you on — even if wordless, there is always a movement from one state to another that carries meaning. <strong>The Magic</strong> is the core technology or practice enabling the designed change — binaural beats entraining brainwaves, breathwork altering blood chemistry, sacred geometry activating pattern-recognition, biofeedback creating real-time self-awareness loops. When world, story, and magic align, the experience becomes coherent enough to transform.</p>",
                         "triggerLabel": "Synthesis"
                     },
