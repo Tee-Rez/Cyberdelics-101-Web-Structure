@@ -20,37 +20,57 @@
     const OptionSelectorFactory = function () {
         return createTeachingMethod('option-selector', {
 
+
             // ========== PRIVATE STATE ==========
             _config: null,
+            _questions: [],
+            _currentQuestionIndex: 0,
             _selectedIds: new Set(),
             _isComplete: false,
+            _awaitingNext: false,
+            _awaitingRetry: false,
 
             // ========== LIFECYCLE ==========
 
             onInit: function (container, options = {}) {
+                // 0. Robust data loading (normalize questions)
+                const questions = options.questions || (options.content && options.content.questions);
+
+                if (questions && Array.isArray(questions)) {
+                    this._questions = questions;
+                } else {
+                    // Legacy single question support or direct options
+                    const optList = options.options || (options.content && options.content.options) || [];
+                    const qText = options.question || (options.content && options.content.question) || 'Make a selection:';
+                    const synth = options.synthesis || (options.content && options.content.synthesis) || {};
+
+                    this._questions = [{
+                        question: qText,
+                        options: optList,
+                        synthesis: synth,
+                        fallbackSynthesis: options.fallbackSynthesis || (options.content && options.content.fallbackSynthesis)
+                    }];
+                }
+
+                // 1. Robust config loading
+                const cfg = options.config || options || {};
                 this._config = {
-                    mode: options.mode || 'single', // 'single' or 'multi'
-                    style: options.style || 'card', // 'card' (icons) or 'quiz' (text-only list)
-                    question: options.question || 'Make a selection:',
-                    options: options.options || [],
-                    // Synthesis map for multi-choice (optional)
-                    // Format: { "id1+id2": "Combined response text" }
-                    synthesis: options.synthesis || {},
-                    // Fallback text when no synthesis match
-                    fallbackSynthesis: options.fallbackSynthesis || 'You have made your selections.',
-                    confirmButtonText: options.confirmButtonText || 'Confirm'
+                    mode: cfg.mode || (options.content && options.content.mode) || 'single', // 'single' or 'multi'
+                    style: cfg.style || (options.content && options.content.style) || 'card', // 'card' or 'text'
+                    confirmButtonText: cfg.confirmButtonText || (options.content && options.content.confirmButtonText) || 'Confirm'
                 };
 
+                this._currentQuestionIndex = 0;
                 this._selectedIds.clear();
                 this._isComplete = false;
 
-                // Set total steps (1 question = 1 step)
-                this.setTotalSteps(1);
+                // Set total steps based on question count
+                this.setTotalSteps(this._questions.length);
 
                 // Render UI
                 this._render(container);
 
-                console.log('[OptionSelector] Initialized:', this._config.mode, 'mode with', this._config.options.length, 'options');
+                console.log('[OptionSelector] Initialized:', this._config.mode, 'mode with', this._questions.length, 'questions');
             },
 
             onDestroy: function () {
@@ -58,8 +78,11 @@
             },
 
             onReset: function () {
+                this._currentQuestionIndex = 0;
                 this._selectedIds.clear();
                 this._isComplete = false;
+                this._awaitingNext = false;
+                this._awaitingRetry = false;
                 const container = this._getState().container;
                 if (container) {
                     this._render(container);
@@ -70,12 +93,16 @@
 
             getCustomState: function () {
                 return {
+                    currentQuestionIndex: this._currentQuestionIndex,
                     selectedIds: Array.from(this._selectedIds),
                     isComplete: this._isComplete
                 };
             },
 
             setCustomState: function (savedState) {
+                if (typeof savedState.currentQuestionIndex !== 'undefined') {
+                    this._currentQuestionIndex = savedState.currentQuestionIndex;
+                }
                 if (savedState.selectedIds) {
                     this._selectedIds = new Set(savedState.selectedIds);
                 }
@@ -84,8 +111,14 @@
 
             // ========== RENDERING ==========
 
+            _getCurrentQuestion: function () {
+                return this._questions[this._currentQuestionIndex];
+            },
+
             _render: function (container) {
                 container.innerHTML = '';
+
+                const currentQ = this._getCurrentQuestion();
 
                 // Wrapper
                 const wrapper = document.createElement('div');
@@ -94,24 +127,41 @@
                 // Question
                 const questionEl = document.createElement('div');
                 questionEl.className = 'os-question';
-                questionEl.innerHTML = this._config.question;
+                questionEl.innerHTML = currentQ.question;
                 wrapper.appendChild(questionEl);
 
                 // Options Container - Grid for cards, List for quiz
                 const optionsContainer = document.createElement('div');
-                optionsContainer.className = this._config.style === 'quiz'
-                    ? 'os-options-list'
+                optionsContainer.className = this._config.style === 'text'
+                    ? 'os-options-text'
                     : 'os-options-grid';
 
-                this._config.options.forEach(opt => {
+                // FORCE FLEX STYLES
+                if (this._config.style !== 'text') {
+                    optionsContainer.style.display = 'flex';
+                    optionsContainer.style.flexWrap = 'wrap';
+                    optionsContainer.style.justifyContent = 'center'; // Center orphan items
+                    optionsContainer.style.gap = '16px';
+                    optionsContainer.style.width = '100%';
+                }
+
+                currentQ.options.forEach(opt => {
                     const optionEl = document.createElement('div');
-                    optionEl.className = this._config.style === 'quiz'
-                        ? 'os-option os-option-quiz'
+                    optionEl.className = this._config.style === 'text'
+                        ? 'os-option-text'
                         : 'os-option';
+
+                    // Reduce padding & Enforce sizing
+                    if (this._config.style !== 'text') {
+                        optionEl.style.padding = '12px 24px';
+                        optionEl.style.flex = '0 1 30%';
+                        optionEl.style.minWidth = '180px';
+                        optionEl.style.maxWidth = '300px';
+                    }
                     optionEl.dataset.id = opt.id;
 
                     // Icon (only for card style)
-                    if (this._config.style !== 'quiz' && opt.icon) {
+                    if (this._config.style !== 'text' && opt.icon) {
                         const iconEl = document.createElement('div');
                         iconEl.className = 'os-option-icon';
                         iconEl.textContent = opt.icon;
@@ -139,12 +189,17 @@
                 wrapper.appendChild(responseArea);
 
                 // Confirm Button (for BOTH modes now)
+                const btnWrapper = document.createElement('div');
+                btnWrapper.className = 'os-btn-wrapper';
+
                 const confirmBtn = document.createElement('button');
                 confirmBtn.className = 'btn btn-primary os-confirm-btn';
                 confirmBtn.textContent = this._config.confirmButtonText;
                 confirmBtn.disabled = true;
                 confirmBtn.addEventListener('click', () => this._handleConfirm());
-                wrapper.appendChild(confirmBtn);
+
+                btnWrapper.appendChild(confirmBtn);
+                wrapper.appendChild(btnWrapper);
 
                 container.appendChild(wrapper);
             },
@@ -152,23 +207,27 @@
             // ========== INTERACTION ==========
 
             _handleOptionClick: function (id, element) {
-                if (this._isComplete) return;
+                if (this._isComplete || this._awaitingNext) return;
+
+                // Handle Retry Reset: Clear everything but continue with new selection
+                if (this._awaitingRetry) {
+                    this._resetSelection();
+                    // Since _resetSelection clears _selectedIds, we start fresh below
+                }
 
                 const container = this._getState().container;
 
                 if (this._config.mode === 'single') {
                     // Clear previous selection
                     this._selectedIds.clear();
-                    container.querySelectorAll('.os-option.selected').forEach(el => el.classList.remove('selected'));
+                    container.querySelectorAll('.os-option-text.selected, .os-option.selected').forEach(el => el.classList.remove('selected'));
 
                     // Select this one
                     this._selectedIds.add(id);
                     element.classList.add('selected');
 
-                    // Show live response ONLY in card mode (quiz waits for Confirm)
-                    if (this._config.style !== 'quiz') {
-                        this._showResponse(id);
-                    }
+                    // Hide response until confirm
+                    this._hideResponse();
 
                 } else {
                     // Toggle selection
@@ -180,9 +239,19 @@
                         element.classList.add('selected');
                     }
 
-                    // Update live response preview ONLY in card mode
-                    if (this._config.style !== 'quiz') {
-                        this._showSynthesizedResponse(false);
+                    // Live Preview Logic (with validation check)
+                    // "Hiding again if its correct until the button is pressed"
+                    if (this._isSelectionCorrect(this._selectedIds)) {
+                        this._hideResponse();
+                    } else {
+                        // Show preview (stripped of Correct/Incorrect labels)
+                        if (this._config.style !== 'text') {
+                            if (this._config.mode === 'single') {
+                                this._showResponse(id, true);
+                            } else {
+                                this._showSynthesizedResponse(false, true);
+                            }
+                        }
                     }
                 }
 
@@ -194,44 +263,149 @@
             },
 
             _handleConfirm: function () {
+                // Handling State Transitions
+                if (this._awaitingNext) {
+                    // Move to next question or complete
+                    if (this._currentQuestionIndex < this._questions.length - 1) {
+                        this._currentQuestionIndex++;
+                        this._selectedIds.clear();
+                        this._awaitingNext = false;
+
+                        // Re-render next question
+                        const container = this._getState().container;
+                        this._render(container);
+
+                        // Update progress
+                        this.advanceStep();
+                    } else {
+                        this._complete();
+                    }
+                    return;
+                }
+
+                if (this._awaitingRetry) {
+                    this._resetSelection();
+                    return;
+                }
+
                 if (this._selectedIds.size === 0 || this._isComplete) return;
 
-                // For quiz mode, show response on confirm (not before)
-                // For card mode multi-select, replace live preview with synthesis
-                if (this._config.style === 'quiz') {
+
+                // --- VALIDATION LOGIC ---
+                const isCorrect = this._isSelectionCorrect(this._selectedIds);
+
+                // --- OUTCOME HANDLING ---
+                const container = this._getState().container;
+                const confirmBtn = container.querySelector('.os-confirm-btn');
+
+                if (isCorrect) {
+                    // CASE: CORRECT
+                    if (this._config.mode === 'single') {
+                        const selectedId = Array.from(this._selectedIds)[0];
+                        // Prioritize synthesis for feedback
+                        this._showResponse(selectedId);
+                    } else {
+                        this._showSynthesizedResponse(false);
+                    }
+
+                    // Change State to Awaiting Next
+                    this._awaitingNext = true;
+                    if (confirmBtn) {
+                        const isLast = this._currentQuestionIndex === this._questions.length - 1;
+                        confirmBtn.textContent = isLast ? 'Complete Lesson' : 'Next Question ▶';
+                        confirmBtn.classList.add('btn-success');
+                        // Note: btn-success might need to be defined in core styles or just rely on text
+                        confirmBtn.style.display = 'inline-block'; // Ensure visible
+                    }
+
+                } else {
+                    // CASE: INCORRECT
                     if (this._config.mode === 'single') {
                         const selectedId = Array.from(this._selectedIds)[0];
                         this._showResponse(selectedId);
                     } else {
-                        this._showSynthesizedResponse(true);
+                        this._showSynthesizedResponse(false);
                     }
-                } else if (this._config.mode === 'multi') {
-                    // Card mode multi: replace individual responses with synthesis
-                    this._showSynthesizedResponse(true);
+
+                    // Change State to Awaiting Retry
+                    this._awaitingRetry = true;
+                    if (confirmBtn) {
+                        confirmBtn.textContent = 'Try Again ↺';
+                        confirmBtn.classList.add('btn-warning');
+                    }
                 }
-
-                // Hide confirm button
-                const container = this._getState().container;
-                const confirmBtn = container.querySelector('.os-confirm-btn');
-                if (confirmBtn) confirmBtn.style.display = 'none';
-
-                // Finalize
-                this._complete();
             },
 
-            _showResponse: function (singleId) {
+            _resetSelection: function () {
+                const container = this._getState().container;
+
+                // Clear state
+                this._selectedIds.clear();
+                this._awaitingRetry = false;
+
+                // Reset UI
+                container.querySelectorAll('.os-option-text.selected, .os-option.selected').forEach(el => el.classList.remove('selected'));
+
+                // Hide Response Area
+                const responseArea = container.querySelector('.os-response-area');
+                if (responseArea) {
+                    responseArea.style.display = 'none';
+                    responseArea.classList.remove('active');
+                }
+
+                // Reset Button
+                const confirmBtn = container.querySelector('.os-confirm-btn');
+                if (confirmBtn) {
+                    confirmBtn.textContent = this._config.confirmButtonText;
+                    confirmBtn.classList.remove('btn-warning');
+                    confirmBtn.classList.remove('btn-success');
+                    confirmBtn.disabled = true;
+                }
+            },
+
+            _isSelectionCorrect: function (selectedIds) {
+                const currentQ = this._getCurrentQuestion();
+                const correctOptionIds = currentQ.options
+                    .filter(o => o.correct === true)
+                    .map(o => o.id);
+
+                if (correctOptionIds.length === 0) return true; // Default behavior
+
+                const selectedArray = Array.from(selectedIds);
+                const allSelectedAreCorrect = selectedArray.every(id => correctOptionIds.includes(id));
+                const allCorrectAreSelected = correctOptionIds.length === selectedArray.length; // assuming unique IDs
+
+                return allSelectedAreCorrect && allCorrectAreSelected;
+            },
+
+            _showResponse: function (singleId, isPreview = false) {
                 const container = this._getState().container;
                 const responseArea = container.querySelector('.os-response-area');
-                const option = this._config.options.find(o => o.id === singleId);
 
-                if (option && option.response) {
-                    responseArea.innerHTML = option.response;
+                const currentQ = this._getCurrentQuestion();
+                const option = currentQ.options.find(o => o.id === singleId);
+                const synthesis = currentQ.synthesis || {};
+
+                // Use synthesis[id] if available, otherwise option.response
+                let text = synthesis[singleId] || (option ? option.response : null);
+
+                if (option && text) {
+                    if (isPreview) {
+                        text = text.replace(/^(Correct|Incorrect)[!.]\s*/i, '');
+                    }
+
+                    // New Structure: Label Header + Body
+                    responseArea.innerHTML = `
+                        <div class="os-synthesis-header">${option.label}</div>
+                        <div class="os-synthesis-body">${text}</div>
+                    `;
+
                     responseArea.style.display = 'block';
                     responseArea.classList.add('active');
                 }
             },
 
-            _showSynthesizedResponse: function (hideConfirm = true) {
+            _showSynthesizedResponse: function (hideConfirm = true, isPreview = false) {
                 const container = this._getState().container;
                 const responseArea = container.querySelector('.os-response-area');
 
@@ -242,25 +416,52 @@
                     return;
                 }
 
+                const currentQ = this._getCurrentQuestion();
                 // Build synthesis key (sorted IDs joined by +)
                 const sortedIds = Array.from(this._selectedIds).sort();
                 const key = sortedIds.join('+');
 
-                let responseText = this._config.synthesis[key];
+                // 1. Build Header (Labels: "Fire + Water")
+                const labels = sortedIds.map(id => {
+                    const opt = currentQ.options.find(o => o.id === id);
+                    return opt ? opt.label : id;
+                });
+                const headerText = labels.join(' + ');
 
-                // Fallback: If no exact synthesis match, concatenate individual responses
-                if (!responseText) {
+
+                // 2. Build Body (Response)
+                const synthesis = currentQ.synthesis || {};
+                let bodyText = synthesis[key];
+
+                // Fallback: If no exact synthesis match
+                if (!bodyText) {
+                    // Collect individual responses (without labels in body)
                     const parts = sortedIds.map(id => {
-                        const opt = this._config.options.find(o => o.id === id);
+                        // Check synthesis first for individual IDs too
+                        if (synthesis[id]) return synthesis[id];
+
+                        const opt = currentQ.options.find(o => o.id === id);
                         return opt && opt.response ? opt.response : '';
                     }).filter(Boolean);
 
-                    responseText = parts.length > 0
-                        ? parts.join('<hr class="os-divider">')
-                        : this._config.fallbackSynthesis;
+                    bodyText = parts.length > 0
+                        ? parts.join('<br>') // Join with line break
+                        : (currentQ.fallbackSynthesis || 'You have made your selections.');
                 }
 
-                responseArea.innerHTML = responseText;
+                // 3. Strip Preview Logic
+                if (isPreview) {
+                    // User Request: Only show combined labels (header) until button is pressed.
+                    // Clear body text completely for preview.
+                    bodyText = '';
+                }
+
+                // 4. Render
+                responseArea.innerHTML = `
+                    <div class="os-synthesis-header">${headerText}</div>
+                    <div class="os-synthesis-body">${bodyText}</div>
+                `;
+
                 responseArea.style.display = 'block';
                 responseArea.classList.add('active');
 
@@ -273,7 +474,6 @@
 
             _complete: function () {
                 this._isComplete = true;
-                this.advanceStep();
                 this.markComplete();
 
                 // Emit event with selection data
@@ -281,6 +481,15 @@
                     mode: this._config.mode,
                     selectedIds: Array.from(this._selectedIds)
                 });
+            },
+
+            _hideResponse: function () {
+                const container = this._getState().container;
+                const responseArea = container.querySelector('.os-response-area');
+                if (responseArea) {
+                    responseArea.style.display = 'none';
+                    responseArea.classList.remove('active');
+                }
             }
         });
     };
@@ -288,8 +497,9 @@
     // ========== EXPORT ==========
     if (window.MethodLoader) {
         window.MethodLoader.registerFactory('option-selector', OptionSelectorFactory);
-    } else {
-        window.OptionSelectorFactory = OptionSelectorFactory;
     }
+
+    // Always expose for direct access (LessonRunner fallback)
+    window.OptionSelectorFactory = OptionSelectorFactory;
 
 })();

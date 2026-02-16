@@ -259,13 +259,15 @@ D) Social multiplayer features for collaborative play
 - **Whenever validation needed:** Ensure learner grasped key concepts
 
 ### Technical Requirements
-- HTML: Question display, choice buttons, explanation panels
-- CSS: Styling for questions, choices, feedback
-- JavaScript: 
-  - Branching logic (if wrong → show explanation → return)
-  - State tracking (which questions answered correctly)
-  - Progress indication
-- **Complexity:** ⭐⭐⭐ (Medium - branching logic adds complexity)
+- **Component:** `option-selector`
+- **Styles:**
+  - `style: 'text'` for standard knowledge checks (vertical list)
+  - `style: 'card'` for visual scenarios (grid with images/icons)
+- **Features:** 
+  - Immediate feedback on selection or confirmation
+  - Supports single or multi-select modes
+  - Handles branching logic responses without full scene transitions
+- **Complexity:** ⭐⭐ (Low/Medium - configuration via JSON)
 
 ---
 

@@ -23,13 +23,24 @@
             // ========== LIFECYCLE ==========
 
             onInit: function (container, options = {}) {
+                // 0. Robust data loading (items/content)
+                const items = options.items || (options.content && options.content.items) || [];
+                const instruction = options.instruction || (options.content && options.content.instruction) || '';
+                const template = options.template || (options.content && options.content.template) || '';
+                const title = options.title || (options.content && options.content.title) || '';
+
                 // Private state for this instance
                 this._state = {
-                    items: options.items || [], // [{id, text}, ...]
+                    items: items,
                     slots: [], // DOM elements
                     placedCount: 0,
-                    distractors: options.distractors || [] // Optional extra incorrect items
+                    distractors: options.distractors || (options.content && options.content.distractors) || []
                 };
+
+                // 0b. Auto-render if template is provided but container is empty
+                if (template && container.querySelectorAll('.construction-zone').length === 0) {
+                    this._render(container, { title, instruction, template });
+                }
 
                 // 1. Setup DOM References
                 this._elements = {
@@ -352,6 +363,18 @@
 
                 // Re-render bank to remove placed items
                 this._renderBank();
+            },
+
+            _render: function (container, { title, instruction, template }) {
+                container.innerHTML = `
+                    <div class="knowledge-construction-container">
+                        <h3>${title || 'Knowledge Construction'}</h3>
+                        <p class="construction-instruction">${instruction || ''}</p>
+                        <div class="construction-zone">${template || ''}</div>
+                        <div class="source-bank"></div>
+                        <div class="kc-feedback"></div>
+                    </div>
+                `;
             }
         });
     };

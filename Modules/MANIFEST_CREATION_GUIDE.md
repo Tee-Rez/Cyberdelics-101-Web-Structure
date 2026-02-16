@@ -132,6 +132,54 @@ Used for interactive engines.
 }
 ```
 
+#### `option-selector` (Quiz)
+Used for creating multiple-choice quizzes, assessments, or reflection prompts. Supports single-select and multi-select modes, and sequential questions within a single module.
+
+```json
+{
+    "id": "quiz_1.1",
+    "title": "Etymology Quiz",
+    "type": "option-selector",
+    "config": {
+        "mode": "single", // "single" or "multi"
+        "style": "text",   // "text" or "card"
+        "questions": [
+            {
+                "question": "<h3>Question 1</h3><p>What is X?</p>",
+                "options": [
+                    { "id": "a", "label": "Option A", "correct": true },
+                    { "id": "b", "label": "Option B", "correct": false }
+                ],
+                "synthesis": {
+                    "a": "Correct feedback!",
+                    "b": "Incorrect feedback."
+                }
+            },
+            {
+                "question": "<h3>Question 2</h3><p>What is Y?</p>",
+                "options": [
+                    { "id": "c", "label": "Option C", "correct": false },
+                    { "id": "d", "label": "Option D", "correct": true }
+                ],
+                "synthesis": {
+                    "d": "Great job!"
+                }
+            }
+        ]
+    }
+}
+```
+
+#### Legacy Support (Single Question)
+The component also supports the legacy single-question format for backward compatibility:
+```json
+{
+    "question": "Make a selection:",
+    "options": [...],
+    "synthesis": {...}
+}
+```
+
 ## 3. Important Rules
 1.  **NO Extra Top-Level Fields**: Do not add metadata fields that are not defined in the Lesson Runner.
 2.  **Relative Paths**: Image paths should be relative to the manifest location or standard assets path (`../../assets/...`).

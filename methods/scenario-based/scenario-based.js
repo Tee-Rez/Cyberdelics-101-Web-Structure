@@ -1,20 +1,10 @@
 /**
  * Scenario-Based Method
  * Branching narrative teaching method implementation
- * 
- * Factory Pattern Refactor
- * 
- * Usage:
- *   const factory = window.ScenarioBasedFactory;
- *   const instance = factory();
- *   instance.init('.scenario-container');
  */
 
 (function () {
     'use strict';
-
-    console.log('[ScenarioBased] Script loading...');
-    console.log('[ScenarioBased] createTeachingMethod exists:', typeof createTeachingMethod !== 'undefined');
 
     if (typeof createTeachingMethod === 'undefined') {
         console.error('Core dependency "method-base.js" missing.');
@@ -25,38 +15,51 @@
         return createTeachingMethod('scenario-based', {
 
             // ---------- Private State ----------
-            scenes: [],
-            currentSceneIndex: 0,
+            sceneData: [],
+            currentSceneId: null,
             choiceHistory: [],
+            moduleTitle: '',
 
             // ---------- Lifecycle Hooks ----------
 
             onInit: function (container, options) {
-                console.log('[ScenarioBased] onInit called with options:', options);
+                console.log('[ScenarioBased] onInit for container:', container ? container.id : 'missing');
+                console.log('[ScenarioBased] options keys:', Object.keys(options || {}));
 
-                // Store scene data from manifest (it's at options.scenes, not options.content.scenes)
-                this.sceneData = options.scenes || [];
+                // 0. Robust scene data loading
+                this.sceneData = options.scenes || (options.content && options.content.scenes) || [];
+                this.moduleTitle = options.title || (options.content && options.content.title) || '';
+
+                // Fallback for array-only options
+                if (this.sceneData.length === 0 && Array.isArray(options)) {
+                    this.sceneData = options;
+                }
+
+                console.log('[ScenarioBased] sceneData count:', this.sceneData.length);
                 this.currentSceneId = this.sceneData.length > 0 ? this.sceneData[0].id : null;
+                console.log('[ScenarioBased] currentSceneId:', this.currentSceneId);
+
                 this.choiceHistory = [];
-
-                console.log('[ScenarioBased] Loaded', this.sceneData.length, 'scenes');
-                console.log('[ScenarioBased] First scene ID:', this.currentSceneId);
-
-                // Set total steps
                 this.setTotalSteps(this.sceneData.length);
 
-                // Render first scene
                 if (this.currentSceneId) {
                     this._renderScene(this.currentSceneId);
+                } else {
+                    console.warn('[ScenarioBased] NO SCENES LOADED');
+                    container.innerHTML = `
+                        <div class="error" style="color:#ff5555; background:rgba(0,0,0,0.5); padding:2rem; border:1px solid #ff5555; border-radius:8px;">
+                            <h3>Scenario Error</h3>
+                            <p>No scenes found in the manifest for this module.</p>
+                            <p style="font-size:0.8rem; opacity:0.7;">Module ID: ${options.id || 'unknown'}</p>
+                        </div>
+                    `;
                 }
 
                 // Attach click handler
                 this._boundClickHandler = this._handleClick.bind(this);
                 container.addEventListener('click', this._boundClickHandler);
 
-                // CHECK FOR RESTORE FLAG
                 if (options.restore) {
-                    console.log('[ScenarioBased] Restoring state: Resetting to start.');
                     this.onReset();
                 }
             },
@@ -69,189 +72,30 @@
             },
 
             onReset: function () {
-                // Hide all scenes except first
-                this.scenes.forEach((scene, i) => {
-                    scene.classList.remove('active');
-
-                    // Reset choices in scene
-                    const choices = scene.querySelectorAll('.choice-option');
-                    choices.forEach(choice => {
-                        choice.classList.remove('selected', 'disabled');
-                    });
-
-                    // Hide outcomes
-                    const outcome = scene.querySelector('.scenario-outcome');
-                    if (outcome) outcome.classList.remove('visible');
-
-                    // Hide continue buttons
-                    const continueBtn = scene.querySelector('.scene-continue');
-                    if (continueBtn) continueBtn.classList.remove('visible');
-                });
-
-                // Show first scene
-                if (this.scenes.length > 0) {
-                    this.scenes[0].classList.add('active');
-                }
-
-                this.currentSceneIndex = 0;
                 this.choiceHistory = [];
+                if (this.sceneData.length > 0) {
+                    this._renderScene(this.sceneData[0].id);
+                }
             },
 
-            // ---------- State Hooks ----------
+            // ---------- State Tracking ----------
 
             getCustomState: function () {
                 return {
-                    currentSceneIndex: this.currentSceneIndex,
+                    currentSceneId: this.currentSceneId,
                     choiceHistory: this.choiceHistory
                 };
             },
 
             setCustomState: function (savedState) {
                 this.choiceHistory = savedState.choiceHistory || [];
-                // Restore to saved scene
-                for (let i = 0; i <= savedState.currentSceneIndex; i++) {
-                    if (this.scenes[i]) {
-                        this.scenes[i].classList.add('active');
-                    }
+                this.currentSceneId = savedState.currentSceneId || (this.sceneData.length > 0 ? this.sceneData[0].id : null);
+                if (this.currentSceneId) {
+                    this._renderScene(this.currentSceneId);
                 }
-                this.currentSceneIndex = savedState.currentSceneIndex || 0;
             },
 
-            // ---------- Method-Specific Functions ----------
-
-            /**
-             * Present a choice to the user (called automatically from HTML)
-             */
-            presentChoice: function (sceneEl) {
-                // Choices are already in the HTML, just make them interactive
-                const choices = sceneEl.querySelectorAll('.choice-option');
-                choices.forEach(choice => {
-                    choice.classList.remove('disabled');
-                });
-            },
-
-            /**
-             * Handle user selecting an option
-             */
-            selectOption: function (choiceEl) {
-                const scene = choiceEl.closest('.scenario-scene');
-                const sceneId = scene.dataset.sceneId || `scene-${this.currentSceneIndex}`;
-                const choiceId = choiceEl.dataset.choiceId;
-                const choiceText = choiceEl.querySelector('.choice-text strong')?.textContent || choiceId;
-
-                // Record choice
-                this.choiceHistory.push({
-                    sceneId: sceneId,
-                    choiceId: choiceId,
-                    choiceText: choiceText,
-                    timestamp: Date.now()
-                });
-
-                // Visual feedback
-                const allChoices = scene.querySelectorAll('.choice-option');
-                allChoices.forEach(c => {
-                    c.classList.add('disabled');
-                    if (c === choiceEl) {
-                        c.classList.add('selected');
-                    }
-                });
-
-                // Show outcome if exists
-                const outcomeId = choiceEl.dataset.outcome;
-                if (outcomeId) {
-                    const outcome = scene.querySelector(`[data-outcome-id="${outcomeId}"]`);
-                    if (outcome) {
-                        outcome.classList.add('visible');
-                    }
-                } else {
-                    // Show generic outcome
-                    const outcome = scene.querySelector('.scenario-outcome');
-                    if (outcome) {
-                        outcome.classList.add('visible');
-                    }
-                }
-
-                // Show continue button
-                const continueBtn = scene.querySelector('.scene-continue');
-                if (continueBtn) {
-                    setTimeout(() => {
-                        continueBtn.classList.add('visible');
-                    }, 500);
-                }
-
-                // Emit event
-                this.emit('choiceMade', {
-                    sceneId: sceneId,
-                    choiceId: choiceId,
-                    choiceText: choiceText,
-                    history: this.choiceHistory
-                });
-            },
-
-            /**
-             * Get current branch/path based on choices
-             */
-            getBranch: function () {
-                return this.choiceHistory.map(c => c.choiceId).join('-');
-            },
-
-            /**
-             * Get all choices made so far
-             */
-            getChoiceHistory: function () {
-                return [...this.choiceHistory];
-            },
-
-            /**
-             * Advance to next scene
-             */
-            nextScene: function () {
-                const nextIndex = this.currentSceneIndex + 1;
-
-                if (nextIndex >= this.scenes.length) {
-                    // All scenes complete
-                    this._showSummary();
-                    return;
-                }
-
-                // Check for branching - next scene may depend on choice
-                const currentScene = this.scenes[this.currentSceneIndex];
-                const lastChoice = this.choiceHistory[this.choiceHistory.length - 1];
-
-                // Look for branch-specific next scene
-                // SCOPED: look within container only
-                const container = this._getState().container;
-                let nextScene = null;
-                if (lastChoice) {
-                    nextScene = container.querySelector(
-                        `.scenario-scene[data-branch="${lastChoice.choiceId}"]`
-                    );
-                }
-
-                // Default to next sequential scene
-                if (!nextScene) {
-                    nextScene = this.scenes[nextIndex];
-                }
-
-                // Activate next scene
-                nextScene.classList.add('active');
-                this.currentSceneIndex = Array.from(this.scenes).indexOf(nextScene);
-
-                // Advance progress
-                this.advanceStep();
-
-                // Scroll to new scene
-                setTimeout(() => {
-                    nextScene.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }, 100);
-
-                this.emit('sceneChanged', {
-                    sceneIndex: this.currentSceneIndex,
-                    scene: nextScene
-                });
-            },
-
-            // ---------- Private Helpers ----------
+            // ---------- Rendering ----------
 
             _renderScene: function (sceneId) {
                 console.log('[ScenarioBased] Rendering scene:', sceneId);
@@ -264,15 +108,27 @@
 
                 const container = this._getState().container;
 
-                // Build scene HTML
+                // Build HTML
                 let html = `<div class="scenario-scene active" data-scene-id="${scene.id}">`;
+
+                if (this.moduleTitle) {
+                    html += `<h1 class="module-title">${this.moduleTitle}</h1>`;
+                }
+
+                html += `<div class="scene-content">`;
+
+                // Media
+                if (scene.media) {
+                    html += this._generateMediaHTML(scene.media);
+                }
+
+                // Narrative
                 html += `<div class="scenario-narrative">${scene.narrative || ''}</div>`;
 
-                // Add choices if they exist
+                // Choices
                 if (scene.choices && scene.choices.length > 0) {
                     html += `<div class="scenario-choices">`;
                     scene.choices.forEach(choice => {
-                        console.log('[ScenarioBased] Rendering choice:', choice);
                         const nextSceneAttr = choice.outcome ? `data-next-scene="${choice.outcome}"` : '';
                         html += `
                             <div class="choice-option" data-choice-id="${choice.id}" ${nextSceneAttr}>
@@ -283,115 +139,88 @@
                     html += `</div>`;
                 }
 
-                html += `</div>`;
+                html += `</div>`; // scene-content
+                html += `</div>`; // scenario-scene
 
-                // Replace container content
                 container.innerHTML = html;
-
                 this.currentSceneId = sceneId;
 
-                // If this is the final scene (no choices), add a continue button
+                // Terminal Scene Continue Button
                 if (!scene.choices || scene.choices.length === 0) {
-                    console.log('[ScenarioBased] Final scene reached, adding continue button');
-                    const sceneEl = container.querySelector('.scenario-scene');
+                    const contentEl = container.querySelector('.scene-content');
                     const continueBtn = document.createElement('button');
                     continueBtn.className = 'scene-continue visible';
                     continueBtn.textContent = 'Continue';
+                    continueBtn.style.marginTop = '2rem';
                     continueBtn.addEventListener('click', (e) => {
                         e.target.disabled = true;
                         e.target.textContent = 'Loading...';
                         this.markComplete();
                     });
-                    sceneEl.appendChild(continueBtn);
+                    contentEl.appendChild(continueBtn);
                 }
             },
 
+            _generateMediaHTML: function (media) {
+                if (!media) return '';
+                const pos = media.position ? `media-${media.position}` : 'media-inline';
+                let content = '';
+                if (media.type === 'image') {
+                    content = `<img src="${media.src}" alt="${media.alt || ''}" class="sim-media-image">`;
+                } else if (media.type === 'video') {
+                    const attrs = media.autoplay !== false ? 'autoplay loop muted playsinline' : 'controls';
+                    content = `<video src="${media.src}" ${attrs} class="sim-media-video"></video>`;
+                } else if (media.type === 'youtube') {
+                    let src = media.src;
+                    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+                    const match = src.match(regExp);
+                    if (match && match[2].length === 11) {
+                        src = `https://www.youtube.com/embed/${match[2]}?autoplay=1&mute=1&controls=0&loop=1`;
+                    }
+                    content = `<iframe class="sim-media-video" src="${src}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+                } else if (media.type === 'threejs') {
+                    content = `<div class="threejs-canvas" data-engine="${media.engine}"></div>`;
+                }
+                return `<div class="media-container ${pos}">${content}</div>`;
+            },
+
+            // ---------- Interaction ----------
+
             _handleClick: function (event) {
-                // Handle choice clicks
                 const choiceEl = event.target.closest('.choice-option');
                 if (choiceEl && !choiceEl.classList.contains('disabled')) {
                     event.preventDefault();
 
                     const nextSceneId = choiceEl.dataset.nextScene;
-                    console.log('[ScenarioBased] Choice clicked, next scene:', nextSceneId);
+                    console.log('[ScenarioBased] Choice selected, next:', nextSceneId);
 
-                    // Disable all choices
+                    // Visual feedback
                     const allChoices = choiceEl.closest('.scenario-scene').querySelectorAll('.choice-option');
                     allChoices.forEach(c => c.classList.add('disabled'));
                     choiceEl.classList.add('selected');
 
                     if (nextSceneId) {
-                        // Check for completion keyword
+                        // Support transition keywords
                         if (nextSceneId === 'flow_next_module' || nextSceneId === 'complete') {
-                            console.log('[ScenarioBased] Completion keyword encountered:', nextSceneId);
-                            this._showSummary(); // Or just markComplete
+                            console.log('[ScenarioBased] Completing module via keyword');
+                            this.markComplete();
                             return;
                         }
 
-                        // Navigate to the next scene
+                        // Navigate to next scene
                         setTimeout(() => {
                             this._renderScene(nextSceneId);
-                        }, 300);
-                    }
-                    return;
-                }
-
-                // Handle continue clicks
-                const continueEl = event.target.closest('.scene-continue');
-                if (continueEl) {
-                    event.preventDefault();
-                    this.nextScene();
-                    return;
-                }
-            },
-
-            _showSummary: function () {
-                const container = this._getState().container;
-                // Look for summary section
-                const summary = container.querySelector('.scenario-summary');
-                if (summary) {
-                    summary.classList.add('active');
-
-                    // Populate with choice history
-                    const choicesList = summary.querySelector('.summary-choices');
-                    if (choicesList) {
-                        choicesList.innerHTML = this.choiceHistory.map(choice => `
-                            < div class="summary-choice" >
-                                <span class="icon">✓</span>
-                                <span>${choice.choiceText}</span>
-                            </div >
-        `).join('');
+                            this.advanceStep();
+                        }, 400);
                     }
                 }
-
-                // Mark complete
-                this.markComplete();
-
-                // Enable lesson completion if CourseCore available
-                if (typeof CourseCore !== 'undefined') {
-                    CourseCore.enableCompletion();
-                }
-
-                this.emit('scenarioComplete', {
-                    choiceHistory: this.choiceHistory,
-                    branch: this.getBranch()
-                });
             }
         });
     };
 
-    // Export Factory
-    console.log('[ScenarioBased] Registering factory...');
-    console.log('[ScenarioBased] window.MethodLoader exists:', !!window.MethodLoader);
-
-    // Always set window property for LessonRunner's MethodRegistry
+    // Export
     window.ScenarioBasedFactory = ScenarioBasedFactory;
-    console.log('[ScenarioBased] Set window.ScenarioBasedFactory');
-
-    // Also register with MethodLoader if available
     if (window.MethodLoader) {
         window.MethodLoader.registerFactory('scenario-based', ScenarioBasedFactory);
-        console.log('[ScenarioBased] Registered with MethodLoader');
     }
-
 })();

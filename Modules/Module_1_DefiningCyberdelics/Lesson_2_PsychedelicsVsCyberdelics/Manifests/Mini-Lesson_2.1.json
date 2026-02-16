@@ -44,131 +44,72 @@
         {
             "id": "shared_quiz_2.1",
             "title": "Shared Territory Quiz",
-            "type": "scenario-based",
-            "content": {
-                "scenes": [
+            "type": "option-selector",
+            "config": {
+                "mode": "single",
+                "style": "text",
+                "questions": [
                     {
-                        "id": "q1",
-                        "narrative": "<h3>Question 1</h3><p><strong>What do psychedelics and cyberdelics primarily share?</strong></p>",
-                        "choices": [
+                        "question": "<h3>Question 1</h3><p><strong>What do psychedelics and cyberdelics primarily share?</strong></p>",
+                        "options": [
                             {
                                 "id": "q1_a",
                                 "label": "The specific method used",
-                                "outcome": "q1_wrong_a"
+                                "correct": false
                             },
                             {
                                 "id": "q1_b",
                                 "label": "The intention to facilitate transformation",
-                                "outcome": "q2"
+                                "correct": true
                             },
                             {
                                 "id": "q1_c",
                                 "label": "Legal status",
-                                "outcome": "q1_wrong_c"
+                                "correct": false
                             },
                             {
                                 "id": "q1_d",
                                 "label": "Requirement for medical supervision",
-                                "outcome": "q1_wrong_d"
+                                "correct": false
                             }
-                        ]
+                        ],
+                        "synthesis": {
+                            "q1_a": "<p>Incorrect. The method is different (substances vs. technology). They share the intention.</p>",
+                            "q1_c": "<p>Incorrect. Legal status differs significantly. They share transformational purpose.</p>",
+                            "q1_d": "<p>Incorrect. Supervision needs vary. They share the goal of exploration.</p>",
+                            "q1_b": "<p>✓ Correct!</p><p>Correct! They share the intention to facilitate transformation.</p>"
+                        }
                     },
                     {
-                        "id": "q1_wrong_a",
-                        "narrative": "<p>Incorrect. The method is different (substances vs. technology). They share the intention.</p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "q1"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "q1_wrong_c",
-                        "narrative": "<p>Incorrect. Legal status differs significantly. They share transformational purpose.</p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "q1"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "q1_wrong_d",
-                        "narrative": "<p>Incorrect. Supervision needs vary. They share the goal of exploration.</p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "q1"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "q2",
-                        "narrative": "<h3>Question 2</h3><p>Correct! <strong>Can properly designed cyberdelic experiences produce mystical experiences comparable to psychedelics?</strong></p>",
-                        "choices": [
+                        "question": "<h3>Question 2</h3><p><strong>Can properly designed cyberdelic experiences produce mystical experiences comparable to psychedelics?</strong></p>",
+                        "options": [
                             {
                                 "id": "q2_a",
                                 "label": "No, only substances work",
-                                "outcome": "q2_wrong_a"
+                                "correct": false
                             },
                             {
                                 "id": "q2_b",
                                 "label": "Yes, research shows comparable scores",
-                                "outcome": "quiz_complete"
+                                "correct": true
                             },
                             {
                                 "id": "q2_c",
                                 "label": "Maybe, but less profound",
-                                "outcome": "q2_wrong_c"
+                                "correct": false
                             },
                             {
                                 "id": "q2_d",
                                 "label": "Depends on belief system",
-                                "outcome": "q2_wrong_d"
+                                "correct": false
                             }
-                        ]
-                    },
-                    {
-                        "id": "quiz_complete",
-                        "narrative": "<h3>Quiz Complete!</h3><p>Excellent understanding of the common ground between these approaches.</p>",
-                        "choices": []
-                    },
-                    {
-                        "id": "q2_wrong_a",
-                        "narrative": "<p>Incorrect. Research validates that technology can produce comparable mystical experiences.</p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "q2"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "q2_wrong_c",
-                        "narrative": "<p>Incorrect. Profundity depends on design and context, not just the medium.</p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "q2"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "q2_wrong_d",
-                        "narrative": "<p>Incorrect. While belief matters, the technology has measurable effects regardless of belief.</p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "q2"
-                            }
-                        ]
+                        ],
+                        "synthesis": {
+                            "q2_a": "<p>Incorrect. Research validates that technology can produce comparable mystical experiences.</p>",
+                            "q2_c": "<p>Incorrect. Profundity depends on design and context, not just the medium.</p>",
+                            "q2_d": "<p>Incorrect. While belief matters, the technology has measurable effects regardless of belief.</p>",
+                            "q2_b": "<h3>✓ Quiz Complete!</h3><p>Excellent understanding of the common ground between these approaches.</p>"
+                        }
                     }
                 ]
             }

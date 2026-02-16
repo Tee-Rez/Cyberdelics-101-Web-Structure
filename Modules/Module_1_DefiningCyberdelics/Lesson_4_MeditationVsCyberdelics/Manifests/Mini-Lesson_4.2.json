@@ -203,72 +203,54 @@
         {
             "id": "intention_quiz_4.2",
             "title": "Intention Quiz",
-            "type": "scenario-based",
-            "content": {
-                "scenes": [
+            "type": "option-selector",
+            "config": {
+                "mode": "single",
+                "style": "text",
+                "questions": [
                     {
-                        "id": "q1",
-                        "narrative": "<h3>Question 1</h3><p><strong>What primarily determines whether it's wellness tech or cyberdelic?</strong></p>",
-                        "choices": [
+                        "question": "<h3>Question 1</h3><p><strong>What primarily determines whether it's wellness tech or cyberdelic?</strong></p>",
+                        "options": [
                             {
                                 "id": "q1_a",
                                 "label": "Price",
-                                "outcome": "q1_wrong_a"
+                                "correct": false
                             },
                             {
                                 "id": "q1_b",
                                 "label": "Focus: Optimization vs. Exploration",
-                                "outcome": "q2"
+                                "correct": true
                             },
                             {
                                 "id": "q1_c",
                                 "label": "Sensors used",
-                                "outcome": "q1_wrong_c"
+                                "correct": false
                             }
-                        ]
+                        ],
+                        "synthesis": {
+                            "q1_a": "<p>Incorrect. Cost is irrelevant.</p>",
+                            "q1_c": "<p>Incorrect. The same sensors can be used for both. The difference lies in the application and focus.</p>",
+                            "q1_b": "<p>✓ Correct!</p><p>Focus: Optimization vs. Exploration is the primary differentiator between wellness tech and cyberdelics.</p>"
+                        }
                     },
                     {
-                        "id": "q1_wrong_a",
-                        "narrative": "<p>Incorrect. Cost is irrelevant.</p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "q1"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "q2",
-                        "narrative": "<h3>Question 2</h3><p>Correct! <strong>Can the same technology be both wellness tech and cyberdelic?</strong></p>",
-                        "choices": [
+                        "question": "<h3>Question 2</h3><p><strong>Can the same technology be both wellness tech and cyberdelic?</strong></p>",
+                        "options": [
                             {
                                 "id": "q2_a",
                                 "label": "No, intent is fixed",
-                                "outcome": "q2_wrong_a"
+                                "correct": false
                             },
                             {
                                 "id": "q2_b",
                                 "label": "Yes, context/user intent matter",
-                                "outcome": "quiz_complete"
+                                "correct": true
                             }
-                        ]
-                    },
-                    {
-                        "id": "quiz_complete",
-                        "narrative": "<h3>Quiz Complete!</h3><p>You understand how intention shapes technology.</p>",
-                        "choices": []
-                    },
-                    {
-                        "id": "q2_wrong_a",
-                        "narrative": "<p>Incorrect. Flexible tools can serve multiple purposes.</p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "q2"
-                            }
-                        ]
+                        ],
+                        "synthesis": {
+                            "q2_a": "<p>Incorrect. Flexible tools can serve multiple purposes depending on how they are designed and used.</p>",
+                            "q2_b": "<h3>✓ Quiz Complete!</h3><p>You understand how intention shapes technology.</p>"
+                        }
                     }
                 ]
             }

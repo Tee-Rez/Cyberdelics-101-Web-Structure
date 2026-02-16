@@ -1,0 +1,68 @@
+{
+    "id": "test-option-selector-text",
+    "title": "Text Style Quiz Test",
+    "description": "Validates the refactored option-selector 'text' style.",
+    "modules": [
+        {
+            "id": "quiz-method-1",
+            "type": "option-selector",
+            "config": {
+                "mode": "single",
+                "style": "text",
+                "question": "What is the primary benefit of the 'text' style for quizzes?",
+                "options": [
+                    {
+                        "id": "opt1",
+                        "label": "It provides a simple, list-based format ideal for term definitions.",
+                        "correct": true,
+                        "response": "Correct! It focuses on the content without visual distractions."
+                    },
+                    {
+                        "id": "opt2",
+                        "label": "It uses complex 3D graphics.",
+                        "response": "Incorrect. That would be an interactive simulation."
+                    },
+                    {
+                        "id": "opt3",
+                        "label": "It requires dragging and dropping.",
+                        "response": "Incorrect. That is the Knowledge Construction method."
+                    }
+                ],
+                "confirmButtonText": "Submit Answer"
+            }
+        },
+        {
+            "id": "quiz-method-2",
+            "type": "option-selector",
+            "config": {
+                "mode": "multi",
+                "style": "text",
+                "question": "Select all styles available in option-selector:",
+                "options": [
+                    {
+                        "id": "style-text",
+                        "label": "Text Style",
+                        "correct": true,
+                        "response": "Yes, for standard lists."
+                    },
+                    {
+                        "id": "style-card",
+                        "label": "Card Style",
+                        "correct": true,
+                        "response": "Yes, for visual grids."
+                    },
+                    {
+                        "id": "style-vr",
+                        "label": "VR Style",
+                        "response": "Not yet implemented."
+                    }
+                ],
+                "synthesis": {
+                    "style-card+style-text": "Correct! Both styles are supported."
+                },
+                "fallbackSynthesis": "You selected some correct options, but missed the full set.",
+                "confirmButtonText": "Check Selection"
+            }
+        }
+    ]
+}

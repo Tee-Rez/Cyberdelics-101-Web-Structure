@@ -98,131 +98,72 @@
         {
             "id": "quiz_1.1",
             "title": "Etymology Quiz",
-            "type": "scenario-based",
-            "content": {
-                "scenes": [
+            "type": "option-selector",
+            "config": {
+                "mode": "single",
+                "style": "text",
+                "questions": [
                     {
-                        "id": "q1",
-                        "narrative": "<h3>Question 1 of 2</h3><p><strong>What does the \"cyber\" in cyberdelics primarily refer to?</strong></p><p><em>Understanding the technological component of the term.</em></p>",
-                        "choices": [
+                        "question": "<h3>Question 1 of 2</h3><p><strong>What does the \"cyber\" in cyberdelics primarily refer to?</strong></p><p><em>Understanding the technological component of the term.</em></p>",
+                        "options": [
                             {
                                 "id": "q1_a",
                                 "label": "Cybersecurity and protecting digital information",
-                                "outcome": "q1_wrong_a"
+                                "correct": false
                             },
                             {
                                 "id": "q1_b",
                                 "label": "Digital technology and virtual environments as tools for experience",
-                                "outcome": "q2"
+                                "correct": true
                             },
                             {
                                 "id": "q1_c",
                                 "label": "Social media and online communication platforms",
-                                "outcome": "q1_wrong_c"
+                                "correct": false
                             },
                             {
                                 "id": "q1_d",
                                 "label": "Artificial intelligence and machine learning systems",
-                                "outcome": "q1_wrong_d"
+                                "correct": false
                             }
-                        ]
+                        ],
+                        "synthesis": {
+                            "q1_a": "<p>While \"cyber\" is used in cybersecurity, that's not what it means in cyberdelics. Here, \"cyber\" refers to the broader realm of digital technology, virtual environments, and human-computer interaction—the tools we use to facilitate consciousness exploration. Think cybernetics and feedback systems, not security.</p>",
+                            "q1_c": "<p>While social media exists in the digital realm, \"cyber\" in cyberdelics specifically refers to immersive and biofeedback technologies used for consciousness exploration. Social platforms are about external communication, while cyberdelics focus on internal exploration using specialized tech.</p>",
+                            "q1_d": "<p>AI and machine learning might be tools within cyberdelic experiences, but \"cyber\" here primarily refers to the immersive digital technologies (VR, AR, biofeedback) that create the environment for consciousness exploration. It's about the interface between human and technology, not about autonomous intelligent systems.</p>",
+                            "q1_b": "<p>✓ Correct!</p><p>Exactly. In cyberdelics, \"cyber\" refers to the use of technology like VR, AR, and biofeedback as tools to interact with consciousness.</p>"
+                        }
                     },
                     {
-                        "id": "q1_wrong_a",
-                        "narrative": "<p>While \"cyber\" is used in cybersecurity, that's not what it means in cyberdelics. Here, \"cyber\" refers to the broader realm of digital technology, virtual environments, and human-computer interaction—the tools we use to facilitate consciousness exploration. Think cybernetics and feedback systems, not security.</p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "q1"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "q1_wrong_c",
-                        "narrative": "<p>While social media exists in the digital realm, \"cyber\" in cyberdelics specifically refers to immersive and biofeedback technologies used for consciousness exploration. Social platforms are about external communication, while cyberdelics focus on internal exploration using specialized tech.</p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "q1"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "q1_wrong_d",
-                        "narrative": "<p>AI and machine learning might be tools within cyberdelic experiences, but \"cyber\" here primarily refers to the immersive digital technologies (VR, AR, biofeedback) that create the environment for consciousness exploration. It's about the interface between human and technology, not about autonomous intelligent systems.</p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "q1"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "q2",
-                        "narrative": "<h3>Question 2 of 2</h3><p>✓ Correct!</p><p><strong>What does \"delic\" (from psychedelic) literally mean?</strong></p><p><em>Understanding the consciousness exploration component.</em></p>",
-                        "choices": [
+                        "question": "<h3>Question 2 of 2</h3><p><strong>What does \"delic\" (from psychedelic) literally mean?</strong></p><p><em>Understanding the consciousness exploration component.</em></p>",
+                        "options": [
                             {
                                 "id": "q2_a",
                                 "label": "Creating hallucinations or visual distortions",
-                                "outcome": "q2_wrong_a"
+                                "correct": false
                             },
                             {
                                 "id": "q2_b",
                                 "label": "Mind-manifesting or revealing consciousness",
-                                "outcome": "quiz_complete"
+                                "correct": true
                             },
                             {
                                 "id": "q2_c",
                                 "label": "Causing euphoria and pleasure",
-                                "outcome": "q2_wrong_c"
+                                "correct": false
                             },
                             {
                                 "id": "q2_d",
                                 "label": "Altering brain chemistry through substances",
-                                "outcome": "q2_wrong_d"
+                                "correct": false
                             }
-                        ]
-                    },
-                    {
-                        "id": "q2_wrong_a",
-                        "narrative": "<p>This is a common misconception. \"Delic\" comes from Greek words meaning \"mind-manifesting\" or \"revealing the mind/soul.\" It's about making consciousness visible and exploring inner dimensions, not just creating visual effects. Hallucinations might occur, but they're not the definition—revelation of consciousness is.</p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "q2"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "q2_wrong_c",
-                        "narrative": "<p>While consciousness exploration might involve pleasurable states, \"delic\" doesn't mean pleasure. It means \"mind-manifesting\"—revealing and exploring consciousness. The focus is on revelation and awareness expansion, not just feeling good. Transformation might be challenging, not always euphoric.</p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "q2"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "q2_wrong_d",
-                        "narrative": "<p>That's one method of creating mind-manifesting experiences (psychedelics), but \"delic\" itself just means \"mind-manifesting\"—it doesn't specify the method. This is why cyberdelics can use the same suffix—both psychedelics and cyberdelics aim to manifest consciousness, just through different means (substances vs. technology).</p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "q2"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "quiz_complete",
-                        "narrative": "<h3>✓ Quiz Complete!</h3><p>Excellent! You understand the etymology of \"cyberdelics.\" You're ready to move forward.</p>",
-                        "choices": []
+                        ],
+                        "synthesis": {
+                            "q2_a": "<p>This is a common misconception. \"Delic\" comes from Greek words meaning \"mind-manifesting\" or \"revealing the mind/soul.\" It's about making consciousness visible and exploring inner dimensions, not just creating visual effects. Hallucinations might occur, but they're not the definition—revelation of consciousness is.</p>",
+                            "q2_c": "<p>While consciousness exploration might involve pleasurable states, \"delic\" doesn't mean pleasure. It means \"mind-manifesting\"—revealing and exploring consciousness. The focus is on revelation and awareness expansion, not just feeling good. Transformation might be challenging, not always euphoric.</p>",
+                            "q2_d": "<p>That's one method of creating mind-manifesting experiences (psychedelics), but \"delic\" itself just means \"mind-manifesting\"—it doesn't specify the method. This is why cyberdelics can use the same suffix—both psychedelics and cyberdelics aim to manifest consciousness, just through different means (substances vs. technology).</p>",
+                            "q2_b": "<h3>✓ Quiz Complete!</h3><p>Excellent! You understand the etymology of \"cyberdelics.\" You're ready to move forward.</p>"
+                        }
                     }
                 ]
             }

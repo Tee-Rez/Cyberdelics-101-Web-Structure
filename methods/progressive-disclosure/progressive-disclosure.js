@@ -28,6 +28,13 @@
             // ---------- Lifecycle Hooks ----------
 
             onInit: function (container, options) {
+                console.log('[ProgressiveDisclosure] onInit called with options:', options);
+
+                // 0. Auto-render if content is provided but HTML is missing
+                if (options.sections && container.querySelectorAll('.reveal-section').length === 0) {
+                    this._render(container, options);
+                }
+
                 // Find all reveal sections (excluding completion)
                 this.sections = container.querySelectorAll('.reveal-section:not(.lesson-complete)');
                 this.completionSection = container.querySelector('.lesson-complete');
@@ -35,7 +42,7 @@
                 // Set total steps for progress tracking
                 this.setTotalSteps(this.sections.length);
 
-                // Set up CourseCore if available (for legacy support)
+                // ... rest of init ...
                 if (typeof CourseCore !== 'undefined') {
                     CourseCore.setTotalSteps(this.sections.length);
                 }
@@ -45,31 +52,21 @@
                     this.sections[0].classList.add('active');
                 }
 
-                // Update step counter UI
                 this._updateStepCounter();
 
-                // Attach click handler
-                this._handleClick = this._handleClick.bind(this);
-                container.addEventListener('click', this._handleClick);
+                container.addEventListener('click', this._handleClick.bind(this));
 
-                // Auto-show completion for single-section modules (e.g., placeholders)
-                // If there's only one section and it has no trigger button, show completion immediately
+                // Auto-show completion for single-section modules
                 if (this.sections.length === 1) {
                     const firstSection = this.sections[0];
                     const hasTrigger = firstSection.querySelector('.reveal-trigger');
                     if (!hasTrigger) {
-                        console.log('[ProgressiveDisclosure] Single section without trigger - auto-showing completion');
-                        // Advance step to mark it complete
                         this.advanceStep();
-                        // Show completion section
                         this._showCompletion();
                     }
                 }
 
-                // CHECK FOR RESTORE FLAG
                 if (options.restore) {
-                    console.log('[ProgressiveDisclosure] Restoring state: Resetting to start (First section only).');
-                    // Ensure we are reset
                     this.onReset();
                 }
 
@@ -220,7 +217,6 @@
             },
 
             _updateStepCounter: function () {
-                // Determine scope: only look inside our container
                 const container = this._getState().container;
                 const counter = container.querySelector('.step-counter');
                 if (counter) {
@@ -229,46 +225,94 @@
                 }
             },
 
+            _render: function (container, options) {
+                let html = `<h1 class="module-title">${options.title || ''}</h1>`;
+                html += '<div class="step-counter"></div>';
+
+                if (options.sections) {
+                    options.sections.forEach((sec, idx) => {
+                        const isFirst = idx === 0 ? 'active' : '';
+                        const layout = sec.mediaLayout || 'full';
+                        const layoutClass = `pd-layout-${layout}`;
+
+                        let mediaHTML = this._generateMediaHTML(sec.media);
+                        if (mediaHTML) {
+                            mediaHTML = mediaHTML.replace('media-container', 'pd-media-container');
+                        }
+
+                        let contentHTML = '';
+                        if (layout === 'full') {
+                            contentHTML = `
+                                ${sec.title ? `<h2 class="section-title">${sec.title}</h2>` : ''}
+                                ${mediaHTML}
+                                <div class="pd-text-content section-content">${sec.content}</div>
+                            `;
+                        } else {
+                            contentHTML = `
+                                ${sec.title ? `<h2 class="section-title">${sec.title}</h2>` : ''}
+                                <div class="pd-flex-wrapper">
+                                    ${mediaHTML}
+                                    <div class="pd-text-content section-content">${sec.content}</div>
+                                </div>
+                            `;
+                        }
+
+                        html += `
+                            <div class="reveal-section ${isFirst} ${layoutClass}" id="${sec.id || 'sec-' + idx}">
+                                ${contentHTML}
+                                ${idx < options.sections.length - 1 ? `<button class="reveal-trigger">${sec.triggerLabel || 'Next'}</button>` : ''}
+                            </div>
+                        `;
+                    });
+                }
+
+                html += `
+                    <div class="reveal-section lesson-complete">
+                        <h2>Section Complete</h2>
+                        <button class="btn-primary btn-continue">CONTINUE ▶</button>
+                    </div>
+                `;
+                container.innerHTML = html;
+            },
+
+            _generateMediaHTML: function (media) {
+                if (!media) return '';
+                const positionClass = media.position ? `media-${media.position}` : 'media-inline';
+                const style = media.style ? `style="${media.style}"` : '';
+                let content = '';
+                if (media.type === 'image') {
+                    content = `<img src="${media.src}" alt="${media.alt || ''}" class="sim-media-image">`;
+                } else if (media.type === 'video') {
+                    const autoplay = media.autoplay !== false ? 'autoplay loop muted playsinline' : 'controls';
+                    content = `<video src="${media.src}" ${autoplay} class="sim-media-video"></video>`;
+                }
+                return `<div class="media-container ${positionClass}" ${style}>${content}</div>`;
+            },
+
             _showCompletion: function () {
+                // ... logic ...
                 if (this.completionSection) {
                     this.completionSection.classList.add('active');
-
-                    // Animation logic
                     setTimeout(() => {
                         this.completionSection.classList.add('celebrating');
                     }, 400);
 
-                    // REQUIRE USER INPUT: Wait for "Continue" button click
-                    // Check if button exists in content, otherwise inject it
                     let btn = this.completionSection.querySelector('.btn-continue');
-
                     if (!btn) {
                         btn = document.createElement('button');
                         btn.className = 'btn-primary btn-continue';
                         btn.innerText = 'CONTINUE ▶';
-                        // Insert at end of completion section
                         this.completionSection.appendChild(btn);
                     }
 
-                    // Remove any old listeners (if re-running) to prevent duplicates
                     const newBtn = btn.cloneNode(true);
                     btn.parentNode.replaceChild(newBtn, btn);
-
-                    // Force visibility (overriding generic display:none rules if present)
                     newBtn.style.display = 'inline-block';
 
                     newBtn.addEventListener('click', (e) => {
-                        // Prevent multi-click
                         if (e.target.disabled) return;
                         e.target.disabled = true;
                         e.target.textContent = 'Processing...';
-
-                        console.log('[ProgressiveDisclosure] User clicked Continue - Signaling Complete');
-
-                        // Signal completion (LessonRunner listens for this event)
-                        // By default LessonRunner waits 1250ms then advances.
-                        // If we want faster advance, we should change LessonRunner config, 
-                        // but removing the manual call prevents double-jump.
                         this.markComplete();
                         this.emit('allRevealed', {});
                     });

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Option Selector Multi-Question Test</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="option-selector.css">
+    <style>
+        body {
+            padding: 40px;
+            background: #0a0a12;
+            color: #fff;
+        }
+
+        #app {
+            max-width: 800px;
+            margin: 0 auto;
+            border: 1px solid #333;
+            padding: 20px;
+        }
+
+        .log {
+            margin-top: 20px;
+            padding: 10px;
+            background: #111;
+            border: 1px solid #444;
+            font-family: monospace;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="app"></div>
+    <div id="log" class="log"></div>
+
+    <!-- Mock MethodLoader -->
+    <script>
+        function log(msg) {
+            const el = document.getElementById('log');
+            el.innerHTML += `<div>${msg}</div>`;
+            console.log(msg);
+        }
+
+        window.MethodLoader = {
+            registerFactory: (name, factory) => log(`Registered ${name}`)
+        };
+        // Mock standard createTeachingMethod
+        window.createTeachingMethod = (type, methods) => {
+            return {
+                ...methods,
+                _state: {},
+                _getState: function () { return this._state; },
+                init: function (contain, opts) {
+                    this._state.container = contain;
+                    this.onInit(contain, opts);
+                },
+                setTotalSteps: (n) => log(`Total Steps Set: ${n}`),
+                advanceStep: () => log('Step Advanced'),
+                markComplete: () => log('Module Complete'),
+                emit: (evt, data) => log(`Event Emitted: ${evt} ${JSON.stringify(data)}`)
+            };
+        };
+    </script>
+
+    <script src="option-selector.js"></script>
+
+    <script>
+        const app = document.getElementById('app');
+
+        // Initialize with Multi-Question Config
+        const quiz = OptionSelectorFactory();
+
+        log('Initializing Multi-Question Quiz...');
+
+        quiz.init(app, {
+            mode: 'single',
+            style: 'text',
+            confirmButtonText: 'Check Answer',
+            questions: [
+                {
+                    question: '<h3>Question 1: The Beginning</h3><p>Select the correct start.</p>',
+                    options: [
+                        { id: 'q1a', label: 'Start A (Correct)', correct: true },
+                        { id: 'q1b', label: 'Start B (Wrong)', correct: false }
+                    ],
+                    synthesis: {
+                        'q1a': 'Correct! Moving on...',
+                        'q1b': 'Incorrect. Try again.'
+                    }
+                },
+                {
+                    question: '<h3>Question 2: The Middle</h3><p>Select the correct middle.</p>',
+                    options: [
+                        { id: 'q2a', label: 'Middle A (Wrong)', correct: false },
+                        { id: 'q2b', label: 'Middle B (Correct)', correct: true }
+                    ],
+                    synthesis: {
+                        'q2b': 'Excellent choice!'
+                    }
+                },
+                {
+                    question: '<h3>Question 3: The End</h3><p>Select the correct end.</p>',
+                    options: [
+                        { id: 'q3a', label: 'End A (Correct)', correct: true },
+                        { id: 'q3b', label: 'End B (Wrong)', correct: false }
+                    ],
+                    synthesis: {
+                        'q3a': 'You finished the quiz!'
+                    }
+                }
+            ]
+        });
+
+    </script>
+</body>
+
+</html>

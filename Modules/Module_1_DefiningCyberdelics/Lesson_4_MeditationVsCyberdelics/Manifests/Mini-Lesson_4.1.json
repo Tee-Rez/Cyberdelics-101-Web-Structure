@@ -66,110 +66,66 @@
         {
             "id": "overlap_quiz_4.1",
             "title": "Overlap Quiz",
-            "type": "scenario-based",
-            "content": {
-                "scenes": [
+            "type": "option-selector",
+            "config": {
+                "mode": "single",
+                "style": "text",
+                "questions": [
                     {
-                        "id": "q1",
-                        "narrative": "<h3>Question 1</h3><p><strong>What pushes a meditation app from basic tech into cyberdelic territory?</strong></p>",
-                        "choices": [
+                        "question": "<h3>Question 1</h3><p><strong>What pushes a meditation app from basic tech into cyberdelic territory?</strong></p>",
+                        "options": [
                             {
                                 "id": "q1_a",
                                 "label": "Number of sessions",
-                                "outcome": "q1_wrong_a"
+                                "correct": false
                             },
                             {
                                 "id": "q1_b",
                                 "label": "Immersive VR + Biofeedback + Intent",
-                                "outcome": "q2"
+                                "correct": true
                             },
                             {
                                 "id": "q1_c",
                                 "label": "Price",
-                                "outcome": "q1_wrong_c"
+                                "correct": false
                             },
                             {
                                 "id": "q1_d",
                                 "label": "User count",
-                                "outcome": "q1_wrong_d"
+                                "correct": false
                             }
-                        ]
+                        ],
+                        "synthesis": {
+                            "q1_a": "<p>Incorrect. Quantity isn't the factor. Immersion and intent matter.</p>",
+                            "q1_c": "<p>Incorrect. Cost is irrelevant. Technology and intent define the category.</p>",
+                            "q1_d": "<p>Incorrect. Growth in user base doesn't change the design category.</p>",
+                            "q1_b": "<p>✓ Correct!</p><p>Immersive VR, biofeedback loops, and exploratory intent are the markers of cyberdelic territory.</p>"
+                        }
                     },
                     {
-                        "id": "q1_wrong_a",
-                        "narrative": "<p>Incorrect. Quantity isn't the factor. Immersion and intent matter.</p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "q1"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "q1_wrong_c",
-                        "narrative": "<p>Incorrect. Cost is irrelevant. Technology and intent define the category.</p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "q1"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "q2",
-                        "narrative": "<h3>Question 2</h3><p>Correct! <strong>Where would a VR meditation environment without biofeedback fall?</strong></p>",
-                        "choices": [
+                        "question": "<h3>Question 2</h3><p><strong>Where would a VR meditation environment without biofeedback fall?</strong></p>",
+                        "options": [
                             {
                                 "id": "q2_a",
                                 "label": "Purely meditation tech",
-                                "outcome": "q2_wrong_a"
+                                "correct": false
                             },
                             {
                                 "id": "q2_b",
                                 "label": "Overlap zone",
-                                "outcome": "q2_correct"
+                                "correct": true
                             },
                             {
                                 "id": "q2_c",
                                 "label": "Purely cyberdelic",
-                                "outcome": "q2_wrong_c"
+                                "correct": false
                             }
-                        ]
-                    },
-                    {
-                        "id": "q2_correct",
-                        "narrative": "<h3>Correct!</h3><p>It sits in the overlap—more immersive than apps, but less integrated than full cyberdelic protocols.</p>",
-                        "choices": [
-                            {
-                                "id": "finish",
-                                "label": "Finish",
-                                "outcome": "flow_next_module"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "q2_wrong_a",
-                        "narrative": "<p>Incorrect. VR adds immersion that moves it beyond basic apps towards the overlap.</p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "q2"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "q2_wrong_c",
-                        "narrative": "<p>Incorrect. Without biofeedback/interaction, it likely hasn't crossed fully into independent cyberdelic territory.</p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "q2"
-                            }
-                        ]
+                        ],
+                        "synthesis": {
+                            "q2_a": "<p>Incorrect. VR adds immersion that moves it beyond basic apps towards the overlap.</p>",
+                            "q2_c": "<p>Incorrect. Without biofeedback/interaction, it likely hasn't crossed fully into independent cyberdelic territory.</p>",
+                            "q2_b": "<h3>✓ Quiz Complete!</h3><p>It sits in the overlap—more immersive than apps, but less integrated than full cyberdelic protocols.</p>"
+                        }
                     }
                 ]
             }

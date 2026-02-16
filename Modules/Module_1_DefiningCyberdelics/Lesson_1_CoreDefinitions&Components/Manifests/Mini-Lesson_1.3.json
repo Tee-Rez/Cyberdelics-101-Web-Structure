@@ -7,352 +7,196 @@
     },
     "modules": [
         {
-            "id": "module_scenario_evaluation",
-            "title": "Evaluating VR Experiences",
+            "id": "auditor_workflow_1.3",
+            "title": "Experience Audit",
             "type": "scenario-based",
             "content": {
                 "scenes": [
                     {
-                        "id": "exp1_intro",
-                        "narrative": "<h3>Setup</h3><p>You're evaluating VR experiences to determine which qualify as cyberdelic. Same hardware, different intentions. Let's test your understanding.</p><h3>Experience 1: Virtual Temple Meditation</h3><p>A VR meditation environment where users sit in a virtual temple, follow guided breathwork, and practice present-moment awareness. The visuals are serene and minimal. Biofeedback adjusts the lighting based on heart rate variability. The technology fades into the background as users turn attention inward.</p><p><strong>Is this cyberdelic?</strong></p>",
+                        "id": "intro",
+                        "narrative": "<h3>System Initialized</h3><p>Welcome, <strong>Digital Auditor</strong>. Your task is to evaluate three VR prototypes and determine their category. Is the technology serving as a <strong>Cyberdelic Medium</strong>, or is it <strong>Pure Entertainment</strong>?</p>",
                         "choices": [
                             {
-                                "id": "exp1_a",
-                                "label": "No, because it uses technology instead of traditional meditation",
-                                "outcome": "exp1_wrong_a"
-                            },
-                            {
-                                "id": "exp1_b",
-                                "label": "Yes, it uses technology to facilitate altered states and transformation",
-                                "outcome": "exp1_correct"
-                            },
-                            {
-                                "id": "exp1_c",
-                                "label": "Only if the graphics are high-resolution and photorealistic",
-                                "outcome": "exp1_wrong_c"
+                                "id": "start_audit",
+                                "label": "Begin Audit",
+                                "outcome": "exp1"
                             }
                         ]
                     },
                     {
-                        "id": "exp1_wrong_a",
-                        "narrative": "<p>This misunderstands cyberdelics. The field isn't opposed to technology—it uses technology purposefully for consciousness exploration. This experience has all three components: digital technology (VR + biofeedback), altered states (meditative awareness), and transformational intent (inner exploration). It's cyberdelic.</p><p><em>Technology serving consciousness exploration is exactly what cyberdelics means.</em></p>",
+                        "id": "exp1",
+                        "narrative": "<h3>Experience 1: Virtual Temple</h3><p>Users sit in a virtual temple with guided breathwork and biofeedback-driven lighting. The technology fades into the background as attention turns inward.</p><p><strong>Categorization?</strong></p>",
                         "choices": [
                             {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "exp1_intro"
+                                "id": "exp1_c",
+                                "label": "Cyberdelic",
+                                "outcome": "exp1_correct"
+                            },
+                            {
+                                "id": "exp1_e",
+                                "label": "Entertainment/Social",
+                                "outcome": "exp1_wrong"
                             }
                         ]
                     },
                     {
                         "id": "exp1_correct",
-                        "narrative": "<p>Correct. This is a cyberdelic experience. It has all three essential components: technology as medium (VR and biofeedback), intentional cultivation of altered states (meditative awareness), and transformational purpose (consciousness exploration and inner development). The technology serves the inward journey.</p><p><em>When technology facilitates consciousness work, that's cyberdelic.</em></p>",
+                        "narrative": "<h3>✓ Validated</h3><p>Correct. It uses technology to facilitate altered states and transformation. The gear serves the inward journey.</p>",
                         "choices": [
                             {
-                                "id": "continue",
-                                "label": "Next Experience",
-                                "outcome": "exp2_intro"
+                                "id": "next",
+                                "label": "Review Next Prototype",
+                                "outcome": "exp2"
                             }
                         ]
                     },
                     {
-                        "id": "exp1_wrong_c",
-                        "narrative": "<p>Visual quality doesn't determine what's cyberdelic. This experience could have simple graphics and still be deeply cyberdelic because of its intention and design. What matters is the purpose—facilitating consciousness exploration—not the technical specifications of the visuals.</p><p><em>Design intent, not technical specs, defines cyberdelic nature.</em></p>",
+                        "id": "exp1_wrong",
+                        "narrative": "<h3>Inaccurate</h3><p>This experience has all three cyberdelic components: digital tech, altered states, and transformational intent. It's not just a game.</p>",
                         "choices": [
                             {
                                 "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "exp1_intro"
+                                "label": "Re-evaluate",
+                                "outcome": "exp1"
                             }
                         ]
                     },
                     {
-                        "id": "exp2_intro",
-                        "narrative": "<h3>Experience 2: VR Roller Coaster</h3><p>A thrilling VR roller coaster experience with loops, drops, and high-speed turns. Users experience adrenaline, excitement, and sensory intensity. The technology creates immersion in an external adventure. Heart rate monitoring displays your excitement level as a score.</p><p><strong>Is this cyberdelic?</strong></p>",
+                        "id": "exp2",
+                        "narrative": "<h3>Experience 2: VR Roller Coaster</h3><p>High-speed drops and adrenaline. Biofeedback monitors heart rate merely to display an 'Excitement Score'. Immersion is purely external engagement.</p><p><strong>Categorization?</strong></p>",
                         "choices": [
                             {
-                                "id": "exp2_a",
-                                "label": "Yes, because it uses VR technology and affects consciousness",
-                                "outcome": "exp2_wrong_a"
-                            },
-                            {
-                                "id": "exp2_b",
-                                "label": "Yes, because biofeedback is monitoring heart rate",
-                                "outcome": "exp2_wrong_b"
-                            },
-                            {
                                 "id": "exp2_c",
-                                "label": "No, the purpose is entertainment rather than consciousness exploration",
+                                "label": "Cyberdelic",
+                                "outcome": "exp2_wrong"
+                            },
+                            {
+                                "id": "exp2_e",
+                                "label": "Entertainment",
                                 "outcome": "exp2_correct"
                             }
                         ]
                     },
                     {
-                        "id": "exp2_wrong_a",
-                        "narrative": "<p>Not quite. While it uses technology and creates an experience, it lacks two critical components. There's no intentional cultivation of consciousness-exploring altered states—just entertainment-induced excitement. And the purpose is external entertainment, not transformation or inner exploration. This is entertainment VR, not cyberdelic.</p><p><em>Technology alone doesn't make something cyberdelic—intention matters.</em></p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "exp2_intro"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "exp2_wrong_b",
-                        "narrative": "<p>The presence of biofeedback sensors doesn't automatically make something cyberdelic. Here, heart rate is gamified as a score for entertainment, not used to facilitate consciousness exploration or altered states. The purpose is still external thrills, not transformational inner work.</p><p><em>How technology is used matters more than which technologies are present.</em></p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "exp2_intro"
-                            }
-                        ]
-                    },
-                    {
                         "id": "exp2_correct",
-                        "narrative": "<p>Correct. Despite using the same VR headset and even biofeedback, this experience isn't cyberdelic. It lacks transformational intent and doesn't facilitate consciousness-exploring altered states. The technology serves entertainment and external engagement, not inner exploration. Same tools, different purpose.</p><p><em>The medium is neutral—purpose determines whether it's cyberdelic.</em></p>",
+                        "narrative": "<h3>✓ Validated</h3><p>Correct. Despite the high-end tech, the purpose is outward engagement and thrills, not inner exploration. Same tools, different purpose.</p>",
                         "choices": [
                             {
-                                "id": "continue",
-                                "label": "Next Experience",
-                                "outcome": "exp3_intro"
+                                "id": "next",
+                                "label": "Review Final Prototype",
+                                "outcome": "exp3"
                             }
                         ]
                     },
                     {
-                        "id": "exp3_intro",
-                        "narrative": "<h3>Experience 3: Social VR Hangout</h3><p>A VR platform where users hang out together in virtual spaces, chat, attend events, play casual games, and socialize. The technology creates presence and connection. Users feel like they're really together despite physical distance.</p><p><strong>Is this cyberdelic?</strong></p>",
+                        "id": "exp2_wrong",
+                        "narrative": "<h3>Inaccurate</h3><p>Simply having a VR headset and heart sensors doesn't make it cyberdelic. Without transformational intent, it's just a thrill ride.</p>",
                         "choices": [
                             {
-                                "id": "exp3_a",
-                                "label": "Yes, because connection and presence are forms of consciousness",
-                                "outcome": "exp3_wrong_a"
-                            },
-                            {
-                                "id": "exp3_b",
-                                "label": "No, it's designed for social connection rather than consciousness exploration",
-                                "outcome": "exp3_correct"
-                            },
+                                "id": "retry",
+                                "label": "Re-evaluate",
+                                "outcome": "exp2"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "exp3",
+                        "narrative": "<h3>Experience 3: Social VR Hanging</h3><p>A platform for chatting and casual games. It creates meaningful presence and connection across distance, focused on social entertainment.</p><p><strong>Categorization?</strong></p>",
+                        "choices": [
                             {
                                 "id": "exp3_c",
-                                "label": "It depends on how self-aware users are during conversations",
-                                "outcome": "exp3_wrong_c"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "exp3_wrong_a",
-                        "narrative": "<p>While connection is valuable and VR creates meaningful presence, this experience lacks the intentional cultivation of altered states and transformational purpose that define cyberdelics. It's designed for social interaction and entertainment, not consciousness exploration or inner development. This is social VR, not cyberdelic.</p><p><em>Not all meaningful VR experiences are cyberdelic—intention matters.</em></p>",
-                        "choices": [
+                                "label": "Cyberdelic",
+                                "outcome": "exp3_wrong"
+                            },
                             {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "exp3_intro"
+                                "id": "exp3_e",
+                                "label": "Social VR",
+                                "outcome": "exp3_correct"
                             }
                         ]
                     },
                     {
                         "id": "exp3_correct",
-                        "narrative": "<p>Correct. This is social VR or entertainment, not cyberdelics. While valuable for connection, it lacks the transformational intent and altered state cultivation that define cyberdelic experiences. The technology facilitates external social engagement rather than internal exploration.</p><p><em>Different VR applications serve different purposes—not all are cyberdelic.</em></p>",
+                        "narrative": "<h3>✓ Validated</h3><p>Correct. While connection is valuable, the intent is social interaction, not the cultivation of consciousness-exploring altered states.</p>",
                         "choices": [
                             {
-                                "id": "continue",
-                                "label": "View Final Reflection",
-                                "outcome": "final_reflection"
+                                "id": "finish",
+                                "label": "Review Audit Results",
+                                "outcome": "flow_next_module"
                             }
                         ]
                     },
                     {
-                        "id": "exp3_wrong_c",
-                        "narrative": "<p>User mindfulness doesn't change the experience's design intent. This platform is designed for social entertainment, not consciousness exploration. Even if someone brings awareness to their social interactions, that doesn't make the platform itself cyberdelic. The design purpose matters.</p><p><em>Individual awareness doesn't override design intention in categorization.</em></p>",
+                        "id": "exp3_wrong",
+                        "narrative": "<h3>Inaccurate</h3><p>Connection and presence are vital, but this platform lacks the specific cultivation of altered states meant for transformation.</p>",
                         "choices": [
                             {
                                 "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "exp3_intro"
+                                "label": "Re-evaluate",
+                                "outcome": "exp3"
                             }
                         ]
-                    },
-                    {
-                        "id": "final_reflection",
-                        "narrative": "<h3>Scenario Complete</h3><p>You've now evaluated three VR experiences using the same hardware. One is cyberdelic (meditation), two are not (roller coaster, social hangout). The technology is neutral—what makes something cyberdelic is the purpose it serves. When technology facilitates inward exploration and transformation, that's cyberdelics.</p>",
-                        "image": {
-                            "src": "placeholder-medium-comparison.jpg",
-                            "alt": "Same VR technology serving meditation vs entertainment",
-                            "position": "full-width",
-                            "aiPrompt": "Split comparison image: left side shows a serene VR meditation temple with soft glowing lotus flowers and a peaceful figure in meditation pose, right side shows a dynamic VR roller coaster with motion blur and excitement, both clearly using VR headsets, contrasting peaceful vs. thrilling experiences, symbolic representation of different intentions using same technology, 16:9 aspect ratio"
-                        },
-                        "choices": []
                     }
                 ]
-            },
-            "artifacts": []
+            }
         },
         {
-            "id": "module_medium_message_progressive",
-            "title": "Technology Serves Purpose",
-            "type": "progressive-disclosure",
-            "content": {
-                "sections": [
-                    {
-                        "title": "The McLuhan Principle",
-                        "content": "\"The medium is the message\" is a famous phrase, but in cyberdelics, it's reversed. The technology is the medium, but consciousness exploration is the message. The tool doesn't define the purpose; the purpose defines how the tool is used.",
-                        "triggerLabel": "Continue"
-                    },
-                    {
-                        "title": "Asking the Right Question",
-                        "content": "When evaluating any technology-based experience, ask: What is this designed to facilitate? Entertainment or transformation? External engagement or internal exploration? Distraction or presence? The answer reveals whether it's cyberdelic.",
-                        "triggerLabel": "Continue"
-                    },
-                    {
-                        "title": "Same Headset, Different Worlds",
-                        "content": "The same VR headset can transport you into a zombie shooter or into a guided journey through your own consciousness. The same biofeedback sensor can gamify productivity or reveal patterns in your meditative practice. Hardware is neutral; intention determines category.",
-                        "image": {
-                            "src": "placeholder-medium-comparison.jpg",
-                            "alt": "Same VR technology serving meditation vs entertainment",
-                            "position": "full-width",
-                            "aiPrompt": "Split comparison image: left side shows a serene VR meditation temple with soft glowing lotus flowers and a peaceful figure in meditation pose, right side shows a dynamic VR roller coaster with motion blur and excitement, both clearly using VR headsets, contrasting peaceful vs. thrilling experiences, symbolic representation of different intentions using same technology, 16:9 aspect ratio"
-                        },
-                        "triggerLabel": "Test Understanding"
-                    }
-                ]
-            },
-            "artifacts": []
-        },
-        {
-            "id": "module_medium_quiz",
-            "title": "Medium vs Message Check",
+            "id": "medium_message_logic_1.3",
+            "title": "The Audit Logic",
             "type": "scenario-based",
             "content": {
                 "scenes": [
                     {
-                        "id": "q1",
-                        "narrative": "<h3>Question 1 of 2</h3><p>A developer wants to create a cyberdelic experience. What should they prioritize in their design?</p><p><em>Understanding that design intent, not technical specs, determines cyberdelic nature.</em></p>",
+                        "id": "reveal",
+                        "narrative": "<h3>The McLuhan Reversal</h3><p>You've evaluated three experiences using identical hardware. This reveals our core principle: <strong>The hardware is neutral.</strong></p><p>In most tech, 'the medium is the message.' In cyberdelics, this is reversed: <strong>Consciousness exploration is the message; technology is merely the medium.</strong></p>",
                         "choices": [
                             {
-                                "id": "q1_a",
-                                "label": "The highest resolution graphics and most realistic environments possible",
-                                "outcome": "q1_wrong_a"
-                            },
-                            {
-                                "id": "q1_b",
-                                "label": "Facilitating inward exploration and consciousness shifts, with technology supporting that purpose",
-                                "outcome": "q2"
-                            },
-                            {
-                                "id": "q1_c",
-                                "label": "Making the experience as entertaining and engaging as possible to keep users interested",
-                                "outcome": "q1_wrong_c"
-                            },
-                            {
-                                "id": "q1_d",
-                                "label": "Adding as many technological features as possible to seem cutting-edge",
-                                "outcome": "q1_wrong_d"
+                                "id": "continue",
+                                "label": "Apply This Logic",
+                                "outcome": "test_logic"
                             }
                         ]
                     },
                     {
-                        "id": "q1_wrong_a",
-                        "narrative": "<p>Graphics quality doesn't determine whether something is cyberdelic. Some of the most effective consciousness exploration tools use simple visuals. What matters is whether the experience facilitates inner exploration and transformation, not how photorealistic it looks. You can have stunning graphics serving entertainment or simple visuals serving deep transformation. Try again.</p>",
+                        "id": "test_logic",
+                        "narrative": "<h3>Final Audit Check</h3><p>A developer wants to create a new cyberdelic module. What should be their <strong>primary</strong> design priority?</p>",
+                        "choices": [
+                            {
+                                "id": "tech",
+                                "label": "Highest resolution graphics and fastest tracking possible",
+                                "outcome": "tech_wrong"
+                            },
+                            {
+                                "id": "intent",
+                                "label": "Facilitating inward exploration and consciousness shifts",
+                                "outcome": "intent_correct"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "tech_wrong",
+                        "narrative": "<h3>Instructional Error</h3><p>High-end specs are useful, but they don't define the category. Some of the most effective tools use minimal visuals. Intent must come first.</p>",
                         "choices": [
                             {
                                 "id": "retry",
                                 "label": "Try Again",
-                                "outcome": "q1"
+                                "outcome": "test_logic"
                             }
                         ]
                     },
                     {
-                        "id": "q1_wrong_c",
-                        "narrative": "<p>Entertainment and engagement are different from transformation. While cyberdelic experiences can be engaging, entertainment shouldn't be the primary goal. Entertainment focuses on external stimulation and distraction, while cyberdelics focus on inner exploration and presence. These are fundamentally different design intentions. Try again.</p>",
+                        "id": "intent_correct",
+                        "narrative": "<h3>Logic Verified</h3><p>Exactly. The purpose—facultative consciousness exploration—defines how the tool is built. Hardware serves the intent.</p>",
                         "choices": [
                             {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "q1"
+                                "id": "finish",
+                                "label": "Complete Lesson",
+                                "outcome": "flow_next_module"
                             }
                         ]
-                    },
-                    {
-                        "id": "q1_wrong_d",
-                        "narrative": "<p>More technology doesn't equal more cyberdelic. You could have a simple breath-awareness experience with minimal tech that's deeply cyberdelic, or a feature-packed VR game with every sensor imaginable that's pure entertainment. Technology serves the purpose—it isn't the purpose itself. Try again.</p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "q1"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "q2",
-                        "narrative": "<h3>Question 2 of 2</h3><p>✓ Exactly right! The primary design goal should be facilitating consciousness exploration and transformation.</p><p><strong>What's the key difference between a VR roller coaster and a VR meditation experience?</strong></p><p><em>Both use immersive VR technology, but serve entirely different purposes.</em></p>",
-                        "choices": [
-                            {
-                                "id": "q2_a",
-                                "label": "The meditation experience is slower-paced",
-                                "outcome": "q2_wrong_a"
-                            },
-                            {
-                                "id": "q2_b",
-                                "label": "The roller coaster is more immersive and engaging",
-                                "outcome": "q2_wrong_b"
-                            },
-                            {
-                                "id": "q2_c",
-                                "label": "The meditation experience is designed for inward exploration, while the roller coaster is designed for external entertainment",
-                                "outcome": "quiz_complete"
-                            },
-                            {
-                                "id": "q2_d",
-                                "label": "The meditation experience requires biofeedback sensors",
-                                "outcome": "q2_wrong_d"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "q2_wrong_a",
-                        "narrative": "<p>Pacing alone doesn't determine what's cyberdelic. Some consciousness exploration experiences might be dynamic and fast-moving, while some entertainment experiences might be slow and contemplative. What matters is the intention behind the design—whether it's facilitating inner exploration or external entertainment. Try again.</p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "q2"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "q2_wrong_b",
-                        "narrative": "<p>Both can be equally immersive. Immersion and engagement don't determine what's cyberdelic—purpose does. A VR roller coaster creates immersion for entertainment, while VR meditation creates immersion for consciousness exploration. Both are immersive, but serve different intentions. Try again.</p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "q2"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "q2_wrong_d",
-                        "narrative": "<p>Not all cyberdelic experiences require biofeedback sensors, and not all experiences with biofeedback are cyberdelic. Sensors are one possible tool, but what makes something cyberdelic is the intention to facilitate consciousness exploration and transformation, not the specific technologies used. Try again.</p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "q2"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "quiz_complete",
-                        "narrative": "<h3>✓ Quiz Complete!</h3><p>Exactly. The fundamental difference is design intention. The meditation experience uses technology to facilitate turning attention inward and exploring consciousness. The roller coaster uses technology to create external thrills and entertainment. Same medium, different messages.</p><p>This is what distinguishes cyberdelic from non-cyberdelic uses of technology.</p>",
-                        "choices": []
                     }
                 ]
-            },
-            "artifacts": []
+            }
         }
-    ],
-    "artifacts": []
+    ]
 }

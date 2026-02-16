@@ -82,7 +82,7 @@ Middle Development:
 â””â”€â”€ OR Interactive Simulation (explores relationships)
 
 Validation:
-â”œâ”€â”€ Quiz (scenario-based knowledge checks with educational branching)
+â”œâ”€â”€ Quiz (Option Selector: Text or Card style)
 â””â”€â”€ ALWAYS include after learning content
 
 Mastery Moment:
@@ -126,14 +126,18 @@ Mini-Lesson 3: Without Substances
 - **Reflection prompts** extracting key principles
 
 **Quiz Content:**
-> **Note**: Quizzes are implemented using `type: "scenario-based"` in manifests. Each question and answer becomes a scene with choices that branch to feedback scenes or the next question.
+> **Note**: Quizzes are implemented using the `option-selector` component.
+> - Use `style: "text"` for standard text-based questions (formerly "quiz").
+> - Use `style: "card"` for visual/icon-based questions.
 
-- **2-3 scenario-based questions** per quiz
+- **2-3 questions** per quiz
+- **Style Selection:**
+  - **Text Style:** Standard multiple choice
+  - **Card Style:** Visual selection (requires icons/images)
 - **Question context** (situational framing)
 - **4 answer choices** per question
 - **Wrong answer explanations** (why it's incorrect + teaching point)
 - **Correct answer confirmation** (brief reinforcement)
-- **No images** (keeps focus on conceptual understanding)
 
 **Knowledge Construction Content:**
 - **Instruction text** (what to build)
@@ -193,15 +197,15 @@ Mini-Lesson 3: Without Substances
    - Place reflection prompts
    - Specify image placement for each scene
    
-5. **Add Quiz method** (almost always included)
+5. **Add Quiz method** (using `option-selector`)
    
-6. **Configure Quiz:**
-   - Input 2-3 scenario-based questions
-   - Define 4 answer choices per question
-   - Write wrong answer explanations (educational branching)
-   - Write correct answer confirmations
-   - Test branching logic (wrong â†’ explanation â†’ return to question)
-   - Ensure questions build on content just learned
+6. **Configure Option Selector:**
+   - Select **Style**: "text" (standard) or "card" (visual)
+   - Input question text
+   - Add options (text label + icon if card style)
+   - Define response feedback for each option
+   - Set correct/incorrect logic (if applicable)
+   - Test selection and feedback flow
 
 7. **Add Knowledge Construction method** (if included)
 

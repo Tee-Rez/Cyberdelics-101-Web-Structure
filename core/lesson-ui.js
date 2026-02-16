@@ -291,6 +291,8 @@ class LessonUI {
         );
 
         // Initialize Audio Player (if AudioPlayer class is available)
+        // Initialize Audio Player (Disabled per user request)
+        /*
         const audioContainer = sideRight.querySelector('#cd-audio-player-container');
         if (audioContainer && typeof AudioPlayer !== 'undefined') {
             this.audioPlayer = new AudioPlayer(audioContainer, {
@@ -298,7 +300,7 @@ class LessonUI {
                 autoLoad: true,
                 loop: true
             });
-
+ 
             // Sync mini button with audio state
             this.audioPlayer.onPlayStateChange = (playing) => {
                 if (this.elements.miniPlayBtn) {
@@ -307,6 +309,7 @@ class LessonUI {
                 }
             };
         }
+        */
     }
 
     /**

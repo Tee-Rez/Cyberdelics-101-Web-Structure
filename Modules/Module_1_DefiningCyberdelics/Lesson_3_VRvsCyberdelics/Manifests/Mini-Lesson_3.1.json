@@ -225,93 +225,66 @@
         {
             "id": "entertainment_quiz_3.1",
             "title": "Transformation vs. Entertainment Quiz",
-            "type": "scenario-based",
-            "content": {
-                "scenes": [
+            "type": "option-selector",
+            "config": {
+                "mode": "single",
+                "style": "text",
+                "questions": [
                     {
-                        "id": "q1",
-                        "narrative": "<h3>Question 1</h3><p><strong>What primarily distinguishes cyberdelic VR from entertainment VR?</strong></p>",
-                        "choices": [
+                        "question": "<h3>Question 1</h3><p><strong>What primarily distinguishes cyberdelic VR from entertainment VR?</strong></p>",
+                        "options": [
                             {
                                 "id": "q1_a",
                                 "label": "Advanced technology level",
-                                "outcome": "q1_wrong_a"
+                                "correct": false
                             },
                             {
                                 "id": "q1_b",
                                 "label": "Direction of attention & purpose",
-                                "outcome": "q2"
+                                "correct": true
                             },
                             {
                                 "id": "q1_c",
                                 "label": "Always uses biofeedback",
-                                "outcome": "q1_wrong_c"
+                                "correct": false
                             },
                             {
                                 "id": "q1_d",
                                 "label": "Slower pace",
-                                "outcome": "q1_wrong_d"
+                                "correct": false
                             }
-                        ]
+                        ],
+                        "synthesis": {
+                            "q1_a": "<p>Incorrect. Tech level doesn't define purpose.</p>",
+                            "q1_c": "<p>Incorrect. Biofeedback is common but not required.</p>",
+                            "q1_d": "<p>Incorrect. Slower pace is common but not a defining factor.</p>",
+                            "q1_b": "<p>✓ Correct!</p><p>Direction of attention (inward vs. outward) and purpose (transformation vs. entertainment) are the primary differentiators.</p>"
+                        }
                     },
                     {
-                        "id": "q1_wrong_a",
-                        "narrative": "<p>Incorrect. Tech level doesn't define purpose.</p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "q1"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "q1_wrong_c",
-                        "narrative": "<p>Incorrect. Biofeedback is common but not required.</p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "q1"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "q2",
-                        "narrative": "<h3>Question 2</h3><p>Correct! <strong>Can the same VR headset be used for both entertainment and cyberdelic experiences?</strong></p>",
-                        "choices": [
+                        "question": "<h3>Question 2</h3><p><strong>Can the same VR headset be used for both entertainment and cyberdelic experiences?</strong></p>",
+                        "options": [
                             {
                                 "id": "q2_a",
                                 "label": "No, requires different gear",
-                                "outcome": "q2_wrong_a"
+                                "correct": false
                             },
                             {
                                 "id": "q2_b",
                                 "label": "Yes, hardware is neutral",
-                                "outcome": "quiz_complete"
+                                "correct": true
                             },
                             {
                                 "id": "q2_c",
                                 "label": "Only high-end headsets work",
-                                "outcome": "q2_wrong_c"
+                                "correct": false
                             }
-                        ]
-                    },
-                    {
-                        "id": "quiz_complete",
-                        "narrative": "<h3>Quiz Complete!</h3><p>You can clearly distinguish the difference between entertainment and transformation.</p>",
-                        "choices": []
-                    },
-                    {
-                        "id": "q2_wrong_a",
-                        "narrative": "<p>Incorrect. The software design determines the category, not the hardware.</p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "q2"
-                            }
-                        ]
+                        ],
+                        "synthesis": {
+                            "q2_a": "<p>Incorrect. The software design determines the category, not the hardware.</p>",
+                            "q2_c": "<p>Incorrect. Even basic headsets can run cyberdelic software if the design is sound.</p>",
+                            "q2_b": "<h3>✓ Quiz Complete!</h3><p>You can clearly distinguish the difference between entertainment and transformation.</p>"
+                        }
                     }
                 ]
             }

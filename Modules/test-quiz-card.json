@@ -1,0 +1,90 @@
+{
+    "id": "test-option-selector-card",
+    "title": "Card Style Quiz Test",
+    "description": "Validates the existing option-selector 'card' style (unchanged).",
+    "modules": [
+        {
+            "id": "card-method-1",
+            "type": "option-selector",
+            "config": {
+                "mode": "single",
+                "style": "card",
+                "question": "Which sense involves hearing?",
+                "options": [
+                    {
+                        "id": "sense-eye",
+                        "label": "Sight",
+                        "icon": "👁️",
+                        "response": "Eyes capture light."
+                    },
+                    {
+                        "id": "sense-ear",
+                        "label": "Hearing",
+                        "icon": "👂",
+                        "correct": true,
+                        "response": "Correct! Ears capture sound waves."
+                    },
+                    {
+                        "id": "sense-nose",
+                        "label": "Smell",
+                        "icon": "👃",
+                        "response": "Nose captures scents."
+                    }
+                ],
+                "confirmButtonText": "Select Sense"
+            }
+        },
+        {
+            "id": "quiz-card-multi",
+            "type": "option-selector",
+            "config": {
+                "mode": "multi",
+                "style": "card",
+                "question": "What two elements combine to make Mud?",
+                "options": [
+                    {
+                        "id": "earth",
+                        "label": "Earth",
+                        "icon": "🌍",
+                        "correct": true,
+                        "response": "Solid foundation."
+                    },
+                    {
+                        "id": "water",
+                        "label": "Water",
+                        "icon": "💧",
+                        "correct": true,
+                        "response": "Fluid adaptability."
+                    },
+                    {
+                        "id": "fire",
+                        "label": "Fire",
+                        "icon": "🔥",
+                        "response": "Transformative heat."
+                    },
+                    {
+                        "id": "air",
+                        "label": "Air",
+                        "icon": "💨",
+                        "response": "Invisible force."
+                    }
+                ],
+                "synthesis": {
+                    "earth+water": "Correct! Earth + Water = Mud.",
+                    "earth+fire": "Incorrect. Magma!",
+                    "air+earth": "Incorrect. Dust storm!",
+                    "fire+water": "Incorrect. Steam!",
+                    "air+water": "Incorrect. Mist!",
+                    "air+fire": "Incorrect. Heat wave!",
+                    "earth+fire+water": "Too many ingredients!",
+                    "air+earth+water": "Too many ingredients!",
+                    "air+earth+fire": "Too many ingredients!",
+                    "air+fire+water": "Too many ingredients!",
+                    "air+earth+fire+water": "All four elements? That's the Avatar state!"
+                },
+                "fallbackSynthesis": "Combination not recognized.",
+                "confirmButtonText": "Synthesize"
+            }
+        }
+    ]
+}

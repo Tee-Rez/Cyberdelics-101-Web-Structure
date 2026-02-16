@@ -20,12 +20,20 @@
     line-height: 1.4;
 }
 
-/* Options Grid */
+/* Options Grid - Using CSS Grid for robust row layout */
 .os-options-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: var(--space-md);
+    justify-items: center;
+    /* Center cards in their cells */
     margin-bottom: var(--space-xl);
+    width: 100%;
+}
+
+.os-options-grid .os-option {
+    width: 100%;
+    max-width: 300px;
 }
 
 /* Individual Option */
@@ -113,13 +121,31 @@
 .os-divider {
     border: none;
     border-top: 1px solid var(--color-border);
+    border-top: 1px solid var(--color-border);
     margin: var(--space-md) 0;
+}
+
+.os-synthesis-header {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: var(--space-sm);
+    text-align: center;
+    color: var(--color-accent);
+}
+
+.os-synthesis-body {
+    text-align: center;
+}
+
+/* Confirm Button Wrapper */
+.os-btn-wrapper {
+    text-align: center;
+    margin-top: var(--space-lg);
 }
 
 /* Confirm Button */
 .os-confirm-btn {
-    display: block;
-    margin: var(--space-lg) auto 0;
+    display: inline-block;
     min-width: 200px;
 }
 
@@ -145,15 +171,15 @@
     animation: os-pulse 0.3s ease;
 }
 
-/* ========== QUIZ STYLE (Text-Only List) ========== */
-.os-options-list {
+/* ========== TEXT STYLE (Text-Only List) ========== */
+.os-options-text {
     display: flex;
     flex-direction: column;
     gap: var(--space-sm);
     margin-bottom: var(--space-xl);
 }
 
-.os-option-quiz {
+.os-option-text {
     background: var(--color-surface);
     border: 2px solid var(--color-border);
     border-radius: var(--border-radius);
@@ -166,7 +192,7 @@
     text-align: left;
 }
 
-.os-option-quiz::before {
+.os-option-text::before {
     content: '';
     width: 18px;
     height: 18px;
@@ -177,23 +203,23 @@
     transition: all 0.2s ease;
 }
 
-.os-option-quiz:hover {
+.os-option-text:hover {
     border-color: var(--color-accent);
     background: var(--color-surface-elevated);
 }
 
-.os-option-quiz.selected {
+.os-option-text.selected {
     border-color: var(--color-accent);
     background: rgba(123, 92, 255, 0.1);
 }
 
-.os-option-quiz.selected::before {
+.os-option-text.selected::before {
     background: var(--color-accent);
     border-color: var(--color-accent);
     box-shadow: 0 0 8px var(--color-accent-glow);
 }
 
-.os-option-quiz .os-option-label {
+.os-option-text .os-option-label {
     font-size: var(--font-size-base);
     color: var(--color-text-primary);
 }

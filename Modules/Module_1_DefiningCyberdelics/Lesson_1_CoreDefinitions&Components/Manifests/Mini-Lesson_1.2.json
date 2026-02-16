@@ -62,131 +62,72 @@
         {
             "id": "quiz_1.2",
             "title": "Components Quiz",
-            "type": "scenario-based",
-            "content": {
-                "scenes": [
+            "type": "option-selector",
+            "config": {
+                "mode": "single",
+                "style": "text",
+                "questions": [
                     {
-                        "id": "q1",
-                        "narrative": "<h3>Question 1 of 2</h3><p>You're evaluating three different VR experiences. Which one demonstrates all three cyberdelic components?</p><p><em>A wellness company launches three VR products and wants to know which qualifies as truly cyberdelic.</em></p>",
-                        "choices": [
+                        "question": "<h3>Question 1 of 2</h3><p>You're evaluating three different VR experiences. Which one demonstrates all three cyberdelic components?</p><p><em>A wellness company launches three VR products and wants to know which qualifies as truly cyberdelic.</em></p>",
+                        "options": [
                             {
                                 "id": "q1_a",
                                 "label": "A VR fitness game that tracks heart rate and makes workouts more engaging through gamification",
-                                "outcome": "q1_wrong_a"
+                                "correct": false
                             },
                             {
                                 "id": "q1_b",
                                 "label": "A VR meditation environment with biofeedback that adapts the experience based on your brainwave patterns, designed to facilitate deep contemplative states",
-                                "outcome": "q2"
+                                "correct": true
                             },
                             {
                                 "id": "q1_c",
                                 "label": "A beautifully designed VR nature walk with calming music for stress relief",
-                                "outcome": "q1_wrong_c"
+                                "correct": false
                             },
                             {
                                 "id": "q1_d",
                                 "label": "A VR social platform where users hang out in virtual spaces and attend events together",
-                                "outcome": "q1_wrong_d"
+                                "correct": false
                             }
-                        ]
+                        ],
+                        "synthesis": {
+                            "q1_a": "<p>This uses technology and biofeedback, but the purpose is fitness optimization, not consciousness exploration or personal transformation. The altered state here is just elevated heart rate from exercise, not an intentional shift in awareness. Without transformational intent focused on consciousness, this is wellness tech rather than cyberdelic.</p>",
+                            "q1_c": "<p>While this uses VR technology and might help you relax, it's missing two critical components. There's no biofeedback or intentional cultivation of altered states—just passive relaxation. And the purpose is stress relief (wellness), not consciousness exploration or transformation. Relaxation and transformation are different goals.</p>",
+                            "q1_d": "<p>This is social VR or entertainment. While it uses immersive technology, there's no intention to facilitate altered states of consciousness or serve transformational purposes. It's designed for connection and fun, which are valuable but different from cyberdelic aims.</p>",
+                            "q1_b": "<p>✓ Correct!</p><p>Exactly right! That experience has all three components.</p>"
+                        }
                     },
                     {
-                        "id": "q1_wrong_a",
-                        "narrative": "<p>This uses technology and biofeedback, but the purpose is fitness optimization, not consciousness exploration or personal transformation. The altered state here is just elevated heart rate from exercise, not an intentional shift in awareness. Without transformational intent focused on consciousness, this is wellness tech rather than cyberdelic.</p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "q1"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "q1_wrong_c",
-                        "narrative": "<p>While this uses VR technology and might help you relax, it's missing two critical components. There's no biofeedback or intentional cultivation of altered states—just passive relaxation. And the purpose is stress relief (wellness), not consciousness exploration or transformation. Relaxation and transformation are different goals.</p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "q1"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "q1_wrong_d",
-                        "narrative": "<p>This is social VR or entertainment. While it uses immersive technology, there's no intention to facilitate altered states of consciousness or serve transformational purposes. It's designed for connection and fun, which are valuable but different from cyberdelic aims.</p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "q1"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "q2",
-                        "narrative": "<h3>Question 2 of 2</h3><p>✓ Exactly right! That experience has all three components.</p><p><strong>A company adds biofeedback sensors to their existing VR game. Does this automatically make it cyberdelic?</strong></p><p><em>Understanding that adding technology alone doesn't change the fundamental nature of an experience.</em></p>",
-                        "choices": [
+                        "question": "<h3>Question 2 of 2</h3><p><strong>A company adds biofeedback sensors to their existing VR game. Does this automatically make it cyberdelic?</strong></p><p><em>Understanding that adding technology alone doesn't change the fundamental nature of an experience.</em></p>",
+                        "options": [
                             {
                                 "id": "q2_a",
                                 "label": "Yes, because it now has technology and biofeedback working together",
-                                "outcome": "q2_wrong_a"
+                                "correct": false
                             },
                             {
                                 "id": "q2_b",
                                 "label": "No, unless the experience is redesigned to intentionally facilitate altered states and serve transformational purposes",
-                                "outcome": "quiz_complete"
+                                "correct": true
                             },
                             {
                                 "id": "q2_c",
                                 "label": "Yes, because biofeedback sensors create altered states automatically",
-                                "outcome": "q2_wrong_c"
+                                "correct": false
                             },
                             {
                                 "id": "q2_d",
                                 "label": "It depends on whether the graphics are high quality and immersive",
-                                "outcome": "q2_wrong_d"
+                                "correct": false
                             }
-                        ]
-                    },
-                    {
-                        "id": "q2_wrong_a",
-                        "narrative": "<p>Technology and biofeedback are necessary but not sufficient. You also need the experience to intentionally facilitate altered states AND have transformational purpose. If the game is still focused on entertainment or competition rather than consciousness exploration, adding sensors doesn't change its fundamental nature. All three components must be present.</p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "q2"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "q2_wrong_c",
-                        "narrative": "<p>Biofeedback sensors measure physiological states, but they don't automatically create altered states of consciousness. The experience design must intentionally use that data to facilitate shifts in awareness. Sensors alone are just measurement tools—they need to be part of a larger system designed for consciousness exploration.</p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "q2"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "q2_wrong_d",
-                        "narrative": "<p>Visual quality and immersion don't determine whether something is cyberdelic. You can have stunning graphics that serve entertainment, or simple visuals that facilitate deep transformation. What matters is the design intent—whether the experience is purposefully created to explore consciousness and facilitate personal growth, regardless of graphical fidelity.</p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "q2"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "quiz_complete",
-                        "narrative": "<h3>✓ Quiz Complete!</h3><p>Perfect! You understand that all three components must be present. Simply adding biofeedback to a game doesn't make it cyberdelic—the entire experience must be designed with the intention of facilitating consciousness exploration and transformation.</p>",
-                        "choices": []
+                        ],
+                        "synthesis": {
+                            "q2_a": "<p>Technology and biofeedback are necessary but not sufficient. You also need the experience to intentionally facilitate altered states AND have transformational purpose. If the game is still focused on entertainment or competition rather than consciousness exploration, adding sensors doesn't change its fundamental nature. All three components must be present.</p>",
+                            "q2_c": "<p>Biofeedback sensors measure physiological states, but they don't automatically create altered states of consciousness. The experience design must intentionally use that data to facilitate shifts in awareness. Sensors alone are just measurement tools—they need to be part of a larger system designed for consciousness exploration.</p>",
+                            "q2_d": "<p>Visual quality and immersion don't determine whether something is cyberdelic. You can have stunning graphics that serve entertainment, or simple visuals that facilitate deep transformation. What matters is the design intent—whether the experience is purposefully created to explore consciousness and facilitate personal growth, regardless of graphical fidelity.</p>",
+                            "q2_b": "<h3>✓ Quiz Complete!</h3><p>Perfect! You understand that all three components must be present. Simply adding biofeedback to a game doesn't make it cyberdelic—the entire experience must be designed with the intention of facilitating consciousness exploration and transformation.</p>"
+                        }
                     }
                 ]
             }
