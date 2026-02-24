@@ -10,70 +10,36 @@
             "id": "module_4_4_5_matching",
             "title": "Hardware Recommendation Matrix",
             "type": "knowledge-construction",
-            "config": {
-                "exerciseType": "matching",
-                "instruction": "Match each user profile to the best hardware recommendation based on their specific needs and constraints.",
-                "zones": [
-                    {
-                        "id": "zone_quest3s",
-                        "label": "Meta Quest 3S ($300)"
-                    },
-                    {
-                        "id": "zone_quest3",
-                        "label": "Meta Quest 3 ($500)"
-                    },
-                    {
-                        "id": "zone_psvr2",
-                        "label": "PlayStation VR2 ($550+)"
-                    },
-                    {
-                        "id": "zone_visionpro",
-                        "label": "Apple Vision Pro ($3,500)"
-                    },
-                    {
-                        "id": "zone_pico4",
-                        "label": "Pico 4 ($400)"
-                    }
-                ],
+            "content": {
+                "title": "Hardware Recommendation Matrix",
+                "instruction": "Drag each user profile to the hardware that best fits their needs. One profile per device.",
+                "template": "<div style='display:flex; flex-direction:column; gap:12px; max-width:680px; margin:0 auto;'><div style='background:rgba(0,0,0,0.3); padding:14px; border-radius:8px;'><div style='font-size:0.8em; opacity:0.7; margin-bottom:6px; text-transform:uppercase; letter-spacing:1px;'>META QUEST 3S ($300)</div><div class='kc-slot' data-correct='user_sarah' style='min-height:44px; border:2px dashed rgba(255,255,255,0.2); border-radius:4px;'></div></div><div style='background:rgba(0,0,0,0.3); padding:14px; border-radius:8px;'><div style='font-size:0.8em; opacity:0.7; margin-bottom:6px; text-transform:uppercase; letter-spacing:1px;'>META QUEST 3 ($500)</div><div class='kc-slot' data-correct='user_rachel' style='min-height:44px; border:2px dashed rgba(255,255,255,0.2); border-radius:4px;'></div></div><div style='background:rgba(0,0,0,0.3); padding:14px; border-radius:8px;'><div style='font-size:0.8em; opacity:0.7; margin-bottom:6px; text-transform:uppercase; letter-spacing:1px;'>PLAYSTATION VR2 ($550+)</div><div class='kc-slot' data-correct='user_james' style='min-height:44px; border:2px dashed rgba(255,255,255,0.2); border-radius:4px;'></div></div><div style='background:rgba(0,0,0,0.3); padding:14px; border-radius:8px;'><div style='font-size:0.8em; opacity:0.7; margin-bottom:6px; text-transform:uppercase; letter-spacing:1px;'>APPLE VISION PRO ($3,500)</div><div class='kc-slot' data-correct='user_martinez' style='min-height:44px; border:2px dashed rgba(255,255,255,0.2); border-radius:4px;'></div></div><div style='background:rgba(0,0,0,0.3); padding:14px; border-radius:8px;'><div style='font-size:0.8em; opacity:0.7; margin-bottom:6px; text-transform:uppercase; letter-spacing:1px;'>PICO 4 ($400) — Privacy-First</div><div class='kc-slot' data-correct='user_elena' style='min-height:44px; border:2px dashed rgba(255,255,255,0.2); border-radius:4px;'></div></div></div>",
                 "items": [
                     {
                         "id": "user_sarah",
-                        "content": "<strong>Sarah</strong><br>Budget-conscious beginner, wants to try TRIPP, ensure low cost entry.",
-                        "correctZoneId": "zone_quest3s",
-                        "feedback": "Correct! Quest 3S is the perfect low-risk entry point."
-                    },
-                    {
-                        "id": "user_james",
-                        "content": "<strong>James</strong><br>Already owns PS5, wants casual VR + gaming.",
-                        "correctZoneId": "zone_psvr2",
-                        "feedback": "Correct! Since he has the console, PSVR2 adds value despite limited apps."
-                    },
-                    {
-                        "id": "user_elena",
-                        "content": "<strong>Elena (Germany)</strong><br>Privacy-conscious, refuses Meta, wants standalone.",
-                        "correctZoneId": "zone_pico4",
-                        "feedback": "Correct! Pico is the only viable standalone option for strict anti-Meta users."
-                    },
-                    {
-                        "id": "user_martinez",
-                        "content": "<strong>Dr. Martinez</strong><br>Research lab, unlimited budget, needs highest resolution for studies.",
-                        "correctZoneId": "zone_visionpro",
-                        "feedback": "Correct! Research focus justifies the specs despite content lack."
+                        "text": "Sarah — Budget beginner, wants low-cost TRIPP entry"
                     },
                     {
                         "id": "user_rachel",
-                        "content": "<strong>Rachel</strong><br>Daily practitioner, 60min sessions, wants comfort + full library.",
-                        "correctZoneId": "zone_quest3",
-                        "feedback": "Correct! Quest 3 offers the comfort and optics needed for serious daily use."
+                        "text": "Rachel — Daily 60-min practitioner, wants comfort + full library"
                     },
                     {
+                        "id": "user_james",
+                        "text": "James — Already owns PS5, wants casual VR + gaming"
+                    },
+                    {
+                        "id": "user_martinez",
+                        "text": "Dr. Martinez — Research lab, needs highest resolution"
+                    },
+                    {
+                        "id": "user_elena",
+                        "text": "Elena (Germany) — Privacy-conscious, refuses Meta"
+                    }
+                ],
+                "distractors": [
+                    {
                         "id": "user_marcus",
-                        "content": "<strong>Marcus (Teen)</strong><br>Parents need strong parental controls/curation.",
-                        "correctZoneId": [
-                            "zone_quest3",
-                            "zone_quest3s"
-                        ],
-                        "feedback": "Correct! Meta has the most robust parental control system."
+                        "text": "Marcus (Teen) — Parents need strong parental controls"
                     }
                 ]
             }
