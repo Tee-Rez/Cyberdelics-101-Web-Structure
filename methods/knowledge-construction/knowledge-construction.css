@@ -1,35 +1,187 @@
-/* Methods: Knowledge Construction */
+/* ================================================================
+   KNOWLEDGE CONSTRUCTION METHOD — Styles
+   ================================================================ */
 
-/* Container for the entire construction activity */
+/* ----------------------------------------------------------------
+   CONTAINER
+   ---------------------------------------------------------------- */
 .knowledge-construction-container {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
     padding: 1.5rem;
     background: var(--color-surface, #12121a);
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    max-height: 100%;
+    overflow-y: auto;
 }
 
-/* ------------------------------------------------------------------
-   CONSTRUCTION ZONE (Target)
-   ------------------------------------------------------------------ */
+/* ----------------------------------------------------------------
+   HEADER — Title + Instruction
+   ---------------------------------------------------------------- */
+.kc-header {
+    text-align: center;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.kc-title {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin: 0 0 0.6rem 0;
+    background: linear-gradient(135deg, var(--color-primary, #0ff) 0%, #7b5cff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.2;
+}
+
+.kc-instruction {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+    letter-spacing: 0.3px;
+    margin: 0;
+    line-height: 1.6;
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+/* ----------------------------------------------------------------
+   CONSTRUCTION ZONE (shared wrapper)
+   ---------------------------------------------------------------- */
 .construction-zone {
-    padding: 2rem;
-    background: rgba(255, 255, 255, 0.03);
+    padding: 1.25rem;
+    background: rgba(255, 255, 255, 0.02);
     border-radius: 8px;
-    border: 2px dashed rgba(255, 255, 255, 0.2);
-    min-height: 150px;
-    position: relative;
-    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    transition: border-color 0.3s;
 }
 
 .construction-zone.drag-active {
     border-color: var(--color-accent, #7b5cff);
-    background: rgba(123, 92, 255, 0.05);
 }
 
-/* The slots within the construction text/diagram */
+/* ----------------------------------------------------------------
+   CATEGORIES MODE — Side-by-side workspace
+   ---------------------------------------------------------------- */
+.kc-workspace {
+    display: flex;
+    gap: 1.25rem;
+    align-items: flex-start;
+}
+
+/* Left panel — category drop zones */
+.kc-categories-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    min-width: 0;
+}
+
+/* Individual category zone */
+.kc-category {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-left: 3px solid var(--cat-color, #7b5cff);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.kc-category-label {
+    background: rgba(0, 0, 0, 0.25);
+    padding: 0.45rem 0.85rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--cat-color, #7b5cff);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.kc-category-slots {
+    padding: 0.5rem 0.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+/* Slots within categories — inherit category color */
+.kc-category-slots .kc-slot {
+    min-height: 36px;
+    border: 1px dashed rgba(255, 255, 255, 0.18);
+    border-radius: 5px;
+    margin: 0;
+    padding: 4px 10px;
+    display: flex;
+    align-items: center;
+    font-size: 0.85rem;
+    transition: all 0.2s ease;
+}
+
+.kc-category-slots .kc-slot.drag-over {
+    background: rgba(255, 255, 255, 0.07);
+    border-color: var(--cat-color, #7b5cff);
+    border-style: solid;
+    transform: none;
+}
+
+.kc-category-slots .kc-slot.correct {
+    background: rgba(46, 204, 113, 0.12);
+    border: 1px solid rgba(46, 204, 113, 0.5);
+    color: #2ecc71;
+    pointer-events: none;
+    font-size: 0.82rem;
+}
+
+.kc-category-slots .kc-slot.incorrect {
+    animation: kc-shake 0.5s cubic-bezier(.36, .07, .19, .97) both;
+    border-color: #e74c3c;
+    background: rgba(231, 76, 60, 0.1);
+}
+
+/* Right panel — source bank */
+.kc-workspace>.source-bank {
+    flex: 1;
+    flex-direction: row;
+    /* Changed to row for horizontal wrapping */
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    overflow: visible;
+}
+
+.kc-workspace>.source-bank .kc-item {
+    width: auto;
+    /* Changed from 100% to auto to allow wrapping */
+    box-sizing: border-box;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    padding: 0.5rem 0.75rem;
+    text-align: left;
+    line-height: 1.3;
+    border-color: rgba(123, 92, 255, 0.5);
+}
+
+.kc-workspace>.source-bank .kc-item:hover {
+    transform: translateX(3px);
+    box-shadow: 0 3px 8px rgba(123, 92, 255, 0.25);
+}
+
+/* ----------------------------------------------------------------
+   LEGACY TEMPLATE MODE — Classic slot-fill
+   ---------------------------------------------------------------- */
+
+/* The slots within plain template HTML */
 .kc-slot {
     display: inline-block;
     min-width: 120px;
@@ -57,88 +209,112 @@
     color: #2ecc71;
     cursor: default;
     pointer-events: none;
-    /* Lock it in */
 }
 
 .kc-slot.incorrect {
-    animation: shake 0.4s cubic-bezier(.36, .07, .19, .97) both;
+    animation: kc-shake 0.5s cubic-bezier(.36, .07, .19, .97) both;
     border-bottom-color: #e74c3c;
 }
 
-/* ------------------------------------------------------------------
-   SOURCE BANK (Draggables)
-   ------------------------------------------------------------------ */
+/* ----------------------------------------------------------------
+   SOURCE BANK (standalone / legacy mode)
+   ---------------------------------------------------------------- */
 .source-bank {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
-    padding: 1.5rem;
+    gap: 0.75rem;
+    padding: 1.25rem;
     background: rgba(0, 0, 0, 0.2);
     border-radius: 8px;
-    min-height: 80px;
-    align-items: center;
+    min-height: 70px;
+    align-items: flex-start;
+    align-content: flex-start;
 }
 
 .source-bank-label {
     width: 100%;
-    margin-bottom: 0.5rem;
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 0.4rem;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.45);
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
 }
 
+/* ----------------------------------------------------------------
+   ITEMS (draggables)
+   ---------------------------------------------------------------- */
 .kc-item {
     background: var(--color-surface, #1e1e24);
     border: 1px solid var(--color-accent, #7b5cff);
     color: var(--color-text-primary, #e8e8f0);
-    padding: 0.5rem 1rem;
+    padding: 0.45rem 1rem;
     border-radius: 20px;
     cursor: grab;
     user-select: none;
     transition: all 0.2s ease;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    font-size: 0.95rem;
-    z-index: 10;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    font-size: 0.92rem;
 }
 
 .kc-item:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(123, 92, 255, 0.3);
+    box-shadow: 0 4px 10px rgba(123, 92, 255, 0.3);
+    border-color: rgba(123, 92, 255, 0.8);
 }
 
-.kc-item:active {
-    cursor: grabbing;
+.kc-item.selected {
+    background: var(--color-accent, #7b5cff);
+    color: #fff;
+    border-color: var(--color-accent, #7b5cff);
+    box-shadow: 0 0 16px rgba(123, 92, 255, 0.6), 0 4px 12px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3px) scale(1.03);
+    cursor: pointer;
 }
 
+/* Slots pulse/highlight when a concept is selected — guides the user */
+.construction-zone.has-selection .kc-slot:not(.correct) {
+    cursor: pointer;
+    border-style: solid;
+    border-color: rgba(123, 92, 255, 0.4);
+    animation: kc-slot-pulse 1.5s ease-in-out infinite;
+}
+
+.construction-zone.has-selection .kc-category-slots .kc-slot:not(.correct) {
+    border-color: var(--cat-color, rgba(123, 92, 255, 0.4));
+}
+
+@keyframes kc-slot-pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.55;
+    }
+}
+
+.kc-item:active,
 .kc-item.dragging {
-    opacity: 0.5;
-    transform: scale(0.95);
+    cursor: grabbing;
+    opacity: 0.45;
+    transform: scale(0.96);
 }
 
-/* When item is placed effectively in a slot */
-.kc-slot .kc-item {
-    margin: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    background: transparent;
-    box-shadow: none;
-    cursor: default;
-}
-
-/* ------------------------------------------------------------------
-   FEEDBACK & UTILS
-   ------------------------------------------------------------------ */
+/* ----------------------------------------------------------------
+   FEEDBACK TOAST
+   ---------------------------------------------------------------- */
 .kc-feedback {
     min-height: 2rem;
     text-align: center;
-    font-weight: bold;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
     opacity: 0;
-    transition: opacity 0.3s;
+    transition: opacity 0.25s;
+    padding: 0.4rem 1rem;
+    border-radius: 6px;
 }
 
 .kc-feedback.show {
@@ -147,13 +323,18 @@
 
 .kc-feedback.success {
     color: #2ecc71;
+    background: rgba(46, 204, 113, 0.08);
 }
 
 .kc-feedback.error {
     color: #e74c3c;
+    background: rgba(231, 76, 60, 0.08);
 }
 
-@keyframes shake {
+/* ----------------------------------------------------------------
+   ANIMATIONS
+   ---------------------------------------------------------------- */
+@keyframes kc-shake {
 
     10%,
     90% {
@@ -162,30 +343,37 @@
 
     20%,
     80% {
-        transform: translate3d(2px, 0, 0);
+        transform: translate3d(3px, 0, 0);
     }
 
     30%,
     50%,
     70% {
-        transform: translate3d(-4px, 0, 0);
+        transform: translate3d(-5px, 0, 0);
     }
 
     40%,
     60% {
-        transform: translate3d(4px, 0, 0);
+        transform: translate3d(5px, 0, 0);
     }
 }
 
-/* Responsive adjustments */
+/* ----------------------------------------------------------------
+   RESPONSIVE
+   ---------------------------------------------------------------- */
 @media (max-width: 689px) {
-    .kc-slot {
-        min-width: 80px;
-        font-size: 0.9rem;
+    .kc-workspace {
+        flex-direction: column;
     }
 
-    .construction-zone {
-        padding: 1rem;
-        line-height: 2.2rem;
+    .kc-workspace>.source-bank {
+        width: 100%;
+        max-height: none;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .kc-title {
+        font-size: 1.1rem;
     }
 }

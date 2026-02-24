@@ -12,31 +12,57 @@
             "type": "knowledge-construction",
             "content": {
                 "title": "Hardware Recommendation Matrix",
-                "instruction": "Drag each user profile to the hardware that best fits their needs. One profile per device.",
-                "template": "<div style='display:flex; flex-direction:column; gap:12px; max-width:680px; margin:0 auto;'><div style='background:rgba(0,0,0,0.3); padding:14px; border-radius:8px;'><div style='font-size:0.8em; opacity:0.7; margin-bottom:6px; text-transform:uppercase; letter-spacing:1px;'>META QUEST 3S ($300)</div><div class='kc-slot' data-correct='user_sarah' style='min-height:44px; border:2px dashed rgba(255,255,255,0.2); border-radius:4px;'></div></div><div style='background:rgba(0,0,0,0.3); padding:14px; border-radius:8px;'><div style='font-size:0.8em; opacity:0.7; margin-bottom:6px; text-transform:uppercase; letter-spacing:1px;'>META QUEST 3 ($500)</div><div class='kc-slot' data-correct='user_rachel' style='min-height:44px; border:2px dashed rgba(255,255,255,0.2); border-radius:4px;'></div></div><div style='background:rgba(0,0,0,0.3); padding:14px; border-radius:8px;'><div style='font-size:0.8em; opacity:0.7; margin-bottom:6px; text-transform:uppercase; letter-spacing:1px;'>PLAYSTATION VR2 ($550+)</div><div class='kc-slot' data-correct='user_james' style='min-height:44px; border:2px dashed rgba(255,255,255,0.2); border-radius:4px;'></div></div><div style='background:rgba(0,0,0,0.3); padding:14px; border-radius:8px;'><div style='font-size:0.8em; opacity:0.7; margin-bottom:6px; text-transform:uppercase; letter-spacing:1px;'>APPLE VISION PRO ($3,500)</div><div class='kc-slot' data-correct='user_martinez' style='min-height:44px; border:2px dashed rgba(255,255,255,0.2); border-radius:4px;'></div></div><div style='background:rgba(0,0,0,0.3); padding:14px; border-radius:8px;'><div style='font-size:0.8em; opacity:0.7; margin-bottom:6px; text-transform:uppercase; letter-spacing:1px;'>PICO 4 ($400) — Privacy-First</div><div class='kc-slot' data-correct='user_elena' style='min-height:44px; border:2px dashed rgba(255,255,255,0.2); border-radius:4px;'></div></div></div>",
+                "instruction": "Drag each user profile to the hardware tier that best fits their needs and constraints.",
+                "templateType": "categories",
+                "categories": [
+                    {
+                        "id": "cat_quest3s",
+                        "label": "META QUEST 3S — Budget Entry ($300)",
+                        "color": "#7b5cff"
+                    },
+                    {
+                        "id": "cat_quest3",
+                        "label": "META QUEST 3 — Premium Daily ($500)",
+                        "color": "#00d4ff"
+                    },
+                    {
+                        "id": "cat_pico4",
+                        "label": "PICO 4 — Privacy-First ($400)",
+                        "color": "#51cf66"
+                    },
+                    {
+                        "id": "cat_visionpro",
+                        "label": "APPLE VISION PRO — Specialized ($3,500)",
+                        "color": "#ffaa00"
+                    }
+                ],
                 "items": [
                     {
                         "id": "user_sarah",
-                        "text": "Sarah — Budget beginner, wants low-cost TRIPP entry"
+                        "text": "Sarah — Budget beginner, wants low-cost TRIPP entry",
+                        "correctCategory": "cat_quest3s"
                     },
                     {
                         "id": "user_rachel",
-                        "text": "Rachel — Daily 60-min practitioner, wants comfort + full library"
+                        "text": "Rachel — Daily 60-min practitioner, needs comfort + lib",
+                        "correctCategory": "cat_quest3"
                     },
+                    {
+                        "id": "user_elena",
+                        "text": "Elena (Germany) — Privacy-conscious, refuses Meta",
+                        "correctCategory": "cat_pico4"
+                    },
+                    {
+                        "id": "user_martinez",
+                        "text": "Dr. Martinez — Research lab, needs highest resolution",
+                        "correctCategory": "cat_visionpro"
+                    }
+                ],
+                "distractors": [
                     {
                         "id": "user_james",
                         "text": "James — Already owns PS5, wants casual VR + gaming"
                     },
-                    {
-                        "id": "user_martinez",
-                        "text": "Dr. Martinez — Research lab, needs highest resolution"
-                    },
-                    {
-                        "id": "user_elena",
-                        "text": "Elena (Germany) — Privacy-conscious, refuses Meta"
-                    }
-                ],
-                "distractors": [
                     {
                         "id": "user_marcus",
                         "text": "Marcus (Teen) — Parents need strong parental controls"

@@ -26,64 +26,100 @@
             "type": "knowledge-construction",
             "content": {
                 "title": "The Cyberdelic Landscape Map",
-                "instruction": "Drag each platform into its primary category. Focus on core design purpose and primary use case.",
-                "template": "<div style='display:grid; grid-template-columns:1fr 1fr; gap:14px; max-width:780px; margin:0 auto;'><div style='background:rgba(0,0,0,0.3); padding:14px; border-radius:8px;'><div style='font-size:0.8em; opacity:0.7; margin-bottom:8px; text-transform:uppercase; letter-spacing:1px; color:#ff6b6b;'>CLINICAL / THERAPEUTIC</div><div class='kc-slot' data-correct='p_psious' style='min-height:40px; border:2px dashed rgba(255,107,107,0.3); border-radius:4px; margin-bottom:6px;'></div><div class='kc-slot' data-correct='p_relievrx' style='min-height:40px; border:2px dashed rgba(255,107,107,0.3); border-radius:4px; margin-bottom:6px;'></div><div class='kc-slot' data-correct='p_xrhealth' style='min-height:40px; border:2px dashed rgba(255,107,107,0.3); border-radius:4px;'></div></div><div style='background:rgba(0,0,0,0.3); padding:14px; border-radius:8px;'><div style='font-size:0.8em; opacity:0.7; margin-bottom:8px; text-transform:uppercase; letter-spacing:1px; color:#51cf66;'>WELLNESS & MINDFULNESS</div><div class='kc-slot' data-correct='p_gmvr' style='min-height:40px; border:2px dashed rgba(81,207,102,0.3); border-radius:4px; margin-bottom:6px;'></div><div class='kc-slot' data-correct='p_naturetreks' style='min-height:40px; border:2px dashed rgba(81,207,102,0.3); border-radius:4px; margin-bottom:6px;'></div><div class='kc-slot' data-correct='p_tripp' style='min-height:40px; border:2px dashed rgba(81,207,102,0.3); border-radius:4px;'></div></div><div style='background:rgba(0,0,0,0.3); padding:14px; border-radius:8px;'><div style='font-size:0.8em; opacity:0.7; margin-bottom:8px; text-transform:uppercase; letter-spacing:1px; color:#339af0;'>BIOFEEDBACK-ENHANCED</div><div class='kc-slot' data-correct='p_healium' style='min-height:40px; border:2px dashed rgba(51,154,240,0.3); border-radius:4px; margin-bottom:6px;'></div><div class='kc-slot' data-correct='p_flowly' style='min-height:40px; border:2px dashed rgba(51,154,240,0.3); border-radius:4px;'></div></div><div style='background:rgba(0,0,0,0.3); padding:14px; border-radius:8px;'><div style='font-size:0.8em; opacity:0.7; margin-bottom:8px; text-transform:uppercase; letter-spacing:1px; color:#cc5de8;'>EXPLORATORY & SPECIALIZED</div><div class='kc-slot' data-correct='p_soundself' style='min-height:40px; border:2px dashed rgba(204,93,232,0.3); border-radius:4px; margin-bottom:6px;'></div><div class='kc-slot' data-correct='p_wavepaths' style='min-height:40px; border:2px dashed rgba(204,93,232,0.3); border-radius:4px; margin-bottom:6px;'></div><div class='kc-slot' data-correct='p_othership' style='min-height:40px; border:2px dashed rgba(204,93,232,0.3); border-radius:4px; margin-bottom:6px;'></div><div class='kc-slot' data-correct='p_supernatural' style='min-height:40px; border:2px dashed rgba(204,93,232,0.3); border-radius:4px; margin-bottom:6px;'></div><div class='kc-slot' data-correct='p_isnessd' style='min-height:40px; border:2px dashed rgba(204,93,232,0.3); border-radius:4px; margin-bottom:6px;'></div><div class='kc-slot' data-correct='p_openbrush' style='min-height:40px; border:2px dashed rgba(204,93,232,0.3); border-radius:4px;'></div></div></div>",
+                "instruction": "Drag each platform into its primary category — based on core design purpose and primary use case.",
+                "templateType": "categories",
+                "categories": [
+                    {
+                        "id": "cat_clinical",
+                        "label": "CLINICAL / THERAPEUTIC",
+                        "color": "#ff6b6b"
+                    },
+                    {
+                        "id": "cat_wellness",
+                        "label": "WELLNESS & MINDFULNESS",
+                        "color": "#51cf66"
+                    },
+                    {
+                        "id": "cat_biofeedback",
+                        "label": "BIOFEEDBACK-ENHANCED",
+                        "color": "#339af0"
+                    },
+                    {
+                        "id": "cat_specialized",
+                        "label": "EXPLORATORY & SPECIALIZED",
+                        "color": "#cc5de8"
+                    }
+                ],
                 "items": [
                     {
                         "id": "p_psious",
-                        "text": "Psious — VRET therapy"
+                        "text": "Psious — VRET therapy",
+                        "correctCategory": "cat_clinical"
                     },
                     {
                         "id": "p_relievrx",
-                        "text": "RelieVRx — FDA chronic pain"
+                        "text": "RelieVRx — FDA chronic pain",
+                        "correctCategory": "cat_clinical"
                     },
                     {
                         "id": "p_xrhealth",
-                        "text": "XRHealth — Medicare-covered VR"
+                        "text": "XRHealth — Medicare-covered VR",
+                        "correctCategory": "cat_clinical"
                     },
                     {
                         "id": "p_gmvr",
-                        "text": "Guided Meditation VR — Minimalist meditation"
+                        "text": "Guided Meditation VR — Minimalist meditation",
+                        "correctCategory": "cat_wellness"
                     },
                     {
                         "id": "p_naturetreks",
-                        "text": "Nature Treks VR — Environmental restoration"
+                        "text": "Nature Treks VR — Environmental restoration",
+                        "correctCategory": "cat_wellness"
                     },
                     {
                         "id": "p_tripp",
-                        "text": "TRIPP — Wellness + mindfulness"
+                        "text": "TRIPP — Wellness + mindfulness",
+                        "correctCategory": "cat_wellness"
                     },
                     {
                         "id": "p_healium",
-                        "text": "Healium — EEG/HRV biofeedback"
+                        "text": "Healium — EEG/HRV biofeedback",
+                        "correctCategory": "cat_biofeedback"
                     },
                     {
                         "id": "p_flowly",
-                        "text": "Flowly — Biofeedback for pain/anxiety"
+                        "text": "Flowly — Biofeedback for pain/anxiety",
+                        "correctCategory": "cat_biofeedback"
                     },
                     {
                         "id": "p_soundself",
-                        "text": "Soundself — Technodelic loop"
+                        "text": "Soundself — Technodelic loop",
+                        "correctCategory": "cat_specialized"
                     },
                     {
                         "id": "p_wavepaths",
-                        "text": "Wavepaths — Therapeutic music"
+                        "text": "Wavepaths — Therapeutic music",
+                        "correctCategory": "cat_specialized"
                     },
                     {
                         "id": "p_othership",
-                        "text": "Othership — Breathwork exploration"
+                        "text": "Othership — Breathwork exploration",
+                        "correctCategory": "cat_specialized"
                     },
                     {
                         "id": "p_supernatural",
-                        "text": "Supernatural — Movement flow states"
+                        "text": "Supernatural — Movement flow states",
+                        "correctCategory": "cat_specialized"
                     },
                     {
                         "id": "p_isnessd",
-                        "text": "Isness-D — Mystical/collective experiences"
+                        "text": "Isness-D — Mystical/collective experiences",
+                        "correctCategory": "cat_specialized"
                     },
                     {
                         "id": "p_openbrush",
-                        "text": "Open Brush — Creativity as practice"
+                        "text": "Open Brush — Creativity as practice",
+                        "correctCategory": "cat_specialized"
                     }
                 ],
                 "distractors": [
