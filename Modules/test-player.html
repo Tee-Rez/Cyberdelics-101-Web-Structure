@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mini-Lesson Test Harness</title>
+    <title>Cyberdelics 101 Lesson Player</title>
 
     <!-- CORE STYLES -->
     <link rel="stylesheet" href="../core/styles.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../methods/interactive-simulation/venn-diagram-combiner/venn-diagram-combiner.css">
     <link rel="stylesheet" href="../methods/interactive-simulation/spectrum-explorer/spectrum-explorer.css">
     <link rel="stylesheet" href="../methods/option-selector/option-selector.css">
+    <link rel="stylesheet" href="../methods/knowledge-construction/knowledge-construction.css">
 
     <style>
         body {
@@ -45,14 +46,22 @@
             z-index: 9999;
             transition: opacity 0.5s;
         }
+
+        .spinner {
+            margin-top: 20px;
+            font-size: 0.9em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            opacity: 0.8;
+        }
     </style>
 </head>
 
 <body>
 
     <div id="loader">
-        <h2>LOADING TEST MANIFEST...</h2>
-        <div class="spinner">Initializing Player...</div>
+        <h2>CONNECTING TO NODE...</h2>
+        <div class="spinner">Initializing Neural Interface...</div>
     </div>
 
     <div id="lesson-root"></div>
@@ -75,15 +84,15 @@
     <script src="../methods/interactive-simulation/venn-diagram-combiner/venn-diagram-combiner.js"></script>
     <script src="../methods/interactive-simulation/spectrum-explorer/spectrum-explorer.js"></script>
     <script src="../methods/option-selector/option-selector.js"></script>
+    <script src="../methods/knowledge-construction/knowledge-construction.js"></script>
 
     <!-- THE ENGINE -->
     <script src="../core/lesson-runner.js"></script>
 
-    <!-- LOCAL TEST SCRIPT -->
+    <!-- UNIFIED LOADER SCRIPT -->
     <script>
         (function () {
-            console.log('[TestHarness] Initializing local test...');
-
+            console.log('[Player] Booting... Waiting for manifest injection or local test-manifest.json');
 
             // 1. Initialize Engine
             LessonRunner.init('#lesson-root');
@@ -91,36 +100,62 @@
             // 2. Initialize StateManager
             if (window.StateManager) window.StateManager.init();
 
-            // 3. Load test-manifest.json from same directory
-            fetch('./test-manifest.json')
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error(`Failed to load manifest: ${response.status} ${response.statusText}`);
-                    }
-                    return response.json();
-                })
-                .then(manifest => {
-                    console.log('[TestHarness] Manifest loaded successfully:', manifest);
+            let manifestLoaded = false;
 
-                    // Remove Loader
-                    const loader = document.getElementById('loader');
+            // 3. Define Loader Removal
+            const removeLoader = () => {
+                const loader = document.getElementById('loader');
+                if (loader) {
                     loader.style.opacity = '0';
                     setTimeout(() => loader.remove(), 500);
+                }
+            };
 
-                    // START THE LESSON
+            // 4. Handle Manifest Loading
+            const loadManifest = (manifest, source) => {
+                if (manifestLoaded) return;
+                manifestLoaded = true;
+                console.log(`[Player] Manifest received via ${source}!`);
+
+                try {
+                    if (typeof manifest === 'string') manifest = JSON.parse(manifest);
+                    removeLoader();
                     LessonRunner.loadLesson(manifest);
-                })
-                .catch(error => {
-                    console.error('[TestHarness] Error loading manifest:', error);
-                    document.getElementById('loader').innerHTML = `
-                        <h2 style="color:red">ERROR LOADING MANIFEST</h2>
-                        <pre>${error.message}</pre>
-                        <p style="color:#666; font-size:14px;">Make sure test-manifest.json exists in the Modules folder.</p>
-                    `;
-                });
+                } catch (e) {
+                    console.error(`[Player] Failed to load manifest from ${source}:`, e);
+                    const loader = document.getElementById('loader');
+                    if (loader) {
+                        loader.innerHTML = `<h2 style="color:red">ERROR LOADING MANIFEST</h2><pre>${e.message}</pre>`;
+                    }
+                }
+            };
 
-            // 4. Background is now handled by core/lesson-ui.js
-            console.log('[TestHarness] Background initialization delegated to LessonUI.');
+            // 5. Listen for Framer Messages
+            window.addEventListener('message', (event) => {
+                const msg = event.data;
+                if (msg && msg.type === 'LOAD_MANIFEST') {
+                    loadManifest(msg.manifest, 'Framer Message');
+                }
+            });
+
+            // 6. Signal readiness to Parent (Framer)
+            setTimeout(() => {
+                window.parent.postMessage({ type: 'PLAYER_READY' }, '*');
+            }, 500);
+
+            // 7. Try Local Fetch (for Test Harness)
+            fetch('./test-manifest.json')
+                .then(response => {
+                    if (response.ok) return response.json();
+                })
+                .then(manifest => {
+                    if (manifest) {
+                        loadManifest(manifest, 'Local Fetch');
+                    }
+                })
+                .catch(() => {
+                    // Ignore fetch errors - we might be in Framer where this file doesn't exist
+                });
 
         })();
     </script>

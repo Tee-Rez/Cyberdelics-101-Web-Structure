@@ -1,0 +1,93 @@
+{
+    "title": "VR Pain Management & Medicare-Covered Care",
+    "description": "The science of VR analgesia, FDA/Medicare milestones, and the four mechanisms of action",
+    "theme": {
+        "primaryColor": "#5900ff",
+        "fontBody": "Rajdhani, sans-serif"
+    },
+    "modules": [
+        {
+            "id": "module_4_2_2_progressive",
+            "title": "The Breakthrough",
+            "type": "progressive-disclosure",
+            "content": {
+                "sections": [
+                    {
+                        "title": "SnowWorld — Where It Started",
+                        "content": "<p>In the late 90s, researchers Hunter Hoffman and David Patterson created <strong>SnowWorld</strong> for burn patients undergoing excruciating wound care. Patients threw virtual snowballs at penguins while nurses worked.</p><p><strong>The Result:</strong> 30-50% pain reduction (comparable to opioids). fMRI scans showed significantly less pain activity in the brain. It proved that if VR captures enough attention, pain processing literally gets less neural real estate.</p>",
+                        "media": {
+                            "type": "image",
+                            "src": "placeholder-snowworld.jpg",
+                            "alt": "Split view: Real hospital burn unit vs SnowWorld VR icy landscape",
+                            "position": "full-width",
+                            "aiPrompt": "Split composition — left half shows real hospital burn unit (sterile, clinical, person in bed receiving wound care treatment, medical staff in protective gear, sense of medical necessity but discomfort), right half shows the same person's perspective in SnowWorld VR (beautiful icy landscape, snowmen, playful snowball throwing, sense of wonder and distraction from pain), connecting line between the two sides showing the contrast, hope and innovation meeting medical reality, 16:9 aspect ratio"
+                        },
+                        "triggerLabel": "The 4 Mechanisms"
+                    },
+                    {
+                        "title": "The Four Mechanisms",
+                        "content": "<p>VR engages four distinct pathways:</p><ol><li><strong>Attentional Capture (Cognitive):</strong> VR floods the senses, leaving limited bandwidth for pain processing.</li><li><strong>Gate Control (Neurological):</strong> Sensory input closes spinal 'gates', blocking pain signals.</li><li><strong>Emotional Regulation (Psychological):</strong> Shifting emotional state reduces pain <em>suffering</em>.</li><li><strong>Expectation Effects (Psychophysiological):</strong> Neural changes driven by the belief in the treatment (placebo effect).</li></ol>",
+                        "triggerLabel": "RelieVRx (FDA)"
+                    },
+                    {
+                        "title": "RelieVRx — FDA Authorization",
+                        "content": "<p>In 2021, RelieVRx became the first VR system to receive <strong>FDA 510(k) authorization</strong> for chronic lower back pain. This allows doctors to prescribe it as a medical device.</p><ul><li><strong>Program:</strong> 56 sessions over 8 weeks (CBT + breathing + education).</li><li><strong>Significance:</strong> It proved VR apps can clear regulatory hurdles just like medical devices.</li></ul>",
+                        "triggerLabel": "XRHealth (Medicare)"
+                    },
+                    {
+                        "title": "XRHealth — Medicare Coverage",
+                        "content": "<p>XRHealth crossed the biggest barrier: <strong>Insurance Reimbursement (Code E1905)</strong>. Medicare now pays for VR therapy sessions just like physical therapy.</p><ul><li><strong>Model:</strong> Telehealth VR. Headset sent to home, remote therapist monitors progress.</li><li><strong>Why it matters:</strong> FDA says 'it's safe'. Medicare coverage says 'we will pay for it'. That helps scalability.</li></ul>",
+                        "triggerLabel": "Insurance Impact"
+                    },
+                    {
+                        "title": "From Experimental to Infrastructure",
+                        "content": "<p>Insurance coverage changes everything. It moves VR from 'access for the wealthy' to 'standard of care'.</p><p>RelieVRx and XRHealth built the regulatory and economic roads that future cyberdelic applications will travel. They turned innovation into infrastructure.</p>",
+                        "triggerLabel": "Build The Framework"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "module_4_2_2_kc",
+            "title": "Knowledge Construction: Pain Mechanisms",
+            "type": "knowledge-construction",
+            "content": {
+                "title": "The Sequential Activation Model",
+                "instruction": "Drag the four pain reduction mechanisms into their correct order of activation during a VR session.",
+                "template": "<div style='display:flex; flex-direction:column; gap:15px; max-width:600px; margin:0 auto;'><div style='background:rgba(0,0,0,0.3); padding:15px; border-radius:8px;'><div style='font-size:0.8em; opacity:0.7; margin-bottom:5px;'>IMMEDIATE (0-30s)</div><div class='kc-slot' data-correct='capture' style='min-height:40px; border:2px dashed rgba(255,255,255,0.2); border-radius:4px;'></div></div><div style='background:rgba(0,0,0,0.3); padding:15px; border-radius:8px;'><div style='font-size:0.8em; opacity:0.7; margin-bottom:5px;'>EARLY (30s-2m)</div><div class='kc-slot' data-correct='gate' style='min-height:40px; border:2px dashed rgba(255,255,255,0.2); border-radius:4px;'></div></div><div style='background:rgba(0,0,0,0.3); padding:15px; border-radius:8px;'><div style='font-size:0.8em; opacity:0.7; margin-bottom:5px;'>SUSTAINED (2-15m)</div><div class='kc-slot' data-correct='emotion' style='min-height:40px; border:2px dashed rgba(255,255,255,0.2); border-radius:4px;'></div></div><div style='background:rgba(0,0,0,0.3); padding:15px; border-radius:8px;'><div style='font-size:0.8em; opacity:0.7; margin-bottom:5px;'>CUMULATIVE</div><div class='kc-slot' data-correct='expect' style='min-height:40px; border:2px dashed rgba(255,255,255,0.2); border-radius:4px;'></div></div></div>",
+                "items": [
+                    {
+                        "id": "capture",
+                        "text": "Attentional Capture (Cognitive)"
+                    },
+                    {
+                        "id": "gate",
+                        "text": "Gate Control (Neurological)"
+                    },
+                    {
+                        "id": "emotion",
+                        "text": "Emotional Regulation (Psychological)"
+                    },
+                    {
+                        "id": "expect",
+                        "text": "Expectation Effects (Psychophysiological)"
+                    }
+                ],
+                "distractors": [
+                    {
+                        "id": "placebo",
+                        "text": "Placebo Effect (Psychological)"
+                    },
+                    {
+                        "id": "numbness",
+                        "text": "Physical Numbness (Neurological)"
+                    },
+                    {
+                        "id": "drug",
+                        "text": "Drug Interaction (Pharmacological)"
+                    }
+                ]
+            }
+        }
+    ]
+}

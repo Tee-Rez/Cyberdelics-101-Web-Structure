@@ -1,0 +1,166 @@
+{
+    "title": "Module Summary & Bridge",
+    "description": "Synthesize all Module 4 learning into a mental model of the cyberdelic landscape and prepare for Module 5.",
+    "theme": {
+        "primaryColor": "#ffaa00",
+        "fontBody": "Rajdhani, sans-serif"
+    },
+    "modules": [
+        {
+            "id": "module_4_5_2_summary_text",
+            "title": "Closing the Landscape",
+            "type": "progressive-disclosure",
+            "content": {
+                "sections": [
+                    {
+                        "title": "Organizing Your Knowledge",
+                        "content": "<p>Before you move forward, let's make sure the entire cyberdelic landscape you've just toured is organized clearly in your mind. You've covered five lessons of platforms, applications, clinical evidence, biofeedback technology, social VR, hardware, and selection frameworks—and it's a lot.</p><p>The exercise below is your chance to demonstrate that you haven't just learned facts, but that you can organize the landscape the way an expert would. Once you can place every major platform in its right category without hesitation, you're ready for Module 5—where we zoom out from 'what exists' to 'who builds it and how.'</p>",
+                        "triggerLabel": "Map the Landscape"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "module_4_5_2_map",
+            "title": "The Module 4 Cyberdelic Landscape Map",
+            "type": "knowledge-construction",
+            "config": {
+                "exerciseType": "matching",
+                "instruction": "Drag each of the 15 major platforms into its primary category. Some platforms could fit in multiple categories—choose where you think each belongs based on its core design purpose and primary use case.",
+                "zones": [
+                    {
+                        "id": "cat_clinical",
+                        "label": "CLINICAL / THERAPEUTIC"
+                    },
+                    {
+                        "id": "cat_wellness",
+                        "label": "WELLNESS & MINDFULNESS"
+                    },
+                    {
+                        "id": "cat_biofeedback",
+                        "label": "BIOFEEDBACK-ENHANCED"
+                    },
+                    {
+                        "id": "cat_specialized",
+                        "label": "EXPLORATORY & SPECIALIZED"
+                    }
+                ],
+                "items": [
+                    {
+                        "id": "p_psious",
+                        "content": "Psious",
+                        "correctZoneId": "cat_clinical",
+                        "feedback": "Correct! Specialized for VRET therapy."
+                    },
+                    {
+                        "id": "p_relievrx",
+                        "content": "RelieVRx",
+                        "correctZoneId": "cat_clinical",
+                        "feedback": "Correct! FDA-authorized clinical pain management."
+                    },
+                    {
+                        "id": "p_xrhealth",
+                        "content": "XRHealth",
+                        "correctZoneId": "cat_clinical",
+                        "feedback": "Correct! Medicare-covered clinical VR network."
+                    },
+                    {
+                        "id": "p_tripp",
+                        "content": "TRIPP",
+                        "correctZoneId": [
+                            "cat_wellness",
+                            "cat_biofeedback"
+                        ],
+                        "feedback": "Correct! Primarily wellness/mindfulness with biofeedback support."
+                    },
+                    {
+                        "id": "p_gmvr",
+                        "content": "Guided Meditation VR",
+                        "correctZoneId": "cat_wellness",
+                        "feedback": "Correct! Minimalist meditation/relaxation."
+                    },
+                    {
+                        "id": "p_naturetreks",
+                        "content": "Nature Treks VR",
+                        "correctZoneId": "cat_wellness",
+                        "feedback": "Correct! Environmental restoration and daily calm."
+                    },
+                    {
+                        "id": "p_healium",
+                        "content": "Healium",
+                        "correctZoneId": "cat_biofeedback",
+                        "feedback": "Correct! Explicit EEG/HRV biofeedback design."
+                    },
+                    {
+                        "id": "p_flowly",
+                        "content": "Flowly",
+                        "correctZoneId": [
+                            "cat_biofeedback",
+                            "cat_clinical"
+                        ],
+                        "feedback": "Correct! Biofeedback for clinical conditions (pain/anxiety)."
+                    },
+                    {
+                        "id": "p_maloka",
+                        "content": "Maloka",
+                        "correctZoneId": [
+                            "cat_specialized",
+                            "cat_clinical"
+                        ],
+                        "feedback": "Correct! Facilitated transformational journeys (often therapeutic)."
+                    },
+                    {
+                        "id": "p_soundself",
+                        "content": "Soundself",
+                        "correctZoneId": "cat_specialized",
+                        "feedback": "Correct! The 'Technodelic Loop' for altered states."
+                    },
+                    {
+                        "id": "p_wavepaths",
+                        "content": "Wavepaths",
+                        "correctZoneId": "cat_specialized",
+                        "feedback": "Correct! Therapeutic music for deep/psychedelic work."
+                    },
+                    {
+                        "id": "p_othership",
+                        "content": "Othership",
+                        "correctZoneId": "cat_specialized",
+                        "feedback": "Correct! Breathwork as consciousness exploration."
+                    },
+                    {
+                        "id": "p_supernatural",
+                        "content": "Supernatural",
+                        "correctZoneId": "cat_specialized",
+                        "feedback": "Correct! Movement-based flow states."
+                    },
+                    {
+                        "id": "p_isnessd",
+                        "content": "Isness-D",
+                        "correctZoneId": "cat_specialized",
+                        "feedback": "Correct! Mystical experiences and collective effervescence."
+                    },
+                    {
+                        "id": "p_openbrush",
+                        "content": "Open Brush",
+                        "correctZoneId": "cat_specialized",
+                        "feedback": "Correct! Creativity as contemplative practice."
+                    }
+                ]
+            }
+        },
+        {
+            "id": "module_4_5_2_bridge",
+            "title": "Bridge to Module 5",
+            "type": "progressive-disclosure",
+            "content": {
+                "sections": [
+                    {
+                        "title": "Summary & Transition",
+                        "content": "<p>Excellent work. You've just organized the Module 4 landscape the way an expert would. You've built a mental model of how platforms relate to categories and to each other.</p><p>Notice that the field isn't fixed boxes; it's a spectrum. You can now place any new platform you encounter by asking: What's its core purpose? Who does it serve? What evidence backs it?</p><p><strong>In Module 4, you learned what exists and how to navigate it.</strong></p><p><strong>In Module 5, you'll learn who builds all of this, how the field sustains itself, and where you might fit within it.</strong></p><p>The applications you just mapped are made possible by a broader ecosystem—researchers, investors, facilitators, regulators, and communities all working in relationship. Let's explore the system that makes the landscape possible.</p>",
+                        "triggerLabel": "Complete Module 4"
+                    }
+                ]
+            }
+        }
+    ]
+}

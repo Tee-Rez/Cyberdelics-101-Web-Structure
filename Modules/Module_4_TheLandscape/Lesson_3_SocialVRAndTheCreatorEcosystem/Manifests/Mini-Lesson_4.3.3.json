@@ -1,0 +1,39 @@
+{
+    "title": "Creation Tools & Distribution Channels",
+    "description": "Understanding the pipeline: how tools and distribution channels act as quality signals for facilitators.",
+    "theme": {
+        "primaryColor": "#ff00d4",
+        "fontBody": "Rajdhani, sans-serif"
+    },
+    "modules": [
+        {
+            "id": "module_4_3_3_progressive",
+            "title": "The Creator's Pipeline",
+            "type": "progressive-disclosure",
+            "content": {
+                "sections": [
+                    {
+                        "title": "Creation Engines",
+                        "content": "<p><strong>Unity:</strong> The industry standard. Flexible, massive asset library. Most commercial apps (TRIPP, Maloka) use Unity.</p><p><strong>Unreal Engine:</strong> High fidelity. Used for photorealistic nature or cinematic experiences.</p><p><strong>Open Brush:</strong> Spatial painting. Used for creative flow states.</p><p><strong>Mozilla Hubs:</strong> Web-based, runs in browser. Accessible but lower fidelity.</p>",
+                        "triggerLabel": "Distribution Channels"
+                    },
+                    {
+                        "title": "Distribution Channels",
+                        "content": "<p>Where an app lives tells you its maturity:</p><ul><li><strong>Quest Store:</strong> Vetted, polished, safe. Takes months to approve.</li><li><strong>SideQuest:</strong> Indepentent, experimental. Where innovation happens first, but 'buyer beware'.</li><li><strong>Steam:</strong> PC VR. Mid-tier vetting, home of indie experiments.</li><li><strong>itch.io:</strong> Zero gatekeeping. Raw prototypes and passion projects.</li></ul>",
+                        "triggerLabel": "The Pipeline Stages"
+                    },
+                    {
+                        "title": "The Pipeline Stages",
+                        "content": "<ol><li><strong>Prototype (itch.io):</strong> Rough concept, testing mechanics.</li><li><strong>Alpha/Beta (SideQuest):</strong> Core features working, buggy.</li><li><strong>Full Release (Steam/Quest):</strong> Polished, stable product.</li><li><strong>Expansion:</strong> Marketing, partnerships.</li><li><strong>Integration (Clinical):</strong> FDA/Insurance validation (RelieVRx).</li></ol>",
+                        "triggerLabel": "Vetting Signals"
+                    },
+                    {
+                        "title": "Vetting via Distribution",
+                        "content": "<p><strong>High Trust:</strong> Quest Store featured apps, Steam with many positive reviews.</p><p><strong>Medium Trust:</strong> SideQuest with strong dev reputation.</p><p><strong>Lower Trust:</strong> Brand new SideQuest/itch.io releases with no reviews. </p><p><strong>Sophisticated Advice:</strong> 'This is on SideQuest, so it's experimental. Expect bugs, but it's cutting edge.'</p>",
+                        "triggerLabel": "Continue to Creator Types"
+                    }
+                ]
+            }
+        }
+    ]
+}

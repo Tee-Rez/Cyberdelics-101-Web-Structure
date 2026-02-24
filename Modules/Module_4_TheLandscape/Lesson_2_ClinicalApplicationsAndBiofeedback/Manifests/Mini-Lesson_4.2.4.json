@@ -1,0 +1,161 @@
+{
+    "title": "The Four Biofeedback Types & Healium Case Study",
+    "description": "Explaining HRV, EEG, Respiration, and GSR, featuring Healium as the prime example",
+    "theme": {
+        "primaryColor": "#5900ff",
+        "fontBody": "Rajdhani, sans-serif"
+    },
+    "modules": [
+        {
+            "id": "module_4_2_4_progressive",
+            "title": "Biofeedback Types Explorer",
+            "type": "progressive-disclosure",
+            "content": {
+                "sections": [
+                    {
+                        "title": "1. Heart Rate Variability (HRV)",
+                        "content": "<p><strong>Measures:</strong> The variation in time between heartbeats. Higher HRV = resilience.</p><p><strong>Devices:</strong> Apple Watch, Polar H10.</p><p><strong>Training Goal:</strong> Stress management, emotional regulation.</p><p><strong>VR Response:</strong> As HRV increases, the environment expands and becomes more vibrant (e.g., flowers blooming), rewarding your calm state.</p>",
+                        "media": {
+                            "type": "image",
+                            "src": "placeholder-hrv.jpg",
+                            "alt": "User with Apple Watch in VR, visualization of heart rate coherence",
+                            "position": "left",
+                            "aiPrompt": "Person with Apple Watch in VR headset, calm expression, subtle heart rate visualization overlay showing coherent waveform, soft blue/green lighting, modern wellness tech aesthetic, 16:9 aspect ratio"
+                        },
+                        "triggerLabel": "Next: EEG"
+                    },
+                    {
+                        "title": "2. EEG (Brainwaves)",
+                        "content": "<p><strong>Measures:</strong> Brainwave frequencies (Alpha, Beta, Theta, Gamma).</p><p><strong>Devices:</strong> Muse headband, OpenBCI.</p><p><strong>Training Goal:</strong> Focus, deep meditation, anxiety reduction.</p><p><strong>VR Response:</strong> High Alpha (relaxed awareness) might make the environment luminous and spacious. High Beta (stress/busy mind) might cause visual noise or storms.</p>",
+                        "triggerLabel": "Next: Respiration"
+                    },
+                    {
+                        "title": "3. Respiration (Breathing)",
+                        "content": "<p><strong>Measures:</strong> Rate and depth of breathing.</p><p><strong>Devices:</strong> Chest belt, pressure sensors.</p><p><strong>Training Goal:</strong> Anxiety management, vagus nerve stimulation.</p><p><strong>VR Response:</strong> The world breathes with you. Inhale = environment expands/brightens; Exhale = contracts/settles. Synchronization creates deep regulation.</p>",
+                        "triggerLabel": "Next: GSR"
+                    },
+                    {
+                        "title": "4. Galvanic Skin Response (GSR)",
+                        "content": "<p><strong>Measures:</strong> Skin conductance (sweat gland activity) reflecting emotional arousal.</p><p><strong>Devices:</strong> Empatica wristband, pip.</p><p><strong>Training Goal:</strong> Arousal regulation, stress awareness.</p><p><strong>VR Response:</strong> High arousal makes the world intense/fast; low arousal makes it calm/slow.</p>",
+                        "triggerLabel": "Healium Case Study"
+                    },
+                    {
+                        "title": "Case Study: Healium",
+                        "content": "<p><strong>Healium</strong> is the premier example of the cybernetic loop in action. Created by Sarah Hill (former journalist struggling with panic attacks).</p><ul><li><strong>Mechanism:</strong> Uses Muse (EEG) or Apple Watch (HRV) to power virtual environments. You literally 'grow flowers' or 'hatch butterflies' by calming your mind.</li><li><strong>Credibility:</strong> Mayo Clinic partnership, AFWERX military contract, peer-reviewed studies showing anxiety reduction in 4 minutes.</li></ul>",
+                        "media": {
+                            "type": "image",
+                            "src": "placeholder-healium.jpg",
+                            "alt": "Healium interface showing brainwaves powering a virtual transformation",
+                            "position": "right",
+                            "aiPrompt": "Healium VR interface screenshot or recreation showing a user 'powering' a virtual transformation (e.g., glitchy winter landscape turning into blooming spring) using a brainwave monitor, overlay of EEG data, sense of agency and magic powered by biology, 16:9 aspect ratio"
+                        },
+                        "triggerLabel": "Take Knowledge Check"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "quiz_4_2_4",
+            "title": "Check Your Understanding",
+            "type": "option-selector",
+            "config": {
+                "mode": "single",
+                "style": "card",
+                "questions": [
+                    {
+                        "question": "<h3>Focus Training Recommendation</h3><p>A client wants to train <strong>sustained attention</strong> and reduce mind-wandering. Which biofeedback type is best?</p>",
+                        "options": [
+                            {
+                                "id": "q1_a",
+                                "label": "HRV (Heart Rate Variability)",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_b",
+                                "label": "EEG (Brainwaves)",
+                                "correct": true
+                            },
+                            {
+                                "id": "q1_c",
+                                "label": "Respiration",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_d",
+                                "label": "GSR (Skin Conductance)",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "q1_a": "<p>HRV measures stress resilience, which supports focus, but doesn't directly track attention states.</p>",
+                            "q1_c": "<p>Breathing supports focus, but doesn't measure cognitive attention state directly.</p>",
+                            "q1_d": "<p>GSR measures emotional arousal, which is ambiguous (could be excitement or anxiety).</p>",
+                            "q1_b": "<p><strong>Correct!</strong> EEG directly measures brain states (Alpha, Beta, Gamma) associated with attention and concentration. It is the primary tool for focus training.</p>"
+                        }
+                    },
+                    {
+                        "question": "<h3>Healium vs. Meditation Apps</h3><p>What makes Healium fundamentally different from apps like Calm or Headspace?</p>",
+                        "options": [
+                            {
+                                "id": "q2_a",
+                                "label": "It uses VR (Immersion)",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_b",
+                                "label": "The Biofeedback Loop",
+                                "correct": true
+                            },
+                            {
+                                "id": "q2_c",
+                                "label": "Better Research Backing",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_d",
+                                "label": "Therapeutic Design",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "q2_a": "<p>VR is just the medium. You can have VR meditation without responsiveness.</p>",
+                            "q2_c": "<p>Research is great, but Headspace has research too. It's not the *functional* difference.</p>",
+                            "q2_d": "<p>Standard apps are also used therapeutically.</p>",
+                            "q2_b": "<p><strong>Correct!</strong> The Biofeedback Loop means your body controls the environment. In standard apps, content is passive. In Healium, the world changes *because* you changed.</p>"
+                        }
+                    },
+                    {
+                        "question": "<h3>System Reliability (Advanced)</h3><p>If a biofeedback sensor is inaccurate or the algorithm misinterprets your state, what happens?</p>",
+                        "options": [
+                            {
+                                "id": "q3_a",
+                                "label": "The system crashes.",
+                                "correct": false
+                            },
+                            {
+                                "id": "q3_b",
+                                "label": "You verify the data manually.",
+                                "correct": false
+                            },
+                            {
+                                "id": "q3_c",
+                                "label": "You learn the wrong patterns.",
+                                "correct": true
+                            },
+                            {
+                                "id": "q3_d",
+                                "label": "Placebo effect fixes it.",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "q3_a": "<p>The system usually keeps running, just with bad data.</p>",
+                            "q3_d": "<p>Placebo isn't magic. Bad feedback teaches bad habits.</p>",
+                            "q3_c": "<p><strong>Correct!</strong> If the mirror is distorted, you adjust based on false info. You might learn to tense up if the system incorrectly rewards tension as 'calm'. Accuracy matters.</p>"
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

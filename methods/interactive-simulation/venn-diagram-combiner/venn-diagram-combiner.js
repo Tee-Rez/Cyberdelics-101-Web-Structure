@@ -17,10 +17,10 @@
 
         defaults: {
             mode: 'combined', // 'combined' | 'vesica-piscis'
-            circleRadius: 210,
+            circleRadius: 145,
             maxDistance: 0.45, // % of width
             particleCount: 20,
-            particleDistance: 60, // Scaled with radius (was 20 for r=70, now 60 for r=210)
+            particleDistance: 43, // Scaled with radius (43 for r=150)
             labelFadeThreshold: 0.8,
             mergeProgress: 0
         },
@@ -139,10 +139,10 @@
             this._state.isMobile = width < 600;
 
             if (this._state.isMobile) {
-                this.params.circleRadius = Math.min(140, width * 0.35); // Mobile: ~35%
+                this.params.circleRadius = Math.min(120, width * 0.30); // Mobile: ~30% of width
                 this.params.maxDistance = 0.6;
             } else {
-                this.params.circleRadius = Math.min(300, height * 0.35); // Desktop: ~35% (down from 45%)
+                this.params.circleRadius = Math.min(160, height * 0.22); // Desktop: ~22% of height (~145px at 660px tall)
                 this.params.maxDistance = 0.55;
             }
 

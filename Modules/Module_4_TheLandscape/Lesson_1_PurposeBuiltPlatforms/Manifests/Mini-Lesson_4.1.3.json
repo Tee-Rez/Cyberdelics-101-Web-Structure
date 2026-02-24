@@ -1,0 +1,365 @@
+{
+    "title": "Maloka & Emerging Platforms",
+    "description": "Explaining the Facilitated Journey model (Maloka), biofeedback for chronic conditions (Flowly), and peer-support social VR (Innerworld)",
+    "theme": {
+        "primaryColor": "#5900ff",
+        "fontBody": "Rajdhani, sans-serif"
+    },
+    "modules": [
+        {
+            "id": "module_4_1_3_progressive",
+            "title": "Depth and Breadth",
+            "type": "progressive-disclosure",
+            "content": {
+                "sections": [
+                    {
+                        "title": "Maloka: The Facilitated Journey",
+                        "content": "<p>Maloka is not a meditation app—it's a therapeutic journey platform. Designed by clinical psychologists and psychedelic therapy practitioners, it uses VR to create a container for high-intensity consciousness work.</p><ul><li><strong>Key Distinction:</strong> Requires a trained facilitator.</li><li><strong>Use Case:</strong> Trauma, depression, existential distress, transformation.</li><li><strong>Model:</strong> Client in VR, Facilitator monitoring (tablet/dashboard).</li></ul>",
+                        "media": {
+                            "type": "image",
+                            "src": "placeholder-maloka.jpg",
+                            "alt": "Split-screen: Facilitator monitoring client in VR",
+                            "position": "full-width",
+                            "aiPrompt": "Split-screen composition showing two perspectives of a Maloka session — left side shows facilitator at monitoring station with tablet displaying client's biometric data and session timeline, right side shows client in VR headset with serene focused expression, both in warm softly-lit therapeutic space, 16:9 aspect ratio"
+                        },
+                        "triggerLabel": "The 3-Phase Structure"
+                    },
+                    {
+                        "title": "Structure: Preparation, Journey, Integration",
+                        "content": "<p>Maloka follows the psychedelic therapy protocol:</p><ol><li><strong>Preparation (30-60m):</strong> Intention setting, safety protocols, building trust.</li><li><strong>Journey (60-90m):</strong> The immersive VR experience. Facilitator monitors and adjusts pacing in real-time.</li><li><strong>Integration (30-60m):</strong> Processing the experience. Making meaning of the insights.</li></ol><p><strong>Total time:</strong> ~2.5-3.5 hours. <strong>Cost:</strong> ~$150-300/session.</p>",
+                        "triggerLabel": "The Facilitator's Role"
+                    },
+                    {
+                        "title": "The Facilitator's Role",
+                        "content": "<p>The facilitator isn't just a tech support provider. They hold the therapeutic container.</p><ul><li>Monitor body language and breathing</li><li>Track biometric data (if used)</li><li>Adjust intensity/pacing remotely</li><li>Provide grounding interventions if needed</li></ul><p>Training (40-100 hours) covers trauma-informed practice and VR ethics. Facilitators may or may not be licensed clinicians, depending on local regulations and scope.</p>",
+                        "triggerLabel": "Flowly: Clinical Biofeedback"
+                    },
+                    {
+                        "title": "Flowly: Biofeedback for Chronic Conditions",
+                        "content": "<p>Flowly sits between clinical and consumer worlds. It targets chronic pain and anxiety using real-time biofeedback to teach nervous system regulation.</p><ul><li><strong>Mechanism:</strong> VR environment expands/contracts based on heart rate/breathing (requires sensor like Muse).</li><li><strong>Status:</strong> Used in some pain clinics; subscription-based consumer access.</li><li><strong>Key Takeaway:</strong> Without sensors, it's just visuals. With sensors, it's a training tool.</li></ul>",
+                        "triggerLabel": "Innerworld: Peer Support"
+                    },
+                    {
+                        "title": "Innerworld: Peer-Support Social VR",
+                        "content": "<p>Innerworld flips the model: Guides are community members with lived experience, not professionals. It offers group spaces for grief, anxiety, and recovery.</p><ul><li><strong>Model:</strong> Peer-led social VR (acquired by XRHealth in 2023).</li><li><strong>Pros:</strong> Authentic connection, accessible/low-cost.</li><li><strong>Cons:</strong> Variable quality, not for acute crisis.</li><li><strong>Question:</strong> Where is the line between peer support and professional care?</li></ul>",
+                        "media": {
+                            "type": "image",
+                            "src": "placeholder-innerworld.jpg",
+                            "alt": "Innerworld peer support circle",
+                            "position": "right",
+                            "aiPrompt": "Warm inviting social VR environment showing diverse group of avatars in circle formation in virtual cozy space, avatars have gentle expressive body language, sense of peer connection rather than expert-to-student, inclusive aesthetic, 16:9 aspect ratio"
+                        },
+                        "triggerLabel": "Model Comparison"
+                    },
+                    {
+                        "title": "Three Models, Three Trade-offs",
+                        "content": "<div style='display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; font-size: 0.9em;'><div style='background: rgba(89,0,255,0.1); padding: 10px; border-radius: 8px;'><strong>Solo Wellness</strong><br>(TRIPP/GMVR)<br>+ Accessible, consistency<br>- No human support</div><div style='background: rgba(0,217,255,0.1); padding: 10px; border-radius: 8px;'><strong>Facilitated Depth</strong><br>(Maloka)<br>+ Deep safety, transformation<br>- Expensive, complex</div><div style='background: rgba(255,0,128,0.1); padding: 10px; border-radius: 8px;'><strong>Peer Community</strong><br>(Innerworld)<br>+ Authentic connection<br>- Variable quality</div></div>",
+                        "triggerLabel": "Start Client Scenarios"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "module_4_1_3_scenario",
+            "title": "Scenario: Three Clients, Three Platforms",
+            "type": "scenario-based",
+            "content": {
+                "scenes": [
+                    {
+                        "id": "intro",
+                        "narrative": "<h3>The Facilitator's Challenge</h3><p>It's Monday morning. You have three consultations. Your job is to recommend the right platform and level of support for each.</p><ul style='text-align:left; font-size:0.9em;'><li><strong>Jordan (41):</strong> Stressed exec, wants consistency, failed with phone apps.</li><li><strong>Maya (37):</strong> Therapist, grieving brother, wants depth/transformation.</li><li><strong>David (52):</strong> Chronic pain, skeptical, not tech-savvy, low budget.</li></ul>",
+                        "choices": [
+                            {
+                                "id": "start",
+                                "label": "Consult with Jordan",
+                                "outcome": "jordan_decision"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "jordan_decision",
+                        "narrative": "<h3>Propfile: Jordan</h3><p><strong>Needs:</strong> Decompression, consistency.<br><strong>Constraint:</strong> 'I forget to do it.'<br><strong>Budget:</strong> ~$15/mo.</p><p><strong>Recommendation?</strong></p>",
+                        "choices": [
+                            {
+                                "id": "j_tripp",
+                                "label": "TRIPP (Engagement)",
+                                "outcome": "jordan_optimal"
+                            },
+                            {
+                                "id": "j_gmvr",
+                                "label": "Guided Meditation VR (Free)",
+                                "outcome": "jordan_suboptimal_gmvr"
+                            },
+                            {
+                                "id": "j_maloka",
+                                "label": "Maloka (Facilitated)",
+                                "outcome": "jordan_suboptimal_maloka"
+                            },
+                            {
+                                "id": "j_inner",
+                                "label": "Innerworld (Peer)",
+                                "outcome": "jordan_suboptimal_inner"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "jordan_optimal",
+                        "narrative": "<h3>✓ Optimal: TRIPP</h3><p>'Based on your need for consistency, TRIPP is designed to solve the 'I forget' problem through gamification and tracking.'</p><p><strong>Why:</strong> Matches habits, budget, and tech comfort. Wellness scope.</p>",
+                        "choices": [
+                            {
+                                "id": "next_maya",
+                                "label": "Consult with Maya",
+                                "outcome": "maya_decision"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "jordan_suboptimal_maloka",
+                        "narrative": "<h3>⚠ Overkill</h3><p>Recommending a $200 facilitated session for basic stress relief is like prescribing an MRI for a stubbed toe. Jordan would feel overwhelmed and quit.</p>",
+                        "choices": [
+                            {
+                                "id": "retry_j",
+                                "label": "Try Again",
+                                "outcome": "jordan_decision"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "jordan_suboptimal_gmvr",
+                        "narrative": "<h3>⚠ Missing the Mark</h3><p>GMVR lacks the structure and reminders Jordan specifically asked for. He failed with phone apps because of this—don't repeat the mistake.</p>",
+                        "choices": [
+                            {
+                                "id": "retry_j_g",
+                                "label": "Try Again",
+                                "outcome": "jordan_decision"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "jordan_suboptimal_inner",
+                        "narrative": "<h3>⚠ Mismatch</h3><p>Jordan needs stress decompression, not social support. He wants to unwind, not talk to strangers.</p>",
+                        "choices": [
+                            {
+                                "id": "retry_j_i",
+                                "label": "Try Again",
+                                "outcome": "jordan_decision"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "maya_decision",
+                        "narrative": "<h3>Profile: Maya</h3><p><strong>Context:</strong> Therapist processing deep grief.<br><strong>Goal:</strong> 'Go deeper than meditation.'<br><strong>Status:</strong> Stable, ready for intensity.</p><p><strong>Recommendation?</strong></p>",
+                        "choices": [
+                            {
+                                "id": "m_tripp_deep",
+                                "label": "TRIPP (Deep Mode)",
+                                "outcome": "maya_suboptimal_solo"
+                            },
+                            {
+                                "id": "m_gmvr",
+                                "label": "Guided Meditation VR",
+                                "outcome": "maya_suboptimal_solo"
+                            },
+                            {
+                                "id": "m_maloka",
+                                "label": "Maloka (Facilitated)",
+                                "outcome": "maya_optimal"
+                            },
+                            {
+                                "id": "m_inner",
+                                "label": "Innerworld (Peer)",
+                                "outcome": "maya_suboptimal_peer"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "maya_optimal",
+                        "narrative": "<h3>✓ Optimal: Maloka</h3><p>'Grief at this depth deserves a professional container. I'll facilitate a session to hold space while you explore.'</p><p><strong>Why:</strong> Honors her experience level and need for safety in deep work.</p>",
+                        "choices": [
+                            {
+                                "id": "next_david",
+                                "label": "Consult with David",
+                                "outcome": "david_decision"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "maya_suboptimal_solo",
+                        "narrative": "<h3>⚠ Too Shallow</h3><p>Solo apps are a lateral move for someone with her experience. Maya has earned depth work—don't hold her back with wellness tools.</p>",
+                        "choices": [
+                            {
+                                "id": "retry_m",
+                                "label": "Try Again",
+                                "outcome": "maya_decision"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "maya_suboptimal_peer",
+                        "narrative": "<h3>⚠ Insufficient Container</h3><p>Peer support is great, but for deep grief processing, a professional container (Maloka) is safer and more effective than a social group.</p>",
+                        "choices": [
+                            {
+                                "id": "retry_m_p",
+                                "label": "Try Again",
+                                "outcome": "maya_decision"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "david_decision",
+                        "narrative": "<h3>Profile: David</h3><p><strong>Context:</strong> Chronic pain (12 yrs), skeptical, low budget.<br><strong>Need:</strong> Evidence-based relief, not 'games'.</p><p><strong>Recommendation?</strong></p>",
+                        "choices": [
+                            {
+                                "id": "d_tripp",
+                                "label": "TRIPP (Calm)",
+                                "outcome": "david_suboptimal_tripp"
+                            },
+                            {
+                                "id": "d_flowly",
+                                "label": "Flowly (Biofeedback)",
+                                "outcome": "david_optimal"
+                            },
+                            {
+                                "id": "d_maloka",
+                                "label": "Maloka (Deep Work)",
+                                "outcome": "david_suboptimal_maloka"
+                            },
+                            {
+                                "id": "d_refer",
+                                "label": "Refer Back to Doctor",
+                                "outcome": "david_suboptimal_refer"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "david_optimal",
+                        "narrative": "<h3>✓ Optimal: Flowly</h3><p>'Flowly is trained to regulate pain signals. It's medical-grade biofeedback, not just a game. Let's see if your clinic has a headset to try.'</p><p><strong>Why:</strong> Addresses the valid medical need with the specific tool designed for it.</p>",
+                        "choices": [
+                            {
+                                "id": "finish",
+                                "label": "Complete Scenarios",
+                                "outcome": "scenario_complete"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "david_suboptimal_tripp",
+                        "narrative": "<h3>⚠ Under-Recommending</h3><p>Recommending meditation for chronic pain is like prescribing yoga for a broken leg. David needs a clinical-grade tool (Flowly), not general wellness.</p>",
+                        "choices": [
+                            {
+                                "id": "retry_d",
+                                "label": "Try Again",
+                                "outcome": "david_decision"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "david_suboptimal_refer",
+                        "narrative": "<h3>⚠ Missed Opportunity</h3><p>Yes, involve his doctor, but don't send him away empty-handed. Be the bridge—suggest Flowly *for* him to discuss with his doctor.</p>",
+                        "choices": [
+                            {
+                                "id": "retry_d_r",
+                                "label": "Try Again",
+                                "outcome": "david_decision"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "david_suboptimal_maloka",
+                        "narrative": "<h3>⚠ Mismatch</h3><p>Deep psychological work might be valuable later, but his primary barrier is physical pain and cost. Address the immediate need first.</p>",
+                        "choices": [
+                            {
+                                "id": "retry_d_m",
+                                "label": "Try Again",
+                                "outcome": "david_decision"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "scenario_complete",
+                        "narrative": "<h3>Simulation Complete</h3><p>You matched Jordan to structure (TRIPP), Maya to depth (Maloka), and David to clinical specificity (Flowly). You're ready to facilitate.</p>",
+                        "choices": [
+                            {
+                                "id": "continue",
+                                "label": "Proceed to Quiz",
+                                "outcome": "complete"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "quiz_4_1_3",
+            "title": "Concept Check: Platform Models",
+            "type": "option-selector",
+            "config": {
+                "mode": "single",
+                "style": "card",
+                "questions": [
+                    {
+                        "question": "<h3>Maloka vs. Others</h3><p>What makes Maloka fundamentally different from TRIPP or Guided Meditation VR?</p>",
+                        "options": [
+                            {
+                                "id": "q1_a",
+                                "label": "Better graphics",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_b",
+                                "label": "Professional Facilitation & Structure",
+                                "correct": true
+                            },
+                            {
+                                "id": "q1_c",
+                                "label": "More expensive = better",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_d",
+                                "label": "Clinical research backing",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "q1_a": "<p>Visual quality isn't the difference. The distinction is structural.</p>",
+                            "q1_c": "<p>Price reflects the human labor involved, not inherent quality.</p>",
+                            "q1_d": "<p>TRIPP also has research backing. The unique factor is the human guide.</p>",
+                            "q1_b": "<p><strong>Correct!</strong> Maloka uses a human facilitator and a 3-phase journey structure (Prep-Journey-Integration).</p>"
+                        }
+                    },
+                    {
+                        "question": "<h3>Peer Support Model</h3><p>What is the primary advantage and risk of Innerworld's peer-support model?</p>",
+                        "options": [
+                            {
+                                "id": "q2_a",
+                                "label": "Pro: Free / Con: Wild west",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_b",
+                                "label": "Pro: Authentic Connection / Con: Variable Quality",
+                                "correct": true
+                            },
+                            {
+                                "id": "q2_c",
+                                "label": "Pro: Convenience / Con: Less effective",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_d",
+                                "label": "Pro: No training / Con: Replaces therapy",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "q2_a": "<p>It's not just about cost, and safety standards do exist.</p>",
+                            "q2_c": "<p>Effectiveness is different, not 'less'. Different tools for different jobs.</p>",
+                            "q2_b": "<p><strong>Correct!</strong> The power is shared lived experience. The risk is that volunteers have different skill levels and aren't equipped for acute crises.</p>"
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

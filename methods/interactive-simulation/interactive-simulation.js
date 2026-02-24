@@ -31,9 +31,14 @@
                     isRunning: true,
                     rafId: null,
                     lastTime: 0,
-                    // Use options first, then data attribute
-                    enginePath: options.engine || (container ? container.dataset.engine : null)
+                    // Use options first, then content-nested, then data attribute
+                    enginePath: options.engine || (options.content && options.content.engine) || (container ? container.dataset.engine : null)
                 };
+
+                // Auto-generate viewport structure if container is empty
+                if (!container.querySelector('.sim-viewport')) {
+                    container.innerHTML = '<div class="sim-viewport"></div><div class="sim-controls"></div>';
+                }
 
                 // Elements
                 this._elements = {
@@ -50,7 +55,6 @@
                     this._resizeCanvas();
                     window.addEventListener('resize', () => this._resizeCanvas());
                 } else {
-                    // We need at least a viewport
                     console.error('[InteractiveSimulation] No .sim-viewport found in', container);
                     return;
                 }
@@ -126,15 +130,18 @@
                 // Instantiate - Creates a copy of the engine definition for this instance
                 this._state.engine = Object.create(EngineClass);
 
-                // Get Defaults and merge with custom params from options
+                // Get Defaults and merge with custom params from options (check both top-level and content-nested)
+                const opts = this._state.options;
+                const contentParams = (opts.content && opts.content.params) || {};
                 this._state.params = {
                     ...EngineClass.defaults,
-                    ...(this._state.options.params || {})
+                    ...(opts.params || contentParams)
                 };
 
-                // CRITICAL FIX: Pass data from options into params so engines can access it
-                if (this._state.options.data) {
-                    this._state.params.data = this._state.options.data;
+                // Pass data from options into params so engines can access it
+                const contentData = (opts.content && opts.content.params && opts.content.params.data) || opts.data;
+                if (contentData) {
+                    this._state.params.data = contentData;
                 }
 
                 // Build UI for Params

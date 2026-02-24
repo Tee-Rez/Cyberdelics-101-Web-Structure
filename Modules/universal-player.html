@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Universal Player Shell</title>
+    <title>Cyberdelics 101 Lesson Player</title>
 
     <!-- CORE STYLES -->
     <link rel="stylesheet" href="../core/styles.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../methods/interactive-simulation/venn-diagram-combiner/venn-diagram-combiner.css">
     <link rel="stylesheet" href="../methods/interactive-simulation/spectrum-explorer/spectrum-explorer.css">
     <link rel="stylesheet" href="../methods/option-selector/option-selector.css">
+    <link rel="stylesheet" href="../methods/knowledge-construction/knowledge-construction.css">
 
     <style>
         body {
@@ -45,6 +46,14 @@
             z-index: 9999;
             transition: opacity 0.5s;
         }
+
+        .spinner {
+            margin-top: 20px;
+            font-size: 0.9em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            opacity: 0.8;
+        }
     </style>
 </head>
 
@@ -52,7 +61,7 @@
 
     <div id="loader">
         <h2>CONNECTING TO NODE...</h2>
-        <div class="spinner">Waiting for Manifest Injection...</div>
+        <div class="spinner">Initializing Neural Interface...</div>
     </div>
 
     <div id="lesson-root"></div>
@@ -75,60 +84,78 @@
     <script src="../methods/interactive-simulation/venn-diagram-combiner/venn-diagram-combiner.js"></script>
     <script src="../methods/interactive-simulation/spectrum-explorer/spectrum-explorer.js"></script>
     <script src="../methods/option-selector/option-selector.js"></script>
+    <script src="../methods/knowledge-construction/knowledge-construction.js"></script>
 
     <!-- THE ENGINE -->
     <script src="../core/lesson-runner.js"></script>
 
-    <!-- INJECTION LISTENER SCRIPT -->
+    <!-- UNIFIED LOADER SCRIPT -->
     <script>
         (function () {
-            console.log('[UniversalPlayer] Booting... Waiting for signal.');
+            console.log('[Player] Booting... Waiting for manifest injection or local test-manifest.json');
 
-            // 1. Initialize Engine (but do not load lesson)
+            // 1. Initialize Engine
             LessonRunner.init('#lesson-root');
 
-            // 2. Initialize StateManager (so it can listen for save requests)
+            // 2. Initialize StateManager
             if (window.StateManager) window.StateManager.init();
 
-            // 3. Listen for Manifest from Parent (Framer)
+            let manifestLoaded = false;
+
+            // 3. Define Loader Removal
+            const removeLoader = () => {
+                const loader = document.getElementById('loader');
+                if (loader) {
+                    loader.style.opacity = '0';
+                    setTimeout(() => loader.remove(), 500);
+                }
+            };
+
+            // 4. Handle Manifest Loading
+            const loadManifest = (manifest, source) => {
+                if (manifestLoaded) return;
+                manifestLoaded = true;
+                console.log(`[Player] Manifest received via ${source}!`);
+
+                try {
+                    if (typeof manifest === 'string') manifest = JSON.parse(manifest);
+                    removeLoader();
+                    LessonRunner.loadLesson(manifest);
+                } catch (e) {
+                    console.error(`[Player] Failed to load manifest from ${source}:`, e);
+                    const loader = document.getElementById('loader');
+                    if (loader) {
+                        loader.innerHTML = `<h2 style="color:red">ERROR LOADING MANIFEST</h2><pre>${e.message}</pre>`;
+                    }
+                }
+            };
+
+            // 5. Listen for Framer Messages
             window.addEventListener('message', (event) => {
                 const msg = event.data;
-
-                // Security Check (Optional: check event.origin in production)
-                // console.log('Received message:', msg);
-
                 if (msg && msg.type === 'LOAD_MANIFEST') {
-                    console.log('[UniversalPlayer] Manifest received!');
-
-                    try {
-                        let manifest = msg.manifest;
-
-                        // Parse if string (safety)
-                        if (typeof manifest === 'string') {
-                            manifest = JSON.parse(manifest);
-                        }
-
-                        // Remove Loader
-                        const loader = document.getElementById('loader');
-                        loader.style.opacity = '0';
-                        setTimeout(() => loader.remove(), 500);
-
-                        // START THE LESSON
-                        LessonRunner.loadLesson(manifest);
-
-                    } catch (e) {
-                        console.error('[UniversalPlayer] Failed to load manifest:', e);
-                        document.getElementById('loader').innerHTML = `<h2 style="color:red">ERROR LOADING MANIFEST</h2><pre>${e.message}</pre>`;
-                    }
+                    loadManifest(msg.manifest, 'Framer Message');
                 }
             });
 
-            // 4. Signal readiness to Parent
-            // This tells Framer "I am ready to receive the JSON now"
-            // (Use timeout to ensure Parent has time to attach listener if needed)
+            // 6. Signal readiness to Parent (Framer)
             setTimeout(() => {
                 window.parent.postMessage({ type: 'PLAYER_READY' }, '*');
             }, 500);
+
+            // 7. Try Local Fetch (for Test Harness)
+            fetch('./test-manifest.json')
+                .then(response => {
+                    if (response.ok) return response.json();
+                })
+                .then(manifest => {
+                    if (manifest) {
+                        loadManifest(manifest, 'Local Fetch');
+                    }
+                })
+                .catch(() => {
+                    // Ignore fetch errors - we might be in Framer where this file doesn't exist
+                });
 
         })();
     </script>

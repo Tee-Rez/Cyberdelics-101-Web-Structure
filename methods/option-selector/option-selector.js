@@ -34,7 +34,9 @@
 
             onInit: function (container, options = {}) {
                 // 0. Robust data loading (normalize questions)
-                const questions = options.questions || (options.content && options.content.questions);
+                const questions = options.questions
+                    || (options.content && options.content.questions)
+                    || (options.config && options.config.questions);
 
                 if (questions && Array.isArray(questions)) {
                     this._questions = questions;

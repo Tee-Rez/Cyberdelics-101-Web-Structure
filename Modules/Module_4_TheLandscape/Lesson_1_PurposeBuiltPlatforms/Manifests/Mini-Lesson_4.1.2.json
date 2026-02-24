@@ -1,0 +1,136 @@
+{
+    "title": "TRIPP & Guided Meditation VR: Two Wellness Philosophies",
+    "description": "Comparing engagement-focused (TRIPP) vs minimalist (GMVR) approaches to VR wellness",
+    "theme": {
+        "primaryColor": "#5900ff",
+        "fontBody": "Rajdhani, sans-serif"
+    },
+    "modules": [
+        {
+            "id": "module_4_1_2_progressive",
+            "title": "Two Philosophies",
+            "type": "progressive-disclosure",
+            "content": {
+                "sections": [
+                    {
+                        "title": "TRIPP: The Engagement Philosophy",
+                        "content": "<p>TRIPP operates on the belief that traditional mindfulness can feel too slow or vague for modern minds. Its answer is <strong>wellness gamified</strong>. Every session gives feedback, tracks streaks, adapts to your mood, and rewards consistency.</p><ul><li><strong>Founded:</strong> 2017 by Nanea Reeves</li><li><strong>Key Feature:</strong> Visual progress tracking to combat 'meditation boredom'</li><li><strong>Platforms:</strong> Quest, PSVR2, Pico (~$15/mo)</li></ul>",
+                        "media": {
+                            "type": "image",
+                            "src": "placeholder-tripp.jpg",
+                            "alt": "Abstract colorful immersive VR environment representing TRIPP's aesthetic",
+                            "position": "left",
+                            "aiPrompt": "Abstract colorful immersive VR environment representing TRIPP's aesthetic — flowing geometric patterns in vibrant purple, teal, pink, orange gradients, sense of movement and energy, kaleidoscopic visual richness, floating particles and luminous shapes, engaging and dynamic feeling, 16:9 aspect ratio"
+                        },
+                        "triggerLabel": "See TRIPP Modes"
+                    },
+                    {
+                        "title": "TRIPP: The Four Modes",
+                        "content": "<p>TRIPP organizes experiences by intended state:</p><ul><li><strong>CALM:</strong> Stress reduction, gentle visuals (5-10 min)</li><li><strong>FOCUS:</strong> Attention training, dynamic environments (10-15 min)</li><li><strong>SLEEP:</strong> Wind-down protocols, dimming visuals (15-30 min)</li><li><strong>DEEP:</strong> Extended altered states, intense visuals (20-40 min) — touches the 'Exploratory' boundary</li></ul><p>The platform adapts based on mood reports and optional biometric data.</p>",
+                        "triggerLabel": "Gamification & Evidence"
+                    },
+                    {
+                        "title": "TRIPP: Gamification & Evidence",
+                        "content": "<p>TRIPP tracks streaks, minutes practiced, and mood shifts. Research backs this approach: a 2021 study with OHSU showed significant anxiety reduction from a single session. It also integrates with sensors (Apple Watch, Muse) for biofeedback, bridging the Wellness and Biofeedback categories.</p>",
+                        "triggerLabel": "Guided Meditation VR"
+                    },
+                    {
+                        "title": "Guided Meditation VR: The Minimalist Philosophy",
+                        "content": "<p>Guided Meditation VR (GMVR) takes the opposite stance: remove the noise. No gamification, no streaks, no accounts required. Just 27+ photorealistic environments and optional narration.</p><ul><li><strong>Philosophy:</strong> 'Doing less is doing more'</li><li><strong>Content:</strong> Nature scenes (forests, beaches) + abstract spaces</li><li><strong>Cost:</strong> Generous free tier, Premium ~$10/mo</li></ul>",
+                        "media": {
+                            "type": "image",
+                            "src": "placeholder-gmvr.jpg",
+                            "alt": "Serene photorealistic VR nature environment",
+                            "position": "right",
+                            "aiPrompt": "Serene photorealistic VR nature environment — dense forest with sunlight filtering through tall trees, soft rays of light creating god rays through mist, ferns and moss on forest floor, sense of deep quiet and natural beauty, no human-made objects or UI elements, 16:9 aspect ratio"
+                        },
+                        "triggerLabel": "The 'No-Features' Feature"
+                    },
+                    {
+                        "title": "GMVR: The No-Features Feature",
+                        "content": "<p>GMVR appeals to experienced meditators who just want a container, or anyone overwhelmed by 'app culture.' The trade-off? Beginners can feel lost. Without structure or feedback, they might sit in a virtual forest for 30 seconds, think 'now what?', and quit. GMVR assumes you already know how to meditate; TRIPP assumes you're learning.</p>",
+                        "triggerLabel": "Comparison Summary"
+                    },
+                    {
+                        "title": "TRIPP vs. GMVR: When to Recommend",
+                        "content": "<div style='display: grid; grid-template-columns: 1fr 1fr; gap: 20px;'><div style='background: rgba(89,0,255,0.1); padding: 15px; border-radius: 8px;'><strong>Recommend TRIPP when:</strong><ul><li>User needs structure/gamification</li><li>User wants biometric integration</li><li>User values visual richness</li><li>Budget allows ($15/mo)</li></ul></div><div style='background: rgba(0,217,255,0.1); padding: 15px; border-radius: 8px;'><strong>Recommend GMVR when:</strong><ul><li>User has established practice</li><li>User prefers silence/minimalism</li><li>User dislikes gamification</li><li>Budget is limited (Free tier)</li></ul></div></div>",
+                        "triggerLabel": "Take Comparison Quiz"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "quiz_4_1_2",
+            "title": "Comparison Quiz: Philosophy Matching",
+            "type": "option-selector",
+            "config": {
+                "mode": "single",
+                "style": "card",
+                "questions": [
+                    {
+                        "question": "<h3>Scenario 1: Jamie</h3><p>Jamie (28) is a 'visual learner who needs structure.' They've tried phone apps but quit because they couldn't tell if it was 'working.' They want to build a consistent practice and don't mind paying $15/mo for something engaging.</p><p><strong>Which platform should you recommend?</strong></p>",
+                        "options": [
+                            {
+                                "id": "q1_a",
+                                "label": "TRIPP",
+                                "correct": true
+                            },
+                            {
+                                "id": "q1_b",
+                                "label": "Guided Meditation VR (Free)",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_c",
+                                "label": "Guided Meditation VR (Premium)",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_d",
+                                "label": "Neither (needs in-person)",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "q1_b": "<p>Not the best fit. GMVR removes tracking and gamification, which would likely recreate the 'lack of progress' feeling Jamie struggled with on phone apps.</p>",
+                            "q1_c": "<p>Incorrect. Even the premium tier of GMVR focuses on environments, not the structured feedback Jamie explicitly requested.</p>",
+                            "q1_d": "<p>Not necessary. Jamie is ready for VR — they just need the right tool. Their issue is consistency and motivation, which VR can address directly.</p>",
+                            "q1_a": "<p><strong>Correct!</strong> Jamie is the textbook TRIPP user: needs structure, visual feedback, gamified progress, and is willing to pay for engagement. TRIPP directly addresses the 'is it working?' doubt.</p>"
+                        }
+                    },
+                    {
+                        "question": "<h3>Scenario 2: Amir</h3><p>Amir has meditated daily for 8 years (Zen style, silence). He's curious about VR but worried about 'too many features' getting in the way. He wants beautiful environments but no guidance, and he's on a budget.</p><p><strong>Which platform fits best?</strong></p>",
+                        "options": [
+                            {
+                                "id": "q2_a",
+                                "label": "TRIPP (Deep Mode)",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_b",
+                                "label": "Guided Meditation VR (Free Tier)",
+                                "correct": true
+                            },
+                            {
+                                "id": "q2_c",
+                                "label": "Guided Meditation VR (Premium)",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_d",
+                                "label": "Wait on VR",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "q2_a": "<p>Not quite. While 'Deep' mode is intense, TRIPP's gamification and structure are exactly what Amir wants to avoid. He finds features distracting.</p>",
+                            "q2_c": "<p>Close, but unnecessary. Amir is budget-conscious and just wants a few high-quality silent spaces. He doesn't need the 27+ environment library right away.</p>",
+                            "q2_d": "<p>Incorrect. An experienced meditator is perfectly capable of using VR. The key is finding a platform that doesn't annoy him with unnecessary features.</p>",
+                            "q2_b": "<p><strong>Correct!</strong> Free GMVR is perfect: 5-6 high-quality environments, no cost, no gamification, no required guidance. It respects his established practice and budget.</p>"
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

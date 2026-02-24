@@ -1,0 +1,124 @@
+{
+    "title": "VR Exposure Therapy: Anxiety, Phobias & PTSD",
+    "description": "The evidence base, mechanisms, and key platforms for clinical VR exposure therapy",
+    "theme": {
+        "primaryColor": "#5900ff",
+        "fontBody": "Rajdhani, sans-serif"
+    },
+    "modules": [
+        {
+            "id": "module_4_2_1_progressive",
+            "title": "The Clinical Standard",
+            "type": "progressive-disclosure",
+            "content": {
+                "sections": [
+                    {
+                        "title": "How VRET Works — The Mechanism",
+                        "content": "<p>Virtual Reality Exposure Therapy (VRET) works by exposing patients to the thing they fear in a controlled, graduated, safe environment. If you have a phobia of flying, you don't board an actual plane — you experience a virtual flight that your therapist can control and adjust in real time.</p><p>This triggers <strong>extinction learning</strong> — the gradual weakening of the fear response through repeated safe exposure. It works because VR creates genuine physiological arousal (sweating, heart rate increase) that imagination alone rarely triggers, allowing the brain to learn safety in the presence of the threat.</p>",
+                        "media": {
+                            "type": "image",
+                            "src": "placeholder-vret-therapy.jpg",
+                            "alt": "Clinical VR exposure therapy session with therapist monitoring patient",
+                            "position": "left",
+                            "aiPrompt": "Clinical VR exposure therapy session — professional therapist (woman in her 40s, warm but focused expression) sitting beside patient in VR headset, therapist holding tablet showing session controls and patient's heart rate graph, patient appears engaged but slightly tense (hands gripping armrests), calm modern therapy office with plants and certificates on wall, sense of safe container for difficult work, natural lighting, professional medical aesthetic, 16:9 aspect ratio"
+                        },
+                        "triggerLabel": "See Success Rates"
+                    },
+                    {
+                        "title": "Success Rates — The Evidence",
+                        "content": "<p>VRET isn't experimental. The research base spans over 20 years:</p><ul><li><strong>Specific Phobias:</strong> 80-90% success rate (comparable to in-vivo exposure).</li><li><strong>Social Anxiety:</strong> 60-75% significant symptom reduction.</li><li><strong>PTSD:</strong> 50-70% clinically significant improvement, especially for combat-related PTSD.</li><li><strong>Panic Disorder:</strong> 60-80% improvement in functioning.</li></ul><p>These are standardized clinical measures showing lasting reduction in avoidance behaviors and symptoms.</p>",
+                        "triggerLabel": "European Standard"
+                    },
+                    {
+                        "title": "Psious — The European Clinical Standard",
+                        "content": "<p>Psious (pronounced SOH-see-us) is a Spanish-founded platform that offers over 70 evidence-based scenarios. It's distinctive for its <strong>clinician dashboard</strong>, allowing therapists to control exposure intensity in real-time from a tablet.</p><ul><li><strong>Model:</strong> Therapist-led, in-clinic use.</li><li><strong>Reach:</strong> Widely used in Spain, UK, France, Germany.</li><li><strong>Key Takeaway:</strong> It validates VRET as a global clinical movement, not just a US tech trend.</li></ul>",
+                        "triggerLabel": "US & UK Innovations"
+                    },
+                    {
+                        "title": "Limbix and Oxford VR",
+                        "content": "<p>Two other platforms shaping the landscape:</p><ul><li><strong>Limbix (US):</strong> Specializes in adolescent mental health (depression, anxiety). Received FDA Breakthrough Device Designation in 2020.</li><li><strong>Oxford VR (UK):</strong> Focuses on <em>automated</em> CBT delivery using virtual coaches (e.g., gameChangeVR for psychosis/agoraphobia). Addresses the therapist shortage by reducing the need for human presence during sessions.</li></ul><p><strong>Bravemind (USC):</strong> The pioneering military PTSD platform that helped prove the field's viability.</p>",
+                        "triggerLabel": "Why Evidence Matters"
+                    },
+                    {
+                        "title": "What This Evidence Means for the Field",
+                        "content": "<p>VRET is the field's proof of concept. When skeptics question if 'headset experiences' can be therapeutic, VRET is the answer.</p><p><strong>Three Implications:</strong></p><ol><li><strong>Credibility:</strong> 80%+ success rates lend weight to newer applications.</li><li><strong>Regulatory Pathways:</strong> FDA clearances for VRET pave the way for other tools.</li><li><strong>Infrastructure:</strong> 20+ years of research created the safety protocols and ethical frameworks we use today.</li></ol>",
+                        "triggerLabel": "Take Concept Check"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "quiz_4_2_1",
+            "title": "Concept Check: Mechanisms & Platforms",
+            "type": "option-selector",
+            "config": {
+                "mode": "single",
+                "style": "card",
+                "questions": [
+                    {
+                        "question": "<h3>Mechanism Check</h3><p>A colleague asks: 'Why is VR exposure more effective than just imagining the fear? Imagination is free.'</p><p><strong>How do you respond?</strong></p>",
+                        "options": [
+                            {
+                                "id": "q1_a",
+                                "label": "It's more entertaining, so patients stick with it.",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_b",
+                                "label": "It creates real physiological arousal needed for extinction learning.",
+                                "correct": true
+                            },
+                            {
+                                "id": "q1_c",
+                                "label": "It allows for more intense fears than imagination.",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_d",
+                                "label": "It provides better insurance documentation.",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "q1_a": "<p>Engagement matters, but it's not the *therapeutic* mechanism. The key is what happens in the nervous system.</p>",
+                            "q1_c": "<p>Actually, therapists often want *controlled* intensity, not just maximum intensity. The key is the body's response, not just the scare factor.</p>",
+                            "q1_d": "<p>Administrative benefits are nice, but they don't explain why the *patient* gets better results.</p>",
+                            "q1_b": "<p><strong>Correct!</strong> VR triggers genuine physiological responses (sweating, heart rate) that imagination rarely matches. This arousal is essential for the brain to learn safety (extinction learning).</p>"
+                        }
+                    },
+                    {
+                        "question": "<h3>Platform Matching</h3><p>A London therapist wants to add VR for social anxiety but needs an <strong>automated</strong> solution for home use because they can't always be present.</p><p><strong>Which platform fits best?</strong></p>",
+                        "options": [
+                            {
+                                "id": "q2_a",
+                                "label": "Psious",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_b",
+                                "label": "Limbix",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_c",
+                                "label": "Oxford VR",
+                                "correct": true
+                            },
+                            {
+                                "id": "q2_d",
+                                "label": "Bravemind",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "q2_a": "<p>Psious is great, but it's designed for therapist-led sessions, not automated home use.</p>",
+                            "q2_b": "<p>Limbix focuses on US adolescents, not the general UK adult population or automated delivery specifically.</p>",
+                            "q2_d": "<p>Bravemind is for military PTSD research, not social anxiety or general clinical use.</p>",
+                            "q2_c": "<p><strong>Correct!</strong> Oxford VR (UK-based) specializes in automated CBT using virtual coaches, specifically for conditions like social anxiety and agoraphobia. It matches the 'automated' and 'UK' context perfectly.</p>"
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

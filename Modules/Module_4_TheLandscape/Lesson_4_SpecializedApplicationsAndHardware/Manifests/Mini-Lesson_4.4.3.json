@@ -1,0 +1,224 @@
+{
+    "title": "Creativity & Experimental Applications",
+    "description": "Explores the frontier of cyberdelics: creativity, experimental states (OBE, NDE), research validation, and ethical facilitation.",
+    "theme": {
+        "primaryColor": "#ff00d4",
+        "fontBody": "Rajdhani, sans-serif"
+    },
+    "modules": [
+        {
+            "id": "module_4_4_3_progressive",
+            "title": "The Experimental Frontier",
+            "type": "progressive-disclosure",
+            "content": {
+                "sections": [
+                    {
+                        "title": "Open Brush as Consciousness Tool",
+                        "content": "<p><strong>Open Brush</strong> is technically a painting app, but functionally a consciousness tool.</p><ul><li><strong>Meditative:</strong> Induces flow states through spatial creation.</li><li><strong>Awe:</strong> Creating a galaxy you can walk through induces profound wonder.</li><li><strong>Integration:</strong> Used by facilitators to help clients externalize ineffable experiences.</li></ul>",
+                        "triggerLabel": "Experimental Categories"
+                    },
+                    {
+                        "title": "Experimental Categories",
+                        "content": "<p><strong>Beyond Wellness:</strong></p><ul><li><strong>OBE Simulations:</strong> Uses body-swapping illusions to loosen ego identification (University of Barcelona).</li><li><strong>NDE Simulations:</strong> Guided death/rebirth narratives (tunnels of light, life review).</li><li><strong>Lucid Dreaming:</strong> Reality testing training in surreal VR environments.</li></ul><p>These target <strong>transformation</strong>, not relaxation. They carry high intensity.</p>",
+                        "media": {
+                            "type": "image",
+                            "src": "placeholder-experimental-vr.jpg",
+                            "alt": "Abstract VR scene depicting ego dissolution",
+                            "position": "left",
+                            "aiPrompt": "Abstract experimental VR consciousness scene — person in VR headset experiencing profound altered state (body language shows both opening and vulnerability), environment shows dissolving boundaries and geometric abstractions representing ego dissolution, sense of intensity but contained space, facilitator presence subtly visible in background (protective container), mystical aesthetic with sacred geometry, both expansive and grounded simultaneously, 16:9 aspect ratio"
+                        },
+                        "triggerLabel": "Riva's Research (2025)"
+                    },
+                    {
+                        "title": "Giuseppe Riva's Research (Milan, 2025)",
+                        "content": "<p><strong>Use Validation:</strong> Published in <em>Dialogues in Clinical Neuroscience</em>.</p><ul><li><strong>Finding:</strong> Cyberdelic VR can produce short-term effects comparable to LSD/psilocybin: creativity, emotional breakthrough, insight, reduced rigidity.</li><li><strong>Implication:</strong> It's not just a toy. The effects are real enough to demand serious ethical handling.</li></ul>",
+                        "triggerLabel": "Ethical Requirements"
+                    },
+                    {
+                        "title": "Ethical Requirements",
+                        "content": "<ul><li><strong>Preparation:</strong> Mandatory for intense work. Consent must include risks (disorientation, emotion).</li><li><strong>Screening:</strong> R/O psychosis, severe dissociation, acute suicidal ideation.</li><li><strong>Facilitation:</strong> Real-time support is required for high-intensity apps.</li><li><strong>Integration:</strong> Time/space to process.</li></ul>",
+                        "triggerLabel": "Decision Framework"
+                    },
+                    {
+                        "title": "The Four Pathways",
+                        "content": "<p>When a client asks for intensity:</p><ul><li><strong>PROCEED:</strong> Green light. Prepared, stable, supported.</li><li><strong>MODIFY (Yellow):</strong> 'Yes, but start gentler.' Build capacity first.</li><li><strong>DEFER (Orange):</strong> 'Not now.' Crisis or instability present.</li><li><strong>DECLINE (Red):</strong> Unsafe request. Contraindicated.</li></ul>",
+                        "triggerLabel": "Scenario: Death Simulation"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "module_4_4_3_scenario",
+            "title": "Scenario: The Death Simulation Request",
+            "type": "scenario-based",
+            "content": {
+                "scenes": [
+                    {
+                        "id": "intro",
+                        "narrative": "<h3>The Request</h3><p><strong>Marcus (26)</strong> emails you: 'I saw a video about death simulation VR. I feel stuck in life and think a breakthrough experience could help me reset. I've never done VR, meditation, or therapy, but I'm not afraid of intensity. Can we do this weekend?'</p><p><strong>Consultation Notes:</strong> Intelligent, genuine, but naive. No support system nearby. 'Stuck' feeling = emotional numbness.</p>",
+                        "choices": [
+                            {
+                                "id": "decide",
+                                "label": "Make Your Decision",
+                                "outcome": "decision_point"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "decision_point",
+                        "narrative": "<h3>What is your ethical response?</h3>",
+                        "choices": [
+                            {
+                                "id": "opt_proceed",
+                                "label": "PROCEED: He's an adult, book the session.",
+                                "outcome": "outcome_proceed"
+                            },
+                            {
+                                "id": "opt_modify",
+                                "label": "MODIFY: Offer a graduated path (gentler start).",
+                                "outcome": "outcome_modify"
+                            },
+                            {
+                                "id": "opt_defer",
+                                "label": "DEFER: Suggest therapy first, revisit in 6 months.",
+                                "outcome": "outcome_defer"
+                            },
+                            {
+                                "id": "opt_decline",
+                                "label": "DECLINE: Too risky, refuse service.",
+                                "outcome": "outcome_decline"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "outcome_proceed",
+                        "narrative": "<h3>⚠ Dangerous (Negligent)</h3><p>You book the session. Marcus has a massive, destabilizing release of repressed emotion. Without navigation skills or a therapist, he leaves overwhelmed and possibly retraumatized.</p><p><strong>Why:</strong> Intensity without preparation is recklessness, not facilitation.</p>",
+                        "choices": [
+                            {
+                                "id": "retry_p",
+                                "label": "Try Again",
+                                "outcome": "decision_point"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "outcome_defer",
+                        "narrative": "<h3>⚠ Missed Opportunity</h3><p>You tell him to wait 6 months. He feels dismissed and likely goes to a less ethical provider who will say yes immediately.</p><p><strong>Why:</strong> You held the boundary but offered no bridge. You lost the chance to help him prepare.</p>",
+                        "choices": [
+                            {
+                                "id": "retry_d",
+                                "label": "Try Again",
+                                "outcome": "decision_point"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "outcome_decline",
+                        "narrative": "<h3>⚠ Too Rigid</h3><p>Refusing entirely implies he's 'broken' or incapable. It functions as gatekeeping rather than care.</p>",
+                        "choices": [
+                            {
+                                "id": "retry_dec",
+                                "label": "Try Again",
+                                "outcome": "decision_point"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "outcome_modify",
+                        "narrative": "<h3>✓ Optimal: The Graduated Path</h3><p>'Marcus, I want to support this breakthrough. But jumping to death sim with zero experience is risky. Let's start with a guided journey (Maloka) to build navigation skills, and I'd like you to connect with a therapist for the 'stuckness'. If we build that foundation for 2 months, we can revisit the intense work.'</p><p><strong>Why:</strong> Honors his intent, ensures safety, builds capacity.</p>",
+                        "choices": [
+                            {
+                                "id": "finish",
+                                "label": "Complete Scenario",
+                                "outcome": "complete"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "complete",
+                        "narrative": "<h3>Scenario Complete</h3><p>Ethical facilitation isn't just saying 'no' to risk. It's building the scaffolding that makes risk manageable.</p>",
+                        "choices": [
+                            {
+                                "id": "continue",
+                                "label": "Take Quiz",
+                                "outcome": "modules_end"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "quiz_4_4_3",
+            "title": "Concept Check: Ethics & Research",
+            "type": "option-selector",
+            "config": {
+                "mode": "single",
+                "style": "card",
+                "questions": [
+                    {
+                        "question": "<h3>Riva Research (2025)</h3><p>What did the Milan study demonstrate about experimental VR?</p>",
+                        "options": [
+                            {
+                                "id": "q1_a",
+                                "label": "It replaces psychedelics perfectly.",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_b",
+                                "label": "It produces comparable short-term effects (insight, catharsis).",
+                                "correct": true
+                            },
+                            {
+                                "id": "q1_c",
+                                "label": "It is safe for everyone without prep.",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_d",
+                                "label": "It only works in Italy.",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "q1_a": "It's comparable, not identical.",
+                            "q1_c": "Intensity creates *more* need for prep.",
+                            "q1_b": "<strong>Correct!</strong> It validated that VR can induce states functionally similar to LSD/psilocybin in key dimensions."
+                        }
+                    },
+                    {
+                        "question": "<h3>Ethical Obligation</h3><p>Which is <strong>NOT</strong> an ethical requirement for high-intensity facilitation?</p>",
+                        "options": [
+                            {
+                                "id": "q2_a",
+                                "label": "Preparation protocols",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_b",
+                                "label": "Integration support",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_c",
+                                "label": "Legal liability waiver",
+                                "correct": true
+                            },
+                            {
+                                "id": "q2_d",
+                                "label": "Psychological screening",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "q2_a": "Required for safety.",
+                            "q2_b": "Required for meaning-making.",
+                            "q2_d": "Required to filter contraindications.",
+                            "q2_c": "<strong>Correct!</strong> Waivers are a legal/business protection, not an ethical care requirement. Facilitators minimize harm, lawyers minimize liability."
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

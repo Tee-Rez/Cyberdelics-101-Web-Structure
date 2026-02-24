@@ -1,0 +1,153 @@
+{
+    "title": "Matching Hardware to User",
+    "description": "Apply your knowledge of hardware tiers to real-world user scenarios in a matching exercise.",
+    "theme": {
+        "primaryColor": "#ffaa00",
+        "fontBody": "Rajdhani, sans-serif"
+    },
+    "modules": [
+        {
+            "id": "module_4_4_5_matching",
+            "title": "Hardware Recommendation Matrix",
+            "type": "knowledge-construction",
+            "config": {
+                "exerciseType": "matching",
+                "instruction": "Match each user profile to the best hardware recommendation based on their specific needs and constraints.",
+                "zones": [
+                    {
+                        "id": "zone_quest3s",
+                        "label": "Meta Quest 3S ($300)"
+                    },
+                    {
+                        "id": "zone_quest3",
+                        "label": "Meta Quest 3 ($500)"
+                    },
+                    {
+                        "id": "zone_psvr2",
+                        "label": "PlayStation VR2 ($550+)"
+                    },
+                    {
+                        "id": "zone_visionpro",
+                        "label": "Apple Vision Pro ($3,500)"
+                    },
+                    {
+                        "id": "zone_pico4",
+                        "label": "Pico 4 ($400)"
+                    }
+                ],
+                "items": [
+                    {
+                        "id": "user_sarah",
+                        "content": "<strong>Sarah</strong><br>Budget-conscious beginner, wants to try TRIPP, ensure low cost entry.",
+                        "correctZoneId": "zone_quest3s",
+                        "feedback": "Correct! Quest 3S is the perfect low-risk entry point."
+                    },
+                    {
+                        "id": "user_james",
+                        "content": "<strong>James</strong><br>Already owns PS5, wants casual VR + gaming.",
+                        "correctZoneId": "zone_psvr2",
+                        "feedback": "Correct! Since he has the console, PSVR2 adds value despite limited apps."
+                    },
+                    {
+                        "id": "user_elena",
+                        "content": "<strong>Elena (Germany)</strong><br>Privacy-conscious, refuses Meta, wants standalone.",
+                        "correctZoneId": "zone_pico4",
+                        "feedback": "Correct! Pico is the only viable standalone option for strict anti-Meta users."
+                    },
+                    {
+                        "id": "user_martinez",
+                        "content": "<strong>Dr. Martinez</strong><br>Research lab, unlimited budget, needs highest resolution for studies.",
+                        "correctZoneId": "zone_visionpro",
+                        "feedback": "Correct! Research focus justifies the specs despite content lack."
+                    },
+                    {
+                        "id": "user_rachel",
+                        "content": "<strong>Rachel</strong><br>Daily practitioner, 60min sessions, wants comfort + full library.",
+                        "correctZoneId": "zone_quest3",
+                        "feedback": "Correct! Quest 3 offers the comfort and optics needed for serious daily use."
+                    },
+                    {
+                        "id": "user_marcus",
+                        "content": "<strong>Marcus (Teen)</strong><br>Parents need strong parental controls/curation.",
+                        "correctZoneId": [
+                            "zone_quest3",
+                            "zone_quest3s"
+                        ],
+                        "feedback": "Correct! Meta has the most robust parental control system."
+                    }
+                ]
+            }
+        },
+        {
+            "id": "quiz_4_4_5",
+            "title": "Concept Check: Recommendation Logic",
+            "type": "option-selector",
+            "config": {
+                "mode": "single",
+                "style": "card",
+                "questions": [
+                    {
+                        "question": "<h3>The Comfort vs. Budget Trade-off</h3><p>Client wants to do 60-minute sessions and can afford ~$500. They have no gaming PC. Why recommend Quest 3 over Quest 3S?</p>",
+                        "options": [
+                            {
+                                "id": "q1_a",
+                                "label": "Quest 3S runs fewer apps.",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_b",
+                                "label": "Quest 3 has significantly better comfort/optics for long wear.",
+                                "correct": true
+                            },
+                            {
+                                "id": "q1_c",
+                                "label": "Quest 3S requires a PC.",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_d",
+                                "label": "Quest 3 tracks more biofeedback.",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "q1_a": "They run the same library.",
+                            "q1_c": "Both are standalone.",
+                            "q1_b": "<strong>Correct!</strong> For 60-minute sessions, the front-heavy Quest 3S becomes painful. Pancake lenses and balance justify the cost."
+                        }
+                    },
+                    {
+                        "question": "<h3>The Hierarchy of Needs</h3><p>What is the single most important factor to verify first?</p>",
+                        "options": [
+                            {
+                                "id": "q2_a",
+                                "label": "Display Resolution",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_b",
+                                "label": "Content Compatibility",
+                                "correct": true
+                            },
+                            {
+                                "id": "q2_c",
+                                "label": "Release Date",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_d",
+                                "label": "Field of View",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "q2_a": "Useless if the app doesn't run.",
+                            "q2_c": "Newer isn't always better for specific apps.",
+                            "q2_b": "<strong>Correct!</strong> Hardware is a vehicle for software. If it can't run TRIPP/Maloka, it fails the mission regardless of specs."
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

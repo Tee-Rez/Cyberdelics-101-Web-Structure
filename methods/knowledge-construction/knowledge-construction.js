@@ -384,8 +384,9 @@
      */
     if (window.MethodLoader) {
         window.MethodLoader.registerFactory('knowledge-construction', KnowledgeConstructionFactory);
-    } else {
-        window.KnowledgeConstructionFactory = KnowledgeConstructionFactory;
     }
+
+    // ALWAYS export to window for direct access by LessonRunner (legacy path)
+    window.KnowledgeConstructionFactory = KnowledgeConstructionFactory;
 
 })();

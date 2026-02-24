@@ -31,8 +31,9 @@
                 console.log('[ProgressiveDisclosure] onInit called with options:', options);
 
                 // 0. Auto-render if content is provided but HTML is missing
-                if (options.sections && container.querySelectorAll('.reveal-section').length === 0) {
-                    this._render(container, options);
+                const sections = options.sections || (options.content && options.content.sections);
+                if (sections && container.querySelectorAll('.reveal-section').length === 0) {
+                    this._render(container, { ...options, sections });
                 }
 
                 // Find all reveal sections (excluding completion)

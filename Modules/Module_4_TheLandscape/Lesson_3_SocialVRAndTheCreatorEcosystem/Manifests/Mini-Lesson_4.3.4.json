@@ -1,0 +1,112 @@
+{
+    "title": "Creator Types, Quality Signals & Red Flags",
+    "description": "How to evaluate quality, spot red flags, and understand the difference between commercial, research, and community creators.",
+    "theme": {
+        "primaryColor": "#ff0055",
+        "fontBody": "Rajdhani, sans-serif"
+    },
+    "modules": [
+        {
+            "id": "module_4_3_4_progressive",
+            "title": "Evaluating Quality",
+            "type": "progressive-disclosure",
+            "content": {
+                "sections": [
+                    {
+                        "title": "The Four Creator Types",
+                        "content": "<ul><li><strong>Commercial Platforms (TRIPP):</strong> Funded, polished, accountable. Pressure to monetize.</li><li><strong>Research Institutions (Isness-D):</strong> Rigorous, evidence-backed. Often unpolished or hard to access.</li><li><strong>Community Creators (VRChat):</strong> Passion-driven. Authentic but variable quality.</li><li><strong>Hybrid Developers (Flowly):</strong> Mission-driven but sustainable. Often clinician-led.</li></ul>",
+                        "triggerLabel": "Green Flags"
+                    },
+                    {
+                        "title": "Green Flag Quality Indicators",
+                        "content": "<ul><li><strong>Transparent Evidence:</strong> Cites research, explains mechanisms.</li><li><strong>Clear Intended Use:</strong> States who it's for/not for. Includes disclaimers.</li><li><strong>Facilitator Resources:</strong> Training or guides available.</li><li><strong>Active Development:</strong> Regular updates, bug fixes.</li><li><strong>Responsive Support:</strong> A way to get help.</li></ul>",
+                        "triggerLabel": "Red Flags"
+                    },
+                    {
+                        "title": "Red Flag Warning Signs",
+                        "content": "<ul><li><strong>Medical Claims Without Validation:</strong> 'Cures anxiety' without FDA clearance is a huge red flag.</li><li><strong>No Prep/Integration:</strong> Drop-in, intense experience, drop-out. Unsafe.</li><li><strong>Anonymous Developers:</strong> No accountability.</li><li><strong>No Reviews/Community:</strong> If it's old but empty, it failed.</li><li><strong>Predatory Pricing:</strong> High fees, no trial, hard to cancel.</li></ul>",
+                        "triggerLabel": "Applying the Framework"
+                    },
+                    {
+                        "title": "Applying the Framework",
+                        "content": "<p><strong>High Trust:</strong> Green flags, no red flags. Recommend freely.</p><p><strong>Conditional:</strong> Mix of signals. 'This is early stage, expect roughness.'</p><p><strong>Avoid:</strong> Red flags like medical claims or predatory pricing. 'I cannot recommend this safely.'</p><p><strong>Sophisticated Stance:</strong> Don't just judge good/bad. Judge fit for purpose and risk level.</p>",
+                        "triggerLabel": "Test Your Judgment"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "quiz_4_3_4",
+            "title": "Concept Check: Quality Signals",
+            "type": "option-selector",
+            "config": {
+                "mode": "single",
+                "style": "card",
+                "questions": [
+                    {
+                        "question": "<h3>Red Flag Identification</h3><p>A free app on SideQuest claims to 'cure anxiety in one session' using 'advanced neural entrainment.' The developer is anonymous. What are the red flags?</p>",
+                        "options": [
+                            {
+                                "id": "q1_a",
+                                "label": "It's on SideQuest",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_b",
+                                "label": "Unsubstantiated medical claims + Pseudoscientific jargon + Anonymity",
+                                "correct": true
+                            },
+                            {
+                                "id": "q1_c",
+                                "label": "It's free (suspicious)",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_d",
+                                "label": "It uses neural entrainment",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "q1_a": "<p>SideQuest is fine for experiments. The claims are the problem.</p>",
+                            "q1_c": "<p>Free isn't the issue. Accountability is.</p>",
+                            "q1_d": "<p>Neural entrainment is real, but vague jargon without explanation is a warning sign.</p>",
+                            "q1_b": "<p><strong>Correct!</strong> 'Cure' is a regulated claim. 'Advanced neural entrainment' is vague jargon. Anonymity means zero accountability. Run away.</p>"
+                        }
+                    },
+                    {
+                        "question": "<h3>Funding & Reliability</h3><p>Platform A is bootstrapped, 3 years old, 2000+ reviews. Platform B is VC-backed ($8M), 1 year old, mixed reviews. Which is more reliable?</p>",
+                        "options": [
+                            {
+                                "id": "q2_a",
+                                "label": "Platform B (More money)",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_b",
+                                "label": "Platform A (Mission driven)",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_c",
+                                "label": "Evaluate based on performance, not just funding",
+                                "correct": true
+                            },
+                            {
+                                "id": "q2_d",
+                                "label": "VC-backed is always bad",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "q2_a": "<p>Money doesn't guarantee product-market fit.</p>",
+                            "q2_b": "<p>Bootstrapped can also mean under-resourced. Not inherently better.</p>",
+                            "q2_d": "<p>Biased overgeneralization. TRIPP is VC-backed and excellent.</p>",
+                            "q2_c": "<p><strong>Correct!</strong> Platform A shows stronger signs of stability (3 years, good reviews), but funding model is just context. Look at the actual performance.</p>"
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}
