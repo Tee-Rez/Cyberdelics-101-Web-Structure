@@ -201,7 +201,7 @@
 
                     if (nextSceneId) {
                         // Support transition keywords
-                        if (nextSceneId === 'flow_next_module' || nextSceneId === 'complete') {
+                        if (nextSceneId === 'flow_next_module' || nextSceneId === 'complete' || nextSceneId === 'modules_end') {
                             console.log('[ScenarioBased] Completing module via keyword');
                             this.markComplete();
                             return;
