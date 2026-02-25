@@ -19,12 +19,13 @@
     // Base Config (Defaults)
     const BASE_CONFIG = {
         svg: { width: 1000, height: 800, centerX: 500, centerY: 400 },
-        nodes: { domainRadius: 60, centerRadiusMin: 20, centerRadiusMax: 80, orbitRadius: 300 },
+        nodes: { domainRadius: 60, centerRadiusMin: 15, centerRadiusMax: 70, orbitRadius: 300 }, // Max radius 70 is greater than domain 60
         connections: { minWidth: 1, maxWidth: 8 },
         timeline: { startYear: 2015, endYear: 2025 },
         styles: {
             labelSize: 10,
-            centerLabelSize: 10,
+            centerLabelSizeMin: 4,
+            centerLabelSizeMax: 14,
             contentHeaderSize: 7,
             contentTextSize: 5.5
         }
@@ -42,7 +43,7 @@
         },
 
         config: [
-            { id: 'year', label: 'Timeline Year', min: 2015, max: 2025, step: 1 }
+            { id: 'year', label: 'YEAR', min: 2015, max: 2025, step: 1 }
         ],
 
         // Instance State
@@ -111,13 +112,15 @@
             if (isMobile) {
                 // Mobile Adjustments (Scale up text relative to SVG viewbox)
                 this.simConfig.styles.labelSize = 24;
-                this.simConfig.styles.centerLabelSize = 20;
+                this.simConfig.styles.centerLabelSizeMin = 10;
+                this.simConfig.styles.centerLabelSizeMax = 28;
                 this.simConfig.styles.contentHeaderSize = 14;
                 this.simConfig.styles.contentTextSize = 12;
             } else {
                 // Desktop Reset
                 this.simConfig.styles.labelSize = 10;
-                this.simConfig.styles.centerLabelSize = 10;
+                this.simConfig.styles.centerLabelSizeMin = 4;
+                this.simConfig.styles.centerLabelSizeMax = 14;
                 this.simConfig.styles.contentHeaderSize = 7;
                 this.simConfig.styles.contentTextSize = 5.5;
             }
@@ -241,7 +244,7 @@
             label.setAttribute('text-anchor', 'middle');
             label.setAttribute('dy', '0.35em');
             label.setAttribute('fill', 'white');
-            label.setAttribute('font-size', this.simConfig.styles.centerLabelSize); // Dynamic Size
+            label.setAttribute('font-size', this.simConfig.styles.centerLabelSizeMin || 10); // Start at Min Size
             label.style.pointerEvents = 'none';
             g.appendChild(label);
 
@@ -310,6 +313,10 @@
             const size = this.simConfig.nodes.centerRadiusMin + (this.simConfig.nodes.centerRadiusMax - this.simConfig.nodes.centerRadiusMin) * progress;
             const circle = this.svg.getElementById('center-circle');
             if (circle) circle.setAttribute('r', size);
+
+            const fontSize = this.simConfig.styles.centerLabelSizeMin + (this.simConfig.styles.centerLabelSizeMax - this.simConfig.styles.centerLabelSizeMin) * progress;
+            const label = this.svg.querySelector('#center-node text');
+            if (label) label.setAttribute('font-size', fontSize);
         },
 
         // ========== PARTICLES ==========

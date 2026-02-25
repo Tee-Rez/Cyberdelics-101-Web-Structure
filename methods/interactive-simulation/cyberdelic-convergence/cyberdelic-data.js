@@ -655,7 +655,7 @@
                         ],
                         examples: [
                             { name: 'Beat Saber', description: 'VR fitness phenomenon', url: 'https://beatsaber.com/' },
-                            { name: 'Supernatural', description: 'VR fitness + meditation', url: 'https://www.getsupernatural.com/' },
+                            { name: 'Supernatural', description: 'VR fitness + meditation', url: 'https://www.meta.com/experiences/supernatural-unreal-fitness/1830168170427369/' },
                             { name: 'Sky: Children of Light', description: 'Social contemplative game', url: 'https://thatgamecompany.com/sky/' }
                         ]
                     },
@@ -680,7 +680,7 @@
                             'Adaptive wellness systems'
                         ],
                         examples: [
-                            { name: 'Beat Saber', description: 'Evolved meditation tool', url: 'https://beatsaber.com/' },
+                            { name: 'Headspace VR', description: 'Meditation app Evolving to VR', url: 'https://www.headspace.com/xr' },
                             { name: 'TRIPP', description: 'Gamified meditation', url: 'https://www.tripp.com/' },
                             { name: 'Unpacking', description: 'Meditative narrative game', url: 'https://www.unpackinggame.com/' }
                         ]
@@ -737,7 +737,7 @@
                         ],
                         examples: [
                             { name: 'Tilt Brush', description: 'VR painting revolution', url: 'https://store.steampowered.com/app/327140/Tilt_Brush' },
-                            { name: 'Samskara VR', description: 'Android Jones psychedelic art', url: 'https://androidjones.com/pages/samskara' },
+                            { name: 'Samskara VR', description: 'Android Jones psychedelic art', url: 'https://www.youtube.com/watch?v=tdIrQzlDAeI' },
                             { name: 'The Night Cafe VR', description: 'Van Gogh immersion', url: 'https://store.steampowered.com/app/482390/The_Night_Cafe_A_VR_Tribute_to_Vincent_Van_Gogh/' }
                         ]
                     },

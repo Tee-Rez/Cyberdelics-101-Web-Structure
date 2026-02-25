@@ -211,6 +211,7 @@ class LessonUI {
         // 3. Bottom Bar (Restored)
         const bottomBar = document.createElement('div');
         bottomBar.className = 'cyberdeck-footer';
+        bottomBar.style.display = 'none'; // Temporarily disabled per user request
         bottomBar.innerHTML = `
             <div class="cd-wave-container">
                 <!-- Left Side: Controls -->

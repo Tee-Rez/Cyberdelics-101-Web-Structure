@@ -171,3 +171,117 @@ svg.convergence-viz:active {
     /* Contrast inside button */
     border-color: #777;
 }
+
+/* =========================================
+   TIMELINE CONTROLS STYLING (VERTICAL)
+   ========================================= */
+.interactive-simulation-container[data-engine="CyberdelicConvergence"] {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    /* allow header/footer to stack */
+}
+
+/* Header and continue buttons take full width */
+.interactive-simulation-container[data-engine="CyberdelicConvergence"] .sim-header,
+.interactive-simulation-container[data-engine="CyberdelicConvergence"] .btn-continue {
+    width: 100%;
+    flex: 0 0 100%;
+}
+
+.interactive-simulation-container[data-engine="CyberdelicConvergence"] .sim-controls {
+    display: flex !important;
+    flex-direction: column;
+    position: static;
+    flex: 0 0 40px !important;
+    /* Force width within flexbox */
+    width: 40px !important;
+    align-self: center;
+    /* Center it vertically alongside the viz */
+    background: transparent;
+    border: none;
+    padding: 0 !important;
+    /* remove inline padding from lesson-runner */
+    margin-right: 5px;
+    /* Pull it slightly closer */
+}
+
+/* Ensure viewport fills horizontal space */
+.interactive-simulation-container[data-engine="CyberdelicConvergence"] .sim-viewport {
+    flex: 1 1 0% !important;
+    min-width: 0 !important;
+    width: auto !important;
+}
+
+.interactive-simulation-container[data-engine="CyberdelicConvergence"] .control-group {
+    display: flex;
+    flex-direction: column;
+    /* Label on top, slider below */
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.interactive-simulation-container[data-engine="CyberdelicConvergence"] .control-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    /* Reduced gap */
+    background: rgba(10, 10, 20, 0.7);
+    padding: 5px;
+    /* <--- REDUCED PADDING to let the box shrink smaller */
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    word-break: break-all;
+    /* Force long words to break if they exceed width container */
+    box-sizing: border-box;
+}
+
+/* "Timeline Year" Text */
+.interactive-simulation-container[data-engine="CyberdelicConvergence"] .control-label span:first-child {
+    font-size: 0.9rem;
+    color: #ccc;
+    font-weight: normal;
+}
+
+/* "2015" Value Text */
+.interactive-simulation-container[data-engine="CyberdelicConvergence"] .control-value {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #00D9FF;
+}
+
+/* Vertical slider specifically */
+.interactive-simulation-container[data-engine="CyberdelicConvergence"] input[type=range] {
+    -webkit-appearance: slider-vertical;
+    appearance: slider-vertical;
+    height: 400px;
+    /* Half of the 800px viewport */
+    width: 20px;
+    margin: 0;
+    background: transparent;
+    cursor: grab;
+    transform: rotate(180deg);
+}
+
+.interactive-simulation-container[data-engine="CyberdelicConvergence"] input[type=range]::-webkit-slider-runnable-track {
+    width: 6px;
+    height: 100%;
+}
+
+.interactive-simulation-container[data-engine="CyberdelicConvergence"] input[type=range]::-webkit-slider-thumb {
+    height: 18px;
+    width: 18px;
+    background: #00D9FF;
+    box-shadow: 0 0 10px rgba(0, 217, 255, 0.5);
+    /* Remove horizontal margin to let browser center it natively on the track in vertical mode */
+    margin-top: 0;
+    margin-left: -5px;
+    /* Slight adjustment for alignment depending on standard browser offset */
+}

@@ -163,12 +163,12 @@
             if (type === 'interactive-simulation') {
                 const showContinue = !moduleConfig.hideContinueButton;
                 moduleContainer.innerHTML = `
-                    <div class="interactive-simulation-container" style="display: flex; flex-direction: column; height: 100%;">
+                    <div class="interactive-simulation-container" style="display: flex; flex-direction: column; height: 100%; overflow-y: auto;">
                         <div class="sim-header" style="flex: 0 0 auto; padding-bottom: 0.5rem;">
                             <h3>${moduleConfig.title || ''}</h3>
                         </div>
-                        <div class="sim-viewport" style="flex: 1; border: 1px solid #333; position: relative; overflow: hidden;"></div>
-                        <div class="sim-controls" style="flex: 0 0 auto;"></div>
+                        <div class="sim-controls" style="flex: 0 0 auto; padding-bottom: 1rem;"></div>
+                        <div class="sim-viewport" style="flex: 1; border: 1px solid #333; position: relative; overflow: hidden; min-height: 800px; border-radius: 8px;"></div>
                         <button class="btn-continue" style="margin-top: 1rem; ${showContinue ? '' : 'display:none;'}">Continue</button>
                     </div>
                 `;

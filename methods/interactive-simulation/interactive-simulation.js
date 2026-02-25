@@ -144,6 +144,10 @@
                     this._state.params.data = contentData;
                 }
 
+                // Add data-engine for CSS scoping to the correct inner container
+                const simContainer = this._elements.container.querySelector('.interactive-simulation-container') || this._elements.container;
+                simContainer.setAttribute('data-engine', EngineClass.name.replace(/\s+/g, ''));
+
                 // Build UI for Params
                 this._buildControls(EngineClass.config);
 
@@ -161,6 +165,7 @@
             // ========== UI BUILDER ==========
 
             _buildControls: function (config) {
+                console.log("[InteractiveSimulation] _buildControls called with config:", config);
                 const controlsContainer = this._elements.controls;
                 // Clear existing except buttons
                 const buttons = controlsContainer.querySelector('.playback-controls');
@@ -169,6 +174,7 @@
                 // Generate sliders/inputs
                 if (config) {
                     config.forEach(param => {
+                        console.log("[InteractiveSimulation] Generating control for param:", param.id);
                         const group = document.createElement('div');
                         group.className = 'control-group';
 
