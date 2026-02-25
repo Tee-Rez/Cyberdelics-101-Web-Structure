@@ -1,0 +1,119 @@
+{
+    "title": "Open Source & Cross-Pollination",
+    "description": "Explore the gift economy philosophy, major open source contributions, and the bidirectional flow of ideas between cyberdelics and adjacent fields.",
+    "theme": {
+        "primaryColor": "#00c9a7",
+        "fontBody": "Rajdhani, sans-serif"
+    },
+    "modules": [
+        {
+            "id": "module_5_1_4_pd",
+            "title": "Open Source & Cross-Pollination",
+            "type": "progressive-disclosure",
+            "content": {
+                "sections": [
+                    {
+                        "title": "Major Open Source Contributions",
+                        "content": "<p>One of the most distinctive things about the cyberdelic field is how much of its foundation was built as a gift. Three tools deserve specific recognition:</p><p><strong>Open Brush:</strong> When Google abandoned Tilt Brush, the community forked it into a free, open-source VR spatial painting app. For facilitators using visual art, it became a core tool precisely because it isn't owned by anyone with a commercial interest in restricting it.</p><p><strong>OpenBCI:</strong> Professional EEG equipment used to cost $2,000–$10,000. OpenBCI entered with open designs priced at $200–$500. Independent researchers suddenly had access to brainwave monitoring. The neurofeedback-enhanced VR category exists largely because OpenBCI democratized the sensing layer.</p><p><strong>Mozilla Hubs:</strong> Web-based social VR requiring no headset. For community gatherings and peer-support circles, Hubs created a zero-hardware-barrier entry point with a privacy-respecting architecture.</p>",
+                        "triggerLabel": "The Gift Economy"
+                    },
+                    {
+                        "title": "The Gift Economy Philosophy",
+                        "content": "<p>Open source in the cyberdelic space isn't just a licensing choice — it's often a philosophical statement.</p><p>The gift economy perspective holds that code can be commons, that information freely shared multiplies rather than diminishes, that paying forward is the appropriate response to having received. This aligns naturally with consciousness work traditions: meditation teachings passed student-to-student, ceremonial knowledge shared within communities, harm reduction information distributed freely.</p><p>The practical implication: when you encounter an open-source tool here, there's often a community of practitioners who trust it specifically because it <em>isn't</em> owned by a profit motive. That trust is a form of community infrastructure.</p><p>The tension: gift economy tools need maintainers, and time requires sustainability. The most resilient projects have found hybrid ways to accept donations or grants to sustain the commons without closing it.</p>",
+                        "triggerLabel": "Borrowed Wisdom"
+                    },
+                    {
+                        "title": "Cross-Pollination from Adjacent Fields",
+                        "content": "<p>Cyberdelics didn't invent most of its best ideas. It borrowed them:</p><p><strong>From psychedelic therapy:</strong> Set (mindset, intention) and setting (environment, support) as dual determinants of experience quality. The preparation-experience-integration arc. The Mystical Experience Questionnaire (MEQ) for measuring transformational depth.</p><p><strong>From contemplative traditions:</strong> Mindfulness techniques and breath awareness as access tools for altered states. Teacher-student training models. Sangha (community) for peer support.</p><p><strong>From gaming:</strong> Flow state engineering — optimal challenge/skill balance. Engagement design and onboarding so users aren't overwhelmed.</p><p><strong>From healthcare:</strong> Evidence-based standards for clinical credibility. Risk assessment frameworks for contraindications.</p><p><strong>From Human-Computer Interaction (HCI):</strong> UI design principles for reducing cognitive load in novel interfaces.</p>",
+                        "triggerLabel": "The Bidirectional Flow"
+                    },
+                    {
+                        "title": "The Bidirectional Flow",
+                        "content": "<p>Cyberdelics borrowed from adjacent fields. It is now beginning to give back.</p><ul><li><strong>Psychedelic therapy</strong> is using VR for preparation and integration alongside or instead of substance-based sessions.</li><li><strong>Meditation app developers</strong> are studying cyberdelic platform design for insights about deepening engagement beyond ambient music.</li><li><strong>Gaming studios</strong> are exploring consciousness-oriented design as a new content category.</li><li><strong>Healthcare researchers</strong> are using VR-induced altered states to understand consciousness itself, not just as a treatment mechanism.</li></ul><p>The field that spent a decade borrowing is now a reference point for others. That's a signal of ecosystem maturity — and an invitation for practitioners to contribute to the exchange, not just receive it.</p>",
+                        "media": {
+                            "type": "image",
+                            "src": "placeholder-bidirectional-flow.jpg",
+                            "alt": "Diagram showing adjacent fields feeding into cyberdelics and cyberdelics feeding back",
+                            "position": "full-width",
+                            "aiPrompt": "A dynamic infographic showing 'Bidirectional Flow'. Several conceptual orbits (representing Healthcare, Gaming, Contemplative Traditions, Psychedelic Therapy) feeding energy/data streams into a central 'Cyberdelics' core, and that core radiating new energy back to the outer orbits. Clean, modern, glowing aesthetic against a dark background. 16:9 aspect ratio."
+                        },
+                        "triggerLabel": "Take the Quiz"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "module_5_1_4_quiz",
+            "title": "Synthesis Check",
+            "type": "option-selector",
+            "config": {
+                "mode": "single",
+                "style": "card",
+                "questions": [
+                    {
+                        "question": "<h3>The Ripple of Open Hardware</h3><p>What does it mean for the cyberdelic ecosystem that OpenBCI lowered the cost of EEG equipment from $2,000+ to $200–500? Which ecosystem components benefit most and how?</p>",
+                        "options": [
+                            {
+                                "id": "q1_a",
+                                "label": "Only Technology Providers benefit — it's a hardware cost reduction.",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_b",
+                                "label": "Knowledge Producers benefit through expanded research access; Technology Providers benefit through new application categories; Facilitators benefit through affordable biofeedback integration.",
+                                "correct": true
+                            },
+                            {
+                                "id": "q1_c",
+                                "label": "Only Users benefit because they can now afford personal EEG equipment.",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_d",
+                                "label": "Economic Infrastructure benefits through lower hardware costs driving more investment.",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "q1_a": "Cost reduction in hardware originates with Technology Providers, but the effects don't stay there. Who needs affordable neurofeedback equipment most?",
+                            "q1_c": "Personal EEG use by individuals is one effect, but the largest gains were in research and facilitation contexts that previously faced institutional procurement barriers.",
+                            "q1_d": "Investment may follow expanded capability, but the immediate beneficiaries are the practitioners and researchers who could now afford equipment.",
+                            "q1_b": "<strong>Exactly right.</strong> Cost democratization in hardware ripples across multiple components. Researchers who couldn't afford institutional EEG can now run neurofeedback studies. Developers can build biofeedback-responsive platforms. Facilitators can integrate real-time brainwave monitoring into session contexts. The price drop expanded what multiple ecosystem components could do."
+                        }
+                    },
+                    {
+                        "question": "<h3>Borrowed Frameworks</h3><p>Name two concepts borrowed from psychedelic therapy that cyberdelic platforms now use, and explain why they transferred so naturally.</p>",
+                        "options": [
+                            {
+                                "id": "q2_a",
+                                "label": "Flow state optimization and UI accessibility — because therapy and game design have always overlapped.",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_b",
+                                "label": "Set and setting, and the preparation-experience-integration arc — because both fields work with altered states and require intentional context to produce beneficial outcomes.",
+                                "correct": true
+                            },
+                            {
+                                "id": "q2_c",
+                                "label": "Clinical trial methodology and risk assessment — because VR platforms are medical devices.",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_d",
+                                "label": "Subscription pricing and content licensing — because psychedelic therapy and VR apps share business models.",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "q2_a": "Flow state optimization comes from gaming research, and accessibility principles come from HCI. Those did not originate in psychedelic therapy.",
+                            "q2_c": "Clinical trial methodology and risk assessment come from healthcare research generally, not from psychedelic therapy specifically.",
+                            "q2_d": "Business model concepts aren't what cyberdelics borrowed from psychedelic therapy. The transfer was about guiding humans through non-ordinary states.",
+                            "q2_b": "<strong>Right.</strong> Set (mindset, intention) and setting (environment, support) transfer directly because cyberdelic experiences — like psychedelic sessions — are powerfully context-dependent. The preparation-experience-integration arc transfers because both fields recognize that the session itself is not the whole intervention; the context before and after determines if the experience becomes lasting transformation. Altered states require intentional context."
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

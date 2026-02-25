@@ -1,0 +1,124 @@
+{
+    "title": "Hardware Manufacturers: Strategic Players",
+    "description": "Understand how the strategic choices of hardware manufacturers shape the possibilities and constraints of the cyberdelic field.",
+    "theme": {
+        "primaryColor": "#00c9a7",
+        "fontBody": "Rajdhani, sans-serif"
+    },
+    "modules": [
+        {
+            "id": "module_5_1_2_pd",
+            "title": "Hardware Manufacturers: Strategic Players",
+            "type": "progressive-disclosure",
+            "content": {
+                "sections": [
+                    {
+                        "title": "Hardware Manufacturers as Ecosystem Players",
+                        "content": "<p>Hardware manufacturers in the cyberdelic space aren't just building consumer products. They are making bets about the future of computing, and those bets have profound consequences for what every developer can build and every practitioner can recommend.</p><p>When a manufacturer decides how to price hardware, what app distribution model to use, how to handle user data, or what rendering capabilities to prioritize — those decisions define the playing field for an entire field of developers. A cyberdelic platform doesn't exist in the abstract. It runs on specific hardware with specific capabilities and constraints set by a manufacturer whose primary goals may have nothing to do with consciousness exploration.</p><p><strong>Core Question:</strong> Whose strategic interests are shaping the tools we use, and what does that mean for where the field can go?</p>",
+                        "triggerLabel": "Meta's Dominance"
+                    },
+                    {
+                        "title": "Meta: Dominance, Strategy, and Implications",
+                        "content": "<p>Meta controls approximately 77% of global consumer VR headset shipments as of 2024. For cyberdelic developers, this isn't a stat — it's a constraint.</p><p><strong>The subsidized hardware strategy:</strong> Meta sells Quest headsets below cost and recovers margin through the Meta Quest Store's 30% app fee. This drives adoption while creating platform dependency (developers need Meta's distribution to reach most VR users).</p><p><strong>Platform control implications:</strong> Building for Meta Quest maximizes reach. But it also means navigating Meta's content policies, accepting their revenue share, and operating within their approval processes. A consciousness app that Meta decides violates platform guidelines loses access to 77% of potential users overnight.</p><p><strong>Privacy concerns:</strong> Meta's business model is built on data collection and advertising. Users with privacy concerns face a real trade-off: the best-supported platform also has the most surveillance-adjacent business model.</p><p><strong>The bottom line:</strong> Most cyberdelic content is Quest-first by necessity, not by preference. Maximum reach requires Meta.</p>",
+                        "media": {
+                            "type": "image",
+                            "src": "placeholder-meta-timeline.jpg",
+                            "alt": "Graphic depicting Meta Quest hardware with a data visualization overlay showing 77% market share.",
+                            "position": "full-width",
+                            "aiPrompt": "Meta Quest hardware headset shown in soft studio lighting. Floating above or around it are clean, minimal data visualization elements (charts, glowing percentages) emphasizing a dominant 77% market share. Corporate but sleek aesthetic, representing both hardware capability and market dominance. 16:9 aspect ratio."
+                        },
+                        "triggerLabel": "Apple's Legitimacy Signal"
+                    },
+                    {
+                        "title": "Apple: The Legitimacy Signal",
+                        "content": "<p>Apple Vision Pro isn't trying to win the volume war. It's playing a different game.</p><p>Apple's Vision Pro launch positioned spatial computing as a premium, high-capability platform — separate from gaming-focused VR. The messaging is enterprise and productivity, not entertainment. For the cyberdelic field, this matters less as a current tool (limited consciousness-focused content exists on Vision Pro today) and more as a legitimacy signal.</p><p>When Apple enters a space, it signals maturity and cultural acceptance. The Vision Pro's existence says: spatial computing is serious, premium, and here to stay. As consciousness-focused content matures and demand from wellness and clinical markets grows, Vision Pro could become a significant platform for high-fidelity therapeutic and exploratory experiences.</p><p><strong>For facilitators:</strong> Apple's current limited cyberdelic content library makes it a poor immediate recommendation for most clients. But the platform's trajectory — premium hardware, strong privacy positioning, enterprise credibility — points toward future relevance.</p>",
+                        "triggerLabel": "Pico & Institutional Markets"
+                    },
+                    {
+                        "title": "Pico: International Alternative & Regulatory Context",
+                        "content": "<p>Pico (owned by ByteDance) is the fastest-growing international VR alternative to Meta, with particular traction in Europe and Asia.</p><p><strong>Why Pico is growing internationally:</strong> Meta faces significant regulatory resistance in the EU and other markets over data practices and privacy frameworks. ByteDance's alternative — despite its own Chinese ownership concerns — is often perceived as the lesser regulatory friction by European distributors and institutions.</p><p><strong>The privacy positioning play:</strong> Pico markets itself as a privacy-friendlier choice for institutional and clinical customers where Meta's data model creates procurement obstacles. European hospitals, university research labs, and government-funded wellness initiatives have found Pico easier to navigate from a procurement and compliance standpoint.</p><p><strong>For developers and facilitators:</strong> Pico's relative US niche status means building for it adds scope without proportional audience gain domestically. Internationally, however, it opens institutional doors that Meta can't for clinical licensing approaches.</p>",
+                        "triggerLabel": "The Shared Constraint"
+                    },
+                    {
+                        "title": "The Shared Constraint: Hardware Capability Defines the Ceiling",
+                        "content": "<p>Every VR developer works within a ceiling set by available hardware. This is the shared constraint that unites all Technology Providers.</p><p>Display resolution determines immersion quality. Tracking precision determines interaction fidelity. Processing power determines how complex an environment can be rendered in real-time. Battery life determines session length. Comfort determines how long someone can remain present.</p><p>When Meta improves the Quest's eye tracking, new biofeedback-aware applications become possible. When Apple's chip advances spatial audio quality, presence research gets new instruments. When hardware costs drop, new populations of users become accessible.</p><p>The hardware manufacturers don't know they're building consciousness tools. But every decision they make — processor roadmaps, tracking methodologies, distribution models, pricing tiers — constrains or expands what the cyberdelic field can do next. They are ecosystem players, not just product vendors.</p>",
+                        "triggerLabel": "Take the Quiz"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "module_5_1_2_quiz",
+            "title": "Strategic Check",
+            "type": "option-selector",
+            "config": {
+                "mode": "single",
+                "style": "card",
+                "questions": [
+                    {
+                        "question": "<h3>The Reach Compromise</h3><p>A cyberdelic developer wants maximum reach for their new platform. Why does this almost certainly mean building for Meta Quest first, even if they have concerns about Meta's data practices?</p>",
+                        "options": [
+                            {
+                                "id": "q1_a",
+                                "label": "Because Meta has better graphics capabilities than all other headsets.",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_b",
+                                "label": "Because Meta controls approximately 77% of consumer VR headset shipments, making it the only platform that provides access to most potential VR users.",
+                                "correct": true
+                            },
+                            {
+                                "id": "q1_c",
+                                "label": "Because Meta's content policies are more permissive for consciousness applications.",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_d",
+                                "label": "Because Meta headsets are the only ones compatible with biofeedback peripherals.",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "q1_a": "Graphics capabilities are platform-dependent but not the decisive factor here. A developer with privacy-friendly values would still choose Meta for a different reason related to audience scale.",
+                            "q1_c": "Meta's content policies are actually a constraint for some consciousness applications — not an advantage. The reason to build for Meta is more fundamental.",
+                            "q1_d": "Biofeedback compatibility varies by application and headset, but it's not the primary reason Meta dominates developer decision-making.",
+                            "q1_b": "<strong>Right.</strong> Market share is the driver. Bypassing Meta means reaching a fraction of your potential audience. That mission constraint often outweighs other considerations for developers seeking widespread adoption — even ones with real concerns about Meta's data practices."
+                        }
+                    },
+                    {
+                        "question": "<h3>The Alternative Context</h3><p>Why is Pico growing internationally while remaining relatively niche in the US market?</p>",
+                        "options": [
+                            {
+                                "id": "q2_a",
+                                "label": "Because Pico hardware has higher resolution displays than Meta.",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_b",
+                                "label": "Because Pico is cheaper than Meta Quest in all markets.",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_c",
+                                "label": "Because Meta faces significant regulatory resistance and procurement friction in European/Asian markets around data privacy, making Pico an easier option for institutions there.",
+                                "correct": true
+                            },
+                            {
+                                "id": "q2_d",
+                                "label": "Because Pico has more consciousness-focused applications in its app store.",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "q2_a": "Hardware specs are comparable between major manufacturers and aren't the primary driver of Pico's international market share.",
+                            "q2_b": "Pico's pricing is competitive but not uniformly cheaper than Meta, especially given Meta's subsidized hardware strategy.",
+                            "q2_d": "Pico doesn't have a significantly larger consciousness-focused app library than Meta. The growth is driven by regulatory and institutional context, not content differentiation.",
+                            "q2_c": "<strong>Exactly.</strong> Regulatory and procurement context drives Pico's international growth. European institutions operating under GDPR often find Meta's data collection model creates compliance obstacles. Pico's positioning as a privacy-friendlier alternative navigates that procurement friction more easily in many institutional contexts."
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

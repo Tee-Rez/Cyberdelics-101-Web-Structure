@@ -1,0 +1,97 @@
+{
+    "title": "Software Developers: The Builder Landscape",
+    "description": "Understand the different categories of software developers in the cyberdelic field, their development pipelines, and their business models.",
+    "theme": {
+        "primaryColor": "#00c9a7",
+        "fontBody": "Rajdhani, sans-serif"
+    },
+    "modules": [
+        {
+            "id": "module_5_1_3_pd",
+            "title": "Software Developers: The Builder Landscape",
+            "type": "progressive-disclosure",
+            "content": {
+                "sections": [
+                    {
+                        "title": "Four Categories of Software Developers",
+                        "content": "<p>Not all cyberdelic software comes from the same kind of builder. Understanding the categories reveals why the landscape looks the way it does — what gets built, how it's maintained, and what you can rely on.</p><p><strong>Commercial platforms</strong> (TRIPP, Maloka, XRHealth): Sustainable teams with business accountability. Investor-backed or revenue-generating. Driven by growth metrics as much as mission. Resources for consistent updates, but face pressure to prioritize features that drive subscriptions.</p><p><strong>Research tools</strong> (Isness-D, university labs): Validation-focused, often open access. Built to prove something, not sell something. Slower polish, but high credibility and willing to experiment with radical designs.</p><p><strong>Community creators</strong> (VRChat worlds, Open Brush artists): Volunteer-driven and authentic. Built out of passion. Variable quality and consistency, but often the source of the field's most innovative experiences. Fill gaps commercial platforms don't see.</p><p><strong>Adapted platforms</strong> (Supernatural, FitXR): Gaming and fitness platforms discovering consciousness benefits in their design. Important source of cross-pollination — transformational intent emerging from unexpected contexts.</p>",
+                        "media": {
+                            "type": "image",
+                            "src": "placeholder-developer-quadrant.jpg",
+                            "alt": "Four developer categories visualized as a quadrant matrix",
+                            "position": "full-width",
+                            "aiPrompt": "A quadrant or spectrum visualizing four developer categories (Commercial, Research, Community, Adapted). Axes might be 'Mission vs. Resources' or 'Rigid vs. Experimental'. Clean, infographic aesthetic with cyberdelic color touches (teal and purple gradients). 16:9 aspect ratio."
+                        },
+                        "triggerLabel": "The Development Pipeline"
+                    },
+                    {
+                        "title": "The Development Pipeline",
+                        "content": "<p>Most successful cyberdelic platforms don't emerge fully formed. They move through a recognizable pipeline:</p><ol><li><strong>Research prototype</strong> → a lab builds something to test a hypothesis</li><li><strong>Open source release</strong> → findings and sometimes code are shared publicly</li><li><strong>Commercial adaptation</strong> → an entrepreneur packages the validated approach for a market</li><li><strong>Platform integration</strong> → the application finds its home on distribution channels</li><li><strong>Clinical validation</strong> → formal studies confirm efficacy in clinical populations</li><li><strong>Mainstream adoption</strong> → healthcare systems, insurance, and the general public engage</li></ol><p>This pipeline explains why the field's timeline feels slow to outsiders. From hypothesis to clinical adoption typically takes 5–10 years. Commercially, the steps compress somewhat — but clinical credibility still requires the research legs.</p><p>Understanding this reveals where to look for what's coming: university lab projects today are often the commercial platforms of 2028.</p>",
+                        "triggerLabel": "Business Models"
+                    },
+                    {
+                        "title": "Business Models and Their Trade-Offs",
+                        "content": "<p>How a platform makes money shapes what it builds and who it serves. The main models:</p><p><strong>Subscription (B2C):</strong> Monthly fee, consumer-facing. Accessible to individuals, but vulnerable to churn. Weakness: pressure to optimize for engagement over depth.</p><p><strong>Clinical licensing (B2B):</strong> Enterprise contracts with clinics/hospitals. More stable revenue, but longer sales cycles and institutional approval processes. Strength: aligns platform success with clinical outcomes.</p><p><strong>One-time purchase:</strong> Single payment, permanent access. Limits ongoing revenue and update incentives. More common in research tools.</p><p><strong>Freemium:</strong> Free core access with paid premium features. Maximizes top-of-funnel reach. Risks: free tier must retain users, premium tier must compel conversion.</p><p><strong>Grant-funded:</strong> University labs, nonprofit initiatives. Zero commercial pressure — but dependent on funding cycles and not sustainable independently.</p><p>The key tension across all models: <strong>mission vs. sustainability</strong>. A platform that can't generate revenue can't keep its servers on.</p>",
+                        "triggerLabel": "The Trade-Off Map"
+                    },
+                    {
+                        "title": "The Business Model Trade-Off Map",
+                        "content": "<table style='width:100%; border-collapse:collapse; margin-top:10px; font-size:0.9em; text-align:left;'><tr style='background:rgba(255,255,255,0.1); border-bottom:1px solid rgba(255,255,255,0.2)'><th style='padding:10px;'>Model</th><th style='padding:10px;'>Access</th><th style='padding:10px;'>Revenue Stability</th><th style='padding:10px;'>Mission Alignment Risk</th></tr><tr style='border-bottom:1px solid rgba(255,255,255,0.1)'><td style='padding:10px;'>Subscription (B2C)</td><td style='padding:10px;'>High</td><td style='padding:10px;'>Medium</td><td style='padding:10px;'>Engagement optimization can drift from depth</td></tr><tr style='border-bottom:1px solid rgba(255,255,255,0.1)'><td style='padding:10px;'>Clinical licensing (B2B)</td><td style='padding:10px;'>Low</td><td style='padding:10px;'>High</td><td style='padding:10px;'>Low — clinical outcomes are the product</td></tr><tr style='border-bottom:1px solid rgba(255,255,255,0.1)'><td style='padding:10px;'>One-time purchase</td><td style='padding:10px;'>Medium</td><td style='padding:10px;'>Low</td><td style='padding:10px;'>Low — but update incentives weaken</td></tr><tr style='border-bottom:1px solid rgba(255,255,255,0.1)'><td style='padding:10px;'>Freemium</td><td style='padding:10px;'>Very high</td><td style='padding:10px;'>Medium</td><td style='padding:10px;'>Moderate — premium conversion pressure</td></tr><tr style='border-bottom:1px solid rgba(255,255,255,0.1)'><td style='padding:10px;'>Grant-funded</td><td style='padding:10px;'>High</td><td style='padding:10px;'>Very low</td><td style='padding:10px;'>Very low — but not sustainable independently</td></tr></table><p style='margin-top:15px;'>No model is perfect. The most resilient platforms often combine models: clinical licensing for institutional revenue stability plus consumer subscription for mission reach.</p>",
+                        "triggerLabel": "Reading the Landscape"
+                    },
+                    {
+                        "title": "Reading the Builder Landscape",
+                        "content": "<p>Knowing who built a platform and how it's funded tells you a lot about what to expect from it.</p><p>A <strong>subscription-based commercial platform</strong> with VC funding will have polished UX, responsive customer support, and regular updates — but may face pressure to chase engagement metrics. Evaluate it on: does it measure transformation or time-in-app?</p><p>A <strong>research-origin tool</strong> with open access will have credible mechanisms and validated protocols, but possibly rough UX and limited support. Evaluate it on: what populations was it validated with?</p><p>A <strong>community creator project</strong> will have authentic vision and cultural resonance, but variable maintenance. Evaluate it on: is the community still active? Does it serve your specific facilitation context?</p><p>This is the evaluative thinking that separates sophisticated facilitators from enthusiastic early adopters.</p>",
+                        "triggerLabel": "Apply This to a Scenario"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "module_5_1_3_scenario",
+            "title": "The Builder's Dilemma",
+            "type": "scenario-based",
+            "content": {
+                "title": "Advising a New Cyberdelic Creator",
+                "scenes": [
+                    {
+                        "id": "intro",
+                        "narrative": "<p>A colleague approaches you. She has a PhD in clinical psychology, has been running breathwork sessions for five years, and has a clear vision for a VR breathwork guidance platform — one that uses binaural audio, real-time breathing feedback, and guided visualization to create genuine altered states through breath alone, no substances.</p><p>She has the clinical knowledge. She has the content. She has relationships with breathwork practitioners who would use it.</p><p><strong>What she doesn't have:</strong> software development experience, business experience, or funding. She's asking for your guidance on how to start navigating the development pipeline and business models.</p><p>Which path do you recommend she take?</p>",
+                        "choices": [
+                            {
+                                "id": "choice_a",
+                                "label": "Path A: Research prototype first, open source, web-based entry, grant-funded",
+                                "outcome": "outcome_a"
+                            },
+                            {
+                                "id": "choice_b",
+                                "label": "Path B: Commercial platform, proprietary, Meta Quest Store first, subscription",
+                                "outcome": "outcome_b"
+                            },
+                            {
+                                "id": "choice_c",
+                                "label": "Path C: Clinical licensing first, proprietary, partnership with an existing clinical network",
+                                "outcome": "outcome_c"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "outcome_a",
+                        "narrative": "<h3>Path A Selected: Research-First & Grant-Funded</h3><p><strong>Outcome:</strong> She establishes credibility through validation. Publications give her leverage for clinical licensing down the road. Open source builds community. Web-based removes hardware barriers for initial testing. <em>The weakness: slow path to sustainability, depends heavily on grant cycles.</em></p><p><strong>Feedback:</strong> This path prioritizes mission and credibility over speed. It's strong if she has an institutional affiliation that can support grant applications and if her goal is clinical integration rather than rapid consumer adoption. The breathwork community she already has gives her a built-in validation cohort. Consider whether grant timelines match her financial runway.</p>",
+                        "choices": []
+                    },
+                    {
+                        "id": "outcome_b",
+                        "narrative": "<h3>Path B Selected: Commercial & Subscription-Based</h3><p><strong>Outcome:</strong> Fastest path to market and revenue. Maximum consumer reach. <em>But without research validation, cautious clinical practitioners won't refer clients. Without clinical referrals, subscription churn is high. Without a large development budget, polish and support are thin.</em></p><p><strong>Feedback:</strong> This path prioritizes speed and reach over credibility. Possible, but high-risk without funding. Her breathwork practitioner community may be willing to pilot-test, but wider clinical adoption requires the research path she'd be skipping. A hybrid — build the consumer product while doing a small validation study in parallel — could bridge the gap.</p>",
+                        "choices": []
+                    },
+                    {
+                        "id": "outcome_c",
+                        "narrative": "<h3>Path C Selected: B2B Clinical Licensing</h3><p><strong>Outcome:</strong> Her existing practitioner relationships become the distribution channel. The B2B model provides more stable revenue than consumer subscription. <em>But it requires significant sales effort and longer cycles. Needs enough polish for institutional approval.</em></p><p><strong>Feedback:</strong> This path fits her clinical background best. She already has the relationships and the clinical credibility — the product just needs to meet institutional standards. The challenge is that clinical licensing requires resources for HIPAA compliance, liability documentation, and ongoing clinical support that go beyond the technical build.</p>",
+                        "choices": []
+                    }
+                ]
+            }
+        }
+    ]
+}

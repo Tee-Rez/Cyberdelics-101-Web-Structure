@@ -1,0 +1,119 @@
+{
+    "title": "Communities: The Peer Infrastructure",
+    "description": "Examine the online, in-person, and conference-based communities that form the field's infrastructure, and understand the value of the peer-to-peer model.",
+    "theme": {
+        "primaryColor": "#00c9a7",
+        "fontBody": "Rajdhani, sans-serif"
+    },
+    "modules": [
+        {
+            "id": "module_5_2_4_pd",
+            "title": "Communities: The Peer Infrastructure",
+            "type": "progressive-disclosure",
+            "content": {
+                "sections": [
+                    {
+                        "title": "Online Communities: Where the Field Lives Day-to-Day",
+                        "content": "<p>The cyberdelic field's daily knowledge exchange happens primarily in online spaces — asynchronous and real-time forums where practitioners, researchers, and enthusiasts share platform experiences, research links, and professional support.</p><ul><li><strong>Reddit:</strong> r/cyberdelics and r/virtualreality serve different but overlapping functions. Good for horizon scanning.</li><li><strong>Discord servers:</strong> Real-time discussion with specialized channels. Provides faster information sharing and stronger peer relationships than Reddit.</li><li><strong>Professional networks:</strong> Invitation-based or credential-gated spaces for verified practitioners. Higher signal-to-noise ratio.</li></ul><p><strong>The limitation:</strong> Online communities excel at information sharing, but they are weaker at supervised skill development, nuanced case consultation, and relational depth.</p>",
+                        "triggerLabel": "In-Person Communities"
+                    },
+                    {
+                        "title": "In-Person Communities: The Human Layer",
+                        "content": "<p>In-person cyberdelic community exists, but it's geographically uneven — concentrated in coastal US cities, European hubs, and a scattering of other locations.</p><ul><li><strong>Local meetups and collectives:</strong> Often organized through Meetup.com, these provide the entry point for face-to-face connection. Quality varies enormously. If a high-quality community doesn't exist near you, building one is one of the most valuable contributions a practitioner can make.</li><li><strong>Facilitator circles:</strong> Small, intentional peer support groups for active facilitators. Typically 4–8 people meeting regularly to share case experiences, develop skills, and provide professional accountability. This is where some of the deepest professional development happens.</li></ul>",
+                        "triggerLabel": "Conferences"
+                    },
+                    {
+                        "title": "Conferences: The Field's Gathering Points",
+                        "content": "<p>Conferences serve functions that no other format provides: concentrated learning, field-wide relationship building, and the experience of being part of something larger.</p><ul><li><strong>Science and Nonduality (SAND):</strong> The premier conference for consciousness exploration at the intersection of science and spirituality. Growing VR presence.</li><li><strong>Consciousness Hacking (Flourishing IRL):</strong> Founded specifically at the technology-consciousness intersection. Highly practitioner-oriented.</li><li><strong>MAPS Psychedelic Science:</strong> The psychedelic therapy field's flagship gathering, with an emerging cyberdelic track.</li><li><strong>AWE (Augmented World Expo) / VRDC:</strong> Industry-focused VR/AR conferences with growing wellness tracks.</li></ul><p>As emerging cyberdelic-specific events develop, they'll become the most important annual touchstones for professional practitioners.</p>",
+                        "triggerLabel": "Functions & Peer Model"
+                    },
+                    {
+                        "title": "Community Functions and the Peer-to-Peer Model",
+                        "content": "<p>Communities serve four distinct functions: <strong>Knowledge sharing</strong>, <strong>Emotional support</strong>, <strong>Standards development</strong>, and <strong>Advocacy</strong>.</p><h3>The Peer-to-Peer Model</h3><p>Unlike expert-to-novice teaching relationships, healthy field communities operate on the assumption that everyone has something to contribute — and that the collective knowledge exceeds any individual's. This aligns with cyberdelic values and is practically suited to an emerging field where the \"experts\" are only a few years ahead of the \"novices.\"</p><p>The value of the peer model is speed and breadth. The limitation is that pure peer consensus, without quality controls, can be biased. Sophisticated practitioners use community knowledge as one input among several, cross-referencing with research literature rather than treating consensus as authoritative.</p>",
+                        "media": {
+                            "type": "image",
+                            "src": "placeholder-peer-network.jpg",
+                            "alt": "Peer network diagram showing bidirectional knowledge flow",
+                            "position": "full-width",
+                            "aiPrompt": "Peer network diagram showing bidirectional knowledge flow between community members — contrast with a hierarchical expert-novice structure for visual clarity. Connected nodes glowing, emphasizing 'collective intelligence' over 'singular authority' in a sleek cyberdelic design."
+                        },
+                        "triggerLabel": "Take the Quiz"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "module_5_2_4_quiz",
+            "title": "Community Infrastructure Check",
+            "type": "option-selector",
+            "config": {
+                "mode": "single",
+                "style": "card",
+                "questions": [
+                    {
+                        "question": "<h3>The Peer Model Advantage</h3><p>What makes peer community different from expert-to-novice teaching models — and why does that distinction matter specifically for an emerging field like cyberdelics?</p>",
+                        "options": [
+                            {
+                                "id": "q1_a",
+                                "label": "Peer community is better because everyone is equally qualified.",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_b",
+                                "label": "In a peer model, knowledge flows in multiple directions based on experience rather than credentials, mobilizing collective intelligence faster than formal structures can develop.",
+                                "correct": true
+                            },
+                            {
+                                "id": "q1_c",
+                                "label": "Peer community is simply a cheaper version of formal education.",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_d",
+                                "label": "Expert-to-novice models don't work in consciousness work contexts.",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "q1_a": "Not everyone is equally qualified — the peer model recognizes that different kinds of experience produce different kinds of useful knowledge.",
+                            "q1_c": "The peer model is defined by knowledge flow direction and structure, not economics.",
+                            "q1_d": "Expert-to-novice models absolutely work in consciousness contexts (e.g., clinical training). The question is about the emerging field dynamics.",
+                            "q1_b": "<strong>Right.</strong> The peer model's value is speed. When formal expertise is scarce and practitioner experience is generating knowledge faster than institutions can codify it, a bidirectional community model extracts more usable knowledge than waiting for a hierarchy to emerge."
+                        }
+                    },
+                    {
+                        "question": "<h3>Professional Development Mix</h3><p>A new facilitator is working in a city with no local cyberdelic community. Which combination of options gives them the most professional development value — and why?</p>",
+                        "options": [
+                            {
+                                "id": "q2_a",
+                                "label": "Reddit alone — it's the largest online community.",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_b",
+                                "label": "A specialized Discord community for peer depth plus attending one annual conference for relational and field-wide exposure.",
+                                "correct": true
+                            },
+                            {
+                                "id": "q2_c",
+                                "label": "Only consuming research papers — professional communities aren't a credible source of development.",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_d",
+                                "label": "Building a following on social media to develop their own community.",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "q2_a": "Reddit is valuable for horizon scanning but lacks the relational depth needed for professional case consultation.",
+                            "q2_c": "Research papers are essential, but the field's working knowledge significantly exceeds what is published.",
+                            "q2_d": "Building an audience on social media is outward-facing and prioritizes marketing over peer-oriented professional development.",
+                            "q2_b": "<strong>Right.</strong> This combination addresses both the need for real-time peer consultation (Discord) and the need for field-wide relationship building and professional belonging (Conferences). Neither alone is sufficient."
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}
