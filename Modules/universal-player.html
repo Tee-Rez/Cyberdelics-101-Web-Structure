@@ -146,20 +146,6 @@
                 window.parent.postMessage({ type: 'PLAYER_READY' }, '*');
             }, 500);
 
-            // 7. Try Local Fetch (for Test Harness)
-            fetch('./test-manifest.json')
-                .then(response => {
-                    if (response.ok) return response.json();
-                })
-                .then(manifest => {
-                    if (manifest) {
-                        loadManifest(manifest, 'Local Fetch');
-                    }
-                })
-                .catch(() => {
-                    // Ignore fetch errors - we might be in Framer where this file doesn't exist
-                });
-
         })();
     </script>
 </body>

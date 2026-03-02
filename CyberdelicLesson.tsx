@@ -15,7 +15,6 @@ interface Props {
     jsonContent: string
     width: number
     height: number
-    // NEW PROPERTIES
     showDescription: boolean
     descriptionText: string
     descriptionStyle: "minimal" | "standard" | "featured"
@@ -51,7 +50,6 @@ export default function CyberdelicsLesson(props: Props) {
                     let cleanId = props.lessonId.trim()
                     cleanId = cleanId.replace(/\.json$/, "")
                     cleanId = cleanId.replace(/^manifests\//, "")
-
                     if (cleanId) {
                         const manifestUrl = `https://raw.githubusercontent.com/${GITHUB_USER}/${GITHUB_REPO}/main/${FOLDER_PATH}/${cleanId}.json`
                         try {
@@ -90,9 +88,6 @@ export default function CyberdelicsLesson(props: Props) {
     }, [props.lessonId, props.jsonContent, props.sourceType])
 
     // --- RESPONSIVE LOGIC ---
-    // Desktop: >= 1400
-    // Tablet: 690 - 1399
-    // Phone: < 690
     const getDeviceConfig = (width: number) => {
         if (width >= 1400) {
             return {
@@ -100,6 +95,7 @@ export default function CyberdelicsLesson(props: Props) {
                 descPadding: "24px",
                 descFontSize: "16px",
                 containerPadding: "0px",
+                minIframeHeight: "600px", // Ensures title always visible
             }
         } else if (width >= 690) {
             return {
@@ -107,6 +103,7 @@ export default function CyberdelicsLesson(props: Props) {
                 descPadding: "20px",
                 descFontSize: "15px",
                 containerPadding: "0px",
+                minIframeHeight: "500px",
             }
         } else {
             return {
@@ -114,6 +111,7 @@ export default function CyberdelicsLesson(props: Props) {
                 descPadding: "16px",
                 descFontSize: "14px",
                 containerPadding: "0px",
+                minIframeHeight: "400px",
             }
         }
     }
@@ -132,7 +130,7 @@ export default function CyberdelicsLesson(props: Props) {
             fontSize: device.descFontSize,
             lineHeight: "1.6",
             boxSizing: "border-box" as const,
-            flexShrink: 0, // Prevents description from shrinking
+            flexShrink: 0,
         }
 
         switch (props.descriptionStyle) {
@@ -174,7 +172,7 @@ export default function CyberdelicsLesson(props: Props) {
                 background: "#000",
                 position: "relative",
                 padding: device.containerPadding,
-                boxSizing: "border-box", // Ensure padding doesn't overflow
+                boxSizing: "border-box",
             }}
         >
             {/* DESCRIPTION SECTION */}
@@ -189,7 +187,7 @@ export default function CyberdelicsLesson(props: Props) {
                 style={{
                     flex: 1,
                     width: "100%",
-                    minHeight: 0, // Critical for flexbox children
+                    minHeight: device.minIframeHeight, // KEY CHANGE: Ensures minimum visible area
                     background: "#000",
                     display: "flex",
                     alignItems: "center",
@@ -249,7 +247,6 @@ addPropertyControls(CyberdelicsLesson, {
         hidden: (props) => props.sourceType === "GitHub",
         defaultValue: "{}",
     },
-    // NEW CONTROLS
     showDescription: {
         type: ControlType.Boolean,
         title: "Show Description",
@@ -271,12 +268,12 @@ addPropertyControls(CyberdelicsLesson, {
         defaultValue: "standard",
         hidden: (props) => !props.showDescription,
     },
-});
+})
 
 CyberdelicsLesson.defaultProps = {
-    width: 775,
-    height: 900,
+    width: "100%",
+    height: "auto",
     showDescription: true,
     descriptionText: "This mini-lesson will guide you through key concepts...",
     descriptionStyle: "standard",
-};
+}
