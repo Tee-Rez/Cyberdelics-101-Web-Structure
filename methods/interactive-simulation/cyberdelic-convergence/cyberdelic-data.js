@@ -813,18 +813,20 @@
                 id: 'domains',
                 title: 'Explore the Domains',
                 text: 'Click on any colored circle to zoom in and see detailed information about that field\'s contributions.',
-                target: '.domain-node',
+                target: '.domain-node[data-id="psychedelic"] .node-circle',
                 position: 'center',
                 spotlightShape: 'circle',
-                highlightMultiple: true
+                spotlightPadding: 10
             },
             {
                 id: 'timeline',
                 title: 'Travel Through Time',
                 text: 'Use the timeline at the top to see how connections formed over the years. Try scrubbing it now!',
-                target: '#timeline-container', // Will need to ensure this ID exists in the new UI
-                position: 'bottom',
-                spotlightShape: 'rect'
+                target: '.sim-controls',
+                position: 'center',
+                spotlightShape: 'rect',
+                spotlightWidth: 90,
+                spotlightHeight: 520
             }
         ]
     };

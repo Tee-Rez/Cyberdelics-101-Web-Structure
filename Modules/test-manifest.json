@@ -1,20 +1,181 @@
 {
-    "title": "Cultural Movements That Imagined the Future",
-    "description": "How Cyberpunk, Rave, and Burning Man prepared the cultural soil for cyberdelics.",
+    "title": "Breaking Down 'Cyberdelics'",
+    "description": "Understanding the etymology and origins of the term 'cyberdelics'",
+    "framerDescription": "Before we define what cyberdelics does, we need to understand what the word itself means. And it turns out the word is doing a lot of work. 'Cyberdelics' isn't a catchy label someone attached to VR meditation. It's a deliberate fusion of two powerful concepts that tells you exactly what this field is about. When you understand where the word comes from, you understand the entire field. That's what this mini-lesson is for.",
     "theme": {
         "primaryColor": "#5900ff",
         "fontBody": "Rajdhani, sans-serif"
     },
     "modules": [
         {
-            "id": "culture_map_2.3",
-            "title": "Culture-Tech Convergence Map",
+            "id": "progressive_disclosure_1.1.1",
+            "title": "Breaking Down 'Cyberdelics'",
+            "type": "progressive-disclosure",
+            "content": {
+                "sections": [
+                    {
+                        "title": "A Fusion Word",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module1/cyberdelics-fusion.jpg",
+                            "aiPrompt": "The word CYBERDELICS split visually at the center : left half in bold electric blue circuit-board typography reading CYBER, right half in flowing purple sacred geometry typography reading DELICS, the two halves merging with light radiating outward from the join point, dark background, clean modern educational graphic design, 16:9 aspect ratio"
+                        },
+                        "mediaLayout": "full",
+                        "content": "<p>The word 'cyberdelics' isn't random. It's a deliberate fusion of two powerful concepts. Understanding where this word comes from helps us grasp what the field actually is. Let's break it down piece by piece.</p>",
+                        "triggerLabel": "Let's break it down"
+                    },
+                    {
+                        "title": "\"Cyber\" : The Digital Realm",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module1/cyber-typography.jpg",
+                            "aiPrompt": "The word CYBER in bold futuristic typography with circuit board patterns and digital nodes flowing through the letters, electric blue and white color scheme, representing technology and digital systems, clean modern design with subtle binary code in background, 16:9 aspect ratio"
+                        },
+                        "mediaLayout": "left",
+                        "content": "<p>'Cyber' comes from 'cybernetics,' coined by Norbert Wiener in 1948. It refers to systems of communication and control, particularly involving technology and feedback loops. In modern usage, 'cyber' represents the digital, technological, and virtual dimensions of experience. It's the realm of VR headsets, AR overlays, biofeedback devices, and human-computer interaction. The medium through which we engage the world digitally.</p>",
+                        "triggerLabel": "Next Component"
+                    },
+                    {
+                        "title": "\"Delic\" : Mind-Manifesting",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module1/delic-typography.jpg",
+                            "aiPrompt": "The word DELIC in flowing organic typography with mandala patterns, sacred geometry (Flower of Life), and radiating light waves emanating outward from the letters, purple and teal color scheme, representing consciousness and inner exploration, mystical yet modern aesthetic, 16:9 aspect ratio"
+                        },
+                        "mediaLayout": "right",
+                        "content": "<p>'Delic' comes from 'psychedelic,' which literally means 'mind-manifesting' (from Greek: psyche = mind/soul, delos = manifest/reveal). This suffix carries the essence of consciousness exploration, expanded awareness, and transformative experiences. It's about revealing what's hidden in consciousness, making the invisible visible. Not hallucinations as a goal : revelation as a goal.</p>",
+                        "triggerLabel": "The Fusion"
+                    },
+                    {
+                        "title": "The Fusion",
+                        "content": "<p>When you combine 'cyber' and 'delic,' you get a field that uses digital technology (cyber) to manifest and explore consciousness (delic). Technology in service of inner revelation. The word itself tells you what the field is about: using computers and sensors as tools for mind-manifesting experiences. This wasn't accidental naming. It was a deliberate declaration of intent.</p>",
+                        "triggerLabel": "Historical Context"
+                    },
+                    {
+                        "title": "Historical Context",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module1/tim-leary-visionary.jpg",
+                            "aiPrompt": "Black and white archival-style portrait of Timothy Leary from the 1990s era, looking thoughtful and visionary, with subtle double-exposure overlay of early computer graphics and VR wireframes, representing the bridge between psychedelic era and digital future, documentary photography style, 16:9 aspect ratio"
+                        },
+                        "mediaLayout": "full",
+                        "content": "<p>The term 'cyberdelics' was popularized by Timothy Leary in the 1990s. Leary, known for his earlier psychedelic research, recognized that technology could serve similar consciousness-expanding purposes as substances. He foresaw a future where virtual reality and digital tools would become valid paths for inner exploration. We're now living in that future he envisioned.</p>",
+                        "triggerLabel": "Try the Simulation"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "interactive_simulation_1.1.1",
+            "title": "Word Building",
             "type": "interactive-simulation",
             "content": {
-                "engine": "CyberdelicConvergence",
-                "placeholder": false,
-                "notes": "Interactive visualization of 1980-2020 timeline comparing Cultural Movements vs Tech Development.",
-                "graphic_src": "../assets/images/module2/convergence_map_placeholder.jpg"
+                "engine": "VennDiagramCombiner",
+                "params": {
+                    "mode": "vesica-piscis",
+                    "data": {
+                        "leftCircle": {
+                            "id": "cyber",
+                            "label": "CYBER",
+                            "color": "#00D9FF",
+                            "subWords": [
+                                "Digital",
+                                "Technology",
+                                "Feedback",
+                                "Systems"
+                            ]
+                        },
+                        "rightCircle": {
+                            "id": "delic",
+                            "label": "DELIC",
+                            "color": "#9D4EDD",
+                            "subWords": [
+                                "Mind",
+                                "Consciousness",
+                                "Transformation",
+                                "Awareness"
+                            ]
+                        },
+                        "merged": {
+                            "label": "CYBERDELICS",
+                            "color": "#FFFFFF",
+                            "definition": "The art and science of using technology to guide consciousness into expanded states of awareness"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "id": "quiz_1.1.1",
+            "title": "Mini-Lesson 1.1.1 Quiz",
+            "type": "option-selector",
+            "config": {
+                "mode": "single",
+                "style": "text",
+                "questions": [
+                    {
+                        "question": "What does the 'cyber' in cyberdelics primarily refer to?",
+                        "options": [
+                            {
+                                "id": "q1_a",
+                                "label": "Cybersecurity and protecting digital information",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_b",
+                                "label": "Digital technology and virtual environments as tools for experience",
+                                "correct": true
+                            },
+                            {
+                                "id": "q1_c",
+                                "label": "Social media and online communication platforms",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_d",
+                                "label": "Artificial intelligence and machine learning systems",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "q1_a": "<p>While 'cyber' is used in cybersecurity, that's not what it means in cyberdelics. Here, 'cyber' refers to the broader realm of digital technology, virtual environments, and human-computer interaction : the tools we use to facilitate consciousness exploration. Think cybernetics and feedback systems, not security. <strong>Try again.</strong></p>",
+                            "q1_c": "<p>While social media exists in the digital realm, 'cyber' in cyberdelics specifically refers to immersive and biofeedback technologies used for consciousness exploration. Social platforms are about external communication, while cyberdelics focus on internal exploration using specialized tech. <strong>Try again.</strong></p>",
+                            "q1_d": "<p>AI and machine learning might be tools within cyberdelic experiences, but 'cyber' here primarily refers to the immersive digital technologies (VR, AR, biofeedback) that create the environment for consciousness exploration. It's about the interface between human and technology, not autonomous intelligent systems. <strong>Try again.</strong></p>",
+                            "q1_b": "<p>Exactly. 'Cyber' in cyberdelics refers to the digital technological realm : VR, AR, biofeedback devices, and computer-mediated experiences. It's about using technology as the medium for consciousness work. This connects back to cybernetics, the study of communication and control systems.</p>"
+                        }
+                    },
+                    {
+                        "question": "What does 'delic' (from psychedelic) literally mean?",
+                        "options": [
+                            {
+                                "id": "q2_a",
+                                "label": "Creating hallucinations or visual distortions",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_b",
+                                "label": "Mind-manifesting or revealing consciousness",
+                                "correct": true
+                            },
+                            {
+                                "id": "q2_c",
+                                "label": "Causing euphoria and pleasure",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_d",
+                                "label": "Altering brain chemistry through substances",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "q2_a": "<p>This is a common misconception. 'Delic' comes from Greek words meaning 'mind-manifesting' or 'revealing the mind/soul.' It's about making consciousness visible and exploring inner dimensions, not just creating visual effects. Hallucinations might occur, but they're not the definition : revelation of consciousness is. <strong>Try again.</strong></p>",
+                            "q2_c": "<p>While consciousness exploration might involve pleasurable states, 'delic' doesn't mean pleasure. It means 'mind-manifesting' : revealing and exploring consciousness. The focus is on revelation and awareness expansion, not just feeling good. Transformation can be challenging, not always euphoric. <strong>Try again.</strong></p>",
+                            "q2_d": "<p>That's one method of creating mind-manifesting experiences (psychedelics), but 'delic' itself just means 'mind-manifesting.' It doesn't specify the method. This is exactly why cyberdelics can use the same suffix : both psychedelics and cyberdelics aim to manifest consciousness, just through different means. <strong>Try again.</strong></p>",
+                            "q2_b": "<p>Exactly right. 'Delic' comes from the Greek 'delos' (to manifest/reveal) and relates to 'psyche' (mind/soul). It's about revealing what's hidden in consciousness, expanding awareness, and making the invisible aspects of mind visible. This is the core of what both psychedelics and cyberdelics aim to do.</p>"
+                        }
+                    }
+                ]
             }
         }
     ]

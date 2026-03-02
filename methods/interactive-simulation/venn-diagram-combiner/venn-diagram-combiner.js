@@ -17,17 +17,15 @@
 
         defaults: {
             mode: 'combined', // 'combined' | 'vesica-piscis'
-            circleRadius: 145,
-            maxDistance: 0.45, // % of width
+            circleRadius: 200,
+            maxDistance: 0.80, // % of width
             particleCount: 20,
             particleDistance: 43, // Scaled with radius (43 for r=150)
             labelFadeThreshold: 0.8,
             mergeProgress: 0
         },
 
-        config: [
-            { id: 'mergeProgress', label: 'Merge Progress', min: 0, max: 100, step: 1 }
-        ],
+        config: [],
 
         // Instance State moved to init() to avoid prototype pollution
         /* _state: { ... }, */
@@ -392,7 +390,7 @@
             this.mergedLabel = this.layers.labels.append('text')
                 .attr('class', 'venn-label merged')
                 .attr('fill', data.merged.color)
-                .attr('dy', '0.35em')
+                .attr('dy', '0.60em')
                 .text(data.merged.label);
 
             // --- Sub-Words Container ---
@@ -574,13 +572,6 @@
             this.params.mergeProgress = progress * 100;
             this._state._dragProgress = progress * 100;
 
-            // Sync with slider
-            const slider = this.container.closest('.interactive-simulation-container')?.querySelector('input[data-id="mergeProgress"]')
-                || document.getElementById('progress');
-            if (slider) {
-                slider.value = progress * 100;
-            }
-
             this.update(0, this.params);
         },
 
@@ -670,8 +661,8 @@
                 this.mergedLabel
                     .attr('opacity', mergedOpacity)
                     .attr('x', this._state.centerX)
-                    .attr('y', this._state.centerY - 55)
-                    .attr('font-size', '24px') // Reduced from 36px
+                    .attr('y', this._state.centerY - 30)
+                    .attr('font-size', '20px') // Reduced from 36px
                     .text(this.data.merged.label);
 
                 // Definition - fit within vesica shape
@@ -682,7 +673,7 @@
                         .attr('fill', '#ffffff')
                         .attr('font-size', '13px') // Smaller for better fit
                         .attr('x', this._state.centerX)
-                        .attr('y', this._state.centerY - 40)
+                        .attr('y', this._state.centerY + 10)
                         .attr('dy', '0em')
                         .text(this.data.merged.definition);
 

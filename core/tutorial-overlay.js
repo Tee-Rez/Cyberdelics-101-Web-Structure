@@ -121,23 +121,28 @@ class TutorialOverlay {
                 const rect = targetEl.getBoundingClientRect();
 
                 // Calculate center relative to overlay/container
-                // Note: getBoundingClientRect is relative to viewport, so we subtract container's viewport offset
                 const cx = rect.left + rect.width / 2 - containerRect.left;
                 const cy = rect.top + rect.height / 2 - containerRect.top;
 
-                // Spotlight Size
-                // Use explicit size if provided, otherwise fit target with padding
-                let size = step.spotlightSize || (Math.max(rect.width, rect.height) + 40);
+                // Spotlight Size & Padding
+                const padding = step.spotlightPadding !== undefined ? step.spotlightPadding : 20;
 
-                spotlight.style.width = size + 'px';
-                spotlight.style.height = size + 'px';
-                spotlight.style.left = (cx - size / 2) + 'px';
-                spotlight.style.top = (cy - size / 2) + 'px';
+                // Prioritize explicit width/height, then size, then target dimensions + padding
+                let sw = step.spotlightWidth || step.spotlightSize || (rect.width + padding * 2);
+                let sh = step.spotlightHeight || step.spotlightSize || (rect.height + padding * 2);
+
+                spotlight.style.width = sw + 'px';
+                spotlight.style.height = sh + 'px';
+                spotlight.style.left = (cx - sw / 2) + 'px';
+                spotlight.style.top = (cy - sh / 2) + 'px';
                 spotlight.style.opacity = 1;
-                spotlight.style.borderRadius = step.shape === 'rect' ? '4px' : '50%';
+
+                // Use 'spotlightShape' or fallback to legacy 'shape'
+                const shape = step.spotlightShape || step.shape || 'circle';
+                spotlight.style.borderRadius = shape === 'rect' ? '4px' : '50%';
 
                 // Card Position
-                this._positionCard(card, cx, cy, size, step.position, containerRect);
+                this._positionCard(card, cx, cy, sw, sh, step.position, containerRect);
             } else {
                 console.warn('[TutorialOverlay] Target not found:', step.target);
                 this._centerLayout(spotlight, card, containerRect);
@@ -156,7 +161,7 @@ class TutorialOverlay {
         card.style.left = (containerRect.width / 2 - card.offsetWidth / 2) + 'px';
     }
 
-    _positionCard(card, cx, cy, size, position, containerRect) {
+    _positionCard(card, cx, cy, sw, sh, position, containerRect) {
         // Simple positioning logic
         // Reset
         card.style.top = '';
@@ -166,29 +171,33 @@ class TutorialOverlay {
 
         const margin = 20;
 
+        // If sw is passed as a single 'size' (legacy), sw=sh=size
+        if (sh === undefined) sh = sw;
+
         switch (position) {
             case 'bottom':
-                card.style.top = (cy + size / 2 + margin) + 'px';
+                card.style.top = (cy + sh / 2 + margin) + 'px';
                 card.style.left = (cx - 150) + 'px'; // Center-ish (width=300)
                 break;
             case 'top':
-                card.style.bottom = (containerRect.height - (cy - size / 2) + margin) + 'px';
+                card.style.bottom = (containerRect.height - (cy - sh / 2) + margin) + 'px';
                 card.style.left = (cx - 150) + 'px';
                 break;
             case 'right':
                 card.style.top = (cy - 100) + 'px';
-                card.style.left = (cx + size / 2 + margin) + 'px';
+                card.style.left = (cx + sw / 2 + margin) + 'px';
                 break;
             case 'left':
                 card.style.top = (cy - 100) + 'px';
-                card.style.right = (containerRect.width - (cx - size / 2) + margin) + 'px';
+                card.style.right = (containerRect.width - (cx - sw / 2) + margin) + 'px';
                 break;
             case 'center':
-                card.style.top = (containerRect.height / 2 - 100) + 'px';
-                card.style.left = (containerRect.width / 2 - 150) + 'px';
+                // Absolute center relative to viewport/container
+                card.style.top = (containerRect.height / 2 - card.offsetHeight / 2) + 'px';
+                card.style.left = (containerRect.width / 2 - card.offsetWidth / 2) + 'px';
                 break;
             default: // Auto/Bottom default
-                card.style.top = (cy + size / 2 + margin) + 'px';
+                card.style.top = (cy + sh / 2 + margin) + 'px';
                 card.style.left = (cx - 150) + 'px';
                 break;
         }

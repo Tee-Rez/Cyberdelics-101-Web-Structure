@@ -777,8 +777,15 @@
                 <div class="help-keyable"><span>Zoom Out</span> <span><span class="key-badge">Space</span> / <span class="key-badge">Esc</span></span></div>
                 <div class="help-keyable"><span>Select Node</span> <span><span class="key-badge">Click</span></span></div>
                 <div class="help-keyable"><span>Toggle Help</span> <span><span class="key-badge">H</span></span></div>
+                <button class="help-restart-tutorial">Restart Tutorial</button>
                 <button class="help-close">Close</button>
             `;
+
+            // 1.5 Bind Restart Tutorial
+            modal.querySelector('.help-restart-tutorial').onclick = () => {
+                this.toggleHelp(false);
+                this.startTutorial();
+            };
 
             // 2. Create Hint Button
             const hintBtn = document.createElement('button');
@@ -825,18 +832,17 @@
         tutorialOverlay: null,
 
         initTutorial: function () {
-            if (this.tutorialOverlay) return;
-
             // Check if TutorialOverlay is available
             if (typeof TutorialOverlay === 'undefined') {
                 console.warn('[CyberdelicConvergence] TutorialOverlay not found.');
                 return;
             }
 
-            // Find container (parent of SVG)
-            const container = this.svg && this.svg.parentNode ? this.svg.parentNode : document.body;
-
-            this.tutorialOverlay = new TutorialOverlay(container);
+            if (!this.tutorialOverlay) {
+                // Find container (parent of SVG)
+                const container = this.svg && this.svg.parentNode ? this.svg.parentNode : document.body;
+                this.tutorialOverlay = new TutorialOverlay(container);
+            }
 
             // Auto-start after delay
             setTimeout(() => this.startTutorial(), 1000);

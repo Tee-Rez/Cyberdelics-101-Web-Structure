@@ -1,74 +1,74 @@
 {
     "title": "The Three Essential Components",
     "description": "Understanding the three requirements that define a cyberdelic experience",
+    "framerDescription": "Knowing where the word comes from is step one. Now we need to know what a cyberdelic experience actually requires. Not every VR experience qualifies. Not every meditation app qualifies. Not every biofeedback device qualifies. There are three specific components that must all be present at the same time. Remove any one of them and you're in a different field entirely. This mini-lesson gives you those three components and shows you how to use them as a checklist.",
     "theme": {
         "primaryColor": "#5900ff",
         "fontBody": "Rajdhani, sans-serif"
     },
     "modules": [
         {
-            "id": "components_1.2",
-            "title": "Three Essential Components",
+            "id": "progressive_disclosure_1.1.2",
+            "title": "The Three Essential Components",
             "type": "progressive-disclosure",
             "content": {
                 "sections": [
                     {
-                        "title": "Opening",
-                        "content": "<p>A cyberdelic experience requires three essential components working together. Remove any one of these, and it's no longer cyberdelic. Think of them as three legs of a stool; all must be present for it to stand.</p>",
-                        "triggerLabel": "Show Components"
+                        "title": "Three Legs of the Same Stool",
+                        "content": "<p>A cyberdelic experience requires three essential components working together. Remove any one of these, and it's no longer cyberdelic. Think of them as three legs of a stool : all must be present for it to stand. This framework is your primary evaluation tool for the rest of this course.</p>",
+                        "triggerLabel": "Component 1"
                     },
                     {
-                        "title": "Component 1 - Digital Technologies",
+                        "title": "Component 1 : Digital Technologies",
                         "media": {
                             "type": "image",
-                            "src": "assets/images/module1/vr-biofeedback-tech.jpg",
-                            "caption": "AI IMAGE PLACEHOLDER: Modern VR headset (Meta Quest style), EEG headband, and HRV chest strap sensor arranged on a minimalist white surface, professional product photography, soft directional lighting, tech-forward aesthetic, subtle Flower of Life sacred geometry pattern faintly visible in background, clean composition, 16:9 aspect ratio"
+                            "src": "../assets/images/module1/vr-biofeedback-tech.jpg",
+                            "aiPrompt": "Modern VR headset (Meta Quest style), EEG headband, and HRV chest strap sensor arranged on a minimalist surface, professional product photography, soft directional lighting, tech-forward aesthetic, subtle Flower of Life sacred geometry pattern faintly visible in background, clean composition, 16:9 aspect ratio"
                         },
                         "mediaLayout": "right",
-                        "content": "<p>The first component is digital technology as the medium. This includes VR headsets, AR experiences, and biofeedback devices like EEG sensors or heart rate monitors.</p><p>But not just any tech use qualifies; the technology must be purposefully designed to facilitate consciousness exploration.</p>",
-                        "triggerLabel": "Next Component"
+                        "content": "<p>The first component is digital technology as the medium. This includes VR headsets, AR experiences, and biofeedback devices like EEG sensors or heart rate monitors. But not just any tech use qualifies : the technology must be purposefully designed to facilitate consciousness exploration. The device is the delivery system, not the destination.</p>",
+                        "triggerLabel": "Component 2"
                     },
                     {
-                        "title": "Component 2 - Altered States",
+                        "title": "Component 2 : Altered States",
                         "media": {
                             "type": "image",
-                            "src": "assets/images/module1/meditation-comparison.jpg",
-                            "caption": "AI IMAGE PLACEHOLDER: Split-screen composition showing a person in traditional meditation pose with eyes closed on the left side, and the same person wearing a VR headset in similar meditative pose on the right side, both surrounded by soft glowing mandala patterns and sacred geometry, ethereal purple and teal color palette, spiritual atmosphere meeting technology, sense of expanded consciousness, 16:9 aspect ratio"
+                            "src": "../assets/images/module1/meditation-comparison.jpg",
+                            "aiPrompt": "Split-screen composition : person in traditional meditation pose with eyes closed on the left side, and the same person wearing a VR headset in a similar meditative pose on the right side, both surrounded by soft glowing mandala patterns and sacred geometry, ethereal purple and teal color palette, spiritual atmosphere meeting technology, sense of expanded consciousness, 16:9 aspect ratio"
                         },
                         "mediaLayout": "left",
-                        "content": "<p>The second component is the intentional cultivation of altered or expanded states of consciousness. This isn't accidental entertainment-induced immersion. It's a deliberate shift in awareness, whether that's deep meditative states, expanded perception, or transcendent experiences.</p><p>The technology is used specifically to facilitate these states.</p>",
-                        "triggerLabel": "Next Component"
+                        "content": "<p>The second component is the intentional cultivation of altered or expanded states of consciousness. This isn't accidental entertainment-induced immersion. It's a deliberate shift in awareness : whether that's deep meditative states, expanded perception, or transcendent experiences. The technology is used specifically to facilitate these states, not just to entertain or distract.</p>",
+                        "triggerLabel": "Component 3"
                     },
                     {
-                        "title": "Component 3 - Transformational Intent",
-                        "content": "<p>The third component is transformational purpose. The experience is designed for personal growth, healing, spiritual exploration, or consciousness development. This is the \"why\" behind everything.</p><p>Entertainment might be enjoyable, wellness might be beneficial, but cyberdelics aim for transformation at a deeper level.</p>",
-                        "triggerLabel": "See How They Work Together"
+                        "title": "Component 3 : Transformational Intent",
+                        "content": "<p>The third component is transformational purpose. The experience is designed for personal growth, healing, spiritual exploration, or consciousness development. This is the 'why' behind everything. Entertainment might be enjoyable. Wellness might be beneficial. But cyberdelics aim for transformation at a deeper level : a shift in how you see yourself and the world.</p>",
+                        "triggerLabel": "All Three Required"
                     },
                     {
                         "title": "All Three Required",
                         "media": {
                             "type": "image",
-                            "src": "assets/images/module1/three-components-venn.jpg",
-                            "caption": "AI IMAGE PLACEHOLDER: Three overlapping circles forming a Venn diagram, each circle labeled and colored differently (Technology in blue, Altered States in purple, Transformation in teal), with a glowing bright center where all three intersect, clean infographic style, modern educational design, dark background, 16:9 aspect ratio"
+                            "src": "../assets/images/module1/three-components-venn.jpg",
+                            "aiPrompt": "Three overlapping circles forming a Venn diagram, each circle labeled and colored differently : Technology in electric blue, Altered States in deep purple, Transformation in teal. Glowing bright white center where all three intersect. Clean infographic style, modern educational design, dark background, subtle sacred geometry texture in circle fill areas, 16:9 aspect ratio"
                         },
                         "mediaLayout": "full",
-                        "content": "<p>All three components must be present. A VR game might use technology and create immersion, but without transformational intent, it's not cyberdelic.</p><p>A meditation app might aim for transformation and use some tech, but without intentionally facilitating altered states through immersive technology, it's not fully cyberdelic.</p><p>The intersection of all three is what defines the field.</p>",
-                        "triggerLabel": "Test Understanding"
+                        "content": "<p>All three components must be present. A VR game might use technology and create immersion, but without transformational intent it's not cyberdelic. A meditation app might aim for transformation and use some tech, but without intentionally facilitating altered states through immersive technology it's not fully cyberdelic. The intersection of all three is what defines the field.</p>",
+                        "triggerLabel": "Take the Quiz"
                     }
                 ]
-            },
-            "artifacts": []
+            }
         },
         {
-            "id": "quiz_1.2",
-            "title": "Components Quiz",
+            "id": "quiz_1.1.2",
+            "title": "Mini-Lesson 1.1.2 Quiz",
             "type": "option-selector",
             "config": {
                 "mode": "single",
                 "style": "text",
                 "questions": [
                     {
-                        "question": "<h3>Question 1 of 2</h3><p>You're evaluating three different VR experiences. Which one demonstrates all three cyberdelic components?</p><p><em>A wellness company launches three VR products and wants to know which qualifies as truly cyberdelic.</em></p>",
+                        "question": "You're evaluating three different VR experiences. Which one demonstrates all three cyberdelic components?",
                         "options": [
                             {
                                 "id": "q1_a",
@@ -77,7 +77,7 @@
                             },
                             {
                                 "id": "q1_b",
-                                "label": "A VR meditation environment with biofeedback that adapts the experience based on your brainwave patterns, designed to facilitate deep contemplative states",
+                                "label": "A VR meditation environment with biofeedback that adapts based on brainwave patterns, designed to facilitate deep contemplative states",
                                 "correct": true
                             },
                             {
@@ -92,14 +92,14 @@
                             }
                         ],
                         "synthesis": {
-                            "q1_a": "<p>This uses technology and biofeedback, but the purpose is fitness optimization, not consciousness exploration or personal transformation. The altered state here is just elevated heart rate from exercise, not an intentional shift in awareness. Without transformational intent focused on consciousness, this is wellness tech rather than cyberdelic.</p>",
-                            "q1_c": "<p>While this uses VR technology and might help you relax, it's missing two critical components. There's no biofeedback or intentional cultivation of altered states—just passive relaxation. And the purpose is stress relief (wellness), not consciousness exploration or transformation. Relaxation and transformation are different goals.</p>",
-                            "q1_d": "<p>This is social VR or entertainment. While it uses immersive technology, there's no intention to facilitate altered states of consciousness or serve transformational purposes. It's designed for connection and fun, which are valuable but different from cyberdelic aims.</p>",
-                            "q1_b": "<p>✓ Correct!</p><p>Exactly right! That experience has all three components.</p>"
+                            "q1_a": "<p>This uses technology and biofeedback, but the purpose is fitness optimization : not consciousness exploration or personal transformation. The altered state here is just elevated heart rate from exercise, not an intentional shift in awareness. Without transformational intent focused on consciousness, this is wellness tech rather than cyberdelic. <strong>Try again.</strong></p>",
+                            "q1_c": "<p>While this uses VR technology and might help you relax, it's missing two critical components. There's no biofeedback or intentional cultivation of altered states : just passive relaxation. And the purpose is stress relief (wellness), not consciousness exploration or transformation. Relaxation and transformation are different goals. <strong>Try again.</strong></p>",
+                            "q1_d": "<p>This is social VR or entertainment. While it uses immersive technology, there's no intention to facilitate altered states of consciousness or serve transformational purposes. It's designed for connection and fun : which are valuable, but different from cyberdelic aims. <strong>Try again.</strong></p>",
+                            "q1_b": "<p>Exactly right. This has all three components: technology (VR and EEG biofeedback), altered states (deep contemplative states intentionally cultivated), and transformational intent (designed for consciousness exploration and meditation practice). All three legs of the stool are present. This is a cyberdelic experience.</p>"
                         }
                     },
                     {
-                        "question": "<h3>Question 2 of 2</h3><p><strong>A company adds biofeedback sensors to their existing VR game. Does this automatically make it cyberdelic?</strong></p><p><em>Understanding that adding technology alone doesn't change the fundamental nature of an experience.</em></p>",
+                        "question": "A company adds biofeedback sensors to their existing VR game. Does this automatically make it cyberdelic?",
                         "options": [
                             {
                                 "id": "q2_a",
@@ -123,10 +123,10 @@
                             }
                         ],
                         "synthesis": {
-                            "q2_a": "<p>Technology and biofeedback are necessary but not sufficient. You also need the experience to intentionally facilitate altered states AND have transformational purpose. If the game is still focused on entertainment or competition rather than consciousness exploration, adding sensors doesn't change its fundamental nature. All three components must be present.</p>",
-                            "q2_c": "<p>Biofeedback sensors measure physiological states, but they don't automatically create altered states of consciousness. The experience design must intentionally use that data to facilitate shifts in awareness. Sensors alone are just measurement tools—they need to be part of a larger system designed for consciousness exploration.</p>",
-                            "q2_d": "<p>Visual quality and immersion don't determine whether something is cyberdelic. You can have stunning graphics that serve entertainment, or simple visuals that facilitate deep transformation. What matters is the design intent—whether the experience is purposefully created to explore consciousness and facilitate personal growth, regardless of graphical fidelity.</p>",
-                            "q2_b": "<h3>✓ Quiz Complete!</h3><p>Perfect! You understand that all three components must be present. Simply adding biofeedback to a game doesn't make it cyberdelic—the entire experience must be designed with the intention of facilitating consciousness exploration and transformation.</p>"
+                            "q2_a": "<p>Technology and biofeedback are necessary but not sufficient. You also need the experience to intentionally facilitate altered states AND have transformational purpose. If the game is still focused on entertainment or competition rather than consciousness exploration, adding sensors doesn't change its fundamental nature. All three components must be present. <strong>Try again.</strong></p>",
+                            "q2_c": "<p>Biofeedback sensors measure physiological states, but they don't automatically create altered states of consciousness. The experience design must intentionally use that data to facilitate shifts in awareness. Sensors alone are just measurement tools : they need to be part of a larger system designed for consciousness exploration. <strong>Try again.</strong></p>",
+                            "q2_d": "<p>Visual quality and immersion don't determine whether something is cyberdelic. You can have stunning graphics that serve entertainment, or simple visuals that facilitate deep transformation. What matters is the design intent : whether the experience is purposefully created to explore consciousness and facilitate personal growth, regardless of graphical fidelity. <strong>Try again.</strong></p>",
+                            "q2_b": "<p>Exactly. Simply adding biofeedback to a game doesn't make it cyberdelic. The entire experience must be designed with the intention of facilitating consciousness exploration and transformation. The technology serves the transformational purpose : it's not about the devices themselves, but how they're used and why.</p>"
                         }
                     }
                 ]

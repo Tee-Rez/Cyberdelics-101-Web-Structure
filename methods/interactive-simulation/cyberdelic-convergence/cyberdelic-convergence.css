@@ -125,8 +125,9 @@ svg.convergence-viz:active {
     color: #00D9FF;
 }
 
-.help-close {
-    margin-top: 20px;
+.help-close,
+.help-restart-tutorial {
+    margin-top: 10px;
     width: 100%;
     padding: 8px;
     background: #00D9FF;
@@ -135,10 +136,23 @@ svg.convergence-viz:active {
     font-weight: bold;
     cursor: pointer;
     border-radius: 4px;
+    font-family: 'Space Mono', monospace;
+    transition: all 0.2s ease;
+}
+
+.help-restart-tutorial {
+    margin-top: 20px;
+    background: transparent;
+    border: 1px solid #00D9FF;
+    color: #00D9FF;
 }
 
 .help-close:hover {
     background: #50E3FF;
+}
+
+.help-restart-tutorial:hover {
+    background: rgba(0, 217, 255, 0.1);
 }
 
 /* Help Hint Button */
@@ -196,7 +210,8 @@ svg.convergence-viz:active {
     position: static;
     flex: 0 0 40px !important;
     /* Force width within flexbox */
-    width: 40px !important;
+    min-width: 80px !important;
+    /* Override the 250px inherited from other stylesheets */
     align-self: center;
     /* Center it vertically alongside the viz */
     background: transparent;
@@ -227,13 +242,17 @@ svg.convergence-viz:active {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5px;
-    /* Reduced gap */
-    background: rgba(10, 10, 20, 0.7);
-    padding: 5px;
-    /* <--- REDUCED PADDING to let the box shrink smaller */
-    border-radius: 6px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    gap: 8px;
+    /* Slightly increased gap to let the text breathe */
+    background: linear-gradient(135deg, rgba(20, 10, 30, 0.8), rgba(0, 10, 20, 0.9));
+    /* Deep cyberdelic gradient */
+    padding: 12px 8px;
+    /* Increased padding for a more solid 'box' feel */
+    border-radius: 8px;
+    border: 1px solid rgba(0, 217, 255, 0.3);
+    /* Subtle neon blue border */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(0, 217, 255, 0.1);
+    /* Inner glow and drop shadow */
     text-align: center;
     width: 100%;
     max-width: 100%;
@@ -243,18 +262,30 @@ svg.convergence-viz:active {
     box-sizing: border-box;
 }
 
-/* "Timeline Year" Text */
+/* "YEAR" Text */
 .interactive-simulation-container[data-engine="CyberdelicConvergence"] .control-label span:first-child {
-    font-size: 0.9rem;
-    color: #ccc;
-    font-weight: normal;
+    font-family: 'Rajdhani', sans-serif;
+    /* Futuristic font */
+    font-size: 0.8rem;
+    color: #9d4edd;
+    /* Neon purple to fit the convergence theme */
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 0 0 5px rgba(157, 78, 221, 0.5);
+    /* Soft purple glow */
 }
 
 /* "2015" Value Text */
 .interactive-simulation-container[data-engine="CyberdelicConvergence"] .control-value {
-    font-size: 1.6rem;
-    font-weight: bold;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.8rem;
+    /* Slightly larger */
+    font-weight: 700;
     color: #00D9FF;
+    text-shadow: 0 0 10px rgba(0, 217, 255, 0.8), 0 0 20px rgba(0, 217, 255, 0.4);
+    /* Intense neon cyan glow */
+    letter-spacing: 1px;
 }
 
 /* Vertical slider specifically */
@@ -262,26 +293,52 @@ svg.convergence-viz:active {
     -webkit-appearance: slider-vertical;
     appearance: slider-vertical;
     height: 400px;
-    /* Half of the 800px viewport */
-    width: 20px;
-    margin: 0;
+    width: 30px;
+    /* Slightly wider click area */
+    margin: 10px;
+    margin-top: 10px;
+    /* Space from the label box */
     background: transparent;
     cursor: grab;
     transform: rotate(180deg);
 }
 
+/* Base track styling */
 .interactive-simulation-container[data-engine="CyberdelicConvergence"] input[type=range]::-webkit-slider-runnable-track {
-    width: 6px;
+    width: 8px;
+    /* Slightly thicker track */
     height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 217, 255, 0.2);
+    /* Track depth */
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+/* Glowing thumb styling */
 .interactive-simulation-container[data-engine="CyberdelicConvergence"] input[type=range]::-webkit-slider-thumb {
-    height: 18px;
-    width: 18px;
-    background: #00D9FF;
-    box-shadow: 0 0 10px rgba(0, 217, 255, 0.5);
-    /* Remove horizontal margin to let browser center it natively on the track in vertical mode */
+    -webkit-appearance: none;
+    /* Required for custom styling */
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #ffffff, #00D9FF 40%, #0088cc 80%);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 15px rgba(0, 217, 255, 0.8), 0 0 30px rgba(0, 217, 255, 0.4);
+    cursor: pointer;
+    /* Alignment adjustments */
     margin-top: 0;
-    margin-left: -5px;
-    /* Slight adjustment for alignment depending on standard browser offset */
+    margin-left: -8px;
+    /* Offset by half the difference between thumb (22) and track (8) */
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+/* Thumb Interaction */
+.interactive-simulation-container[data-engine="CyberdelicConvergence"] input[type=range]:active::-webkit-slider-thumb {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(0, 217, 255, 1), 0 0 40px rgba(0, 217, 255, 0.6);
+}
+
+.interactive-simulation-container[data-engine="CyberdelicConvergence"] input[type=range]:hover::-webkit-slider-thumb {
+    transform: scale(1.05);
 }
