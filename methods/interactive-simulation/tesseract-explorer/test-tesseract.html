@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tesseract Explorer Engine Test</title>
+
+    <!-- Core Styles -->
+    <link rel="stylesheet" href="../../../core/styles.css">
+
+    <!-- Framework Styles -->
+    <link rel="stylesheet" href="../interactive-simulation.css">
+
+    <!-- Engine Styles -->
+    <link rel="stylesheet" href="tesseract-explorer.css">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .test-header {
+            width: 100%;
+            max-width: 1200px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .test-header h1 {
+            margin: 0;
+            font-family: 'Cinzel', serif;
+            color: var(--color-primary);
+        }
+
+        .test-container {
+            width: 100%;
+            max-width: 1200px;
+            height: 800px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #050505;
+        }
+
+        /* Test Override for sim-viewport required by framework */
+        .sim-container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="test-header">
+        <div>
+            <h1>Tesseract Explorer Engine Test</h1>
+            <p style="color: rgba(255,255,255,0.6); margin: 5px 0 0 0;">Phase 1: 2D Functional Build</p>
+        </div>
+        <button onclick="location.reload()"
+            style="padding: 8px 16px; background: rgba(255,255,255,0.1); color: white; border: 1px solid rgba(255,255,255,0.2); border-radius: 4px; cursor: pointer;">Reload
+            Page</button>
+    </div>
+
+    <!-- The container that the InteractiveSimulation method will target -->
+    <div class="test-container placeholder">
+        <div id="sim-target" class="sim-container" data-engine="TesseractExplorer">
+            <div class="sim-viewport"></div>
+            <div class="sim-controls"></div>
+        </div>
+    </div>
+
+    <!-- Core Dependencies -->
+    <script src="../../../core/method-base.js"></script>
+    <script src="../../../core/method-loader.js"></script>
+
+    <!-- Framework -->
+    <script src="../interactive-simulation.js"></script>
+
+    <!-- Engine Logic & Data -->
+    <script src="tesseract-explorer-data.js"></script>
+    <script src="tesseract-explorer.js"></script>
+
+    <!-- Test Init Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log("Initializing Test Environment...");
+
+            // 1. Get the container
+            const container = document.getElementById('sim-target');
+
+            // 2. Instantiate the framework using the factory
+            const instance = window.InteractiveSimulationFactory();
+
+            // 3. Initialize it with our engine specified
+            instance.init(container, {
+                engine: 'TesseractExplorer',
+                params: {} // Defaults are handled in engine
+            });
+
+            console.log("Engine loaded via framework.");
+        });
+    </script>
+</body>
+
+</html>

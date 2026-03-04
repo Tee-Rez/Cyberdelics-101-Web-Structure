@@ -28,7 +28,7 @@
                         "title": "\"Cyber\" : The Digital Realm",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module1/cyber-typography.jpg",
+                            "src": "../assets/images/module1/cyber.jpg",
                             "aiPrompt": "The word CYBER in bold futuristic typography with circuit board patterns and digital nodes flowing through the letters, electric blue and white color scheme, representing technology and digital systems, clean modern design with subtle binary code in background, 16:9 aspect ratio"
                         },
                         "mediaLayout": "left",
@@ -39,7 +39,7 @@
                         "title": "\"Delic\" : Mind-Manifesting",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module1/delic-typography.jpg",
+                            "src": "../assets/images/module1/delic.jpg",
                             "aiPrompt": "The word DELIC in flowing organic typography with mandala patterns, sacred geometry (Flower of Life), and radiating light waves emanating outward from the letters, purple and teal color scheme, representing consciousness and inner exploration, mystical yet modern aesthetic, 16:9 aspect ratio"
                         },
                         "mediaLayout": "right",

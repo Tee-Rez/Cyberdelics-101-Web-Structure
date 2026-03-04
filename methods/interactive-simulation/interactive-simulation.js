@@ -145,8 +145,9 @@
                 }
 
                 // Add data-engine for CSS scoping to the correct inner container
+                const engineName = EngineClass.name || 'generic-sim';
                 const simContainer = this._elements.container.querySelector('.interactive-simulation-container') || this._elements.container;
-                simContainer.setAttribute('data-engine', EngineClass.name.replace(/\s+/g, ''));
+                simContainer.setAttribute('data-engine', engineName.replace(/\s+/g, ''));
 
                 // Build UI for Params
                 this._buildControls(EngineClass.config);

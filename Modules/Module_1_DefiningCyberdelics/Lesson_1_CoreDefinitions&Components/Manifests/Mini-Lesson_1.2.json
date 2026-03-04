@@ -22,7 +22,7 @@
                         "title": "Component 1 : Digital Technologies",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module1/vr-biofeedback-tech.jpg",
+                            "src": "../assets/images/module1/DigitalTechnologies.jpg",
                             "aiPrompt": "Modern VR headset (Meta Quest style), EEG headband, and HRV chest strap sensor arranged on a minimalist surface, professional product photography, soft directional lighting, tech-forward aesthetic, subtle Flower of Life sacred geometry pattern faintly visible in background, clean composition, 16:9 aspect ratio"
                         },
                         "mediaLayout": "right",

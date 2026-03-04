@@ -13,40 +13,58 @@
             "content": {
                 "sections": [
                     {
-                        "title": "Cyberpunk—The Fictional Blueprint",
+                        "title": "Cyberpunk : The Fictional Blueprint",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module2/cyberpunk_collage.jpg",
-                            "alt": "Cyberpunk book covers and neon cityscape"
+                            "src": "../assets/images/module2/cyberpunk_blueprint.jpg",
+                            "alt": "Cyberpunk book covers blending into neon-lit digital cityscape"
                         },
                         "mediaLayout": "full",
-                        "content": "<p>In the 1980s, writers like William Gibson (<em>Neuromancer</em>) and Neal Stephenson (<em>Snow Crash</em>) imagined worlds where technology and consciousness directly interfaced. These novels established cultural templates: neural interfaces, virtual reality, and hackable identities. They made the future feel inevitable.</p>",
+                        "content": "<p>In the 1980s, writers like William Gibson (Neuromancer, 1984) and Neal Stephenson (Snow Crash, 1992) imagined worlds where technology and consciousness directly interfaced. Gibson coined 'cyberspace' : a consensual hallucination experienced daily by billions. Stephenson imagined the 'metaverse.' These novels established cultural templates : neural interfaces, virtual reality as equally real as physical reality, identity fluidity, reality as hackable.</p><p>They made VR's eventual emergence feel inevitable rather than alien. When people first put on Oculus headsets in 2016, many described it as 'stepping into Neuromancer.' Fiction had been rehearsing this moment for thirty years.</p>",
                         "triggerLabel": "Rave Culture"
                     },
                     {
-                        "title": "Rave Culture—Electronic Transcendence",
+                        "title": "Rave Culture : Electronic Transcendence",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module2/rave_silhouettes.jpg",
-                            "alt": "1990s Rave Scene"
+                            "src": "../assets/images/module2/rave_electronic.jpg",
+                            "alt": "1990s rave dancers in silhouette against laser light patterns"
                         },
                         "mediaLayout": "left",
-                        "content": "<p>Rave culture showed that technology (lights, electronic music) could facilitate collective transcendence. Ravers discovered that technology could create shared altered states—the same principle cyberdelics would later use, just through different media.</p>",
+                        "content": "<p>Starting in late 1980s UK and spreading globally through the 1990s, rave culture created massive gatherings centered on electronic music, light shows, and collective altered states. Ravers discovered that technology could facilitate collective transcendence : electronic music as consciousness technology, lighting creating immersive sensory environments, collective energy producing shared altered states.</p><p>The principle : technology enabling transcendence : was the same as cyberdelics would later demonstrate, just through sound and light rather than VR. Rave culture also normalized the idea of seeking altered states for transformation rather than just intoxication, which mattered for how later cyberdelic communities framed their work.</p>",
                         "triggerLabel": "Burning Man"
                     },
                     {
-                        "title": "Burning Man—Art Meets Technology",
-                        "content": "<p>Burning Man became a testing ground for blending technology with radical self-expression. It demonstrated that tech-enhanced experiences could create awe, foster community, and integrate with spirituality rather than oppose it.</p>",
+                        "title": "Burning Man : Art Meets Technology",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module2/burning_man_tech.jpg",
+                            "alt": "Illuminated geometric sculpture at Burning Man at night"
+                        },
+                        "mediaLayout": "right",
+                        "content": "<p>Founded in 1986, Burning Man created a temporary city in Nevada's desert dedicated to radical self-expression, community, and art. Large-scale interactive installations, LED art, and tech-enhanced experiences became testing grounds for blending technology with transformation. Many early VR developers and consciousness researchers were Burners.</p><p>The festival demonstrated something important : technology-enhanced experiences could create genuine awe, foster deep community, facilitate personal transformation, and integrate rather than oppose nature and spirituality. Burning Man was a live proof-of-concept for ideas that cyberdelics would later develop into systematic practice.</p>",
                         "triggerLabel": "Digital Art"
                     },
                     {
                         "title": "Digital Art and Fractal Culture",
-                        "content": "<p>Artists discovered that algorithms could produce images comparable to mystical visions (fractals). Works like Char Davies' <em>Osmose</em> created contemplative virtual spaces, proving technology could serve spiritual expression.</p>",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module2/fractal_digital.jpg",
+                            "alt": "Intricate Mandelbrot-style fractal art"
+                        },
+                        "mediaLayout": "full",
+                        "content": "<p>The 1990s saw an explosion of computer-generated art exploring consciousness themes. Fractal art revealed infinite mathematical complexity resembling psychedelic visions : Mandelbrot sets and Julia sets producing imagery that looked uncannily similar to what people described seeing on psychedelics. Early VR art like Char Davies' Osmose (1995) created contemplative spaces with breathing-controlled navigation.</p><p>Artists discovered that algorithms could produce imagery comparable to mystical geometric visions. This established a crucial cultural proof : technology could serve artistic and spiritual expression, not just calculation and commerce. It expanded who saw cyberdelics as relevant to them.</p>",
                         "triggerLabel": "Ready for Convergence"
                     },
                     {
                         "title": "Cultural Preparation Complete",
-                        "content": "<p>These movements prepared the cultural soil. They created communities, language, and demand for tech-consciousness fusion. When VR returned in the 2010s, the culture was ready.</p>",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module2/culture_convergence.jpg",
+                            "alt": "Four streams of culture converging into one larger Cyberdelic Culture river"
+                        },
+                        "mediaLayout": "right",
+                        "content": "<p>These movements didn't create cyberdelics. But they prepared the cultural ground in four ways.</p><ul><li><strong>Imagination:</strong> They made tech-consciousness fusion imaginable before it was achievable.</li><li><strong>Community:</strong> They created communities already oriented toward exploration and transformation.</li><li><strong>Language:</strong> They established shared language : cyberspace, metaverse, reality hacking, digital shamanism.</li><li><strong>Demand:</strong> They demonstrated demand : millions of people were seeking exactly what cyberdelics would eventually offer.</li></ul><p>When VR was reborn in the 2010s, it entered a culture that had been imagining and preparing for this for 30 years. The soil was prepared; technology finally arrived to plant seeds.</p>",
                         "triggerLabel": "Explore the Map"
                     }
                 ]
@@ -58,8 +76,8 @@
             "type": "interactive-simulation",
             "content": {
                 "engine": "CyberdelicConvergence",
-                "placeholder": false,
-                "notes": "Interactive visualization of 1980-2020 timeline comparing Cultural Movements vs Tech Development.",
+                "placeholder": true,
+                "notes": "Interactive visualization of 1980-2020 timeline comparing Cultural Movements vs Tech Development. Convergence points highlighted.",
                 "graphic_src": "../assets/images/module2/convergence_map_placeholder.jpg"
             }
         }

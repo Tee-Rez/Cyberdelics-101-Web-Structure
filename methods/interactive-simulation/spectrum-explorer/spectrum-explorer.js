@@ -5,6 +5,7 @@
 
 (function () {
     const SpectrumExplorer = {
+        name: 'Spectrum Explorer',
         defaults: {
             startValue: 50
         },
