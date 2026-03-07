@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Cybernetic Loop</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --deep:   #02020c;
+  --panel:  rgba(2,2,12,0.96);
+  --border: rgba(0,217,255,0.14);
+  --text:   #aac0d0;
+  --dim:    #3a4a58;
+  --teal:   #00d9ff;
+  --purple: #8a2be2;
+}
+html, body { width:100%; height:100%; overflow:hidden; }
+body {
+  background: var(--deep); color: var(--text);
+  font-family: 'DM Mono', monospace;
+  display: flex; flex-direction: column;
+}
+
+/* HEADER */
+header {
+  padding: 9px 20px; border-bottom: 1px solid var(--border);
+  background: rgba(2,2,12,0.99); display: flex; align-items: center;
+  gap: 14px; flex-shrink: 0; z-index: 20;
+}
+.logo {
+  width: 26px; height: 26px; border: 1.5px solid var(--teal);
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  position: relative; flex-shrink: 0;
+}
+.logo::before { content:''; width:12px; height:12px; border:1px solid var(--purple); border-radius:50%; position:absolute; }
+.logo::after  { content:''; width:3px;  height:3px;  background:var(--teal); border-radius:50%; }
+header h1 { font-family:'Cinzel',serif; font-size:0.78rem; font-weight:600; letter-spacing:0.16em; color:var(--teal); }
+header p  { font-size:0.58rem; color:var(--dim); letter-spacing:0.08em; }
+.header-right { margin-left:auto; display:flex; align-items:center; gap:18px; }
+
+/* Speed control */
+.speed-wrap { display:flex; align-items:center; gap:8px; }
+.speed-label { font-size:0.56rem; letter-spacing:0.12em; color:var(--dim); text-transform:uppercase; }
+.speed-val   { font-size:0.6rem; color:var(--teal); min-width:36px; text-align:center; }
+input#speed {
+  -webkit-appearance:none; width:80px; height:3px;
+  background: linear-gradient(to right, rgba(138,43,226,0.4), rgba(0,217,255,0.5));
+  border-radius:2px; cursor:pointer; outline:none;
+}
+input#speed::-webkit-slider-thumb {
+  -webkit-appearance:none; width:13px; height:13px; border-radius:50%;
+  background:var(--teal); box-shadow:0 0 7px rgba(0,217,255,0.6);
+  border:2px solid var(--deep);
+}
+
+/* MAIN */
+.main {
+  display: flex; flex: 1; overflow: hidden;
+}
+
+/* CANVAS */
+#canvas-wrap {
+  flex: 1; position: relative; overflow: hidden;
+}
+canvas { display:block; }
+
+/* NODE DETAIL PANEL */
+.detail-panel {
+  width: 280px; flex-shrink: 0;
+  background: var(--panel); border-left: 1px solid var(--border);
+  display: flex; flex-direction: column;
+  transition: opacity 0.3s;
+}
+.detail-inner {
+  padding: 22px 18px; flex:1; overflow-y:auto;
+  scrollbar-width:thin; scrollbar-color:rgba(0,217,255,0.08) transparent;
+}
+.detail-step {
+  font-size: 0.55rem; letter-spacing:0.18em; text-transform:uppercase;
+  color:var(--dim); margin-bottom:6px;
+}
+.detail-title {
+  font-family:'Cinzel',serif; font-size:1rem; font-weight:600;
+  line-height:1.3; margin-bottom:14px;
+  transition: color 0.4s;
+}
+.detail-divider {
+  height:1px; background:var(--border); margin-bottom:14px;
+}
+.detail-body {
+  font-size:0.67rem; line-height:1.75; color:var(--text); margin-bottom:16px;
+}
+.detail-example {
+  background: rgba(0,217,255,0.04); border:1px solid var(--border);
+  border-radius:3px; padding:10px 12px; margin-bottom:16px;
+}
+.detail-example-label {
+  font-size:0.54rem; letter-spacing:0.14em; text-transform:uppercase;
+  color:var(--teal); margin-bottom:5px;
+}
+.detail-example-text {
+  font-size:0.64rem; line-height:1.6; color:var(--text);
+}
+.detail-why {
+  font-size:0.62rem; line-height:1.65; color:rgba(170,192,208,0.7);
+  border-left:2px solid var(--border); padding-left:10px;
+}
+.detail-nav {
+  padding:14px 18px; border-top:1px solid var(--border);
+  display:flex; justify-content:space-between; align-items:center; flex-shrink:0;
+}
+.nav-btn {
+  background:rgba(255,255,255,0.03); border:1px solid var(--border);
+  color:var(--dim); font-family:'DM Mono',monospace; font-size:0.62rem;
+  padding:6px 12px; cursor:pointer; border-radius:3px;
+  transition:all 0.2s;
+}
+.nav-btn:hover { border-color:rgba(0,217,255,0.35); color:var(--text); }
+.nav-dots { display:flex; gap:5px; }
+.nav-dot {
+  width:6px; height:6px; border-radius:50%;
+  background:rgba(255,255,255,0.12); cursor:pointer;
+  transition:all 0.25s;
+}
+.nav-dot.active { background:var(--teal); box-shadow:0 0 5px rgba(0,217,255,0.5); }
+
+/* EMPTY STATE */
+.detail-empty {
+  padding:30px 20px; text-align:center; opacity:0.4;
+  font-size:0.66rem; line-height:1.7;
+}
+.detail-empty .big { font-family:'Cinzel',serif; font-size:1.8rem; opacity:0.3; margin-bottom:10px; }
+
+/* BOTTOM BAR */
+.bottom-bar {
+  padding: 8px 20px; border-top:1px solid var(--border);
+  background:rgba(2,2,12,0.99); display:flex; align-items:center;
+  gap:16px; flex-shrink:0; z-index:10;
+}
+.mod-tag { font-size:0.56rem; letter-spacing:0.1em; color:var(--dim); border:1px solid var(--border); padding:2px 7px; border-radius:2px; }
+.loop-status { font-size:0.62rem; color:var(--teal); font-family:'Cinzel',serif; letter-spacing:0.1em; }
+.pause-btn {
+  margin-left:auto; background:rgba(0,217,255,0.05); border:1px solid var(--border);
+  color:var(--dim); font-family:'DM Mono',monospace; font-size:0.6rem;
+  padding:4px 12px; cursor:pointer; border-radius:3px; transition:all 0.2s;
+}
+.pause-btn:hover { border-color:rgba(0,217,255,0.35); color:var(--text); }
+.pause-btn.paused { border-color:rgba(138,43,226,0.5); color:rgba(170,136,255,0.8); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo"></div>
+  <div>
+    <h1>The Cybernetic Loop</h1>
+    <p>Module 4 · Lesson 4.2.3 · Interactive Diagram · Cyberdelics 101</p>
+  </div>
+  <div class="header-right">
+    <div class="speed-wrap">
+      <span class="speed-label">Loop Speed</span>
+      <input type="range" id="speed" min="1" max="10" value="4">
+      <span class="speed-val" id="speed-val">4×</span>
+    </div>
+  </div>
+</header>
+
+<div class="main">
+  <div id="canvas-wrap">
+    <canvas id="c"></canvas>
+  </div>
+
+  <div class="detail-panel" id="detail-panel">
+    <div class="detail-inner" id="detail-inner">
+      <div class="detail-empty">
+        <div class="big">↺</div>
+        Click any node to explore that step of the loop
+      </div>
+    </div>
+    <div class="detail-nav" id="detail-nav" style="display:none">
+      <button class="nav-btn" id="nav-prev">← Prev</button>
+      <div class="nav-dots" id="nav-dots"></div>
+      <button class="nav-btn" id="nav-next">Next →</button>
+    </div>
+  </div>
+</div>
+
+<div class="bottom-bar">
+  <div class="mod-tag">4.2.3 · The Cybernetic Loop</div>
+  <div class="loop-status" id="loop-status">LOOP RUNNING</div>
+  <button class="pause-btn" id="pause-btn">⏸ Pause</button>
+</div>
+
+<script>
+// ─────────────────────────────────────────────────
+// NODE DATA
+// ─────────────────────────────────────────────────
+const NODES = [
+  {
+    id: 'body',
+    label: 'Body Signal\nGeneration',
+    icon: 'BODY',
+    color: '#44ffaa',
+    angle: -Math.PI / 2, // 12 o'clock
+    step: 1,
+    title: 'Body Signal Generation',
+    body: `Your body continuously produces physiological signals — heartbeats, brainwave oscillations, breathing cycles, skin conductance changes — whether you are aware of them or not.\n\nThese signals are not random noise. They are meaningful data about your current inner state: whether you are calm or stressed, focused or scattered, regulated or dysregulated. They change moment to moment, breath to breath, thought to thought.`,
+    example: `Your heart is beating right now. The interval between each beat — and how much that interval varies — encodes your nervous system's current state of balance. This variation is heart rate variability (HRV), one of the richest signals the body produces.`,
+    why: `This is where the loop begins. The body is always generating data. The question is whether anything is listening — and what happens when something finally does.`,
+  },
+  {
+    id: 'sensor',
+    label: 'Sensor\nDetection',
+    icon: 'SENS',
+    color: '#00d9ff',
+    angle: -Math.PI / 2 + (2 * Math.PI / 5),
+    step: 2,
+    title: 'Sensor Detection',
+    body: `A wearable device detects your physiological signals and converts biological activity into digital data in real time. The sensor is the bridge between your inner world and the computational world.\n\nDifferent sensors capture different signals: EEG headbands read electrical oscillations at the scalp, chest straps measure cardiac intervals, expansion belts track breathing volume, wrist sensors detect skin conductance.`,
+    example: `A Muse headband rests on your forehead and temples. Seven electrodes detect the collective electrical field of millions of neurons firing beneath the skull. At 256 samples per second, it streams this data wirelessly to processing software — 256 snapshots of your brain state every single second.`,
+    why: `Sensors make the invisible visible. Without them, your physiological state remains locked inside your body — subjective, inaccessible, untrainable. With them, it becomes data: objective, measurable, responsive.`,
+  },
+  {
+    id: 'algorithm',
+    label: 'Algorithm\nProcessing',
+    icon: 'ALGO',
+    color: '#aa88ff',
+    angle: -Math.PI / 2 + (4 * Math.PI / 5),
+    step: 3,
+    title: 'Algorithm Processing',
+    body: `Software analyzes the incoming sensor data in real time, interpreting raw physiological measurements into meaningful state classifications.\n\nIs heart rate variability high or low? Is the dominant brainwave alpha (8–12 Hz, relaxed awareness) or beta (13–30 Hz, active thinking)? Is breathing deep and slow or shallow and rapid? The algorithm answers these questions thousands of times per session, turning a stream of numbers into a continuous portrait of your inner state.`,
+    example: `Healium's algorithm receives raw EEG data from a Muse headband and applies a trained model to classify moment-to-moment calm versus activation. When alpha power exceeds a threshold, the system interprets this as a calm state — and triggers the VR environment to respond accordingly. The classification happens in under 100 milliseconds.`,
+    why: `The algorithm is the intelligence layer of the loop. Its accuracy determines the quality of the feedback. If it misinterprets tension as calm, you will learn to produce the wrong pattern. Quality platforms invest heavily in validated, calibrated algorithms for exactly this reason.`,
+  },
+  {
+    id: 'vr',
+    label: 'VR Environment\nResponse',
+    icon: 'VR',
+    color: '#ff88cc',
+    angle: -Math.PI / 2 + (6 * Math.PI / 5),
+    step: 4,
+    title: 'VR Environment Response',
+    body: `Based on the algorithm's interpretation, the virtual environment changes — sometimes subtly, sometimes dramatically. The environment is designed to respond in ways that guide you toward desired states: rewarding regulated states with visual richness and expansion, signaling dysregulation with contraction or dimming.\n\nThis is the moment where your invisible inner process becomes something you can see, hear, and feel — translated into color, movement, sound, and space.`,
+    example: `In Healium, when your brain's calm patterns power the experience, a virtual snow globe fills with swirling light. When your heart rate data reaches coherence, a frozen winter landscape transforms into spring — flowers blooming, light warming, the world coming alive in direct response to your nervous system finding balance.`,
+    why: `The VR response is what makes this cyberdelic rather than just biofeedback. The environment is not just a display. It is a mirror — an external representation of your internal state, made tangible and beautiful. The experience of watching your inner world shape the outer world accelerates learning in ways text and instruction cannot.`,
+  },
+  {
+    id: 'adjustment',
+    label: 'Learner\nAdjustment',
+    icon: 'ADJ',
+    color: '#ffcc44',
+    angle: -Math.PI / 2 + (8 * Math.PI / 5),
+    step: 5,
+    title: 'Learner Adjustment',
+    body: `You perceive the environmental change and — consciously or unconsciously — adjust your internal state in response. If the environment dims when anxiety rises, you notice, and you might slow your breath, soften your attention, or release tension. This changes your physiology. The sensor detects it. The algorithm updates. The environment responds. And the loop continues.\n\nThis cycle repeats dozens of times per minute. Most iterations happen below conscious awareness — but you are always aware that the environment is responding to you, and that awareness alone creates engagement, motivation, and accelerated learning.`,
+    example: `A user in a TRIPP breathwork session notices the virtual landscape contracting slightly. Without being told what to do, they instinctively slow their breath. The landscape opens. They slow further. The landscape blooms. They have just taught themselves something no instructor could have conveyed — through direct experience of cause and effect between their inner state and the world.`,
+    why: `This is why the cybernetic loop is more than biofeedback — it is a training system for consciousness itself. The loop does not tell you what to do. It shows you what you are doing, and trusts you to find your way. That is the Norbert Wiener vision of cybernetics: steering through feedback.`,
+  },
+];
+
+// ─────────────────────────────────────────────────
+// CANVAS SETUP
+// ─────────────────────────────────────────────────
+const wrap   = document.getElementById('canvas-wrap');
+const canvas = document.getElementById('c');
+const ctx    = canvas.getContext('2d');
+
+let W, H, CX, CY, RADIUS, ORBIT_R;
+
+function resize() {
+  W = wrap.clientWidth;
+  H = wrap.clientHeight;
+  canvas.width  = W;
+  canvas.height = H;
+  CX = W / 2;
+  CY = H / 2;
+  RADIUS  = Math.min(W, H) * 0.34;   // node ring radius — more spread out
+  ORBIT_R = Math.min(W, H) * 0.455;  // particle orbit radius — larger circle outside nodes
+}
+resize();
+window.addEventListener('resize', resize);
+
+// ─────────────────────────────────────────────────
+// STATE
+// ─────────────────────────────────────────────────
+let activeNode   = null;
+let loopTime     = 0;
+let paused       = false;
+let speedMult    = 4;
+let lastTS       = null;
+let lastCenterIdx = 0;
+let centerFade    = 1.0;
+
+// Particles flowing along arcs
+const PARTICLE_COUNT = 60;
+const particles = Array.from({ length: PARTICLE_COUNT }, (_, i) => ({
+  t:     i / PARTICLE_COUNT,      // position along the loop 0..1
+  speed: 0.04 + Math.random() * 0.03,
+  size:  1.2 + Math.random() * 1.6,
+  alpha: 0.4 + Math.random() * 0.5,
+}));
+
+// Node screen positions
+function nodePos(node) {
+  return {
+    x: CX + Math.cos(node.angle) * RADIUS,
+    y: CY + Math.sin(node.angle) * RADIUS,
+  };
+}
+
+// Position along the circular orbit (0..1 = full revolution)
+function arcPoint(t) {
+  const angle   = -Math.PI / 2 + t * Math.PI * 2; // start at top, go clockwise
+  const totalNodes = NODES.length;
+  // Determine which segment (between which two nodes) this angle falls in
+  const tNorm   = ((t % 1) + 1) % 1;
+  const segIdx  = Math.floor(tNorm * totalNodes) % totalNodes;
+  const segT    = (tNorm * totalNodes) - Math.floor(tNorm * totalNodes);
+  return {
+    x: CX + Math.cos(angle) * ORBIT_R,
+    y: CY + Math.sin(angle) * ORBIT_R,
+    segIdx,
+    segT,
+  };
+}
+
+function hexToRgb(hex) {
+  const r = parseInt(hex.slice(1,3),16);
+  const g = parseInt(hex.slice(3,5),16);
+  const b = parseInt(hex.slice(5,7),16);
+  return [r, g, b];
+}
+
+function lerpColor(c1, c2, t) {
+  return [
+    Math.round(c1[0] + (c2[0]-c1[0])*t),
+    Math.round(c1[1] + (c2[1]-c1[1])*t),
+    Math.round(c1[2] + (c2[2]-c1[2])*t),
+  ];
+}
+
+// ─────────────────────────────────────────────────
+// DRAW
+// ─────────────────────────────────────────────────
+const NODE_R = 38;
+
+function drawArc(nA, nB, alpha, strokeStyle) {
+  // Draw the arc segment of the orbit circle between two adjacent nodes
+  const a1 = nA.angle;
+  const a2 = nB.angle;
+  ctx.beginPath();
+  ctx.arc(CX, CY, ORBIT_R, a1, a2);
+  ctx.strokeStyle = strokeStyle || `rgba(255,255,255,${alpha})`;
+  ctx.lineWidth   = 1.2;
+  ctx.stroke();
+}
+
+function drawArrowhead(nA, nB) {
+  // Arrowhead near nB along the orbit circle
+  const a2    = nB.angle;
+  const aBefore = a2 - 0.12; // just before arrival
+  const ax = CX + Math.cos(aBefore) * ORBIT_R;
+  const ay = CY + Math.sin(aBefore) * ORBIT_R;
+  // Tangent direction (perpendicular to radius, clockwise)
+  const angle = aBefore + Math.PI / 2;
+  const size  = 6;
+  ctx.save();
+  ctx.translate(ax, ay);
+  ctx.rotate(angle);
+  ctx.beginPath();
+  ctx.moveTo(size, 0);
+  ctx.lineTo(-size*0.6, -size*0.45);
+  ctx.lineTo(-size*0.6,  size*0.45);
+  ctx.closePath();
+  const [r,g,b] = hexToRgb(nB.color);
+  ctx.fillStyle = `rgba(${r},${g},${b},0.6)`;
+  ctx.fill();
+  ctx.restore();
+}
+
+function drawNode(node, isActive, pulsePhase) {
+  const p = nodePos(node);
+  const [r,g,b] = hexToRgb(node.color);
+
+  // Outer glow
+  const glowR = NODE_R * (isActive ? 2.8 : 1.8);
+  const glow = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, glowR);
+  const glowAlpha = isActive ? 0.18 : 0.07 + Math.sin(pulsePhase)*0.04;
+  glow.addColorStop(0,   `rgba(${r},${g},${b},${glowAlpha})`);
+  glow.addColorStop(1,   'rgba(0,0,0,0)');
+  ctx.beginPath();
+  ctx.arc(p.x, p.y, glowR, 0, Math.PI*2);
+  ctx.fillStyle = glow;
+  ctx.fill();
+
+  // Pulse ring (active only)
+  if (isActive) {
+    const pulseR = NODE_R + 8 + Math.sin(pulsePhase * 3)*6;
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, pulseR, 0, Math.PI*2);
+    ctx.strokeStyle = `rgba(${r},${g},${b},0.3)`;
+    ctx.lineWidth = 1.5;
+    ctx.stroke();
+  }
+
+  // Circle background
+  ctx.beginPath();
+  ctx.arc(p.x, p.y, NODE_R, 0, Math.PI*2);
+  const bg = ctx.createRadialGradient(p.x, p.y-8, 0, p.x, p.y, NODE_R);
+  bg.addColorStop(0, `rgba(${r},${g},${b},${isActive ? 0.22 : 0.08})`);
+  bg.addColorStop(1, `rgba(${r},${g},${b},${isActive ? 0.08 : 0.02})`);
+  ctx.fillStyle = bg;
+  ctx.fill();
+
+  // Border
+  ctx.beginPath();
+  ctx.arc(p.x, p.y, NODE_R, 0, Math.PI*2);
+  ctx.strokeStyle = `rgba(${r},${g},${b},${isActive ? 0.9 : 0.35})`;
+  ctx.lineWidth = isActive ? 1.8 : 1.2;
+  ctx.stroke();
+
+  // Step number
+  ctx.fillStyle = `rgba(${r},${g},${b},${isActive ? 0.7 : 0.35})`;
+  ctx.font = '500 9px DM Mono, monospace';
+  ctx.textAlign = 'center';
+  ctx.fillText(`0${node.step}`, p.x, p.y - 10);
+
+  // Label (two lines)
+  const lines = node.label.split('\n');
+  ctx.fillStyle = isActive ? `rgb(${r},${g},${b})` : `rgba(${r},${g},${b},0.65)`;
+  ctx.font = `${isActive ? '600' : '400'} 10px Cinzel, serif`;
+  ctx.textAlign = 'center';
+  lines.forEach((ln, i) => {
+    ctx.fillText(ln, p.x, p.y + 5 + i * 13);
+  });
+}
+
+function frame(ts) {
+  if (!lastTS) lastTS = ts;
+  const dt = Math.min((ts - lastTS) / 1000, 0.05);
+  lastTS = ts;
+
+  if (!paused) loopTime += dt * speedMult * 0.12;
+
+  ctx.clearRect(0, 0, W, H);
+
+  // ── Background deep space ──
+  ctx.fillStyle = '#02020c';
+  ctx.fillRect(0, 0, W, H);
+
+  // Subtle radial bg
+  const bgGrad = ctx.createRadialGradient(CX, CY, 0, CX, CY, Math.max(W,H)*0.6);
+  bgGrad.addColorStop(0, 'rgba(30,10,60,0.3)');
+  bgGrad.addColorStop(1, 'rgba(0,0,0,0)');
+  ctx.fillStyle = bgGrad;
+  ctx.fillRect(0, 0, W, H);
+
+  // ── CENTER VISUALIZATION ──
+  // Determine which node to show based on active click OR leading particle position
+  let centerNodeIdx = activeNode;
+  if (centerNodeIdx === null) {
+    // Auto-follow the leading particle
+    const leadParticle = particles.reduce((a, b) => a.t > b.t ? a : b);
+    centerNodeIdx = arcPoint(leadParticle.t).segIdx;
+  }
+  const centerNode = NODES[centerNodeIdx];
+  const [cnR, cnG, cnB] = hexToRgb(centerNode.color);
+  const centerR = RADIUS * 0.62;  // larger center display zone
+
+  // Crossfade when node changes
+  if (centerNodeIdx !== lastCenterIdx) {
+    lastCenterIdx = centerNodeIdx;
+    centerFade    = 0;
+  }
+  if (centerFade < 1) centerFade = Math.min(1, centerFade + dt * 3.5);
+
+  // Clip to circle for all center drawing
+  ctx.save();
+  ctx.globalAlpha = centerFade;
+  ctx.beginPath();
+  ctx.arc(CX, CY, centerR, 0, Math.PI * 2);
+  ctx.clip();
+
+  // Center background
+  const centerBg = ctx.createRadialGradient(CX, CY, 0, CX, CY, centerR);
+  centerBg.addColorStop(0,   `rgba(${cnR},${cnG},${cnB},0.10)`);
+  centerBg.addColorStop(0.7, `rgba(${cnR},${cnG},${cnB},0.03)`);
+  centerBg.addColorStop(1,   'rgba(0,0,0,0)');
+  ctx.fillStyle = centerBg;
+  ctx.fillRect(CX - centerR, CY - centerR, centerR * 2, centerR * 2);
+
+  // ── Per-node center content ──
+  switch (centerNode.id) {
+
+    case 'body': {
+      // ── NODE 1: Body Signal Generation ──
+      // Show three concurrent physiological signals emanating from a body silhouette:
+      // heartbeat ECG (chest), breathing wave (belly), brainwave ripple (head)
+
+      const breathCycle = (Math.sin(loopTime * 0.9) + 1) / 2; // 0-1 breath in/out
+      const heartPhase  = (loopTime * 1.1) % 1;
+
+      // Outer aura pulsing with breath
+      const auraR = centerR * (0.55 + breathCycle * 0.1);
+      const auraGrad = ctx.createRadialGradient(CX, CY, auraR * 0.5, CX, CY, auraR);
+      auraGrad.addColorStop(0, `rgba(${cnR},${cnG},${cnB},0)`);
+      auraGrad.addColorStop(0.7, `rgba(${cnR},${cnG},${cnB},0.04)`);
+      auraGrad.addColorStop(1, `rgba(${cnR},${cnG},${cnB},${0.06 + breathCycle * 0.06})`);
+      ctx.fillStyle = auraGrad;
+      ctx.beginPath(); ctx.arc(CX, CY, auraR, 0, Math.PI * 2); ctx.fill();
+
+      // Heartbeat ring emanating from chest
+      for (let r = 0; r < 3; r++) {
+        const phase = (heartPhase + r * 0.33) % 1;
+        const rr = 10 + phase * centerR * 0.5;
+        const a  = (1 - phase) * (phase < 0.15 ? phase / 0.15 : 1) * 0.4;
+        ctx.beginPath();
+        ctx.arc(CX, CY + 4, rr, 0, Math.PI * 2);
+        ctx.strokeStyle = `rgba(${cnR},${cnG},${cnB},${a})`;
+        ctx.lineWidth = 1.5 * (1 - phase);
+        ctx.stroke();
+      }
+
+      // Body silhouette — glowing proportional to breath
+      const bodyAlpha = 0.25 + breathCycle * 0.2;
+      // Head
+      ctx.beginPath();
+      ctx.arc(CX, CY - 26, 9, 0, Math.PI * 2);
+      ctx.strokeStyle = `rgba(${cnR},${cnG},${cnB},${bodyAlpha})`;
+      ctx.lineWidth = 1.2;
+      ctx.stroke();
+      // Brainwave shimmer on head
+      for (let i = 0; i < 5; i++) {
+        const a = (-Math.PI * 0.7) + (i / 4) * Math.PI * 1.4;
+        const bx = CX + Math.cos(a) * 9;
+        const by = (CY - 26) + Math.sin(a) * 9;
+        const glowR = 1.5 + Math.sin(loopTime * 3 + i * 1.2) * 0.8;
+        ctx.beginPath();
+        ctx.arc(bx, by, glowR, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(${cnR},${cnG},${cnB},${0.3 + Math.sin(loopTime * 3 + i) * 0.15})`;
+        ctx.fill();
+      }
+      // Shoulders / torso
+      ctx.beginPath();
+      ctx.moveTo(CX - 12, CY - 17);
+      ctx.bezierCurveTo(CX - 14, CY - 10, CX - 10, CY + 2, CX - 9, CY + 14);
+      ctx.moveTo(CX + 12, CY - 17);
+      ctx.bezierCurveTo(CX + 14, CY - 10, CX + 10, CY + 2, CX + 9, CY + 14);
+      ctx.moveTo(CX - 9, CY + 14); ctx.lineTo(CX + 9, CY + 14);
+      ctx.strokeStyle = `rgba(${cnR},${cnG},${cnB},${bodyAlpha})`;
+      ctx.lineWidth = 1.1;
+      ctx.stroke();
+
+      // Chest heart glyph
+      const hx = CX, hy = CY + 1;
+      const hs = 4 + breathCycle * 1.5;
+      const heartBeat = heartPhase < 0.12 ? 1 + (1 - heartPhase / 0.12) * 0.5 : 1;
+      ctx.save();
+      ctx.translate(hx, hy);
+      ctx.scale(heartBeat, heartBeat);
+      ctx.beginPath();
+      ctx.moveTo(0, hs * 0.4);
+      ctx.bezierCurveTo(-hs * 0.1, -hs * 0.3, -hs, -hs * 0.3, -hs * 0.5, hs * 0.1);
+      ctx.bezierCurveTo(-hs * 0.25, hs * 0.5, 0, hs * 0.7, 0, hs * 0.4);
+      ctx.bezierCurveTo(0, hs * 0.7, hs * 0.25, hs * 0.5, hs * 0.5, hs * 0.1);
+      ctx.bezierCurveTo(hs, -hs * 0.3, hs * 0.1, -hs * 0.3, 0, hs * 0.4);
+      ctx.fillStyle = `rgba(${cnR},${cnG},${cnB},${0.6 + breathCycle * 0.3})`;
+      ctx.fill();
+      ctx.restore();
+
+      // ECG trace along the bottom half
+      const ecgW = centerR * 1.4;
+      const ecgX0 = CX - ecgW / 2;
+      const ecgY  = CY + 26;
+      ctx.beginPath();
+      ctx.lineWidth = 1.4;
+      ctx.strokeStyle = `rgba(${cnR},${cnG},${cnB},0.7)`;
+      const ecgSamples = 90;
+      for (let i = 0; i < ecgSamples; i++) {
+        const t    = i / ecgSamples;
+        const tOff = (t + loopTime * 0.45) % 1;
+        const ph   = (tOff % 0.5) / 0.5;
+        let y = 0;
+        if (ph < 0.08)        y = Math.sin(ph / 0.08 * Math.PI) * 0.15;
+        else if (ph < 0.18)   y = 0;
+        else if (ph < 0.205)  y = -(ph - 0.18) / 0.025 * 0.1;
+        else if (ph < 0.23)   y = -0.1 + (ph - 0.205) / 0.025 * 1.1;
+        else if (ph < 0.26)   y = 1 - (ph - 0.23) / 0.03 * 1.15;
+        else if (ph < 0.285)  y = -0.15 + (ph - 0.26) / 0.025 * 0.15;
+        else if (ph < 0.45)   y = Math.sin((ph - 0.285) / 0.165 * Math.PI) * 0.25;
+        const px = ecgX0 + t * ecgW;
+        const py = ecgY  - y * 16;
+        i === 0 ? ctx.moveTo(px, py) : ctx.lineTo(px, py);
+      }
+      ctx.stroke();
+
+      // Label
+      ctx.fillStyle = `rgba(${cnR},${cnG},${cnB},0.6)`;
+      ctx.font = '600 8px DM Mono, monospace';
+      ctx.textAlign = 'center';
+      ctx.fillText('BODY BROADCASTS', CX, CY + centerR - 30);
+      break;
+    }
+
+    case 'sensor': {
+      // ── NODE 2: Sensor Detection ──
+      // Left: continuous organic bio-signal (analog). Center: sensor/electrode band.
+      // Right: the signal becomes discrete samples — dots building a digital copy.
+      // A scanning line sweeps left→right, "capturing" each point.
+
+      const scanProgress = (loopTime * 0.55) % 1;
+      const scanX = CX - centerR * 0.85 + scanProgress * centerR * 1.7;
+      const sigW  = centerR * 0.82;
+
+      // ── Analog bio-signal (left half, fading as scan passes) ──
+      ctx.beginPath();
+      ctx.lineWidth = 1.6;
+      const analogSamples = 80;
+      for (let i = 0; i < analogSamples; i++) {
+        const t  = i / analogSamples;
+        const px = CX - sigW + t * sigW * 2;
+        const py = CY - (Math.sin((t * 5 + loopTime * 0.8) * Math.PI * 2) * 14 +
+                         Math.sin((t * 2.3 + loopTime * 0.3) * Math.PI * 2) * 5);
+        // Fade out as scan passes over this point
+        const fadeAlpha = px < scanX ? 0.15 : 0.75;
+        if (i === 0) { ctx.strokeStyle = `rgba(${cnR},${cnG},${cnB},${fadeAlpha})`; ctx.moveTo(px, py); }
+        else {
+          ctx.stroke(); ctx.beginPath();
+          ctx.strokeStyle = `rgba(${cnR},${cnG},${cnB},${fadeAlpha})`;
+          ctx.moveTo(px, py); // restart — crude but effective for per-pixel alpha
+        }
+      }
+      ctx.stroke();
+
+      // ── Scanning line ──
+      ctx.beginPath();
+      ctx.moveTo(scanX, CY - centerR * 0.7);
+      ctx.lineTo(scanX, CY + centerR * 0.55);
+      const scanGrad = ctx.createLinearGradient(0, CY - centerR * 0.7, 0, CY + centerR * 0.55);
+      scanGrad.addColorStop(0, `rgba(${cnR},${cnG},${cnB},0)`);
+      scanGrad.addColorStop(0.3, `rgba(${cnR},${cnG},${cnB},0.9)`);
+      scanGrad.addColorStop(0.7, `rgba(${cnR},${cnG},${cnB},0.9)`);
+      scanGrad.addColorStop(1, `rgba(${cnR},${cnG},${cnB},0)`);
+      ctx.strokeStyle = scanGrad;
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
+      // Scan glow
+      ctx.beginPath();
+      ctx.moveTo(scanX, CY - centerR * 0.7);
+      ctx.lineTo(scanX, CY + centerR * 0.55);
+      ctx.strokeStyle = `rgba(${cnR},${cnG},${cnB},0.12)`;
+      ctx.lineWidth = 8;
+      ctx.stroke();
+
+      // ── Sensor / electrode band across the center ──
+      // Simple band arc (like a headband or chest strap) across the midline
+      ctx.beginPath();
+      ctx.moveTo(CX - sigW - 2, CY);
+      ctx.lineTo(CX + sigW + 2, CY);
+      ctx.strokeStyle = `rgba(${cnR},${cnG},${cnB},0.12)`;
+      ctx.lineWidth = 12;
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.moveTo(CX - sigW - 2, CY);
+      ctx.lineTo(CX + sigW + 2, CY);
+      ctx.strokeStyle = `rgba(${cnR},${cnG},${cnB},0.35)`;
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
+      // Electrode dots on band
+      for (let e = 0; e < 5; e++) {
+        const ex = CX - sigW * 0.8 + e * (sigW * 1.6 / 4);
+        ctx.beginPath();
+        ctx.arc(ex, CY, 3, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(${cnR},${cnG},${cnB},0.55)`;
+        ctx.fill();
+        ctx.beginPath();
+        ctx.arc(ex, CY, 5.5, 0, Math.PI * 2);
+        ctx.strokeStyle = `rgba(${cnR},${cnG},${cnB},0.25)`;
+        ctx.lineWidth = 1;
+        ctx.stroke();
+      }
+
+      // ── Digital sample dots (right of scan line) ──
+      const numSamples = 16;
+      for (let i = 0; i < numSamples; i++) {
+        const t  = i / numSamples;
+        const px = CX - sigW + t * sigW * 2;
+        if (px > scanX) continue; // only show captured region
+        const val = Math.sin((t * 5 + loopTime * 0.8) * Math.PI * 2) * 14 +
+                    Math.sin((t * 2.3 + loopTime * 0.3) * Math.PI * 2) * 5;
+        const py  = CY - val;
+        // Vertical stem from band
+        ctx.beginPath();
+        ctx.moveTo(px, CY);
+        ctx.lineTo(px, py);
+        ctx.strokeStyle = `rgba(${cnR},${cnG},${cnB},0.22)`;
+        ctx.lineWidth = 0.8;
+        ctx.stroke();
+        // Sample dot
+        ctx.beginPath();
+        ctx.arc(px, py, 3, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(${cnR},${cnG},${cnB},0.85)`;
+        ctx.fill();
+        // Bit label
+        ctx.fillStyle = `rgba(${cnR},${cnG},${cnB},0.4)`;
+        ctx.font = '5px DM Mono, monospace';
+        ctx.textAlign = 'center';
+        ctx.fillText(Math.round(50 + val * 2), px, py - 6);
+      }
+
+      // Hz readout
+      ctx.fillStyle = `rgba(${cnR},${cnG},${cnB},0.5)`;
+      ctx.font = '600 8px DM Mono, monospace';
+      ctx.textAlign = 'right';
+      ctx.fillText('256 Hz', CX + sigW, CY - centerR * 0.55);
+
+      ctx.fillStyle = `rgba(${cnR},${cnG},${cnB},0.6)`;
+      ctx.font = '600 8px DM Mono, monospace';
+      ctx.textAlign = 'center';
+      ctx.fillText('INVISIBLE → MEASURABLE', CX, CY + centerR - 30);
+      break;
+    }
+
+    case 'algorithm': {
+      // ── NODE 3: Algorithm Processing ──
+      // Raw signal stream enters from left edge as chaotic noise.
+      // Center shows a "classification engine" — concentric processing rings.
+      // Output: a clean state label emerges on the right with confidence bar.
+
+      const procSpeed = loopTime * 1.0;
+
+      // ── Incoming raw data stream (left) ──
+      const streamX = CX - centerR * 0.85;
+      for (let i = 0; i < 12; i++) {
+        const dy  = -centerR * 0.55 + (i / 11) * centerR * 1.1;
+        const len = 6 + Math.sin(procSpeed * 2.3 + i * 1.7) * 5;
+        const a   = 0.2 + Math.sin(procSpeed * 1.8 + i * 0.9) * 0.15;
+        ctx.beginPath();
+        ctx.rect(streamX - 3, CY + dy - 1.5, len, 3);
+        ctx.fillStyle = `rgba(${cnR},${cnG},${cnB},${a})`;
+        ctx.fill();
+      }
+      // Stream arrow →
+      ctx.beginPath();
+      ctx.moveTo(streamX + 14, CY);
+      ctx.lineTo(streamX + 24, CY);
+      ctx.strokeStyle = `rgba(${cnR},${cnG},${cnB},0.3)`;
+      ctx.lineWidth = 1;
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.moveTo(streamX + 22, CY - 3);
+      ctx.lineTo(streamX + 26, CY);
+      ctx.lineTo(streamX + 22, CY + 3);
+      ctx.strokeStyle = `rgba(${cnR},${cnG},${cnB},0.3)`;
+      ctx.lineWidth = 1;
+      ctx.stroke();
+
+      // ── Processing rings (center nucleus) ──
+      for (let ring = 3; ring >= 1; ring--) {
+        const rr   = ring * 12;
+        const spin = loopTime * (0.4 + ring * 0.15) * (ring % 2 === 0 ? -1 : 1);
+        const dashes = ring * 3;
+        ctx.beginPath();
+        for (let d = 0; d < dashes; d++) {
+          const a1 = spin + (d / dashes) * Math.PI * 2;
+          const a2 = a1 + (Math.PI / dashes) * 0.7;
+          ctx.arc(CX, CY, rr, a1, a2);
+        }
+        ctx.strokeStyle = `rgba(${cnR},${cnG},${cnB},${0.2 + ring * 0.1})`;
+        ctx.lineWidth = 1.2;
+        ctx.stroke();
+      }
+      // Nucleus dot
+      const nucPulse = 0.5 + Math.sin(procSpeed * 3) * 0.25;
+      ctx.beginPath();
+      ctx.arc(CX, CY, 5, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(${cnR},${cnG},${cnB},${nucPulse})`;
+      ctx.fill();
+      const nucGlow = ctx.createRadialGradient(CX, CY, 0, CX, CY, 18);
+      nucGlow.addColorStop(0, `rgba(${cnR},${cnG},${cnB},0.12)`);
+      nucGlow.addColorStop(1, 'rgba(0,0,0,0)');
+      ctx.fillStyle = nucGlow;
+      ctx.beginPath(); ctx.arc(CX, CY, 18, 0, Math.PI * 2); ctx.fill();
+
+      // Converging data specks → nucleus
+      for (let i = 0; i < 6; i++) {
+        const baseAngle = (i / 6) * Math.PI * 2;
+        const prog = (procSpeed * 0.7 + i * 0.16) % 1;
+        const r0   = centerR * 0.55;
+        const px   = CX + Math.cos(baseAngle) * r0 * (1 - prog);
+        const py   = CY + Math.sin(baseAngle) * r0 * (1 - prog);
+        ctx.beginPath();
+        ctx.arc(px, py, 2, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(${cnR},${cnG},${cnB},${prog * 0.7})`;
+        ctx.fill();
+      }
+
+      // ── Output: state classification (right) ──
+      const states      = [['CALM',    0.87], ['FOCUSED', 0.72], ['STRESSED', 0.45], ['RELAXED', 0.91], ['ALERT', 0.63]];
+      const cycleLen    = 2.2;
+      const stateIdx    = Math.floor(loopTime / cycleLen) % states.length;
+      const cycleFrac   = (loopTime % cycleLen) / cycleLen;
+      const fadeA       = cycleFrac < 0.12 ? cycleFrac / 0.12 : cycleFrac > 0.85 ? (1 - cycleFrac) / 0.15 : 1;
+      const [label, conf] = states[stateIdx];
+      const outX = CX + centerR * 0.45;
+      const outW = centerR * 0.75;
+
+      // Arrow from nucleus to output
+      ctx.beginPath();
+      ctx.moveTo(CX + 16, CY);
+      ctx.lineTo(outX - outW * 0.5 - 4, CY);
+      ctx.strokeStyle = `rgba(${cnR},${cnG},${cnB},${fadeA * 0.35})`;
+      ctx.lineWidth = 1;
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.moveTo(outX - outW * 0.5 - 6, CY - 3);
+      ctx.lineTo(outX - outW * 0.5 - 2, CY);
+      ctx.lineTo(outX - outW * 0.5 - 6, CY + 3);
+      ctx.strokeStyle = `rgba(${cnR},${cnG},${cnB},${fadeA * 0.35})`;
+      ctx.lineWidth = 1;
+      ctx.stroke();
+
+      // Classification box
+      ctx.strokeStyle = `rgba(${cnR},${cnG},${cnB},${fadeA * 0.55})`;
+      ctx.lineWidth = 1;
+      ctx.strokeRect(outX - outW * 0.5, CY - 20, outW, 40);
+
+      // State label
+      ctx.fillStyle = `rgba(${cnR},${cnG},${cnB},${fadeA * 0.95})`;
+      ctx.font = `700 9px DM Mono, monospace`;
+      ctx.textAlign = 'center';
+      ctx.fillText(label, outX, CY - 5);
+
+      // Confidence bar
+      ctx.fillStyle = `rgba(${cnR},${cnG},${cnB},0.15)`;
+      ctx.fillRect(outX - outW * 0.4, CY + 5, outW * 0.8, 6);
+      ctx.fillStyle = `rgba(${cnR},${cnG},${cnB},${fadeA * 0.7})`;
+      ctx.fillRect(outX - outW * 0.4, CY + 5, outW * 0.8 * conf * fadeA, 6);
+      ctx.fillStyle = `rgba(${cnR},${cnG},${cnB},${fadeA * 0.5})`;
+      ctx.font = '500 6px DM Mono, monospace';
+      ctx.textAlign = 'center';
+      ctx.fillText(`${Math.round(conf * 100)}%`, outX, CY + 18);
+
+      ctx.fillStyle = `rgba(${cnR},${cnG},${cnB},0.6)`;
+      ctx.font = '600 8px DM Mono, monospace';
+      ctx.textAlign = 'center';
+      ctx.fillText('NOISE → MEANING', CX, CY + centerR - 30);
+      break;
+    }
+
+    case 'vr': {
+      // ── NODE 4: VR Environment Response ──
+      // A split-screen: top is sky (shifting color with state), bottom is terrain wireframe
+      // that rises and falls responsively. Floating particles ("snowglobe" reference).
+      // State label from algorithm feeds the environment.
+
+      const envState  = (Math.sin(loopTime * 0.25) + 1) / 2; // 0=stressed→1=calm
+      const envColors = [
+        [220, 60, 80],    // stressed : warm red
+        [255, 136, 204],  // mid
+        [100, 180, 255],  // calm : cool blue
+      ];
+      const ci  = envState < 0.5 ? 0 : 1;
+      const ct  = envState < 0.5 ? envState * 2 : (envState - 0.5) * 2;
+      const [er, eg, eb] = [
+        Math.round(envColors[ci][0] + (envColors[ci+1][0] - envColors[ci][0]) * ct),
+        Math.round(envColors[ci][1] + (envColors[ci+1][1] - envColors[ci][1]) * ct),
+        Math.round(envColors[ci][2] + (envColors[ci+1][2] - envColors[ci][2]) * ct),
+      ];
+
+      // Sky gradient
+      const skyH   = centerR * 0.85;
+      const skyGr  = ctx.createLinearGradient(CX, CY - skyH, CX, CY + 6);
+      skyGr.addColorStop(0, `rgba(${er},${eg},${eb},0.22)`);
+      skyGr.addColorStop(1, `rgba(${er},${eg},${eb},0.03)`);
+      ctx.fillStyle = skyGr;
+      ctx.fillRect(CX - centerR, CY - skyH, centerR * 2, skyH + 6);
+
+      // Floating orbs / snowglobe particles
+      for (let i = 0; i < 14; i++) {
+        const seed  = i * 137.5;
+        const ox    = CX + Math.sin(seed + loopTime * (0.15 + (i % 3) * 0.08)) * centerR * 0.65;
+        const oy    = CY - skyH * 0.2 - Math.abs(Math.sin(seed * 0.7 + loopTime * (0.2 + (i % 5) * 0.04))) * skyH * 0.7;
+        const or    = 1.2 + Math.sin(seed + loopTime * 0.5) * 0.8;
+        const oa    = 0.15 + envState * 0.35;
+        ctx.beginPath();
+        ctx.arc(ox, oy, or, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(${er},${eg},${eb},${oa})`;
+        ctx.fill();
+      }
+
+      // Horizon line
+      ctx.beginPath();
+      ctx.moveTo(CX - centerR, CY + 6);
+      ctx.lineTo(CX + centerR, CY + 6);
+      const hLine = ctx.createLinearGradient(CX - centerR, 0, CX + centerR, 0);
+      hLine.addColorStop(0, 'rgba(0,0,0,0)');
+      hLine.addColorStop(0.5, `rgba(${er},${eg},${eb},0.5)`);
+      hLine.addColorStop(1, 'rgba(0,0,0,0)');
+      ctx.strokeStyle = hLine;
+      ctx.lineWidth = 1;
+      ctx.stroke();
+
+      // Terrain wireframe (responding to state — calmer = smoother/higher terrain)
+      const terrW    = centerR * 1.72;
+      const terrX0   = CX - terrW / 2;
+      const terrYBase = CY + 10;
+      const terrRows  = 5, terrCols = 14;
+      for (let row = 0; row < terrRows; row++) {
+        ctx.beginPath();
+        for (let col = 0; col < terrCols; col++) {
+          const tx  = terrX0 + (col / (terrCols - 1)) * terrW;
+          const dep = row / terrRows;
+          // Calm state: gentle rolling hills. Stressed: jagged sharp peaks.
+          const jagged  = 1 - envState; // high when stressed
+          const smooth  = envState;
+          const h = (Math.sin(col * 0.5 + loopTime * (0.6 - smooth * 0.4) + row * 0.8) * 12 * smooth
+                    + Math.sin(col * 2.1 + loopTime * 1.2 + row) * 8 * jagged)
+                    * (1 - dep * 0.5) * (0.5 + envState * 0.7);
+          const ty  = terrYBase - dep * 30 - h;
+          col === 0 ? ctx.moveTo(tx, ty) : ctx.lineTo(tx, ty);
+        }
+        const rowAlpha = (0.08 + (1 - row / terrRows) * 0.35) * (0.5 + envState * 0.5);
+        ctx.strokeStyle = `rgba(${er},${eg},${eb},${rowAlpha})`;
+        ctx.lineWidth   = row === 0 ? 1.2 : 0.7;
+        ctx.stroke();
+      }
+
+      // State label (top-right)
+      const vrStates   = ['STRESSED', 'ACTIVATING', 'CALM'];
+      const vrStateIdx = envState < 0.33 ? 0 : envState < 0.66 ? 1 : 2;
+      ctx.fillStyle = `rgba(${er},${eg},${eb},0.7)`;
+      ctx.font = '600 8px DM Mono, monospace';
+      ctx.textAlign = 'right';
+      ctx.fillText(vrStates[vrStateIdx], CX + centerR - 6, CY - skyH + 14);
+
+      ctx.fillStyle = `rgba(${cnR},${cnG},${cnB},0.6)`;
+      ctx.font = '600 8px DM Mono, monospace';
+      ctx.textAlign = 'center';
+      ctx.fillText('STATE → WORLD', CX, CY + centerR - 30);
+      break;
+    }
+
+    case 'adjustment': {
+      // ── NODE 5: Learner Adjustment ──
+      // The loop closes. Show a person silhouette at center with the environment
+      // "feeding back" into them — arrows and signal waves flowing inward, not outward.
+      // The glow on the body brightens as the loop completes, then resets.
+
+      const loopProg = (loopTime * 0.35) % 1; // loop completion progress
+      const calmLevel = (Math.sin(loopTime * 0.4) + 1) / 2;
+
+      // Inward ripples converging on the body
+      for (let r = 0; r < 4; r++) {
+        const phase  = (1 - ((loopTime * 0.5 + r * 0.25) % 1));
+        const rr     = 8 + phase * centerR * 0.62;
+        const thick  = 1 + (1 - phase) * 1.5;
+        const alpha  = (1 - phase) * 0.3 * (0.5 + calmLevel * 0.5);
+        ctx.beginPath();
+        ctx.arc(CX, CY - 5, rr, 0, Math.PI * 2);
+        ctx.strokeStyle = `rgba(${cnR},${cnG},${cnB},${alpha})`;
+        ctx.lineWidth = thick;
+        ctx.stroke();
+      }
+
+      // Body glow — brightest at loop completion
+      const glowIntensity = 0.06 + calmLevel * 0.12 + Math.sin(loopTime * 2.5) * 0.04;
+      const bodyGlow = ctx.createRadialGradient(CX, CY - 8, 0, CX, CY - 8, 30);
+      bodyGlow.addColorStop(0, `rgba(${cnR},${cnG},${cnB},${glowIntensity * 3})`);
+      bodyGlow.addColorStop(0.5, `rgba(${cnR},${cnG},${cnB},${glowIntensity})`);
+      bodyGlow.addColorStop(1, 'rgba(0,0,0,0)');
+      ctx.fillStyle = bodyGlow;
+      ctx.beginPath(); ctx.arc(CX, CY - 8, 30, 0, Math.PI * 2); ctx.fill();
+
+      // Body silhouette — more luminous than node 1 (it's receiving, awakening)
+      const lumAlpha = 0.4 + calmLevel * 0.35;
+      ctx.lineWidth = 1.3;
+      // Head
+      ctx.beginPath();
+      ctx.arc(CX, CY - 25, 9, 0, Math.PI * 2);
+      ctx.strokeStyle = `rgba(${cnR},${cnG},${cnB},${lumAlpha})`;
+      ctx.stroke();
+      // Inner fill on head (awareness)
+      const headFill = ctx.createRadialGradient(CX, CY - 25, 0, CX, CY - 25, 9);
+      headFill.addColorStop(0, `rgba(${cnR},${cnG},${cnB},${calmLevel * 0.18})`);
+      headFill.addColorStop(1, 'rgba(0,0,0,0)');
+      ctx.fillStyle = headFill;
+      ctx.beginPath(); ctx.arc(CX, CY - 25, 9, 0, Math.PI * 2); ctx.fill();
+      // Torso
+      ctx.beginPath();
+      ctx.moveTo(CX - 11, CY - 16);
+      ctx.bezierCurveTo(CX - 13, CY - 8, CX - 9, CY + 4, CX - 8, CY + 14);
+      ctx.moveTo(CX + 11, CY - 16);
+      ctx.bezierCurveTo(CX + 13, CY - 8, CX + 9, CY + 4, CX + 8, CY + 14);
+      ctx.moveTo(CX - 8, CY + 14); ctx.lineTo(CX + 8, CY + 14);
+      ctx.strokeStyle = `rgba(${cnR},${cnG},${cnB},${lumAlpha})`;
+      ctx.stroke();
+
+      // Inward arrows from 4 directions converging on body
+      const arrowDirs = [
+        [0, -1, 'TOP'],
+        [1, 0, 'RIGHT'],
+        [0, 1, 'BOTTOM'],
+        [-1, 0, 'LEFT'],
+      ];
+      arrowDirs.forEach(([dx, dy], idx) => {
+        const t      = (loopTime * 0.6 + idx * 0.25) % 1;
+        const startR = centerR * 0.7;
+        const endR   = 18;
+        const dist   = startR - (startR - endR) * t;
+        const ax     = CX + dx * dist;
+        const ay     = (CY - 5) + dy * dist;
+        ctx.beginPath();
+        ctx.arc(ax, ay, 2.5, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(${cnR},${cnG},${cnB},${t * 0.7})`;
+        ctx.fill();
+      });
+
+      // Breath ripple (conscious breath taken)
+      const breathPulse = (Math.sin(loopTime * 0.8) + 1) / 2;
+      ctx.beginPath();
+      ctx.arc(CX, CY + 2, 5 + breathPulse * 6, 0, Math.PI * 2);
+      ctx.strokeStyle = `rgba(${cnR},${cnG},${cnB},${breathPulse * 0.4})`;
+      ctx.lineWidth = 1;
+      ctx.stroke();
+
+      // "Loop count" — how many times the loop has run
+      const loopCount = Math.floor(loopTime * 0.35 / 1) + 1;
+      ctx.fillStyle = `rgba(${cnR},${cnG},${cnB},0.4)`;
+      ctx.font = '500 7px DM Mono, monospace';
+      ctx.textAlign = 'right';
+      ctx.fillText(`LOOP ×${loopCount}`, CX + centerR - 6, CY - centerR * 0.6);
+
+      ctx.fillStyle = `rgba(${cnR},${cnG},${cnB},0.6)`;
+      ctx.font = '600 8px DM Mono, monospace';
+      ctx.textAlign = 'center';
+      ctx.fillText('PERCEIVE → ADJUST', CX, CY + centerR - 30);
+      break;
+    }
+  }
+
+  ctx.restore(); // end clip
+  ctx.globalAlpha = 1.0;
+
+  // ── Center border ring ──
+  ctx.beginPath();
+  ctx.arc(CX, CY, centerR, 0, Math.PI * 2);
+  ctx.strokeStyle = `rgba(${cnR},${cnG},${cnB},0.18)`;
+  ctx.lineWidth = 1;
+  ctx.stroke();
+
+  // ── Node name at top of center ──
+  ctx.fillStyle = `rgba(${cnR},${cnG},${cnB},0.35)`;
+  ctx.font = '500 10px DM Mono, monospace';
+  ctx.textAlign = 'center';
+  ctx.fillText(`STEP ${centerNode.step}`, CX, CY - centerR + 22);
+
+  // ── Arcs ──
+  NODES.forEach((nA, i) => {
+    const nB = NODES[(i+1) % NODES.length];
+    const isActiveArc = activeNode !== null &&
+      (NODES[activeNode].id === nA.id || NODES[activeNode].id === nB.id);
+    const [r,g,b] = hexToRgb(nA.color);
+    drawArc(nA, nB,
+      isActiveArc ? 0.35 : 0.1,
+      isActiveArc ? `rgba(${r},${g},${b},0.3)` : null
+    );
+    drawArrowhead(nA, nB);
+  });
+
+  // ── Particles ──
+  particles.forEach(p => {
+    if (!paused) {
+      p.t = (p.t + p.speed * dt * speedMult * 0.04) % 1;
+    }
+    const pos    = arcPoint(p.t);
+    const segNode = NODES[pos.segIdx];
+    const nextNode = NODES[(pos.segIdx+1) % NODES.length];
+    const [r1,g1,b1] = hexToRgb(segNode.color);
+    const [r2,g2,b2] = hexToRgb(nextNode.color);
+    const [r,g,b]    = lerpColor([r1,g1,b1],[r2,g2,b2], pos.segT);
+
+    const isNearActive = activeNode !== null && pos.segIdx === activeNode;
+    const alpha = p.alpha * (isNearActive ? 1.3 : 0.7);
+
+    ctx.beginPath();
+    ctx.arc(pos.x, pos.y, p.size * (isNearActive ? 1.5 : 1), 0, Math.PI*2);
+    ctx.fillStyle = `rgba(${r},${g},${b},${Math.min(alpha, 1)})`;
+    ctx.fill();
+
+    // Trail
+    const trailT = ((p.t - 0.008 + 1) % 1);
+    const trailPos = arcPoint(trailT);
+    ctx.beginPath();
+    ctx.arc(trailPos.x, trailPos.y, p.size * 0.5, 0, Math.PI*2);
+    ctx.fillStyle = `rgba(${r},${g},${b},${alpha * 0.25})`;
+    ctx.fill();
+  });
+
+  // ── Nodes ──
+  NODES.forEach((node, i) => {
+    drawNode(node, i === activeNode, loopTime + i * 1.2);
+  });
+
+  requestAnimationFrame(frame);
+}
+requestAnimationFrame(frame);
+
+// ─────────────────────────────────────────────────
+// INTERACTION
+// ─────────────────────────────────────────────────
+canvas.addEventListener('click', e => {
+  const rect = canvas.getBoundingClientRect();
+  const mx = e.clientX - rect.left;
+  const my = e.clientY - rect.top;
+
+  let hit = null;
+  NODES.forEach((node, i) => {
+    const p = nodePos(node);
+    const dx = mx - p.x, dy = my - p.y;
+    if (Math.sqrt(dx*dx + dy*dy) < NODE_R + 8) hit = i;
+  });
+
+  if (hit !== null) {
+    activeNode = (activeNode === hit) ? null : hit;
+    renderDetail();
+  }
+});
+
+canvas.addEventListener('mousemove', e => {
+  const rect = canvas.getBoundingClientRect();
+  const mx = e.clientX - rect.left;
+  const my = e.clientY - rect.top;
+  let over = false;
+  NODES.forEach(node => {
+    const p = nodePos(node);
+    const dx = mx - p.x, dy = my - p.y;
+    if (Math.sqrt(dx*dx+dy*dy) < NODE_R+8) over = true;
+  });
+  canvas.style.cursor = over ? 'pointer' : 'default';
+});
+
+// ─────────────────────────────────────────────────
+// DETAIL PANEL
+// ─────────────────────────────────────────────────
+function renderDetail() {
+  const inner  = document.getElementById('detail-inner');
+  const nav    = document.getElementById('detail-nav');
+  const dots   = document.getElementById('nav-dots');
+
+  if (activeNode === null) {
+    inner.innerHTML = `<div class="detail-empty"><div class="big">↺</div>Click any node to explore that step of the loop</div>`;
+    nav.style.display = 'none';
+    return;
+  }
+
+  const node = NODES[activeNode];
+  const [r,g,b] = hexToRgb(node.color);
+
+  inner.innerHTML = `
+    <div class="detail-step">Step ${node.step} of 5</div>
+    <div class="detail-title" style="color:rgb(${r},${g},${b})">${node.title}</div>
+    <div class="detail-divider"></div>
+    <div class="detail-body">${node.body.replace(/\n/g,'<br><br>')}</div>
+    <div class="detail-example">
+      <div class="detail-example-label">In Practice</div>
+      <div class="detail-example-text">${node.example}</div>
+    </div>
+    <div class="detail-why">${node.why}</div>
+  `;
+
+  // Nav dots
+  nav.style.display = 'flex';
+  dots.innerHTML = NODES.map((n,i) => {
+    const [dr,dg,db] = hexToRgb(n.color);
+    return `<div class="nav-dot ${i===activeNode?'active':''}" 
+      data-idx="${i}" 
+      style="${i===activeNode ? `background:rgb(${dr},${dg},${db});box-shadow:0 0 5px rgba(${dr},${dg},${db},0.5)` : ''}"></div>`;
+  }).join('');
+
+  dots.querySelectorAll('.nav-dot').forEach(dot => {
+    dot.addEventListener('click', () => {
+      activeNode = parseInt(dot.dataset.idx);
+      renderDetail();
+    });
+  });
+}
+
+document.getElementById('nav-prev').addEventListener('click', () => {
+  activeNode = ((activeNode ?? 0) - 1 + NODES.length) % NODES.length;
+  renderDetail();
+});
+document.getElementById('nav-next').addEventListener('click', () => {
+  activeNode = ((activeNode ?? -1) + 1) % NODES.length;
+  renderDetail();
+});
+
+// ─────────────────────────────────────────────────
+// CONTROLS
+// ─────────────────────────────────────────────────
+document.getElementById('speed').addEventListener('input', e => {
+  speedMult = parseInt(e.target.value);
+  document.getElementById('speed-val').textContent = `${speedMult}×`;
+});
+
+const pauseBtn = document.getElementById('pause-btn');
+pauseBtn.addEventListener('click', () => {
+  paused = !paused;
+  pauseBtn.textContent   = paused ? '▶ Resume' : '⏸ Pause';
+  pauseBtn.classList.toggle('paused', paused);
+  document.getElementById('loop-status').textContent = paused ? 'LOOP PAUSED' : 'LOOP RUNNING';
+});
+</script>
+</body>
+</html>

@@ -36,6 +36,17 @@
                     }
                 ]
             }
+        },
+        {
+            "id": "module_4_2_3_simulation",
+            "title": "The Cybernetic Loop",
+            "type": "interactive-simulation",
+            "content": {
+                "engine": "CyberneticLoop",
+                "params": {
+                    "speed": 4
+                }
+            }
         }
     ]
 }

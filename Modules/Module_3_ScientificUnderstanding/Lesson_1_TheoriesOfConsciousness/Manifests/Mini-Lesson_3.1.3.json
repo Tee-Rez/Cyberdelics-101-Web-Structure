@@ -1,0 +1,124 @@
+{
+    "id": "mini_lesson_3_1_3",
+    "title": "Applying the Theories — A Practitioner Scenario",
+    "description": "Four theories in hand. Now put them to work. You won't be tested on definitions here; you'll encounter a situation that practitioners actually face and decide which theoretical frame helps you make sense of what's happening. The ability to move between these frameworks fluidly is what separates someone who has read about consciousness from someone who works with it. The scenario below asks for that kind of judgment.",
+    "modules": [
+        {
+            "id": "scenario_3_1_3",
+            "title": "Applying the Theories — A Practitioner Scenario",
+            "type": "scenario-based",
+            "content": {
+                "scenario": {
+                    "title": "Raquel's Experience",
+                    "setup": "A client named Raquel finishes a 25-minute immersive VR session designed for grief processing. Afterward, during your integration conversation, she describes two distinct things that happened. First: 'I felt like the boundary between me and the space dissolved. Like I wasn't watching it anymore — I was it.' Second: 'There's an intrusive memory I've been trying to work through for two years. During the session, it just stopped playing. For the whole session, it was gone.' She looks lighter. She isn't sure what happened.",
+                    "question": "Which theoretical frameworks best explain Raquel's two distinct experiences, and how would you explain them to her?"
+                },
+                "choices": [
+                    {
+                        "id": "A",
+                        "label": "Workspace displacement and prediction updating",
+                        "isCorrect": true,
+                        "outcome": {
+                            "title": "Choice A: Global Workspace Theory + Predictive Processing (boundary dissolution + memory displacement)",
+                            "description": "<p>The boundary dissolution Raquel described, 'I wasn't watching it, I was it,' is consistent with Global Workspace Theory. The immersive environment occupied her global workspace so comprehensively that the ordinary self-referential processing that maintains the sense of 'a me observing something' lost its broadcast priority. Without that continuous self-reference in the workspace, the felt boundary between self and environment softened.</p><p>The intrusive memory going quiet for the session's duration is also consistent with this. The workspace, occupied with present-moment environmental content, had no bandwidth for the memory's habitual replaying.</p><p>Predictive Processing adds another layer: Raquel's brain had no existing model for the VR environment, so it was forced into genuine updating. That kind of active model revision can temporarily suspend the predictive loops that sustain intrusive memories, which often run partly on the brain's habitual predictions about what is 'about to be thought.'</p><p>In plain language for Raquel: 'What happened is that the experience gave your brain something so new and complete to pay attention to that the memory didn't have anywhere to run. That's not a trick; it's a property of how your attention works. The boundary feeling is related: when attention is that fully occupied by a present experience, the sense of being a separate observer of it can soften.'</p><p>This is the correct answer.</p>"
+                        }
+                    },
+                    {
+                        "id": "B",
+                        "label": "High phi, high coherence",
+                        "isCorrect": false,
+                        "outcome": {
+                            "title": "Choice B: Only Integrated Information Theory",
+                            "description": "<p>Integrated Information Theory is relevant here. The high phi state produced by a coherent, multi-sensory VR environment may well contribute to the richness of Raquel's experience. But IIT alone doesn't give you a precise account of why self-referential processing diminished or why the intrusive memory was suspended. IIT explains why the experience was rich; it doesn't explain the specific content of what disappeared.</p><p>For a practitioner explaining this to a client, IIT alone would feel incomplete. You'd be saying 'the information was well-integrated' without addressing what that meant for Raquel's specific experience. A fuller account needs Global Workspace Theory and Predictive Processing to explain the displacement and the memory suppression.</p><p>Review the two theories and consider which combination addresses both of Raquel's experiences directly.</p>"
+                        }
+                    },
+                    {
+                        "id": "C",
+                        "label": "The body she inhabited shaped her cognition",
+                        "isCorrect": false,
+                        "outcome": {
+                            "title": "Choice C: Only Embodied Cognition",
+                            "description": "<p>Embodied Cognition is genuinely relevant to session design, but it doesn't provide the primary explanation for what Raquel described. The boundary dissolution and the memory going quiet are about the allocation of attentional and cognitive resources, not primarily about the body she was inhabiting during the experience. Embodied Cognition would be more directly relevant if Raquel had described changes in how she related to her own body, or if a specific avatar choice had been made with therapeutic intent.</p><p>What Raquel described maps more directly to how the workspace was occupied (Global Workspace Theory) and how novel environments disrupt habitual prediction loops (Predictive Processing). Try the answer that combines those two frameworks.</p>"
+                        }
+                    },
+                    {
+                        "id": "D",
+                        "label": "The science doesn't have answers yet",
+                        "isCorrect": false,
+                        "outcome": {
+                            "title": "Choice D: These experiences can't be explained by current theories",
+                            "description": "<p>This response undersells what current frameworks can actually explain. The theories you've learned aren't speculative; they're working models with substantial experimental support, and they do provide plausible mechanistic accounts for what Raquel described. Saying the science has no answers isn't honest calibration; it's overcorrection in the other direction.</p><p>Honest calibration means knowing the difference between 'this is established' and 'this is a framework.' It doesn't mean treating all explanation as unavailable. Raquel's experiences have clear theoretical accounts. Try again and identify the combination that speaks directly to what she described.</p>"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "quiz_3_1_3",
+            "title": "Test Your Understanding",
+            "type": "option-selector",
+            "config": {
+                "mode": "single",
+                "style": "text",
+                "questions": [
+                    {
+                        "question": "A developer argues: 'More visual realism always improves altered state potential; the closer it looks to reality, the better.' Based on Predictive Processing, which response is most accurate?",
+                        "options": [
+                            {
+                                "id": "A",
+                                "label": "The developer is correct because higher fidelity always produces more presence and deeper states"
+                            },
+                            {
+                                "id": "B",
+                                "label": "Predictive Processing suggests that familiar, realistic environments may actually generate fewer prediction errors than novel abstract ones, reducing altered state potential",
+                                "correct": true
+                            },
+                            {
+                                "id": "C",
+                                "label": "Visual realism is irrelevant because audio design is the primary driver of prediction error"
+                            },
+                            {
+                                "id": "D",
+                                "label": "Predictive Processing only applies to clinical VR, not cyberdelic applications"
+                            }
+                        ],
+                        "synthesis": {
+                            "A": "Fidelity contributes to presence, and presence does amplify therapeutic intent. Those connections are real. But Predictive Processing adds a complication: an environment the brain has a strong prior model for generates fewer prediction errors, even if it's rendered in beautiful high fidelity. A photorealistic forest that looks like many forests a person has seen may generate fewer prediction errors, and therefore less perceptual updating, than an abstract, novel environment the brain has no model for. Realism and altered state potential don't always travel in the same direction. Try again.",
+                            "B": "Right. Predictive Processing reframes the design question from 'how realistic is this?' to 'how many meaningful prediction errors does this generate, and what kind?' A photorealistic environment that closely resembles places a person has been may actually generate fewer prediction errors than an abstract, novel environment, because the brain has stronger prior models for familiar realistic spaces. This doesn't mean realism is bad; it means it's one variable among several. Novel environments, unexpected coherent structures, and carefully designed departures from ordinary visual logic can produce more perceptual updating than high-fidelity realism alone. Design for productive surprise, not just technical quality.",
+                            "C": "Audio design does contribute to prediction errors and presence, and it's genuinely important. But Predictive Processing doesn't establish a ranking of channels. It's a framework about the whole system's prediction and error correction process. Saying audio is 'the primary driver' goes beyond what the theory claims and would oversimplify what good session design actually involves. Try again.",
+                            "D": "Predictive Processing is a general framework for how the brain processes information; it isn't domain-restricted to clinical applications. Every VR experience, whether clinical or exploratory, involves the brain generating and updating predictions. The theory applies wherever the brain is encountering a designed environment. Try again with that in mind."
+                        }
+                    },
+                    {
+                        "question": "A colleague says they prefer to use just one consciousness theory as their framework because it's simpler and more consistent. What is the most accurate response to this preference?",
+                        "options": [
+                            {
+                                "id": "A",
+                                "label": "Using a single theory is best practice; consistency of interpretation improves session quality"
+                            },
+                            {
+                                "id": "B",
+                                "label": "Multiple frameworks provide complementary explanations because different theories illuminate different aspects of the same experience, and no single theory currently accounts for all cyberdelic phenomena",
+                                "correct": true
+                            },
+                            {
+                                "id": "C",
+                                "label": "The choice of theory doesn't matter as long as the practitioner believes in it sincerely"
+                            },
+                            {
+                                "id": "D",
+                                "label": "Only Predictive Processing is worth using because it has the most empirical support"
+                            }
+                        ],
+                        "synthesis": {
+                            "A": "Simplicity has real value, but committing to a single theory in a field where no single theory accounts for all observed phenomena means leaving explanatory gaps. Raquel's session, for example, was best explained by the combination of Global Workspace Theory and Predictive Processing; neither alone was fully sufficient. A practitioner who commits to one theory will encounter client experiences that their single framework can't address well. Try again.",
+                            "B": "Exactly right. No single consciousness theory currently provides a complete account of cyberdelic phenomena. Global Workspace Theory explains attentional displacement. Integrated Information Theory explains experiential richness through sensory coherence. Predictive Processing explains how novel environments produce perceptual updating. Embodied Cognition explains how body representation shapes cognition. Each illuminates something the others don't cover as well. A practitioner who holds multiple frameworks isn't being inconsistent; they're being comprehensive. The ability to move between theories fluidly, applying whichever lens best fits what a client is describing, is what sophisticated practice looks like.",
+                            "C": "Sincerity of belief doesn't determine a framework's explanatory power or accuracy. This answer confuses personal conviction with clinical utility. The value of theoretical frameworks for practitioners is their ability to generate useful explanations and design decisions, and that capacity is independent of how committed the practitioner feels to them. Try again.",
+                            "D": "Predictive Processing does have strong and growing empirical support, and it is arguably the most directly applicable framework for cyberdelic design. But 'most empirical support' doesn't mean 'explains everything.' Global Workspace Theory, Embodied Cognition, and IIT each illuminate aspects of cyberdelic experience that Predictive Processing alone doesn't fully account for. Restricting to one theory, even the most supported one, leaves practitioners without tools for the full range of what clients report. Try again."
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

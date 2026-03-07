@@ -1,55 +1,51 @@
 {
-    "title": "The Six Cyberdelic Design Dimensions",
-    "description": "Now that you can identify cyberdelic VR by its purpose, let's go deeper into how cyberdelic experiences are actually built. Every intentional cyberdelic design makes decisions across six dimensions. These aren't arbitrary checkboxes : they're the fundamental questions a designer has to answer before anything else. Understanding these dimensions means you can evaluate any experience with precision, and you can start thinking about what it would take to design one yourself.",
+    "title": "The Cybernetic Loop",
+    "description": "Understanding the feedback mechanism that separates cyberdelics from standard VR",
     "theme": {
         "primaryColor": "#5900ff",
         "fontBody": "Rajdhani, sans-serif"
     },
     "modules": [
         {
-            "id": "dimension_explorer_3.2",
-            "title": "The Cyberdelic Design Dimension Explorer",
-            "type": "interactive-simulation",
-            "content": {
-                "engine": "TesseractExplorer",
-                "params": {},
-                "hideContinueButton": true
-            }
-        },
-        {
-            "id": "dimensions_pd_3.2",
-            "title": "Applying the Framework",
+            "id": "module_4_2_3_progressive",
+            "title": "Biofeedback Integration",
             "type": "progressive-disclosure",
             "content": {
                 "sections": [
                     {
-                        "title": "A Framework, Not a Checklist",
-                        "content": "<p>These six dimensions aren't boxes to tick. They're the fundamental questions any cyberdelic designer has to answer : whether they answer them consciously or not. An experience designed without clarity on its reality substrate, its sensory palette, or its target states will tend to be unfocused. Design that's clear on all six tends to be coherent and powerful.</p>",
-                        "triggerLabel": "Collaboration"
+                        "title": "What Makes Biofeedback Different",
+                        "content": "<p>Standard VR delivers preset content. Biofeedback-enhanced VR creates a <strong>two-way conversation</strong>.</p><p>It creates a cybernetic loop: your body signal shapes the environment, which shapes your body signal. This makes internal states (calm, focus, anxiety) <strong>visible</strong> in real-time, accelerating self-regulation learning.</p>",
+                        "triggerLabel": "The 5-Step Loop"
                     },
                     {
-                        "title": "Dimensions Work Together",
+                        "title": "The 5 Steps of the Loop",
+                        "content": "<ol><li><strong>Signal Generation:</strong> Body produces data (heart rate, brainwaves).</li><li><strong>Sensor Detection:</strong> Device (watch, headband) reads the signal.</li><li><strong>Processing:</strong> Algorithm interprets state (e.g., 'high stress').</li><li><strong>Response:</strong> VR environment changes (colors dim, geometry contracts).</li><li><strong>Adjustment:</strong> You perceive the change and shift your state, starting the loop again.</li></ol>",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module1/dimensions_convergence.jpg",
-                            "alt": "Circular web diagram showing the six design dimensions as interconnected nodes",
-                            "prompt": "A circular web diagram showing the six design dimensions as interconnected nodes : Reality, Sensory, Presence, States, Traits, Meaning. Glowing connecting lines between each node suggest active relationships, some lines brighter than others showing strong pairings. Sacred geometry influence in the overall structure, purple and teal palette, dark background, sense of an integrated living system rather than a static chart, 16:9 aspect ratio"
+                            "src": "placeholder-cybernetic-loop.jpg",
+                            "alt": "Diagram of the 5-step cybernetic feedback loop between user and VR system",
+                            "position": "full-width",
+                            "aiPrompt": "Circular diagram showing the five-step cybernetic feedback loop — starting with person's silhouette at top, moving clockwise through: (1) heart rate waveform emerging from chest, (2) wrist-worn sensor capturing signal, (3) floating algorithm visualization (geometric processing), (4) VR landscape responding with visual changes, (5) arrow back to person showing adjustment — continuous flow indicated by circular arrangement, purple/teal sacred geometry aesthetic, clean infographic style, sense of living system not mechanical process, 16:9 aspect ratio"
                         },
-                        "mediaLayout": "full",
-                        "content": "<p>The power is in the relationships between dimensions. A biologically-grounded reality substrate pairs naturally with embodied presence and somatic states. When dimensions align, the experience has coherence. When they conflict, the experience feels fragmented.</p>",
-                        "triggerLabel": "Strategic Tools"
+                        "triggerLabel": "The Mirror Relationship"
                     },
                     {
-                        "title": "The Same Six Dimensions Evaluate and Create",
-                        "content": "<p>These six dimensions serve two purposes. First, they're an <strong>evaluation tool</strong> : you can map any experience across all six to understand exactly what it's doing. Second, they're a <strong>design tool</strong> : if you're building or advising on a cyberdelic experience, these are the questions you answer before anything else.</p>",
-                        "triggerLabel": "The Meaning Gap"
-                    },
-                    {
-                        "title": "Meaning is the Most Often Skipped",
-                        "content": "<p>Of the six dimensions, Meaning is the one most often left implicit or unaddressed. Designers tend to get clear on Reality and Sensory quickly, but the World, Story, and Magic of an experience get treated as 'optional extras.' They are not optional. They are what makes the difference between a technically impressive experience and a genuinely transformative one.</p>",
-                        "triggerLabel": "Course Path"
+                        "title": "The Mirror Relationship",
+                        "content": "<p>The cybernetic loop creates an honest mirror. In meditation, you might <em>think</em> you're calm when you're not. Biofeedback shows you the truth.</p><p>This is 'steering through feedback' — adjusting based on real-time data. It makes the invisible visible.</p>",
+                        "triggerLabel": "Explore Biofeedback Types"
                     }
                 ]
+            }
+        },
+        {
+            "id": "module_4_2_3_simulation",
+            "title": "The Cybernetic Loop",
+            "type": "interactive-simulation",
+            "content": {
+                "engine": "CyberneticLoop",
+                "params": {
+                    "speed": 4
+                }
             }
         }
     ]
