@@ -1,6 +1,7 @@
-{
+﻿{
+    "id": "mini_lesson_2_4_1",
     "title": "The COVID Catalyst",
-    "description": "Just as cyberdelics was emerging from its 30-year journey, an unexpected accelerant arrived: a global pandemic. COVID-19's social isolation forced rapid cultural adaptation that might have taken years otherwise. You'll discover how lockdowns drove millions to buy VR headsets, how virtual gatherings suddenly became essential rather than optional, and how cultural attitudes about technology-mediated experience shifted dramatically in months. This wasn't just about VR sales numbers—it was about the fundamental question of whether connection through technology can be real. The pandemic answered: yes.",
+    "description": "How COVID-19 lockdowns accelerated VR adoption in months \u2014 and proved that technology-mediated connection can be genuinely real.",
     "theme": {
         "primaryColor": "#5900ff",
         "fontBody": "Rajdhani, sans-serif"
@@ -31,7 +32,7 @@
                     {
                         "id": "section_3",
                         "title": "The Normalization of Mediated Experience",
-                        "content": "Pre-COVID attitudes: 'real' connection requires physical presence, technology-mediated relationships are inferior, virtual experiences can't substitute for real ones, spending time in virtual worlds is escapism or addiction. Post-COVID attitudes: technology enables genuine connection despite distance, virtual experiences have real value and meaning, mediated doesn't mean fake—it means accessible, digital spaces can be emotionally significant. Billions discovered connection through technology CAN be meaningful when physical gathering is impossible.",
+                        "content": "Pre-COVID attitudes: 'real' connection requires physical presence, technology-mediated relationships are inferior, virtual experiences can't substitute for real ones, spending time in virtual worlds is escapism or addiction. Post-COVID attitudes: technology enables genuine connection despite distance, virtual experiences have real value and meaning, mediated doesn't mean fakeâ€”it means accessible, digital spaces can be emotionally significant. Billions discovered connection through technology CAN be meaningful when physical gathering is impossible.",
                         "triggerLabel": "Explore Virtual Events"
                     },
                     {
@@ -116,7 +117,7 @@
                     },
                     {
                         "id": "q1_correct",
-                        "narrative": "<p><strong>Correct!</strong> The most important shift was cultural: before COVID, virtual experiences were seen as inferior substitutes for 'real' physical experiences. After COVID, billions discovered technology-mediated connection could be genuinely meaningful when physical gathering was impossible. This shift in cultural attitudes—from 'virtual is fake' to 'virtual is a valid form of real'—prepared people to take cyberdelic experiences seriously as legitimate consciousness work, not just digital entertainment.</p>",
+                        "narrative": "<p><strong>Correct!</strong> The most important shift was cultural: before COVID, virtual experiences were seen as inferior substitutes for 'real' physical experiences. After COVID, billions discovered technology-mediated connection could be genuinely meaningful when physical gathering was impossible. This shift in cultural attitudesâ€”from 'virtual is fake' to 'virtual is a valid form of real'â€”prepared people to take cyberdelic experiences seriously as legitimate consciousness work, not just digital entertainment.</p>",
                         "choices": [
                             {
                                 "id": "next",

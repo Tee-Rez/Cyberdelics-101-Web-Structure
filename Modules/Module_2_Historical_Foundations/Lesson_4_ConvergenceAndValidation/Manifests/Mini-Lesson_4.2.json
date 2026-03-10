@@ -1,6 +1,7 @@
-{
-    "title": "The Breakthrough—Isness VR Study",
-    "description": "After 30 years, the validation finally arrived. In June 2020, researchers published proof of what Timothy Leary had predicted in 1994: technology could produce mystical experiences comparable to psychedelics. This wasn't opinion or anecdote—it was rigorous peer-reviewed research using the same validated measures psychedelic researchers used. The Isness VR study transformed cyberdelics from vision to validated science. You'll see exactly what they found, how they measured it, and why this single study changed everything for the field's credibility and future.",
+﻿{
+    "id": "mini_lesson_2_4_2",
+    "title": "The Breakthroughâ€”Isness VR Study",
+    "description": "The 2020 Isness study: first rigorous proof that VR could produce mystical experiences comparable to high-dose psilocybin.",
     "theme": {
         "primaryColor": "#5900ff",
         "fontBody": "Rajdhani, sans-serif"
@@ -43,7 +44,7 @@
                     {
                         "id": "section_5",
                         "title": "Leary's Prophecy Validated",
-                        "content": "Timothy Leary's 1994 prediction—'The PC is the LSD of the 1990s'—was validated in 2020, 26 years later. He was right about the direction, just early on the timeline. The arc from vision (1994) through gap years (2000-2012), technology maturation (2012-2020), to scientific validation (2020) was complete. Cyberdelics was no longer speculative vision; it was validated science.",
+                        "content": "Timothy Leary's 1994 predictionâ€”'The PC is the LSD of the 1990s'â€”was validated in 2020, 26 years later. He was right about the direction, just early on the timeline. The arc from vision (1994) through gap years (2000-2012), technology maturation (2012-2020), to scientific validation (2020) was complete. Cyberdelics was no longer speculative vision; it was validated science.",
                         "triggerLabel": "Take the Quiz"
                     }
                 ]

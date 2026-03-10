@@ -1,4 +1,5 @@
-{
+﻿{
+    "id": "mini_lesson_4_1_2",
     "title": "TRIPP & Guided Meditation VR: Two Wellness Philosophies",
     "description": "Comparing engagement-focused (TRIPP) vs minimalist (GMVR) approaches to VR wellness",
     "theme": {
@@ -20,13 +21,13 @@
                             "src": "placeholder-tripp.jpg",
                             "alt": "Abstract colorful immersive VR environment representing TRIPP's aesthetic",
                             "position": "left",
-                            "aiPrompt": "Abstract colorful immersive VR environment representing TRIPP's aesthetic — flowing geometric patterns in vibrant purple, teal, pink, orange gradients, sense of movement and energy, kaleidoscopic visual richness, floating particles and luminous shapes, engaging and dynamic feeling, 16:9 aspect ratio"
+                            "aiPrompt": "Abstract colorful immersive VR environment representing TRIPP's aesthetic â€” flowing geometric patterns in vibrant purple, teal, pink, orange gradients, sense of movement and energy, kaleidoscopic visual richness, floating particles and luminous shapes, engaging and dynamic feeling, 16:9 aspect ratio"
                         },
                         "triggerLabel": "See TRIPP Modes"
                     },
                     {
                         "title": "TRIPP: The Four Modes",
-                        "content": "<p>TRIPP organizes experiences by intended state:</p><ul><li><strong>CALM:</strong> Stress reduction, gentle visuals (5-10 min)</li><li><strong>FOCUS:</strong> Attention training, dynamic environments (10-15 min)</li><li><strong>SLEEP:</strong> Wind-down protocols, dimming visuals (15-30 min)</li><li><strong>DEEP:</strong> Extended altered states, intense visuals (20-40 min) — touches the 'Exploratory' boundary</li></ul><p>The platform adapts based on mood reports and optional biometric data.</p>",
+                        "content": "<p>TRIPP organizes experiences by intended state:</p><ul><li><strong>CALM:</strong> Stress reduction, gentle visuals (5-10 min)</li><li><strong>FOCUS:</strong> Attention training, dynamic environments (10-15 min)</li><li><strong>SLEEP:</strong> Wind-down protocols, dimming visuals (15-30 min)</li><li><strong>DEEP:</strong> Extended altered states, intense visuals (20-40 min) â€” touches the 'Exploratory' boundary</li></ul><p>The platform adapts based on mood reports and optional biometric data.</p>",
                         "triggerLabel": "Gamification & Evidence"
                     },
                     {
@@ -42,7 +43,7 @@
                             "src": "placeholder-gmvr.jpg",
                             "alt": "Serene photorealistic VR nature environment",
                             "position": "right",
-                            "aiPrompt": "Serene photorealistic VR nature environment — dense forest with sunlight filtering through tall trees, soft rays of light creating god rays through mist, ferns and moss on forest floor, sense of deep quiet and natural beauty, no human-made objects or UI elements, 16:9 aspect ratio"
+                            "aiPrompt": "Serene photorealistic VR nature environment â€” dense forest with sunlight filtering through tall trees, soft rays of light creating god rays through mist, ferns and moss on forest floor, sense of deep quiet and natural beauty, no human-made objects or UI elements, 16:9 aspect ratio"
                         },
                         "triggerLabel": "The 'No-Features' Feature"
                     },
@@ -94,7 +95,7 @@
                         "synthesis": {
                             "q1_b": "<p>Not the best fit. GMVR removes tracking and gamification, which would likely recreate the 'lack of progress' feeling Jamie struggled with on phone apps.</p>",
                             "q1_c": "<p>Incorrect. Even the premium tier of GMVR focuses on environments, not the structured feedback Jamie explicitly requested.</p>",
-                            "q1_d": "<p>Not necessary. Jamie is ready for VR — they just need the right tool. Their issue is consistency and motivation, which VR can address directly.</p>",
+                            "q1_d": "<p>Not necessary. Jamie is ready for VR â€” they just need the right tool. Their issue is consistency and motivation, which VR can address directly.</p>",
                             "q1_a": "<p><strong>Correct!</strong> Jamie is the textbook TRIPP user: needs structure, visual feedback, gamified progress, and is willing to pay for engagement. TRIPP directly addresses the 'is it working?' doubt.</p>"
                         }
                     },

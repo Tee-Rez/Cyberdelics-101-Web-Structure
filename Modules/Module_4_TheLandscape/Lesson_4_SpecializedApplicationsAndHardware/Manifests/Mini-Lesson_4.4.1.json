@@ -1,4 +1,5 @@
-{
+﻿{
+    "id": "mini_lesson_4_4_1",
     "title": "Breathwork & Music/Sound",
     "description": "Explores VR applications for breathwork and therapeutic sound, including Othership, Soundself, and Wavepaths.",
     "theme": {
@@ -18,14 +19,14 @@
                         "triggerLabel": "Othership (Case Study)"
                     },
                     {
-                        "title": "Othership — Breathwork at Scale",
+                        "title": "Othership â€” Breathwork at Scale",
                         "content": "<p><strong>Othership (Canada)</strong> is a top globally downloaded breathwork platform.</p><ul><li><strong>Features:</strong> 50+ countries, curated music, social VR sessions, coherence to transformational protocols.</li><li><strong>Accessibility:</strong> Free tier + premium model. Proved breathwork VR has mass appeal.</li><li><strong>Best For:</strong> Daily practice, group sessions, stress management to deep exploration.</li><li><strong>Limitation:</strong> Self-directed; caution needed for high-intensity protocols without clinical support.</li></ul>",
                         "media": {
                             "type": "image",
                             "src": "placeholder-othership-breath.jpg",
                             "alt": "Immersive VR breathwork environment with expanding mandala patterns",
                             "position": "left",
-                            "aiPrompt": "Immersive VR breathwork environment — person in VR headset doing deep breathing, visible chest expansion, virtual environment shows expanding glowing mandala patterns synchronized with breath rhythm (expanding on inhale, contracting on exhale), warm ambient lighting, sense of rhythm and flow, purple/teal color palette, both energizing and calming simultaneously, 16:9 aspect ratio"
+                            "aiPrompt": "Immersive VR breathwork environment â€” person in VR headset doing deep breathing, visible chest expansion, virtual environment shows expanding glowing mandala patterns synchronized with breath rhythm (expanding on inhale, contracting on exhale), warm ambient lighting, sense of rhythm and flow, purple/teal color palette, both energizing and calming simultaneously, 16:9 aspect ratio"
                         },
                         "triggerLabel": "Therapeutic Sound"
                     },
@@ -35,12 +36,12 @@
                         "triggerLabel": "Soundself (Technodelic)"
                     },
                     {
-                        "title": "Soundself — The Technodelic Loop",
-                        "content": "<p><strong>Soundself</strong> by Robin Arnott is a unique 'technodelic' loop.</p><ul><li><strong>Mechanism:</strong> You tone/sing → your voice generates the visuals/audio in real-time → you adjust voice → environment responds.</li><li><strong>Effect:</strong> Continuous active vocalization + feedback loop induces trance, ego dissolution, and synesthesia.</li><li><strong>Category:</strong> Exploratory & Transformational. Not passive listening; active participation.</li></ul>",
+                        "title": "Soundself â€” The Technodelic Loop",
+                        "content": "<p><strong>Soundself</strong> by Robin Arnott is a unique 'technodelic' loop.</p><ul><li><strong>Mechanism:</strong> You tone/sing â†’ your voice generates the visuals/audio in real-time â†’ you adjust voice â†’ environment responds.</li><li><strong>Effect:</strong> Continuous active vocalization + feedback loop induces trance, ego dissolution, and synesthesia.</li><li><strong>Category:</strong> Exploratory & Transformational. Not passive listening; active participation.</li></ul>",
                         "triggerLabel": "Wavepaths (Psychedelic)"
                     },
                     {
-                        "title": "Wavepaths — Music for Depth",
+                        "title": "Wavepaths â€” Music for Depth",
                         "content": "<p><strong>Wavepaths (UK)</strong> was created for psychedelic therapy by neuroscientist Karl Friston.</p><ul><li><strong>Function:</strong> Generates real-time therapeutic music based on user state/trajector.</li><li><strong>Validation:</strong> Used in clinical trials. Applies psychedelic therapy principles (harmonics for opening, rhythm for introspection) to digital formats.</li><li><strong>Relevance:</strong> Shows how music designed for substance work translates directly to cyberdelic containers.</li></ul>",
                         "triggerLabel": "Check Your Understanding"
                     }

@@ -1,4 +1,5 @@
-{
+﻿{
+    "id": "mini_lesson_4_3_2",
     "title": "Social VR Platforms & Choosing the Right Context",
     "description": "Mapping the social VR landscape from open frontiers to clinical support circles, and matching users to the right context.",
     "theme": {
@@ -13,12 +14,12 @@
             "content": {
                 "sections": [
                     {
-                        "title": "VRChat — The Open Frontier",
-                        "content": "<p><strong>VRChat</strong> is the largest social VR platform, with millions of users and user-created worlds. It is completely open—anyone can join, create, and host.</p><ul><li><strong>Strength:</strong> Accessibility and immense variety (meditation worlds, rave spaces, temples).</li><li><strong>Limitation:</strong> No checking. You might join a 'meditation' and find trolls. Container quality varies wildly.</li><li><strong>Best for:</strong> Explorers, self-directed users, low budget.</li><li><strong>Worst for:</strong> Vulnerable people needing safety or structure.</li></ul>",
+                        "title": "VRChat â€” The Open Frontier",
+                        "content": "<p><strong>VRChat</strong> is the largest social VR platform, with millions of users and user-created worlds. It is completely openâ€”anyone can join, create, and host.</p><ul><li><strong>Strength:</strong> Accessibility and immense variety (meditation worlds, rave spaces, temples).</li><li><strong>Limitation:</strong> No checking. You might join a 'meditation' and find trolls. Container quality varies wildly.</li><li><strong>Best for:</strong> Explorers, self-directed users, low budget.</li><li><strong>Worst for:</strong> Vulnerable people needing safety or structure.</li></ul>",
                         "triggerLabel": "Isness-D (Research)"
                     },
                     {
-                        "title": "Isness-D — Validated Mystical Experience",
+                        "title": "Isness-D â€” Validated Mystical Experience",
                         "content": "<p><strong>Isness-D</strong> is a group VR platform designed by David Glowacki to produce collective effervescence. Unlike VRChat, it uses abstract 'energy' avatars to reduce self-consciousness.</p><p><strong>Research Validation:</strong> A 2020 study showed it produced MEQ-30 scores comparable to moderate psilocybin. It proves VR can induce genuine mystical states through collective ritual.</p><p><strong>Limitation:</strong> It's a research platform, not widely available to consumers.</p>",
                         "triggerLabel": "Intentional Communities"
                     },
@@ -28,19 +29,19 @@
                         "triggerLabel": "Resonite (Technical)"
                     },
                     {
-                        "title": "Resonite — The Developer's Sandbox",
+                        "title": "Resonite â€” The Developer's Sandbox",
                         "content": "<p><strong>Resonite</strong> (formerly NeosVR) is open-source and highly customizable. It attracts developers and tech-savvy explorers.</p><ul><li><strong>Strength:</strong> infinite customizability (biofeedback integration, procedural generation).</li><li><strong>Barrier:</strong> Steep learning curve.</li><li><strong>Best for:</strong> Developers, researchers, and privacy-focused users (can host own servers).</li></ul>",
                         "triggerLabel": "Innerworld (Peer Support)"
                     },
                     {
-                        "title": "Innerworld — Peer Mental Health",
+                        "title": "Innerworld â€” Peer Mental Health",
                         "content": "<p><strong>Innerworld</strong> (now part of XRHealth) centers on peer support. Guides are community members with lived experience, not clinicians.</p><ul><li><strong>Advantage:</strong> Authentic connection. 'I've been there too.'</li><li><strong>Risk:</strong> Variable quality, not for acute crisis.</li></ul><p>It sits between wellness and clinical care, offering scalable support for those needing connection.</p>",
                         "media": {
                             "type": "image",
                             "src": "placeholder-innerworld-circle.jpg",
                             "alt": "Peer support group in Innerworld",
                             "position": "right",
-                            "aiPrompt": "Warm inviting virtual community space — diverse group of avatars seated in comfortable circle, soft ambient lighting with plants and calming colors, avatars show open body language suggesting vulnerability and trust, no single figure dominating (peer model not expert-to-student), sense of emotional safety and mutual support, inclusive and accessible design, 16:9 aspect ratio"
+                            "aiPrompt": "Warm inviting virtual community space â€” diverse group of avatars seated in comfortable circle, soft ambient lighting with plants and calming colors, avatars show open body language suggesting vulnerability and trust, no single figure dominating (peer model not expert-to-student), sense of emotional safety and mutual support, inclusive and accessible design, 16:9 aspect ratio"
                         },
                         "triggerLabel": "Practice Matching"
                     }
@@ -92,7 +93,7 @@
                     },
                     {
                         "id": "ava_optimal",
-                        "narrative": "<h3>✓ Optimal: Sacred VR</h3><p>'Sacred VR offers small groups (5-15 people) and a vetted container. You won't face the chaos of VRChat, and the structure means you can relax knowing expectations are clear.'</p><p><strong>Why:</strong> Matches her need for intimacy and safety while honoring her existing practice.</p>",
+                        "narrative": "<h3>âœ“ Optimal: Sacred VR</h3><p>'Sacred VR offers small groups (5-15 people) and a vetted container. You won't face the chaos of VRChat, and the structure means you can relax knowing expectations are clear.'</p><p><strong>Why:</strong> Matches her need for intimacy and safety while honoring her existing practice.</p>",
                         "choices": [
                             {
                                 "id": "next_ben",
@@ -103,7 +104,7 @@
                     },
                     {
                         "id": "ava_bad_vrchat",
-                        "narrative": "<h3>⚠ Overwhelming</h3><p>For someone with social anxiety, the unvetted chaos of VRChat is a recipe for panic, not connection. She needs a safe container first.</p>",
+                        "narrative": "<h3>âš  Overwhelming</h3><p>For someone with social anxiety, the unvetted chaos of VRChat is a recipe for panic, not connection. She needs a safe container first.</p>",
                         "choices": [
                             {
                                 "id": "retry_a",
@@ -114,7 +115,7 @@
                     },
                     {
                         "id": "ava_bad_inner",
-                        "narrative": "<h3>⚠ Mismatch</h3><p>Innerworld is for mental health support. Ava isn't in crisis; she's a practitioner looking for spiritual community. Different needs.</p>",
+                        "narrative": "<h3>âš  Mismatch</h3><p>Innerworld is for mental health support. Ava isn't in crisis; she's a practitioner looking for spiritual community. Different needs.</p>",
                         "choices": [
                             {
                                 "id": "retry_a_i",
@@ -125,7 +126,7 @@
                     },
                     {
                         "id": "ava_bad_playa",
-                        "narrative": "<h3>⚠ Too Unstructured</h3><p>The Playa is experimental and chaotic. Ava needs structure to feel safe enough to open up.</p>",
+                        "narrative": "<h3>âš  Too Unstructured</h3><p>The Playa is experimental and chaotic. Ava needs structure to feel safe enough to open up.</p>",
                         "choices": [
                             {
                                 "id": "retry_a_p",
@@ -162,7 +163,7 @@
                     },
                     {
                         "id": "ben_optimal",
-                        "narrative": "<h3>✓ Optimal: VRChat / Resonite</h3><p>'You need a sandbox, not a sanctuary. VRChat has the experimental edge you want, and Resonite lets you build your own systems. Explore, but set your own integration protocols.'</p><p><strong>Why:</strong> Honors his need for intensity and technical freedom.</p>",
+                        "narrative": "<h3>âœ“ Optimal: VRChat / Resonite</h3><p>'You need a sandbox, not a sanctuary. VRChat has the experimental edge you want, and Resonite lets you build your own systems. Explore, but set your own integration protocols.'</p><p><strong>Why:</strong> Honors his need for intensity and technical freedom.</p>",
                         "choices": [
                             {
                                 "id": "next_carmen",
@@ -173,7 +174,7 @@
                     },
                     {
                         "id": "ben_bad_isness",
-                        "narrative": "<h3>⚠ Inaccessible</h3><p>Isness-D would be perfect, but it's not publicly available. Use tools he can actually access today.</p>",
+                        "narrative": "<h3>âš  Inaccessible</h3><p>Isness-D would be perfect, but it's not publicly available. Use tools he can actually access today.</p>",
                         "choices": [
                             {
                                 "id": "retry_b",
@@ -184,7 +185,7 @@
                     },
                     {
                         "id": "ben_bad_sacred",
-                        "narrative": "<h3>⚠ Too Constrained</h3><p>Sacred VR's reverent tone will feel stifling to a chaos-loving experimenter like Ben. He'll get bored.</p>",
+                        "narrative": "<h3>âš  Too Constrained</h3><p>Sacred VR's reverent tone will feel stifling to a chaos-loving experimenter like Ben. He'll get bored.</p>",
                         "choices": [
                             {
                                 "id": "retry_b_s",
@@ -195,7 +196,7 @@
                     },
                     {
                         "id": "ben_bad_inner",
-                        "narrative": "<h3>⚠ Mismatch</h3><p>He's seeking transcendence, not support. Innerworld is the wrong tool for the job.</p>",
+                        "narrative": "<h3>âš  Mismatch</h3><p>He's seeking transcendence, not support. Innerworld is the wrong tool for the job.</p>",
                         "choices": [
                             {
                                 "id": "retry_b_i",
@@ -232,7 +233,7 @@
                     },
                     {
                         "id": "carmen_optimal",
-                        "narrative": "<h3>✓ Optimal: Innerworld</h3><p>'Innerworld offers peer grief groups with trained guides. It's safe. And regarding the tech fear: let's schedule a session to get you set up together.'</p><p><strong>Why:</strong> Directly addresses her emotional need (grief) and her barrier (tech fear) with a concrete support plan.</p>",
+                        "narrative": "<h3>âœ“ Optimal: Innerworld</h3><p>'Innerworld offers peer grief groups with trained guides. It's safe. And regarding the tech fear: let's schedule a session to get you set up together.'</p><p><strong>Why:</strong> Directly addresses her emotional need (grief) and her barrier (tech fear) with a concrete support plan.</p>",
                         "choices": [
                             {
                                 "id": "finish",
@@ -243,7 +244,7 @@
                     },
                     {
                         "id": "carmen_bad_vrchat",
-                        "narrative": "<h3>⚠ Dangerous</h3><p>Any troll could enter an open VRChat grief group. For a vulnerable widow, that risk is unacceptable.</p>",
+                        "narrative": "<h3>âš  Dangerous</h3><p>Any troll could enter an open VRChat grief group. For a vulnerable widow, that risk is unacceptable.</p>",
                         "choices": [
                             {
                                 "id": "retry_c",
@@ -254,7 +255,7 @@
                     },
                     {
                         "id": "carmen_bad_sacred",
-                        "narrative": "<h3>⚠ Close, but...</h3><p>Sacred VR is good, but Innerworld is specifically designed for peer mental health support, which matches her grief need more precisely.</p>",
+                        "narrative": "<h3>âš  Close, but...</h3><p>Sacred VR is good, but Innerworld is specifically designed for peer mental health support, which matches her grief need more precisely.</p>",
                         "choices": [
                             {
                                 "id": "retry_c_s",
@@ -265,7 +266,7 @@
                     },
                     {
                         "id": "carmen_bad_wait",
-                        "narrative": "<h3>⚠ Missed Opportunity</h3><p>She needs support *now*. Waiting might mean she never tries. Solve the tech barrier, don't defer the support.</p>",
+                        "narrative": "<h3>âš  Missed Opportunity</h3><p>She needs support *now*. Waiting might mean she never tries. Solve the tech barrier, don't defer the support.</p>",
                         "choices": [
                             {
                                 "id": "retry_c_w",

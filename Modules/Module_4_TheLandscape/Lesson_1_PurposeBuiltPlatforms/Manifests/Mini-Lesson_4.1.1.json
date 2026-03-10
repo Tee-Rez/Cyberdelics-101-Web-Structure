@@ -1,4 +1,5 @@
-{
+﻿{
+    "id": "mini_lesson_4_1_1",
     "title": "The Four Application Categories",
     "description": "A map of the cyberdelic landscape, organized into four categories from wellness to transformational work",
     "theme": {
@@ -14,61 +15,61 @@
                 "sections": [
                     {
                         "title": "Meditation & Mindfulness",
-                        "content": "<p>The first category is Meditation & Mindfulness — the wellness foundation of the cyberdelic landscape. These are platforms designed for daily practice, stress reduction, focus training, and building a consistent contemplative routine. Think of this as the VR equivalent of meditation apps like Headspace or Calm, but with the added dimension of full immersion.</p><ul><li><strong>Who it serves:</strong> People seeking consistent wellness practices, beginners to meditation, anyone managing everyday stress.</li><li><strong>Key characteristics:</strong> Accessible entry points, no clinical diagnosis required, designed for solo use, usually subscription-based.</li></ul>",
+                        "content": "<p>The first category is Meditation & Mindfulness â€” the wellness foundation of the cyberdelic landscape. These are platforms designed for daily practice, stress reduction, focus training, and building a consistent contemplative routine. Think of this as the VR equivalent of meditation apps like Headspace or Calm, but with the added dimension of full immersion.</p><ul><li><strong>Who it serves:</strong> People seeking consistent wellness practices, beginners to meditation, anyone managing everyday stress.</li><li><strong>Key characteristics:</strong> Accessible entry points, no clinical diagnosis required, designed for solo use, usually subscription-based.</li></ul>",
                         "media": {
                             "type": "image",
                             "src": "placeholder-meditation.jpg",
                             "alt": "Peaceful VR meditation scene",
                             "position": "left",
-                            "aiPrompt": "Peaceful VR meditation scene — person sitting in lotus position wearing VR headset, surrounded by soft glowing mandala patterns and gentle particle effects, serene expression, warm lighting, purple and teal color palette, sense of calm focus and daily wellness practice, 16:9 aspect ratio"
+                            "aiPrompt": "Peaceful VR meditation scene â€” person sitting in lotus position wearing VR headset, surrounded by soft glowing mandala patterns and gentle particle effects, serene expression, warm lighting, purple and teal color palette, sense of calm focus and daily wellness practice, 16:9 aspect ratio"
                         },
                         "triggerLabel": "Next Category"
                     },
                     {
                         "title": "Therapeutic & Clinical",
-                        "content": "<p>The second category is Therapeutic & Clinical — evidence-based VR interventions for diagnosable conditions. These aren't wellness tools. They're medical-grade applications used by licensed healthcare providers to treat specific disorders like PTSD, phobias, chronic pain, and anxiety disorders.</p><ul><li><strong>Who it serves:</strong> Patients working with therapists, psychologists, pain specialists, or Licensed clinicians. Not for self-directed use.</li><li><strong>Key characteristics:</strong> Clinical validation required, used within healthcare settings, often covered by insurance, targets specific diagnoses.</li></ul>",
+                        "content": "<p>The second category is Therapeutic & Clinical â€” evidence-based VR interventions for diagnosable conditions. These aren't wellness tools. They're medical-grade applications used by licensed healthcare providers to treat specific disorders like PTSD, phobias, chronic pain, and anxiety disorders.</p><ul><li><strong>Who it serves:</strong> Patients working with therapists, psychologists, pain specialists, or Licensed clinicians. Not for self-directed use.</li><li><strong>Key characteristics:</strong> Clinical validation required, used within healthcare settings, often covered by insurance, targets specific diagnoses.</li></ul>",
                         "media": {
                             "type": "image",
                             "src": "placeholder-clinical.jpg",
                             "alt": "Clinical VR therapy session",
                             "position": "right",
-                            "aiPrompt": "Clinical VR therapy session — professional therapist with tablet monitoring patient in VR headset, calm medical office setting with certificates on wall, patient appears focused but comfortable, clean modern aesthetic, professional and reassuring tone, sense of evidence-based care, 16:9 aspect ratio"
+                            "aiPrompt": "Clinical VR therapy session â€” professional therapist with tablet monitoring patient in VR headset, calm medical office setting with certificates on wall, patient appears focused but comfortable, clean modern aesthetic, professional and reassuring tone, sense of evidence-based care, 16:9 aspect ratio"
                         },
                         "triggerLabel": "Next Category"
                     },
                     {
                         "title": "Biofeedback-Enhanced",
-                        "content": "<p>The third category is Biofeedback-Enhanced — platforms that create a real-time loop between your body's signals and the virtual environment. Your heart rate, brainwaves, breathing pattern, or stress response literally shapes what you see and hear in VR. The experience responds to you, and you respond in turn.</p><ul><li><strong>Who it serves:</strong> People training specific physiological states (calm, focus), biohackers, clinical populations learning self-regulation.</li><li><strong>Key characteristics:</strong> Requires sensors (EEG, heart rate), higher cost barrier, steeper learning curve, uniquely cyberdelic feedback loops.</li></ul>",
+                        "content": "<p>The third category is Biofeedback-Enhanced â€” platforms that create a real-time loop between your body's signals and the virtual environment. Your heart rate, brainwaves, breathing pattern, or stress response literally shapes what you see and hear in VR. The experience responds to you, and you respond in turn.</p><ul><li><strong>Who it serves:</strong> People training specific physiological states (calm, focus), biohackers, clinical populations learning self-regulation.</li><li><strong>Key characteristics:</strong> Requires sensors (EEG, heart rate), higher cost barrier, steeper learning curve, uniquely cyberdelic feedback loops.</li></ul>",
                         "media": {
                             "type": "image",
                             "src": "placeholder-biofeedback.jpg",
                             "alt": "Biofeedback VR visualization",
                             "position": "full-width",
-                            "aiPrompt": "Biofeedback VR visualization — person wearing VR headset and EEG sensor band, heart rate monitor visible on wrist, virtual environment display showing real-time responsive patterns (flowing colors, expanding/contracting geometries reacting to heartbeat), high-tech yet organic aesthetic, purple/teal sacred geometry influences, sense of body-technology integration, 16:9 aspect ratio"
+                            "aiPrompt": "Biofeedback VR visualization â€” person wearing VR headset and EEG sensor band, heart rate monitor visible on wrist, virtual environment display showing real-time responsive patterns (flowing colors, expanding/contracting geometries reacting to heartbeat), high-tech yet organic aesthetic, purple/teal sacred geometry influences, sense of body-technology integration, 16:9 aspect ratio"
                         },
                         "triggerLabel": "Next Category"
                     },
                     {
                         "title": "Exploratory & Transformational",
-                        "content": "<p>The fourth category is Exploratory & Transformational — experiences designed for deep consciousness work, mystical states, ego dissolution, simulated psychedelic journeys, and profound perspective shifts. This is the far end of the spectrum where the goal isn't stress reduction or symptom relief. It's transformation, insight, awe, and altered states.</p><ul><li><strong>Who it serves:</strong> Experienced consciousness explorers, people in deep personal development work, facilitators-in-training.</li><li><strong>Key characteristics:</strong> High intensity, not for beginners without guidance, often facilitated, requires readiness screening and integration.</li></ul>",
+                        "content": "<p>The fourth category is Exploratory & Transformational â€” experiences designed for deep consciousness work, mystical states, ego dissolution, simulated psychedelic journeys, and profound perspective shifts. This is the far end of the spectrum where the goal isn't stress reduction or symptom relief. It's transformation, insight, awe, and altered states.</p><ul><li><strong>Who it serves:</strong> Experienced consciousness explorers, people in deep personal development work, facilitators-in-training.</li><li><strong>Key characteristics:</strong> High intensity, not for beginners without guidance, often facilitated, requires readiness screening and integration.</li></ul>",
                         "media": {
                             "type": "image",
                             "src": "placeholder-transformational.jpg",
                             "alt": "Transformational VR experience",
                             "position": "left",
-                            "aiPrompt": "Transformational VR experience — person in VR headset with facilitator nearby (watchful presence in background), immersive abstract environment visible through translucent overlay showing fractal patterns and dissolving boundaries, sense of profound altered state but safe container, sacred geometry, mystical aesthetic, both expansive and grounded feeling, 16:9 aspect ratio"
+                            "aiPrompt": "Transformational VR experience â€” person in VR headset with facilitator nearby (watchful presence in background), immersive abstract environment visible through translucent overlay showing fractal patterns and dissolving boundaries, sense of profound altered state but safe container, sacred geometry, mystical aesthetic, both expansive and grounded feeling, 16:9 aspect ratio"
                         },
                         "triggerLabel": "View The Spectrum"
                     },
                     {
                         "title": "The Spectrum & Choosing Your Category",
-                        "content": "<p>These four categories exist on a spectrum — not as rigid boxes, but as a continuum. Many platforms span multiple categories. What matters is knowing where an experience sits on this map so you can match it to the right person.</p><p><strong>Choosing Your Category — Key Questions:</strong></p><ol><li><strong>Goal?</strong> (Stress vs. Treatment vs. Training vs. Insight)</li><li><strong>Comfort Level?</strong> (Beginner vs. Experienced)</li><li><strong>Support Needed?</strong> (Solo vs. Professional Oversight)</li><li><strong>Experience Level?</strong> (Foundation vs. Depth Work)</li></ol>",
+                        "content": "<p>These four categories exist on a spectrum â€” not as rigid boxes, but as a continuum. Many platforms span multiple categories. What matters is knowing where an experience sits on this map so you can match it to the right person.</p><p><strong>Choosing Your Category â€” Key Questions:</strong></p><ol><li><strong>Goal?</strong> (Stress vs. Treatment vs. Training vs. Insight)</li><li><strong>Comfort Level?</strong> (Beginner vs. Experienced)</li><li><strong>Support Needed?</strong> (Solo vs. Professional Oversight)</li><li><strong>Experience Level?</strong> (Foundation vs. Depth Work)</li></ol>",
                         "media": {
                             "type": "image",
                             "src": "placeholder-spectrum.jpg",
                             "alt": "Spectrum of Cyberdelic Categories",
                             "position": "full-width",
-                            "aiPrompt": "Horizontal spectrum visualization showing four cyberdelic categories flowing into each other — left side labeled CLINICAL (medical cross icon, structured feeling), transitioning through WELLNESS & MINDFULNESS (lotus flower icon, accessible feeling), to BIOFEEDBACK-ENHANCED (heartbeat + brain wave icon, tech-enhanced feeling), to EXPLORATORY & TRANSFORMATIONAL (mandala/sacred geometry icon, mystical feeling). Gradient background from cool clinical blue through warm wellness purple/teal to deeper mystical indigo. Clean infographic style, 16:9 aspect ratio"
+                            "aiPrompt": "Horizontal spectrum visualization showing four cyberdelic categories flowing into each other â€” left side labeled CLINICAL (medical cross icon, structured feeling), transitioning through WELLNESS & MINDFULNESS (lotus flower icon, accessible feeling), to BIOFEEDBACK-ENHANCED (heartbeat + brain wave icon, tech-enhanced feeling), to EXPLORATORY & TRANSFORMATIONAL (mandala/sacred geometry icon, mystical feeling). Gradient background from cool clinical blue through warm wellness purple/teal to deeper mystical indigo. Clean infographic style, 16:9 aspect ratio"
                         },
                         "triggerLabel": "Take Concept Check"
                     }
@@ -111,7 +112,7 @@
                             "q1_a": "<p>Not quite. Therapeutic & Clinical applications are for treating diagnosed conditions with professional oversight. Marcus is 'stressed but functional' and looking for a wellness practice, not medical treatment.</p>",
                             "q1_c": "<p>Not the best fit. Biofeedback requires extra sensors and has a steeper curve. Marcus wants something simple and accessible for a morning routine.</p>",
                             "q1_d": "<p>Incorrect. Exploratory experiences are for deep consciousness work and altered states, not a quick 15-minute stress reduction practice.</p>",
-                            "q1_b": "<p><strong>Correct!</strong> Marcus fits squarely in Meditation & Mindfulness — daily wellness practice, no diagnosis, beginner-friendly, designed for solo use. This is the accessible foundation he needs.</p>"
+                            "q1_b": "<p><strong>Correct!</strong> Marcus fits squarely in Meditation & Mindfulness â€” daily wellness practice, no diagnosis, beginner-friendly, designed for solo use. This is the accessible foundation he needs.</p>"
                         }
                     },
                     {

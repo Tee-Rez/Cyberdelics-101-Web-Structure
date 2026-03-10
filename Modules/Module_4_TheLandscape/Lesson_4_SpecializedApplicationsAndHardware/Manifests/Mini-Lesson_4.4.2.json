@@ -1,4 +1,5 @@
-{
+﻿{
+    "id": "mini_lesson_4_4_2",
     "title": "Movement & Nature Immersion",
     "description": "Explores how VR movement creates flow states and how virtual nature provides psychological restoration.",
     "theme": {
@@ -35,7 +36,7 @@
                             "src": "placeholder-nature-vr.jpg",
                             "alt": "Split view: Serene forest exploration vs. majestic underwater whale encounter",
                             "position": "full-width",
-                            "aiPrompt": "Split composition nature VR scene — left half shows person walking through serene forest VR environment (sunlight through trees, ferns, sense of peaceful exploration), right half shows person encountering majestic blue whale in underwater VR scene (sense of awe and scale, whale making eye contact), both figures show visible emotional response and presence, contrasting gentle restoration vs. intense awe, 16:9 aspect ratio"
+                            "aiPrompt": "Split composition nature VR scene â€” left half shows person walking through serene forest VR environment (sunlight through trees, ferns, sense of peaceful exploration), right half shows person encountering majestic blue whale in underwater VR scene (sense of awe and scale, whale making eye contact), both figures show visible emotional response and presence, contrasting gentle restoration vs. intense awe, 16:9 aspect ratio"
                         },
                         "triggerLabel": "Clinical Implications"
                     },

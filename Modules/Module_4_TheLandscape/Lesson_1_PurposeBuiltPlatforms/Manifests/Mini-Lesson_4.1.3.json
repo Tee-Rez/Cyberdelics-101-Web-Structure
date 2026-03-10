@@ -1,4 +1,5 @@
-{
+﻿{
+    "id": "mini_lesson_4_1_3",
     "title": "Maloka & Emerging Platforms",
     "description": "Explaining the Facilitated Journey model (Maloka), biofeedback for chronic conditions (Flowly), and peer-support social VR (Innerworld)",
     "theme": {
@@ -14,13 +15,13 @@
                 "sections": [
                     {
                         "title": "Maloka: The Facilitated Journey",
-                        "content": "<p>Maloka is not a meditation app—it's a therapeutic journey platform. Designed by clinical psychologists and psychedelic therapy practitioners, it uses VR to create a container for high-intensity consciousness work.</p><ul><li><strong>Key Distinction:</strong> Requires a trained facilitator.</li><li><strong>Use Case:</strong> Trauma, depression, existential distress, transformation.</li><li><strong>Model:</strong> Client in VR, Facilitator monitoring (tablet/dashboard).</li></ul>",
+                        "content": "<p>Maloka is not a meditation appâ€”it's a therapeutic journey platform. Designed by clinical psychologists and psychedelic therapy practitioners, it uses VR to create a container for high-intensity consciousness work.</p><ul><li><strong>Key Distinction:</strong> Requires a trained facilitator.</li><li><strong>Use Case:</strong> Trauma, depression, existential distress, transformation.</li><li><strong>Model:</strong> Client in VR, Facilitator monitoring (tablet/dashboard).</li></ul>",
                         "media": {
                             "type": "image",
                             "src": "placeholder-maloka.jpg",
                             "alt": "Split-screen: Facilitator monitoring client in VR",
                             "position": "full-width",
-                            "aiPrompt": "Split-screen composition showing two perspectives of a Maloka session — left side shows facilitator at monitoring station with tablet displaying client's biometric data and session timeline, right side shows client in VR headset with serene focused expression, both in warm softly-lit therapeutic space, 16:9 aspect ratio"
+                            "aiPrompt": "Split-screen composition showing two perspectives of a Maloka session â€” left side shows facilitator at monitoring station with tablet displaying client's biometric data and session timeline, right side shows client in VR headset with serene focused expression, both in warm softly-lit therapeutic space, 16:9 aspect ratio"
                         },
                         "triggerLabel": "The 3-Phase Structure"
                     },
@@ -104,7 +105,7 @@
                     },
                     {
                         "id": "jordan_optimal",
-                        "narrative": "<h3>✓ Optimal: TRIPP</h3><p>'Based on your need for consistency, TRIPP is designed to solve the 'I forget' problem through gamification and tracking.'</p><p><strong>Why:</strong> Matches habits, budget, and tech comfort. Wellness scope.</p>",
+                        "narrative": "<h3>âœ“ Optimal: TRIPP</h3><p>'Based on your need for consistency, TRIPP is designed to solve the 'I forget' problem through gamification and tracking.'</p><p><strong>Why:</strong> Matches habits, budget, and tech comfort. Wellness scope.</p>",
                         "choices": [
                             {
                                 "id": "next_maya",
@@ -115,7 +116,7 @@
                     },
                     {
                         "id": "jordan_suboptimal_maloka",
-                        "narrative": "<h3>⚠ Overkill</h3><p>Recommending a $200 facilitated session for basic stress relief is like prescribing an MRI for a stubbed toe. Jordan would feel overwhelmed and quit.</p>",
+                        "narrative": "<h3>âš  Overkill</h3><p>Recommending a $200 facilitated session for basic stress relief is like prescribing an MRI for a stubbed toe. Jordan would feel overwhelmed and quit.</p>",
                         "choices": [
                             {
                                 "id": "retry_j",
@@ -126,7 +127,7 @@
                     },
                     {
                         "id": "jordan_suboptimal_gmvr",
-                        "narrative": "<h3>⚠ Missing the Mark</h3><p>GMVR lacks the structure and reminders Jordan specifically asked for. He failed with phone apps because of this—don't repeat the mistake.</p>",
+                        "narrative": "<h3>âš  Missing the Mark</h3><p>GMVR lacks the structure and reminders Jordan specifically asked for. He failed with phone apps because of thisâ€”don't repeat the mistake.</p>",
                         "choices": [
                             {
                                 "id": "retry_j_g",
@@ -137,7 +138,7 @@
                     },
                     {
                         "id": "jordan_suboptimal_inner",
-                        "narrative": "<h3>⚠ Mismatch</h3><p>Jordan needs stress decompression, not social support. He wants to unwind, not talk to strangers.</p>",
+                        "narrative": "<h3>âš  Mismatch</h3><p>Jordan needs stress decompression, not social support. He wants to unwind, not talk to strangers.</p>",
                         "choices": [
                             {
                                 "id": "retry_j_i",
@@ -174,7 +175,7 @@
                     },
                     {
                         "id": "maya_optimal",
-                        "narrative": "<h3>✓ Optimal: Maloka</h3><p>'Grief at this depth deserves a professional container. I'll facilitate a session to hold space while you explore.'</p><p><strong>Why:</strong> Honors her experience level and need for safety in deep work.</p>",
+                        "narrative": "<h3>âœ“ Optimal: Maloka</h3><p>'Grief at this depth deserves a professional container. I'll facilitate a session to hold space while you explore.'</p><p><strong>Why:</strong> Honors her experience level and need for safety in deep work.</p>",
                         "choices": [
                             {
                                 "id": "next_david",
@@ -185,7 +186,7 @@
                     },
                     {
                         "id": "maya_suboptimal_solo",
-                        "narrative": "<h3>⚠ Too Shallow</h3><p>Solo apps are a lateral move for someone with her experience. Maya has earned depth work—don't hold her back with wellness tools.</p>",
+                        "narrative": "<h3>âš  Too Shallow</h3><p>Solo apps are a lateral move for someone with her experience. Maya has earned depth workâ€”don't hold her back with wellness tools.</p>",
                         "choices": [
                             {
                                 "id": "retry_m",
@@ -196,7 +197,7 @@
                     },
                     {
                         "id": "maya_suboptimal_peer",
-                        "narrative": "<h3>⚠ Insufficient Container</h3><p>Peer support is great, but for deep grief processing, a professional container (Maloka) is safer and more effective than a social group.</p>",
+                        "narrative": "<h3>âš  Insufficient Container</h3><p>Peer support is great, but for deep grief processing, a professional container (Maloka) is safer and more effective than a social group.</p>",
                         "choices": [
                             {
                                 "id": "retry_m_p",
@@ -233,7 +234,7 @@
                     },
                     {
                         "id": "david_optimal",
-                        "narrative": "<h3>✓ Optimal: Flowly</h3><p>'Flowly is trained to regulate pain signals. It's medical-grade biofeedback, not just a game. Let's see if your clinic has a headset to try.'</p><p><strong>Why:</strong> Addresses the valid medical need with the specific tool designed for it.</p>",
+                        "narrative": "<h3>âœ“ Optimal: Flowly</h3><p>'Flowly is trained to regulate pain signals. It's medical-grade biofeedback, not just a game. Let's see if your clinic has a headset to try.'</p><p><strong>Why:</strong> Addresses the valid medical need with the specific tool designed for it.</p>",
                         "choices": [
                             {
                                 "id": "finish",
@@ -244,7 +245,7 @@
                     },
                     {
                         "id": "david_suboptimal_tripp",
-                        "narrative": "<h3>⚠ Under-Recommending</h3><p>Recommending meditation for chronic pain is like prescribing yoga for a broken leg. David needs a clinical-grade tool (Flowly), not general wellness.</p>",
+                        "narrative": "<h3>âš  Under-Recommending</h3><p>Recommending meditation for chronic pain is like prescribing yoga for a broken leg. David needs a clinical-grade tool (Flowly), not general wellness.</p>",
                         "choices": [
                             {
                                 "id": "retry_d",
@@ -255,7 +256,7 @@
                     },
                     {
                         "id": "david_suboptimal_refer",
-                        "narrative": "<h3>⚠ Missed Opportunity</h3><p>Yes, involve his doctor, but don't send him away empty-handed. Be the bridge—suggest Flowly *for* him to discuss with his doctor.</p>",
+                        "narrative": "<h3>âš  Missed Opportunity</h3><p>Yes, involve his doctor, but don't send him away empty-handed. Be the bridgeâ€”suggest Flowly *for* him to discuss with his doctor.</p>",
                         "choices": [
                             {
                                 "id": "retry_d_r",
@@ -266,7 +267,7 @@
                     },
                     {
                         "id": "david_suboptimal_maloka",
-                        "narrative": "<h3>⚠ Mismatch</h3><p>Deep psychological work might be valuable later, but his primary barrier is physical pain and cost. Address the immediate need first.</p>",
+                        "narrative": "<h3>âš  Mismatch</h3><p>Deep psychological work might be valuable later, but his primary barrier is physical pain and cost. Address the immediate need first.</p>",
                         "choices": [
                             {
                                 "id": "retry_d_m",

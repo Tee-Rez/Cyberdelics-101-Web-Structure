@@ -1,4 +1,5 @@
-{
+﻿{
+    "id": "mini_lesson_2_3_1",
     "title": "Palmer Luckey and the Duct Tape Revolution",
     "description": "How a teenage entrepreneur in a garage sparked the VR renaissance using smartphone parts and duct tape, leading to the Oculus Rift and Facebook acquisition.",
     "theme": {
@@ -46,7 +47,7 @@
                     },
                     {
                         "title": "The Convergence Moment",
-                        "content": "<p>Multiple technologies matured simultaneously to make VR viable: smartphone displays provided cheap, good screens. Gaming GPUs could render VR-quality graphics. Motion sensors from phones enabled precise tracking. Game engines democratized development. Internet bandwidth allowed distribution. Cultural readiness existed through meditation apps and gaming acceptance. VR didn't succeed because of single breakthrough but because everything finally came together. This convergence—not just better headsets—created the renaissance.</p>",
+                        "content": "<p>Multiple technologies matured simultaneously to make VR viable: smartphone displays provided cheap, good screens. Gaming GPUs could render VR-quality graphics. Motion sensors from phones enabled precise tracking. Game engines democratized development. Internet bandwidth allowed distribution. Cultural readiness existed through meditation apps and gaming acceptance. VR didn't succeed because of single breakthrough but because everything finally came together. This convergenceâ€”not just better headsetsâ€”created the renaissance.</p>",
                         "triggerLabel": "Enter Scenario"
                     }
                 ]
@@ -103,7 +104,7 @@
                     },
                     {
                         "id": "outcome_b",
-                        "narrative": "<p>You're skeptical but curious. The prototype looks promising, and smartphone components have indeed improved. You pledge $300 for a development kit as a calculated risk. When DK1 arrives in 2013, you're amazed—it actually works. Presence feels real. You start experimenting with VR development.</p><p>By 2016, you have years of VR experience and are positioned as early adopter. Your cautious bet paid off because you were open to possibility despite past failures.</p><p><em>Reflection: Calculated risks based on changed circumstances enable early positioning without recklessness.</em></p>",
+                        "narrative": "<p>You're skeptical but curious. The prototype looks promising, and smartphone components have indeed improved. You pledge $300 for a development kit as a calculated risk. When DK1 arrives in 2013, you're amazedâ€”it actually works. Presence feels real. You start experimenting with VR development.</p><p>By 2016, you have years of VR experience and are positioned as early adopter. Your cautious bet paid off because you were open to possibility despite past failures.</p><p><em>Reflection: Calculated risks based on changed circumstances enable early positioning without recklessness.</em></p>",
                         "choices": [
                             {
                                 "id": "continue",
@@ -114,7 +115,7 @@
                     },
                     {
                         "id": "outcome_c",
-                        "narrative": "<p>You recognize this as the inflection point. The smartphone revolution has created the foundation VR lacked in the 1990s. You pledge at high tier, start learning Unity immediately, and commit to VR development.</p><p>The next 4 years are uncertain—VR is still unproven market—but by 2016 when consumer headsets launch, you're among the experienced VR developers. You're positioned to build the experiences that will define the medium, including early consciousness applications.</p><p><em>Reflection: Recognizing genuine inflection points and acting boldly despite uncertainty creates first-mover advantage.</em></p>",
+                        "narrative": "<p>You recognize this as the inflection point. The smartphone revolution has created the foundation VR lacked in the 1990s. You pledge at high tier, start learning Unity immediately, and commit to VR development.</p><p>The next 4 years are uncertainâ€”VR is still unproven marketâ€”but by 2016 when consumer headsets launch, you're among the experienced VR developers. You're positioned to build the experiences that will define the medium, including early consciousness applications.</p><p><em>Reflection: Recognizing genuine inflection points and acting boldly despite uncertainty creates first-mover advantage.</em></p>",
                         "choices": [
                             {
                                 "id": "continue",
@@ -274,7 +275,7 @@
                     },
                     {
                         "id": "q2_feedback_d",
-                        "narrative": "<p><strong>Incorrect.</strong> The acquisition didn't prevent competition—it sparked it. Seeing Facebook invest $2 billion validated the VR market for other companies. HTC partnered with Valve, Sony developed PlayStation VR, and numerous others entered the space. Facebook's acquisition actually increased competition by proving VR was viable market.</p>",
+                        "narrative": "<p><strong>Incorrect.</strong> The acquisition didn't prevent competitionâ€”it sparked it. Seeing Facebook invest $2 billion validated the VR market for other companies. HTC partnered with Valve, Sony developed PlayStation VR, and numerous others entered the space. Facebook's acquisition actually increased competition by proving VR was viable market.</p>",
                         "choices": [
                             {
                                 "id": "retry",

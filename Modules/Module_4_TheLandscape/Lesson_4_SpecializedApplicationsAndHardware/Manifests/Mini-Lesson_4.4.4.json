@@ -1,4 +1,5 @@
-{
+﻿{
+    "id": "mini_lesson_4_4_4",
     "title": "Hardware Tiers & Trade-offs",
     "description": "A pragmatic guide to consumer VR headsets: content libraries, comfort, and the Quest vs. Pico vs. Apple landscape.",
     "theme": {
@@ -25,7 +26,7 @@
                             "src": "placeholder-headset-comparison.jpg",
                             "alt": "Side-by-side comparison of Quest 3S, Quest 3, Pico 4, and PSVR2",
                             "position": "full-width",
-                            "aiPrompt": "Clean product comparison layout — four VR headsets displayed side by side on neutral background (Meta Quest 3S, Meta Quest 3, Pico 4, PlayStation VR2), each labeled with price point, slight angle showing form factor, professional product photography style, honest comparison aesthetic (not promotional), sense of informed decision-making, 16:9 aspect ratio"
+                            "aiPrompt": "Clean product comparison layout â€” four VR headsets displayed side by side on neutral background (Meta Quest 3S, Meta Quest 3, Pico 4, PlayStation VR2), each labeled with price point, slight angle showing form factor, professional product photography style, honest comparison aesthetic (not promotional), sense of informed decision-making, 16:9 aspect ratio"
                         },
                         "triggerLabel": "Premium Tier (Sony/Apple)"
                     },

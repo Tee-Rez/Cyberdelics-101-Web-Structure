@@ -1,4 +1,5 @@
-{
+﻿{
+    "id": "mini_lesson_4_2_3",
     "title": "The Cybernetic Loop",
     "description": "Understanding the feedback mechanism that separates cyberdelics from standard VR",
     "theme": {
@@ -25,13 +26,13 @@
                             "src": "placeholder-cybernetic-loop.jpg",
                             "alt": "Diagram of the 5-step cybernetic feedback loop between user and VR system",
                             "position": "full-width",
-                            "aiPrompt": "Circular diagram showing the five-step cybernetic feedback loop — starting with person's silhouette at top, moving clockwise through: (1) heart rate waveform emerging from chest, (2) wrist-worn sensor capturing signal, (3) floating algorithm visualization (geometric processing), (4) VR landscape responding with visual changes, (5) arrow back to person showing adjustment — continuous flow indicated by circular arrangement, purple/teal sacred geometry aesthetic, clean infographic style, sense of living system not mechanical process, 16:9 aspect ratio"
+                            "aiPrompt": "Circular diagram showing the five-step cybernetic feedback loop â€” starting with person's silhouette at top, moving clockwise through: (1) heart rate waveform emerging from chest, (2) wrist-worn sensor capturing signal, (3) floating algorithm visualization (geometric processing), (4) VR landscape responding with visual changes, (5) arrow back to person showing adjustment â€” continuous flow indicated by circular arrangement, purple/teal sacred geometry aesthetic, clean infographic style, sense of living system not mechanical process, 16:9 aspect ratio"
                         },
                         "triggerLabel": "The Mirror Relationship"
                     },
                     {
                         "title": "The Mirror Relationship",
-                        "content": "<p>The cybernetic loop creates an honest mirror. In meditation, you might <em>think</em> you're calm when you're not. Biofeedback shows you the truth.</p><p>This is 'steering through feedback' — adjusting based on real-time data. It makes the invisible visible.</p>",
+                        "content": "<p>The cybernetic loop creates an honest mirror. In meditation, you might <em>think</em> you're calm when you're not. Biofeedback shows you the truth.</p><p>This is 'steering through feedback' â€” adjusting based on real-time data. It makes the invisible visible.</p>",
                         "triggerLabel": "Explore Biofeedback Types"
                     }
                 ]

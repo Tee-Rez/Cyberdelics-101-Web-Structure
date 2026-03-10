@@ -109,6 +109,8 @@ Mini-Lesson 3: Without Substances
 
 #### 1.3 Content Scripting
 
+**CRITICAL PREREQUISITE:** Before scripting any content, you MUST read the `CyberdelicStyleGuide.txt` in the repository root. All content must adhere to its rules (voice, tone, no filler words, proper formatting).
+
 **For each mini-lesson, prepare:**
 
 **Progressive Disclosure Content:**

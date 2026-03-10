@@ -1,6 +1,7 @@
-{
-    "title": "Neural Validation—The Brain Evidence",
-    "description": "The Isness study showed subjective mystical experiences were real. But what about the brain? Additional research demonstrated that VR-induced altered states produced measurable neural changes similar to psychedelic substances and meditation. You'll discover how DeepDream VR created psychedelic-like visual distortions that changed brain activity patterns, how EEG studies showed increased neural entropy and flexibility, and how these findings proved VR doesn't just create illusions—it genuinely alters consciousness in measurable ways. This neural evidence completed the scientific validation, showing cyberdelics works at both experiential and biological levels.",
+﻿{
+    "id": "mini_lesson_2_4_3",
+    "title": "Neural Validationâ€”The Brain Evidence",
+    "description": "The neural evidence: EEG and DeepDream VR studies that proved VR genuinely alters brain activity \u2014 not just subjective experience.",
     "theme": {
         "primaryColor": "#5900ff",
         "fontBody": "Rajdhani, sans-serif"
@@ -18,7 +19,7 @@
                             "type": "image",
                             "src": "../../assets/Images/Modules/Module_2/Lesson_4/deepdream_brain.jpg"
                         },
-                        "title": "DeepDream VR—Hallucinogenic Technology",
+                        "title": "DeepDream VRâ€”Hallucinogenic Technology",
                         "content": "Published in Nature Scientific Reports, DeepDream VR applied Google's pattern-recognition neural network to 360-degree video in real-time, creating VR environments where the world constantly shifts into hallucinogenic patterns. The concept: if psychedelics produce visual distortions through affecting visual processing, could artificially creating similar distortions produce similar consciousness changes? Participants described experiences as 'psychedelic-like,' with visual patterns similar to substance experiences, and some couldn't distinguish from mild psychedelic experiences.",
                         "triggerLabel": "See Neural Findings"
                     },
@@ -31,7 +32,7 @@
                     {
                         "id": "section_3",
                         "title": "What the Brain Evidence Proved",
-                        "content": "The neural research showed: VR doesn't just create illusions—it changes brain activity measurably. The changes resemble known consciousness-altering states (psychedelics and meditation). Visual distortion alone can influence consciousness; you don't need chemical neurotransmitter changes. Technology can produce genuine altered states, not just subjective impressions. The brain treats technology-induced altered states as real neurological events, not mere imagination.",
+                        "content": "The neural research showed: VR doesn't just create illusionsâ€”it changes brain activity measurably. The changes resemble known consciousness-altering states (psychedelics and meditation). Visual distortion alone can influence consciousness; you don't need chemical neurotransmitter changes. Technology can produce genuine altered states, not just subjective impressions. The brain treats technology-induced altered states as real neurological events, not mere imagination.",
                         "triggerLabel": "Evidence Convergence"
                     },
                     {
@@ -42,8 +43,8 @@
                     },
                     {
                         "id": "section_5",
-                        "title": "From Vision to Validated Science—The Arc Complete",
-                        "content": "The 30-year arc reached completion: 1994 (Leary's vision—speculation), 1987-1999 (early pioneers—proof of concept), 2000-2012 (gap years—waiting for technology), 2012-2016 (VR renaissance—hardware viable), 2016-2019 (early cyberdelic experiments—testing concepts), and 2020-2024 (breakthrough research—scientific validation). We now have working technology, scientific validation, therapeutic applications, cultural acceptance, theoretical frameworks, training programs, and business models. Cyberdelics has transitioned from vision to validated field.",
+                        "title": "From Vision to Validated Scienceâ€”The Arc Complete",
+                        "content": "The 30-year arc reached completion: 1994 (Leary's visionâ€”speculation), 1987-1999 (early pioneersâ€”proof of concept), 2000-2012 (gap yearsâ€”waiting for technology), 2012-2016 (VR renaissanceâ€”hardware viable), 2016-2019 (early cyberdelic experimentsâ€”testing concepts), and 2020-2024 (breakthrough researchâ€”scientific validation). We now have working technology, scientific validation, therapeutic applications, cultural acceptance, theoretical frameworks, training programs, and business models. Cyberdelics has transitioned from vision to validated field.",
                         "triggerLabel": "Take the Quiz"
                     }
                 ]
@@ -164,7 +165,7 @@
                     },
                     {
                         "id": "q2_c_feedback",
-                        "narrative": "<p><strong>Incorrect.</strong> While more research is always valuable for refinement, the fundamental question—'Does VR produce genuine altered states and transformative effects?'—has been definitively answered: yes. We have rigorous evidence at multiple levels. Future research will deepen understanding and optimize applications, but the core validation is complete.</p>",
+                        "narrative": "<p><strong>Incorrect.</strong> While more research is always valuable for refinement, the fundamental questionâ€”'Does VR produce genuine altered states and transformative effects?'â€”has been definitively answered: yes. We have rigorous evidence at multiple levels. Future research will deepen understanding and optimize applications, but the core validation is complete.</p>",
                         "choices": [
                             {
                                 "id": "retry_q2",

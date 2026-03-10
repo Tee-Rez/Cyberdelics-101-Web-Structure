@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Presence & Embodiment Explorer</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Jost:wght@200;300;400;500&display=swap');
+
+:root {
+  --p: #7c3aed; --p-light: #c4b5fd; --p-mid: #a78bfa;
+  --e: #0f766e; --e-light: #5eead4; --e-mid: #2dd4bf;
+  --bg: #06080f; --surface: rgba(255,255,255,0.028);
+  --border: rgba(255,255,255,0.07);
+  --text: #dde1ec; --muted: rgba(221,225,236,0.38);
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family:'Jost',sans-serif; font-weight:300;
+  background:var(--bg); color:var(--text);
+  min-height:100vh; overflow-x:hidden;
+}
+body::before {
+  content:''; position:fixed; inset:0;
+  background-image:
+    linear-gradient(rgba(124,58,237,0.04) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(124,58,237,0.04) 1px,transparent 1px);
+  background-size:48px 48px; pointer-events:none; z-index:0;
+}
+.app {
+  position:relative; z-index:1;
+  max-width:1160px; margin:0 auto;
+  padding:32px 20px 64px;
+  display:flex; flex-direction:column; gap:28px;
+}
+/* HEADER */
+.hdr { display:flex; align-items:baseline; gap:18px; padding-bottom:20px; border-bottom:1px solid var(--border); }
+.hdr-label { font-size:0.62rem; font-weight:500; letter-spacing:0.2em; text-transform:uppercase; color:var(--muted); }
+.hdr h1 { font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(1.4rem,3.5vw,2rem); color:#fff; letter-spacing:0.04em; }
+.hdr-sub { margin-left:auto; font-size:0.72rem; color:var(--muted); text-align:right; line-height:1.6; max-width:260px; }
+/* GRID */
+.grid { display:grid; grid-template-columns:1fr 300px; gap:20px; align-items:start; }
+/* VIEWER */
+.viewer { background:var(--surface); border:1px solid var(--border); border-radius:16px; overflow:hidden; display:flex; flex-direction:column; }
+.viewer-bar { display:flex; align-items:center; justify-content:space-between; padding:12px 18px; border-bottom:1px solid var(--border); background:rgba(0,0,0,0.2); }
+.viewer-bar-label { font-size:0.62rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--muted); }
+.viewer-meters { display:flex; gap:20px; }
+.v-meter { display:flex; align-items:center; gap:8px; }
+.v-meter-dot { width:6px; height:6px; border-radius:50%; flex-shrink:0; }
+.v-meter-track { width:80px; height:3px; background:rgba(255,255,255,0.07); border-radius:4px; overflow:hidden; }
+.v-meter-fill { height:100%; border-radius:4px; transition:width 0.2s ease; }
+.v-meter-num { font-size:0.65rem; font-weight:400; width:28px; text-align:right; }
+.v-meter.pres .v-meter-dot  { background:var(--p-mid); }
+.v-meter.pres .v-meter-fill { background:linear-gradient(90deg,var(--p),var(--p-mid)); }
+.v-meter.pres .v-meter-num  { color:var(--p-light); }
+.v-meter.emb  .v-meter-dot  { background:var(--e-mid); }
+.v-meter.emb  .v-meter-fill { background:linear-gradient(90deg,var(--e),var(--e-mid)); }
+.v-meter.emb  .v-meter-num  { color:var(--e-light); }
+/* Canvas wrap */
+.canvas-wrap { position:relative; width:100%; aspect-ratio:16/10; background:#060810; }
+.canvas-wrap canvas { position:absolute; inset:0; width:100%!important; height:100%!important; display:block; }
+/* PROFILE STRIP */
+.profile-strip { padding:16px 20px; border-top:1px solid var(--border); min-height:72px; display:flex; align-items:center; gap:16px; transition:background 0.5s ease; }
+.profile-strip.active { background:rgba(124,58,237,0.06); }
+.profile-pip { width:3px; height:36px; border-radius:4px; background:var(--border); flex-shrink:0; transition:background 0.4s ease; }
+.profile-strip.active .profile-pip { background:linear-gradient(180deg,var(--p-mid),var(--e-mid)); }
+.profile-text { flex:1; }
+.profile-name { font-family:'Cormorant Garamond',serif; font-size:0.85rem; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:var(--p-light); margin-bottom:4px; opacity:0; transition:opacity 0.4s ease; }
+.profile-strip.active .profile-name { opacity:1; }
+.profile-quote { font-family:'Cormorant Garamond',serif; font-size:0.92rem; font-style:italic; color:var(--muted); line-height:1.55; transition:color 0.4s ease; }
+.profile-strip.active .profile-quote { color:rgba(221,225,236,0.72); }
+.profile-idle { font-size:0.72rem; color:var(--muted); letter-spacing:0.06em; }
+/* PROFILES GRID */
+.profiles-grid { border-top:1px solid var(--border); padding:16px 20px; }
+.profiles-grid-hdr { font-size:0.58rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--muted); margin-bottom:12px; }
+.pg-items { display:grid; grid-template-columns:repeat(3,1fr); gap:7px; }
+.pg-item { border:1px solid var(--border); border-radius:9px; padding:9px 10px; cursor:default; transition:all 0.3s ease; }
+.pg-item.lit { border-color:rgba(167,139,250,0.4); background:rgba(124,58,237,0.1); box-shadow:0 0 14px rgba(124,58,237,0.12); }
+.pg-dots { display:flex; gap:3px; margin-bottom:5px; }
+.pg-dot { width:6px; height:6px; border-radius:50%; }
+.pg-item-name { font-size:0.58rem; letter-spacing:0.06em; font-weight:500; color:var(--muted); line-height:1.4; text-transform:uppercase; transition:color 0.3s ease; }
+.pg-item.lit .pg-item-name { color:var(--p-light); }
+/* CONTROLS */
+.controls { display:flex; flex-direction:column; gap:12px; }
+.ctrl-section { background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:18px 16px; }
+.ctrl-section-hdr { display:flex; align-items:center; gap:8px; margin-bottom:16px; }
+.ctrl-section-pip { width:8px; height:8px; border-radius:50%; flex-shrink:0; }
+.ctrl-section-label { font-size:0.62rem; letter-spacing:0.16em; text-transform:uppercase; font-weight:500; }
+.ctrl-section.pres .ctrl-section-pip   { background:var(--p-mid); box-shadow:0 0 6px var(--p); }
+.ctrl-section.pres .ctrl-section-label { color:var(--p-light); }
+.ctrl-section.emb  .ctrl-section-pip   { background:var(--e-mid); box-shadow:0 0 6px var(--e); }
+.ctrl-section.emb  .ctrl-section-label { color:var(--e-light); }
+.ctrl-section.both .ctrl-section-pip   { background:linear-gradient(135deg,var(--p-mid),var(--e-mid)); }
+.ctrl-section.both .ctrl-section-label { color:#c4b5fd; }
+.slider-row { margin-bottom:14px; }
+.slider-row:last-child { margin-bottom:0; }
+.slider-top { display:flex; justify-content:space-between; align-items:baseline; margin-bottom:5px; }
+.slider-name { font-size:0.71rem; font-weight:400; color:var(--text); letter-spacing:0.03em; }
+.slider-ends { display:flex; justify-content:space-between; margin-bottom:4px; }
+.slider-ends span { font-size:0.58rem; color:var(--muted); letter-spacing:0.04em; }
+input[type=range] { -webkit-appearance:none; appearance:none; width:100%; height:3px; border-radius:6px; outline:none; cursor:pointer; }
+input[type=range].p-range { background:linear-gradient(90deg,var(--p-mid) calc(var(--v)*1%),rgba(255,255,255,0.09) calc(var(--v)*1%)); }
+input[type=range].e-range { background:linear-gradient(90deg,var(--e-mid) calc(var(--v)*1%),rgba(255,255,255,0.09) calc(var(--v)*1%)); }
+input[type=range].b-range { background:linear-gradient(90deg,#9d7fea calc(var(--v)*1%),rgba(255,255,255,0.09) calc(var(--v)*1%)); }
+input[type=range]::-webkit-slider-thumb { -webkit-appearance:none; width:14px; height:14px; border-radius:50%; background:#fff; box-shadow:0 0 6px rgba(180,140,255,0.5),0 1px 4px rgba(0,0,0,0.5); transition:transform 0.12s ease; }
+input[type=range]:hover::-webkit-slider-thumb { transform:scale(1.3); }
+/* DESCRIPTION PANEL */
+.slider-desc-panel { background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:14px 16px; min-height:70px; display:flex; flex-direction:column; gap:5px; transition:border-color 0.3s ease,background 0.3s ease; }
+.slider-desc-panel.has-content { border-color:rgba(167,139,250,0.2); background:rgba(100,60,220,0.05); }
+.slider-desc-name { font-size:0.62rem; letter-spacing:0.14em; text-transform:uppercase; font-weight:500; color:var(--p-light); opacity:0; transition:opacity 0.25s ease; }
+.slider-desc-panel.has-content .slider-desc-name { opacity:1; }
+.slider-desc-text { font-size:0.75rem; line-height:1.65; color:var(--muted); transition:color 0.3s ease; }
+.slider-desc-panel.has-content .slider-desc-text { color:rgba(221,225,236,0.68); }
+.slider-desc-idle { font-size:0.68rem; color:var(--muted); letter-spacing:0.05em; opacity:0.6; }
+/* Loading overlay */
+#loadOverlay { position:absolute; inset:0; background:#060810; display:flex; align-items:center; justify-content:center; z-index:10; transition:opacity 0.8s ease; }
+#loadOverlay.hidden { opacity:0; pointer-events:none; }
+.load-dot { width:6px; height:6px; border-radius:50%; background:var(--p-mid); animation:pulse 1.2s ease-in-out infinite; }
+.load-dot:nth-child(2) { animation-delay:0.2s; }
+.load-dot:nth-child(3) { animation-delay:0.4s; }
+.load-dots { display:flex; gap:8px; }
+@keyframes pulse { 0%,100%{opacity:0.2;transform:scale(0.8)} 50%{opacity:1;transform:scale(1.2)} }
+@media(max-width:700px){ .grid{grid-template-columns:1fr} .hdr-sub{display:none} }
+</style>
+</head>
+<body>
+<div class="app">
+
+  <div class="hdr">
+    <span class="hdr-label">Module 3.2</span>
+    <h1>Presence &amp; Embodiment Explorer</h1>
+    <p class="hdr-sub">Adjust session parameters and observe how the client's state shifts across two independent axes.</p>
+  </div>
+
+  <div class="grid">
+
+    <!-- VIEWER -->
+    <div class="viewer">
+      <div class="viewer-bar">
+        <span class="viewer-bar-label">Session View</span>
+        <div class="viewer-meters">
+          <div class="v-meter pres">
+            <div class="v-meter-dot"></div>
+            <div class="v-meter-track"><div class="v-meter-fill" id="pm" style="width:0%"></div></div>
+            <span class="v-meter-num" id="pn">0%</span>
+          </div>
+          <div class="v-meter emb">
+            <div class="v-meter-dot"></div>
+            <div class="v-meter-track"><div class="v-meter-fill" id="em" style="width:0%"></div></div>
+            <span class="v-meter-num" id="en">0%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="canvas-wrap" id="canvasWrap">
+        <div id="loadOverlay">
+          <div class="load-dots">
+            <div class="load-dot"></div><div class="load-dot"></div><div class="load-dot"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="profile-strip" id="pstrip">
+        <div class="profile-pip"></div>
+        <div class="profile-text">
+          <div class="profile-idle" id="pidle">Adjust parameters to discover session states...</div>
+          <div class="profile-name" id="pname"></div>
+          <div class="profile-quote" id="pquote"></div>
+        </div>
+      </div>
+
+      <div class="profiles-grid">
+        <div class="profiles-grid-hdr">Six States to Discover</div>
+        <div class="pg-items" id="pgrid"></div>
+      </div>
+    </div>
+
+    <!-- CONTROLS -->
+    <div class="controls">
+      <div class="ctrl-section pres">
+        <div class="ctrl-section-hdr">
+          <div class="ctrl-section-pip"></div>
+          <span class="ctrl-section-label">Presence — The Space</span>
+        </div>
+        <div class="slider-row">
+          <div class="slider-top"><span class="slider-name">Body-Environment Synchrony</span></div>
+          <div class="slider-ends"><span>Sluggish</span><span>Instantaneous</span></div>
+          <input type="range" class="p-range" id="s1" min="0" max="100" value="20" style="--v:20" oninput="upd(this)">
+        </div>
+        <div class="slider-row">
+          <div class="slider-top"><span class="slider-name">Environmental Responsiveness</span></div>
+          <div class="slider-ends"><span>Static</span><span>Participatory</span></div>
+          <input type="range" class="p-range" id="s2" min="0" max="100" value="20" style="--v:20" oninput="upd(this)">
+        </div>
+      </div>
+
+      <div class="ctrl-section emb">
+        <div class="ctrl-section-hdr">
+          <div class="ctrl-section-pip"></div>
+          <span class="ctrl-section-label">Embodiment — The Body</span>
+        </div>
+        <div class="slider-row">
+          <div class="slider-top"><span class="slider-name">Avatar Type</span></div>
+          <div class="slider-ends"><span>No Body</span><span>Synchronized</span></div>
+          <input type="range" class="e-range" id="s3" min="0" max="100" value="15" style="--v:15" oninput="upd(this)">
+        </div>
+        <div class="slider-row">
+          <div class="slider-top"><span class="slider-name">Multi-Sensory Coherence</span></div>
+          <div class="slider-ends"><span>Fragmented</span><span>Unified</span></div>
+          <input type="range" class="e-range" id="s4" min="0" max="100" value="15" style="--v:15" oninput="upd(this)">
+        </div>
+      </div>
+
+      <div class="ctrl-section both">
+        <div class="ctrl-section-hdr">
+          <div class="ctrl-section-pip"></div>
+          <span class="ctrl-section-label">Affects Both</span>
+        </div>
+        <div class="slider-row">
+          <div class="slider-top"><span class="slider-name">Pre-Session Preparation</span></div>
+          <div class="slider-ends"><span>None</span><span>Thorough</span></div>
+          <input type="range" class="b-range" id="s5" min="0" max="100" value="15" style="--v:15" oninput="upd(this)">
+        </div>
+      </div>
+
+      <div class="slider-desc-panel" id="descPanel">
+        <div class="slider-desc-idle" id="descIdle">Touch a slider to learn what it controls...</div>
+        <div class="slider-desc-name" id="descName"></div>
+        <div class="slider-desc-text" id="descText"></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+// ── SLIDER INFO ───────────────────────────────────────────────────────
+const SLIDER_INFO = {
+  s1:{ name:"Body-Environment Synchrony", text:"How accurately and immediately the virtual environment responds to the client's physical movements. High synchrony means when they turn their head, the world turns with them instantly. Low synchrony creates a lag — the nervous system detects the mismatch and resists accepting the environment as real." },
+  s2:{ name:"Environmental Responsiveness", text:"Whether the virtual environment reacts to the client's presence and actions, or simply plays on around them. A static environment is experienced passively, like watching a film. A participatory environment responds — objects react, the space acknowledges the client is there." },
+  s3:{ name:"Avatar Type", text:"The kind of body representation the client has inside the experience. At one end: no visible body, purely a floating viewpoint. At the other: a full synchronized avatar that mirrors the client's actual movements. The avatar is the primary driver of Body Ownership Illusion — the felt sense that the virtual body is one's own." },
+  s4:{ name:"Multi-Sensory Coherence", text:"How well the different sensory channels — visual, spatial audio, movement, haptic — reinforce the same reality rather than conflicting. When sensory channels conflict, the nervous system detects inconsistency and reduces its acceptance of both the body and the environment as real." },
+  s5:{ name:"Pre-Session Preparation", text:"The quality of practitioner-client work before the headset goes on. Thorough preparation improves both presence and embodiment — not by changing the technology, but by reducing the cognitive and emotional resistance that prevents the nervous system from accepting the session as real." }
+};
+
+// ── PROFILES ─────────────────────────────────────────────────────────
+const PROFILES = [
+  { id:0, name:"Adrift",          pLo:0,  pHi:35, eLo:0,  eHi:35, pdot:'low',  edot:'low',
+    quote:'"I felt like I was watching a screen. Nothing landed. I kept noticing the headset."' },
+  { id:1, name:"The Open Field",  pLo:65, pHi:100,eLo:0,  eHi:35, pdot:'high', edot:'low',
+    quote:'"I was completely transported — but there was no me there. Just the space. I floated through it."' },
+  { id:2, name:"Stage Set",       pLo:0,  pHi:35, eLo:65, eHi:100,pdot:'low',  edot:'high',
+    quote:'"The body felt real but the world kept reminding me it wasn\'t. Like being a character on a set."' },
+  { id:3, name:"Full Immersion",  pLo:65, pHi:100,eLo:65, eHi:100,pdot:'high', edot:'high',
+    quote:'"I was completely there. That was my body. The space responded to me. I stopped thinking about the headset."' },
+  { id:4, name:"Floating Through",pLo:65, pHi:100,eLo:36, eHi:64, pdot:'high', edot:'mid',
+    quote:'"I was in the space but only loosely in my body. Like drifting through it — present but weightless."' },
+  { id:5, name:"Inhabited Stage", pLo:36, pHi:64, eLo:65, eHi:100,pdot:'mid',  edot:'high',
+    quote:'"The body felt very real — but the environment kept flickering. Present in my body, but not quite in a place."' }
+];
+
+// Build profile grid
+const pgrid = document.getElementById('pgrid');
+PROFILES.forEach(pr => {
+  const pd = v => v==='high'?'var(--p-mid)':v==='mid'?'rgba(167,139,250,0.45)':'rgba(167,139,250,0.15)';
+  const ed = v => v==='high'?'var(--e-mid)':v==='mid'?'rgba(45,212,191,0.45)':'rgba(45,212,191,0.15)';
+  pgrid.innerHTML += `<div class="pg-item" id="pg${pr.id}">
+    <div class="pg-dots">
+      <div class="pg-dot" style="background:${pd(pr.pdot)}"></div>
+      <div class="pg-dot" style="background:${ed(pr.edot)}"></div>
+    </div>
+    <div class="pg-item-name">${pr.name}</div>
+  </div>`;
+});
+
+// ── STATE ─────────────────────────────────────────────────────────────
+let pTarget=0, eTarget=0, pNow=0, eNow=0, activeProfile=-1;
+const SLIDERS = { s1:{type:'p',w:0.45}, s2:{type:'p',w:0.40}, s3:{type:'e',w:0.50}, s4:{type:'e',w:0.38}, s5:{type:'b',w:0.22} };
+
+function lerp(a,b,t){ return a+(b-a)*t; }
+
+function upd(el) {
+  el.style.setProperty('--v', el.value);
+  const info = SLIDER_INFO[el.id];
+  if (info) {
+    const panel = document.getElementById('descPanel');
+    panel.classList.add('has-content');
+    document.getElementById('descIdle').style.display='none';
+    document.getElementById('descName').textContent = info.name;
+    document.getElementById('descText').textContent = info.text;
+  }
+  recalc();
+}
+
+function recalc() {
+  let pS=0,pW=0,eS=0,eW=0;
+  for(const [id,cfg] of Object.entries(SLIDERS)){
+    const v = +document.getElementById(id).value;
+    if(cfg.type==='p'||cfg.type==='b'){ pS+=v*cfg.w; pW+=cfg.w; }
+    if(cfg.type==='e'||cfg.type==='b'){ eS+=v*cfg.w; eW+=cfg.w; }
+  }
+  pTarget = Math.min(100,Math.round(pS/pW));
+  eTarget = Math.min(100,Math.round(eS/eW));
+  detectProfile();
+}
+
+function detectProfile() {
+  let found=-1;
+  for(const pr of PROFILES){
+    if(pTarget>=pr.pLo&&pTarget<=pr.pHi&&eTarget>=pr.eLo&&eTarget<=pr.eHi){ found=pr.id; break; }
+  }
+  if(found===activeProfile) return;
+  activeProfile=found;
+  const strip=document.getElementById('pstrip');
+  const idle=document.getElementById('pidle');
+  if(found>=0){
+    const pr=PROFILES[found];
+    strip.classList.add('active');
+    idle.style.display='none';
+    document.getElementById('pname').textContent=pr.name;
+    document.getElementById('pquote').textContent=pr.quote;
+  } else {
+    strip.classList.remove('active');
+    idle.style.display='';
+    document.getElementById('pname').textContent='';
+    document.getElementById('pquote').textContent='';
+  }
+  PROFILES.forEach(pr=>document.getElementById('pg'+pr.id).classList.toggle('lit',pr.id===found));
+}
+
+// ── THREE.JS SCENE ────────────────────────────────────────────────────
+const wrap = document.getElementById('canvasWrap');
+
+const renderer = new THREE.WebGLRenderer({ antialias:true, alpha:false });
+renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
+renderer.setClearColor(0x060810,1);
+wrap.appendChild(renderer.domElement);
+
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(55,1,0.1,200);
+camera.position.set(0, 2.5, 9);
+camera.lookAt(0, 1, 0);
+
+function resizeRenderer(){
+  const r = wrap.getBoundingClientRect();
+  renderer.setSize(r.width, r.height, false);
+  camera.aspect = r.width / r.height;
+  camera.updateProjectionMatrix();
+}
+resizeRenderer();
+window.addEventListener('resize', resizeRenderer);
+
+// ── LIGHTING ──────────────────────────────────────────────────────────
+const ambientLight = new THREE.AmbientLight(0x1a0a2e, 1.0);
+scene.add(ambientLight);
+
+const presenceLight = new THREE.PointLight(0x7c3aed, 0, 30);
+presenceLight.position.set(0, 3, 4);
+scene.add(presenceLight);
+
+const embodimentLight = new THREE.PointLight(0x0d9488, 0, 20);
+embodimentLight.position.set(0, 2, 0);
+scene.add(embodimentLight);
+
+const rimLight = new THREE.DirectionalLight(0x4a1d8c, 0.3);
+rimLight.position.set(-5, 5, -3);
+scene.add(rimLight);
+
+// ── HUMAN BODY PARTICLE POSITIONS ─────────────────────────────────────
+function buildBodyPositions(count) {
+  const pts = [];
+
+  function addEllipsoid(cx,cy,cz, rx,ry,rz, n, scatter) {
+    for(let i=0;i<n;i++){
+      const u = Math.random()*Math.PI*2;
+      const v = Math.acos(2*Math.random()-1);
+      const r = 0.7 + Math.random()*0.3;
+      const nx = cx + rx*r*Math.sin(v)*Math.cos(u) + (Math.random()-0.5)*scatter;
+      const ny = cy + ry*r*Math.sin(v)*Math.sin(u) + (Math.random()-0.5)*scatter;
+      const nz = cz + rz*r*Math.cos(v)             + (Math.random()-0.5)*scatter;
+      pts.push(nx,ny,nz);
+    }
+  }
+
+  function addCylinder(cx,cy,cz, rx,rz, h, n, scatter) {
+    for(let i=0;i<n;i++){
+      const a = Math.random()*Math.PI*2;
+      const yr = (Math.random()-0.5)*h;
+      const xr = (0.6+Math.random()*0.4)*rx;
+      const zr = (0.6+Math.random()*0.4)*rz;
+      pts.push(cx+xr*Math.cos(a)+(Math.random()-0.5)*scatter, cy+yr, cz+zr*Math.sin(a)+(Math.random()-0.5)*scatter);
+    }
+  }
+
+  const sc = 0.08; // scatter
+  // Head
+  addEllipsoid(0, 3.5, 0,  0.55,0.62,0.5,  Math.floor(count*0.12), sc);
+  // Neck
+  addCylinder(0, 2.82, 0,  0.18,0.18, 0.35, Math.floor(count*0.03), sc*0.5);
+  // Torso upper
+  addEllipsoid(0, 2.1, 0,  0.7,0.75,0.42,  Math.floor(count*0.18), sc);
+  // Torso lower
+  addEllipsoid(0, 1.3, 0,  0.62,0.55,0.38, Math.floor(count*0.12), sc);
+  // Hips
+  addEllipsoid(0, 0.7, 0,  0.68,0.35,0.4,  Math.floor(count*0.08), sc);
+  // Left upper arm
+  addCylinder(-1.05, 2.2, 0,  0.22,0.2, 0.7, Math.floor(count*0.05), sc);
+  // Left lower arm
+  addCylinder(-1.2, 1.45, 0,  0.18,0.16, 0.65, Math.floor(count*0.05), sc);
+  // Right upper arm
+  addCylinder(1.05, 2.2, 0,   0.22,0.2, 0.7, Math.floor(count*0.05), sc);
+  // Right lower arm
+  addCylinder(1.2, 1.45, 0,   0.18,0.16, 0.65, Math.floor(count*0.05), sc);
+  // Left thigh
+  addCylinder(-0.38, 0.0, 0,  0.28,0.24, 0.7, Math.floor(count*0.06), sc);
+  // Right thigh
+  addCylinder(0.38, 0.0, 0,   0.28,0.24, 0.7, Math.floor(count*0.06), sc);
+  // Left shin
+  addCylinder(-0.4, -0.78, 0, 0.2,0.18, 0.7, Math.floor(count*0.05), sc);
+  // Right shin
+  addCylinder(0.4, -0.78, 0,  0.2,0.18, 0.7, Math.floor(count*0.05), sc);
+  // Feet
+  addEllipsoid(-0.38,-1.28,0.1, 0.2,0.12,0.38, Math.floor(count*0.03), sc*0.5);
+  addEllipsoid( 0.38,-1.28,0.1, 0.2,0.12,0.38, Math.floor(count*0.03), sc*0.5);
+
+  return pts;
+}
+
+const BODY_COUNT = 3200;
+const bodyPositions = buildBodyPositions(BODY_COUNT);
+const actualCount = bodyPositions.length / 3;
+
+// ── BODY PARTICLE SYSTEM ──────────────────────────────────────────────
+const bodyGeo = new THREE.BufferGeometry();
+const bodyPos = new Float32Array(bodyPositions);
+const bodyRest = new Float32Array(bodyPositions); // original positions
+const bodyColors = new Float32Array(actualCount*3);
+const bodyScatter = new Float32Array(actualCount*3); // random scatter offsets
+
+for(let i=0;i<actualCount;i++){
+  bodyScatter[i*3]   = (Math.random()-0.5)*4;
+  bodyScatter[i*3+1] = (Math.random()-0.5)*4;
+  bodyScatter[i*3+2] = (Math.random()-0.5)*4;
+  bodyColors[i*3]=0.1; bodyColors[i*3+1]=0.6; bodyColors[i*3+2]=0.65;
+}
+
+bodyGeo.setAttribute('position', new THREE.BufferAttribute(bodyPos,3));
+bodyGeo.setAttribute('color',    new THREE.BufferAttribute(bodyColors,3));
+
+const bodyMat = new THREE.PointsMaterial({
+  size: 0.045,
+  vertexColors: true,
+  transparent: true,
+  opacity: 0.15,
+  depthWrite: false,
+  blending: THREE.AdditiveBlending,
+  sizeAttenuation: true
+});
+
+const bodyParticles = new THREE.Points(bodyGeo, bodyMat);
+bodyParticles.position.y = -1.2; // center figure vertically
+scene.add(bodyParticles);
+
+// ── ENVIRONMENT PARTICLE SYSTEM ───────────────────────────────────────
+const ENV_COUNT = 1800;
+const envGeo = new THREE.BufferGeometry();
+const envPos = new Float32Array(ENV_COUNT*3);
+const envColors = new Float32Array(ENV_COUNT*3);
+const envSpeeds = new Float32Array(ENV_COUNT);
+const envPhases = new Float32Array(ENV_COUNT);
+
+for(let i=0;i<ENV_COUNT;i++){
+  // Distribute in large sphere around scene
+  const r = 3.5 + Math.random()*5;
+  const theta = Math.random()*Math.PI*2;
+  const phi = Math.acos(2*Math.random()-1);
+  envPos[i*3]   = r*Math.sin(phi)*Math.cos(theta);
+  envPos[i*3+1] = (Math.random()-0.3)*8;
+  envPos[i*3+2] = r*Math.sin(phi)*Math.sin(theta);
+  envColors[i*3]=0.35; envColors[i*3+1]=0.15; envColors[i*3+2]=0.75;
+  envSpeeds[i] = 0.2 + Math.random()*0.4;
+  envPhases[i] = Math.random()*Math.PI*2;
+}
+
+envGeo.setAttribute('position', new THREE.BufferAttribute(envPos,3));
+envGeo.setAttribute('color',    new THREE.BufferAttribute(envColors,3));
+
+const envMat = new THREE.PointsMaterial({
+  size: 0.035, vertexColors:true,
+  transparent:true, opacity:0.0,
+  depthWrite:false, blending:THREE.AdditiveBlending,
+  sizeAttenuation:true
+});
+
+const envParticles = new THREE.Points(envGeo, envMat);
+scene.add(envParticles);
+
+// ── FLOOR GRID ────────────────────────────────────────────────────────
+const gridHelper = new THREE.GridHelper(24, 24, 0x3d1f8a, 0x1e0f45);
+gridHelper.position.y = -2.5;
+gridHelper.material.transparent = true;
+gridHelper.material.opacity = 0.0;
+scene.add(gridHelper);
+
+// ── CONVERGENCE RING SYSTEM ───────────────────────────────────────────
+const convergenceRings = [];
+for(let i=0;i<3;i++){
+  const geo = new THREE.TorusGeometry(0.8+i*0.5, 0.012, 6, 64);
+  const mat = new THREE.MeshBasicMaterial({
+    color: i%2===0 ? 0xa78bfa : 0x2dd4bf,
+    transparent:true, opacity:0,
+    blending:THREE.AdditiveBlending
+  });
+  const ring = new THREE.Mesh(geo, mat);
+  ring.rotation.x = Math.PI/2 + (i*Math.PI/5);
+  ring.position.y = 0.8 - i*0.15;
+  scene.add(ring);
+  convergenceRings.push(ring);
+}
+
+// ── FOG ───────────────────────────────────────────────────────────────
+scene.fog = new THREE.FogExp2(0x060810, 0.045);
+
+// ── ANIMATION ─────────────────────────────────────────────────────────
+let clock = new THREE.Clock();
+let orbitAngle = 0;
+
+function animate() {
+  requestAnimationFrame(animate);
+  const delta = clock.getDelta();
+  const elapsed = clock.getElapsedTime();
+
+  // Smooth state
+  pNow = lerp(pNow, pTarget, 0.035);
+  eNow = lerp(eNow, eTarget, 0.035);
+  const pN = pNow/100;
+  const eN = eNow/100;
+
+  // ── CAMERA ORBIT ────────────────────────────────────────────────────
+  orbitAngle += delta * 0.12; // slow rotation
+  const orbitR = 8.5;
+  const orbitH = 2.0 + Math.sin(elapsed*0.07)*0.4; // gentle vertical bob
+  camera.position.x = Math.sin(orbitAngle) * orbitR;
+  camera.position.z = Math.cos(orbitAngle) * orbitR;
+  camera.position.y = orbitH;
+  camera.lookAt(0, 1.2, 0);
+
+  // ── BODY PARTICLES ──────────────────────────────────────────────────
+  const positions = bodyGeo.attributes.position.array;
+  const colors    = bodyGeo.attributes.color.array;
+
+  for(let i=0;i<actualCount;i++){
+    const i3 = i*3;
+    // Scatter vs cohere based on embodiment
+    const scatter = 1.0 - eN;
+    const noiseT = elapsed * 0.5;
+    const nx = bodyRest[i3]   + bodyScatter[i3]   * scatter * (0.6+0.4*Math.sin(noiseT+i*0.1));
+    const ny = bodyRest[i3+1] + bodyScatter[i3+1] * scatter * (0.6+0.4*Math.cos(noiseT+i*0.13));
+    const nz = bodyRest[i3+2] + bodyScatter[i3+2] * scatter * (0.6+0.4*Math.sin(noiseT+i*0.17));
+    positions[i3]   = lerp(positions[i3],   nx, 0.06);
+    positions[i3+1] = lerp(positions[i3+1], ny, 0.06);
+    positions[i3+2] = lerp(positions[i3+2], nz, 0.06);
+
+    // Color: drift from dim violet → bright teal as embodiment rises
+    colors[i3]   = lerp(0.25, 0.0,  eN);
+    colors[i3+1] = lerp(0.18, 0.82, eN);
+    colors[i3+2] = lerp(0.55, 0.72, eN);
+  }
+  bodyGeo.attributes.position.needsUpdate = true;
+  bodyGeo.attributes.color.needsUpdate    = true;
+
+  // Body opacity and size driven by embodiment
+  bodyMat.opacity = 0.08 + eN * 0.78;
+  bodyMat.size    = 0.028 + eN * 0.038;
+
+  // ── ENVIRONMENT PARTICLES ────────────────────────────────────────────
+  const ep = envGeo.attributes.position.array;
+  const ec = envGeo.attributes.color.array;
+  for(let i=0;i<ENV_COUNT;i++){
+    const i3=i*3;
+    // Slow drift inward as presence increases
+    ep[i3+1] += Math.sin(elapsed*envSpeeds[i]+envPhases[i]) * 0.002 * (1+pN*2);
+    // Wrap vertically
+    if(ep[i3+1]>5) ep[i3+1]=-5;
+    if(ep[i3+1]<-5) ep[i3+1]=5;
+    // Color brightens with presence
+    ec[i3]   = lerp(0.2,  0.55, pN);
+    ec[i3+1] = lerp(0.08, 0.2,  pN);
+    ec[i3+2] = lerp(0.45, 1.0,  pN);
+  }
+  envGeo.attributes.position.needsUpdate = true;
+  envGeo.attributes.color.needsUpdate    = true;
+  envMat.opacity = pN * 0.65;
+  envMat.size    = 0.022 + pN * 0.03;
+
+  // ── FLOOR GRID ───────────────────────────────────────────────────────
+  gridHelper.material.opacity = pN * 0.55;
+  // Subtle grid pulse
+  gridHelper.position.y = -2.5 + Math.sin(elapsed*0.3)*0.04*pN;
+
+  // ── FOG ──────────────────────────────────────────────────────────────
+  // High presence = less fog (deeper space), low presence = more fog (flat/closed)
+  scene.fog.density = lerp(0.09, 0.022, pN);
+
+  // ── LIGHTING ─────────────────────────────────────────────────────────
+  presenceLight.intensity  = pN * 2.2;
+  embodimentLight.intensity = eN * 3.0;
+  ambientLight.intensity   = 0.6 + pN*0.4 + eN*0.3;
+  // Light colors shift
+  presenceLight.color.setRGB(
+    lerp(0.3,0.55,pN), lerp(0.1,0.22,pN), lerp(0.7,1.0,pN)
+  );
+  embodimentLight.color.setRGB(
+    lerp(0.0,0.05,eN), lerp(0.4,0.82,eN), lerp(0.5,0.7,eN)
+  );
+
+  // ── CONVERGENCE RINGS ─────────────────────────────────────────────────
+  const both = Math.max(0, Math.min(pN,eN) - 0.55) / 0.45;
+  convergenceRings.forEach((ring,i)=>{
+    ring.material.opacity = both * (0.4+i*0.1);
+    ring.rotation.z = elapsed * (0.3+i*0.15) * (i%2===0?1:-1);
+    ring.rotation.y = elapsed * (0.2+i*0.1);
+    const pulse = 1 + Math.sin(elapsed*2+i)*0.06*both;
+    ring.scale.setScalar(pulse);
+  });
+
+  // ── UI METERS ─────────────────────────────────────────────────────────
+  document.getElementById('pm').style.width = pNow+'%';
+  document.getElementById('em').style.width = eNow+'%';
+  document.getElementById('pn').textContent = Math.round(pNow)+'%';
+  document.getElementById('en').textContent = Math.round(eNow)+'%';
+
+  renderer.render(scene, camera);
+}
+
+// ── START ─────────────────────────────────────────────────────────────
+recalc();
+
+// Hide loading overlay once Three.js renders first frame
+let firstFrame = true;
+function startLoop(){
+  requestAnimationFrame(()=>{
+    animate();
+    if(firstFrame){
+      firstFrame=false;
+      setTimeout(()=>{
+        document.getElementById('loadOverlay').classList.add('hidden');
+      }, 400);
+    }
+  });
+}
+startLoop();
+</script>
+</body>
+</html>

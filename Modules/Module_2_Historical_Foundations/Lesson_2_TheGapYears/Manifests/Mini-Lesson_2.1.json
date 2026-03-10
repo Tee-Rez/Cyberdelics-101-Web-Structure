@@ -1,5 +1,6 @@
-{
-    "title": "The VR Winter—Why It All Fell Apart",
+﻿{
+    "id": "mini_lesson_2_2_1",
+    "title": "The VR Winterâ€”Why It All Fell Apart",
     "description": "Understanding the commercial failure of VR from 2000-2012 and the essential lessons taught by the gap between vision and viability.",
     "theme": {
         "primaryColor": "#5900ff",
@@ -40,7 +41,7 @@
                     },
                     {
                         "title": "What Was Happening Beneath the Surface",
-                        "content": "<p>Important developments were occurring quietly during the gap. <strong>The smartphone revolution:</strong> mobile computing and touchscreens normalized personal technology. <strong>Display technology</strong> advanced dramatically thanks to smartphones: higher resolution OLED screens, lower power consumption, cheaper manufacturing, better refresh rates. <strong>Graphics processing:</strong> gaming drove GPU development with powerful graphics cards becoming consumer-affordable. <strong>Sensors</strong> improved: phone accelerometers and gyroscopes made motion tracking cheap and accurate. <strong>Software ecosystems:</strong> Unity and Unreal game engines matured, making VR development more accessible. These developments—driven by smartphones and gaming—would eventually enable VR renaissance.</p>",
+                        "content": "<p>Important developments were occurring quietly during the gap. <strong>The smartphone revolution:</strong> mobile computing and touchscreens normalized personal technology. <strong>Display technology</strong> advanced dramatically thanks to smartphones: higher resolution OLED screens, lower power consumption, cheaper manufacturing, better refresh rates. <strong>Graphics processing:</strong> gaming drove GPU development with powerful graphics cards becoming consumer-affordable. <strong>Sensors</strong> improved: phone accelerometers and gyroscopes made motion tracking cheap and accurate. <strong>Software ecosystems:</strong> Unity and Unreal game engines matured, making VR development more accessible. These developmentsâ€”driven by smartphones and gamingâ€”would eventually enable VR renaissance.</p>",
                         "triggerLabel": "Continue"
                     }
                 ]
@@ -97,7 +98,7 @@
                     },
                     {
                         "id": "outcome_b",
-                        "narrative": "<p>You split your focus: mainstream publishable research for career security, VR experiments in spare time. You stay connected to the small VR community, attend conferences, collaborate on side projects. It's exhausting maintaining two research tracks, but you keep the flame alive.</p><p>When VR revives in 2012, you're positioned perfectly. You have the academic credentials from mainstream work plus deep VR expertise from your persistence. You become a bridge between established neuroscience and emerging VR consciousness research.</p><p><em>Reflection: Strategic patience—keeping possibilities alive while maintaining viability—enables pivoting when timing shifts.</em></p>",
+                        "narrative": "<p>You split your focus: mainstream publishable research for career security, VR experiments in spare time. You stay connected to the small VR community, attend conferences, collaborate on side projects. It's exhausting maintaining two research tracks, but you keep the flame alive.</p><p>When VR revives in 2012, you're positioned perfectly. You have the academic credentials from mainstream work plus deep VR expertise from your persistence. You become a bridge between established neuroscience and emerging VR consciousness research.</p><p><em>Reflection: Strategic patienceâ€”keeping possibilities alive while maintaining viabilityâ€”enables pivoting when timing shifts.</em></p>",
                         "choices": [
                             {
                                 "id": "continue",
@@ -119,7 +120,7 @@
                     },
                     {
                         "id": "final_reflection",
-                        "narrative": "<h3>Final Reflection</h3><p>The gap years tested whether VR—and by extension, cyberdelics—would survive long enough to get its second chance. Those who kept working despite mainstream dismissal built the foundations for later success. The lesson: apparent stagnation often masks necessary preparation. Progress isn't always visible.</p>",
+                        "narrative": "<h3>Final Reflection</h3><p>The gap years tested whether VRâ€”and by extension, cyberdelicsâ€”would survive long enough to get its second chance. Those who kept working despite mainstream dismissal built the foundations for later success. The lesson: apparent stagnation often masks necessary preparation. Progress isn't always visible.</p>",
                         "media": {
                             "type": "image",
                             "src": "../assets/images/module2/lesson2/gap_years_timeline.jpg",
@@ -154,7 +155,7 @@
                             },
                             {
                                 "id": "q1_b",
-                                "label": "The technology wasn't ready—poor displays, high latency, motion sickness, and prohibitive costs",
+                                "label": "The technology wasn't readyâ€”poor displays, high latency, motion sickness, and prohibitive costs",
                                 "outcome": "q1_correct"
                             },
                             {
@@ -193,7 +194,7 @@
                     },
                     {
                         "id": "q1_feedback_c",
-                        "narrative": "<p><strong>Incorrect.</strong> Interest existed—that's why companies invested millions trying to make VR work. The problem was that the experiences were so poor (low resolution, motion sickness, limited content) that even interested people couldn't tolerate them. The hardware failed to deliver on the promise, killing interest. Demand existed; capability didn't.</p>",
+                        "narrative": "<p><strong>Incorrect.</strong> Interest existedâ€”that's why companies invested millions trying to make VR work. The problem was that the experiences were so poor (low resolution, motion sickness, limited content) that even interested people couldn't tolerate them. The hardware failed to deliver on the promise, killing interest. Demand existed; capability didn't.</p>",
                         "choices": [
                             {
                                 "id": "retry",
@@ -219,7 +220,7 @@
                         "choices": [
                             {
                                 "id": "q2_a",
-                                "label": "Nothing—VR was completely abandoned and no progress was made",
+                                "label": "Nothingâ€”VR was completely abandoned and no progress was made",
                                 "outcome": "q2_feedback_a"
                             },
                             {
@@ -241,7 +242,7 @@
                     },
                     {
                         "id": "q2_feedback_a",
-                        "narrative": "<p><strong>Incorrect.</strong> This isn't accurate. While consumer VR disappeared, crucial parallel developments were occurring: smartphone displays improved dramatically, gaming drove GPU advancement, sensors became cheap and accurate, and game engines matured. These developments—in other fields—created the technological foundation for VR's later revival. The gap wasn't empty; it was preparation.</p>",
+                        "narrative": "<p><strong>Incorrect.</strong> This isn't accurate. While consumer VR disappeared, crucial parallel developments were occurring: smartphone displays improved dramatically, gaming drove GPU advancement, sensors became cheap and accurate, and game engines matured. These developmentsâ€”in other fieldsâ€”created the technological foundation for VR's later revival. The gap wasn't empty; it was preparation.</p>",
                         "choices": [
                             {
                                 "id": "retry",
@@ -252,7 +253,7 @@
                     },
                     {
                         "id": "q2_correct",
-                        "narrative": "<h3>Lesson Complete!</h3><p><strong>Correct.</strong> The gap years saw massive advances in supporting technologies driven by smartphones and gaming: OLED displays with high resolution and refresh rates, powerful graphics cards capable of real-time 3D, accurate motion sensors from phones, and mature game engines (Unity, Unreal). These developments—not directly for VR—created the foundation that made VR viable when it returned. Apparent stagnation masked essential preparation.</p>",
+                        "narrative": "<h3>Lesson Complete!</h3><p><strong>Correct.</strong> The gap years saw massive advances in supporting technologies driven by smartphones and gaming: OLED displays with high resolution and refresh rates, powerful graphics cards capable of real-time 3D, accurate motion sensors from phones, and mature game engines (Unity, Unreal). These developmentsâ€”not directly for VRâ€”created the foundation that made VR viable when it returned. Apparent stagnation masked essential preparation.</p>",
                         "choices": []
                     },
                     {

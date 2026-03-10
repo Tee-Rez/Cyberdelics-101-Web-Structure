@@ -1,35 +1,15 @@
 {
     "id": "mini_lesson_3_2_3",
     "title": "Presence & Embodiment in Session Design",
-    "description": "Presence and embodiment are not the same thing, though they often work together. This exercise holds them as distinct variables and asks you to apply both to real session design decisions. The simulation below lets you adjust design parameters and observe how presence and embodiment respond independently. When the simulation builder is ready, this will be fully interactive. The structured exercise below walks through the same distinctions in the meantime.",
+    "description": "Apply presence and embodiment as distinct design variables \u2014 observe how each responds independently to real session design decisions.",
     "modules": [
         {
-            "id": "pd_3_2_3",
+            "id": "simulation_3_2_3",
             "title": "Presence & Embodiment Parameter Explorer",
-            "type": "progressive-disclosure",
+            "type": "interactive-simulation",
             "content": {
-                "sections": [
-                    {
-                        "title": "Placeholder Panel A: High Immersion, Low Presence",
-                        "content": "<p><strong>Description:</strong> State-of-the-art headset, photorealistic environment, excellent visual resolution. No pre-session preparation. Client arrived distracted, uncomfortable in headset, spending first five minutes adjusting fit. Tracking has minor latency spikes from wireless connectivity.</p><p><strong>Presence Level:</strong> Low. Despite high immersion, Place Illusion has not established; the client is aware of their physical surroundings throughout.</p><p><strong>Embodiment Depth:</strong> Low. Avatar is present but client is too distracted by discomfort to establish body ownership.</p><p><strong>Client would likely report:</strong> 'The graphics were impressive but I never really felt like I was there. I kept noticing the headset.'</p><p><strong>Key learning:</strong> Immersion and presence are not the same. Hardware quality does not guarantee psychological threshold crossing.</p>",
-                        "triggerLabel": "High Presence, Low Embodiment"
-                    },
-                    {
-                        "title": "Placeholder Panel B: High Presence, Low Embodiment",
-                        "content": "<p><strong>Description:</strong> Mid-range headset, well-maintained. No avatar; client experiences the virtual environment as a disembodied viewpoint. Pre-session preparation was thorough. Tracking is solid and latency is low. Environment is an abstract space with coherent audio-visual synchrony that responds to head movement and gaze direction.</p><p><strong>Presence Level:</strong> High. Place Illusion strong; client feels genuinely situated in the space. Plausibility Illusion active; the environment responds to them as a participant.</p><p><strong>Embodiment Depth:</strong> Low. No virtual body to own. Client reports the space as real but themselves as 'floating.'</p><p><strong>Client would likely report:</strong> 'I felt completely transported. Like I was actually in another place. But there was no 'me' there. Just the space.'</p><p><strong>Key learning:</strong> Presence and embodiment are distinct mechanisms. High presence without embodiment is a legitimate and sometimes therapeutically useful state, not a deficiency.</p>",
-                        "triggerLabel": "High Embodiment, Moderate Presence"
-                    },
-                    {
-                        "title": "Placeholder Panel C: High Embodiment, Moderate Presence",
-                        "content": "<p><strong>Description:</strong> Client has an avatar with real-time full-body tracking, first-person perspective, synchronized gestures. The environment itself is somewhat generic and not very responsive to the client beyond movement mirroring. Preparation was adequate but brief. Multi-sensory coherence is partial; visuals good, audio generic.</p><p><strong>Presence Level:</strong> Moderate. Place Illusion partial. Plausibility Illusion low; the environment doesn't respond to the client as a full participant.</p><p><strong>Embodiment Depth:</strong> High. Body Ownership Illusion strong due to visual-motor synchrony and first-person perspective.</p><p><strong>Client would likely report:</strong> 'I really felt like that was my body. But the world around it felt a bit like a stage set, like I was a character dropped into a background.'</p><p><strong>Key learning:</strong> Embodiment can be high even when presence is moderate. Body ownership is primarily driven by avatar-specific conditions, not by overall environmental quality.</p>",
-                        "triggerLabel": "High Presence and High Embodiment"
-                    },
-                    {
-                        "title": "Placeholder Panel D: High Presence and High Embodiment",
-                        "content": "<p><strong>Description:</strong> Well-calibrated mid-range headset. Thorough pre-session preparation including breathing, grounding, and intention setting. Avatar with synchronized full-body tracking, first-person perspective, plausible proportions. Abstract particle-based body representation (allows ownership without triggering body image comparison). Immersive coherent environment designed to respond meaningfully to client presence; spatial audio shifts with movement, ambient elements respond to proximity, environment has clear structure and intention.</p><p><strong>Presence Level:</strong> High. Both Place Illusion and Plausibility Illusion active.</p><p><strong>Embodiment Depth:</strong> High. Body Ownership Illusion established, with abstract representation reducing risk of body image activation.</p><p><strong>Client would likely report:</strong> 'I was completely there. That was my body. The space responded to me being in it. I stopped thinking about where I was sitting.'</p><p><strong>Key learning:</strong> High presence and high embodiment together create the amplified, participatory state that cyberdelic sessions aim for. Both require their own specific conditions. Neither is automatic.</p>",
-                        "triggerLabel": "Test Your Understanding"
-                    }
-                ]
+                "engine": "PresenceEmbodimentSim",
+                "params": {}
             }
         },
         {

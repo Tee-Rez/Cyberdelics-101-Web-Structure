@@ -119,8 +119,8 @@
                     }
                 });
 
-                // Cap at 4 categories
-                const capped = categories.slice(0, 4);
+                // Use all categories defined in the manifest (removed 4-category cap)
+                const capped = categories;
 
                 const categoriesHTML = capped.map(cat => {
                     const slotsHTML = (categoryItems[cat.id] || []).map(itemId =>

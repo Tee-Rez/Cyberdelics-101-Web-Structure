@@ -3,6 +3,8 @@
 This guide defines the STRICT schema for creating lesson manifest files (`Mini-Lesson_X.X.json`).
 **DO NOT DEVIATE FROM THIS STRUCTURE.**
 
+**CRITICAL REQUIREMENT:** Before drafting any manifest content, you MUST read the `CyberdelicStyleGuide.txt` file located in the root directory. All written content (narratives, panels, questions, feedback) MUST adhere to the voice, tone, and formatting rules defined in that style guide.
+
 ## 1. Top-Level Structure
 
 The manifest MUST be a JSON object with **ONLY** the following top-level keys.
@@ -73,7 +75,7 @@ Used for multiple-choice questions and branching scenarios.
 **Key Rules:**
 *   Use `scenes` array.
 *   Each scene has `choices`.
-*   `outcome` denotes the ID of the next scene.
+*   `outcome` denotes the ID of the next scene. To terminate a scenario and advance to the next module, use the keyword `"complete"`. Do NOT use `"end"` or `"quiz_complete"`.
 
 ```json
 {
@@ -180,7 +182,43 @@ The component also supports the legacy single-question format for backward compa
 }
 ```
 
-## 3. Important Rules
+#### E. Knowledge Construction (Drag-and-Drop)
+Used for matching exercises and category sorting activities. This relies strictly on the `content` block and the `"templateType": "categories"` format.
+
+**Key Rules:**
+*   Module should use `"type": "knowledge-construction"`.
+*   All data goes inside the `content` object (NOT `config`).
+*   Set `"templateType": "categories"` to use the standard built-in layout.
+*   Define a `categories` array containing objects with `id`, `label`, and (optionally) `color`.
+*   Define an `items` array with objects containing `id`, `text`, and `correctCategory` mapping to a category ID.
+*   (Optional) Define a `distractors` array with objects containing `id` and `text`. Distractors do not belong to any category.
+
+```json
+{
+  "id": "concept_match",
+  "title": "Module Title Here",
+  "type": "knowledge-construction",
+  "content": {
+    "title": "In-Exercise Title",
+    "instruction": "Drag the items into the correct categories.",
+    "templateType": "categories",
+    "categories": [
+      { "id": "cat_1", "label": "Hardware", "color": "#ff6b6b" },
+      { "id": "cat_2", "label": "Software", "color": "#339af0" }
+    ],
+    "items": [
+      { "id": "item_1", "text": "VR Headset", "correctCategory": "cat_1" },
+      { "id": "item_2", "text": "Game Engine", "correctCategory": "cat_2" }
+    ],
+    "distractors": [
+      { "id": "distractor_1", "text": "Screwdriver" }
+    ]
+  }
+}
+```
+
+## 4. Important Rules
 1.  **NO Extra Top-Level Fields**: Do not add metadata fields that are not defined in the Lesson Runner.
 2.  **Relative Paths**: Image paths should be relative to the manifest location or standard assets path (`../../assets/...`).
 3.  **JSON Syntax**: Ensure valid JSON (no trailing commas, double quotes for keys/strings).
+4.  **Sequential Generation**: If tasked with creating multiple mini-lesson manifests, **DO NOT generate them all at once**. Create them **one at a time**, presenting each manifest for review before moving on to the next.

@@ -142,26 +142,7 @@ class LessonUI {
 
         // ... (Let's continue Body setup in next lines) ...
 
-        // Left Sidebar (Inventory)
-        const sideLeft = document.createElement('div');
-        sideLeft.className = 'cyberdeck-sidebar cd-sidebar-left collapsed';
-        sideLeft.innerHTML = `
-                <div class="cd-sidebar-header">
-                    <span class="cd-sidebar-title">ARTIFACTS</span>
-                    <button class="cd-toggle-btn">◄</button>
-                </div>
-                <div class="cd-artifact-counter">0/5</div>
-                <div class="cd-collapsed-icons"></div>
-                <div class="cd-sidebar-content">
-                    <div class="cd-empty-state">No artifacts detected.</div>
-                </div>
-            `;
-        sideLeft.querySelector('.cd-toggle-btn').addEventListener('click', () => {
-            sideLeft.classList.toggle('collapsed');
-            const btn = sideLeft.querySelector('.cd-toggle-btn');
-            btn.textContent = sideLeft.classList.contains('collapsed') ? '►' : '◄';
-        });
-        body.appendChild(sideLeft);
+        // Left Sidebar (Inventory) removed
 
         // Main Content Area (The "View Port")
         const main = document.createElement('div');
@@ -177,86 +158,12 @@ class LessonUI {
 
         body.appendChild(main);
 
-        // Right Sidebar (Audio Player)
-        const sideRight = document.createElement('div');
-        sideRight.className = 'cyberdeck-sidebar cd-sidebar-right collapsed';
-        sideRight.innerHTML = `
-                <div class="cd-sidebar-header">
-                    <button class="cd-toggle-btn">►</button>
-                    <span class="cd-sidebar-title">AMBIENT</span>
-                </div>
-                <div class="cd-mini-controls">
-                    <button class="cd-mini-play-btn" title="Play/Pause">▶</button>
-                </div>
-                <div class="cd-sidebar-content">
-                    <div id="cd-audio-player-container"></div>
-                </div>
-            `;
-        sideRight.querySelector('.cd-toggle-btn').addEventListener('click', () => {
-            sideRight.classList.toggle('collapsed');
-            const btn = sideRight.querySelector('.cd-toggle-btn');
-            btn.textContent = sideRight.classList.contains('collapsed') ? '◄' : '►';
-        });
+        // Right Sidebar (Audio Player) removed
 
-        // Mini Play Button
-        const miniPlayBtn = sideRight.querySelector('.cd-mini-play-btn');
-        miniPlayBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            if (this.audioPlayer) this.audioPlayer.toggle();
-        });
-        this.elements.miniPlayBtn = miniPlayBtn;
-
-        body.appendChild(sideRight);
-
-        // 3. Bottom Bar (Restored)
-        const bottomBar = document.createElement('div');
-        bottomBar.className = 'cyberdeck-footer';
-        bottomBar.style.display = 'none'; // Temporarily disabled per user request
-        bottomBar.innerHTML = `
-            <div class="cd-wave-container">
-                <!-- Left Side: Controls -->
-                 <div class="cd-slider-container" style="order: -1;">
-                    <button id="wave-selector" class="wave-selector-btn" title="Color Mode"></button>
-                    <div class="cd-slider-group">
-                        <input type="range" id="wave-freq" class="wave-slider" min="1" max="50" value="10" title="Frequency">
-                        <input type="range" id="wave-amp" class="wave-slider" min="1" max="100" value="50" title="Amplitude">
-                        <input type="range" id="wave-speed" class="wave-slider" min="1" max="20" value="5" title="Speed">
-                    </div>
-                </div>
-                
-                <div class="cd-visualizer-wrapper">
-                     <canvas id="wave-canvas"></canvas>
-                </div>
-            </div>
-        `;
-        this.shell.appendChild(bottomBar);
-
-        // 3. Bottom Sidebar (Video Overlay)
-        const sideBottom = document.createElement('div');
-        sideBottom.className = 'cyberdeck-sidebar cd-sidebar-bottom collapsed no-transition'; // Start with no-transition
-        sideBottom.innerHTML = `
-                <div class="cd-sidebar-header">
-                    <span class="cd-sidebar-title">SOPHIA TEASER</span>
-                    <button class="cd-toggle-btn">▲</button>
-                </div>
-                <!-- Content injected lazily to prevent layout shift -->
-            `;
-
-        // Toggle Logic
-        sideBottom.querySelector('.cd-toggle-btn').addEventListener('click', () => {
-            this.toggleBottomPanel();
-        });
-
-        this.elements.sidebarBottom = sideBottom;
-        body.appendChild(sideBottom); // Move to body to avoid scrolling with main content
-
-        // Force Reflow
-        void sideBottom.offsetHeight;
-        setTimeout(() => sideBottom.classList.remove('no-transition'), 500);
+        // 3. Bottom Bar and Bottom Sidebar removed
 
         // Assemble
         this.shell.appendChild(body);
-        this.shell.appendChild(bottomBar);
         this.container.appendChild(this.shell);
 
         // Initialize Neural Background (Core Integration)
@@ -279,17 +186,11 @@ class LessonUI {
         this.elements.progressBar = topBar.querySelector('.cd-progress-track');
         this.elements.progressFill = topBar.querySelector('.cd-progress-fill');
         this.elements.mainArea = main;
-        this.elements.sidebarLeft = sideLeft;
-        this.elements.sidebarRight = sideRight;
+        this.elements.sidebarLeft = null;
+        this.elements.sidebarRight = null;
+        this.elements.sidebarBottom = null;
 
-        // Visualizer & Audio setup
-        this.visualizer = new SineWaveVisualizer(
-            bottomBar.querySelector('#wave-canvas'),
-            bottomBar.querySelector('#wave-freq'),
-            bottomBar.querySelector('#wave-amp'),
-            bottomBar.querySelector('#wave-speed'),
-            bottomBar.querySelector('#wave-selector')
-        );
+        // Visualizer setup removed
 
         // Initialize Audio Player (if AudioPlayer class is available)
         // Initialize Audio Player (Disabled per user request)

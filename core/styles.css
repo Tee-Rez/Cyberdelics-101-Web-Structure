@@ -1151,27 +1151,104 @@ li strong {
     pointer-events: none;
 }
 
-.opening-content h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    background: linear-gradient(45deg, var(--color-accent), #f0f);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-transform: uppercase;
-    letter-spacing: 4px;
+/* Responsive Image Overlay Base */
+.course-header {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
 }
 
-.opening-subtitle {
-    font-size: 1.2rem;
-    color: var(--color-text-secondary);
-    margin-bottom: 40px;
+.course-header img.header-bg {
+    width: 100%;
+    display: block;
+    aspect-ratio: 1024 / 512;
+    object-fit: cover;
+}
+
+.lesson-overlay {
+    position: absolute;
+    /* Box bounds for holographic overlay */
+    top: 14%;
+    left: 51.5%;
+    width: 45%;
+    height: 71%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 2vw;
+    color: #fff;
+    font-family: 'Space Mono', monospace;
+    text-shadow: 0 0 10px rgba(0, 217, 255, 0.7);
+    box-sizing: border-box;
+    text-align: center;
+    /* Prevent text from ever escaping the box */
+    overflow: hidden;
+}
+
+/* ===================================================
+   OPENING SCREEN FONT PAIRING — ACTIVE: Pairing 2
+   1 = Orbitron (h) + Inter (body)
+   2 = Oxanium (h) + Space Mono (body)  ← ACTIVE
+   3 = Sora (h) + Montserrat (body)
+   =================================================== */
+
+.lesson-overlay h2 {
+    font-size: clamp(0.45rem, 1.5vw, 1.3rem);
+    font-family: 'Oxanium', sans-serif;
+    /* Pairing 2 */
+    font-weight: 700;
+    color: var(--color-accent);
+    margin: 0 0 5px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.lesson-overlay h1 {
+    font-size: clamp(0.6rem, 2.2vw, 2.2rem);
+    font-family: 'Oxanium', sans-serif;
+    /* Pairing 2 */
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    text-shadow: 0 0 8px rgba(0, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+.lesson-overlay p,
+.lesson-overlay p.opening-subtitle {
+    font-size: clamp(0.35rem, 1.2vw, 0.85rem);
+    font-family: 'Space Mono', monospace;
+    /* Pairing 2 */
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0 0 10px 0;
+    line-height: 1.4;
+    /* Clamp long descriptions to 3 lines max */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.overlay-actions {
+    margin-top: 0%;
+    /* Replaced 'auto' to bring it closer to the subtitle */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .opening-action {
     position: relative;
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 20px;
+    /* Scales with the image the same way text does */
+    width: clamp(24px, 4vw, 50px);
+    height: clamp(24px, 4vw, 50px);
+    margin: 0 auto 10px;
 }
 
 .opening-fs-btn {
@@ -1182,7 +1259,8 @@ li strong {
     background: rgba(255, 255, 255, 0.1);
     border: 2px solid var(--color-accent);
     color: var(--color-accent);
-    font-size: 2rem;
+    font-size: clamp(0.5rem, 1.8vw, 1.2rem);
+    /* Scales with button size */
     cursor: pointer;
     z-index: 2;
     transition: all 0.3s ease;
@@ -1280,7 +1358,7 @@ li strong {
 
 /* Continue Button - Explicit Selector */
 button.btn-continue,
-.interactive-simulation-container .btn-continue {
+.module-interactive-simulation .btn-continue {
     margin-top: 1rem;
     align-self: flex-end;
     background: transparent;
@@ -1299,7 +1377,7 @@ button.btn-continue,
 }
 
 button.btn-continue:hover,
-.interactive-simulation-container .btn-continue:hover {
+.module-interactive-simulation .btn-continue:hover {
     background: var(--color-accent) !important;
     color: #000 !important;
     box-shadow: 0 0 20px rgba(0, 217, 255, 0.6);
@@ -1318,28 +1396,46 @@ button.btn-continue:hover,
 }
 
 /* Continue Button - Scoped to Sim */
-.interactive-simulation-container .btn-continue {
+.module-interactive-simulation .btn-continue {
     margin-top: 1rem;
     align-self: flex-end;
-    background: transparent;
-    border: 1px solid var(--color-accent);
+    background: rgba(0, 217, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 217, 255, 0.4);
     color: var(--color-accent);
-    padding: 8px 24px;
+    padding: 12px 36px;
     font-family: 'Space Mono', monospace;
-    font-weight: bold;
+    font-weight: 700;
+    font-size: 1.1rem;
     text-transform: uppercase;
+    letter-spacing: 2px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     /* Neon Glow */
-    box-shadow: 0 0 5px rgba(0, 217, 255, 0.2);
+    box-shadow: 0 0 15px rgba(0, 217, 255, 0.1), inset 0 0 10px rgba(0, 217, 255, 0.05);
+    border-radius: 4px;
     /* Hidden by default (logic toggles display:block) */
     display: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
-.interactive-simulation-container .btn-continue:hover {
-    background: var(--color-accent);
-    color: #000;
-    box-shadow: 0 0 15px rgba(0, 217, 255, 0.6);
+.module-interactive-simulation .btn-continue:hover {
+    background: rgba(0, 217, 255, 0.15);
+    color: #fff;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 25px rgba(0, 217, 255, 0.4), inset 0 0 15px rgba(0, 217, 255, 0.2);
+    transform: translateY(-2px) scale(1.02);
+}
+
+.module-interactive-simulation .btn-continue span {
+    font-size: 0.9em;
+    transition: transform 0.3s ease;
+}
+
+.module-interactive-simulation .btn-continue:hover span {
+    transform: translateX(4px);
 }
 
 /* Bottom Sidebar, Artifact Nodes, & Timeline Markers Removed */
@@ -1526,27 +1622,17 @@ button.btn-continue:hover,
     font-size: var(--font-size-sm);
 }
 
-/* ========== Opening Screen Title Styling ========== */
-.opening-screen h1 {
-    font-size: clamp(24px, 5vw, 48px);
-    font-weight: 800;
-    color: var(--color-accent);
-    text-align: center;
-    margin-bottom: var(--space-md);
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    text-shadow: 0 0 30px var(--color-accent-glow), 0 0 60px var(--color-accent-glow);
-    animation: titlePulse 3s ease-in-out infinite;
-}
+/* ========== Opening Screen Title Styling (Now handled by .lesson-overlay h1) ========== */
+/* .opening-screen h1 merged into .lesson-overlay block */
 
 @keyframes titlePulse {
 
     0%,
     100% {
-        text-shadow: 0 0 30px var(--color-accent-glow), 0 0 60px var(--color-accent-glow);
+        text-shadow: 0 0 8px rgba(0, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.4);
     }
 
     50% {
-        text-shadow: 0 0 40px var(--color-accent-glow), 0 0 80px var(--color-accent-glow), 0 0 100px var(--color-accent-glow);
+        text-shadow: 0 0 12px rgba(0, 255, 255, 1), 0 0 30px rgba(0, 255, 255, 0.6), 0 0 50px rgba(0, 255, 255, 0.2);
     }
 }

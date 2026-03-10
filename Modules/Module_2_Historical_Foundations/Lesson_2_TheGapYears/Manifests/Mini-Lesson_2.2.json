@@ -1,5 +1,6 @@
-{
-    "title": "Meditation Apps—Normalizing Consciousness Tech",
+﻿{
+    "id": "mini_lesson_2_2_2",
+    "title": "Meditation Appsâ€”Normalizing Consciousness Tech",
     "description": "How meditation apps built the cultural and commercial foundation for cyberdelics by normalizing the use of technology for consciousness work.",
     "theme": {
         "primaryColor": "#5900ff",
@@ -20,12 +21,12 @@
                             "alt": "Clean product photography showing smartphone displaying Headspace app interface alongside another phone showing Calm app, both screens showing meditation timers and peaceful nature imagery, modern minimalist aesthetic, soft lighting, representing the normalization of digital meditation tools."
                         },
                         "mediaLayout": "right",
-                        "content": "<p>Headspace (2010) was one of the first meditation apps to achieve mainstream success. Created by former Buddhist monk Andy Puddicombe, it offered guided meditations in 10-minute sessions, gamified progress tracking, beautiful friendly interfaces, and subscription models. By 2015, Headspace had millions of users—people who would have said meditation was \"too hippie\" were now paying $10/month for an app guiding their practice. Calm (2012) followed quickly, emphasizing sleep stories, nature sounds, and minimalist design. By 2019, Calm was valued at $1 billion—the first meditation \"unicorn.\"</p>",
+                        "content": "<p>Headspace (2010) was one of the first meditation apps to achieve mainstream success. Created by former Buddhist monk Andy Puddicombe, it offered guided meditations in 10-minute sessions, gamified progress tracking, beautiful friendly interfaces, and subscription models. By 2015, Headspace had millions of usersâ€”people who would have said meditation was \"too hippie\" were now paying $10/month for an app guiding their practice. Calm (2012) followed quickly, emphasizing sleep stories, nature sounds, and minimalist design. By 2019, Calm was valued at $1 billionâ€”the first meditation \"unicorn.\"</p>",
                         "triggerLabel": "Cultural Shift"
                     },
                     {
                         "title": "What They Normalized",
-                        "content": "<p>The success of meditation apps accomplished something crucial: they made \"using technology for consciousness\" culturally acceptable. Before meditation apps, meditation was perceived as religious or spiritual practice, and technology was opposed to mindfulness—you meditated to escape screens. After meditation apps, millions used technology for meditation daily. \"Mindfulness\" became mainstream wellness tool, tech companies added wellness features (Apple Breathe, Google Mindfulness), and consciousness work through technology became normal rather than contradictory.</p>",
+                        "content": "<p>The success of meditation apps accomplished something crucial: they made \"using technology for consciousness\" culturally acceptable. Before meditation apps, meditation was perceived as religious or spiritual practice, and technology was opposed to mindfulnessâ€”you meditated to escape screens. After meditation apps, millions used technology for meditation daily. \"Mindfulness\" became mainstream wellness tool, tech companies added wellness features (Apple Breathe, Google Mindfulness), and consciousness work through technology became normal rather than contradictory.</p>",
                         "triggerLabel": "Business Proof"
                     },
                     {
@@ -91,7 +92,7 @@
                     },
                     {
                         "id": "q1_correct",
-                        "narrative": "<p><strong>Correct!</strong> Before meditation apps, technology and consciousness work seemed opposed—you meditated to escape screens. After meditation apps, millions used technology daily for meditation. \"Consciousness tech\" became normal category. When VR for consciousness emerged, people already comfortable with meditation apps weren't hostile to the idea. Cultural acceptance of one form of consciousness tech prepared ground for another.</p>",
+                        "narrative": "<p><strong>Correct!</strong> Before meditation apps, technology and consciousness work seemed opposedâ€”you meditated to escape screens. After meditation apps, millions used technology daily for meditation. \"Consciousness tech\" became normal category. When VR for consciousness emerged, people already comfortable with meditation apps weren't hostile to the idea. Cultural acceptance of one form of consciousness tech prepared ground for another.</p>",
                         "choices": [
                             {
                                 "id": "next",
@@ -150,7 +151,7 @@
                     },
                     {
                         "id": "q2_feedback_a",
-                        "narrative": "<p><strong>Incorrect.</strong> Price wasn't the main limitation—at $10/month, meditation apps were quite accessible. The limitations were about depth and immersion: phones distract with notifications, audio-only guidance doesn't fully engage attention, solo practice lacks community, and many users plateau. VR could address these limitations through full immersion, elimination of distractions, and social features.</p>",
+                        "narrative": "<p><strong>Incorrect.</strong> Price wasn't the main limitationâ€”at $10/month, meditation apps were quite accessible. The limitations were about depth and immersion: phones distract with notifications, audio-only guidance doesn't fully engage attention, solo practice lacks community, and many users plateau. VR could address these limitations through full immersion, elimination of distractions, and social features.</p>",
                         "choices": [
                             {
                                 "id": "retry",
@@ -177,7 +178,7 @@
                     },
                     {
                         "id": "q2_feedback_d",
-                        "narrative": "<p><strong>Incorrect.</strong> Meditation apps were deliberately designed to be extremely user-friendly—this was one of their strengths. Anyone who could use a smartphone could use meditation apps. Technical complexity wasn't a limitation. The limitations were about immersion depth and distraction management, not usability.</p>",
+                        "narrative": "<p><strong>Incorrect.</strong> Meditation apps were deliberately designed to be extremely user-friendlyâ€”this was one of their strengths. Anyone who could use a smartphone could use meditation apps. Technical complexity wasn't a limitation. The limitations were about immersion depth and distraction management, not usability.</p>",
                         "choices": [
                             {
                                 "id": "retry",

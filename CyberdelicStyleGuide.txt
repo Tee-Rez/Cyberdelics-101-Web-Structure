@@ -1,0 +1,544 @@
+**CYBERDELICS 101**
+
+Writing Style Guide
+
+For Claude and Content Team Use
+
+Cyberdelic Nexus \| v1.0 \| 2026
+
+**Purpose of This Document**
+
+This style guide governs all written content produced for Cyberdelics
+101. It applies to Progressive Disclosure panels, scenario narratives,
+quiz questions, mini-lesson descriptions, module summaries, and any
+other instructional text. Claude should treat this document as the
+primary reference before drafting any course content.
+
+The guide has two layers. The first is a universal foundation that
+applies to every piece of writing in the course regardless of module.
+The second is a set of module-specific tonal adjustments that shift the
+register depending on what a given module is teaching.
+
+**Part 1: Universal Writing Foundation**
+
+These principles apply everywhere in the course, in every module, in
+every method type. They do not change.
+
+**1.1 The Base Voice**
+
+Write like a trusted practitioner with deep knowledge who respects the
+learner as an intelligent adult. The instructor is present but not the
+center. The learner\'s experience and growth is the point.
+
++-----------------------------------------------------------------------+
+| **THE VOICE IN ONE SENTENCE**                                         |
+|                                                                       |
+| Warm, precise, honest, and direct, written by someone who has been    |
+| here before and genuinely wants the learner to understand, not just   |
+| consume.                                                              |
++-----------------------------------------------------------------------+
+
+**Four Core Attributes**
+
+-   Warm but not effusive. Show care for the learner without performing
+    enthusiasm. Never use words like \'amazing\' or \'exciting\' to
+    describe content. Let the content speak.
+
+-   Precise but not academic. Use exact terminology. Define it once and
+    use it freely after that. Do not wrap precision in hedging language
+    or jargon inflation.
+
+-   Honest about uncertainty. The cyberdelic field has validated science
+    and emerging science. Be clear about which is which. Experienced
+    practitioners have finely tuned detectors for overclaiming.
+
+-   Direct but not blunt. Get to the point without being curt. Write
+    like someone who values the learner\'s time.
+
+**1.2 What Claude Should Never Do**
+
+These are hard rules. They apply everywhere in the course without
+exception.
+
+**Formatting Rules**
+
+-   Never use em dashes (\--) in any content. Replace with a period,
+    comma, or rewrite the sentence.
+
+-   Never use bullet points inside Progressive Disclosure panels or
+    scenario narratives. Write in prose.
+
+-   Never use headers inside a panel or scenario. Structure should come
+    from the writing, not from visual hierarchy within a single
+    component.
+
+-   Never bold words for emphasis inside running prose. If something
+    matters, the sentence structure should communicate that.
+
+**Language Rules**
+
+-   Never use AI filler phrases: \'It\'s worth noting,\' \'It\'s
+    important to remember,\' \'Importantly,\' \'Notably,\'
+    \'Fundamentally,\' \'At its core,\' \'In essence.\'
+
+-   Never use the construction \'not just X but Y\' as a rhetorical
+    device. State the full idea directly.
+
+-   Never write \'This isn\'t just historical trivia\' or similar
+    defensive framings. If the content matters, show why. Don\'t argue
+    for its relevance.
+
+-   Never refer to the learner as \'students.\' Use \'learners,\'
+    \'practitioners,\' \'you,\' or no label at all.
+
+-   Never write sentences that exist only to transition. If a transition
+    is needed, the last sentence of a section should do double duty:
+    conclude the thought and open the next one.
+
+**Structural Rules**
+
+-   Never begin a panel or paragraph with the word \'So.\'
+
+-   Never end a panel with a rhetorical question that the next panel
+    answers. This pattern feels manipulative with repeated use. Use it
+    at most once per lesson.
+
+-   Never use numbered lists inside prose. Write lists in natural
+    language: \'three things matter here: X, Y, and Z.\'
+
+**1.3 Sentence Construction**
+
+Vary sentence length deliberately. Short sentences land ideas. Longer
+sentences build relationships between ideas, show how one thing causes
+or complicates another, and give the learner time to hold complexity.
+
+One thought per sentence is a good default. When a sentence needs to
+carry two thoughts, connect them with because, which, or although, not
+with a semicolon or an em dash.
+
++-----------------------------------------------------------------------+
+| **Sentence length and rhythm**                                        |
+|                                                                       |
+| **AVOID:** It\'s important to remember that the technology matters,   |
+| but it isn\'t the only thing that matters; the intention behind the   |
+| use matters too, and this is something many people overlook.          |
+|                                                                       |
+| **USE:** The technology is the medium. What determines whether an     |
+| experience is cyberdelic is the intention behind it.                  |
++-----------------------------------------------------------------------+
+
+**1.4 Handling Complexity**
+
+When content is genuinely complex, slow down and build it. Do not rush
+through hard ideas with summary language. The learner can handle
+complexity as long as it is presented one layer at a time.
+
+When content is simple, say it simply. The temptation to elaborate on
+straightforward points is a form of padding. Resist it.
+
++-----------------------------------------------------------------------+
+| **THE COMPLEXITY TEST**                                               |
+|                                                                       |
+| Ask: could a smart person who just learned this concept explain it to |
+| someone else after reading this panel? If yes, the writing is         |
+| working. If no, it is either too dense or too vague.                  |
++-----------------------------------------------------------------------+
+
+**1.5 Tone Toward the Learner**
+
+The course serves two audiences simultaneously: people encountering
+cyberdelics for the first time and people who already have deep
+experience in adjacent fields like psychedelic facilitation, meditation
+instruction, neuroscience, or VR development.
+
+Write for the experienced learner\'s intelligence and the newer
+learner\'s orientation. This means: define terms once, precisely, then
+use them freely. Do not re-explain concepts that have already been
+taught. Do not condescend to either group by over-explaining the obvious
+or under-explaining the difficult.
+
++----------------------------------+-----------------------------------+
+| **For Newer Learners**           | **For Experienced Learners**      |
+|                                  |                                   |
+| Precise definitions. Clear       | Insider framing. Honest nuance.   |
+| examples. Context that explains  | Acknowledgment of what the field  |
+| why something matters before     | is still figuring out.            |
+| explaining what it is.           |                                   |
++----------------------------------+-----------------------------------+
+
+**Part 2: Module-Specific Voice Adjustments**
+
+Each module has a distinct purpose and learner state. The base voice
+stays constant, but the register, the degree of intellectual weight, and
+the emotional texture shift depending on where the learner is in the
+course arc.
+
++-----------------------------------------------------------------------+
+| **Module 1**                                                          |
+|                                                                       |
+| **Defining Cyberdelics**                                              |
+|                                                                       |
+| Voice: The Precise Guide                                              |
++-----------------------------------------------------------------------+
+
+**What This Module Is Doing**
+
+Module 1 builds the foundational framework. The learner is orienting.
+They may have assumptions, prior experience with psychedelics or
+meditation, or no context at all. The writing must be precise enough to
+correct misconceptions while being open enough to welcome all starting
+points.
+
+**Voice Adjustments**
+
+-   Lean toward definitional precision. When you use a term, define it
+    fully the first time.
+
+-   Be deliberate about spectrum thinking. Avoid binary framings. The
+    field lives in gradations.
+
+-   Use the building-block sentence pattern: state the concept simply,
+    add one layer, then show why it matters.
+
+-   Scenarios should feel like real moments of confusion or decision,
+    not contrived tests.
+
++-----------------------------------------------------------------------+
+| **Definitional writing in Module 1**                                  |
+|                                                                       |
+| **AVOID:** So basically a cyberdelic experience is one that uses tech |
+| to get you into an altered state, which is pretty different from just |
+| using VR for gaming.                                                  |
+|                                                                       |
+| **USE:** A cyberdelic experience requires three things working        |
+| together: a digital technology as the medium, an intentional altered  |
+| state as the mechanism, and a transformational purpose as the goal.   |
+| Remove any one of them and you have something different.              |
++-----------------------------------------------------------------------+
+
++-----------------------------------------------------------------------+
+| **Module 2**                                                          |
+|                                                                       |
+| **Historical Foundations**                                            |
+|                                                                       |
+| Voice: The Knowledgeable Storyteller                                  |
++-----------------------------------------------------------------------+
+
+**What This Module Is Doing**
+
+Module 2 traces a 30-year arc from Timothy Leary\'s vision to current
+scientific validation. The learner is connecting the present to the
+past. The writing should feel like good historical narrative: grounded
+in fact, attentive to human stakes, and building toward the current
+moment as an earned arrival, not a surprise.
+
+**Voice Adjustments**
+
+-   Let the history breathe. Give key figures their complexity. Leary
+    was both visionary and controversial. Both are true. Do not resolve
+    the tension.
+
+-   Write toward the convergence. Each lesson should feel like it is
+    accumulating toward the present inflection point.
+
+-   Acknowledge what was lost during the gap years with appropriate
+    weight. Stagnation is not just context, it is part of the lesson.
+
+-   When citing research, state what was proven, not just what was
+    studied.
+
++-----------------------------------------------------------------------+
+| **Historical narrative in Module 2**                                  |
+|                                                                       |
+| **AVOID:** During the gap years, VR basically died and nothing much   |
+| happened until Oculus came along.                                     |
+|                                                                       |
+| **USE:** The 2000-2012 period looked like failure from the outside.   |
+| Commercial VR collapsed, investment dried up, and the field was       |
+| declared dead. But the underlying work continued. Displays improved   |
+| through smartphones. Neuroscience accumulated evidence on presence    |
+| and embodiment. When Oculus arrived in 2012, it landed in soil that   |
+| had been quietly prepared for a decade.                               |
++-----------------------------------------------------------------------+
+
++-----------------------------------------------------------------------+
+| **Module 3**                                                          |
+|                                                                       |
+| **Scientific Understanding**                                          |
+|                                                                       |
+| Voice: The Rigorous Explainer                                         |
++-----------------------------------------------------------------------+
+
+**What This Module Is Doing**
+
+Module 3 covers consciousness theories, neural mechanisms, and research
+evidence. The learner is encountering science that may confirm or
+challenge prior beliefs. The writing must be rigorous without being
+clinical, and honest about the difference between what is established
+and what is still emerging.
+
+**Voice Adjustments**
+
+-   Separate validated evidence from theoretical frameworks. Be explicit
+    when something is a working model versus a replicated finding.
+
+-   Use the precision-without-jargon principle most strictly here.
+    Define every technical term once. Do not rely on familiarity.
+
+-   Acknowledge where the science is early or contested. Experienced
+    researchers and clinicians in the audience will notice overclaiming
+    immediately.
+
+-   Connect mechanisms to experience. After explaining a neural or
+    psychological concept, show what it means for what a person actually
+    feels or does during a cyberdelic session.
+
++-----------------------------------------------------------------------+
+| **SCIENCE CREDIBILITY RULE FOR MODULE 3**                             |
+|                                                                       |
+| Always distinguish between: replicated and peer-reviewed findings     |
+| (state them as facts), single studies or preliminary evidence (state  |
+| them as \'early research suggests\'), and theoretical frameworks      |
+| (state them as \'one explanation is\'). Never blend these into a      |
+| single authoritative claim.                                           |
++-----------------------------------------------------------------------+
+
++-----------------------------------------------------------------------+
+| **Module 4**                                                          |
+|                                                                       |
+| **Current Applications**                                              |
+|                                                                       |
+| Voice: The Practical Navigator                                        |
++-----------------------------------------------------------------------+
+
+**What This Module Is Doing**
+
+Module 4 is a survey of the current platform landscape. The learner is
+building practical knowledge they can use immediately. The writing
+should feel like guidance from someone who knows the space deeply and is
+helping the learner navigate it efficiently, without a sales pitch and
+without unnecessary hedging.
+
+**Voice Adjustments**
+
+-   Be direct about platform strengths and limitations. The learner
+    needs to make real recommendations to real people.
+
+-   Use comparison language confidently. \'TRIPP is better for daily
+    practice than Isness-D, which is designed for facilitated deep
+    work\' is more useful than describing each in isolation.
+
+-   Acknowledge rapid evolution. The platform landscape shifts. Frame
+    recommendations as \'current\' without undermining their usefulness.
+
+-   Scenario framing should emphasize matching, not judgment. The goal
+    is finding the right tool for the right person, not rating platforms
+    against each other.
+
++-----------------------------------------------------------------------+
+| **Practical navigation in Module 4**                                  |
+|                                                                       |
+| **AVOID:** There are many great platforms available and each one has  |
+| its own unique strengths and benefits that make it suitable for       |
+| different use cases.                                                  |
+|                                                                       |
+| **USE:** TRIPP works best for daily practice. It is designed for      |
+| repetition, not depth. For a client building a consistent morning     |
+| routine, it is probably the right starting point. For someone ready   |
+| for a deeper transformational session, Maloka or Isness-D is the      |
+| better fit, and both require a facilitator.                           |
++-----------------------------------------------------------------------+
+
++-----------------------------------------------------------------------+
+| **Module 5**                                                          |
+|                                                                       |
+| **The Cyberdelic Ecosystem**                                          |
+|                                                                       |
+| Voice: The Field Builder                                              |
++-----------------------------------------------------------------------+
+
+**What This Module Is Doing**
+
+Module 5 shifts from consumer and practitioner perspective to
+field-level thinking. The learner is now being invited to see themselves
+as a participant in an emerging ecosystem, not just a user of its tools.
+The writing should feel like a conversation between colleagues who are
+building something together.
+
+**Voice Adjustments**
+
+-   Write from inside the field. Use \'the field\' language: \'what the
+    field still needs,\' \'where the ecosystem is weak,\' \'what this
+    moment asks of practitioners.\'
+
+-   Be honest about systemic challenges. Insurance barriers, training
+    gaps, and economic tensions are real. Presenting them clearly builds
+    credibility and gives learners a realistic picture of what they are
+    entering.
+
+-   Connect pathway content to identity, not just job descriptions. The
+    learner deciding whether to pursue facilitation or research needs
+    more than a list of requirements. They need a sense of what the work
+    actually feels like and what it demands.
+
+-   The final lessons should feel earned. The learner has completed four
+    modules. The tone here can carry more weight, more confidence, more
+    willingness to say \'you are part of this now.\'
+
++-----------------------------------------------------------------------+
+| **MODULE 5 TONE SHIFT**                                               |
+|                                                                       |
+| Modules 1 through 4 teach the learner about cyberdelics. Module 5     |
+| invites them into it. The final writing in this module should feel    |
+| like a hand extended, not a door opened. The learner has done the     |
+| work. Meet them there.                                                |
++-----------------------------------------------------------------------+
+
+**Part 3: Method-Specific Writing Guidance**
+
+**3.1 Progressive Disclosure Panels**
+
+Each panel carries one idea. Write toward completion: the panel should
+feel finished, not like it is waiting for the next panel to make sense.
+The reveal sequence should feel like genuine discovery, not artificial
+withholding.
+
+-   Panel 1 of any sequence should earn attention. Give the learner a
+    reason to continue within the first two sentences.
+
+-   The final panel should not just summarize. It should reframe. The
+    learner should see the earlier panels differently after reading the
+    last one.
+
+-   Do not write more than 120 words per panel. If a concept requires
+    more space, break it into two panels with distinct angles.
+
+**3.2 Mini-Lesson Descriptions (Framer Text)**
+
+These paragraphs appear before embedded components and set the
+learner\'s purpose for engaging. Write them as if you are speaking
+directly to someone who just asked: \'What am I about to learn and why
+should I care?\'
+
+-   Three to five sentences. No more.
+
+-   Answer the purpose question in sentence one or two.
+
+-   End with something that makes the learner want to begin, not a
+    summary of what they will learn, but a reason to engage with it.
+
+-   Do not use the phrase \'you will learn\' or \'in this mini-lesson.\'
+
+**3.3 Scenario Narratives**
+
+Scenarios put the learner in a decision moment. The situation should
+feel realistic enough that the learner draws on actual judgment, not
+just content recall.
+
+-   Set the scene in two or three sentences. Give just enough context
+    for the decision to feel real.
+
+-   The choice should be genuinely difficult. If the correct answer is
+    obvious, the scenario is not doing its job.
+
+-   Feedback on wrong answers should be educational, not punitive.
+    Explain why the choice misses something important, not just that it
+    was incorrect.
+
+-   Feedback on correct answers should add something the learner did not
+    already know, not just confirm they were right.
+
+**3.4 Quiz Questions**
+
+Scenario-based questions are stronger than factual recall questions at
+every level of the course. When a factual question is necessary, embed
+it in a situation where the fact matters.
+
+-   Wrong answer options should represent real misconceptions, not
+    obviously bad choices.
+
+-   The explanation for each wrong answer should teach something, not
+    just repeat the correct answer.
+
+-   Question stems should be clear on first read. If a learner re-reads
+    to understand the question, the stem needs revision.
+
+**3.5 Knowledge Construction**
+
+These drag-and-drop activities should represent genuine synthesis, not
+categorization of things already explicitly labeled. The learner should
+be doing something with their knowledge, not just recognizing it.
+
+-   Completion messages should feel like genuine acknowledgment of the
+    work done, not a trophy for clicking correctly.
+
+-   Distractor items should be plausible enough that the learner thinks
+    about them. If the distractors are too obviously wrong, the exercise
+    has no intellectual value.
+
+**Part 4: Quick Reference**
+
+**The Universal Prompt**
+
+When beginning any writing task for this course, Claude should start
+from this orientation:
+
++-----------------------------------------------------------------------+
+| **USE THIS AS YOUR WRITING ORIENTATION**                              |
+|                                                                       |
+| Write like a trusted practitioner with deep knowledge who respects    |
+| the learner\'s intelligence. Be warm but not effusive. Be precise but |
+| not academic. Acknowledge what the field does not yet know. When      |
+| something is genuinely complex, slow down and build it properly. When |
+| something is simple, say it simply. Never use bullet points where     |
+| sentences work better. No em dashes. No AI filler phrases. The        |
+| instructor is present but the learner\'s journey is the point.        |
++-----------------------------------------------------------------------+
+
+**Banned Phrases Reference**
+
+These phrases should never appear in course content:
+
+  ----------------------------------- -----------------------------------
+  **Banned Filler Phrases**           **Banned Formatting**
+
+  It\'s worth noting                  Em dashes (\--)
+
+  It\'s important to remember         Bullet points in prose
+
+  Importantly                         Bold for emphasis in running text
+
+  Notably                             Headers inside components
+
+  Fundamentally                       Numbered lists inside prose
+
+  At its core                         \"So,\" as a paragraph opener
+
+  In essence                          Rhetorical questions used
+                                      repeatedly
+
+  This isn\'t just\...                \"You will learn\" constructions
+  ----------------------------------- -----------------------------------
+
+**Module Voice Summary**
+
+  ---------------- ------------------ ---------------------------------------
+  **Module**       **Voice Label**    **Key Shift From Base**
+
+  **M1: Defining** The Precise Guide  Definitional precision, spectrum
+                                      thinking, building-block sentences
+
+  **M2:            The Knowledgeable  Narrative momentum, human stakes,
+  Historical**     Storyteller        earned convergence
+
+  **M3:            The Rigorous       Validated vs. emerging, mechanisms
+  Scientific**     Explainer          connected to experience
+
+  **M4:            The Practical      Direct comparison, actionable guidance,
+  Applications**   Navigator          realistic framing
+
+  **M5:            The Field Builder  Inside-the-field voice, identity not
+  Ecosystem**                         just information, earned weight
+  ---------------- ------------------ ---------------------------------------
+
+Cyberdelic Nexus \| Cyberdelics 101 Production Team \| Internal Use Only

@@ -41,7 +41,7 @@
             console.log(`[LessonRunner] Loading Lesson: ${manifest.title}`);
             this._applyTheme(manifest.theme);
 
-            this._showOpeningScreen(manifest.title, () => {
+            this._showOpeningScreen(manifest, () => {
                 if (window.LessonUI) {
                     window.LessonUI.init(this.container);
                     window.LessonUI.update(manifest.title, 0);
@@ -61,19 +61,49 @@
             });
         }
 
-        _showOpeningScreen(title, onStart) {
+        _showOpeningScreen(manifest, onStart) {
             this.container.innerHTML = '';
             const screen = document.createElement('div');
             screen.className = 'opening-screen';
+
+            // Derive super title (Module # · Mini-Lesson #) from manifest ID
+            // Expected id format: mini_lesson_3_3_1  → "Module 3 · Mini-Lesson 3.3.1"
+            let superTitle = '';
+            if (manifest.id) {
+                const nums = manifest.id.replace(/^mini_lesson_/, '').split('_').filter(Boolean);
+                if (nums.length >= 2) {
+                    const moduleNum = nums[0];
+                    const lessonNum = nums.join('.');
+                    superTitle = `Module ${moduleNum} &middot; Mini-Lesson ${lessonNum}`;
+                }
+            }
+
+            const mainTitle = manifest.title || 'Cyberdelics 101';
+            const subTitle = manifest.description || '';
+
+            // Dynamically determine asset base path from script tag
+            let basePath = '../';
+            const scriptEl = document.querySelector('script[src*="lesson-runner.js"]');
+            if (scriptEl) {
+                basePath = scriptEl.getAttribute('src').split('core/lesson-runner.js')[0];
+            }
+
             screen.innerHTML = `
-                <div class="opening-content">
-                    <h1>${title || 'Cyberdelics 101'}</h1>
-                    <p class="opening-subtitle">This class works best within full screen mode.</p>
-                    <div class="opening-action">
-                        <button class="opening-fs-btn" title="Enter Full Screen">⛶</button>
-                        <div class="opening-pulse"></div>
+                <div class="course-header">
+                    <img src="${basePath}assets/images/LessonTitleV2.jpg" class="header-bg" alt="Cyberdelic Academy Template">
+                    <div class="lesson-overlay">
+                        ${superTitle ? `<h2>${superTitle}</h2>` : ''}
+                        <h1>${mainTitle}</h1>
+                        ${subTitle ? `<p class="opening-subtitle">${subTitle}</p>` : ''}
+
+                        <div class="overlay-actions">
+                            <p class="opening-hint">Click the icon to begin</p>
+                            <div class="opening-action">
+                                <button class="opening-fs-btn" title="Enter Full Screen">⛶</button>
+                                <div class="opening-pulse"></div>
+                            </div>
+                        </div>
                     </div>
-                    <p class="opening-hint">Click the icon to begin</p>
                 </div>
             `;
             this.container.appendChild(screen);
@@ -162,14 +192,17 @@
             // Special HTML injection for Interactive Simulation (needs viewport/controls)
             if (type === 'interactive-simulation') {
                 const showContinue = !moduleConfig.hideContinueButton;
+                moduleContainer.style.display = 'flex';
+                moduleContainer.style.flexDirection = 'column';
+                moduleContainer.style.height = '100%';
                 moduleContainer.innerHTML = `
-                    <div class="interactive-simulation-container" style="display: flex; flex-direction: column; height: 100%; overflow-y: auto;">
+                    <div class="interactive-simulation-container" style="display: flex; flex-direction: column; flex: 1; position: relative; min-height: 60vh;">
+                        <!-- The target engine will mount here and wipe this inner content -->
                         <div class="sim-header" style="flex: 0 0 auto; padding-bottom: 0.5rem;">
                             <h3>${moduleConfig.title || ''}</h3>
                         </div>
                         <div class="sim-controls" style="flex: 0 0 auto; padding-bottom: 1rem;"></div>
-                        <div class="sim-viewport" style="flex: 1; border: 1px solid #333; position: relative; overflow: hidden; min-height: 800px; border-radius: 8px;"></div>
-                        <button class="btn-continue" style="margin-top: 1rem; ${showContinue ? '' : 'display:none;'}">Continue</button>
+                        <div class="sim-viewport" style="flex: 1; border: 1px solid #333; position: relative; overflow: hidden; border-radius: 8px;"></div>
                     </div>
                 `;
             } else if (moduleConfig.contentHTML) {
@@ -182,8 +215,25 @@
             // Pass the ENTIRE moduleConfig + runtimeOptions for maximum robustness
             const options = { ...moduleConfig, ...runtimeOptions };
 
-            instance.init(moduleContainer, options);
+            // Only pass the inner simulation container so engines don't delete our footer
+            const targetContainerForEngine = moduleContainer.querySelector('.interactive-simulation-container') || moduleContainer;
+            instance.init(targetContainerForEngine, options);
             this.activeModule = instance;
+
+            // Re-inject the Continue Button AFTER the engine initializes so it survives the innerHTML sweep
+            if (type === 'interactive-simulation') {
+                const showContinue = !moduleConfig.hideContinueButton;
+                const footer = document.createElement('div');
+                footer.className = 'sim-footer';
+                footer.style.flex = '0 0 auto';
+                footer.style.display = 'flex';
+                footer.style.justifyContent = 'center'; // Centered
+                footer.style.padding = '1.5rem 0';
+                // Removed marginTop: 'auto' so it hugs the bottom of the simulation canvas rather than pushing to the bottom of the screen
+                footer.innerHTML = `<button class="btn-continue" style="display: ${showContinue ? 'block' : 'none'};">Continue <span>▶</span></button>`;
+
+                targetContainerForEngine.appendChild(footer);
+            }
 
             instance.on('complete', () => {
                 console.log(`[LessonRunner] Module ${moduleConfig.id} Complete`);
@@ -213,7 +263,7 @@
         _finishLesson() {
             const container = window.LessonUI ? window.LessonUI.getContentContainer() : this.container;
             container.innerHTML = `
-                <div class="lesson-complete-screen" style="display:flex; flex-direction:column; align-items:center; justify-content:center; height:100%; text-align:center;">
+                    < div class="lesson-complete-screen" style = "display:flex; flex-direction:column; align-items:center; justify-content:center; height:100%; text-align:center;" >
                     <h1 style="font-size:3rem; margin-bottom:1rem; color:var(--color-accent);">LESSON COMPLETE</h1>
                     <p style="font-size:1.2rem; margin-bottom:2rem; max-width:600px;">
                         You have finished: <br>
@@ -222,8 +272,8 @@
                     <div style="display:flex; justify-content:center;">
                         <button class="btn-primary" onclick="if(document.fullscreenElement) document.exitFullscreen(); location.reload();">RETURN ⮌</button>
                     </div>
-                </div>
-            `;
+                </div >
+                    `;
             if (window.LessonUI) window.LessonUI.setBackAction(null);
         }
 

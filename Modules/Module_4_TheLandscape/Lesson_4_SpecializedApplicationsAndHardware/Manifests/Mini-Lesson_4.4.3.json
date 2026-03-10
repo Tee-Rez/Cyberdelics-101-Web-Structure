@@ -1,4 +1,5 @@
-{
+﻿{
+    "id": "mini_lesson_4_4_3",
     "title": "Creativity & Experimental Applications",
     "description": "Explores the frontier of cyberdelics: creativity, experimental states (OBE, NDE), research validation, and ethical facilitation.",
     "theme": {
@@ -25,7 +26,7 @@
                             "src": "placeholder-experimental-vr.jpg",
                             "alt": "Abstract VR scene depicting ego dissolution",
                             "position": "left",
-                            "aiPrompt": "Abstract experimental VR consciousness scene — person in VR headset experiencing profound altered state (body language shows both opening and vulnerability), environment shows dissolving boundaries and geometric abstractions representing ego dissolution, sense of intensity but contained space, facilitator presence subtly visible in background (protective container), mystical aesthetic with sacred geometry, both expansive and grounded simultaneously, 16:9 aspect ratio"
+                            "aiPrompt": "Abstract experimental VR consciousness scene â€” person in VR headset experiencing profound altered state (body language shows both opening and vulnerability), environment shows dissolving boundaries and geometric abstractions representing ego dissolution, sense of intensity but contained space, facilitator presence subtly visible in background (protective container), mystical aesthetic with sacred geometry, both expansive and grounded simultaneously, 16:9 aspect ratio"
                         },
                         "triggerLabel": "Riva's Research (2025)"
                     },
@@ -92,7 +93,7 @@
                     },
                     {
                         "id": "outcome_proceed",
-                        "narrative": "<h3>⚠ Dangerous (Negligent)</h3><p>You book the session. Marcus has a massive, destabilizing release of repressed emotion. Without navigation skills or a therapist, he leaves overwhelmed and possibly retraumatized.</p><p><strong>Why:</strong> Intensity without preparation is recklessness, not facilitation.</p>",
+                        "narrative": "<h3>âš  Dangerous (Negligent)</h3><p>You book the session. Marcus has a massive, destabilizing release of repressed emotion. Without navigation skills or a therapist, he leaves overwhelmed and possibly retraumatized.</p><p><strong>Why:</strong> Intensity without preparation is recklessness, not facilitation.</p>",
                         "choices": [
                             {
                                 "id": "retry_p",
@@ -103,7 +104,7 @@
                     },
                     {
                         "id": "outcome_defer",
-                        "narrative": "<h3>⚠ Missed Opportunity</h3><p>You tell him to wait 6 months. He feels dismissed and likely goes to a less ethical provider who will say yes immediately.</p><p><strong>Why:</strong> You held the boundary but offered no bridge. You lost the chance to help him prepare.</p>",
+                        "narrative": "<h3>âš  Missed Opportunity</h3><p>You tell him to wait 6 months. He feels dismissed and likely goes to a less ethical provider who will say yes immediately.</p><p><strong>Why:</strong> You held the boundary but offered no bridge. You lost the chance to help him prepare.</p>",
                         "choices": [
                             {
                                 "id": "retry_d",
@@ -114,7 +115,7 @@
                     },
                     {
                         "id": "outcome_decline",
-                        "narrative": "<h3>⚠ Too Rigid</h3><p>Refusing entirely implies he's 'broken' or incapable. It functions as gatekeeping rather than care.</p>",
+                        "narrative": "<h3>âš  Too Rigid</h3><p>Refusing entirely implies he's 'broken' or incapable. It functions as gatekeeping rather than care.</p>",
                         "choices": [
                             {
                                 "id": "retry_dec",
@@ -125,7 +126,7 @@
                     },
                     {
                         "id": "outcome_modify",
-                        "narrative": "<h3>✓ Optimal: The Graduated Path</h3><p>'Marcus, I want to support this breakthrough. But jumping to death sim with zero experience is risky. Let's start with a guided journey (Maloka) to build navigation skills, and I'd like you to connect with a therapist for the 'stuckness'. If we build that foundation for 2 months, we can revisit the intense work.'</p><p><strong>Why:</strong> Honors his intent, ensures safety, builds capacity.</p>",
+                        "narrative": "<h3>âœ“ Optimal: The Graduated Path</h3><p>'Marcus, I want to support this breakthrough. But jumping to death sim with zero experience is risky. Let's start with a guided journey (Maloka) to build navigation skills, and I'd like you to connect with a therapist for the 'stuckness'. If we build that foundation for 2 months, we can revisit the intense work.'</p><p><strong>Why:</strong> Honors his intent, ensures safety, builds capacity.</p>",
                         "choices": [
                             {
                                 "id": "finish",

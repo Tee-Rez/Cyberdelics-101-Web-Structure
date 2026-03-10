@@ -1,4 +1,5 @@
-{
+﻿{
+    "id": "mini_lesson_4_3_1",
     "title": "Why Social VR Amplifies Consciousness Work",
     "description": "The mechanisms behind social amplification: social facilitation, collective effervescence, mirror neurons, and isolation reduction.",
     "theme": {
@@ -14,7 +15,7 @@
                 "sections": [
                     {
                         "title": "Social Facilitation Theory",
-                        "content": "<p><strong>Social Facilitation Theory</strong> was first documented by psychologist Norman Triplett in 1898. He noticed that cyclists raced faster when competing against others than when alone. The presence of others heightens arousal, enhancing performance on well-learned tasks and amplifying experience intensity.</p><p>In consciousness work, this translates to deeper engagement. When meditating alone, there's no external accountability. In a group—even a virtual one—you feel a subtle pressure to stay present and honor the collective container.</p><p><strong>Practical Implication:</strong> Group sessions often produce states of focus and depth that solo practice doesn't reliably access. Humans practice better together.</p>",
+                        "content": "<p><strong>Social Facilitation Theory</strong> was first documented by psychologist Norman Triplett in 1898. He noticed that cyclists raced faster when competing against others than when alone. The presence of others heightens arousal, enhancing performance on well-learned tasks and amplifying experience intensity.</p><p>In consciousness work, this translates to deeper engagement. When meditating alone, there's no external accountability. In a groupâ€”even a virtual oneâ€”you feel a subtle pressure to stay present and honor the collective container.</p><p><strong>Practical Implication:</strong> Group sessions often produce states of focus and depth that solo practice doesn't reliably access. Humans practice better together.</p>",
                         "media": {
                             "type": "image",
                             "src": "placeholder-group-meditation.jpg",
@@ -26,12 +27,12 @@
                     },
                     {
                         "title": "Collective Effervescence",
-                        "content": "<p><strong>Collective Effervescence</strong> is sociologist Émile Durkheim's term for the intense energy and emotional unity that emerges in shared ritual. Think of a concert or church service where the 'me' becomes 'we'.</p><ul><li><strong>Boundary dissolution:</strong> Separate self weakens.</li><li><strong>Shared emotional intensity:</strong> Joy or awe amplifies.</li><li><strong>Timelessness:</strong> The group loses track of linear time.</li><li><strong>Meaning saturation:</strong> The moment feels profoundly significant.</li></ul><p>The 2020 <strong>Isness-D study</strong> found that group VR experiences produced mystical experiences comparable to moderate doses of psilocybin. It proved VR can facilitate genuine collective effervescence.</p>",
+                        "content": "<p><strong>Collective Effervescence</strong> is sociologist Ã‰mile Durkheim's term for the intense energy and emotional unity that emerges in shared ritual. Think of a concert or church service where the 'me' becomes 'we'.</p><ul><li><strong>Boundary dissolution:</strong> Separate self weakens.</li><li><strong>Shared emotional intensity:</strong> Joy or awe amplifies.</li><li><strong>Timelessness:</strong> The group loses track of linear time.</li><li><strong>Meaning saturation:</strong> The moment feels profoundly significant.</li></ul><p>The 2020 <strong>Isness-D study</strong> found that group VR experiences produced mystical experiences comparable to moderate doses of psilocybin. It proved VR can facilitate genuine collective effervescence.</p>",
                         "triggerLabel": "Mirror Neuron Activation"
                     },
                     {
                         "title": "Mirror Neuron Activation",
-                        "content": "<p><strong>Mirror neurons</strong> fire both when you perform an action and when you observe someone else doing it. They are the basis for empathy and emotional contagion.</p><p>In VR, these systems remain active even when observing avatars. When you see another avatar sit in meditation or breathe rhythmically, your brain mirrors that pattern. This creates <strong>sympathetic resonance</strong>—the group's state influences each individual, creating an upward spiral of depth and calm.</p><p><strong>Practical Implication:</strong> Facilitators must manage the group field, not just individuals, because the presence of others actively shapes the experience.</p>",
+                        "content": "<p><strong>Mirror neurons</strong> fire both when you perform an action and when you observe someone else doing it. They are the basis for empathy and emotional contagion.</p><p>In VR, these systems remain active even when observing avatars. When you see another avatar sit in meditation or breathe rhythmically, your brain mirrors that pattern. This creates <strong>sympathetic resonance</strong>â€”the group's state influences each individual, creating an upward spiral of depth and calm.</p><p><strong>Practical Implication:</strong> Facilitators must manage the group field, not just individuals, because the presence of others actively shapes the experience.</p>",
                         "triggerLabel": "Isolation Reduction"
                     },
                     {

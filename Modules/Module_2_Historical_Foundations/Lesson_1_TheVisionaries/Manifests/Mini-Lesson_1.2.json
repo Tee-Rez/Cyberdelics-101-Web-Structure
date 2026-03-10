@@ -1,4 +1,5 @@
-{
+﻿{
+    "id": "mini_lesson_2_1_2",
     "title": "The Pioneer Circle",
     "description": "Meet the pioneers who established the foundations of VR: Jaron Lanier, Brenda Laurel, and Myron Krueger.",
     "theme": {
@@ -152,7 +153,7 @@
                             {
                                 "id": "q2_c",
                                 "label": "The technology wasn't ready : displays were poor, systems were expensive ($100K+), and experiences caused motion sickness",
-                                "outcome": "quiz_complete"
+                                "outcome": "complete"
                             },
                             {
                                 "id": "q2_d",

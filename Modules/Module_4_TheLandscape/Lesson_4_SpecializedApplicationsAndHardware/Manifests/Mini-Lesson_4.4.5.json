@@ -1,4 +1,5 @@
-{
+﻿{
+    "id": "mini_lesson_4_4_5",
     "title": "Matching Hardware to User",
     "description": "Apply your knowledge of hardware tiers to real-world user scenarios in a matching exercise.",
     "theme": {
@@ -17,55 +18,55 @@
                 "categories": [
                     {
                         "id": "cat_quest3s",
-                        "label": "META QUEST 3S — Budget Entry ($300)",
+                        "label": "META QUEST 3S â€” Budget Entry ($300)",
                         "color": "#7b5cff"
                     },
                     {
                         "id": "cat_quest3",
-                        "label": "META QUEST 3 — Premium Daily ($500)",
+                        "label": "META QUEST 3 â€” Premium Daily ($500)",
                         "color": "#00d4ff"
                     },
                     {
                         "id": "cat_pico4",
-                        "label": "PICO 4 — Privacy-First ($400)",
+                        "label": "PICO 4 â€” Privacy-First ($400)",
                         "color": "#51cf66"
                     },
                     {
                         "id": "cat_visionpro",
-                        "label": "APPLE VISION PRO — Specialized ($3,500)",
+                        "label": "APPLE VISION PRO â€” Specialized ($3,500)",
                         "color": "#ffaa00"
                     }
                 ],
                 "items": [
                     {
                         "id": "user_sarah",
-                        "text": "Sarah — Budget beginner, wants low-cost TRIPP entry",
+                        "text": "Sarah â€” Budget beginner, wants low-cost TRIPP entry",
                         "correctCategory": "cat_quest3s"
                     },
                     {
                         "id": "user_rachel",
-                        "text": "Rachel — Daily 60-min practitioner, needs comfort + lib",
+                        "text": "Rachel â€” Daily 60-min practitioner, needs comfort + lib",
                         "correctCategory": "cat_quest3"
                     },
                     {
                         "id": "user_elena",
-                        "text": "Elena (Germany) — Privacy-conscious, refuses Meta",
+                        "text": "Elena (Germany) â€” Privacy-conscious, refuses Meta",
                         "correctCategory": "cat_pico4"
                     },
                     {
                         "id": "user_martinez",
-                        "text": "Dr. Martinez — Research lab, needs highest resolution",
+                        "text": "Dr. Martinez â€” Research lab, needs highest resolution",
                         "correctCategory": "cat_visionpro"
                     }
                 ],
                 "distractors": [
                     {
                         "id": "user_james",
-                        "text": "James — Already owns PS5, wants casual VR + gaming"
+                        "text": "James â€” Already owns PS5, wants casual VR + gaming"
                     },
                     {
                         "id": "user_marcus",
-                        "text": "Marcus (Teen) — Parents need strong parental controls"
+                        "text": "Marcus (Teen) â€” Parents need strong parental controls"
                     }
                 ]
             }

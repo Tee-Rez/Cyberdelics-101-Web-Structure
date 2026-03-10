@@ -1,5 +1,6 @@
-{
-    "title": "The Competition Arrives—Vive, PSVR, and the Consumer VR Explosion",
+﻿{
+    "id": "mini_lesson_2_3_2",
+    "title": "The Competition Arrivesâ€”Vive, PSVR, and the Consumer VR Explosion",
     "description": "How the emergence of competing platforms (HTC Vive, PlayStation VR, Samsung Gear VR) accelerated innovation and created a viable ecosystem for cyberdelics.",
     "theme": {
         "primaryColor": "#5900ff",
@@ -13,7 +14,7 @@
             "content": {
                 "sections": [
                     {
-                        "title": "HTC Vive—Room-Scale Revolution",
+                        "title": "HTC Viveâ€”Room-Scale Revolution",
                         "media": {
                             "type": "image",
                             "src": "../assets/images/module2/lesson3/htc_vive_roomscale.jpg",
@@ -24,12 +25,12 @@
                         "triggerLabel": "Mass Market"
                     },
                     {
-                        "title": "PlayStation VR—Mass Market Accessibility",
+                        "title": "PlayStation VRâ€”Mass Market Accessibility",
                         "content": "<p>Sony entered with PlayStation VR (2016), leveraging 100+ million PlayStation 4 owners, offering lower cost and easier setup than PC VR ($399), bringing VR to console gamers who might never buy gaming PC, and selling millions of units (far more than PC VR initially). PlayStation VR proved VR could reach beyond early adopters and tech enthusiasts. Accessibility mattered as much as capability. Mass market potential existed if barriers were lowered.</p>",
                         "triggerLabel": "Mobile"
                     },
                     {
-                        "title": "Samsung Gear VR—Mobile's Promise",
+                        "title": "Samsung Gear VRâ€”Mobile's Promise",
                         "content": "<p>Samsung Gear VR used Samsung phones in simple headset holder, developed with Oculus technology providing decent mobile VR, extremely accessible at $99 with free content, selling millions of units quickly. Quality was lower than PC VR, but convenience was much higher. It introduced VR to people who would never set up PC rig or buy console. Mobile VR showed different use cases: media consumption, casual experiences, accessible meditation and relaxation apps.</p>",
                         "triggerLabel": "Ecosystem"
                     },
