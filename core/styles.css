@@ -118,8 +118,6 @@
     justify-content: space-between;
     padding: 0 var(--space-lg);
     z-index: 100;
-    margin-left: var(--logo-size);
-    /* Clear the absolute logo */
     border-bottom: 1px solid var(--color-border);
 }
 
@@ -1209,7 +1207,7 @@ li strong {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: clamp(0.6rem, 2.8vw, 2.8rem);
+    font-size: clamp(0.6rem, 2.3vw, 2.3rem);
     font-family: 'Cloudsters', sans-serif;
     font-weight: normal;
     font-variant-ligatures: all;

@@ -197,11 +197,17 @@ svg.convergence-viz:active {
     /* allow header/footer to stack */
 }
 
-/* Header and continue buttons take full width */
+/* Header and footer take full width */
 .interactive-simulation-container[data-engine="CyberdelicConvergence"] .sim-header,
-.interactive-simulation-container[data-engine="CyberdelicConvergence"] .btn-continue {
+.interactive-simulation-container[data-engine="CyberdelicConvergence"] .sim-footer {
     width: 100%;
     flex: 0 0 100%;
+}
+
+.interactive-simulation-container[data-engine="CyberdelicConvergence"] .sim-footer {
+    position: relative;
+    z-index: 1000;
+    pointer-events: auto;
 }
 
 .interactive-simulation-container[data-engine="CyberdelicConvergence"] .sim-controls {

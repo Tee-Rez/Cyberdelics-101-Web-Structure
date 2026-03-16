@@ -89,11 +89,7 @@ class LessonUI {
         const topSection = document.createElement('div');
         topSection.className = 'cyberdeck-top-section';
 
-        // Logo Container (Left)
-        const logoContainer = document.createElement('div');
-        logoContainer.className = 'cd-top-logo-container';
-        logoContainer.innerHTML = `<img src="../assets/Gifs/rotating-string.gif" alt="Cyberdelic Asset" />`;
-        topSection.appendChild(logoContainer);
+        // Logo Container (Left) removed per user request
 
         // Header Bar (Right)
         const topBar = document.createElement('div');

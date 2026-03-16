@@ -1,0 +1,14 @@
+{
+    "id": "external_links_view",
+    "title": "External Links & Further Reading",
+    "skipOpeningScreen": true,
+    "theme": null,
+    "modules": [
+        {
+            "id": "links",
+            "title": "Further Exploration",
+            "type": "external-links",
+            "markdownPath": "Modules/Module_4_TheLandscape/Lesson_4_SpecializedApplicationsAndHardware/External-Links.md"
+        }
+    ]
+}

@@ -46,6 +46,16 @@ Used for segmented storytelling.
 *   Use `triggerLabel` for the button text (NOT `triggerText`).
 *   Images must be objects: `{ "type": "image", "src": "..." }`.
 *   Layout options: `left`, `right`, `full`.
+*   **Bullet lists for categorized items:** When a panel presents multiple named items, categories, or features (each with a bold label and explanation), always use `<ul><li><strong>Label:</strong> explanation</li></ul>` — never run them together as a single paragraph. Introduce the list with a short lead sentence, and follow with a closing sentence if needed. Do NOT write `<strong>Label:</strong> text. <strong>Next Label:</strong> more text.` in one `<p>` block.
+
+**Example — Correct (bullet list):**
+```json
+"content": "<p>The limitations were clear.</p><ul><li><strong>Distraction:</strong> phones compete for attention with notifications.</li><li><strong>Solo only:</strong> no shared experiences or community.</li></ul><p>VR could address all of these.</p>"
+```
+**Example — Incorrect (inline run-on):**
+```json
+"content": "<p>The limitations were clear. <strong>Distraction:</strong> phones compete for attention. <strong>Solo only:</strong> no shared experiences.</p>"
+```
 
 ```json
 {

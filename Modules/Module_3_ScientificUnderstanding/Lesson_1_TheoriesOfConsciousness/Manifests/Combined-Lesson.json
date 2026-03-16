@@ -250,18 +250,7 @@
                             "C": "Hardware costs have nothing to do with Integrated Information Theory. IIT is a framework about the relationship between information integration and conscious richness; it doesn't speak to production budgets. Try again with attention to what the theory actually proposes about how conscious experience quality is determined.",
                             "D": "IIT doesn't rank sensory channels against each other. It isn't a claim that sound beats visuals or vice versa. It's a framework for understanding that coherence and synchrony across channels matters more than excellence in any single one. The theory can't be used to declare a winner between audio and visual; it changes the question entirely. Try again."
                         }
-                    }
-                ]
-            }
-        },
-        {
-            "id": "quiz_3_1_2",
-            "title": "Test Your Understanding",
-            "type": "option-selector",
-            "config": {
-                "mode": "single",
-                "style": "text",
-                "questions": [
+                    },
                     {
                         "question": "A facilitator has been using the same VR environment with a client for six consecutive sessions. The client reports that the first two sessions felt profound and disorienting in a good way, but the last three have felt 'flat, like watching a familiar movie.' Based on Predictive Processing, what is the most plausible explanation?",
                         "options": [
@@ -317,18 +306,7 @@
                             "C": "Right. Embodied Cognition proposes that cognition is shaped by the whole body's interaction with its environment, not just by neural processing in isolation. In VR, the body a person inhabits is a design variable, and Stanford's research has replicated findings showing that the characteristics of a virtual body affect the person's attitudes, emotional responses, and self-perception during and after the session. This is what Nick Yee and Jeremy Bailenson called the Proteus Effect. For practitioners: avatar choice in a therapeutic session is a clinical decision, not just an aesthetic one. The body you put a client into shapes how they inhabit the experience.",
                             "D": "Pre-session preparation duration is a real variable in session design and does affect outcomes, but it's not what Embodied Cognition specifically addresses. The theory is about the relationship between body and cognition, not about temporal preparation. Try again with attention to which design variable the theory speaks to most directly."
                         }
-                    }
-                ]
-            }
-        },
-        {
-            "id": "quiz_3_1_3",
-            "title": "Test Your Understanding",
-            "type": "option-selector",
-            "config": {
-                "mode": "single",
-                "style": "text",
-                "questions": [
+                    },
                     {
                         "question": "A developer argues: 'More visual realism always improves altered state potential; the closer it looks to reality, the better.' Based on Predictive Processing, which response is most accurate?",
                         "options": [

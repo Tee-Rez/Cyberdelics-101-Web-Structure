@@ -22,7 +22,7 @@
                             "alt": "Palmer Luckey in 2012 garage workshop holding early duct tape-wrapped Oculus Rift prototype, young and enthusiastic, surrounded by electronic components and tools, documentary photography style, representing grassroots innovation."
                         },
                         "mediaLayout": "left",
-                        "content": "<p>In 2012, 19-year-old Palmer Luckey was tinkering in his parents' garage, trying to solve VR's core problems using smartphone parts and duct tape. His key insights: smartphone displays had gotten good enough with high resolution, high refresh rates, and cheap manufacturing. Phone sensors (accelerometers, gyroscopes) could track head movement accurately. Clever lens design could create wide field of view from small screens. Make it affordable by using mass-market components. His prototype, held together with duct tape, actually worked with 90+ degree field of view, low latency head tracking, decent image quality, and potential sub-$300 cost.</p>",
+                        "content": "<p>In 2012, 19-year-old Palmer Luckey was tinkering in his parents' garage, trying to solve VR's core problems using smartphone parts and duct tape. His key insights:</p><ul><li>Smartphone displays had gotten good enough with high resolution, high refresh rates, and cheap manufacturing.</li><li>Phone sensors (accelerometers, gyroscopes) could track head movement accurately.</li><li>Clever lens design could create wide field of view from small screens.</li><li>Make it affordable by using mass-market components.</li></ul><p>His prototype, held together with duct tape, actually worked with 90+ degree field of view, low latency head tracking, decent image quality, and potential sub-$300 cost.</p>",
                         "triggerLabel": "The Kickstarter"
                     },
                     {
@@ -43,12 +43,12 @@
                     },
                     {
                         "title": "Why This Time Was Different",
-                        "content": "<p>Several key differences explain why this revival succeeded where 1990s failed. <strong>Display technology:</strong> 1080x1200 per eye versus 320x200 in 1990s, 90 Hz refresh versus 30-60 Hz, OLED with fast pixel switching versus slow LCD. <strong>Tracking:</strong> sub-20ms latency versus 50-100ms, sub-millimeter precision, inside-out tracking possible. <strong>Processing power:</strong> GPUs could render complex 3D at 90 FPS, CPUs could handle physics, AI, and networking simultaneously. <strong>Weight and comfort:</strong> ~500 grams versus 2-3 pounds, better weight distribution, improved ventilation. <strong>Cost:</strong> $500-800 complete systems versus $50,000+ in 1990s.</p>",
+                        "content": "<p>Several key differences explain why this revival succeeded where 1990s failed.</p><ul><li><strong>Display technology:</strong> 1080x1200 per eye versus 320x200 in 1990s, 90 Hz refresh versus 30-60 Hz, OLED with fast pixel switching versus slow LCD.</li><li><strong>Tracking:</strong> sub-20ms latency versus 50-100ms, sub-millimeter precision, inside-out tracking possible.</li><li><strong>Processing power:</strong> GPUs could render complex 3D at 90 FPS, CPUs could handle physics, AI, and networking simultaneously.</li><li><strong>Weight and comfort:</strong> ~500 grams versus 2-3 pounds, better weight distribution, improved ventilation.</li><li><strong>Cost:</strong> $500-800 complete systems versus $50,000+ in 1990s.</li></ul>",
                         "triggerLabel": "Convergence"
                     },
                     {
                         "title": "The Convergence Moment",
-                        "content": "<p>Multiple technologies matured simultaneously to make VR viable: smartphone displays provided cheap, good screens. Gaming GPUs could render VR-quality graphics. Motion sensors from phones enabled precise tracking. Game engines democratized development. Internet bandwidth allowed distribution. Cultural readiness existed through meditation apps and gaming acceptance. VR didn't succeed because of single breakthrough but because everything finally came together. This convergence - not just better headsets - created the renaissance.</p>",
+                        "content": "<p>Multiple technologies matured simultaneously to make VR viable:</p><ul><li>Smartphone displays provided cheap, good screens.</li><li>Gaming GPUs could render VR-quality graphics.</li><li>Motion sensors from phones enabled precise tracking.</li><li>Game engines democratized development.</li><li>Internet bandwidth allowed distribution.</li><li>Cultural readiness existed through meditation apps and gaming acceptance.</li></ul><p>VR didn't succeed because of single breakthrough but because everything finally came together. This convergence - not just better headsets - created the renaissance.</p>",
                         "triggerLabel": "Enter Scenario"
                     }
                 ]
@@ -137,7 +137,7 @@
                         "choices": [
                             {
                                 "id": "start_quiz",
-                                "label": "Start Quiz",
+                                "label": "Competitive Revolution",
                                 "outcome": "flow_next_module"
                             }
                         ]

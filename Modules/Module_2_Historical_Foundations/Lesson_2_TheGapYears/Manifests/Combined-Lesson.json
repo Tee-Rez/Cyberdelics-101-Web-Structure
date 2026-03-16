@@ -27,7 +27,7 @@
                     },
                     {
                         "title": "Why the Technology Wasn't Ready",
-                        "content": "<p>The technical limitations were overwhelming. <strong>Display technology:</strong> 320x200 resolution or worse, screen door effect like looking through mesh, 30-60 Hz refresh rates causing motion sickness, narrow 40-60 degree field of view. <strong>Computing power:</strong> processors couldn't render complex 3D in real-time, limited to simple cartoonish environments. <strong>Tracking:</strong> 50-100ms latency between head movement and display update, position tracking would drift, required external sensors. <strong>Physical comfort:</strong> 2-3 pound headsets causing neck strain, no ventilation making faces sweaty, thick heavy cables tethering users. <strong>Cost:</strong> professional systems $50,000-$250,000, consumer attempts still $500-$1,000 for terrible experience.</p>",
+                        "content": "<p>The technical limitations were overwhelming.</p><ul><li><strong>Display technology:</strong> 320x200 resolution or worse, screen door effect like looking through mesh, 30-60 Hz refresh rates causing motion sickness, narrow 40-60 degree field of view.</li><li><strong>Computing power:</strong> processors couldn't render complex 3D in real-time, limited to simple cartoonish environments.</li><li><strong>Tracking:</strong> 50-100ms latency between head movement and display update, position tracking would drift, required external sensors.</li><li><strong>Physical comfort:</strong> 2-3 pound headsets causing neck strain, no ventilation making faces sweaty, thick heavy cables tethering users.</li><li><strong>Cost:</strong> professional systems $50,000-$250,000, consumer attempts still $500-$1,000 for terrible experience.</li></ul>",
                         "triggerLabel": "Cultural Impact"
                     },
                     {
@@ -42,7 +42,7 @@
                     },
                     {
                         "title": "What Was Happening Beneath the Surface",
-                        "content": "<p>Important developments were occurring quietly during the gap. <strong>The smartphone revolution:</strong> mobile computing and touchscreens normalized personal technology. <strong>Display technology</strong> advanced dramatically thanks to smartphones: higher resolution OLED screens, lower power consumption, cheaper manufacturing, better refresh rates. <strong>Graphics processing:</strong> gaming drove GPU development with powerful graphics cards becoming consumer-affordable. <strong>Sensors</strong> improved: phone accelerometers and gyroscopes made motion tracking cheap and accurate. <strong>Software ecosystems:</strong> Unity and Unreal game engines matured, making VR development more accessible. These developments, driven by smartphones and gaming would eventually enable VR renaissance.</p>",
+                        "content": "<p>Important developments were occurring quietly during the gap.</p><ul><li><strong>The smartphone revolution:</strong> mobile computing and touchscreens normalized personal technology.</li><li><strong>Display technology</strong> advanced dramatically thanks to smartphones: higher resolution OLED screens, lower power consumption, cheaper manufacturing, better refresh rates.</li><li><strong>Graphics processing:</strong> gaming drove GPU development with powerful graphics cards becoming consumer-affordable.</li><li><strong>Sensors</strong> improved: phone accelerometers and gyroscopes made motion tracking cheap and accurate.</li><li><strong>Software ecosystems:</strong> Unity and Unreal game engines matured, making VR development more accessible.</li></ul><p>These developments, driven by smartphones and gaming, would eventually enable the VR renaissance.</p>",
                         "triggerLabel": "Face the Researcher's Dilemma"
                     }
                 ]
@@ -122,16 +122,10 @@
                     {
                         "id": "final_reflection",
                         "narrative": "<h3>Final Reflection</h3><p>The gap years tested whether VR - and by extension, cyberdelics - would survive long enough to get its second chance. Those who kept working despite mainstream dismissal built the foundations for later success. The lesson: apparent stagnation often masks necessary preparation. Progress isn't always visible.</p>",
-                        "media": {
-                            "type": "image",
-                            "src": "../assets/images/module2/lesson2/gap_years_timeline.jpg",
-                            "alt": "Split timeline showing barren desert landscape representing 2000-2012 gap years (top), with underground root systems growing and strengthening beneath the surface (middle), and green shoots beginning to emerge in 2012 (bottom), metaphor for hidden development during dormant periods, organic illustration style, earthy tones."
-                        },
-                        "mediaLayout": "full",
                         "choices": [
                             {
                                 "id": "start_quiz",
-                                "label": "Start Quiz",
+                                "label": "Quite Revolution",
                                 "outcome": "flow_next_module"
                             }
                         ]
@@ -168,12 +162,12 @@
                     },
                     {
                         "title": "Technical Foundations They Built",
-                        "content": "<p>Meditation apps advanced relevant technologies that would transfer to VR: sophisticated audio design using binaural beats, isochronic tones, and voice guidance. Progress tracking that gamified practice without trivializing consciousness work. Personalization algorithms suggesting appropriate content based on goals and experience. Accessibility features making advanced practices (body scans, loving-kindness meditation, visualization) accessible to beginners through clear guidance. These techniques would become essential for cyberdelic platform design.</p>",
+                        "content": "<p>Meditation apps advanced relevant technologies that would transfer to VR.</p><ul><li><strong>Sophisticated audio design</strong> using binaural beats, isochronic tones, and voice guidance.</li><li><strong>Progress tracking</strong> that gamified practice without trivializing consciousness work.</li><li><strong>Personalization algorithms</strong> suggesting appropriate content based on goals and experience.</li><li><strong>Accessibility features</strong> making advanced practices (body scans, loving-kindness meditation, visualization) accessible to beginners through clear guidance.</li></ul><p>These techniques would become essential for cyberdelic platform design.</p>",
                         "triggerLabel": "Limitations & Opportunity"
                     },
                     {
                         "title": "The Limitations That Created VR Opportunity",
-                        "content": "<p>Despite success, meditation apps had clear limitations: phones are also sources of distraction with notifications and other apps competing for attention. Audio-only guidance leaves visual field unengaged, letting minds wander. Solo practice only with no shared experiences or sense of practicing with others. Many users plateau after initial progress because apps couldn't provide increasingly deep experiences. These limitations created opportunity: what if you could combine meditation app accessibility with VR's immersive power, fully engaging attention, enabling social practice, and offering progressive depth?</p>",
+                        "content": "<p>Despite success, meditation apps had clear limitations.</p><ul><li><strong>Distraction:</strong> phones are also sources of distraction, with notifications and other apps competing for attention.</li><li><strong>Limited immersion:</strong> audio-only guidance leaves the visual field unengaged, letting minds wander.</li><li><strong>Solo practice only:</strong> no shared experiences or sense of practicing with others.</li><li><strong>Plateaus:</strong> many users stop progressing because apps couldn't provide increasingly deep experiences.</li></ul><p>These limitations created opportunity: what if you could combine meditation app accessibility with VR's immersive power, fully engaging attention, enabling social practice, and offering progressive depth?</p>",
                         "triggerLabel": "Start Quiz"
                     }
                 ]

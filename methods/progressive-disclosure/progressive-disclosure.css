@@ -246,6 +246,19 @@
     /* Extra padding */
 }
 
+/* --- Layout: Text with Bullet List (Left Aligned) --- */
+/* Override center alignment when a ul is present in the content */
+.reveal-section:not(:has(.pd-media-container)) .pd-text-content:has(ul),
+.pd-layout-none .pd-text-content:has(ul) {
+    text-align: left;
+}
+
+/* Ensure paragraph text before/after the list also goes left */
+.reveal-section:not(:has(.pd-media-container)) .pd-text-content:has(ul) p,
+.pd-layout-none .pd-text-content:has(ul) p {
+    text-align: left;
+}
+
 /* --- Layout: Left --- */
 /* Image takes 30%, Content takes 70% */
 .pd-layout-left .pd-flex-wrapper {

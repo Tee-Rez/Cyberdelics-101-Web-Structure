@@ -12,7 +12,8 @@
         get 'interactive-simulation'() { return window.InteractiveSimulationFactory; },
         get 'scenario-based'() { return window.ScenarioBasedFactory; },
         get 'knowledge-construction'() { return window.KnowledgeConstructionFactory; },
-        get 'option-selector'() { return window.OptionSelectorFactory; }
+        get 'option-selector'() { return window.OptionSelectorFactory; },
+        get 'external-links'() { return window.ExternalLinksFactory; }
     };
 
     class LessonRunner {
@@ -41,7 +42,7 @@
             console.log(`[LessonRunner] Loading Lesson: ${manifest.title}`);
             this._applyTheme(manifest.theme);
 
-            this._showOpeningScreen(manifest, () => {
+            const startLesson = () => {
                 if (window.LessonUI) {
                     window.LessonUI.init(this.container);
                     window.LessonUI.update(manifest.title, 0);
@@ -58,7 +59,14 @@
                         this.nextModule();
                     }
                 }, 100);
-            });
+            };
+
+            if (manifest.skipOpeningScreen) {
+                this.container.innerHTML = '';
+                startLesson();
+            } else {
+                this._showOpeningScreen(manifest, startLesson);
+            }
         }
 
         _showOpeningScreen(manifest, onStart) {
@@ -232,7 +240,10 @@
 
             if (type === 'interactive-simulation') {
                 const btn = moduleContainer.querySelector('.btn-continue');
-                if (btn) btn.addEventListener('click', () => instance.markComplete());
+                if (btn) btn.addEventListener('click', () => {
+                    console.log('[LessonRunner] Continue button clicked for Interactive Simulation');
+                    instance.markComplete();
+                });
             }
 
             if (moduleConfig.onEnter && window.LessonUI && moduleConfig.onEnter.action === 'openBottomSidebar') {

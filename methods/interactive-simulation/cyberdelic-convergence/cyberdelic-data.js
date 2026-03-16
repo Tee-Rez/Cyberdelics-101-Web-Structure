@@ -812,7 +812,7 @@
             {
                 id: 'domains',
                 title: 'Explore the Domains',
-                text: 'Click on any colored circle to zoom in and see detailed information about that field\'s contributions.',
+                text: 'Click on any colored circle to zoom in and see detailed information about that field\'s contributions. Notice that the Examples within link to pages with their real-world examples.',
                 target: '.domain-node[data-id="psychedelic"] .node-circle',
                 position: 'center',
                 spotlightShape: 'circle',
@@ -821,7 +821,7 @@
             {
                 id: 'timeline',
                 title: 'Travel Through Time',
-                text: 'Use the timeline at the top to see how connections formed over the years. Try scrubbing it now!',
+                text: 'Use the timeline on the right side to see how connections formed over the years. Try scrubbing it now!',
                 target: '.sim-controls',
                 position: 'center',
                 spotlightShape: 'rect',

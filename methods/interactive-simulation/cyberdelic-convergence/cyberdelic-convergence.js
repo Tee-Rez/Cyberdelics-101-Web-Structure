@@ -621,7 +621,8 @@
                     if (curY >= maxY) return;
 
                     // Calculate height needed
-                    const nameLines = this._wrapText(ex.name, textWidth - 4, fontSize + 0.5);
+                    const titleWidth = ex.url ? textWidth - 20 : textWidth - 4;
+                    const nameLines = this._wrapText(ex.name, titleWidth, fontSize + 0.5);
                     const descLines = this._wrapText(ex.type || ex.description, textWidth - 4, fontSize - 0.5);
 
                     const lineHeight = 7;
@@ -646,6 +647,21 @@
                         if (ex.url) window.open(ex.url, '_blank');
                     };
                     g.appendChild(bg);
+
+                    if (ex.url) {
+                        const iconG = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+                        iconG.setAttribute('transform', `translate(${x + w - 22}, ${curY + 6}) scale(0.35)`);
+                        const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+                        path.setAttribute('d', 'M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6 M15 3h6v6 M10 14L21 3');
+                        path.setAttribute('fill', 'none');
+                        path.setAttribute('stroke', color);
+                        path.setAttribute('stroke-width', '2');
+                        path.setAttribute('stroke-linecap', 'round');
+                        path.setAttribute('stroke-linejoin', 'round');
+                        path.style.pointerEvents = 'none';
+                        iconG.appendChild(path);
+                        g.appendChild(iconG);
+                    }
 
                     let textY = curY + 10;
 
@@ -822,7 +838,9 @@
 
         destroy: function () {
             // Framework handles cleanup, removing SVG
-            if (this.tutorialOverlay) this.tutorialOverlay.remove();
+            if (this.tutorialOverlay && typeof this.tutorialOverlay.destroy === 'function') {
+                this.tutorialOverlay.destroy();
+            }
             if (this.helpOverlay) this.helpOverlay.remove();
             window.removeEventListener('keydown', this._handleKey); // Remove listener!
         },
