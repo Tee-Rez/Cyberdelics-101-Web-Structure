@@ -49,6 +49,15 @@
             // Generate Layout
             this._buildLayout(container);
 
+            // Hide continue button until simulation is complete
+            setTimeout(() => {
+                const parent = container.closest('.interactive-simulation-container');
+                if (parent) {
+                    const btn = parent.querySelector('.btn-continue');
+                    if (btn) btn.style.display = 'none';
+                }
+            }, 50);
+
             this._ensureThreeJS(() => {
                 // Initialize 3D Scene
                 this._init3DVisualization();
@@ -855,6 +864,19 @@
             // Hide workspace, show summary sidebar
             this.elements.workspacePanel.classList.add('hidden');
             this.elements.summarySidebar.classList.add('visible');
+
+            // Reveal the host continue button now that exploration is complete
+            const parent = this.elements.summarySidebar.closest('.interactive-simulation-container');
+            if (parent) {
+                const continueBtn = parent.querySelector('.btn-continue');
+                if (continueBtn) {
+                    continueBtn.style.display = 'block';
+                    requestAnimationFrame(() => {
+                        continueBtn.classList.add('visible');
+                        continueBtn.style.boxShadow = '0 0 15px var(--gold-glow, rgba(245, 158, 11, 0.5))';
+                    });
+                }
+            }
         }
     };
 

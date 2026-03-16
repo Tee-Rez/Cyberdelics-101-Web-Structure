@@ -1,0 +1,635 @@
+﻿{
+    "id": "combined_lesson_4_1",
+    "title": "Purpose-Built Platforms: Mapping the Cyberdelic Application Landscape",
+    "description": "Map the four categories of cyberdelic applications, then examine TRIPP, Guided Meditation VR, Maloka, Flowly, and Innerworld as case studies in contrasting design philosophies and use contexts.",
+    "framerDescription": "The field isn't one thing. This lesson gives you the map and introduces the platforms that define the four categories -- so you can navigate and recommend with confidence.",
+    "theme": {
+        "primaryColor": "#5900ff",
+        "fontBody": "Rajdhani, sans-serif"
+    },
+    "modules": [
+        {
+            "id": "module_4_1_1_progressive",
+            "title": "Mapping the Landscape",
+            "type": "progressive-disclosure",
+            "content": {
+                "sections": [
+                    {
+                        "title": "Meditation & Mindfulness",
+                        "content": "<p>The first category is Meditation & Mindfulness - the wellness foundation of the cyberdelic landscape. These are platforms designed for daily practice, stress reduction, focus training, and building a consistent contemplative routine. Think of this as the VR equivalent of meditation apps like Headspace or Calm, but with the added dimension of full immersion.</p><ul><li><strong>Who it serves:</strong> People seeking consistent wellness practices, beginners to meditation, anyone managing everyday stress.</li><li><strong>Key characteristics:</strong> Accessible entry points, no clinical diagnosis required, designed for solo use, usually subscription-based.</li></ul>",
+                        "media": {
+                            "type": "image",
+                            "src": "placeholder-meditation.jpg",
+                            "alt": "Peaceful VR meditation scene",
+                            "position": "left",
+                            "aiPrompt": "Peaceful VR meditation scene - person sitting in lotus position wearing VR headset, surrounded by soft glowing mandala patterns and gentle particle effects, serene expression, warm lighting, purple and teal color palette, sense of calm focus and daily wellness practice, 16:9 aspect ratio"
+                        },
+                        "triggerLabel": "Next Category"
+                    },
+                    {
+                        "title": "Therapeutic & Clinical",
+                        "content": "<p>The second category is Therapeutic & Clinical - evidence-based VR interventions for diagnosable conditions. These aren't wellness tools. They're medical-grade applications used by licensed healthcare providers to treat specific disorders like PTSD, phobias, chronic pain, and anxiety disorders.</p><ul><li><strong>Who it serves:</strong> Patients working with therapists, psychologists, pain specialists, or Licensed clinicians. Not for self-directed use.</li><li><strong>Key characteristics:</strong> Clinical validation required, used within healthcare settings, often covered by insurance, targets specific diagnoses.</li></ul>",
+                        "media": {
+                            "type": "image",
+                            "src": "placeholder-clinical.jpg",
+                            "alt": "Clinical VR therapy session",
+                            "position": "right",
+                            "aiPrompt": "Clinical VR therapy session - professional therapist with tablet monitoring patient in VR headset, calm medical office setting with certificates on wall, patient appears focused but comfortable, clean modern aesthetic, professional and reassuring tone, sense of evidence-based care, 16:9 aspect ratio"
+                        },
+                        "triggerLabel": "Next Category"
+                    },
+                    {
+                        "title": "Biofeedback-Enhanced",
+                        "content": "<p>The third category is Biofeedback-Enhanced - platforms that create a real-time loop between your body's signals and the virtual environment. Your heart rate, brainwaves, breathing pattern, or stress response literally shapes what you see and hear in VR. The experience responds to you, and you respond in turn.</p><ul><li><strong>Who it serves:</strong> People training specific physiological states (calm, focus), biohackers, clinical populations learning self-regulation.</li><li><strong>Key characteristics:</strong> Requires sensors (EEG, heart rate), higher cost barrier, steeper learning curve, uniquely cyberdelic feedback loops.</li></ul>",
+                        "media": {
+                            "type": "image",
+                            "src": "placeholder-biofeedback.jpg",
+                            "alt": "Biofeedback VR visualization",
+                            "position": "full-width",
+                            "aiPrompt": "Biofeedback VR visualization - person wearing VR headset and EEG sensor band, heart rate monitor visible on wrist, virtual environment display showing real-time responsive patterns (flowing colors, expanding/contracting geometries reacting to heartbeat), high-tech yet organic aesthetic, purple/teal sacred geometry influences, sense of body-technology integration, 16:9 aspect ratio"
+                        },
+                        "triggerLabel": "Next Category"
+                    },
+                    {
+                        "title": "Exploratory & Transformational",
+                        "content": "<p>The fourth category is Exploratory & Transformational - experiences designed for deep consciousness work, mystical states, ego dissolution, simulated psychedelic journeys, and profound perspective shifts. This is the far end of the spectrum where the goal isn't stress reduction or symptom relief. It's transformation, insight, awe, and altered states.</p><ul><li><strong>Who it serves:</strong> Experienced consciousness explorers, people in deep personal development work, facilitators-in-training.</li><li><strong>Key characteristics:</strong> High intensity, not for beginners without guidance, often facilitated, requires readiness screening and integration.</li></ul>",
+                        "media": {
+                            "type": "image",
+                            "src": "placeholder-transformational.jpg",
+                            "alt": "Transformational VR experience",
+                            "position": "left",
+                            "aiPrompt": "Transformational VR experience - person in VR headset with facilitator nearby (watchful presence in background), immersive abstract environment visible through translucent overlay showing fractal patterns and dissolving boundaries, sense of profound altered state but safe container, sacred geometry, mystical aesthetic, both expansive and grounded feeling, 16:9 aspect ratio"
+                        },
+                        "triggerLabel": "View The Spectrum"
+                    },
+                    {
+                        "title": "The Spectrum & Choosing Your Category",
+                        "content": "<p>These four categories exist on a spectrum - not as rigid boxes, but as a continuum. Many platforms span multiple categories. What matters is knowing where an experience sits on this map so you can match it to the right person.</p><p><strong>Choosing Your Category - Key Questions:</strong></p><ol><li><strong>Goal?</strong> (Stress vs. Treatment vs. Training vs. Insight)</li><li><strong>Comfort Level?</strong> (Beginner vs. Experienced)</li><li><strong>Support Needed?</strong> (Solo vs. Professional Oversight)</li><li><strong>Experience Level?</strong> (Foundation vs. Depth Work)</li></ol>",
+                        "media": {
+                            "type": "image",
+                            "src": "placeholder-spectrum.jpg",
+                            "alt": "Spectrum of Cyberdelic Categories",
+                            "position": "full-width",
+                            "aiPrompt": "Horizontal spectrum visualization showing four cyberdelic categories flowing into each other - left side labeled CLINICAL (medical cross icon, structured feeling), transitioning through WELLNESS & MINDFULNESS (lotus flower icon, accessible feeling), to BIOFEEDBACK-ENHANCED (heartbeat + brain wave icon, tech-enhanced feeling), to EXPLORATORY & TRANSFORMATIONAL (mandala/sacred geometry icon, mystical feeling). Gradient background from cool clinical blue through warm wellness purple/teal to deeper mystical indigo. Clean infographic style, 16:9 aspect ratio"
+                        },
+                        "triggerLabel": "Take Concept Check"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "module_4_1_2_progressive",
+            "title": "Two Philosophies",
+            "type": "progressive-disclosure",
+            "content": {
+                "sections": [
+                    {
+                        "title": "TRIPP: The Engagement Philosophy",
+                        "content": "<p>TRIPP operates on the belief that traditional mindfulness can feel too slow or vague for modern minds. Its answer is <strong>wellness gamified</strong>. Every session gives feedback, tracks streaks, adapts to your mood, and rewards consistency.</p><ul><li><strong>Founded:</strong> 2017 by Nanea Reeves</li><li><strong>Key Feature:</strong> Visual progress tracking to combat 'meditation boredom'</li><li><strong>Platforms:</strong> Quest, PSVR2, Pico (~$15/mo)</li></ul>",
+                        "media": {
+                            "type": "image",
+                            "src": "placeholder-tripp.jpg",
+                            "alt": "Abstract colorful immersive VR environment representing TRIPP's aesthetic",
+                            "position": "left",
+                            "aiPrompt": "Abstract colorful immersive VR environment representing TRIPP's aesthetic - flowing geometric patterns in vibrant purple, teal, pink, orange gradients, sense of movement and energy, kaleidoscopic visual richness, floating particles and luminous shapes, engaging and dynamic feeling, 16:9 aspect ratio"
+                        },
+                        "triggerLabel": "See TRIPP Modes"
+                    },
+                    {
+                        "title": "TRIPP: The Four Modes",
+                        "content": "<p>TRIPP organizes experiences by intended state:</p><ul><li><strong>CALM:</strong> Stress reduction, gentle visuals (5-10 min)</li><li><strong>FOCUS:</strong> Attention training, dynamic environments (10-15 min)</li><li><strong>SLEEP:</strong> Wind-down protocols, dimming visuals (15-30 min)</li><li><strong>DEEP:</strong> Extended altered states, intense visuals (20-40 min) - touches the 'Exploratory' boundary</li></ul><p>The platform adapts based on mood reports and optional biometric data.</p>",
+                        "triggerLabel": "Gamification & Evidence"
+                    },
+                    {
+                        "title": "TRIPP: Gamification & Evidence",
+                        "content": "<p>TRIPP tracks streaks, minutes practiced, and mood shifts. Research backs this approach: a 2021 study with OHSU showed significant anxiety reduction from a single session. It also integrates with sensors (Apple Watch, Muse) for biofeedback, bridging the Wellness and Biofeedback categories.</p>",
+                        "triggerLabel": "Guided Meditation VR"
+                    },
+                    {
+                        "title": "Guided Meditation VR: The Minimalist Philosophy",
+                        "content": "<p>Guided Meditation VR (GMVR) takes the opposite stance: remove the noise. No gamification, no streaks, no accounts required. Just 27+ photorealistic environments and optional narration.</p><ul><li><strong>Philosophy:</strong> 'Doing less is doing more'</li><li><strong>Content:</strong> Nature scenes (forests, beaches) + abstract spaces</li><li><strong>Cost:</strong> Generous free tier, Premium ~$10/mo</li></ul>",
+                        "media": {
+                            "type": "image",
+                            "src": "placeholder-gmvr.jpg",
+                            "alt": "Serene photorealistic VR nature environment",
+                            "position": "right",
+                            "aiPrompt": "Serene photorealistic VR nature environment - dense forest with sunlight filtering through tall trees, soft rays of light creating god rays through mist, ferns and moss on forest floor, sense of deep quiet and natural beauty, no human-made objects or UI elements, 16:9 aspect ratio"
+                        },
+                        "triggerLabel": "The 'No-Features' Feature"
+                    },
+                    {
+                        "title": "GMVR: The No-Features Feature",
+                        "content": "<p>GMVR appeals to experienced meditators who just want a container, or anyone overwhelmed by 'app culture.' The trade-off? Beginners can feel lost. Without structure or feedback, they might sit in a virtual forest for 30 seconds, think 'now what?', and quit. GMVR assumes you already know how to meditate; TRIPP assumes you're learning.</p>",
+                        "triggerLabel": "Comparison Summary"
+                    },
+                    {
+                        "title": "TRIPP vs. GMVR: When to Recommend",
+                        "content": "<div style='display: grid; grid-template-columns: 1fr 1fr; gap: 20px;'><div style='background: rgba(89,0,255,0.1); padding: 15px; border-radius: 8px;'><strong>Recommend TRIPP when:</strong><ul><li>User needs structure/gamification</li><li>User wants biometric integration</li><li>User values visual richness</li><li>Budget allows ($15/mo)</li></ul></div><div style='background: rgba(0,217,255,0.1); padding: 15px; border-radius: 8px;'><strong>Recommend GMVR when:</strong><ul><li>User has established practice</li><li>User prefers silence/minimalism</li><li>User dislikes gamification</li><li>Budget is limited (Free tier)</li></ul></div></div>",
+                        "triggerLabel": "Take Comparison Quiz"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "module_4_1_3_progressive",
+            "title": "Depth and Breadth",
+            "type": "progressive-disclosure",
+            "content": {
+                "sections": [
+                    {
+                        "title": "Maloka: The Facilitated Journey",
+                        "content": "<p>Maloka is not a meditation app - it's a therapeutic journey platform. Designed by clinical psychologists and psychedelic therapy practitioners, it uses VR to create a container for high-intensity consciousness work.</p><ul><li><strong>Key Distinction:</strong> Requires a trained facilitator.</li><li><strong>Use Case:</strong> Trauma, depression, existential distress, transformation.</li><li><strong>Model:</strong> Client in VR, Facilitator monitoring (tablet/dashboard).</li></ul>",
+                        "media": {
+                            "type": "image",
+                            "src": "placeholder-maloka.jpg",
+                            "alt": "Split-screen: Facilitator monitoring client in VR",
+                            "position": "full-width",
+                            "aiPrompt": "Split-screen composition showing two perspectives of a Maloka session - left side shows facilitator at monitoring station with tablet displaying client's biometric data and session timeline, right side shows client in VR headset with serene focused expression, both in warm softly-lit therapeutic space, 16:9 aspect ratio"
+                        },
+                        "triggerLabel": "The 3-Phase Structure"
+                    },
+                    {
+                        "title": "Structure: Preparation, Journey, Integration",
+                        "content": "<p>Maloka follows the psychedelic therapy protocol:</p><ol><li><strong>Preparation (30-60m):</strong> Intention setting, safety protocols, building trust.</li><li><strong>Journey (60-90m):</strong> The immersive VR experience. Facilitator monitors and adjusts pacing in real-time.</li><li><strong>Integration (30-60m):</strong> Processing the experience. Making meaning of the insights.</li></ol><p><strong>Total time:</strong> ~2.5-3.5 hours. <strong>Cost:</strong> ~$150-300/session.</p>",
+                        "triggerLabel": "The Facilitator's Role"
+                    },
+                    {
+                        "title": "The Facilitator's Role",
+                        "content": "<p>The facilitator isn't just a tech support provider. They hold the therapeutic container.</p><ul><li>Monitor body language and breathing</li><li>Track biometric data (if used)</li><li>Adjust intensity/pacing remotely</li><li>Provide grounding interventions if needed</li></ul><p>Training (40-100 hours) covers trauma-informed practice and VR ethics. Facilitators may or may not be licensed clinicians, depending on local regulations and scope.</p>",
+                        "triggerLabel": "Flowly: Clinical Biofeedback"
+                    },
+                    {
+                        "title": "Flowly: Biofeedback for Chronic Conditions",
+                        "content": "<p>Flowly sits between clinical and consumer worlds. It targets chronic pain and anxiety using real-time biofeedback to teach nervous system regulation.</p><ul><li><strong>Mechanism:</strong> VR environment expands/contracts based on heart rate/breathing (requires sensor like Muse).</li><li><strong>Status:</strong> Used in some pain clinics; subscription-based consumer access.</li><li><strong>Key Takeaway:</strong> Without sensors, it's just visuals. With sensors, it's a training tool.</li></ul>",
+                        "triggerLabel": "Innerworld: Peer Support"
+                    },
+                    {
+                        "title": "Innerworld: Peer-Support Social VR",
+                        "content": "<p>Innerworld flips the model: Guides are community members with lived experience, not professionals. It offers group spaces for grief, anxiety, and recovery.</p><ul><li><strong>Model:</strong> Peer-led social VR (acquired by XRHealth in 2023).</li><li><strong>Pros:</strong> Authentic connection, accessible/low-cost.</li><li><strong>Cons:</strong> Variable quality, not for acute crisis.</li><li><strong>Question:</strong> Where is the line between peer support and professional care?</li></ul>",
+                        "media": {
+                            "type": "image",
+                            "src": "placeholder-innerworld.jpg",
+                            "alt": "Innerworld peer support circle",
+                            "position": "right",
+                            "aiPrompt": "Warm inviting social VR environment showing diverse group of avatars in circle formation in virtual cozy space, avatars have gentle expressive body language, sense of peer connection rather than expert-to-student, inclusive aesthetic, 16:9 aspect ratio"
+                        },
+                        "triggerLabel": "Model Comparison"
+                    },
+                    {
+                        "title": "Three Models, Three Trade-offs",
+                        "content": "<div style='display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; font-size: 0.9em;'><div style='background: rgba(89,0,255,0.1); padding: 10px; border-radius: 8px;'><strong>Solo Wellness</strong><br>(TRIPP/GMVR)<br>+ Accessible, consistency<br>- No human support</div><div style='background: rgba(0,217,255,0.1); padding: 10px; border-radius: 8px;'><strong>Facilitated Depth</strong><br>(Maloka)<br>+ Deep safety, transformation<br>- Expensive, complex</div><div style='background: rgba(255,0,128,0.1); padding: 10px; border-radius: 8px;'><strong>Peer Community</strong><br>(Innerworld)<br>+ Authentic connection<br>- Variable quality</div></div>",
+                        "triggerLabel": "Start Client Scenarios"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "module_4_1_3_scenario",
+            "title": "Scenario: Three Clients, Three Platforms",
+            "type": "scenario-based",
+            "content": {
+                "scenes": [
+                    {
+                        "id": "intro",
+                        "narrative": "<h3>The Facilitator's Challenge</h3><p>It's Monday morning. You have three consultations. Your job is to recommend the right platform and level of support for each.</p><ul style='text-align:left; font-size:0.9em;'><li><strong>Jordan (41):</strong> Stressed exec, wants consistency, failed with phone apps.</li><li><strong>Maya (37):</strong> Therapist, grieving brother, wants depth/transformation.</li><li><strong>David (52):</strong> Chronic pain, skeptical, not tech-savvy, low budget.</li></ul>",
+                        "choices": [
+                            {
+                                "id": "start",
+                                "label": "Consult with Jordan",
+                                "outcome": "jordan_decision"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "jordan_decision",
+                        "narrative": "<h3>Propfile: Jordan</h3><p><strong>Needs:</strong> Decompression, consistency.<br><strong>Constraint:</strong> 'I forget to do it.'<br><strong>Budget:</strong> ~$15/mo.</p><p><strong>Recommendation?</strong></p>",
+                        "choices": [
+                            {
+                                "id": "j_tripp",
+                                "label": "TRIPP (Engagement)",
+                                "outcome": "jordan_optimal"
+                            },
+                            {
+                                "id": "j_gmvr",
+                                "label": "Guided Meditation VR (Free)",
+                                "outcome": "jordan_suboptimal_gmvr"
+                            },
+                            {
+                                "id": "j_maloka",
+                                "label": "Maloka (Facilitated)",
+                                "outcome": "jordan_suboptimal_maloka"
+                            },
+                            {
+                                "id": "j_inner",
+                                "label": "Innerworld (Peer)",
+                                "outcome": "jordan_suboptimal_inner"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "jordan_optimal",
+                        "narrative": "<h3> Optimal: TRIPP</h3><p>'Based on your need for consistency, TRIPP is designed to solve the 'I forget' problem through gamification and tracking.'</p><p><strong>Why:</strong> Matches habits, budget, and tech comfort. Wellness scope.</p>",
+                        "choices": [
+                            {
+                                "id": "next_maya",
+                                "label": "Consult with Maya",
+                                "outcome": "maya_decision"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "jordan_suboptimal_maloka",
+                        "narrative": "<h3> Overkill</h3><p>Recommending a $200 facilitated session for basic stress relief is like prescribing an MRI for a stubbed toe. Jordan would feel overwhelmed and quit.</p>",
+                        "choices": [
+                            {
+                                "id": "retry_j",
+                                "label": "Try Again",
+                                "outcome": "jordan_decision"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "jordan_suboptimal_gmvr",
+                        "narrative": "<h3> Missing the Mark</h3><p>GMVR lacks the structure and reminders Jordan specifically asked for. He failed with phone apps because of this - don't repeat the mistake.</p>",
+                        "choices": [
+                            {
+                                "id": "retry_j_g",
+                                "label": "Try Again",
+                                "outcome": "jordan_decision"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "jordan_suboptimal_inner",
+                        "narrative": "<h3> Mismatch</h3><p>Jordan needs stress decompression, not social support. He wants to unwind, not talk to strangers.</p>",
+                        "choices": [
+                            {
+                                "id": "retry_j_i",
+                                "label": "Try Again",
+                                "outcome": "jordan_decision"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "maya_decision",
+                        "narrative": "<h3>Profile: Maya</h3><p><strong>Context:</strong> Therapist processing deep grief.<br><strong>Goal:</strong> 'Go deeper than meditation.'<br><strong>Status:</strong> Stable, ready for intensity.</p><p><strong>Recommendation?</strong></p>",
+                        "choices": [
+                            {
+                                "id": "m_tripp_deep",
+                                "label": "TRIPP (Deep Mode)",
+                                "outcome": "maya_suboptimal_solo"
+                            },
+                            {
+                                "id": "m_gmvr",
+                                "label": "Guided Meditation VR",
+                                "outcome": "maya_suboptimal_solo"
+                            },
+                            {
+                                "id": "m_maloka",
+                                "label": "Maloka (Facilitated)",
+                                "outcome": "maya_optimal"
+                            },
+                            {
+                                "id": "m_inner",
+                                "label": "Innerworld (Peer)",
+                                "outcome": "maya_suboptimal_peer"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "maya_optimal",
+                        "narrative": "<h3> Optimal: Maloka</h3><p>'Grief at this depth deserves a professional container. I'll facilitate a session to hold space while you explore.'</p><p><strong>Why:</strong> Honors her experience level and need for safety in deep work.</p>",
+                        "choices": [
+                            {
+                                "id": "next_david",
+                                "label": "Consult with David",
+                                "outcome": "david_decision"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "maya_suboptimal_solo",
+                        "narrative": "<h3> Too Shallow</h3><p>Solo apps are a lateral move for someone with her experience. Maya has earned depth work - don't hold her back with wellness tools.</p>",
+                        "choices": [
+                            {
+                                "id": "retry_m",
+                                "label": "Try Again",
+                                "outcome": "maya_decision"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "maya_suboptimal_peer",
+                        "narrative": "<h3> Insufficient Container</h3><p>Peer support is great, but for deep grief processing, a professional container (Maloka) is safer and more effective than a social group.</p>",
+                        "choices": [
+                            {
+                                "id": "retry_m_p",
+                                "label": "Try Again",
+                                "outcome": "maya_decision"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "david_decision",
+                        "narrative": "<h3>Profile: David</h3><p><strong>Context:</strong> Chronic pain (12 yrs), skeptical, low budget.<br><strong>Need:</strong> Evidence-based relief, not 'games'.</p><p><strong>Recommendation?</strong></p>",
+                        "choices": [
+                            {
+                                "id": "d_tripp",
+                                "label": "TRIPP (Calm)",
+                                "outcome": "david_suboptimal_tripp"
+                            },
+                            {
+                                "id": "d_flowly",
+                                "label": "Flowly (Biofeedback)",
+                                "outcome": "david_optimal"
+                            },
+                            {
+                                "id": "d_maloka",
+                                "label": "Maloka (Deep Work)",
+                                "outcome": "david_suboptimal_maloka"
+                            },
+                            {
+                                "id": "d_refer",
+                                "label": "Refer Back to Doctor",
+                                "outcome": "david_suboptimal_refer"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "david_optimal",
+                        "narrative": "<h3> Optimal: Flowly</h3><p>'Flowly is trained to regulate pain signals. It's medical-grade biofeedback, not just a game. Let's see if your clinic has a headset to try.'</p><p><strong>Why:</strong> Addresses the valid medical need with the specific tool designed for it.</p>",
+                        "choices": [
+                            {
+                                "id": "finish",
+                                "label": "Complete Scenarios",
+                                "outcome": "scenario_complete"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "david_suboptimal_tripp",
+                        "narrative": "<h3> Under-Recommending</h3><p>Recommending meditation for chronic pain is like prescribing yoga for a broken leg. David needs a clinical-grade tool (Flowly), not general wellness.</p>",
+                        "choices": [
+                            {
+                                "id": "retry_d",
+                                "label": "Try Again",
+                                "outcome": "david_decision"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "david_suboptimal_refer",
+                        "narrative": "<h3> Missed Opportunity</h3><p>Yes, involve his doctor, but don't send him away empty-handed. Be the bridge - suggest Flowly *for* him to discuss with his doctor.</p>",
+                        "choices": [
+                            {
+                                "id": "retry_d_r",
+                                "label": "Try Again",
+                                "outcome": "david_decision"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "david_suboptimal_maloka",
+                        "narrative": "<h3> Mismatch</h3><p>Deep psychological work might be valuable later, but his primary barrier is physical pain and cost. Address the immediate need first.</p>",
+                        "choices": [
+                            {
+                                "id": "retry_d_m",
+                                "label": "Try Again",
+                                "outcome": "david_decision"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "scenario_complete",
+                        "narrative": "<h3>Simulation Complete</h3><p>You matched Jordan to structure (TRIPP), Maya to depth (Maloka), and David to clinical specificity (Flowly). You're ready to facilitate.</p>",
+                        "choices": [
+                            {
+                                "id": "continue",
+                                "label": "Proceed to Quiz",
+                                "outcome": "complete"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "quiz_4_1_1",
+            "title": "Concept Check: Matching Needs to Categories",
+            "type": "option-selector",
+            "config": {
+                "mode": "single",
+                "style": "card",
+                "questions": [
+                    {
+                        "question": "<h3>Scenario 1: Marcus</h3><p>Marcus is 34, works in tech, and is 'stressed but functional.' He's never meditated but wants a 10-15 minute morning routine to feel calmer. He has no diagnosed conditions and is comfortable with technology.</p><p><strong>Which category best fits his needs?</strong></p>",
+                        "options": [
+                            {
+                                "id": "q1_a",
+                                "label": "Therapeutic & Clinical",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_b",
+                                "label": "Meditation & Mindfulness",
+                                "correct": true
+                            },
+                            {
+                                "id": "q1_c",
+                                "label": "Biofeedback-Enhanced",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_d",
+                                "label": "Exploratory & Transformational",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "q1_a": "<p>Not quite. Therapeutic & Clinical applications are for treating diagnosed conditions with professional oversight. Marcus is 'stressed but functional' and looking for a wellness practice, not medical treatment.</p>",
+                            "q1_c": "<p>Not the best fit. Biofeedback requires extra sensors and has a steeper curve. Marcus wants something simple and accessible for a morning routine.</p>",
+                            "q1_d": "<p>Incorrect. Exploratory experiences are for deep consciousness work and altered states, not a quick 15-minute stress reduction practice.</p>",
+                            "q1_b": "<p><strong>Correct!</strong> Marcus fits squarely in Meditation & Mindfulness - daily wellness practice, no diagnosis, beginner-friendly, designed for solo use. This is the accessible foundation he needs.</p>"
+                        }
+                    },
+                    {
+                        "question": "<h3>Scenario 2: Dr. Sarah Chen</h3><p>Dr. Chen is a licensed psychologist treating a patient with severe PTSD. Traditional talk therapy has stalled, so she wants to use VR exposure therapy to gradually expose the patient to driving scenarios while monitoring their anxiety.</p><p><strong>Which category does this fall into?</strong></p>",
+                        "options": [
+                            {
+                                "id": "q2_a",
+                                "label": "Meditation & Mindfulness",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_b",
+                                "label": "Biofeedback-Enhanced",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_c",
+                                "label": "Therapeutic & Clinical",
+                                "correct": true
+                            },
+                            {
+                                "id": "q2_d",
+                                "label": "Exploratory & Transformational",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "q2_a": "<p>Incorrect. While reducing anxiety is a goal, this is a targeted intervention for a diagnosed condition (PTSD), not a general wellness practice.</p>",
+                            "q2_b": "<p>You noticed the monitoring aspect, but that's just a feature. The defining characteristics are the diagnosis (PTSD), the licensed clinician, and the therapeutic protocol.</p>",
+                            "q2_d": "<p>Incorrect. While profound, this is clinical treatment of a disorder, not the open-ended consciousness exploration that defines the Exploratory category.</p>",
+                            "q2_c": "<p><strong>Correct!</strong> This is Therapeutic & Clinical. The key factors are: diagnosed condition (PTSD), professional oversight (licensed psychologist), and evidence-based treatment protocols. The context makes it clinical.</p>"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "quiz_4_1_2",
+            "title": "Comparison Quiz: Philosophy Matching",
+            "type": "option-selector",
+            "config": {
+                "mode": "single",
+                "style": "card",
+                "questions": [
+                    {
+                        "question": "<h3>Scenario 1: Jamie</h3><p>Jamie (28) is a 'visual learner who needs structure.' They've tried phone apps but quit because they couldn't tell if it was 'working.' They want to build a consistent practice and don't mind paying $15/mo for something engaging.</p><p><strong>Which platform should you recommend?</strong></p>",
+                        "options": [
+                            {
+                                "id": "q1_a",
+                                "label": "TRIPP",
+                                "correct": true
+                            },
+                            {
+                                "id": "q1_b",
+                                "label": "Guided Meditation VR (Free)",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_c",
+                                "label": "Guided Meditation VR (Premium)",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_d",
+                                "label": "Neither (needs in-person)",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "q1_b": "<p>Not the best fit. GMVR removes tracking and gamification, which would likely recreate the 'lack of progress' feeling Jamie struggled with on phone apps.</p>",
+                            "q1_c": "<p>Incorrect. Even the premium tier of GMVR focuses on environments, not the structured feedback Jamie explicitly requested.</p>",
+                            "q1_d": "<p>Not necessary. Jamie is ready for VR - they just need the right tool. Their issue is consistency and motivation, which VR can address directly.</p>",
+                            "q1_a": "<p><strong>Correct!</strong> Jamie is the textbook TRIPP user: needs structure, visual feedback, gamified progress, and is willing to pay for engagement. TRIPP directly addresses the 'is it working?' doubt.</p>"
+                        }
+                    },
+                    {
+                        "question": "<h3>Scenario 2: Amir</h3><p>Amir has meditated daily for 8 years (Zen style, silence). He's curious about VR but worried about 'too many features' getting in the way. He wants beautiful environments but no guidance, and he's on a budget.</p><p><strong>Which platform fits best?</strong></p>",
+                        "options": [
+                            {
+                                "id": "q2_a",
+                                "label": "TRIPP (Deep Mode)",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_b",
+                                "label": "Guided Meditation VR (Free Tier)",
+                                "correct": true
+                            },
+                            {
+                                "id": "q2_c",
+                                "label": "Guided Meditation VR (Premium)",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_d",
+                                "label": "Wait on VR",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "q2_a": "<p>Not quite. While 'Deep' mode is intense, TRIPP's gamification and structure are exactly what Amir wants to avoid. He finds features distracting.</p>",
+                            "q2_c": "<p>Close, but unnecessary. Amir is budget-conscious and just wants a few high-quality silent spaces. He doesn't need the 27+ environment library right away.</p>",
+                            "q2_d": "<p>Incorrect. An experienced meditator is perfectly capable of using VR. The key is finding a platform that doesn't annoy him with unnecessary features.</p>",
+                            "q2_b": "<p><strong>Correct!</strong> Free GMVR is perfect: 5-6 high-quality environments, no cost, no gamification, no required guidance. It respects his established practice and budget.</p>"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "quiz_4_1_3",
+            "title": "Concept Check: Platform Models",
+            "type": "option-selector",
+            "config": {
+                "mode": "single",
+                "style": "card",
+                "questions": [
+                    {
+                        "question": "<h3>Maloka vs. Others</h3><p>What makes Maloka fundamentally different from TRIPP or Guided Meditation VR?</p>",
+                        "options": [
+                            {
+                                "id": "q1_a",
+                                "label": "Better graphics",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_b",
+                                "label": "Professional Facilitation & Structure",
+                                "correct": true
+                            },
+                            {
+                                "id": "q1_c",
+                                "label": "More expensive = better",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_d",
+                                "label": "Clinical research backing",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "q1_a": "<p>Visual quality isn't the difference. The distinction is structural.</p>",
+                            "q1_c": "<p>Price reflects the human labor involved, not inherent quality.</p>",
+                            "q1_d": "<p>TRIPP also has research backing. The unique factor is the human guide.</p>",
+                            "q1_b": "<p><strong>Correct!</strong> Maloka uses a human facilitator and a 3-phase journey structure (Prep-Journey-Integration).</p>"
+                        }
+                    },
+                    {
+                        "question": "<h3>Peer Support Model</h3><p>What is the primary advantage and risk of Innerworld's peer-support model?</p>",
+                        "options": [
+                            {
+                                "id": "q2_a",
+                                "label": "Pro: Free / Con: Wild west",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_b",
+                                "label": "Pro: Authentic Connection / Con: Variable Quality",
+                                "correct": true
+                            },
+                            {
+                                "id": "q2_c",
+                                "label": "Pro: Convenience / Con: Less effective",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_d",
+                                "label": "Pro: No training / Con: Replaces therapy",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "q2_a": "<p>It's not just about cost, and safety standards do exist.</p>",
+                            "q2_c": "<p>Effectiveness is different, not 'less'. Different tools for different jobs.</p>",
+                            "q2_b": "<p><strong>Correct!</strong> The power is shared lived experience. The risk is that volunteers have different skill levels and aren't equipped for acute crises.</p>"
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

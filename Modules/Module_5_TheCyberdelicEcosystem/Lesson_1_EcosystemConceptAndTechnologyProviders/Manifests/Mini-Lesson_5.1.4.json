@@ -1,4 +1,4 @@
-﻿{
+{
     "id": "mini_lesson_5_1_4",
     "title": "Open Source & Cross-Pollination",
     "description": "Explore the gift economy philosophy, major open source contributions, and the bidirectional flow of ideas between cyberdelics and adjacent fields.",
@@ -15,7 +15,7 @@
                 "sections": [
                     {
                         "title": "Major Open Source Contributions",
-                        "content": "<p>One of the most distinctive things about the cyberdelic field is how much of its foundation was built as a gift. Three tools deserve specific recognition:</p><p><strong>Open Brush:</strong> When Google abandoned Tilt Brush, the community forked it into a free, open-source VR spatial painting app. For facilitators using visual art, it became a core tool precisely because it isn't owned by anyone with a commercial interest in restricting it.</p><p><strong>OpenBCI:</strong> Professional EEG equipment used to cost $2,000â€“$10,000. OpenBCI entered with open designs priced at $200â€“$500. Independent researchers suddenly had access to brainwave monitoring. The neurofeedback-enhanced VR category exists largely because OpenBCI democratized the sensing layer.</p><p><strong>Mozilla Hubs:</strong> Web-based social VR requiring no headset. For community gatherings and peer-support circles, Hubs created a zero-hardware-barrier entry point with a privacy-respecting architecture.</p>",
+                        "content": "<p>One of the most distinctive things about the cyberdelic field is how much of its foundation was built as a gift. Three tools deserve specific recognition:</p><p><strong>Open Brush:</strong> When Google abandoned Tilt Brush, the community forked it into a free, open-source VR spatial painting app. For facilitators using visual art, it became a core tool precisely because it isn't owned by anyone with a commercial interest in restricting it.</p><p><strong>OpenBCI:</strong> Professional EEG equipment used to cost $2,000—$10,000. OpenBCI entered with open designs priced at $200—$500. Independent researchers suddenly had access to brainwave monitoring. The neurofeedback-enhanced VR category exists largely because OpenBCI democratized the sensing layer.</p><p><strong>Mozilla Hubs:</strong> Web-based social VR requiring no headset. For community gatherings and peer-support circles, Hubs created a zero-hardware-barrier entry point with a privacy-respecting architecture.</p>",
                         "triggerLabel": "The Gift Economy"
                     },
                     {
@@ -52,7 +52,7 @@
                 "style": "card",
                 "questions": [
                     {
-                        "question": "<h3>The Ripple of Open Hardware</h3><p>What does it mean for the cyberdelic ecosystem that OpenBCI lowered the cost of EEG equipment from $2,000+ to $200â€“500? Which ecosystem components benefit most and how?</p>",
+                        "question": "<h3>The Ripple of Open Hardware</h3><p>What does it mean for the cyberdelic ecosystem that OpenBCI lowered the cost of EEG equipment from $2,000+ to $200—500? Which ecosystem components benefit most and how?</p>",
                         "options": [
                             {
                                 "id": "q1_a",

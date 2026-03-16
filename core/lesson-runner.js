@@ -66,20 +66,7 @@
             const screen = document.createElement('div');
             screen.className = 'opening-screen';
 
-            // Derive super title (Module # · Mini-Lesson #) from manifest ID
-            // Expected id format: mini_lesson_3_3_1  → "Module 3 · Mini-Lesson 3.3.1"
-            let superTitle = '';
-            if (manifest.id) {
-                const nums = manifest.id.replace(/^mini_lesson_/, '').split('_').filter(Boolean);
-                if (nums.length >= 2) {
-                    const moduleNum = nums[0];
-                    const lessonNum = nums.join('.');
-                    superTitle = `Module ${moduleNum} &middot; Mini-Lesson ${lessonNum}`;
-                }
-            }
-
             const mainTitle = manifest.title || 'Cyberdelics 101';
-            const subTitle = manifest.description || '';
 
             // Dynamically determine asset base path from script tag
             let basePath = '../';
@@ -92,9 +79,7 @@
                 <div class="course-header">
                     <img src="${basePath}assets/images/LessonTitleV2.jpg" class="header-bg" alt="Cyberdelic Academy Template">
                     <div class="lesson-overlay">
-                        ${superTitle ? `<h2>${superTitle}</h2>` : ''}
-                        <h1>${mainTitle}</h1>
-                        ${subTitle ? `<p class="opening-subtitle">${subTitle}</p>` : ''}
+                        <h1 data-text="${mainTitle}">${mainTitle}</h1>
 
                         <div class="overlay-actions">
                             <p class="opening-hint">Click the icon to begin</p>
@@ -194,7 +179,7 @@
                 const showContinue = !moduleConfig.hideContinueButton;
                 moduleContainer.style.display = 'flex';
                 moduleContainer.style.flexDirection = 'column';
-                moduleContainer.style.height = '100%';
+                moduleContainer.style.minHeight = '100%';
                 moduleContainer.innerHTML = `
                     <div class="interactive-simulation-container" style="display: flex; flex-direction: column; flex: 1; position: relative; min-height: 60vh;">
                         <!-- The target engine will mount here and wipe this inner content -->
@@ -261,20 +246,27 @@
         }
 
         _finishLesson() {
+            if (window.LessonUI) {
+                window.LessonUI.update(null, 1.0); // Ensure progress reaches 100%
+                window.LessonUI.setBackAction(null);
+            }
+            
             const container = window.LessonUI ? window.LessonUI.getContentContainer() : this.container;
             container.innerHTML = `
-                    < div class="lesson-complete-screen" style = "display:flex; flex-direction:column; align-items:center; justify-content:center; height:100%; text-align:center;" >
-                    <h1 style="font-size:3rem; margin-bottom:1rem; color:var(--color-accent);">LESSON COMPLETE</h1>
-                    <p style="font-size:1.2rem; margin-bottom:2rem; max-width:600px;">
-                        You have finished: <br>
-                        <strong style="color:white;">${this.currentLesson.title}</strong>
+                <div class="lesson-complete-screen">
+                    <div class="completed-icon">✔</div>
+                    <h1 class="lesson-complete-title">LESSON COMPLETE</h1>
+                    <p class="lesson-complete-subtitle">
+                        You have successfully finished:<br>
+                        <strong>${this.currentLesson.title}</strong>
                     </p>
-                    <div style="display:flex; justify-content:center;">
-                        <button class="btn-primary" onclick="if(document.fullscreenElement) document.exitFullscreen(); location.reload();">RETURN ⮌</button>
+                    <div class="lesson-complete-actions">
+                        <button class="btn-return" onclick="if(document.fullscreenElement) document.exitFullscreen(); location.reload();">
+                            RETURN <span>⮌</span>
+                        </button>
                     </div>
-                </div >
-                    `;
-            if (window.LessonUI) window.LessonUI.setBackAction(null);
+                </div>
+            `;
         }
 
         _applyTheme(theme) {

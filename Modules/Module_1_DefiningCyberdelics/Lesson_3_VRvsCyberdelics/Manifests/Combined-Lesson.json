@@ -1,0 +1,287 @@
+{
+    "id": "combined_lesson_1_3",
+    "title": "Entertainment vs. Cyberdelics: Direction of Attention & Design Dimensions",
+    "description": "Understand exactly what separates generic VR from cyberdelic VR -- from the direction of attention principle to the six design dimensions that define every intentional cyberdelic experience.",
+    "framerDescription": "The same headset. Two completely different kinds of experience. This lesson shows you how to tell them apart -- and how to think like a designer when you do.",
+    "theme": {
+        "primaryColor": "#00d9ff",
+        "fontBody": "Rajdhani, sans-serif"
+    },
+    "modules": [
+        {
+            "id": "attention_pd_3.1",
+            "title": "The Direction of Attention",
+            "type": "progressive-disclosure",
+            "content": {
+                "sections": [
+                    {
+                        "title": "The Technology is the Same",
+                        "content": "<p>When you put on a VR headset, the hardware doesn't care if you're playing a zombie shooter or engaging in a deep meditative journey. The pixels are the same. The tracking is the same. The difference isn't in the wires, it's in the way the experience directs your attention. To understand cyberdelics, we have to look past the screen and into the mind.</p>",
+                        "triggerLabel": "Where is for Attention?"
+                    },
+                    {
+                        "title": "Direction of Attention",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module1/lesson3/DirectionOfAttention.jpg",
+                            "alt": "A diagram showing two heads in VR, one with arrows pointing 'out' into a game world, the other with arrows curving 'back' toward the viewer's own body and awareness",
+                            "notes": "AI Prompt: Side-by-side comparison diagram of two human silhouettes wearing sleek VR headsets. LEFT silhouette has bright jagged arrows exploding outward from the headset into a chaotic, neon game world (entertainment). RIGHT silhouette has smooth, glowing blue lines curving from the headset back toward the heart and center of the silhouette (cyberdelic). Minimalist, clean medical-illustration style, deep purple background, 16:9 aspect ratio."
+                        },
+                        "mediaLayout": "full",
+                        "content": "<p>In <strong>Entertainment VR</strong>, your attention is pulled <strong>outward</strong> toward the content, the score, the enemies, the external goals. In <strong>Cyberdelic VR</strong>, the technology is used to pull your attention <strong>inward</strong> toward your own internal state, breath, or consciousness. The tech is the mirror, not just the window.</p>",
+                        "triggerLabel": "Entertainment Questions"
+                    },
+                    {
+                        "title": "Entertainment Questions",
+                        "content": "<p>Entertainment VR asks: <em>'What can I do in this world?'</em> or <em>'How do I win?'</em> It focuses on agency within a simulation. The goal is often distraction or thrill, moving away from your current state into a fictional one.</p>",
+                        "triggerLabel": "Cyberdelic Questions"
+                    },
+                    {
+                        "title": "Cyberdelic Questions",
+                        "content": "<p>Cyberdelic VR asks: <em>'What am I feeling right now?'</em> or <em>'How is my awareness changing?'</em> It focuses on self-observation. The goal is presence, moving toward a deeper understanding of your own consciousness through the technological interface.</p>",
+                        "triggerLabel": "The Different Needs"
+                    },
+                    {
+                        "title": "Different Tools for Different Needs",
+                        "content": "<p>Neither is 'better.' We need entertainment, play, and escapism. But when we use technology for transformation, we need a different set of design principles. If you try to use a 'game' design to achieve a 'mystical' state, the mechanics often get in the way. Cyberdelics is the art of designing for that inward turn.</p>",
+                        "triggerLabel": "Evaluate Experiences"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "exp_evaluation_3.1",
+            "title": "Evaluating Experiences",
+            "type": "scenario-based",
+            "content": {
+                "scenes": [
+                    {
+                        "id": "intro",
+                        "narrative": "<h3>Evaluating Experiences</h3><p>You are reviewing three different VR experiences to determine which ones align with cyberdelic principles vs. pure entertainment.</p>",
+                        "choices": [
+                            {
+                                "id": "start",
+                                "label": "Start Review",
+                                "outcome": "zombie_bash"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "zombie_bash",
+                        "narrative": "<h3>Experience A - 'Neon Strike'</h3><p><strong>Persona: The Action Gamer (Reviewer)</strong></p><p>A high-speed rhythm game where you dodge obstacles and hit targets to a pulsing soundtrack. You are constantly monitoring your health bar and multiplier score.</p>",
+                        "choices": [
+                            {
+                                "id": "pure_ent",
+                                "label": "Pure Entertainment",
+                                "outcome": "zombie_bash_pure_ent_feedback"
+                            },
+                            {
+                                "id": "cyber_ent",
+                                "label": "Cyberdelic",
+                                "outcome": "zombie_bash_cyber_ent_feedback"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "zombie_bash_pure_ent_feedback",
+                        "narrative": "<h3>Feedback</h3><p>Correct. The attention is entirely outward, focused on reaction time, scoring, and external goals. While immersive, it is designed for 'flow' through external challenge, not inward reflection.</p>",
+                        "choices": [
+                            {
+                                "id": "continue",
+                                "label": "Continue to Experience B",
+                                "outcome": "breath_viz"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "zombie_bash_cyber_ent_feedback",
+                        "narrative": "<h3>Feedback</h3><p>Not quite. While the music and visuals are 'trippy,' the fundamental mechanics (scoring, dodging, external targets) pull the attention away from the self and toward the game state.</p>",
+                        "choices": [
+                            {
+                                "id": "continue",
+                                "label": "Continue to Experience B",
+                                "outcome": "breath_viz"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "breath_viz",
+                        "narrative": "<h3>Experience B - 'Lumen Breath'</h3><p><strong>Persona: The Meditator (Reviewer)</strong></p><p>A serene environment where a glowing nebula expands and contracts in sync with your actual breathing, captured via a chest strap or controller movement. There are no scores or levels, only the visualization of your internal rhythm.</p>",
+                        "choices": [
+                            {
+                                "id": "cyber_pure",
+                                "label": "Cyberdelic",
+                                "outcome": "breath_viz_cyber_pure_feedback"
+                            },
+                            {
+                                "id": "ent_pure",
+                                "label": "Entertainment",
+                                "outcome": "breath_viz_ent_pure_feedback"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "breath_viz_cyber_pure_feedback",
+                        "narrative": "<h3>Feedback</h3><p>Correct. This is a classic cyberdelic loop. The technology acts as a mirror, reflecting your internal biological state (breath) back to you, turning your attention inward to maintain the experience.</p>",
+                        "choices": [
+                            {
+                                "id": "continue",
+                                "label": "Continue to Experience C",
+                                "outcome": "mountain_climb"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "breath_viz_ent_pure_feedback",
+                        "narrative": "<h3>Feedback</h3><p>Incorrect. Because the experience focuses on reflecting the user's internal state rather than providing external goals or distraction, it falls squarely into the cyberdelic category.</p>",
+                        "choices": [
+                            {
+                                "id": "continue",
+                                "label": "Continue to Experience C",
+                                "outcome": "mountain_climb"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "mountain_climb",
+                        "narrative": "<h3>Experience C - 'Zenith Reach'</h3><p><strong>Persona: The Explorer (Reviewer)</strong></p><p>A photorealistic mountain climbing simulation. You feel the physical strain of the climb, but the goal is to reach the summit to unlock a cinematic view of the horizon.</p>",
+                        "choices": [
+                            {
+                                "id": "ent_mountain",
+                                "label": "Entertainment",
+                                "outcome": "mountain_climb_ent_mountain_feedback"
+                            },
+                            {
+                                "id": "cyber_mountain",
+                                "label": "Cyberdelic",
+                                "outcome": "mountain_climb_cyber_mountain_feedback"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "mountain_climb_ent_mountain_feedback",
+                        "narrative": "<h3>Feedback</h3><p>Correct. This is a high-fidelity simulation focused on an external achievement (reaching the summit). It aims for realism and goal-completion, characteristic of entertainment/simulation VR.</p>",
+                        "choices": [
+                            {
+                                "id": "continue",
+                                "label": "Complete Evaluation",
+                                "outcome": "complete"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "mountain_climb_cyber_mountain_feedback",
+                        "narrative": "<h3>Feedback</h3><p>Incorrect. While it might be awe-inspiring, the primary direction of attention is toward the external goal (the summit) and the mechanics of climbing, not the observation of one's own consciousness.</p>",
+                        "choices": [
+                            {
+                                "id": "continue",
+                                "label": "Complete Evaluation",
+                                "outcome": "complete"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "dimensions_intro_pd_3.2",
+            "title": "The Six Design Dimensions",
+            "type": "progressive-disclosure",
+            "content": {
+                "sections": [
+                    {
+                        "title": "The Architecture of Experience",
+                        "content": "<p>Every intentional cyberdelic experience is built across six dimensions. These are not arbitrary checkboxes. They are the fundamental questions a designer must answer to create a coherent intervention. When an experience feels fragmented or ineffective, it is usually because one or more of these dimensions was left undefined.</p>",
+                        "triggerLabel": "The Substrate"
+                    },
+                    {
+                        "title": "Reality and Sensory Channels",
+                        "content": "<p>The first two dimensions form the substrate of the experience. Reality is the world the experience inhabits, whether that is a fully digital environment, an augmented physical space, or your own biology. The Sensory dimension defines the perceptual channels used to access that reality. An experience might rely purely on sweeping visual landscapes, or it might center entirely on tactile feedback and acoustic resonance.</p>",
+                        "triggerLabel": "The Internal Shift"
+                    },
+                    {
+                        "title": "Presence and States",
+                        "content": "<p>The next two dimensions address the internal shift. Presence is the quality of awareness the architecture cultivates, like grounded embodiment or focused mental clarity. States refers to the transient shifts in consciousness that occur during the session. A cyberdelic design might aim to facilitate a temporary ego softening or a profound emotional release, using the reality substrate and sensory channels as the catalyst.</p>",
+                        "triggerLabel": "The Lasting Impact"
+                    },
+                    {
+                        "title": "Traits and Meaning",
+                        "content": "<p>The final two dimensions define the lasting impact and the soul of the work. Traits are what endure downward into the person's life long after the session ends, such as sustained cognitive flexibility or increased relational empathy. Meaning is the most critical dimension. It encompasses the overarching world, the narrative arc the person moves through, and the specific principle that makes the transformation possible.</p>",
+                        "triggerLabel": "Explore the Dimensions"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "dimension_explorer_3.2",
+            "title": "The Cyberdelic Design Dimension Explorer",
+            "type": "interactive-simulation",
+            "content": {
+                "engine": "TesseractExplorer",
+                "params": {},
+                "hideContinueButton": true
+            }
+        },
+        {
+            "id": "attention_quiz_3.1",
+            "title": "Direction of Attention Quiz",
+            "type": "option-selector",
+            "config": {
+                "mode": "single",
+                "style": "text",
+                "questions": [
+                    {
+                        "question": "What is the primary difference between Entertainment VR and Cyberdelic VR?",
+                        "options": [
+                            {
+                                "id": "q1_1_a",
+                                "label": "The quality of the graphics",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_1_b",
+                                "label": "The price of the headset",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_1_c",
+                                "label": "The direction of the user's attention (Outward vs. Inward)",
+                                "correct": true
+                            },
+                            {
+                                "id": "q1_1_d",
+                                "label": "The speed of the internet connection",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "q1_1_a": "<p>Graphics quality varies in both fields. High-fidelity visuals are used for both games and transformational tools. The real difference lies in the <em>purpose</em> and <em>direction of attention</em>, not the resolution. <strong>Try again.</strong></p>",
+                            "q1_1_b": "<p>Both types of experiences run on the same hardware. The distinction is in the software design and psychological intent, not the physical cost of the device. <strong>Try again.</strong></p>",
+                            "q1_1_d": "<p>Connection speed is a technical requirement that doesn't define the nature of the experience itself. The distinction is psychological. <strong>Try again.</strong></p>",
+                            "q1_1_c": "<h3>Correct!</h3><p>Exactly. While the technology is secondary, the psychological direction of attention is primary. Entertainment pulls you into a fictional external world; Cyberdelics uses technology to reveal and explore your internal world.</p>"
+                        }
+                    },
+                    {
+                        "question": "True or False - A 'trippy' visual style automatically makes a VR experience cyberdelic.",
+                        "options": [
+                            {
+                                "id": "q1_2_a",
+                                "label": "True",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_2_b",
+                                "label": "False",
+                                "correct": true
+                            }
+                        ],
+                        "synthesis": {
+                            "q1_2_a": "<p>Visual style is just aesthetics. Many games use psychedelic visuals for style or atmosphere while maintaining purely 'entertainment' mechanics (shooting, scoring, etc.). To be cyberdelic, the mechanics must turn attention inward. <strong>Try again.</strong></p>",
+                            "q1_2_b": "<h3>Quiz Complete!</h3><p>Correct. Aesthetics alone don't define the category. An experience is cyberdelic based on its <em>design mechanics</em> and its ability to facilitate self-reflection, biofeedback, or altered states of consciousness, regardless of whether it 'looks' trippy or realistic. <strong>Quiz Complete.</strong></p>"
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

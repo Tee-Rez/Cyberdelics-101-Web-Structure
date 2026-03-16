@@ -152,7 +152,7 @@ class LessonUI {
         // Inner Container for Teaching Modules (This is what gets cleared by LessonRunner)
         const moduleRoot = document.createElement('div');
         moduleRoot.id = 'module-root';
-        moduleRoot.style.cssText = 'width: 100%; height: 100%; position: relative;';
+        moduleRoot.style.cssText = 'width: 100%; min-height: 100%; position: relative;';
         main.appendChild(moduleRoot);
         this.elements.moduleRoot = moduleRoot;
 

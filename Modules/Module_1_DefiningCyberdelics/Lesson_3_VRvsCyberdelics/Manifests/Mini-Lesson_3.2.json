@@ -8,6 +8,35 @@
     },
     "modules": [
         {
+            "id": "dimensions_intro_pd_3.2",
+            "title": "The Six Design Dimensions",
+            "type": "progressive-disclosure",
+            "content": {
+                "sections": [
+                    {
+                        "title": "The Architecture of Experience",
+                        "content": "<p>Every intentional cyberdelic experience is built across six dimensions. These are not arbitrary checkboxes. They are the fundamental questions a designer must answer to create a coherent intervention. When an experience feels fragmented or ineffective, it is usually because one or more of these dimensions was left undefined.</p>",
+                        "triggerLabel": "The Substrate"
+                    },
+                    {
+                        "title": "Reality and Sensory Channels",
+                        "content": "<p>The first two dimensions form the substrate of the experience. Reality is the world the experience inhabits, whether that is a fully digital environment, an augmented physical space, or your own biology. The Sensory dimension defines the perceptual channels used to access that reality. An experience might rely purely on sweeping visual landscapes, or it might center entirely on tactile feedback and acoustic resonance.</p>",
+                        "triggerLabel": "The Internal Shift"
+                    },
+                    {
+                        "title": "Presence and States",
+                        "content": "<p>The next two dimensions address the internal shift. Presence is the quality of awareness the architecture cultivates, like grounded embodiment or focused mental clarity. States refers to the transient shifts in consciousness that occur during the session. A cyberdelic design might aim to facilitate a temporary ego softening or a profound emotional release, using the reality substrate and sensory channels as the catalyst.</p>",
+                        "triggerLabel": "The Lasting Impact"
+                    },
+                    {
+                        "title": "Traits and Meaning",
+                        "content": "<p>The final two dimensions define the lasting impact and the soul of the work. Traits are what endure downward into the person's life long after the session ends, such as sustained cognitive flexibility or increased relational empathy. Meaning is the most critical dimension. It encompasses the overarching world, the narrative arc the person moves through, and the specific principle that makes the transformation possible.</p>",
+                        "triggerLabel": "Explore the Dimensions"
+                    }
+                ]
+            }
+        },
+        {
             "id": "dimension_explorer_3.2",
             "title": "The Cyberdelic Design Dimension Explorer",
             "type": "interactive-simulation",

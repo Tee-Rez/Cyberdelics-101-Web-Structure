@@ -265,6 +265,7 @@
     transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
     position: relative;
     overflow: hidden;
+    flex-shrink: 0;
 }
 
 [data-engine="TesseractExplorer"] .te-option:hover {

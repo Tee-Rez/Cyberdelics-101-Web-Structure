@@ -1,0 +1,630 @@
+{
+    "id": "combined_lesson_4_4",
+    "title": "Specialized Applications & Hardware: From Breathwork to Headset Selection",
+    "description": "Survey the specialized frontier of cyberdelics -- breathwork, sound, movement, nature immersion, creativity, and experimental states -- then navigate the hardware landscape to match the right device to the right user.",
+    "framerDescription": "The tools are diverse and the hardware affects everything. This lesson covers the full range of specialized applications and gives you a pragmatic guide for recommending hardware.",
+    "theme": {
+        "primaryColor": "#00d9ff",
+        "fontBody": "Rajdhani, sans-serif"
+    },
+    "modules": [
+        {
+            "id": "module_4_4_1_progressive",
+            "title": "Breath & Sound Technologies",
+            "type": "progressive-disclosure",
+            "content": {
+                "sections": [
+                    {
+                        "title": "What VR Adds to Breathwork",
+                        "content": "<p>Breathwork is ancient, but VR adds specific advantages:</p><ul><li><strong>Visual Pacing:</strong> Expanding/contracting visuals guide rhythm intuitively (e.g., box breathing), reducing cognitive load.</li><li><strong>Environmental Mirroring:</strong> The world brightens/expands on inhale and softens/contracts on exhale, creating a 'dance' with the space.</li><li><strong>Biofeedback:</strong> Cameras/sensors can track breath to verify technique.</li><li><strong>Focus:</strong> VR blocks external distractions, creating an immersive container for practice.</li></ul>",
+                        "triggerLabel": "Othership (Case Study)"
+                    },
+                    {
+                        "title": "Othership â€” Breathwork at Scale",
+                        "content": "<p><strong>Othership (Canada)</strong> is a top globally downloaded breathwork platform.</p><ul><li><strong>Features:</strong> 50+ countries, curated music, social VR sessions, coherence to transformational protocols.</li><li><strong>Accessibility:</strong> Free tier + premium model. Proved breathwork VR has mass appeal.</li><li><strong>Best For:</strong> Daily practice, group sessions, stress management to deep exploration.</li><li><strong>Limitation:</strong> Self-directed; caution needed for high-intensity protocols without clinical support.</li></ul>",
+                        "media": {
+                            "type": "image",
+                            "src": "placeholder-othership-breath.jpg",
+                            "alt": "Immersive VR breathwork environment with expanding mandala patterns",
+                            "position": "left",
+                            "aiPrompt": "Immersive VR breathwork environment â€” person in VR headset doing deep breathing, visible chest expansion, virtual environment shows expanding glowing mandala patterns synchronized with breath rhythm (expanding on inhale, contracting on exhale), warm ambient lighting, sense of rhythm and flow, purple/teal color palette, both energizing and calming simultaneously, 16:9 aspect ratio"
+                        },
+                        "triggerLabel": "Therapeutic Sound"
+                    },
+                    {
+                        "title": "Therapeutic Sound Mechanisms",
+                        "content": "<p>Sound in VR uses specific scientific principles:</p><ul><li><strong>Entrainment:</strong> Rhythmic steady beats (e.g., 4Hz) drive brainwaves into specific states (theta).</li><li><strong>Limbic Resonance:</strong> Harmonic progressions directly shift emotional state (e.g., dissonance to consonance).</li><li><strong>Spatial Audio:</strong> 3D sound synchronized with visuals amplifies immersion.</li></ul>",
+                        "triggerLabel": "Soundself (Technodelic)"
+                    },
+                    {
+                        "title": "Soundself â€” The Technodelic Loop",
+                        "content": "<p><strong>Soundself</strong> by Robin Arnott is a unique 'technodelic' loop.</p><ul><li><strong>Mechanism:</strong> You tone/sing â†’ your voice generates the visuals/audio in real-time â†’ you adjust voice â†’ environment responds.</li><li><strong>Effect:</strong> Continuous active vocalization + feedback loop induces trance, ego dissolution, and synesthesia.</li><li><strong>Category:</strong> Exploratory & Transformational. Not passive listening; active participation.</li></ul>",
+                        "triggerLabel": "Wavepaths (Psychedelic)"
+                    },
+                    {
+                        "title": "Wavepaths â€” Music for Depth",
+                        "content": "<p><strong>Wavepaths (UK)</strong> was created for psychedelic therapy by neuroscientist Karl Friston.</p><ul><li><strong>Function:</strong> Generates real-time therapeutic music based on user state/trajector.</li><li><strong>Validation:</strong> Used in clinical trials. Applies psychedelic therapy principles (harmonics for opening, rhythm for introspection) to digital formats.</li><li><strong>Relevance:</strong> Shows how music designed for substance work translates directly to cyberdelic containers.</li></ul>",
+                        "triggerLabel": "Check Your Understanding"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "module_4_4_2_progressive",
+            "title": "Movement & Nature Psychology",
+            "type": "progressive-disclosure",
+            "content": {
+                "sections": [
+                    {
+                        "title": "Flow State in Movement VR",
+                        "content": "<p>Flow state (Csikszentmihalyi) requires: 1. Clear goals/feedback, 2. Challenge-skill balance, 3. Action-awareness merging, 4. Sense of control. When VR movement meets these criteria, it produces absorbed presence similar to meditation. It ceases to be 'exercise' and becomes 'moving meditation'.</p>",
+                        "triggerLabel": "Supernatural vs. FitXR"
+                    },
+                    {
+                        "title": "Supernatural & FitXR",
+                        "content": "<p><strong>Supernatural (US Only):</strong> Premium coaching emphasizing *presence*. Coaches clear mental space. High production value, expensive subscription.</p><p><strong>FitXR (Global):</strong> More accessible, gamified fitness. Can produce flow if user brings contemplative intent, but platform is less explicitly designed for it.</p><p><strong>Choice:</strong> Supernatural for guided presence; FitXR for accessible self-directed flow.</p>",
+                        "triggerLabel": "Attention Restoration Theory"
+                    },
+                    {
+                        "title": "Attention Restoration Theory (ART)",
+                        "content": "<p><strong>ART (Kaplan):</strong> Nature restores cognitive function via: 1. Soft Fascination (effortless attention), 2. Being Away (escape), 3. Extent (immersive scale), 4. Compatibility. VR nature activates these same mechanisms.</p><p><strong>Key Finding:</strong> Virtual nature is ~70% as effective as real nature for restoration.</p>",
+                        "triggerLabel": "Nature Treks & The Blu"
+                    },
+                    {
+                        "title": "Nature Treks & The Blu",
+                        "content": "<p><strong>Nature Treks VR:</strong> Open exploration. Good for daily grounding, freedom. Low cost ($10).</p><p><strong>The Blu:</strong> Intense, curated encounters (e.g., eye contact with a blue whale). Used for awe induction and exposure therapy.</p><p><strong>Contrast:</strong> Ongoing restoration (Nature Treks) vs. Peak experience (The Blu).</p>",
+                        "media": {
+                            "type": "image",
+                            "src": "placeholder-nature-vr.jpg",
+                            "alt": "Split view: Serene forest exploration vs. majestic underwater whale encounter",
+                            "position": "full-width",
+                            "aiPrompt": "Split composition nature VR scene â€” left half shows person walking through serene forest VR environment (sunlight through trees, ferns, sense of peaceful exploration), right half shows person encountering majestic blue whale in underwater VR scene (sense of awe and scale, whale making eye contact), both figures show visible emotional response and presence, contrasting gentle restoration vs. intense awe, 16:9 aspect ratio"
+                        },
+                        "triggerLabel": "Clinical Implications"
+                    },
+                    {
+                        "title": "Accessibility & Clinical Relevance",
+                        "content": "<p>Why 70% effectiveness matters:</p><ul><li><strong>Urban Access:</strong> Daily 70% VR nature beats monthly 100% real nature.</li><li><strong>Disability:</strong> Accessible to those who cannot hike or travel.</li><li><strong>Agoraphobia:</strong> The only nature access possible without panic.</li></ul><p>Virtual nature isn't a replacement for those with access; it's a lifeline for those without.</p>",
+                        "triggerLabel": "Take Concept Check"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "module_4_4_3_progressive",
+            "title": "The Experimental Frontier",
+            "type": "progressive-disclosure",
+            "content": {
+                "sections": [
+                    {
+                        "title": "Open Brush as Consciousness Tool",
+                        "content": "<p><strong>Open Brush</strong> is technically a painting app, but functionally a consciousness tool.</p><ul><li><strong>Meditative:</strong> Induces flow states through spatial creation.</li><li><strong>Awe:</strong> Creating a galaxy you can walk through induces profound wonder.</li><li><strong>Integration:</strong> Used by facilitators to help clients externalize ineffable experiences.</li></ul>",
+                        "triggerLabel": "Experimental Categories"
+                    },
+                    {
+                        "title": "Experimental Categories",
+                        "content": "<p><strong>Beyond Wellness:</strong></p><ul><li><strong>OBE Simulations:</strong> Uses body-swapping illusions to loosen ego identification (University of Barcelona).</li><li><strong>NDE Simulations:</strong> Guided death/rebirth narratives (tunnels of light, life review).</li><li><strong>Lucid Dreaming:</strong> Reality testing training in surreal VR environments.</li></ul><p>These target <strong>transformation</strong>, not relaxation. They carry high intensity.</p>",
+                        "media": {
+                            "type": "image",
+                            "src": "placeholder-experimental-vr.jpg",
+                            "alt": "Abstract VR scene depicting ego dissolution",
+                            "position": "left",
+                            "aiPrompt": "Abstract experimental VR consciousness scene â€” person in VR headset experiencing profound altered state (body language shows both opening and vulnerability), environment shows dissolving boundaries and geometric abstractions representing ego dissolution, sense of intensity but contained space, facilitator presence subtly visible in background (protective container), mystical aesthetic with sacred geometry, both expansive and grounded simultaneously, 16:9 aspect ratio"
+                        },
+                        "triggerLabel": "Riva's Research (2025)"
+                    },
+                    {
+                        "title": "Giuseppe Riva's Research (Milan, 2025)",
+                        "content": "<p><strong>Use Validation:</strong> Published in <em>Dialogues in Clinical Neuroscience</em>.</p><ul><li><strong>Finding:</strong> Cyberdelic VR can produce short-term effects comparable to LSD/psilocybin: creativity, emotional breakthrough, insight, reduced rigidity.</li><li><strong>Implication:</strong> It's not just a toy. The effects are real enough to demand serious ethical handling.</li></ul>",
+                        "triggerLabel": "Ethical Requirements"
+                    },
+                    {
+                        "title": "Ethical Requirements",
+                        "content": "<ul><li><strong>Preparation:</strong> Mandatory for intense work. Consent must include risks (disorientation, emotion).</li><li><strong>Screening:</strong> R/O psychosis, severe dissociation, acute suicidal ideation.</li><li><strong>Facilitation:</strong> Real-time support is required for high-intensity apps.</li><li><strong>Integration:</strong> Time/space to process.</li></ul>",
+                        "triggerLabel": "Decision Framework"
+                    },
+                    {
+                        "title": "The Four Pathways",
+                        "content": "<p>When a client asks for intensity:</p><ul><li><strong>PROCEED:</strong> Green light. Prepared, stable, supported.</li><li><strong>MODIFY (Yellow):</strong> 'Yes, but start gentler.' Build capacity first.</li><li><strong>DEFER (Orange):</strong> 'Not now.' Crisis or instability present.</li><li><strong>DECLINE (Red):</strong> Unsafe request. Contraindicated.</li></ul>",
+                        "triggerLabel": "Scenario: Death Simulation"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "module_4_4_3_scenario",
+            "title": "Scenario: The Death Simulation Request",
+            "type": "scenario-based",
+            "content": {
+                "scenes": [
+                    {
+                        "id": "intro",
+                        "narrative": "<h3>The Request</h3><p><strong>Marcus (26)</strong> emails you: 'I saw a video about death simulation VR. I feel stuck in life and think a breakthrough experience could help me reset. I've never done VR, meditation, or therapy, but I'm not afraid of intensity. Can we do this weekend?'</p><p><strong>Consultation Notes:</strong> Intelligent, genuine, but naive. No support system nearby. 'Stuck' feeling = emotional numbness.</p>",
+                        "choices": [
+                            {
+                                "id": "decide",
+                                "label": "Make Your Decision",
+                                "outcome": "decision_point"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "decision_point",
+                        "narrative": "<h3>What is your ethical response?</h3>",
+                        "choices": [
+                            {
+                                "id": "opt_proceed",
+                                "label": "PROCEED: He's an adult, book the session.",
+                                "outcome": "outcome_proceed"
+                            },
+                            {
+                                "id": "opt_modify",
+                                "label": "MODIFY: Offer a graduated path (gentler start).",
+                                "outcome": "outcome_modify"
+                            },
+                            {
+                                "id": "opt_defer",
+                                "label": "DEFER: Suggest therapy first, revisit in 6 months.",
+                                "outcome": "outcome_defer"
+                            },
+                            {
+                                "id": "opt_decline",
+                                "label": "DECLINE: Too risky, refuse service.",
+                                "outcome": "outcome_decline"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "outcome_proceed",
+                        "narrative": "<h3>âš  Dangerous (Negligent)</h3><p>You book the session. Marcus has a massive, destabilizing release of repressed emotion. Without navigation skills or a therapist, he leaves overwhelmed and possibly retraumatized.</p><p><strong>Why:</strong> Intensity without preparation is recklessness, not facilitation.</p>",
+                        "choices": [
+                            {
+                                "id": "retry_p",
+                                "label": "Try Again",
+                                "outcome": "decision_point"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "outcome_defer",
+                        "narrative": "<h3>âš  Missed Opportunity</h3><p>You tell him to wait 6 months. He feels dismissed and likely goes to a less ethical provider who will say yes immediately.</p><p><strong>Why:</strong> You held the boundary but offered no bridge. You lost the chance to help him prepare.</p>",
+                        "choices": [
+                            {
+                                "id": "retry_d",
+                                "label": "Try Again",
+                                "outcome": "decision_point"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "outcome_decline",
+                        "narrative": "<h3>âš  Too Rigid</h3><p>Refusing entirely implies he's 'broken' or incapable. It functions as gatekeeping rather than care.</p>",
+                        "choices": [
+                            {
+                                "id": "retry_dec",
+                                "label": "Try Again",
+                                "outcome": "decision_point"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "outcome_modify",
+                        "narrative": "<h3>âœ“ Optimal: The Graduated Path</h3><p>'Marcus, I want to support this breakthrough. But jumping to death sim with zero experience is risky. Let's start with a guided journey (Maloka) to build navigation skills, and I'd like you to connect with a therapist for the 'stuckness'. If we build that foundation for 2 months, we can revisit the intense work.'</p><p><strong>Why:</strong> Honors his intent, ensures safety, builds capacity.</p>",
+                        "choices": [
+                            {
+                                "id": "finish",
+                                "label": "Complete Scenario",
+                                "outcome": "complete"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "complete",
+                        "narrative": "<h3>Scenario Complete</h3><p>Ethical facilitation isn't just saying 'no' to risk. It's building the scaffolding that makes risk manageable.</p>",
+                        "choices": [
+                            {
+                                "id": "continue",
+                                "label": "Take Quiz",
+                                "outcome": "modules_end"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "module_4_4_4_progressive",
+            "title": "Hardware Decision Matrix",
+            "type": "progressive-disclosure",
+            "content": {
+                "sections": [
+                    {
+                        "title": "The 4 Factors That Matter",
+                        "content": "<ol><li><strong>Content Library:</strong> The best headset is useless without the software. (Meta = Huge, Apple = Tiny).</li><li><strong>Standalone vs. Tethered:</strong> Standalone (Quest/Pico) = Freedom. Tethered (PC/PS5) = Friction.</li><li><strong>Comfort:</strong> Consciousness sessions are 30-60 mins. Weight distribution metrics matter more than raw resolution.</li><li><strong>Privacy:</strong> Meta requires account; Pico offers alternative; Apple is privacy-first but content-poor.</li></ol>",
+                        "triggerLabel": "Budget & Mid-Tier (Meta)"
+                    },
+                    {
+                        "title": "Budget & Mid-Tier: Meta Dominance",
+                        "content": "<p><strong>Quest 3S (~$300):</strong> Best entry point. Good enough visuals, runs full library. Front-heavy.</p><p><strong>Quest 3 (~$500):</strong> The anchor recommendation. Pancake lenses (clearer), better comfort/MR. The practical choice for 80% of users.</p><p><strong>Why Meta?:</strong> Subsidized hardware + massive library = unbeatable value proposition despite data concerns.</p>",
+                        "media": {
+                            "type": "image",
+                            "src": "placeholder-headset-comparison.jpg",
+                            "alt": "Side-by-side comparison of Quest 3S, Quest 3, Pico 4, and PSVR2",
+                            "position": "full-width",
+                            "aiPrompt": "Clean product comparison layout â€” four VR headsets displayed side by side on neutral background (Meta Quest 3S, Meta Quest 3, Pico 4, PlayStation VR2), each labeled with price point, slight angle showing form factor, professional product photography style, honest comparison aesthetic (not promotional), sense of informed decision-making, 16:9 aspect ratio"
+                        },
+                        "triggerLabel": "Premium Tier (Sony/Apple)"
+                    },
+                    {
+                        "title": "Premium Tier: The Content Trap",
+                        "content": "<p><strong>PSVR2 (~$550 + PS5):</strong> Excellent hardware, but locked ecosystem. Missing most cyberdelic apps (TRIPP/Maloka often unavailable).</p><p><strong>Apple Vision Pro ($3,500):</strong> Incredible specs, zero content. Not recommended for practitioners until library matures.</p><p><strong>Paradox:</strong> Better hardware often means *worse* cyberdelic access.</p>",
+                        "triggerLabel": "International Alternative (Pico)"
+                    },
+                    {
+                        "title": "Pico 4: The Privacy Alternative",
+                        "content": "<p><strong>Pico 4 (~$400):</strong> ByteDance-owned. Strong in Europe/Asia.</p><ul><li><strong>Pros:</strong> No Meta account, decent library (growing), good comfort.</li><li><strong>Cons:</strong> Missing some exclusives.</li></ul><p><strong>Use Case:</strong> International users or strict anti-Meta privacy stance.</p>",
+                        "triggerLabel": "Decision Questions"
+                    },
+                    {
+                        "title": "Key Decision Questions",
+                        "content": "<ul><li><strong>Platform First:</strong> Does it run the app you want?</li><li><strong>Budget:</strong> <$400 (Quest 3S/Pico) vs >$500 (Quest 3).</li><li><strong>Location:</strong> NA (Quest) vs EU/Asia (Pico viable).</li><li><strong>Duration:</strong> 45+ mins requires comfort (Quest 3 over 3S).</li></ul><p>Hardware is a tool to access software, not an end in itself.</p>",
+                        "triggerLabel": "Next: Match Hardware to User"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "quiz_4_4_1",
+            "title": "Concept Check: Audio-Visual Feedback",
+            "type": "option-selector",
+            "config": {
+                "mode": "single",
+                "style": "card",
+                "questions": [
+                    {
+                        "question": "<h3>The Soundself Mechanism</h3><p>What mechanism makes Soundself different from a music playlist for altering states?</p>",
+                        "options": [
+                            {
+                                "id": "q1_a",
+                                "label": "Special brainwave frequencies",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_b",
+                                "label": "Active vocal feedback loop",
+                                "correct": true
+                            },
+                            {
+                                "id": "q1_c",
+                                "label": "Higher audio quality",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_d",
+                                "label": "Designed for psychedelics",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "q1_a": "<p>Many apps use frequencies. That's not the unique mechanism.</p>",
+                            "q1_c": "<p>Quality matters, but doesn't change the *interaction*.</p>",
+                            "q1_d": "<p>It's a technology-based alternative, not a companion.</p>",
+                            "q1_b": "<p><strong>Correct!</strong> It creates a 'technodelic loop' where your own voice generates the environment in real-time. You are an active participant, not a passive listener.</p>"
+                        }
+                    },
+                    {
+                        "question": "<h3>Group Facilitation</h3><p>A facilitator wants to lead a synchronized group breathwork session for 8 people with visual pacing. Which platform is best?</p>",
+                        "options": [
+                            {
+                                "id": "q2_a",
+                                "label": "Soundself",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_b",
+                                "label": "Wavepaths",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_c",
+                                "label": "Othership",
+                                "correct": true
+                            },
+                            {
+                                "id": "q2_d",
+                                "label": "TRIPP",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "q2_a": "<p>Soundself is for individual vocalization, not group breathing.</p>",
+                            "q2_b": "<p>Wavepaths provides music, not visual breath pacing.</p>",
+                            "q2_d": "<p>TRIPP is primarily for solo wellness.</p>",
+                            "q2_c": "<p><strong>Correct!</strong> Othership is specifically designed for group facilitation, offering synchronized sessions with clear visual pacing for everyone.</p>"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "quiz_4_4_2",
+            "title": "Concept Check: Flow & Nature",
+            "type": "option-selector",
+            "config": {
+                "mode": "single",
+                "style": "card",
+                "questions": [
+                    {
+                        "question": "<h3>Flow Conditions</h3><p>What helps physical VR movement produce flow state rather than just exercise fatigue?</p>",
+                        "options": [
+                            {
+                                "id": "q1_a",
+                                "label": "High intensity (burning calories)",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_b",
+                                "label": "Clear goals + Challenge-skill balance",
+                                "correct": true
+                            },
+                            {
+                                "id": "q1_c",
+                                "label": "Long duration (45+ mins)",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_d",
+                                "label": "Social competition",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "q1_a": "Intensity without balance creates anxiety or exhaustion.",
+                            "q1_c": "Flow happens in minutes if conditions are right.",
+                            "q1_d": "Competition can help some, but isn't a requirement.",
+                            "q1_b": "<strong>Correct!</strong> When the challenge matches your skill and feedback is immediate, action merges with awareness."
+                        }
+                    },
+                    {
+                        "question": "<h3>Agoraphobia Access</h3><p>A client with severe agoraphobia wants to practice being in open environments but cannot leave home. What is the best recommendation?</p>",
+                        "options": [
+                            {
+                                "id": "q2_a",
+                                "label": "Supernatural (distraction)",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_b",
+                                "label": "Nature Treks VR (exposure)",
+                                "correct": true
+                            },
+                            {
+                                "id": "q2_c",
+                                "label": "Wait for therapy progress",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_d",
+                                "label": "VRChat (social support)",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "q2_a": "Distraction avoids the issue. Exposure engages it.",
+                            "q2_c": "VR *is* a valid therapeutic step, significantly better than total isolation.",
+                            "q2_d": "Social support doesn't address the specific environment fear.",
+                            "q2_b": "<strong>Correct!</strong> It provides a safe, graded way to experience open spaces (70% effective restoration) without triggering the full panic of leaving home."
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "quiz_4_4_3",
+            "title": "Concept Check: Ethics & Research",
+            "type": "option-selector",
+            "config": {
+                "mode": "single",
+                "style": "card",
+                "questions": [
+                    {
+                        "question": "<h3>Riva Research (2025)</h3><p>What did the Milan study demonstrate about experimental VR?</p>",
+                        "options": [
+                            {
+                                "id": "q1_a",
+                                "label": "It replaces psychedelics perfectly.",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_b",
+                                "label": "It produces comparable short-term effects (insight, catharsis).",
+                                "correct": true
+                            },
+                            {
+                                "id": "q1_c",
+                                "label": "It is safe for everyone without prep.",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_d",
+                                "label": "It only works in Italy.",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "q1_a": "It's comparable, not identical.",
+                            "q1_c": "Intensity creates *more* need for prep.",
+                            "q1_b": "<strong>Correct!</strong> It validated that VR can induce states functionally similar to LSD/psilocybin in key dimensions."
+                        }
+                    },
+                    {
+                        "question": "<h3>Ethical Obligation</h3><p>Which is <strong>NOT</strong> an ethical requirement for high-intensity facilitation?</p>",
+                        "options": [
+                            {
+                                "id": "q2_a",
+                                "label": "Preparation protocols",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_b",
+                                "label": "Integration support",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_c",
+                                "label": "Legal liability waiver",
+                                "correct": true
+                            },
+                            {
+                                "id": "q2_d",
+                                "label": "Psychological screening",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "q2_a": "Required for safety.",
+                            "q2_b": "Required for meaning-making.",
+                            "q2_d": "Required to filter contraindications.",
+                            "q2_c": "<strong>Correct!</strong> Waivers are a legal/business protection, not an ethical care requirement. Facilitators minimize harm, lawyers minimize liability."
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "module_4_4_5_matching",
+            "title": "Hardware Recommendation Matrix",
+            "type": "knowledge-construction",
+            "content": {
+                "title": "Hardware Recommendation Matrix",
+                "instruction": "Drag each user profile to the hardware tier that best fits their needs and constraints.",
+                "templateType": "categories",
+                "categories": [
+                    {
+                        "id": "cat_quest3s",
+                        "label": "META QUEST 3S â€” Budget Entry ($300)",
+                        "color": "#7b5cff"
+                    },
+                    {
+                        "id": "cat_quest3",
+                        "label": "META QUEST 3 â€” Premium Daily ($500)",
+                        "color": "#00d4ff"
+                    },
+                    {
+                        "id": "cat_pico4",
+                        "label": "PICO 4 â€” Privacy-First ($400)",
+                        "color": "#51cf66"
+                    },
+                    {
+                        "id": "cat_visionpro",
+                        "label": "APPLE VISION PRO â€” Specialized ($3,500)",
+                        "color": "#ffaa00"
+                    }
+                ],
+                "items": [
+                    {
+                        "id": "user_sarah",
+                        "text": "Sarah â€” Budget beginner, wants low-cost TRIPP entry",
+                        "correctCategory": "cat_quest3s"
+                    },
+                    {
+                        "id": "user_rachel",
+                        "text": "Rachel â€” Daily 60-min practitioner, needs comfort + lib",
+                        "correctCategory": "cat_quest3"
+                    },
+                    {
+                        "id": "user_elena",
+                        "text": "Elena (Germany) â€” Privacy-conscious, refuses Meta",
+                        "correctCategory": "cat_pico4"
+                    },
+                    {
+                        "id": "user_martinez",
+                        "text": "Dr. Martinez â€” Research lab, needs highest resolution",
+                        "correctCategory": "cat_visionpro"
+                    }
+                ],
+                "distractors": [
+                    {
+                        "id": "user_james",
+                        "text": "James â€” Already owns PS5, wants casual VR + gaming"
+                    },
+                    {
+                        "id": "user_marcus",
+                        "text": "Marcus (Teen) â€” Parents need strong parental controls"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "quiz_4_4_5",
+            "title": "Concept Check: Recommendation Logic",
+            "type": "option-selector",
+            "config": {
+                "mode": "single",
+                "style": "card",
+                "questions": [
+                    {
+                        "question": "<h3>The Comfort vs. Budget Trade-off</h3><p>Client wants to do 60-minute sessions and can afford ~$500. They have no gaming PC. Why recommend Quest 3 over Quest 3S?</p>",
+                        "options": [
+                            {
+                                "id": "q1_a",
+                                "label": "Quest 3S runs fewer apps.",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_b",
+                                "label": "Quest 3 has significantly better comfort/optics for long wear.",
+                                "correct": true
+                            },
+                            {
+                                "id": "q1_c",
+                                "label": "Quest 3S requires a PC.",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_d",
+                                "label": "Quest 3 tracks more biofeedback.",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "q1_a": "They run the same library.",
+                            "q1_c": "Both are standalone.",
+                            "q1_b": "<strong>Correct!</strong> For 60-minute sessions, the front-heavy Quest 3S becomes painful. Pancake lenses and balance justify the cost."
+                        }
+                    },
+                    {
+                        "question": "<h3>The Hierarchy of Needs</h3><p>What is the single most important factor to verify first?</p>",
+                        "options": [
+                            {
+                                "id": "q2_a",
+                                "label": "Display Resolution",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_b",
+                                "label": "Content Compatibility",
+                                "correct": true
+                            },
+                            {
+                                "id": "q2_c",
+                                "label": "Release Date",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_d",
+                                "label": "Field of View",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "q2_a": "Useless if the app doesn't run.",
+                            "q2_c": "Newer isn't always better for specific apps.",
+                            "q2_b": "<strong>Correct!</strong> Hardware is a vehicle for software. If it can't run TRIPP/Maloka, it fails the mission regardless of specs."
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

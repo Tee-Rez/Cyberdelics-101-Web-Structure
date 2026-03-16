@@ -1,0 +1,418 @@
+{
+    "id": "combined_lesson_1_4",
+    "title": "Meditation/Wellness Tech & Cyberdelics: Mapping the Overlap",
+    "description": "Navigate the genuinely blurry boundary between wellness meditation technology and cyberdelic experiences -- understanding the overlap zone and when intention transforms a device into a cyberdelic tool.",
+    "framerDescription": "This is the most nuanced boundary in the module. The overlap is real, and mapping it honestly makes you a better practitioner.",
+    "theme": {
+        "primaryColor": "#5900ff",
+        "fontBody": "Rajdhani, sans-serif"
+    },
+    "modules": [
+        {
+            "id": "overlap_pd_4.1",
+            "title": "Mapping the Boundary",
+            "type": "progressive-disclosure",
+            "content": {
+                "sections": [
+                    {
+                        "title": "Significant Common Ground",
+                        "content": "<p>Meditation tech and cyberdelics have substantial overlap. Many meditation apps use technology to support contemplative practice. Some cyberdelic experiences incorporate meditation techniques. The boundaries between these fields aren't always sharp, and that's not a problem to solve. It's a reality to understand.</p>",
+                        "triggerLabel": "Simple Meditation Apps"
+                    },
+                    {
+                        "title": "Simple Meditation Apps",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module1/MeditationApp.jpg",
+                            "alt": "Clean smartphone screen displaying a minimal meditation app interface",
+                            "notes": "AI Prompt: Clean smartphone screen displaying a minimal meditation app interface, soft gradient background in calming blue and lavender, simple breathing animation circle expanding and contracting, gentle typography, no VR hardware or biofeedback sensors visible, approachable and accessible aesthetic, warm soft lighting, 16:9 aspect ratio"
+                        },
+                        "mediaLayout": "left",
+                        "content": "<p>Apps like Headspace or Calm guide meditation through audio and simple visuals. They're valuable tools for developing mindfulness practice that serve millions of people effectively. However, they typically don't use immersive VR or biofeedback to intentionally create altered states. They deliver content that supports meditation, the technology is a container, not a catalyst. This is meditation tech.</p>",
+                        "triggerLabel": "VR Meditation With Biofeedback"
+                    },
+                    {
+                        "title": "VR Meditation With Biofeedback",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module1/vr_meditation_biofeedback.jpg",
+                            "alt": "Person in meditation posture wearing a VR headset and EEG sensor band",
+                            "notes": "AI Prompt: Person in meditation posture wearing a VR headset and EEG sensor band, immersed in a responsive virtual environment shown in soft translucent overlay, flowing sacred geometry patterns pulsing in sync with a heartbeat monitor on their wrist, sense of deep immersion and inner state being reflected outward, purple and teal color palette, 16:9 aspect ratio"
+                        },
+                        "mediaLayout": "right",
+                        "content": "<p>When meditation practice moves into immersive VR environments with biofeedback sensors that respond to your physiological state, creating responsive environments that shift based on heart rate, brainwaves, or breath rhythm, you've crossed into cyberdelic territory. The technology becomes a catalyst for consciousness exploration, not just a delivery mechanism for guided audio.</p>",
+                        "triggerLabel": "The Intensity Question"
+                    },
+                    {
+                        "title": "The Intensity Question",
+                        "content": "<p>The line isn't always sharp because it's a spectrum defined by depth and intensity. How immersive is the technology? How sophisticated is the biofeedback integration? How profound are the intended altered states? The more intense and intentional these elements become, the more cyberdelic the experience. The tipping point isn't a single threshold, it's a zone.</p>",
+                        "triggerLabel": "Both Are Valid"
+                    },
+                    {
+                        "title": "Both Are Valid",
+                        "content": "<p>This isn't about one being better than the other. Simple meditation apps serve millions of people effectively at exactly the right intensity for what they need. Cyberdelic experiences offer something different for those seeking more intensive consciousness exploration. The field benefits from having tools at different intensity levels, not from collapsing them all into one category.</p>",
+                        "triggerLabel": "Venn Diagram Explorer"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "advisor_scenarios_4.2",
+            "title": "The Advisor's Challenge",
+            "type": "scenario-based",
+            "content": {
+                "scenes": [
+                    {
+                        "id": "intro",
+                        "narrative": "<h3>The Advisor's Challenge</h3><p>You're helping three people choose the right technology for their goals. Each has different needs, different experience levels, and different intentions. Which approach fits each one?</p>",
+                        "choices": [
+                            {
+                                "id": "start",
+                                "label": "Begin Scenarios",
+                                "outcome": "person1_begin"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "person1_begin",
+                        "narrative": "<h3>PERSON 1 - Starting Simple</h3><p><strong>Persona: The Newcomer (Consultant)</strong></p><p>Someone is new to both meditation and technology. They want to start a basic mindfulness practice and prefer something simple and accessible. They're not seeking intense experiences yet, just building a foundation they can maintain consistently. What would you recommend?</p>",
+                        "choices": [
+                            {
+                                "id": "p1_a",
+                                "label": "Full cyberdelic VR protocol with biofeedback",
+                                "outcome": "person1_begin_p1_a_feedback"
+                            },
+                            {
+                                "id": "p1_b",
+                                "label": "A simple meditation app like Headspace or Calm",
+                                "outcome": "person1_begin_p1_b_feedback"
+                            },
+                            {
+                                "id": "p1_c",
+                                "label": "Tell them they're not ready for consciousness work yet",
+                                "outcome": "person1_begin_p1_c_feedback"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "person1_begin_p1_a_feedback",
+                        "narrative": "<h3>Feedback</h3><p>This is likely overwhelming for someone seeking simplicity as their first entry point. While cyberdelic experiences can work for beginners in the right context, this person has specifically asked for something basic. Meeting people where they are is essential, and right now they're at the beginning.</p>",
+                        "choices": [
+                            {
+                                "id": "continue",
+                                "label": "Continue to Person 2",
+                                "outcome": "person2_depth"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "person1_begin_p1_b_feedback",
+                        "narrative": "<h3>Feedback</h3><p>Perfect match. This fits their stated preference for simplicity and accessibility. They start with guided meditations, build a consistent practice, and develop foundational skills. Starting simple is completely valid, it's not a lesser path.</p>",
+                        "choices": [
+                            {
+                                "id": "continue",
+                                "label": "Continue to Person 2",
+                                "outcome": "person2_depth"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "person1_begin_p1_c_feedback",
+                        "narrative": "<h3>Feedback</h3><p>This is unnecessary gatekeeping. Everyone starts somewhere, and simple meditation apps are entirely appropriate entry points to consciousness work. Beginning with basic tools doesn't indicate lack of readiness.</p>",
+                        "choices": [
+                            {
+                                "id": "continue",
+                                "label": "Continue to Person 2",
+                                "outcome": "person2_depth"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "person2_depth",
+                        "narrative": "<h3>PERSON 2 - Seeking Depth</h3><p><strong>Persona: The Practitioner (Consultant)</strong></p><p>Someone has five years of daily meditation practice. They've experienced some altered states through traditional sitting practice but want to go deeper. They're curious about technology that could facilitate more profound experiences while supporting and extending their existing practice. What would you recommend?</p>",
+                        "choices": [
+                            {
+                                "id": "p2_a",
+                                "label": "Stick with traditional meditation only, avoid technology",
+                                "outcome": "person2_depth_p2_a_feedback"
+                            },
+                            {
+                                "id": "p2_b",
+                                "label": "Cyberdelic VR with biofeedback designed for experienced practitioners",
+                                "outcome": "person2_depth_p2_b_feedback"
+                            },
+                            {
+                                "id": "p2_c",
+                                "label": "A basic meditation app to help them track their existing practice",
+                                "outcome": "person2_depth_p2_c_feedback"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "person2_depth_p2_a_feedback",
+                        "narrative": "<h3>Feedback</h3><p>This limits their options unnecessarily. They're specifically seeking technological support for deepening an already established practice. Technology and tradition can work together, not in opposition to each other.</p>",
+                        "choices": [
+                            {
+                                "id": "continue",
+                                "label": "Continue to Person 3",
+                                "outcome": "person3_athletic"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "person2_depth_p2_b_feedback",
+                        "narrative": "<h3>Feedback</h3><p>Excellent recommendation. Given their established practice and clear desire for depth, cyberdelic experiences can facilitate the kind of profound altered states they're seeking, amplifying rather than replacing their existing practice.</p>",
+                        "choices": [
+                            {
+                                "id": "continue",
+                                "label": "Continue to Person 3",
+                                "outcome": "person3_athletic"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "person2_depth_p2_c_feedback",
+                        "narrative": "<h3>Feedback</h3><p>This doesn't address their stated goal of going deeper. They already have an established practice and are specifically seeking technology to facilitate more profound altered states. A basic app would be a step backward.</p>",
+                        "choices": [
+                            {
+                                "id": "continue",
+                                "label": "Continue to Person 3",
+                                "outcome": "person3_athletic"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "person3_athletic",
+                        "narrative": "<h3>PERSON 3 - Athletic Performance Focus</h3><p><strong>Persona: The Athlete (Consultant)</strong></p><p>An athlete wants to use meditation technology to improve focus and reduce pre-competition anxiety. They're interested in measurable outcomes like better sleep, faster recovery, and sharper mental clarity. They're not seeking spiritual experiences or consciousness exploration for its own sake. What would you recommend?</p>",
+                        "choices": [
+                            {
+                                "id": "p3_a",
+                                "label": "Cyberdelic VR focused on consciousness exploration",
+                                "outcome": "person3_athletic_p3_a_feedback"
+                            },
+                            {
+                                "id": "p3_b",
+                                "label": "Wellness tech like biofeedback for stress management and recovery",
+                                "outcome": "person3_athletic_p3_b_feedback"
+                            },
+                            {
+                                "id": "p3_c",
+                                "label": "Tell them meditation technology won't help with athletic performance",
+                                "outcome": "person3_athletic_p3_c_feedback"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "person3_athletic_p3_a_feedback",
+                        "narrative": "<h3>Feedback</h3><p>This mismatch between tool and goal could leave them frustrated. Cyberdelics are designed for consciousness exploration and transformation, not performance optimization. There are better-matched tools for these specific measurable goals.</p>",
+                        "choices": [
+                            {
+                                "id": "continue",
+                                "label": "Complete Challenge",
+                                "outcome": "complete"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "person3_athletic_p3_b_feedback",
+                        "narrative": "<h3>Feedback</h3><p>Perfect match. Wellness tech designed for performance optimization, stress reduction, and recovery directly addresses their stated goals without overshooting into territory they didn't ask for.</p>",
+                        "choices": [
+                            {
+                                "id": "continue",
+                                "label": "Complete Challenge",
+                                "outcome": "complete"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "person3_athletic_p3_c_feedback",
+                        "narrative": "<h3>Feedback</h3><p>This is incorrect. Meditation and biofeedback absolutely support athletic performance. The question isn't whether it helps, but which type of technology best serves performance goals versus exploration goals.</p>",
+                        "choices": [
+                            {
+                                "id": "continue",
+                                "label": "Complete Challenge",
+                                "outcome": "complete"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "intention_pd_4.2",
+            "title": "The Core of the Distinction",
+            "type": "progressive-disclosure",
+            "content": {
+                "sections": [
+                    {
+                        "title": "The Intention Shift",
+                        "content": "<p>Technology becomes cyberdelic when the primary intention shifts from optimization to exploration. Wellness tech asks: how can I function better? Cyberdelics asks: what can I discover about consciousness itself? Both are valid questions. They just lead to fundamentally different tools, designs, and experiences.</p>",
+                        "triggerLabel": "From Outcome to Process"
+                    },
+                    {
+                        "title": "From Outcome to Process",
+                        "content": "<p>Wellness tech focuses on outcomes: better sleep, reduced stress, improved focus, faster recovery. These are external measures of improvement. Cyberdelics focuses on the process: exploring consciousness, transforming your relationship with experience, cultivating presence. The journey is the destination. Neither orientation is wrong, they're aimed at different things.</p>",
+                        "triggerLabel": "Same Device, Different Use"
+                    },
+                    {
+                        "title": "Same Device, Different Use",
+                        "content": "<p>The same biofeedback device can be used for wellness or cyberdelics depending entirely on context and intention. HRV training for athletic recovery is wellness tech. HRV biofeedback integrated into an immersive VR experience designed to facilitate altered states is cyberdelic. The device itself doesn't determine the category, the use does.</p>",
+                        "triggerLabel": "User Intention Matters"
+                    },
+                    {
+                        "title": "User Intention Matters",
+                        "content": "<p>How you engage with technology shapes what it becomes for you. Someone could approach a cyberdelic experience purely for relaxation and get a wellness outcome. Someone could bring deep exploratory intention to a simple meditation app and touch cyberdelic territory. While design intent is primary, user engagement shapes the experience too.</p>",
+                        "triggerLabel": "Multiple Valid Tools"
+                    },
+                    {
+                        "title": "Multiple Valid Tools",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module1/lesson4/pathways_comparison.jpg",
+                            "alt": "Three parallel illuminated pathways showing different levels of meditative tech",
+                            "notes": "AI Prompt: Three parallel pathways shown side by side, each equally illuminated and equally valid, left pathway shows a person using a simple phone app for meditation (soft ambient light, relaxed posture), center pathway shows a person in a basic VR headset in an immersive meditation environment (moderate tech, deeper immersion), right pathway shows a person with VR headset and multiple biofeedback sensors in a full cyberdelic protocol (full tech stack, deep immersion). Progressive intensity without hierarchy, clean educational visualization, purple and teal gradient, 16:9 aspect ratio"
+                        },
+                        "mediaLayout": "full",
+                        "content": "<p>The consciousness and wellness technology landscape is stronger for having tools at different intensity levels serving different purposes. Simple apps, wellness tech, meditation VR, and full cyberdelic protocols all have their place. The skill isn't knowing which category is best, it's knowing which fits the specific person, goal, and moment in front of you.</p>",
+                        "triggerLabel": "Take the Quiz"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "quiz_1.4_combined",
+            "title": "Module 1 Lesson 4 Quiz",
+            "type": "option-selector",
+            "config": {
+                "mode": "single",
+                "style": "text",
+                "questions": [
+                    {
+                        "question": "What pushes a meditation app from basic meditation tech into cyberdelic territory?",
+                        "options": [
+                            {
+                                "id": "q1_1_a",
+                                "label": "The number of guided meditations available",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_1_b",
+                                "label": "Immersive VR environments with biofeedback creating responsive, altered state-inducing experiences",
+                                "correct": true
+                            },
+                            {
+                                "id": "q1_1_c",
+                                "label": "Whether it costs money or is free",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_1_d",
+                                "label": "How many users it has",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "q1_1_a": "<p>Content quantity doesn't determine what's cyberdelic. An app could have thousands of guided meditations and still be basic meditation tech. What matters is the use of immersive technology and biofeedback to intentionally facilitate altered states and consciousness exploration. <strong>Try again.</strong></p>",
+                            "q1_1_c": "<p>Price doesn't determine what's cyberdelic. Free experiences can be cyberdelic, and expensive apps can be basic meditation tech. What matters is the technology used (VR, biofeedback), the depth of altered states facilitated, and the transformational intent behind the design. <strong>Try again.</strong></p>",
+                            "q1_1_d": "<p>Popularity doesn't define the category. Simple meditation apps often have more users than cyberdelic experiences, but that doesn't change their nature. What makes something cyberdelic is immersive technology, biofeedback integration, and intentional altered state cultivation, not user count. <strong>Try again.</strong></p>",
+                            "q1_1_b": "<h3>Correct!</h3><p>Exactly. When meditation practice combines immersive VR, sophisticated biofeedback integration, and intentional design to facilitate profound altered states, it crosses into cyberdelic territory. The technology becomes a catalyst for consciousness exploration, not just a content delivery system.</p>"
+                        }
+                    },
+                    {
+                        "question": "Where would a VR meditation environment without any biofeedback sensors fall on the spectrum?",
+                        "options": [
+                            {
+                                "id": "q1_2_a",
+                                "label": "Purely meditation tech, never cyberdelic",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_2_b",
+                                "label": "In the overlap zone between meditation tech and cyberdelics",
+                                "correct": true
+                            },
+                            {
+                                "id": "q1_2_c",
+                                "label": "Purely cyberdelic because it uses VR",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_2_d",
+                                "label": "It depends entirely on the user's meditation experience level",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "q1_2_a": "<p>This is too rigid. A VR meditation environment creates more immersion than a simple app, even without biofeedback. It exists in the overlap zone. Some VR meditation experiences can facilitate altered states through immersion alone, placing them closer to cyberdelic territory than a simple audio app. <strong>Try again.</strong></p>",
+                            "q1_2_c": "<p>VR alone doesn't make something fully cyberdelic. While it adds immersion, cyberdelic experiences typically combine VR with biofeedback and intentional design to facilitate profound altered states. This VR meditation is closer to cyberdelic than basic apps, but without biofeedback it sits in the overlap zone. <strong>Try again.</strong></p>",
+                            "q1_2_d": "<p>The categorization depends on the design and technology of the experience itself, not the user's background. While experienced meditators might get more from any tool, what makes something meditation tech versus cyberdelic is the immersion level, biofeedback integration, and design intent. <strong>Try again.</strong></p>",
+                            "q1_2_b": "<h3>Correct!</h3><p>Correct. VR meditation without biofeedback sits in the overlap zone. It's more immersive than basic apps but lacks the sophisticated feedback integration of full cyberdelic protocols. This middle ground is valuable and serves people seeking more than basic meditation apps but not full-intensity cyberdelic experiences.</p>"
+                        }
+                    },
+                    {
+                        "question": "What primarily determines whether an experience is wellness tech or cyberdelic?",
+                        "options": [
+                            {
+                                "id": "q2_1_a",
+                                "label": "The price point and accessibility",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_1_b",
+                                "label": "Whether the focus is on optimizing function or exploring consciousness",
+                                "correct": true
+                            },
+                            {
+                                "id": "q2_1_c",
+                                "label": "The specific biofeedback sensors being used",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_1_d",
+                                "label": "Whether a facilitator is present",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "q2_1_a": "<p>Cost doesn't determine the category. Free experiences can be cyberdelic, and expensive wellness tech can be purely optimization-focused. What matters is the intention: optimizing function (wellness) versus exploring consciousness (cyberdelic). <strong>Try again.</strong></p>",
+                            "q2_1_c": "<p>The same biofeedback sensors can be used for wellness or cyberdelics. HRV monitoring can track athletic recovery (wellness) or facilitate altered state exploration (cyberdelic). The sensors themselves don't determine the category, the intention and application do. <strong>Try again.</strong></p>",
+                            "q2_1_d": "<p>Facilitation can be part of either wellness tech or cyberdelic experiences. Some wellness programs use coaches. Some cyberdelic experiences are self-guided. The presence of a facilitator doesn't determine whether the focus is optimization or exploration. <strong>Try again.</strong></p>",
+                            "q2_1_b": "<h3>Correct!</h3><p>Exactly. Wellness tech aims to optimize how you function : better sleep, less stress, improved performance. Cyberdelics aims to explore consciousness itself : altered states, transformation, self-discovery. The same technologies can serve either purpose depending on design intent and user engagement.</p>"
+                        }
+                    },
+                    {
+                        "question": "Can the same technology be both wellness tech and cyberdelic depending on how it's used?",
+                        "options": [
+                            {
+                                "id": "q2_2_a",
+                                "label": "No, technology is designed for one purpose and can't meaningfully serve another",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_2_b",
+                                "label": "Yes, the same device can serve wellness or cyberdelic purposes depending on intention and context",
+                                "correct": true
+                            },
+                            {
+                                "id": "q2_2_c",
+                                "label": "Only if the manufacturer explicitly markets it for both purposes",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_2_d",
+                                "label": "Technology should only ever be used for its originally designed purpose",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "q2_2_a": "<p>Technology is often more flexible than its original design intent. A biofeedback device designed for stress management (wellness) could be used by someone exploring altered states (cyberdelic). While design intent matters, user intention and application also shape what the technology actually becomes in practice. <strong>Try again.</strong></p>",
+                            "q2_2_c": "<p>Marketing doesn't determine what technology can be used for. People regularly use tools in ways manufacturers never intended. A device marketed for wellness could be used for consciousness exploration, and vice versa. The actual use matters more than the marketing claims. <strong>Try again.</strong></p>",
+                            "q2_2_d": "<p>This is unnecessarily limiting. Innovation often comes from using tools in novel ways. While design intent is important context, user intention and creative application can legitimately transform how technology serves consciousness work. The same device can serve multiple purposes. <strong>Try again.</strong></p>",
+                            "q2_2_b": "<h3>Quiz Complete!</h3><p>Correct. The same HRV sensor, VR headset, or meditation app can serve different purposes based on how it's engaged with. Using tech to optimize sleep is wellness. Using the same tech to explore consciousness is cyberdelic. Context and intention matter as much as design : sometimes more. <strong>Quiz Complete.</strong></p>"
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

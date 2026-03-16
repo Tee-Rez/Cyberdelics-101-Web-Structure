@@ -6,6 +6,7 @@
 (function () {
     const SpectrumExplorer = {
         name: 'Spectrum Explorer',
+        showPlaybackControls: false,
         defaults: {
             startValue: 50
         },
@@ -27,10 +28,6 @@
                 { label: 'Value of Guidance', desc: 'Skilled facilitation enhances outcomes' },
                 { label: 'Set and Setting', desc: 'Context matters profoundly' }
             ],
-            discoveries: [
-                { id: 'left', range: [0, 5], title: 'Fully Psychedelic', text: 'Notice the Shared Territory column. Still amber. Unchanged. The method is different, but the destination is the same.' },
-                { id: 'right', range: [95, 100], title: 'Fully Cyberdelic', text: 'Six attributes changed. But count the Shared Territory items. All five. Still there. The approach changed — the purpose didn\'t.' }
-            ]
         },
 
         init: function (container, params, host) {
@@ -45,71 +42,86 @@
 
             this.render();
             this.bindEvents();
-            this.updateState(this.value); // Initial Update
+            this.currentLens = 'none'; // Track current lens
 
-            // Show session complete button immediately as requested (no goal)
-            setTimeout(() => this.showCompleteButton(), 1000);
+            // Hide continue button until simulation is complete
+            setTimeout(() => {
+                const parent = this.container.closest('.interactive-simulation-container');
+                if (parent) {
+                    const btn = parent.querySelector('.btn-continue');
+                    if (btn) btn.style.display = 'none';
+                }
+            }, 50);
         },
 
         render: function () {
             console.log('[SpectrumExplorer] Rendering to container', this.container);
             this.container.innerHTML = `
-                <div class="spectrum-explorer">
+                <div class="spectrum-explorer lens-mode-none">
                     <div class="se-container">
-                        <!-- SLIDER -->
-                        <div class="se-slider-section">
-                            <div class="se-slider-labels">
-                                <span class="label-psych">◀ PSYCHEDELIC</span>
-                                <span class="label-cyber">CYBERDELIC ▶</span>
-                            </div>
-                            <div class="se-slider-track"></div>
-                            <div class="se-slider-thumb"></div>
-                            <input type="range" min="0" max="100" value="${this.value}" class="se-range-input">
+                        
+                        <!-- LENS TOGGLES -->
+                        <div class="lens-controls">
+                            <button class="lens-btn lens-psych-btn" data-lens="psych">
+                                <span class="lens-icon">✺</span>
+                                <span class="lens-label">PSYCHEDELIC LENS</span>
+                            </button>
+                            <button class="lens-btn lens-cyber-btn" data-lens="cyber">
+                                <span class="lens-icon">⎔</span>
+                                <span class="lens-label">CYBERDELIC LENS</span>
+                            </button>
                         </div>
 
                         <!-- PROMPT ROW -->
                         <div class="se-prompt-row">
-                            <div class="prompt-content">Move the slider to begin.</div>
+                            <div class="prompt-content">Activate a lens to explore the spectrum.</div>
                         </div>
 
-                        <!-- GRID -->
+                        <!-- MAIN LENS DISPLAY -->
                         <div class="se-grid">
-                            <!-- LEFT: WHAT CHANGES -->
+                            
+                            <!-- LEFT/DYNAMIC: WHAT CHANGES -->
                             <div class="col-dynamic">
                                 <div class="col-header" style="color: var(--text-primary)">
                                     WHAT CHANGES
                                 </div>
-                                ${this.data.attributes.map(attr => `
-                                    <div class="attribute-card" data-id="${attr.id}">
-                                        <div class="attr-header">
-                                            <span>${attr.label}</span>
-                                            <span class="info-icon">ⓘ</span>
+                                <div class="cards-wrapper">
+                                    ${this.data.attributes.map(attr => `
+                                        <div class="attribute-card" data-id="${attr.id}">
+                                            <div class="attr-header">
+                                                <span>${attr.label}</span>
+                                                <span class="info-icon">ⓘ</span>
+                                            </div>
+                                            <div class="attr-states">
+                                                <div class="state-text state-neutral">Select a lens to view differences</div>
+                                                <div class="state-text state-psych">${attr.psych}</div>
+                                                <div class="state-text state-cyber">${attr.cyber}</div>
+                                            </div>
+                                            <div class="attr-tooltip" data-psych="${attr.infoPsych}" data-cyber="${attr.infoCyber}">
+                                                Activate a lens for details.
+                                            </div>
                                         </div>
-                                        <div class="attr-states">
-                                            <div class="state-text state-psych">${attr.psych}</div>
-                                            <div class="state-text state-cyber">${attr.cyber}</div>
-                                        </div>
-                                        <div class="attr-tooltip" data-psych="${attr.infoPsych}" data-cyber="${attr.infoCyber}">
-                                            ${attr.infoPsych} <!-- Default start -->
-                                        </div>
-                                    </div>
-                                `).join('')}
+                                    `).join('')}
+                                </div>
                             </div>
 
-                            <!-- RIGHT: SHARED TERRITORY -->
-                            <div class="col-static">
-                                <div class="col-header" style="color: var(--gold-light)">
-                                    <span style="font-size: 1.2rem">≈</span> SHARED TERRITORY
+                            <!-- RIGHT/STATIC: THE CORE (SHARED TERRITORY) -->
+                            <div class="col-static core-territory">
+                                <div class="core-glow"></div>
+                                <div class="col-header core-header" style="color: var(--gold-light)">
+                                    <span style="font-size: 1.5rem">❂</span> THE CORE: SHARED TERRITORY
                                 </div>
-                                ${this.data.constants.map(c => `
-                                    <div class="static-item">
-                                        <div class="static-dot"></div>
-                                        <div class="static-content">
-                                            <span class="static-label">${c.label}</span>
-                                            <span class="static-desc">${c.desc}</span>
+                                <div class="core-constants">
+                                    ${this.data.constants.map(c => `
+                                        <div class="static-item">
+                                            <div class="static-dot"></div>
+                                            <div class="static-content">
+                                                <span class="static-label">${c.label}</span>
+                                                <span class="static-desc">${c.desc}</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                `).join('')}
+                                    `).join('')}
+                                </div>
                                 <!-- DISCOVERY CARD OVERLAY -->
                                 <div class="discovery-card">
                                     <div class="discovery-header">
@@ -119,6 +131,7 @@
                                     <div class="discovery-text">Content goes here...</div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -126,9 +139,9 @@
 
             // Cache Elements
             this.el = {
+                wrapper: this.container.querySelector('.spectrum-explorer'),
                 container: this.container.querySelector('.se-container'),
-                thumb: this.container.querySelector('.se-slider-thumb'),
-                input: this.container.querySelector('.se-range-input'),
+                lensBtns: this.container.querySelectorAll('.lens-btn'),
                 prompt: this.container.querySelector('.prompt-content'),
                 discovery: this.container.querySelector('.discovery-card'),
                 cards: this.container.querySelectorAll('.attribute-card')
@@ -136,9 +149,12 @@
         },
 
         bindEvents: function () {
-            // Slider Input
-            this.el.input.addEventListener('input', (e) => {
-                this.updateState(parseInt(e.target.value));
+            // Lens Toggle Buttons
+            this.el.lensBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const lens = btn.dataset.lens;
+                    this.updateState(lens);
+                });
             });
 
             // Discovery Dismiss
@@ -151,6 +167,17 @@
                 const icon = card.querySelector('.info-icon');
                 icon.addEventListener('click', (e) => {
                     e.stopPropagation();
+
+                    // Only open tooltips if a lens is active
+                    if (this.currentLens === 'none') {
+                        // Shake the cards wrapper to indicate they need to pick a lens
+                        const wrapper = this.container.querySelector('.cards-wrapper');
+                        wrapper.classList.remove('shake');
+                        void wrapper.offsetWidth;
+                        wrapper.classList.add('shake');
+                        return;
+                    }
+
                     // Toggle current
                     card.classList.toggle('tooltip-open');
 
@@ -167,119 +194,65 @@
             });
         },
 
-        updateState: function (val) {
-            this.value = val;
+        updateState: function (lensMode) {
+            // Early return if same mode
+            if (this.currentLens === lensMode) return;
 
-            // 1. Move Thumb
-            this.el.thumb.style.left = `${val}%`;
+            this.currentLens = lensMode;
 
-            // 2. Update Dynamic Glows & Colors
-            const pct = val / 100;
-            // Psych (Purple) fades out as we go right
-            const psychOp = 1 - pct;
-            // Cyber (Teal) fades in as we go right
-            const cyberOp = pct;
+            // 1. Update Container Classes for Global CSS 
+            this.el.wrapper.classList.remove('lens-mode-none', 'lens-mode-psych', 'lens-mode-cyber');
+            this.el.wrapper.classList.add(`lens-mode-${lensMode}`);
 
-            // Container Border Color Shift
-            if (val < 40) {
-                this.el.container.style.borderColor = `rgba(139, 92, 246, ${1 - val / 40})`;
-                this.el.container.style.boxShadow = `0 0 20px rgba(139, 92, 246, ${0.2 * (1 - val / 40)})`;
-            } else if (val > 60) {
-                this.el.container.style.borderColor = `rgba(20, 184, 166, ${(val - 60) / 40})`;
-                this.el.container.style.boxShadow = `0 0 20px rgba(20, 184, 166, ${0.2 * (val - 60) / 40})`;
+            // 2. Update Button Active States
+            this.el.lensBtns.forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.lens === lensMode);
+            });
+
+            // 3. Update Attribute Cards content & tooltips based on exact lens
+            this.el.cards.forEach(card => {
+                const tooltip = card.querySelector('.attr-tooltip');
+
+                // Clear any open tooltips when changing lens
+                card.classList.remove('tooltip-open');
+
+                if (lensMode === 'psych') {
+                    const psychText = tooltip.dataset.psych;
+                    if (tooltip.textContent !== psychText) tooltip.textContent = psychText;
+                } else if (lensMode === 'cyber') {
+                    const cyberText = tooltip.dataset.cyber;
+                    if (tooltip.textContent !== cyberText) tooltip.textContent = cyberText;
+                } else {
+                    tooltip.textContent = "Activate a lens for details.";
+                }
+            });
+
+            // 4. Update Border Colors explicitly via JS (though CSS classes handle most of this now)
+            if (lensMode === 'psych') {
+                this.el.container.style.borderColor = 'rgba(139, 92, 246, 0.8)';
+                this.el.container.style.boxShadow = '0 0 30px rgba(139, 92, 246, 0.15)';
+            } else if (lensMode === 'cyber') {
+                this.el.container.style.borderColor = 'rgba(20, 184, 166, 0.8)';
+                this.el.container.style.boxShadow = '0 0 30px rgba(20, 184, 166, 0.15)';
             } else {
                 this.el.container.style.borderColor = 'var(--border-subtle)';
                 this.el.container.style.boxShadow = 'none';
             }
 
-            // 3. Update Attribute Cards
-            this.el.cards.forEach(card => {
-                const pText = card.querySelector('.state-psych');
-                const cText = card.querySelector('.state-cyber');
+            // 5. Track visits for completion
+            if (lensMode === 'psych') this.zonesVisited.left = true;
+            if (lensMode === 'cyber') this.zonesVisited.right = true;
 
-                // Crossfade Logic
-                // P: 1 at 0%, 0 at 100%
-                // C: 0 at 0%, 1 at 100%
-
-                pText.style.opacity = Math.max(0, 1 - (pct * 1.5)); // Fades faster
-                cText.style.opacity = Math.max(0, (pct - 0.33) * 1.5); // Starts later
-
-                // Slide Logic
-                pText.style.transform = `translateY(${pct * -20}px)`;
-                cText.style.transform = `translateY(${(1 - pct) * 20}px)`;
-
-                // Border accent
-                const borderOpacity = Math.abs(0.5 - pct) * 2; // 0 at center, 1 at ends
-                if (pct < 0.5) {
-                    card.style.setProperty('--border-subtle', `rgba(139, 92, 246, ${borderOpacity * 0.5})`);
-                    card.style.setProperty('--card-accent', `rgba(139, 92, 246, ${borderOpacity})`);
-
-                    // Update Tooltip Text for Psych Side
-                    const tooltip = card.querySelector('.attr-tooltip');
-                    const psychText = tooltip.dataset.psych;
-                    if (tooltip.textContent !== psychText) tooltip.textContent = psychText;
-
-                } else {
-                    card.style.setProperty('--border-subtle', `rgba(20, 184, 166, ${borderOpacity * 0.5})`);
-                    card.style.setProperty('--card-accent', `rgba(20, 184, 166, ${borderOpacity})`);
-
-                    // Update Tooltip Text for Cyber Side
-                    const tooltip = card.querySelector('.attr-tooltip');
-                    const cyberText = tooltip.dataset.cyber;
-                    if (tooltip.textContent !== cyberText) tooltip.textContent = cyberText;
-                }
-            });
-
-            // 4. Check Discovery Moments
-            this.checkDiscovery(val);
-
-            // 5. Update Prompt
-            this.updatePrompt(val);
+            // 6. Update Prompt
+            this.updatePrompt(lensMode);
+            this.checkCompletion();
         },
 
-        checkDiscovery: function (val) {
-            const hit = this.data.discoveries.find(d => val >= d.range[0] && val <= d.range[1]);
+        updatePrompt: function (lensMode) {
+            let msg = "Activate a lens to explore the spectrum.";
 
-            if (hit && this.activeDiscovery !== hit.id) {
-                this.activeDiscovery = hit.id;
-                this.showDiscoveryCard(hit);
-
-                // Track zones
-                if (hit.id === 'left') this.zonesVisited.left = true;
-                if (hit.id === 'center') this.zonesVisited.center = true;
-                if (hit.id === 'right') this.zonesVisited.right = true;
-
-                this.checkCompletion();
-            } else if (!hit) {
-                this.activeDiscovery = null;
-                // Don't auto-hide, let user dismiss or new one replace
-            }
-        },
-
-        showDiscoveryCard: function (data) {
-            const card = this.el.discovery;
-            card.querySelector('.discovery-title').textContent = data.title;
-            card.querySelector('.discovery-text').textContent = data.text;
-
-            card.classList.remove('active');
-            // Force reflow
-            void card.offsetWidth;
-            card.classList.add('active');
-
-            // Auto dismiss after 6s
-            setTimeout(() => {
-                if (this.activeDiscovery === data.id) {
-                    card.classList.remove('active');
-                }
-            }, 6000);
-        },
-
-        updatePrompt: function (val) {
-            let msg = "Move the slider to explore the spectrum.";
-
-            if (val < 20) msg = "In the Psychedelic zone, chemistry drives the experience.";
-            else if (val > 80) msg = "In the Cyberdelic zone, technology drives the experience.";
-            else msg = "Notice what changes and what stays the same.";
+            if (lensMode === 'psych') msg = "In the Psychedelic zone, chemistry drives the experience.";
+            else if (lensMode === 'cyber') msg = "In the Cyberdelic zone, technology drives the experience.";
 
             if (this.completed) {
                 msg = '<span style="color:var(--gold-light)">EXPLORATION COMPLETE.</span><br>You have mapped the territory.';
@@ -291,13 +264,14 @@
         checkCompletion: function () {
             if (this.completed) return;
 
-            const allZones = this.zonesVisited.left && this.zonesVisited.center && this.zonesVisited.right;
+            const allZones = this.zonesVisited.left && this.zonesVisited.right;
             const enoughTooltips = this.tooltipsOpened.size >= 3;
 
             if (allZones && enoughTooltips) {
                 this.completed = true;
-                this.updatePrompt(this.value);
-                // No artifact unlock per user request
+                this.updatePrompt(this.currentLens);
+                // Reveal host continue button now that exploration is done
+                this.showCompleteButton();
             }
         },
 
@@ -306,33 +280,23 @@
             const parent = this.container.closest('.interactive-simulation-container');
             if (!parent) return;
 
-            if (parent.querySelector('.se-complete-btn')) return;
-
-            const btn = document.createElement('button');
-            btn.className = 'btn-continue se-complete-btn'; // Use standard class + layout override
-            btn.textContent = 'SESSION COMPLETE';
-
-            parent.appendChild(btn);
-
-            // Animate in
-            requestAnimationFrame(() => {
-                btn.classList.add('visible');
-            });
-
-            btn.onclick = () => {
-                btn.classList.remove('visible');
-                setTimeout(() => {
-                    btn.remove();
-                    // Call host completion
-                    if (this.host && this.host.markComplete) {
-                        this.host.markComplete();
-                    } else if (this.host && this.host.advanceStep) {
-                        this.host.advanceStep();
-                    } else {
-                        console.warn('[SpectrumExplorer] Host completion method not found');
-                    }
-                }, 300);
-            };
+            // Instead of creating our own complete button, reveal the host's continue button
+            const continueBtn = parent.querySelector('.btn-continue');
+            if (continueBtn) {
+                // If it was explicitly hidden via inline style due to hideContinueButton
+                if (continueBtn.style.display === 'none') {
+                    continueBtn.style.display = 'block';
+                }
+                
+                // Animate it in via classes if they exist, or just ensure it's visible
+                requestAnimationFrame(() => {
+                    continueBtn.classList.add('visible');
+                    // Add a pulse or highlight to draw attention
+                    continueBtn.style.boxShadow = '0 0 15px var(--gold-glow)';
+                });
+            } else {
+                console.warn('[SpectrumExplorer] Host continue button not found');
+            }
         },
 
         destroy: function () {

@@ -90,91 +90,109 @@
     padding-bottom: var(--space-md);
 }
 
-/* ---------- Slider Section ---------- */
-.se-slider-section {
-    position: relative;
+/* ---------- Lens Controls ---------- */
+.lens-controls {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-lg);
     padding: var(--space-md) 0;
+    width: 100%;
+}
+
+.lens-btn {
+    background: rgba(28, 24, 48, 0.6);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--border-radius-full, 50px);
+    padding: 12px 24px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 100%;
-}
-
-.se-slider-labels {
-    position: absolute;
-    width: 100%;
-    top: -10px;
-    display: flex;
-    justify-content: space-between;
-    pointer-events: none;
-    font-family: var(--font-display);
-    font-size: 0.9rem;
-    font-weight: 700;
-}
-
-.label-psych {
-    color: var(--psych-glow);
-    text-shadow: 0 0 10px rgba(139, 92, 246, 0.3);
-}
-
-.label-cyber {
-    color: var(--cyber-glow);
-    text-shadow: 0 0 10px rgba(20, 184, 166, 0.3);
-}
-
-/* The Track */
-.se-slider-track {
-    width: 100%;
-    height: 6px;
-    /* Thinner */
-    background: linear-gradient(90deg, var(--psych-bloom) 0%, var(--border-subtle) 50%, var(--cyber-bloom) 100%);
-    border-radius: 4px;
-    position: relative;
+    gap: 12px;
     cursor: pointer;
+    color: var(--text-secondary);
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(8px);
+    overflow: hidden;
+    position: relative;
 }
 
-/* The Thumb (Visual only, mapped to input) */
-.se-slider-thumb {
-    width: 24px;
-    /* Smaller */
-    height: 24px;
-    background: var(--deep-space);
-    border: 2px solid var(--text-primary);
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    /* JS updates this */
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
-    transition: box-shadow 0.2s ease, transform 0.2s ease;
-    z-index: 10;
+.lens-icon {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
 }
 
-.se-slider-thumb::after {
+.lens-label {
+    font-size: 0.9rem;
+    z-index: 2;
+}
+
+/* Base button effect */
+.lens-btn::before {
     content: '';
     position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 8px;
-    height: 8px;
-    background: white;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
 }
 
-/* Invisible Input Range for Interaction */
-.se-range-input {
-    position: absolute;
-    width: 100%;
-    height: 40px;
-    opacity: 0;
-    cursor: pointer;
-    z-index: 20;
-    top: 50%;
-    transform: translateY(-50%);
+.lens-btn:hover::before {
+    opacity: 1;
 }
+
+/* --- Psychedelic Lens Button --- */
+.lens-psych-btn {
+    border-color: rgba(139, 92, 246, 0.3);
+}
+.lens-psych-btn:hover {
+    border-color: var(--psych-glow);
+    color: var(--psych-glow);
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.2);
+}
+.lens-psych-btn:hover .lens-icon {
+    transform: rotate(45deg);
+    text-shadow: 0 0 10px var(--psych-glow);
+}
+.lens-psych-btn.active {
+    background: rgba(139, 92, 246, 0.15);
+    border-color: var(--psych-glow);
+    color: white;
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.4), inset 0 0 15px rgba(139, 92, 246, 0.2);
+}
+.lens-psych-btn.active .lens-icon {
+    color: var(--psych-glow);
+    transform: rotate(90deg);
+    text-shadow: 0 0 15px var(--psych-glow);
+}
+
+/* --- Cyberdelic Lens Button --- */
+.lens-cyber-btn {
+    border-color: rgba(20, 184, 166, 0.3);
+}
+.lens-cyber-btn:hover {
+    border-color: var(--cyber-glow);
+    color: var(--cyber-glow);
+    box-shadow: 0 0 20px rgba(20, 184, 166, 0.2);
+}
+.lens-cyber-btn:hover .lens-icon {
+    transform: scale(1.1);
+    text-shadow: 0 0 10px var(--cyber-glow);
+}
+.lens-cyber-btn.active {
+    background: rgba(20, 184, 166, 0.15);
+    border-color: var(--cyber-glow);
+    color: white;
+    box-shadow: 0 0 30px rgba(20, 184, 166, 0.4), inset 0 0 15px rgba(20, 184, 166, 0.2);
+}
+.lens-cyber-btn.active .lens-icon {
+    color: var(--cyber-glow);
+    transform: scale(1.2);
+    text-shadow: 0 0 15px var(--cyber-glow);
+}
+
 
 /* ---------- Prompt Row ---------- */
 .se-prompt-row {
@@ -219,8 +237,30 @@
     display: flex;
     flex-direction: column;
     gap: var(--space-md);
-    overflow-y: auto;
+    overflow-y: hidden;
     padding-right: 4px;
+    height: 100%;
+}
+
+.cards-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    overflow-y: auto;
+    padding-right: 8px;
+    padding-bottom: 20px;
+}
+
+@keyframes shake-cards {
+    0%, 100% { transform: translateX(0); }
+    20% { transform: translateX(-5px); border-color: var(--text-muted); }
+    40% { transform: translateX(5px); }
+    60% { transform: translateX(-5px); }
+    80% { transform: translateX(5px); }
+}
+
+.cards-wrapper.shake .attribute-card {
+    animation: shake-cards 0.5s ease;
 }
 
 .attribute-card {
@@ -229,12 +269,13 @@
     border-radius: 8px;
     padding: 12px 16px;
     position: relative;
-    transition: border-color 0.2s ease;
+    transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 
+/* Base side border */
 .attribute-card::before {
     content: '';
     position: absolute;
@@ -242,9 +283,25 @@
     top: 0;
     bottom: 0;
     width: 4px;
-    background: var(--card-accent, var(--border-subtle));
+    background: var(--border-subtle);
     border-radius: 4px 0 0 4px;
-    transition: background-color 0.2s ease;
+    transition: background-color 0.4s ease;
+}
+
+/* Lens Mode: Psych -> Purple border */
+.lens-mode-psych .attribute-card {
+    border-color: rgba(139, 92, 246, 0.3);
+}
+.lens-mode-psych .attribute-card::before {
+    background: var(--psych-glow);
+}
+
+/* Lens Mode: Cyber -> Teal border */
+.lens-mode-cyber .attribute-card {
+    border-color: rgba(20, 184, 166, 0.3);
+}
+.lens-mode-cyber .attribute-card::before {
+    background: var(--cyber-glow);
 }
 
 .attr-header {
@@ -275,6 +332,7 @@
 
 .info-icon {
     cursor: pointer;
+    font-size: 1.1rem; /* Added larger font size */
     opacity: 0.5;
     transition: all 0.2s ease;
     animation: pulse-icon 2s infinite ease-in-out;
@@ -296,41 +354,103 @@
     /* Fixed height for animation stability */
     position: relative;
     justify-content: center;
+    overflow: hidden;
 }
 
 .state-text {
     font-size: 0.85rem;
-    transition: all 0.2s ease-out;
     position: absolute;
     width: 100%;
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.state-neutral {
+    color: var(--text-muted);
+    font-style: italic;
+    transform: translateY(0);
 }
 
 .state-psych {
     color: var(--psych-glow);
-    transform: translateY(-10px);
-    opacity: 0;
+    transform: translateY(-20px);
 }
 
 .state-cyber {
     color: var(--cyber-glow);
-    transform: translateY(10px);
-    opacity: 0;
+    transform: translateY(20px);
 }
 
-/* --- Center Column: Shared Territory --- */
-.col-static {
-    background: transparent;
-    padding: 0;
+/* State Visibility Logic */
+.lens-mode-none .state-neutral {
+    opacity: 1;
+    transform: translateY(0);
+}
+.lens-mode-none .state-psych { transform: translateY(-20px); opacity: 0; }
+.lens-mode-none .state-cyber { transform: translateY(20px); opacity: 0; }
+
+.lens-mode-psych .state-neutral { opacity: 0; transform: translateY(20px); }
+.lens-mode-psych .state-psych { opacity: 1; transform: translateY(0); }
+.lens-mode-psych .state-cyber { opacity: 0; transform: translateY(20px); }
+
+.lens-mode-cyber .state-neutral { opacity: 0; transform: translateY(-20px); }
+.lens-mode-cyber .state-psych { opacity: 0; transform: translateY(-20px); }
+.lens-mode-cyber .state-cyber { opacity: 1; transform: translateY(0); }
+
+/* --- Center Column: Shared Territory (The Core) --- */
+.col-static.core-territory {
+    background: rgba(28, 21, 5, 0.4);
+    border: 1px solid rgba(245, 158, 11, 0.2);
+    border-radius: 12px;
+    padding: var(--space-lg);
     display: flex;
     flex-direction: column;
-    gap: 8px;
     position: relative;
-    overflow-y: auto;
+    overflow: hidden;
+    /* transition border when lens active */
+    transition: all 0.5s ease;
 }
 
-.col-static::before,
-.col-static::after {
-    display: none;
+.lens-mode-psych .core-territory {
+    border-color: rgba(139, 92, 246, 0.4);
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.05) 0%, rgba(28, 21, 5, 0.6) 100%);
+}
+
+.lens-mode-cyber .core-territory {
+    border-color: rgba(20, 184, 166, 0.4);
+    background: linear-gradient(135deg, rgba(20, 184, 166, 0.05) 0%, rgba(28, 21, 5, 0.6) 100%);
+}
+
+.core-glow {
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 300px; height: 300px;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, rgba(245, 158, 11, 0.1) 0%, transparent 70%);
+    z-index: 0;
+    pointer-events: none;
+    transition: background 0.5s ease;
+}
+
+.lens-mode-psych .core-glow { background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, transparent 70%); }
+.lens-mode-cyber .core-glow { background: radial-gradient(circle, rgba(20, 184, 166, 0.15) 0%, transparent 70%); }
+
+.core-header {
+    text-align: center;
+    justify-content: center;
+    margin-bottom: var(--space-lg);
+    z-index: 1;
+    position: relative;
+    text-shadow: 0 0 10px rgba(245, 158, 11, 0.5);
+}
+
+.core-constants {
+    z-index: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    overflow-y: auto;
 }
 
 .static-item {

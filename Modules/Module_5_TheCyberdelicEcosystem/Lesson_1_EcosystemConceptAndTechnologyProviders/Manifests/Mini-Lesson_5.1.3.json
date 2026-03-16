@@ -1,4 +1,4 @@
-﻿{
+{
     "id": "mini_lesson_5_1_3",
     "title": "Software Developers: The Builder Landscape",
     "description": "Understand the different categories of software developers in the cyberdelic field, their development pipelines, and their business models.",
@@ -27,7 +27,7 @@
                     },
                     {
                         "title": "The Development Pipeline",
-                        "content": "<p>Most successful cyberdelic platforms don't emerge fully formed. They move through a recognizable pipeline:</p><ol><li><strong>Research prototype</strong> â†’ a lab builds something to test a hypothesis</li><li><strong>Open source release</strong> â†’ findings and sometimes code are shared publicly</li><li><strong>Commercial adaptation</strong> â†’ an entrepreneur packages the validated approach for a market</li><li><strong>Platform integration</strong> â†’ the application finds its home on distribution channels</li><li><strong>Clinical validation</strong> â†’ formal studies confirm efficacy in clinical populations</li><li><strong>Mainstream adoption</strong> â†’ healthcare systems, insurance, and the general public engage</li></ol><p>This pipeline explains why the field's timeline feels slow to outsiders. From hypothesis to clinical adoption typically takes 5â€“10 years. Commercially, the steps compress somewhat â€” but clinical credibility still requires the research legs.</p><p>Understanding this reveals where to look for what's coming: university lab projects today are often the commercial platforms of 2028.</p>",
+                        "content": "<p>Most successful cyberdelic platforms don't emerge fully formed. They move through a recognizable pipeline:</p><ol><li><strong>Research prototype</strong> â†’ a lab builds something to test a hypothesis</li><li><strong>Open source release</strong> â†’ findings and sometimes code are shared publicly</li><li><strong>Commercial adaptation</strong> â†’ an entrepreneur packages the validated approach for a market</li><li><strong>Platform integration</strong> â†’ the application finds its home on distribution channels</li><li><strong>Clinical validation</strong> â†’ formal studies confirm efficacy in clinical populations</li><li><strong>Mainstream adoption</strong> â†’ healthcare systems, insurance, and the general public engage</li></ol><p>This pipeline explains why the field's timeline feels slow to outsiders. From hypothesis to clinical adoption typically takes 5—10 years. Commercially, the steps compress somewhat â€” but clinical credibility still requires the research legs.</p><p>Understanding this reveals where to look for what's coming: university lab projects today are often the commercial platforms of 2028.</p>",
                         "triggerLabel": "Business Models"
                     },
                     {

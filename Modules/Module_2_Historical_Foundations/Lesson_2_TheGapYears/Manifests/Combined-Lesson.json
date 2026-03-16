@@ -1,0 +1,472 @@
+{
+    "id": "combined_lesson_2_2",
+    "title": "The Gap Years: VR Winter & the Rise of Meditation Apps",
+    "description": "Understand the cautionary tale of VR's commercial collapse from 2000-2012 and how meditation apps quietly built the cultural and commercial bridge that made cyberdelics' mainstream arrival possible.",
+    "framerDescription": "Every breakthrough has a gap before it. This lesson covers the years where the vision survived but the industry didn't -- and how the ground was being prepared in unexpected places.",
+    "theme": {
+        "primaryColor": "#5900ff",
+        "fontBody": "Rajdhani, sans-serif"
+    },
+    "modules": [
+        {
+            "id": "vr_winter_pd_2.1",
+            "title": "The Fall and The Void",
+            "type": "progressive-disclosure",
+            "content": {
+                "sections": [
+                    {
+                        "title": "The Spectacular Failures",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module2/lesson2/vr_arcade_abandoned.jpg",
+                            "alt": "Abandoned VR arcade from early 2000s, dusty VR equipment on tables, empty mall space with 'Going Out of Business' sign, representing the commercial failure of 1990s VR, melancholic documentary photography style, faded colors suggesting obsolescence."
+                        },
+                        "mediaLayout": "left",
+                        "content": "<p>Several high-profile VR products failed spectacularly in the mid-to-late 1990s. Nintendo's Virtual Boy (1995) was a disaster: red-only display causing eye strain, no head tracking, uncomfortable design, and discontinued within a year after selling only 770,000 units. VR arcades opened in malls but mostly closed within 2-3 years due to limited experiences, poor comfort, high costs, and low throughput. By 2000, VR was considered a failed technology.</p>",
+                        "triggerLabel": "Why it Failed"
+                    },
+                    {
+                        "title": "Why the Technology Wasn't Ready",
+                        "content": "<p>The technical limitations were overwhelming. <strong>Display technology:</strong> 320x200 resolution or worse, screen door effect like looking through mesh, 30-60 Hz refresh rates causing motion sickness, narrow 40-60 degree field of view. <strong>Computing power:</strong> processors couldn't render complex 3D in real-time, limited to simple cartoonish environments. <strong>Tracking:</strong> 50-100ms latency between head movement and display update, position tracking would drift, required external sensors. <strong>Physical comfort:</strong> 2-3 pound headsets causing neck strain, no ventilation making faces sweaty, thick heavy cables tethering users. <strong>Cost:</strong> professional systems $50,000-$250,000, consumer attempts still $500-$1,000 for terrible experience.</p>",
+                        "triggerLabel": "Cultural Impact"
+                    },
+                    {
+                        "title": "The Cultural Backlash",
+                        "content": "<p>After commercial failures, VR became a joke. Tech media declared VR \"dead\" and \"a failed fantasy.\" Investors fled and funding dried up. Developers moved to other fields. \"VR\" became shorthand for overhyped, underdelivering technology. Pop culture used VR as trope for dystopian futures or ridiculous escapism, not exciting possibility. The vision was dismissed as fantasy.</p>",
+                        "triggerLabel": "The Wilderness Years"
+                    },
+                    {
+                        "title": "The Wilderness Years (2000-2012)",
+                        "content": "<p>VR research and development continued, but barely. Small academic labs kept working on presence research. Military used it for training simulations and PTSD therapy experiments. Medical researchers explored pain management and phobia treatment. A handful of true believers persisted. But there were no consumer products, minimal venture capital, no mainstream awareness, and development velocity slowed to near zero. For anyone passionate about VR's potential, this was a frustrating desert.</p>",
+                        "triggerLabel": "Hidden Progress"
+                    },
+                    {
+                        "title": "What Was Happening Beneath the Surface",
+                        "content": "<p>Important developments were occurring quietly during the gap. <strong>The smartphone revolution:</strong> mobile computing and touchscreens normalized personal technology. <strong>Display technology</strong> advanced dramatically thanks to smartphones: higher resolution OLED screens, lower power consumption, cheaper manufacturing, better refresh rates. <strong>Graphics processing:</strong> gaming drove GPU development with powerful graphics cards becoming consumer-affordable. <strong>Sensors</strong> improved: phone accelerometers and gyroscopes made motion tracking cheap and accurate. <strong>Software ecosystems:</strong> Unity and Unreal game engines matured, making VR development more accessible. These developments, driven by smartphones and gaming would eventually enable VR renaissance.</p>",
+                        "triggerLabel": "Face the Researcher's Dilemma"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "vr_researcher_scenario_2.1",
+            "title": "Scenario: The True Believer",
+            "type": "scenario-based",
+            "content": {
+                "scenes": [
+                    {
+                        "id": "intro",
+                        "narrative": "<p>It's 2005. You're a graduate student passionate about VR for consciousness research, but VR is considered dead technology. Your advisor suggests switching to a \"more viable\" research area. Your peers think VR research is career suicide. You have to decide how to proceed.</p>",
+                        "choices": [
+                            {
+                                "id": "decision_point",
+                                "label": "Make a Decision",
+                                "outcome": "decision"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "decision",
+                        "narrative": "<h3>What do you do?</h3>",
+                        "choices": [
+                            {
+                                "id": "choice_a",
+                                "label": "Switch to mainstream research, abandon VR",
+                                "outcome": "outcome_a"
+                            },
+                            {
+                                "id": "choice_b",
+                                "label": "Continue VR research part-time while maintaining safer backup",
+                                "outcome": "outcome_b"
+                            },
+                            {
+                                "id": "choice_c",
+                                "label": "Fully commit to VR despite the obstacles",
+                                "outcome": "outcome_c"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "outcome_a",
+                        "narrative": "<p>You follow your advisor's suggestion and pivot to mainstream neuroscience research. It's the safe choice. You publish papers, get grants, build a respectable academic career. You occasionally think about VR but dismiss it as youthful idealism.</p><p>In 2012, when Oculus reignites VR, you're caught off guard. By the time you try to return to VR research, others who stayed through the gap years are already established experts. You missed the foundation-building years.</p><p><em>Reflection: Safety can mean missing the inflection point. Those who persist through winters position themselves for spring.</em></p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Another Path",
+                                "outcome": "decision"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "outcome_b",
+                        "narrative": "<p>You split your focus: mainstream publishable research for career security, VR experiments in spare time. You stay connected to the small VR community, attend conferences, collaborate on side projects. It's exhausting maintaining two research tracks, but you keep the flame alive.</p><p>When VR revives in 2012, you're positioned perfectly. You have the academic credentials from mainstream work plus deep VR expertise from your persistence. You become a bridge between established neuroscience and emerging VR consciousness research.</p><p><em>Reflection: Strategic patience - keeping possibilities alive while maintaining viability - enables pivoting when timing shifts.</em></p>",
+                        "choices": [
+                            {
+                                "id": "continue",
+                                "label": "Continue",
+                                "outcome": "final_reflection"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "outcome_c",
+                        "narrative": "<p>You ignore the advice and dive deep into VR research. The next 7 years are difficult. Funding is scarce. Publications are rejected because reviewers consider VR irrelevant. You're seen as eccentric or naive. But you build deep expertise, develop novel methodologies, and establish relationships with the tiny community of VR researchers worldwide.</p><p>When Oculus arrives in 2012, you're among the few experts with years of experience. Your \"wasted\" gap year work suddenly becomes foundational. You help shape the field's emergence because you never stopped believing.</p><p><em>Reflection: True believers who persist through wilderness years make breakthroughs possible. Conviction requires sacrifice, but enables leadership.</em></p>",
+                        "choices": [
+                            {
+                                "id": "continue",
+                                "label": "Continue",
+                                "outcome": "final_reflection"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "final_reflection",
+                        "narrative": "<h3>Final Reflection</h3><p>The gap years tested whether VR - and by extension, cyberdelics - would survive long enough to get its second chance. Those who kept working despite mainstream dismissal built the foundations for later success. The lesson: apparent stagnation often masks necessary preparation. Progress isn't always visible.</p>",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module2/lesson2/gap_years_timeline.jpg",
+                            "alt": "Split timeline showing barren desert landscape representing 2000-2012 gap years (top), with underground root systems growing and strengthening beneath the surface (middle), and green shoots beginning to emerge in 2012 (bottom), metaphor for hidden development during dormant periods, organic illustration style, earthy tones."
+                        },
+                        "mediaLayout": "full",
+                        "choices": [
+                            {
+                                "id": "start_quiz",
+                                "label": "Start Quiz",
+                                "outcome": "flow_next_module"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "meditation_apps_pd_2.2",
+            "title": "The Quiet Revolution",
+            "type": "progressive-disclosure",
+            "content": {
+                "sections": [
+                    {
+                        "title": "The Meditation App Revolution",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module2/lesson2/meditation_apps.jpg",
+                            "alt": "Clean product photography showing smartphone displaying Headspace app interface alongside another phone showing Calm app, both screens showing meditation timers and peaceful nature imagery, modern minimalist aesthetic, soft lighting, representing the normalization of digital meditation tools."
+                        },
+                        "mediaLayout": "right",
+                        "content": "<p>Headspace (2010) was one of the first meditation apps to achieve mainstream success. Created by former Buddhist monk Andy Puddicombe, it offered guided meditations in 10-minute sessions, gamified progress tracking, beautiful friendly interfaces, and subscription models. By 2015, Headspace had millions of users - people who would have said meditation was \"too hippie\" were now paying $10/month for an app guiding their practice. Calm (2012) followed quickly, emphasizing sleep stories, nature sounds, and minimalist design. By 2019, Calm was valued at $1 billion - the first meditation \"unicorn.\"</p>",
+                        "triggerLabel": "Cultural Shift"
+                    },
+                    {
+                        "title": "What They Normalized",
+                        "content": "<p>The success of meditation apps accomplished something crucial: they made \"using technology for consciousness\" culturally acceptable. Before meditation apps, meditation was perceived as religious or spiritual practice, and technology was opposed to mindfulness - you meditated to escape screens. After meditation apps, millions used technology for meditation daily. \"Mindfulness\" became mainstream wellness tool, tech companies added wellness features (Apple Breathe, Google Mindfulness), and consciousness work through technology became normal rather than contradictory.</p>",
+                        "triggerLabel": "Business Proof"
+                    },
+                    {
+                        "title": "The Business Model Proof",
+                        "content": "<p>Meditation apps also proved something commercially: people will pay for consciousness technology. Before this, the business case was uncertain. Would consciousness work remain donation-based? Could commercial products serve genuine transformation? Would people subscribe to consciousness tech? Meditation apps demonstrated yes. By 2020, meditation app revenue exceeded $200 million annually. This gave investors confidence that cyberdelic platforms could also be sustainable businesses, not just research projects.</p>",
+                        "triggerLabel": "Tech Foundations"
+                    },
+                    {
+                        "title": "Technical Foundations They Built",
+                        "content": "<p>Meditation apps advanced relevant technologies that would transfer to VR: sophisticated audio design using binaural beats, isochronic tones, and voice guidance. Progress tracking that gamified practice without trivializing consciousness work. Personalization algorithms suggesting appropriate content based on goals and experience. Accessibility features making advanced practices (body scans, loving-kindness meditation, visualization) accessible to beginners through clear guidance. These techniques would become essential for cyberdelic platform design.</p>",
+                        "triggerLabel": "Limitations & Opportunity"
+                    },
+                    {
+                        "title": "The Limitations That Created VR Opportunity",
+                        "content": "<p>Despite success, meditation apps had clear limitations: phones are also sources of distraction with notifications and other apps competing for attention. Audio-only guidance leaves visual field unengaged, letting minds wander. Solo practice only with no shared experiences or sense of practicing with others. Many users plateau after initial progress because apps couldn't provide increasingly deep experiences. These limitations created opportunity: what if you could combine meditation app accessibility with VR's immersive power, fully engaging attention, enabling social practice, and offering progressive depth?</p>",
+                        "triggerLabel": "Start Quiz"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "quiz_lesson_2_combined",
+            "title": "Module 2 Lesson 2 Quiz",
+            "type": "scenario-based",
+            "content": {
+                "scenes": [
+                    {
+                        "id": "quiz1_q1",
+                        "narrative": "<p><strong>What was the primary reason VR failed commercially in the late 1990s-early 2000s?</strong></p>",
+                        "choices": [
+                            {
+                                "id": "q1_a",
+                                "label": "Government regulations banned VR development",
+                                "outcome": "quiz1_q1_feedback_a"
+                            },
+                            {
+                                "id": "q1_b",
+                                "label": "The technology wasn't ready - poor displays, high latency, motion sickness, and prohibitive costs",
+                                "outcome": "quiz1_q1_correct"
+                            },
+                            {
+                                "id": "q1_c",
+                                "label": "People weren't interested in virtual experiences",
+                                "outcome": "quiz1_q1_feedback_c"
+                            },
+                            {
+                                "id": "q1_d",
+                                "label": "Timothy Leary's controversial reputation prevented acceptance",
+                                "outcome": "quiz1_q1_feedback_d"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "quiz1_q1_feedback_a",
+                        "narrative": "<p><strong>Incorrect.</strong> There were no regulations banning VR. The failure was purely technical and commercial: the technology simply couldn't deliver compelling experiences that justified the cost. Displays, tracking, computing power, and comfort were all inadequate. It was capability failure, not regulatory barrier.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "quiz1_q1"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "quiz1_q1_correct",
+                        "narrative": "<p><strong>Correct!</strong> VR failed because the technology was fundamentally inadequate: displays had terrible resolution (320x200), tracking had 50-100ms latency causing sickness, headsets were heavy and uncomfortable, and systems cost $100,000+ for professional versions or $500-$1,000 for poor consumer attempts. The vision existed but the capability to deliver it didn't. It would take until 2012-2016 for technology to catch up.</p>",
+                        "choices": [
+                            {
+                                "id": "next",
+                                "label": "Next Question",
+                                "outcome": "quiz1_q2"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "quiz1_q1_feedback_c",
+                        "narrative": "<p><strong>Incorrect.</strong> Interest existed - that's why companies invested millions trying to make VR work. The problem was that the experiences were so poor (low resolution, motion sickness, limited content) that even interested people couldn't tolerate them. The hardware failed to deliver on the promise, killing interest. Demand existed; capability didn't.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "quiz1_q1"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "quiz1_q1_feedback_d",
+                        "narrative": "<p><strong>Incorrect.</strong> Leary's reputation wasn't the barrier. VR failed for purely practical reasons: the technology caused motion sickness, looked terrible, and cost too much. Even if VR had perfect cultural acceptance, the hardware limitations would have prevented success. This was technical failure, not cultural rejection.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "quiz1_q1"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "quiz1_q2",
+                        "narrative": "<p><strong>What important developments occurred during the VR \"gap years\" (2000-2012)?</strong></p>",
+                        "choices": [
+                            {
+                                "id": "q2_a",
+                                "label": "Nothing - VR was completely abandoned and no progress was made",
+                                "outcome": "quiz1_q2_feedback_a"
+                            },
+                            {
+                                "id": "q2_b",
+                                "label": "Smartphones advanced display technology, gaming improved GPUs, sensors became cheap, and game engines matured",
+                                "outcome": "quiz1_q2_correct"
+                            },
+                            {
+                                "id": "q2_c",
+                                "label": "VR became even more expensive and less accessible",
+                                "outcome": "quiz1_q2_feedback_c"
+                            },
+                            {
+                                "id": "q2_d",
+                                "label": "Governments invested billions in VR research",
+                                "outcome": "quiz1_q2_feedback_d"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "quiz1_q2_feedback_a",
+                        "narrative": "<p><strong>Incorrect.</strong> This isn't accurate. While consumer VR disappeared, crucial parallel developments were occurring: smartphone displays improved dramatically, gaming drove GPU advancement, sensors became cheap and accurate, and game engines matured. These developments - in other fields - created the technological foundation for VR's later revival. The gap wasn't empty; it was preparation.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "quiz1_q2"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "quiz1_q2_correct",
+                        "narrative": "<h3>Correct!</h3><p><strong>Correct.</strong> The gap years saw massive advances in supporting technologies driven by smartphones and gaming: OLED displays with high resolution and refresh rates, powerful graphics cards capable of real-time 3D, accurate motion sensors from phones, and mature game engines (Unity, Unreal). These developments - not directly for VR - created the foundation that made VR viable when it returned. Apparent stagnation masked essential preparation.</p>",
+                        "choices": [
+                            {
+                                "id": "next",
+                                "label": "Next Question",
+                                "outcome": "quiz2_q1"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "quiz1_q2_feedback_c",
+                        "narrative": "<p><strong>Incorrect.</strong> Actually, the opposite was true. While VR itself was dormant, the technologies it needed (displays, GPUs, sensors) were becoming cheaper and better through smartphone and gaming markets. By 2012, components that cost $100,000 in the 1990s could be assembled for under $500. The gap years made VR economically viable, not more expensive.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "quiz1_q2"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "quiz1_q2_feedback_d",
+                        "narrative": "<p><strong>Incorrect.</strong> Government investment in VR was minimal during this period. The key developments came from commercial markets: smartphone manufacturers improving displays, game companies advancing GPUs, consumer electronics making sensors cheap. The gap was bridged by market forces in adjacent fields, not government research programs.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "quiz1_q2"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "quiz2_q1",
+                        "narrative": "<p><strong>What was the most important cultural shift that meditation apps created?</strong></p>",
+                        "choices": [
+                            {
+                                "id": "q1_a",
+                                "label": "They proved meditation was superior to all other practices",
+                                "outcome": "quiz2_q1_feedback_a"
+                            },
+                            {
+                                "id": "q1_b",
+                                "label": "They made using technology FOR consciousness culturally acceptable and normal",
+                                "outcome": "quiz2_q1_correct"
+                            },
+                            {
+                                "id": "q1_c",
+                                "label": "They replaced all traditional meditation teachers",
+                                "outcome": "quiz2_q1_feedback_c"
+                            },
+                            {
+                                "id": "q1_d",
+                                "label": "They made meditation completely free for everyone",
+                                "outcome": "quiz2_q1_feedback_d"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "quiz2_q1_feedback_a",
+                        "narrative": "<p><strong>Incorrect.</strong> Meditation apps didn't make claims about meditation being superior to other practices. Their cultural contribution was different: they normalized the idea of using technology to support consciousness work. This made \"consciousness tech\" an accepted category, preparing culture for VR consciousness applications.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "quiz2_q1"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "quiz2_q1_correct",
+                        "narrative": "<p><strong>Correct!</strong> Before meditation apps, technology and consciousness work seemed opposed - you meditated to escape screens. After meditation apps, millions used technology daily for meditation. \"Consciousness tech\" became normal category. When VR for consciousness emerged, people already comfortable with meditation apps weren't hostile to the idea. Cultural acceptance of one form of consciousness tech prepared ground for another.</p>",
+                        "choices": [
+                            {
+                                "id": "next",
+                                "label": "Next Question",
+                                "outcome": "quiz2_q2"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "quiz2_q1_feedback_c",
+                        "narrative": "<p><strong>Incorrect.</strong> Meditation apps didn't replace traditional teachers; they complemented them. Many apps featured teachings from established meditation teachers. The apps expanded access but didn't eliminate human guidance. They created additional pathways, not replacements.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "quiz2_q1"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "quiz2_q1_feedback_d",
+                        "narrative": "<p><strong>Incorrect.</strong> Actually, meditation apps often used subscription models ($10-15/month). While some free options existed (Insight Timer), the major players proved people would pay for quality consciousness technology. This business model validation was important for later cyberdelic platforms.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "quiz2_q1"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "quiz2_q2",
+                        "narrative": "<p><strong>What limitations of meditation apps created opportunities for VR?</strong></p>",
+                        "choices": [
+                            {
+                                "id": "q2_a",
+                                "label": "Apps were too expensive for most people",
+                                "outcome": "quiz2_q2_feedback_a"
+                            },
+                            {
+                                "id": "q2_b",
+                                "label": "Phones are distraction devices, audio-only limits immersion, solo practice only, and users plateau",
+                                "outcome": "quiz2_q2_correct"
+                            },
+                            {
+                                "id": "q2_c",
+                                "label": "Traditional meditators rejected all digital tools",
+                                "outcome": "quiz2_q2_feedback_c"
+                            },
+                            {
+                                "id": "q2_d",
+                                "label": "The apps required too much technical expertise to use",
+                                "outcome": "quiz2_q2_feedback_d"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "quiz2_q2_feedback_a",
+                        "narrative": "<p><strong>Incorrect.</strong> Price wasn't the main limitation - at $10/month, meditation apps were quite accessible. The limitations were about depth and immersion: phones distract with notifications, audio-only guidance doesn't fully engage attention, solo practice lacks community, and many users plateau. VR could address these limitations through full immersion, elimination of distractions, and social features.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "quiz2_q2"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "quiz2_q2_correct",
+                        "narrative": "<h3>Correct!</h3><p><strong>Quiz Complete.</strong></p><p><strong>Correct.</strong> Meditation apps' key limitations: phones are inherently distracting with notifications and other apps, audio-only guidance leaves visual attention unengaged allowing mind-wandering, no shared experiences or community practice, and inability to provide progressively deeper experiences leading to plateaus. VR could address all these: full sensory immersion eliminating distractions, social presence enabling group practice, and capacity for increasingly sophisticated experiences preventing plateaus.</p>",
+                        "choices": [
+                            {
+                                "id": "next",
+                                "label": "Finish Lesson",
+                                "outcome": "flow_next_module"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "quiz2_q2_feedback_c",
+                        "narrative": "<p><strong>Incorrect.</strong> Actually, many traditional practitioners embraced meditation apps as tools to support practice. While some purists resisted, millions of regular meditators used apps successfully. Cultural rejection wasn't the limitation; technical constraints (distraction, limited immersion) were.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "quiz2_q2"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "quiz2_q2_feedback_d",
+                        "narrative": "<p><strong>Incorrect.</strong> Meditation apps were deliberately designed to be extremely user-friendly - this was one of their strengths. Anyone who could use a smartphone could use meditation apps. Technical complexity wasn't a limitation. The limitations were about immersion depth and distraction management, not usability.</p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "quiz2_q2"
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

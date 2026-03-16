@@ -3,6 +3,15 @@
    Dark theme foundation for all lessons
    =========================================== */
 
+@font-face {
+    font-family: 'Cloudsters';
+    src: url('../assets/fonts/cloudsters-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+0000-00FF;
+}
+
 /* ---------- CSS Custom Properties ---------- */
 :root {
     /* Colors */
@@ -1181,11 +1190,10 @@ li strong {
     padding: 2vw;
     color: #fff;
     font-family: 'Space Mono', monospace;
-    text-shadow: 0 0 10px rgba(0, 217, 255, 0.7);
+    /* text-shadow: 0 0 10px rgba(0, 217, 255, 0.7);*/
     box-sizing: border-box;
     text-align: center;
-    /* Prevent text from ever escaping the box */
-    overflow: hidden;
+    /* Prevent text from ever escaping the box - removed overflow: hidden to allow font flourishes */
 }
 
 /* ===================================================
@@ -1195,52 +1203,42 @@ li strong {
    3 = Sora (h) + Montserrat (body)
    =================================================== */
 
-.lesson-overlay h2 {
-    font-size: clamp(0.45rem, 1.5vw, 1.3rem);
-    font-family: 'Oxanium', sans-serif;
-    /* Pairing 2 */
-    font-weight: 700;
-    color: var(--color-accent);
-    margin: 0 0 5px 0;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
 
 .lesson-overlay h1 {
-    font-size: clamp(0.6rem, 2.2vw, 2.2rem);
-    font-family: 'Oxanium', sans-serif;
-    /* Pairing 2 */
-    font-weight: 700;
-    margin: 0 0 10px 0;
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(0.6rem, 2.8vw, 2.8rem);
+    font-family: 'Cloudsters', sans-serif;
+    font-weight: normal;
+    font-variant-ligatures: all;
+    -webkit-font-feature-settings: "liga" 1, "clig" 1, "dlig" 1, "calt" 1;
+    font-feature-settings: "liga" 1, "clig" 1, "dlig" 1, "calt" 1;
+    margin: 0;
     color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    line-height: 1.2;
-    text-shadow: 0 0 8px rgba(0, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.3);
+    letter-spacing: 0px;
+    line-height: 1.4;
+    padding: 10px 0;
+    overflow: visible;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    isolation: isolate;
+    transform: translateZ(0);
+    filter: drop-shadow(0 0 8px rgba(0, 255, 255, 0.8)) drop-shadow(0 0 20px rgba(0, 255, 255, 0.3));
+    text-shadow: none;
+    paint-order: stroke fill;
 }
 
-.lesson-overlay p,
-.lesson-overlay p.opening-subtitle {
-    font-size: clamp(0.35rem, 1.2vw, 0.85rem);
-    font-family: 'Space Mono', monospace;
-    /* Pairing 2 */
-    font-weight: 400;
-    color: rgba(255, 255, 255, 0.8);
-    margin: 0 0 10px 0;
-    line-height: 1.4;
-    /* Clamp long descriptions to 3 lines max */
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
+
 
 .overlay-actions {
-    margin-top: 0%;
-    /* Replaced 'auto' to bring it closer to the subtitle */
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    margin: 0;
 }
 
 .opening-action {
@@ -1509,15 +1507,16 @@ button.btn-continue:hover,
 
 /* ========== Module & Section Titles ========== */
 .module-title {
-    font-size: var(--font-size-2xl);
-    font-weight: 700;
+    font-size: clamp(2rem, 3vw, 3rem);
+    font-family: 'Cloudsters', var(--font-family);
+    font-weight: normal;
     color: var(--color-accent);
     text-align: center;
     margin: 0 0 var(--space-xl) 0;
     padding-bottom: var(--space-md);
     border-bottom: 2px solid var(--color-border);
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 0px;
+    line-height: 1.4;
     text-shadow: 0 0 20px var(--color-accent-glow);
 }
 
@@ -1634,5 +1633,110 @@ button.btn-continue:hover,
 
     50% {
         text-shadow: 0 0 12px rgba(0, 255, 255, 1), 0 0 30px rgba(0, 255, 255, 0.6), 0 0 50px rgba(0, 255, 255, 0.2);
+    }
+}
+
+/* ========== Lesson Complete Screen ========== */
+.lesson-complete-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-height: 80vh;
+    text-align: center;
+    animation: fadeIn var(--transition-slow) ease-out;
+    padding: var(--space-xl);
+}
+
+.completed-icon {
+    font-size: 5rem;
+    color: var(--color-accent);
+    margin-bottom: var(--space-md);
+    text-shadow: 0 0 25px var(--color-accent-glow);
+    animation: scaleIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+}
+
+.lesson-complete-title {
+    font-size: clamp(2rem, 5vw, 4rem);
+    margin-bottom: var(--space-md);
+    color: #fff;
+    font-family: 'Cloudsters', var(--font-family);
+    line-height: 1.4;
+    text-shadow: 0 0 15px rgba(0, 217, 255, 0.8), 0 0 30px rgba(0, 217, 255, 0.3);
+    letter-spacing: 0px;
+}
+
+.lesson-complete-subtitle {
+    font-size: var(--font-size-xl);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-2xl);
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+.lesson-complete-subtitle strong {
+    color: #fff;
+    display: block;
+    margin-top: var(--space-md);
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-family: 'Cloudsters', var(--font-family);
+    font-weight: normal;
+    letter-spacing: px;
+    line-height: 1.4;
+}
+
+.lesson-complete-actions {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-md);
+}
+
+.btn-return {
+    padding: 16px 36px;
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    color: #fff;
+    background: transparent;
+    border: 2px solid var(--color-accent);
+    border-radius: var(--border-radius-lg);
+    cursor: pointer;
+    box-shadow: 0 0 20px var(--color-accent-glow), inset 0 0 10px rgba(123, 92, 255, 0.2);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.btn-return span {
+    font-size: 1.3em;
+    transform: rotate(-90deg);
+    /* Make the arrow point nicely if it's U+2B8C */
+    transition: transform 0.3s ease;
+}
+
+.btn-return:hover {
+    background: rgba(123, 92, 255, 0.15);
+    box-shadow: 0 0 30px rgba(123, 92, 255, 0.5), inset 0 0 15px rgba(123, 92, 255, 0.4);
+    transform: translateY(-2px);
+    border-color: #9177ff;
+}
+
+.btn-return:hover span {
+    transform: rotate(-90deg) translateY(3px);
+    /* Arrow hover effect */
+}
+
+@keyframes scaleIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
     }
 }
