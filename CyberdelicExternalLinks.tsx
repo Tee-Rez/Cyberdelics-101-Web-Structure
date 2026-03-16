@@ -4,7 +4,61 @@ import { addPropertyControls, ControlType } from "framer"
 // --- HARDCODED CONFIG ---
 const VIEWER_URL =
     "https://tee-rez.github.io/Cyberdelics-101-Web-Structure/Modules/external-links-viewer.html"
-// ------------------------
+// --- DIRECTORY MAPPING ---
+type LessonMap = { [key: string]: string };
+type ModuleMap = { folder: string, lessons: LessonMap };
+
+const FOLDER_MAP: { [key: string]: ModuleMap } = {
+    "1": {
+        folder: "Module_1_DefiningCyberdelics",
+        lessons: {
+            "1": "Lesson_1_CoreDefinitions&Components",
+            "2": "Lesson_2_PsychedelicsVsCyberdelics",
+            "3": "Lesson_3_VRvsCyberdelics",
+            "4": "Lesson_4_MeditationVsCyberdelics"
+        }
+    },
+    "2": {
+        folder: "Module_2_Historical_Foundations",
+        lessons: {
+            "1": "Lesson_1_TheVisionaries",
+            "2": "Lesson_2_TheGapYears",
+            "3": "Lesson_3_TheRenaissance",
+            "4": "Lesson_4_ConvergenceAndValidation"
+        }
+    },
+    "3": {
+        folder: "Module_3_ScientificUnderstanding",
+        lessons: {
+            "1": "Lesson_1_TheoriesOfConsciousness",
+            "2": "Lesson_2_ScienceOfPresence",
+            "3": "Lesson_3_MechanismsOfAction",
+            "4": "Lesson_4_ResearchEvidence",
+            "5": "Lesson_5_IntegrationAndApplication"
+        }
+    },
+    "4": {
+        folder: "Module_4_TheLandscape",
+        lessons: {
+            "1": "Lesson_1_PurposeBuiltPlatforms",
+            "2": "Lesson_2_ClinicalApplicationsAndBiofeedback",
+            "3": "Lesson_3_SocialVRAndTheCreatorEcosystem",
+            "4": "Lesson_4_SpecializedApplicationsAndHardware",
+            "5": "Lesson_5_PlatformSelectionFrameworkAndModuleSummary"
+        }
+    },
+    "5": {
+        folder: "Module_5_TheCyberdelicEcosystem",
+        lessons: {
+            "1": "Lesson_1_EcosystemConceptAndTechnologyProviders",
+            "2": "Lesson_2_KnowledgeProducersAndHumanInfrastructure",
+            "3": "Lesson_3_EconomicInfrastructureAndRegulatoryLandscape",
+            "4": "Lesson_4_EcosystemChallengesAndOpportunities",
+            "5": "Lesson_5_YourRoleInTheEcosystem"
+        }
+    }
+};
+// -------------------------
 
 interface Props {
     moduleFolder: string
@@ -28,10 +82,18 @@ export default function CyberdelicExternalLinks(props: Props) {
         if (props.customPathToggle && props.customMarkdownPath) {
             path = props.customMarkdownPath.trim()
         } else {
-            // Construct standard path based on module and lesson
-            const moduleF = props.moduleFolder.trim()
-            const lessonF = props.lessonFolder.trim()
-            path = `Modules/${moduleF}/${lessonF}/External-Links.md`
+            // Construct standard path based on module and lesson lookup map
+            const modNum = props.moduleFolder.trim()
+            const lesNum = props.lessonFolder.trim()
+            
+            const moduleData = FOLDER_MAP[modNum]
+            if (moduleData && moduleData.lessons[lesNum]) {
+                const moduleF = moduleData.folder
+                const lessonF = moduleData.lessons[lesNum]
+                path = `Modules/${moduleF}/${lessonF}/External-Links.md`
+            } else {
+                path = `Modules/${modNum}/${lesNum}/External-Links.md` // Fallback
+            }
         }
 
         const finalUrl = `${VIEWER_URL}?source=${encodeURIComponent(path)}`
@@ -155,17 +217,17 @@ export default function CyberdelicExternalLinks(props: Props) {
 addPropertyControls(CyberdelicExternalLinks, {
     moduleFolder: {
         type: ControlType.String,
-        title: "Module Folder",
-        placeholder: "e.g. Module_1_DefiningCyberdelics",
-        defaultValue: "Module_1_DefiningCyberdelics",
-        hidden: (props) => props.customPathToggle,
+        title: "Module",
+        placeholder: "e.g. 1",
+        defaultValue: "1",
+        hidden: (props: Props) => props.customPathToggle,
     },
     lessonFolder: {
         type: ControlType.String,
-        title: "Lesson Folder",
-        placeholder: "e.g. Lesson_1_CoreDefinitions&Components",
-        defaultValue: "Lesson_1_CoreDefinitions&Components",
-        hidden: (props) => props.customPathToggle,
+        title: "Lesson",
+        placeholder: "e.g. 1",
+        defaultValue: "1",
+        hidden: (props: Props) => props.customPathToggle,
     },
     customPathToggle: {
         type: ControlType.Boolean,

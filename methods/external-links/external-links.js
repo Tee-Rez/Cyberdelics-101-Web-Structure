@@ -53,13 +53,16 @@
                         basePath = '../'.repeat(depth > 1 ? depth - 1 : 0);
                     }
                     
-                    const fetchPath = window.location.origin + '/' +  this.markdownPath;
-                    // Note: Depending on server, absolute or relative might work best.
-                    // Local server testing:
-                    const relativePath = `../../${this.markdownPath}`; // from CyberneticLoop? Actually CyberneticLoop is at root. 
-                    // Let's just use the absolute path from root or relative if we're at root
+                    // Build clean path relative to project root
+                    // The viewer is accessed via /Modules/external-links-viewer.html
+                    // So to get to /Modules/Module_... we just go up one level
+                    
                     const isRoot = window.location.pathname.endsWith('CyberneticLoop.html') || window.location.pathname.endsWith('/');
-                    const finalFetchPath = isRoot ? this.markdownPath : `../../${this.markdownPath}`;
+                    
+                    // If we are in the viewer we go up one level, otherwise use the path
+                    const finalFetchPath = window.location.pathname.includes('/Modules/') 
+                        ? `../${this.markdownPath}` 
+                        : this.markdownPath;
                     
                     console.log(`[ExternalLinks] Fetching markdown from: ${finalFetchPath}`);
 
