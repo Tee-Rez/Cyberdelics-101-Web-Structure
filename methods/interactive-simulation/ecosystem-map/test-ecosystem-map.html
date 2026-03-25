@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test: Ecosystem Map Simulation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../core/styles.css">
+    <link rel="stylesheet" href="../interactive-simulation.css">
+    <link rel="stylesheet" href="ecosystem-map.css">
+    <style>
+        body {
+            margin: 0;
+            background: #080d14;
+            font-family: 'Rajdhani', sans-serif;
+            overflow: hidden;
+        }
+        #sim-container {
+            width: 100vw;
+            height: 100vh;
+        }
+        #test-controls {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: rgba(10, 22, 40, 0.95);
+            border: 1px solid #1e293b;
+            border-radius: 6px;
+            padding: 10px 14px;
+            font-size: 10px;
+            color: #475569;
+            z-index: 100;
+            letter-spacing: 1px;
+        }
+        #test-controls div {
+            margin: 2px 0;
+        }
+        #visited-count {
+            color: #06b6d4;
+            font-weight: bold;
+        }
+        #complete-signal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(52, 211, 153, 0.15);
+            border: 2px solid #34d399;
+            color: #34d399;
+            padding: 20px 40px;
+            border-radius: 8px;
+            font-family: 'Orbitron', monospace;
+            font-size: 14px;
+            letter-spacing: 2px;
+            z-index: 200;
+        }
+    </style>
+</head>
+<body>
+    <div id="sim-container"></div>
+
+    <div id="test-controls">
+        <div>ECOSYSTEM MAP TEST HARNESS</div>
+        <div>Visited: <span id="visited-count">0</span> / 8</div>
+        <div id="complete-text" style="color:#475569;">Click nodes to explore</div>
+    </div>
+
+    <div id="complete-signal">✓ ALL 8 NODES VISITED — markComplete() FIRED</div>
+
+    <script src="ecosystem-map-data.js"></script>
+    <script src="ecosystem-map.js"></script>
+    <script>
+        const engine = window.SimulationEngines['EcosystemMap'];
+        const container = document.getElementById('sim-container');
+
+        // Mock host — simulates what interactive-simulation.js provides
+        const mockHost = {
+            markComplete: function () {
+                console.log('[TEST] markComplete() fired — all 8 nodes visited!');
+                document.getElementById('complete-signal').style.display = 'block';
+                document.getElementById('complete-text').textContent = 'COMPLETE ✓';
+                document.getElementById('complete-text').style.color = '#34d399';
+                setTimeout(() => {
+                    document.getElementById('complete-signal').style.display = 'none';
+                }, 3000);
+            }
+        };
+
+        engine.init(container, {}, mockHost);
+
+        // Animation loop
+        let lastTs = 0;
+        function loop(ts) {
+            const dt = ts - lastTs;
+            lastTs = ts;
+            engine.update(dt, {});
+
+            // Update UI counter
+            if (engine.visitedNodes) {
+                document.getElementById('visited-count').textContent = engine.visitedNodes.size;
+            }
+
+            requestAnimationFrame(loop);
+        }
+        requestAnimationFrame(loop);
+
+        // Expose for console debugging
+        window.engine = engine;
+        window.DATA = window.EcosystemMapData;
+
+        console.log('[Test] Engine ready. Access via window.engine');
+        console.log('[Test] Data accessible via window.DATA');
+        console.log('[Test] Nodes:', window.DATA.nodes.length);
+        console.log('[Test] Lateral connections:', window.DATA.lateralConnections.length);
+    </script>
+</body>
+</html>

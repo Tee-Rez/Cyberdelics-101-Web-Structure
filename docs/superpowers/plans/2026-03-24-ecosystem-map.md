@@ -154,7 +154,7 @@ Before starting, read these files to understand the existing patterns:
                 angle: 225,
                 subtitle: 'Training Programs · Certification Bodies · Curricula',
                 role: 'Translate research and clinical evidence into practitioner-ready skills. Without educators, knowledge produced by researchers stays inaccessible to facilitators and clinicians — the field can\'t scale safely beyond its first generation.',
-                players: ['Cyberdelic Nexus (40–100 hr cert)', 'Multiversity', 'VRAR Association', 'University programs (forming)'],
+                players: ['Cyberdelic Nexus (40–100 hrjust cert)', 'Multiversity', 'VRAR Association', 'University programs (forming)'],
                 connections: ['facilitators', 'clinical', 'knowledge', 'users'],
                 challenge: 'Training programs vary widely (40–100 hours, no standardization). No credential recognized by insurance networks yet. First-generation practitioners risk aging out before systematic mentorship transfers their knowledge.',
                 opportunity: 'Practitioner certification becoming an insurance-recognized credential simultaneously elevates quality, expands facilitator income, and makes the field legible to healthcare systems. Medical schools are beginning to add VR therapeutics to curricula.',
@@ -614,22 +614,16 @@ This task builds the static visual: SVG with 8 nodes, spokes, and lateral connec
                 this._addConnectionLine(g, node.x, node.y, DATA.svg.cx, DATA.svg.cy, node.color, `spoke-${node.id}`);
             });
 
-            // Lateral connections — IDs encode both node IDs for visibility matching
-            DATA.lateralConnections.forEach(conn => {
+            // Lateral connections
+            DATA.lateralConnections.forEach((conn, i) => {
                 const src = this.nodePositions.find(n => n.id === conn.source);
                 const tgt = this.nodePositions.find(n => n.id === conn.target);
                 if (!src || !tgt) return;
-                // ID encodes both endpoints: "lateral-tech-knowledge"
-                this._addConnectionLine(g, src.x, src.y, tgt.x, tgt.y, src.color, `lateral-${conn.source}-${conn.target}`);
+                this._addConnectionLine(g, src.x, src.y, tgt.x, tgt.y, src.color, `lateral-${i}`);
             });
 
             this.svg.appendChild(g);
         },
-
-        // Particle/pulse stubs — implemented fully in Task 6
-        _initParticles: function () {},
-        _updateParticles: function (dt) {},
-        _updateCenterPulse: function (dt) {},
 
         _addConnectionLine: function (parent, x1, y1, x2, y2, color, id) {
             // Glow layer
@@ -886,22 +880,20 @@ _zoomOut: function () {
 },
 
 _updateConnectionVisibility: function (activeNodeId) {
-    const conns = this.svg.querySelector('#em-connections');
+    const conns = this.svg.getElementById('em-connections');
     if (!conns) return;
 
     conns.querySelectorAll('line').forEach(line => {
-        const id = line.id;
-        // e.g. "em-conn-spoke-tech", "em-conn-glow-spoke-tech",
-        //      "em-conn-lateral-tech-knowledge", "em-conn-glow-lateral-tech-knowledge"
-        const isGlow = id.includes('-glow-');
+        const id = line.id; // e.g. "em-conn-spoke-tech" or "em-conn-lateral-0"
+        const isGlow = id.includes('glow');
 
         if (!activeNodeId) {
+            // Restore base opacities
             line.setAttribute('opacity', isGlow ? 0.08 : 0.2);
             return;
         }
 
-        // Both spoke and lateral IDs contain the node ID string — this now works
-        // for spokes ("spoke-tech") and laterals ("lateral-tech-knowledge" / "lateral-educators-facilitators")
+        // Check if this connection involves the active node
         const involves = id.includes(`-${activeNodeId}`);
         if (involves) {
             line.setAttribute('opacity', isGlow ? 0.3 : 0.8);
