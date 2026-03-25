@@ -126,6 +126,12 @@
     /* display: none !important; */
 }
 
+/* ========== Italic Text Styling ========== */
+em, i {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 1em;
+}
+
 /* ---------- Responsive Header Text ---------- */
 @media (max-width: 800px) {
 
@@ -591,13 +597,11 @@ li strong {
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    flex-direction: column;
     align-items: center;
     width: 60%;
-    /* Wide enough for title */
     max-width: 600px;
+    height: 100%;
     pointer-events: none;
-    /* Let clicks pass through if empty areas overlap */
     z-index: 1;
 }
 
@@ -630,13 +634,7 @@ li strong {
 
 /* .cd-header-center was here, replaced above */
 
-.cd-lesson-title {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-secondary);
-    margin-bottom: 4px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
+
 
 .cd-progress-track {
     width: 100%;

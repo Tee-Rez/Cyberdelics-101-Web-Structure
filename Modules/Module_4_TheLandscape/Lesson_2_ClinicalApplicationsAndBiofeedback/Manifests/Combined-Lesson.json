@@ -1,4 +1,4 @@
-{
+﻿{
     "id": "combined_lesson_4_2",
     "title": "Clinical VR & Biofeedback: From Pain Labs to the Cybernetic Loop",
     "description": "Examine the clinical evidence base for VR in anxiety, PTSD, and pain management, then explore the biofeedback loop that elevates standard VR into a cyberdelic experience -- including all four biofeedback types and the Healium case study.",
@@ -28,22 +28,22 @@
                     },
                     {
                         "title": "Success Rates - The Evidence",
-                        "content": "<p>VRET isn't experimental. The research base spans over 20 years</p><ul><li><strong>Specific Phobias,</strong> 80-90% success rate (comparable to in-vivo exposure).</li><li><strong>Social Anxiety,</strong> 60-75% significant symptom reduction.</li><li><strong>PTSD,</strong> 50-70% clinically significant improvement, especially for combat-related PTSD.</li><li><strong>Panic Disorder,</strong> 60-80% improvement in functioning.</li></ul><p>These are standardized clinical measures showing lasting reduction in avoidance behaviors and symptoms.</p>",
+                        "content": "<p>VRET isn't experimental. The research base spans over 20 years</p><ul><li><strong>Specific Phobias:</strong> 80-90% success rate (comparable to in-vivo exposure).</li><li><strong>Social Anxiety:</strong> 60-75% significant symptom reduction.</li><li><strong>PTSD:</strong> 50-70% clinically significant improvement, especially for combat-related PTSD.</li><li><strong>Panic Disorder:</strong> 60-80% improvement in functioning.</li></ul><p>These are standardized clinical measures showing lasting reduction in avoidance behaviors and symptoms.</p>",
                         "triggerLabel": "European Standard"
                     },
                     {
                         "title": "Psious - The European Clinical Standard",
-                        "content": "<p>Psious (pronounced SOH-see-us) is a Spanish-founded platform that offers over 70 evidence-based scenarios. It's distinctive for its <strong>clinician dashboard</strong>, allowing therapists to control exposure intensity in real-time from a tablet.</p><ul><li><strong>Model,</strong> Therapist-led, in-clinic use.</li><li><strong>Reach,</strong> Widely used in Spain, UK, France, Germany.</li><li><strong>Key Takeaway,</strong> It validates VRET as a global clinical movement, not just a US tech trend.</li></ul>",
+                        "content": "<p>Psious (pronounced SOH-see-us) is a Spanish-founded platform that offers over 70 evidence-based scenarios. It's distinctive for its <strong>clinician dashboard</strong>, allowing therapists to control exposure intensity in real-time from a tablet.</p><ul><li><strong>Model:</strong> Therapist-led, in-clinic use.</li><li><strong>Reach:</strong> Widely used in Spain, UK, France, Germany.</li><li><strong>Key Takeaway:</strong> It validates VRET as a global clinical movement, not just a US tech trend.</li></ul>",
                         "triggerLabel": "US & UK Innovations"
                     },
                     {
                         "title": "Limbix and Oxford VR",
-                        "content": "<p>Two other platforms shaping the landscape</p><ul><li><strong>Limbix (US),</strong> Specializes in adolescent mental health (depression, anxiety). Received FDA Breakthrough Device Designation in 2020.</li><li><strong>Oxford VR (UK),</strong> Focuses on <em>automated</em> CBT delivery using virtual coaches (e.g., gameChangeVR for psychosis/agoraphobia). Addresses the therapist shortage by reducing the need for human presence during sessions.</li><li><strong>Bravemind (USC),</strong> The pioneering military PTSD platform that helped prove the field's viability.</li></ul>",
+                        "content": "<p>Two other platforms shaping the landscape</p><ul><li><strong>Limbix (US):</strong> Specializes in adolescent mental health (depression, anxiety). Received FDA Breakthrough Device Designation in 2020.</li><li><strong>Oxford VR (UK):</strong> Focuses on <em>automated</em> CBT delivery using virtual coaches (e.g., gameChangeVR for psychosis/agoraphobia). Addresses the therapist shortage by reducing the need for human presence during sessions.</li><li><strong>Bravemind (USC):</strong> The pioneering military PTSD platform that helped prove the field's viability.</li></ul>",
                         "triggerLabel": "Why Evidence Matters"
                     },
                     {
                         "title": "What This Evidence Means for the Field",
-                        "content": "<p>VRET is the field's proof of concept. When skeptics question if 'headset experiences' can be therapeutic, VRET is the answer.</p><p><strong>Three Implications</strong></p><ol><li><strong>Credibility,</strong> 80%+ success rates lend weight to newer applications.</li><li><strong>Regulatory Pathways,</strong> FDA clearances for VRET pave the way for other tools.</li><li><strong>Infrastructure,</strong> 20+ years of research created the safety protocols and ethical frameworks we use today.</li></ol>",
+                        "content": "<p>VRET is the field's proof of concept. When skeptics question if 'headset experiences' can be therapeutic, VRET is the answer.</p><p><strong>Three Implications</strong></p><ul><li><strong>Credibility:</strong> 80%+ success rates lend weight to newer applications.</li><li><strong>Regulatory Pathways:</strong> FDA clearances for VRET pave the way for other tools.</li><li><strong>Infrastructure:</strong> 20+ years of research created the safety protocols and ethical frameworks we use today.</li></ul>",
                         "triggerLabel": "Take Concept Check"
                     }
                 ]
@@ -57,7 +57,7 @@
                 "sections": [
                     {
                         "title": "SnowWorld - Where It Started",
-                        "content": "<p>In the late 90s, researchers Hunter Hoffman and David Patterson created <strong>SnowWorld</strong> for burn patients undergoing excruciating wound care. Patients threw virtual snowballs at penguins while nurses worked.</p><p><strong>The Result,</strong> 30-50% pain reduction (comparable to opioids). fMRI scans showed significantly less pain activity in the brain. It proved that if VR captures enough attention, pain processing literally gets less neural real estate.</p>",
+                        "content": "<p>In the late 90s, researchers Hunter Hoffman and David Patterson created <strong>SnowWorld</strong> for burn patients undergoing excruciating wound care. Patients threw virtual snowballs at penguins while nurses worked.</p><p><strong>The Result:</strong> 30-50% pain reduction (comparable to opioids). fMRI scans showed significantly less pain activity in the brain. It proved that if VR captures enough attention, pain processing literally gets less neural real estate.</p>",
                         "media": {
                             "type": "image",
                             "src": "placeholder-snowworld.jpg",
@@ -69,17 +69,17 @@
                     },
                     {
                         "title": "The Four Mechanisms",
-                        "content": "<p>VR engages four distinct pathways</p><ol><li><strong>Attentional Capture (Cognitive),</strong> VR floods the senses, leaving limited bandwidth for pain processing.</li><li><strong>Gate Control (Neurological),</strong> Sensory input closes spinal 'gates', blocking pain signals.</li><li><strong>Emotional Regulation (Psychological),</strong> Shifting emotional state reduces pain <em>suffering</em>.</li><li><strong>Expectation Effects (Psychophysiological),</strong> Neural changes driven by the belief in the treatment (placebo effect).</li></ol>",
+                        "content": "<p>VR engages four distinct pathways</p><ul><li><strong>Attentional Capture (Cognitive):</strong> VR floods the senses, leaving limited bandwidth for pain processing.</li><li><strong>Gate Control (Neurological):</strong> Sensory input closes spinal 'gates', blocking pain signals.</li><li><strong>Emotional Regulation (Psychological):</strong> Shifting emotional state reduces pain <em>suffering</em>.</li><li><strong>Expectation Effects (Psychophysiological):</strong> Neural changes driven by the belief in the treatment (placebo effect).</li></ul>",
                         "triggerLabel": "RelieVRx (FDA)"
                     },
                     {
                         "title": "RelieVRx - FDA Authorization",
-                        "content": "<p>In 2021, RelieVRx became the first VR system to receive <strong>FDA 510(k) authorization</strong> for chronic lower back pain. This allows doctors to prescribe it as a medical device.</p><ul><li><strong>Program,</strong> 56 sessions over 8 weeks (CBT + breathing + education).</li><li><strong>Significance,</strong> It proved VR apps can clear regulatory hurdles just like medical devices.</li></ul>",
+                        "content": "<p>In 2021, RelieVRx became the first VR system to receive <strong>FDA 510(k) authorization</strong> for chronic lower back pain. This allows doctors to prescribe it as a medical device.</p><ul><li><strong>Program:</strong> 56 sessions over 8 weeks (CBT + breathing + education).</li><li><strong>Significance:</strong> It proved VR apps can clear regulatory hurdles just like medical devices.</li></ul>",
                         "triggerLabel": "XRHealth (Medicare)"
                     },
                     {
                         "title": "XRHealth - Medicare Coverage",
-                        "content": "<p>XRHealth crossed the biggest barrier, <strong>Insurance Reimbursement (Code E1905)</strong>. Medicare now pays for VR therapy sessions just like physical therapy.</p><ul><li><strong>Model,</strong> Telehealth VR. Headset sent to home, remote therapist monitors progress.</li><li><strong>Why it matters,</strong> FDA says 'it's safe'. Medicare coverage says 'we will pay for it'. That helps scalability.</li></ul>",
+                        "content": "<p>XRHealth crossed the biggest barrier, <strong>Insurance Reimbursement (Code E1905)</strong>. Medicare now pays for VR therapy sessions just like physical therapy.</p><ul><li><strong>Model:</strong> Telehealth VR. Headset sent to home, remote therapist monitors progress.</li><li><strong>Why it matters:</strong> FDA says 'it's safe'. Medicare coverage says 'we will pay for it'. That helps scalability.</li></ul>",
                         "triggerLabel": "Insurance Impact"
                     },
                     {
@@ -103,7 +103,7 @@
                     },
                     {
                         "title": "The 5 Steps of the Loop",
-                        "content": "<ol><li><strong>Signal Generation,</strong> Body produces data (heart rate, brainwaves).</li><li><strong>Sensor Detection,</strong> Device (watch, headband) reads the signal.</li><li><strong>Processing,</strong> Algorithm interprets state (e.g., 'high stress').</li><li><strong>Response,</strong> VR environment changes (colors dim, geometry contracts).</li><li><strong>Adjustment,</strong> You perceive the change and shift your state, starting the loop again.</li></ol>",
+                        "content": "<ul><li><strong>Signal Generation:</strong> Body produces data (heart rate, brainwaves).</li><li><strong>Sensor Detection:</strong> Device (watch, headband) reads the signal.</li><li><strong>Processing:</strong> Algorithm interprets state (e.g., 'high stress').</li><li><strong>Response:</strong> VR environment changes (colors dim, geometry contracts).</li><li><strong>Adjustment:</strong> You perceive the change and shift your state, starting the loop again.</li></ul>",
                         "media": {
                             "type": "image",
                             "src": "placeholder-cybernetic-loop.jpg",
@@ -122,6 +122,54 @@
             }
         },
         {
+            "id": "module_4_2_4_progressive",
+            "title": "Biofeedback Types Explorer",
+            "type": "progressive-disclosure",
+            "content": {
+                "sections": [
+                    {
+                        "title": "1. Heart Rate Variability (HRV)",
+                        "content": "<ul><li><strong>Measures:</strong> The variation in time between heartbeats. Higher HRV = resilience.</li><li><strong>Devices:</strong> Apple Watch, Polar H10, HeartMath emWave.</li><li><strong>Training Goal:</strong> Stress management, emotional regulation.</li><li><strong>VR Response:</strong> As HRV increases, the environment expands and becomes more vibrant (e.g., flowers blooming), rewarding your calm state.</li></ul>",
+                        "media": {
+                            "type": "image",
+                            "src": "placeholder-hrv.jpg",
+                            "alt": "User with heart rate sensor in VR, visualization of HRV coherence waveform",
+                            "position": "left",
+                            "aiPrompt": "Person wearing VR headset with a small heart rate sensor clipped to their earlobe, calm focused expression, subtle heart rate variability coherence waveform overlaid in soft blue-green, the VR environment visible through a translucent layer showing an expanding floral landscape that responds to a smooth heartbeat rhythm, modern wellness aesthetic, 16:9 aspect ratio"
+                        },
+                        "triggerLabel": "Next: EEG"
+                    },
+                    {
+                        "title": "2. EEG (Brainwaves)",
+                        "content": "<ul><li><strong>Measures:</strong> Brainwave frequencies (Alpha, Beta, Theta, Gamma).</li><li><strong>Devices:</strong> Muse headband, OpenBCI.</li><li><strong>Training Goal:</strong> Focus, deep meditation, anxiety reduction.</li><li><strong>VR Response:</strong> High Alpha (relaxed awareness) might make the environment luminous and spacious. High Beta (stress/busy mind) might cause visual noise or storms.</li></ul>",
+                        "triggerLabel": "Next: Respiration"
+                    },
+                    {
+                        "title": "3. Respiration (Breathing)",
+                        "content": "<ul><li><strong>Measures:</strong> Rate and depth of breathing.</li><li><strong>Devices:</strong> Chest belt, pressure sensors, or VR controller motion (no extra hardware required).</li><li><strong>Training Goal:</strong> Anxiety management, vagus nerve stimulation, diaphragmatic breathing.</li><li><strong>VR Response:</strong> The world breathes with you. Inhale = environment expands/brightens; Exhale = contracts/settles. Synchronization creates deep regulation.</li></ul>",
+                        "triggerLabel": "Next: GSR"
+                    },
+                    {
+                        "title": "4. Galvanic Skin Response (GSR)",
+                        "content": "<ul><li><strong>Measures:</strong> Skin conductance (sweat gland activity) reflecting emotional arousal.</li><li><strong>Devices:</strong> Empatica wristband, Pip sensor.</li><li><strong>Training Goal:</strong> Arousal regulation, stress awareness.</li><li><strong>VR Response:</strong> High arousal makes the world intense/fast; low arousal makes it calm/slow.</li></ul>",
+                        "triggerLabel": "Case Study: HeartMath"
+                    },
+                    {
+                        "title": "Case Study: HeartMath & HRV Coherence",
+                        "content": "<p><strong>HeartMath Institute</strong> has been researching HRV coherence since 1991. Their emWave device and Inner Balance sensor are among the most studied biofeedback tools in existence, with over 300 peer-reviewed publications connected to their research program.</p><ul><li><strong>Mechanism:</strong> The emWave measures beat-to-beat HRV from an ear clip or fingertip sensor. When your HRV enters a smooth, coherent rhythm (achieved through slow, intentional breathing), the visual display shifts from incoherence to coherence : low, medium, or high, represented in real-time.</li><li><strong>VR Integration:</strong> HeartMath's coherence feedback can be layered into VR environments where the landscape literally brightens, blooms, or expands as coherence increases. The environment becomes a mirror for your nervous system state.</li><li><strong>Why it matters for facilitators:</strong> HeartMath gives you a teachable, research-backed framework for explaining HRV to clients. The visual feedback loop is immediate and convincing : people who are skeptical about 'feeling calm' often trust a coherence score.</li><li><strong>Evidence level:</strong> Strong. Independent replication across stress reduction, emotional regulation, and cardiac health contexts.</li></ul>",
+                        "media": {
+                            "type": "image",
+                            "src": "placeholder-heartmath.jpg",
+                            "alt": "HeartMath emWave sensor showing coherence waveform moving from jagged to smooth",
+                            "position": "right",
+                            "aiPrompt": "Split display showing HeartMath biofeedback in action : left side shows a small ear-clip sensor attached to a person's ear, right side shows a waveform visualization transitioning from jagged red incoherence to smooth flowing green coherence, overlaid on a soft VR environment of blooming flowers or expanding light patterns, sense of the nervous system being made visible, clinical but beautiful aesthetic, purple and teal tones, 16:9 aspect ratio"
+                        },
+                        "triggerLabel": "Take Knowledge Check"
+                    }
+                ]
+            }
+        },
+        {
             "id": "module_4_2_3_simulation",
             "title": "The Cybernetic Loop",
             "type": "interactive-simulation",
@@ -133,60 +181,12 @@
             }
         },
         {
-            "id": "module_4_2_4_progressive",
-            "title": "Biofeedback Types Explorer",
-            "type": "progressive-disclosure",
-            "content": {
-                "sections": [
-                    {
-                        "title": "1. Heart Rate Variability (HRV)",
-                        "content": "<ul><li><strong>Measures,</strong> The variation in time between heartbeats. Higher HRV = resilience.</li><li><strong>Devices,</strong> Apple Watch, Polar H10.</li><li><strong>Training Goal,</strong> Stress management, emotional regulation.</li><li><strong>VR Response,</strong> As HRV increases, the environment expands and becomes more vibrant (e.g., flowers blooming), rewarding your calm state.</li></ul>",
-                        "media": {
-                            "type": "image",
-                            "src": "placeholder-hrv.jpg",
-                            "alt": "User with Apple Watch in VR, visualization of heart rate coherence",
-                            "position": "left",
-                            "aiPrompt": "Person with Apple Watch in VR headset, calm expression, subtle heart rate visualization overlay showing coherent waveform, soft blue/green lighting, modern wellness tech aesthetic, 16:9 aspect ratio"
-                        },
-                        "triggerLabel": "Next: EEG"
-                    },
-                    {
-                        "title": "2. EEG (Brainwaves)",
-                        "content": "<ul><li><strong>Measures,</strong> Brainwave frequencies (Alpha, Beta, Theta, Gamma).</li><li><strong>Devices,</strong> Muse headband, OpenBCI.</li><li><strong>Training Goal,</strong> Focus, deep meditation, anxiety reduction.</li><li><strong>VR Response,</strong> High Alpha (relaxed awareness) might make the environment luminous and spacious. High Beta (stress/busy mind) might cause visual noise or storms.</li></ul>",
-                        "triggerLabel": "Next: Respiration"
-                    },
-                    {
-                        "title": "3. Respiration (Breathing)",
-                        "content": "<ul><li><strong>Measures,</strong> Rate and depth of breathing.</li><li><strong>Devices,</strong> Chest belt, pressure sensors.</li><li><strong>Training Goal,</strong> Anxiety management, vagus nerve stimulation.</li><li><strong>VR Response,</strong> The world breathes with you. Inhale = environment expands/brightens; Exhale = contracts/settles. Synchronization creates deep regulation.</li></ul>",
-                        "triggerLabel": "Next: GSR"
-                    },
-                    {
-                        "title": "4. Galvanic Skin Response (GSR)",
-                        "content": "<ul><li><strong>Measures,</strong> Skin conductance (sweat gland activity) reflecting emotional arousal.</li><li><strong>Devices,</strong> Empatica wristband, pip.</li><li><strong>Training Goal,</strong> Arousal regulation, stress awareness.</li><li><strong>VR Response,</strong> High arousal makes the world intense/fast; low arousal makes it calm/slow.</li></ul>",
-                        "triggerLabel": "Healium Case Study"
-                    },
-                    {
-                        "title": "Case Study: Healium",
-                        "content": "<p><strong>Healium</strong> is the premier example of the cybernetic loop in action. Created by Sarah Hill (former journalist struggling with panic attacks).</p><ul><li><strong>Mechanism,</strong> Uses Muse (EEG) or Apple Watch (HRV) to power virtual environments. You literally 'grow flowers' or 'hatch butterflies' by calming your mind.</li><li><strong>Credibility,</strong> Mayo Clinic partnership, AFWERX military contract, peer-reviewed studies showing anxiety reduction in 4 minutes.</li></ul>",
-                        "media": {
-                            "type": "image",
-                            "src": "placeholder-healium.jpg",
-                            "alt": "Healium interface showing brainwaves powering a virtual transformation",
-                            "position": "right",
-                            "aiPrompt": "Healium VR interface screenshot or recreation showing a user 'powering' a virtual transformation (e.g., glitchy winter landscape turning into blooming spring) using a brainwave monitor, overlay of EEG data, sense of agency and magic powered by biology, 16:9 aspect ratio"
-                        },
-                        "triggerLabel": "Take Knowledge Check"
-                    }
-                ]
-            }
-        },
-        {
             "id": "quiz_4_2_1",
             "title": "Concept Check: Mechanisms & Platforms",
             "type": "option-selector",
             "config": {
                 "mode": "single",
-                "style": "card",
+                "style": "text",
                 "questions": [
                     {
                         "question": "<h3>Mechanism Check</h3><p>A colleague asks: 'Why is VR exposure more effective than just imagining the fear? Imagination is free.'</p><p><strong>How do you respond?</strong></p>",
@@ -249,86 +249,7 @@
                             "q2_d": "<p>Bravemind is for military PTSD research, not social anxiety or general clinical use.</p>",
                             "q2_c": "<p><strong>Correct!</strong> Oxford VR (UK-based) specializes in automated CBT using virtual coaches, specifically for conditions like social anxiety and agoraphobia. It matches the 'automated' and 'UK' context perfectly.</p>"
                         }
-                    }
-                ]
-            }
-        },
-        {
-            "id": "module_4_2_2_kc",
-            "title": "Knowledge Construction: Pain Mechanisms",
-            "type": "knowledge-construction",
-            "content": {
-                "title": "The Sequential Activation Model",
-                "instruction": "Drag each pain reduction mechanism into its correct phase of activation during a VR session.",
-                "templateType": "categories",
-                "categories": [
-                    {
-                        "id": "phase_immediate",
-                        "label": "IMMEDIATE  (0 - 30s)",
-                        "color": "#ff6b6b"
                     },
-                    {
-                        "id": "phase_early",
-                        "label": "EARLY  (30s - 2m)",
-                        "color": "#ffaa00"
-                    },
-                    {
-                        "id": "phase_sustained",
-                        "label": "SUSTAINED  (2 - 15m)",
-                        "color": "#51cf66"
-                    },
-                    {
-                        "id": "phase_cumulative",
-                        "label": "CUMULATIVE  (ongoing)",
-                        "color": "#339af0"
-                    }
-                ],
-                "items": [
-                    {
-                        "id": "capture",
-                        "text": "Attentional Capture (Cognitive)",
-                        "correctCategory": "phase_immediate"
-                    },
-                    {
-                        "id": "gate",
-                        "text": "Gate Control (Neurological)",
-                        "correctCategory": "phase_early"
-                    },
-                    {
-                        "id": "emotion",
-                        "text": "Emotional Regulation (Psychological)",
-                        "correctCategory": "phase_sustained"
-                    },
-                    {
-                        "id": "expect",
-                        "text": "Expectation Effects (Psychophysiological)",
-                        "correctCategory": "phase_cumulative"
-                    }
-                ],
-                "distractors": [
-                    {
-                        "id": "placebo",
-                        "text": "Placebo Effect (Psychological)"
-                    },
-                    {
-                        "id": "numbness",
-                        "text": "Physical Numbness (Neurological)"
-                    },
-                    {
-                        "id": "drug",
-                        "text": "Drug Interaction (Pharmacological)"
-                    }
-                ]
-            }
-        },
-        {
-            "id": "quiz_4_2_4",
-            "title": "Check Your Understanding",
-            "type": "option-selector",
-            "config": {
-                "mode": "single",
-                "style": "card",
-                "questions": [
                     {
                         "question": "<h3>Focus Training Recommendation</h3><p>A client wants to train <strong>sustained attention</strong> and reduce mind-wandering. Which biofeedback type is best?</p>",
                         "options": [
@@ -361,38 +282,38 @@
                         }
                     },
                     {
-                        "question": "<h3>Healium vs. Meditation Apps</h3><p>What makes Healium fundamentally different from apps like Calm or Headspace?</p>",
+                        "question": "<h3>HeartMath vs. Standard Fitness Tracker</h3><p>A client already owns an Apple Watch that tracks heart rate. Why would you recommend a dedicated HeartMath sensor instead for biofeedback training?</p>",
                         "options": [
                             {
                                 "id": "q2_a",
-                                "label": "It uses VR (Immersion)",
+                                "label": "HeartMath is more accurate at measuring raw heart rate.",
                                 "correct": false
                             },
                             {
                                 "id": "q2_b",
-                                "label": "The Biofeedback Loop",
+                                "label": "HeartMath measures HRV coherence and feeds it back in real-time, enabling active self-regulation training.",
                                 "correct": true
                             },
                             {
                                 "id": "q2_c",
-                                "label": "Better Research Backing",
+                                "label": "Apple Watch doesn't measure heart rate continuously.",
                                 "correct": false
                             },
                             {
                                 "id": "q2_d",
-                                "label": "Therapeutic Design",
+                                "label": "HeartMath has better battery life.",
                                 "correct": false
                             }
                         ],
                         "synthesis": {
-                            "q2_a": "<p>VR is just the medium. You can have VR meditation without responsiveness.</p>",
-                            "q2_c": "<p>Research is great, but Headspace has research too. It's not the *functional* difference.</p>",
-                            "q2_d": "<p>Standard apps are also used therapeutically.</p>",
-                            "q2_b": "<p><strong>Correct!</strong> The Biofeedback Loop means your body controls the environment. In standard apps, content is passive. In Healium, the world changes *because* you changed.</p>"
+                            "q2_a": "<p>Both devices measure heart rate accurately. Raw heart rate accuracy isn't the distinction.</p>",
+                            "q2_c": "<p>Apple Watch does measure heart rate continuously. The issue isn't measurement frequency.</p>",
+                            "q2_d": "<p>Battery life is a practical concern but not the therapeutic reason to choose HeartMath.</p>",
+                            "q2_b": "<p><strong>Correct.</strong> The Apple Watch reports a number. HeartMath trains a skill. The emWave provides real-time coherence feedback designed specifically for self-regulation practice : the feedback loop is the point. Passive measurement and active biofeedback training are functionally different tools even when they're measuring the same physiological signal.</p>"
                         }
                     },
                     {
-                        "question": "<h3>System Reliability (Advanced)</h3><p>If a biofeedback sensor is inaccurate or the algorithm misinterprets your state, what happens?</p>",
+                        "question": "<h3>System Reliability</h3><p>If a biofeedback sensor is inaccurate or the algorithm misinterprets your state, what happens?</p>",
                         "options": [
                             {
                                 "id": "q3_a",

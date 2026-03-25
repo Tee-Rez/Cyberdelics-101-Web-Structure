@@ -1,0 +1,98 @@
+<h2>Two Simulation Concepts for Module 5</h2>
+<p class="subtitle">Which direction resonates — or should we combine them?</p>
+
+<div class="split" style="gap:24px; margin-top: 24px;">
+
+  <!-- Option C: Ecosystem Map -->
+  <div class="card" data-choice="C" onclick="toggleSelect(this)" style="cursor:pointer; flex:1;">
+    <div class="card-body">
+      <h3 style="color:#7dd3fc; margin-bottom:8px;">C — Ecosystem Living Map</h3>
+      <p class="label" style="color:#94a3b8; margin-bottom:12px;">Lesson 1 · Systems Thinking</p>
+    </div>
+    <div class="card-image" style="padding:0 16px 16px;">
+      <!-- Mockup: Network graph -->
+      <div style="background:#0f172a; border:1px solid #1e3a5f; border-radius:10px; padding:16px; font-family:monospace; position:relative; min-height:220px;">
+        <div style="color:#475569; font-size:11px; margin-bottom:12px;">ECOSYSTEM NETWORK</div>
+
+        <!-- Center node -->
+        <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:56px; height:56px; border-radius:50%; background:radial-gradient(circle,#0ea5e9,#0369a1); display:flex; align-items:center; justify-content:center; color:#fff; font-size:9px; text-align:center; z-index:2; box-shadow:0 0 16px #0ea5e980;">CYBER<br>DELIC<br>FIELD</div>
+
+        <!-- Orbiting nodes -->
+        <div style="position:absolute; top:18%; left:18%; width:44px; height:44px; border-radius:50%; background:#1e293b; border:1.5px solid #7dd3fc; display:flex; align-items:center; justify-content:center; color:#7dd3fc; font-size:8px; text-align:center;">HARD<br>WARE</div>
+        <div style="position:absolute; top:14%; left:55%; width:44px; height:44px; border-radius:50%; background:#1e293b; border:1.5px solid #a78bfa; display:flex; align-items:center; justify-content:center; color:#a78bfa; font-size:8px; text-align:center;">RE<br>SEARCH</div>
+        <div style="position:absolute; top:55%; left:75%; width:44px; height:44px; border-radius:50%; background:#1e293b; border:1.5px solid #34d399; display:flex; align-items:center; justify-content:center; color:#34d399; font-size:8px; text-align:center;">CLIN<br>ICAL</div>
+        <div style="position:absolute; top:72%; left:48%; width:44px; height:44px; border-radius:50%; background:#1e293b; border:1.5px solid #f59e0b; display:flex; align-items:center; justify-content:center; color:#f59e0b; font-size:8px; text-align:center;">FUND<br>ING</div>
+        <div style="position:absolute; top:55%; left:12%; width:44px; height:44px; border-radius:50%; background:#1e293b; border:1.5px solid #f87171; display:flex; align-items:center; justify-content:center; color:#f87171; font-size:8px; text-align:center;">REGU<br>LATE</div>
+
+        <!-- Connecting lines (SVG) -->
+        <svg style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;" viewBox="0 0 300 220">
+          <line x1="80" y1="55" x2="150" y2="110" stroke="#7dd3fc" stroke-width="0.8" opacity="0.4"/>
+          <line x1="178" y1="45" x2="150" y2="110" stroke="#a78bfa" stroke-width="0.8" opacity="0.4"/>
+          <line x1="240" y1="130" x2="150" y2="110" stroke="#34d399" stroke-width="0.8" opacity="0.4"/>
+          <line x1="160" y1="175" x2="150" y2="110" stroke="#f59e0b" stroke-width="0.8" opacity="0.4"/>
+          <line x1="55" y1="130" x2="150" y2="110" stroke="#f87171" stroke-width="0.8" opacity="0.4"/>
+        </svg>
+      </div>
+
+      <div style="margin-top:12px; color:#94a3b8; font-size:12px; line-height:1.5;">
+        <strong style="color:#cbd5e1;">How it works:</strong> 8 ecosystem nodes pulse on a force-directed canvas. Click any node to expand its role, see how it connects to others, and reveal "health indicators." Students explore until all nodes are visited. Reinforces systems thinking across all 5 lessons.
+      </div>
+    </div>
+  </div>
+
+  <!-- Option B: Pathway Navigator -->
+  <div class="card" data-choice="B" onclick="toggleSelect(this)" style="cursor:pointer; flex:1;">
+    <div class="card-body">
+      <h3 style="color:#c084fc; margin-bottom:8px;">B — Pathway Navigator</h3>
+      <p class="label" style="color:#94a3b8; margin-bottom:12px;">Lesson 5 · Your Role</p>
+    </div>
+    <div class="card-image" style="padding:0 16px 16px;">
+      <!-- Mockup: Pathway cards -->
+      <div style="background:#0f172a; border:1px solid #2d1b69; border-radius:10px; padding:14px; min-height:220px;">
+        <div style="color:#475569; font-size:11px; margin-bottom:10px;">SELECT YOUR PATHWAY</div>
+
+        <!-- Pathway rows -->
+        <div style="display:grid; gap:6px;">
+          <div style="background:#1e1b4b; border:1px solid #4f46e5; border-radius:6px; padding:8px 10px; display:flex; justify-content:space-between; align-items:center;">
+            <span style="color:#a5b4fc; font-size:11px;">Personal Practice</span>
+            <span style="color:#4f46e5; font-size:10px;">$300–500 ↗</span>
+          </div>
+          <div style="background:#1a1a2e; border:1px solid #7c3aed; border-radius:6px; padding:8px 10px; display:flex; justify-content:space-between; align-items:center; box-shadow:0 0 8px #7c3aed40;">
+            <span style="color:#c4b5fd; font-size:11px; font-weight:bold;">Professional Facilitation ◀ SELECTED</span>
+            <span style="color:#7c3aed; font-size:10px;">$40–100K ↗</span>
+          </div>
+          <div style="background:#1e1b4b; border:1px solid #4f46e5; border-radius:6px; padding:8px 10px; display:flex; justify-content:space-between; align-items:center;">
+            <span style="color:#a5b4fc; font-size:11px;">Content Creation</span>
+            <span style="color:#4f46e5; font-size:10px;">$0–150K+ ↗</span>
+          </div>
+          <div style="background:#1e1b4b; border:1px solid #4f46e5; border-radius:6px; padding:8px 10px; display:flex; justify-content:space-between; align-items:center;">
+            <span style="color:#a5b4fc; font-size:11px;">Research & Scholarship</span>
+            <span style="color:#4f46e5; font-size:10px;">$50–180K+ ↗</span>
+          </div>
+        </div>
+
+        <!-- Expanded detail -->
+        <div style="margin-top:10px; background:#1e1035; border:1px solid #7c3aed50; border-radius:6px; padding:10px;">
+          <div style="color:#c4b5fd; font-size:11px; margin-bottom:6px;">Professional Facilitation</div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:4px;">
+            <div style="color:#64748b; font-size:10px;">Training: <span style="color:#94a3b8;">40–100 hrs</span></div>
+            <div style="color:#64748b; font-size:10px;">Income: <span style="color:#94a3b8;">$40–100K</span></div>
+            <div style="color:#64748b; font-size:10px;">Insurance: <span style="color:#94a3b8;">$1.2–2.5K/yr</span></div>
+            <div style="color:#64748b; font-size:10px;">Timeline: <span style="color:#94a3b8;">6–12 months</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:12px; color:#94a3b8; font-size:12px; line-height:1.5;">
+        <strong style="color:#cbd5e1;">How it works:</strong> 6 pathway cards with cost/income/timeline data. Students select 1-2 paths that resonate, see a detailed breakdown, and answer quiz-style "fit questions" (e.g., "Do you have a clinical license?"). Reveals a personalized summary at the end.
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div style="margin-top:20px; background:#1e293b; border:1px solid #334155; border-radius:8px; padding:14px;">
+  <div style="color:#94a3b8; font-size:12px; line-height:1.6;">
+    <strong style="color:#e2e8f0;">Or combine them:</strong> The Ecosystem Map (C) could serve as Module 5's opening simulation in Lesson 1, while the Pathway Navigator (B) closes the module in Lesson 5 — bookending the entire module with two distinct simulations. Click one or both above.
+  </div>
+</div>

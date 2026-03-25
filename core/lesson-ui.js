@@ -99,7 +99,6 @@ class LessonUI {
                     <button class="cd-back-btn" style="display:none;" title="Go Back">◀ <span class="cd-back-text">BACK</span></button>
                 </div>
                 <div class="cd-header-center">
-                    <div class="cd-lesson-title">Loading...</div>
                     <div class="cd-progress-track">
                         <div class="cd-progress-fill"></div>
                     </div>
@@ -263,7 +262,7 @@ class LessonUI {
      * @param {number} progress - 0.0 to 1.0
      */
     update(title, progress) {
-        if (title) this.elements.lessonTitle.textContent = title;
+        if (title && this.elements.lessonTitle) this.elements.lessonTitle.textContent = title;
         if (typeof progress === 'number') {
             const pct = Math.min(100, Math.max(0, progress * 100));
             this.elements.progressFill.style.width = `${pct}%`;

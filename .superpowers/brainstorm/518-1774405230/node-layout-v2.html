@@ -1,0 +1,121 @@
+<h2>Section 2 — Node Layout (Revised)</h2>
+<p class="subtitle">All 8 nodes at exact 45° intervals · distinct colors · no white or black</p>
+
+<div style="display:flex; gap:24px; margin-top:20px; align-items:flex-start; flex-wrap:wrap;">
+
+  <!-- SVG Network Preview -->
+  <div style="flex:1; min-width:300px;">
+    <div style="background:#080d14; border:1px solid #1e3a5f; border-radius:12px; padding:12px;">
+      <!--
+        Center: (250, 230), Orbit radius: 170
+        45° intervals starting at top (270° in standard coords):
+        Node 1: 270° → (250, 60)
+        Node 2: 315° → (370, 110)
+        Node 3:   0° → (420, 230)
+        Node 4:  45° → (370, 350)
+        Node 5:  90° → (250, 400)
+        Node 6: 135° → (130, 350)
+        Node 7: 180° → ( 80, 230)
+        Node 8: 225° → (130, 110)
+      -->
+      <svg viewBox="0 0 500 460" style="width:100%; height:auto;" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="bg2" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.06"/>
+            <stop offset="100%" stop-color="#080d14" stop-opacity="0"/>
+          </radialGradient>
+          <filter id="glow2"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+        </defs>
+
+        <rect width="500" height="460" fill="#080d14"/>
+        <circle cx="250" cy="230" r="190" fill="url(#bg2)"/>
+
+        <!-- Spoke lines: center to each node -->
+        <line x1="250" y1="230" x2="250" y2="60"  stroke="#06b6d4" stroke-width="0.8" opacity="0.2"/>
+        <line x1="250" y1="230" x2="370" y2="110" stroke="#6366f1" stroke-width="0.8" opacity="0.2"/>
+        <line x1="250" y1="230" x2="420" y2="230" stroke="#a855f7" stroke-width="0.8" opacity="0.2"/>
+        <line x1="250" y1="230" x2="370" y2="350" stroke="#ec4899" stroke-width="0.8" opacity="0.2"/>
+        <line x1="250" y1="230" x2="250" y2="400" stroke="#f59e0b" stroke-width="0.8" opacity="0.2"/>
+        <line x1="250" y1="230" x2="130" y2="350" stroke="#f97316" stroke-width="0.8" opacity="0.2"/>
+        <line x1="250" y1="230" x2="80"  y2="230" stroke="#10b981" stroke-width="0.8" opacity="0.2"/>
+        <line x1="250" y1="230" x2="130" y2="110" stroke="#e879f9" stroke-width="0.8" opacity="0.2"/>
+
+        <!-- Lateral connections (key interdependencies) -->
+        <line x1="370" y1="110" x2="420" y2="230" stroke="#6366f1" stroke-width="0.8" stroke-dasharray="4,4" opacity="0.3"/>
+        <line x1="420" y1="230" x2="370" y2="350" stroke="#a855f7" stroke-width="0.8" stroke-dasharray="4,4" opacity="0.3"/>
+        <line x1="250" y1="60"  x2="370" y2="110" stroke="#06b6d4" stroke-width="0.8" stroke-dasharray="4,4" opacity="0.3"/>
+        <line x1="130" y1="350" x2="250" y2="400" stroke="#f97316" stroke-width="0.8" stroke-dasharray="4,4" opacity="0.3"/>
+        <line x1="80"  y1="230" x2="130" y2="350" stroke="#10b981" stroke-width="0.8" stroke-dasharray="4,4" opacity="0.3"/>
+        <line x1="130" y1="110" x2="80"  y2="230" stroke="#e879f9" stroke-width="0.8" stroke-dasharray="4,4" opacity="0.3"/>
+
+        <!-- Center node -->
+        <circle cx="250" cy="230" r="40" fill="rgba(6,182,212,0.1)" stroke="#06b6d4" stroke-width="1.5" filter="url(#glow2)"/>
+        <circle cx="250" cy="230" r="30" fill="rgba(6,182,212,0.06)" stroke="#06b6d4" stroke-width="0.5"/>
+        <text x="250" y="224" text-anchor="middle" fill="#06b6d4" font-size="7" font-family="monospace" font-weight="bold">CYBERDELIC</text>
+        <text x="250" y="234" text-anchor="middle" fill="#06b6d4" font-size="7" font-family="monospace" font-weight="bold">ECOSYSTEM</text>
+
+        <!-- Node 1: Tech Providers — 270° (top) -->
+        <circle cx="250" cy="60" r="34" fill="rgba(6,182,212,0.18)" stroke="#06b6d4" stroke-width="2" filter="url(#glow2)"/>
+        <text x="250" y="54" text-anchor="middle" fill="#06b6d4" font-size="7.5" font-family="monospace" font-weight="bold">TECH</text>
+        <text x="250" y="65" text-anchor="middle" fill="#06b6d4" font-size="7.5" font-family="monospace" font-weight="bold">PROVIDERS</text>
+
+        <!-- Node 2: Knowledge Producers — 315° (top-right) -->
+        <circle cx="370" cy="110" r="34" fill="rgba(99,102,241,0.18)" stroke="#6366f1" stroke-width="2" filter="url(#glow2)"/>
+        <text x="370" y="104" text-anchor="middle" fill="#6366f1" font-size="7.5" font-family="monospace" font-weight="bold">KNOWLEDGE</text>
+        <text x="370" y="115" text-anchor="middle" fill="#6366f1" font-size="7.5" font-family="monospace" font-weight="bold">PRODUCERS</text>
+
+        <!-- Node 3: Clinical Practitioners — 0° (right) -->
+        <circle cx="420" cy="230" r="34" fill="rgba(168,85,247,0.18)" stroke="#a855f7" stroke-width="2" filter="url(#glow2)"/>
+        <text x="420" y="224" text-anchor="middle" fill="#a855f7" font-size="7.5" font-family="monospace" font-weight="bold">CLINICAL</text>
+        <text x="420" y="235" text-anchor="middle" fill="#a855f7" font-size="7.5" font-family="monospace" font-weight="bold">PRACTICE</text>
+
+        <!-- Node 4: Facilitators — 45° (bottom-right) -->
+        <circle cx="370" cy="350" r="34" fill="rgba(236,72,153,0.18)" stroke="#ec4899" stroke-width="2" filter="url(#glow2)"/>
+        <text x="370" y="344" text-anchor="middle" fill="#ec4899" font-size="7.5" font-family="monospace" font-weight="bold">FACILITATORS</text>
+        <text x="370" y="355" text-anchor="middle" fill="#ec4899" font-size="7.5" font-family="monospace" font-weight="bold">&amp; GUIDES</text>
+
+        <!-- Node 5: Users & Communities — 90° (bottom) -->
+        <circle cx="250" cy="400" r="34" fill="rgba(245,158,11,0.18)" stroke="#f59e0b" stroke-width="2" filter="url(#glow2)"/>
+        <text x="250" y="394" text-anchor="middle" fill="#f59e0b" font-size="7.5" font-family="monospace" font-weight="bold">USERS &amp;</text>
+        <text x="250" y="405" text-anchor="middle" fill="#f59e0b" font-size="7.5" font-family="monospace" font-weight="bold">COMMUNITIES</text>
+
+        <!-- Node 6: Economic Infrastructure — 135° (bottom-left) -->
+        <circle cx="130" cy="350" r="34" fill="rgba(249,115,22,0.18)" stroke="#f97316" stroke-width="2" filter="url(#glow2)"/>
+        <text x="130" y="344" text-anchor="middle" fill="#f97316" font-size="7.5" font-family="monospace" font-weight="bold">ECONOMIC</text>
+        <text x="130" y="355" text-anchor="middle" fill="#f97316" font-size="7.5" font-family="monospace" font-weight="bold">INFRA</text>
+
+        <!-- Node 7: Regulatory — 180° (left) -->
+        <circle cx="80" cy="230" r="34" fill="rgba(16,185,129,0.18)" stroke="#10b981" stroke-width="2" filter="url(#glow2)"/>
+        <text x="80" y="224" text-anchor="middle" fill="#10b981" font-size="7.5" font-family="monospace" font-weight="bold">REGULATORY</text>
+        <text x="80" y="235" text-anchor="middle" fill="#10b981" font-size="7.5" font-family="monospace" font-weight="bold">&amp; KNOWLEDGE</text>
+
+        <!-- Node 8: Educators & Trainers — 225° (top-left) -->
+        <circle cx="130" cy="110" r="34" fill="rgba(232,121,249,0.18)" stroke="#e879f9" stroke-width="2" filter="url(#glow2)"/>
+        <text x="130" y="104" text-anchor="middle" fill="#e879f9" font-size="7.5" font-family="monospace" font-weight="bold">EDUCATORS</text>
+        <text x="130" y="115" text-anchor="middle" fill="#e879f9" font-size="7.5" font-family="monospace" font-weight="bold">&amp; TRAINERS</text>
+
+      </svg>
+    </div>
+    <p style="color:#64748b; font-size:11px; margin-top:8px; text-align:center;">Solid spokes = center connections · dashed lines = key lateral dependencies</p>
+  </div>
+
+  <!-- Legend -->
+  <div style="flex:0 0 210px;">
+    <div style="color:#94a3b8; font-size:11px; letter-spacing:1px; margin-bottom:12px;">NODE COLOR PALETTE</div>
+    <div style="display:flex; flex-direction:column; gap:7px; font-size:11px;">
+      <div style="display:flex; align-items:center; gap:8px;"><div style="width:12px;height:12px;border-radius:50%;background:#06b6d4;flex-shrink:0;"></div><span style="color:#cbd5e1;">① Tech Providers</span><span style="color:#475569; margin-left:auto; font-size:10px;">cyan</span></div>
+      <div style="display:flex; align-items:center; gap:8px;"><div style="width:12px;height:12px;border-radius:50%;background:#6366f1;flex-shrink:0;"></div><span style="color:#cbd5e1;">② Knowledge Producers</span><span style="color:#475569; margin-left:auto; font-size:10px;">indigo</span></div>
+      <div style="display:flex; align-items:center; gap:8px;"><div style="width:12px;height:12px;border-radius:50%;background:#a855f7;flex-shrink:0;"></div><span style="color:#cbd5e1;">③ Clinical Practice</span><span style="color:#475569; margin-left:auto; font-size:10px;">purple</span></div>
+      <div style="display:flex; align-items:center; gap:8px;"><div style="width:12px;height:12px;border-radius:50%;background:#ec4899;flex-shrink:0;"></div><span style="color:#cbd5e1;">④ Facilitators & Guides</span><span style="color:#475569; margin-left:auto; font-size:10px;">pink</span></div>
+      <div style="display:flex; align-items:center; gap:8px;"><div style="width:12px;height:12px;border-radius:50%;background:#f59e0b;flex-shrink:0;"></div><span style="color:#cbd5e1;">⑤ Users & Communities</span><span style="color:#475569; margin-left:auto; font-size:10px;">amber</span></div>
+      <div style="display:flex; align-items:center; gap:8px;"><div style="width:12px;height:12px;border-radius:50%;background:#f97316;flex-shrink:0;"></div><span style="color:#cbd5e1;">⑥ Economic Infra</span><span style="color:#475569; margin-left:auto; font-size:10px;">orange</span></div>
+      <div style="display:flex; align-items:center; gap:8px;"><div style="width:12px;height:12px;border-radius:50%;background:#10b981;flex-shrink:0;"></div><span style="color:#cbd5e1;">⑦ Regulatory & Knowledge</span><span style="color:#475569; margin-left:auto; font-size:10px;">emerald</span></div>
+      <div style="display:flex; align-items:center; gap:8px;"><div style="width:12px;height:12px;border-radius:50%;background:#e879f9;flex-shrink:0;"></div><span style="color:#cbd5e1;">⑧ Educators & Trainers</span><span style="color:#475569; margin-left:auto; font-size:10px;">fuchsia</span></div>
+    </div>
+
+    <div style="margin-top:16px; background:#1e293b; border:1px solid #334155; border-radius:6px; padding:10px; font-size:11px; color:#64748b; line-height:1.6;">
+      Note: amber ⑤ and orange ⑥ are adjacent neighbors. Happy to swap ⑥ to red or lime if they feel too close.
+    </div>
+  </div>
+
+</div>

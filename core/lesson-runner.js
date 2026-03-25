@@ -109,6 +109,49 @@
                     onStart();
                 }, 800);
             });
+
+            // Shrink the title font-size until the fullscreen button fits within the overlay
+            const h1El = screen.querySelector('.lesson-overlay h1');
+            const overlay = screen.querySelector('.lesson-overlay');
+
+            const fitTitleToOverlay = () => {
+                if (!h1El || !overlay || !btn) return;
+
+                // Reset to CSS-defined size before measuring
+                h1El.style.fontSize = '';
+
+                const MIN_FONT_PX = 10;
+                const PADDING_PX = 8; // keep btn this many px away from the bottom edge
+
+                let guard = 0;
+                while (guard++ < 200) {
+                    const overlayBottom = overlay.getBoundingClientRect().bottom;
+                    const btnBottom = btn.getBoundingClientRect().bottom;
+
+                    if (btnBottom + PADDING_PX <= overlayBottom) break;
+
+                    const currentSize = parseFloat(getComputedStyle(h1El).fontSize);
+                    if (currentSize <= MIN_FONT_PX) break;
+
+                    h1El.style.fontSize = (currentSize - 0.5) + 'px';
+                }
+            };
+
+            // Run after paint so layout is fully computed
+            requestAnimationFrame(fitTitleToOverlay);
+
+            // Re-run on resize (e.g. window/panel resize changes vw-based dimensions)
+            const _resizeHandler = () => requestAnimationFrame(fitTitleToOverlay);
+            window.addEventListener('resize', _resizeHandler);
+
+            // Clean up listener when the screen is removed
+            const _observer = new MutationObserver(() => {
+                if (!document.contains(screen)) {
+                    window.removeEventListener('resize', _resizeHandler);
+                    _observer.disconnect();
+                }
+            });
+            _observer.observe(document.body, { childList: true, subtree: true });
         }
 
         nextModule() {

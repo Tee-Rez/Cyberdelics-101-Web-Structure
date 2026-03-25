@@ -1,0 +1,198 @@
+<h2>Section 3 — Detail Panel (Revised)</h2>
+<p class="subtitle">Health indicators replaced with challenges & opportunities drawn from Lesson 4 content. Click any node.</p>
+
+<div style="display:flex; gap:20px; margin-top:20px; flex-wrap:wrap;">
+
+  <div style="flex:0 0 160px;">
+    <div style="color:#64748b; font-size:10px; letter-spacing:1px; margin-bottom:10px;">SELECT A NODE</div>
+    <div style="display:flex; flex-direction:column; gap:6px;">
+      <button onclick="showPanel('tech')"         style="background:#0f1929;border:1.5px solid #06b6d4;color:#06b6d4;padding:6px 10px;border-radius:6px;font-size:10px;font-family:monospace;cursor:pointer;text-align:left;">① TECH PROVIDERS</button>
+      <button onclick="showPanel('knowledge')"    style="background:#0f1929;border:1.5px solid #6366f1;color:#6366f1;padding:6px 10px;border-radius:6px;font-size:10px;font-family:monospace;cursor:pointer;text-align:left;">② KNOWLEDGE PROD.</button>
+      <button onclick="showPanel('clinical')"     style="background:#0f1929;border:1.5px solid #a855f7;color:#a855f7;padding:6px 10px;border-radius:6px;font-size:10px;font-family:monospace;cursor:pointer;text-align:left;">③ CLINICAL PRACTICE</button>
+      <button onclick="showPanel('facilitators')" style="background:#0f1929;border:1.5px solid #ec4899;color:#ec4899;padding:6px 10px;border-radius:6px;font-size:10px;font-family:monospace;cursor:pointer;text-align:left;">④ FACILITATORS</button>
+      <button onclick="showPanel('users')"        style="background:#0f1929;border:1.5px solid #f59e0b;color:#f59e0b;padding:6px 10px;border-radius:6px;font-size:10px;font-family:monospace;cursor:pointer;text-align:left;">⑤ USERS & COMM.</button>
+      <button onclick="showPanel('economic')"     style="background:#0f1929;border:1.5px solid #f97316;color:#f97316;padding:6px 10px;border-radius:6px;font-size:10px;font-family:monospace;cursor:pointer;text-align:left;">⑥ ECONOMIC INFRA</button>
+      <button onclick="showPanel('regulatory')"   style="background:#0f1929;border:1.5px solid #10b981;color:#10b981;padding:6px 10px;border-radius:6px;font-size:10px;font-family:monospace;cursor:pointer;text-align:left;">⑦ REGULATORY</button>
+      <button onclick="showPanel('educators')"    style="background:#0f1929;border:1.5px solid #e879f9;color:#e879f9;padding:6px 10px;border-radius:6px;font-size:10px;font-family:monospace;cursor:pointer;text-align:left;">⑧ EDUCATORS</button>
+    </div>
+    <div style="margin-top:12px; background:#1e293b; border-radius:6px; padding:8px;">
+      <div style="color:#475569; font-size:10px; margin-bottom:4px;">PROGRESS</div>
+      <div style="color:#64748b; font-size:10px;" id="progress-label">0 / 8 visited</div>
+      <div style="background:#0f172a; border-radius:3px; height:4px; margin-top:4px;"><div id="progress-bar" style="background:#06b6d4;height:4px;border-radius:3px;width:0%;transition:width 0.4s;"></div></div>
+    </div>
+  </div>
+
+  <div style="flex:1; min-width:280px;">
+    <div id="panel-empty" style="background:#0a1628;border:1px dashed #1e3a5f;border-radius:10px;padding:30px;text-align:center;color:#334155;font-size:12px;min-height:360px;display:flex;align-items:center;justify-content:center;">
+      ← Select a node to see its detail panel
+    </div>
+
+    <div id="detail-panel" style="display:none; background:#0a1628; border-radius:10px; overflow:hidden; min-height:360px; border:1px solid #1e293b;">
+
+      <!-- Header -->
+      <div id="panel-header" style="padding:14px 16px; border-bottom:1px solid #1e293b; display:flex; align-items:center; gap:10px;">
+        <div id="panel-dot" style="width:10px;height:10px;border-radius:50%;flex-shrink:0;"></div>
+        <div style="flex:1;">
+          <div id="panel-title" style="font-family:monospace;font-size:13px;font-weight:bold;letter-spacing:1px;"></div>
+          <div id="panel-subtitle" style="color:#475569;font-size:10px;margin-top:2px;"></div>
+        </div>
+        <div id="visited-badge" style="background:rgba(52,211,153,0.15);border:1px solid #34d399;color:#34d399;font-size:9px;padding:3px 8px;border-radius:4px;display:none;">✓ VISITED</div>
+      </div>
+
+      <!-- Body -->
+      <div style="padding:14px 16px; display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+
+        <!-- Left: Role + Key Players -->
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <div>
+            <div style="color:#475569;font-size:10px;letter-spacing:1px;margin-bottom:5px;">ROLE IN ECOSYSTEM</div>
+            <div id="panel-role" style="color:#94a3b8;font-size:11px;line-height:1.6;"></div>
+          </div>
+          <div>
+            <div style="color:#475569;font-size:10px;letter-spacing:1px;margin-bottom:5px;">KEY PLAYERS</div>
+            <div id="panel-players" style="display:flex;flex-wrap:wrap;gap:4px;"></div>
+          </div>
+          <div>
+            <div style="color:#475569;font-size:10px;letter-spacing:1px;margin-bottom:5px;">CONNECTS TO</div>
+            <div id="panel-connections" style="display:flex;flex-wrap:wrap;gap:4px;"></div>
+          </div>
+        </div>
+
+        <!-- Right: Challenge + Opportunity -->
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <div>
+            <div style="color:#f87171;font-size:10px;letter-spacing:1px;margin-bottom:5px;">▼ KEY CHALLENGE</div>
+            <div id="panel-challenge" style="background:rgba(248,113,113,0.07);border:1px solid rgba(248,113,113,0.2);border-radius:6px;padding:8px;color:#fca5a5;font-size:11px;line-height:1.6;"></div>
+          </div>
+          <div>
+            <div style="color:#34d399;font-size:10px;letter-spacing:1px;margin-bottom:5px;">▲ KEY OPPORTUNITY</div>
+            <div id="panel-opportunity" style="background:rgba(52,211,153,0.07);border:1px solid rgba(52,211,153,0.2);border-radius:6px;padding:8px;color:#6ee7b7;font-size:11px;line-height:1.6;"></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Ripple footer -->
+      <div style="padding:10px 16px;border-top:1px solid #1e293b;background:#060d1a;">
+        <div id="panel-ripple" style="font-size:11px;line-height:1.5;"></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+const nodes = {
+  tech: {
+    color:'#06b6d4', title:'TECHNOLOGY PROVIDERS', subtitle:'Hardware Manufacturers · Software Developers · Open Source',
+    role:'Build the tools the field runs on. Hardware defines the capability ceiling; software determines what experiences are possible within it.',
+    players:['Meta Quest','Apple Vision Pro','Pico','Tripp','Healium','OpenXR'],
+    connections:['② Knowledge','⑥ Economic','⑦ Regulatory'],
+    challenge:'Headsets weigh 500–650g, run 2–3 hours, cause motion sickness in 10–30% of users. Content built for Meta Quest doesn\'t run on Vision Pro or Pico — fragmentation multiplies developer costs and limits research replication.',
+    opportunity:'Sub-400g headsets, 4K per eye, and $199 price points are 2–3 years out. AI-personalized environments and eye-tracking biofeedback are opening entirely new experience design possibilities.',
+    ripple:'⚡ A new headset spec ripples outward — developers update platforms, researchers design new studies, practitioners evaluate adoption, investors follow the market signal.'
+  },
+  knowledge: {
+    color:'#6366f1', title:'KNOWLEDGE PRODUCERS', subtitle:'Research Institutions · Academics · Publication Networks',
+    role:'Validate effectiveness and establish safety standards. Their findings give clinical practitioners and investors the confidence to act.',
+    players:['Stanford VHIL','Imperial College','Yale','Johns Hopkins','Monash','Univ. Barcelona'],
+    connections:['③ Clinical','① Tech','⑥ Economic','⑦ Regulatory'],
+    challenge:'Almost all current research measures outcomes at 1–4 weeks. Evidence base is overwhelmingly WEIRD (Western, Educated, Industrialized, Rich, Democratic) — the populations who may most benefit are barely represented.',
+    opportunity:'5-year outcome studies are the single highest-leverage research investment — they answer the question every clinician is asking: "Does this last?" Diverse population research simultaneously advances credibility and the justice case for access.',
+    ripple:'⚡ One peer-reviewed study can shift investor sentiment, update facilitator training curricula, and open regulatory pathways simultaneously.'
+  },
+  clinical: {
+    color:'#a855f7', title:'CLINICAL PRACTICE', subtitle:'Therapists · Psychiatrists · Pain Specialists · Healthcare Systems',
+    role:'Bring VR tools into real patient care. Their adoption signals to insurers, investors, and regulators that the technology has genuine therapeutic value.',
+    players:['RelieVRx','XRHealth','Oxford VR','AppliedVR','Psious'],
+    connections:['② Knowledge','④ Facilitators','⑥ Economic','⑦ Regulatory'],
+    challenge:'Insurance reimbursement remains narrow — only RelieVRx (FDA cleared) and XRHealth (Medicare) have proven pathways. Overclaiming therapeutic outcomes risks burning practitioner credibility with the medical establishment.',
+    opportunity:'Additional FDA authorizations for anxiety, treatment-resistant depression, and addiction are in progress. Commercial insurers historically follow Medicare coverage within 3–7 years — the pathway is establishing itself.',
+    ripple:'⚡ FDA clearance for a VR therapy device immediately signals insurers, attracts investment, and elevates the entire field\'s credibility with the medical establishment.'
+  },
+  facilitators: {
+    color:'#ec4899', title:'FACILITATORS & GUIDES', subtitle:'Wellness Practitioners · Transformational Guides · Retreat Leaders',
+    role:'Guide experiences in non-clinical wellness and transformational contexts. They are the field\'s primary point of contact with most users.',
+    players:['VRAR Association','Multiversity','Emerging facilitator networks','Individual practitioners'],
+    connections:['③ Clinical','⑤ Users','⑧ Educators'],
+    challenge:'Legal scope is unclear — what non-licensed facilitators can offer varies by state and isn\'t codified. Liability for adverse events is unresolved; most facilitator insurance is adapted from adjacent fields and hasn\'t been stress-tested.',
+    opportunity:'Professional associations are forming now — practitioners who engage in standards development are literally writing the field\'s governance. AI-assisted facilitation tools could expand reach beyond what any individual can serve alone.',
+    ripple:'⚡ As facilitator training matures and ethics standards emerge, the pathway from curious user to credentialed guide becomes clearer — and the field becomes legible to regulators and insurers.'
+  },
+  users: {
+    color:'#f59e0b', title:'USERS & COMMUNITIES', subtitle:'Personal Practitioners · Peer Networks · Early Adopters',
+    role:'Generate real-world feedback and cultural momentum. Their experiences validate or challenge what researchers and developers believe is possible.',
+    players:['Peer communities','Reddit networks','Meetup groups','Early adopter circles'],
+    connections:['④ Facilitators','② Knowledge','① Tech'],
+    challenge:'Current user base skews affluent, educated, and tech-comfortable. The full first-year cost ($700–$1,300) excludes most of the world. Diversity of users — and therefore research generalizability — is severely limited.',
+    opportunity:'Users who\'ve had genuine experiences are the field\'s most credible ambassadors. Community infrastructure for storytelling, peer mentorship, and public advocacy would multiply cultural reach at minimal cost.',
+    ripple:'⚡ User communities surface real-world effects that researchers haven\'t yet studied — feeding directly back into the knowledge production and platform development cycles.'
+  },
+  economic: {
+    color:'#f97316', title:'ECONOMIC INFRASTRUCTURE', subtitle:'Venture Capital · Angels · Grants · Business Models',
+    role:'Determine which ideas get resources to develop. Every platform, research program, and training organization depends on some form of economic model to survive.',
+    players:['SOSV','XRC Labs','NIH Grants','Wellcome Trust','Bootstrap studios'],
+    connections:['① Tech','② Knowledge','③ Clinical','⑦ Regulatory'],
+    challenge:'Subscription viability at scale is unproven — cyberdelic platforms require a $300–500 hardware prerequisite that meditation apps don\'t. Regulatory uncertainty makes investors hesitant; fragmented platforms mean fragmented addressable markets.',
+    opportunity:'Corporate wellness is the fastest near-term market — employers can absorb hardware costs, ROI timelines are short, and group sessions produce economics consumer subscription can\'t match. Each insurance reimbursement milestone de-risks the commercial case for the next platform.',
+    ripple:'⚡ When insurance reimbursement expands even one HCPCS code, it unlocks a scalable revenue model that VC investment and clinical adoption rapidly follow.'
+  },
+  regulatory: {
+    color:'#10b981', title:'REGULATORY & KNOWLEDGE SHARING', subtitle:'FDA · EU MDR · Professional Associations · Publications · Conferences',
+    role:'Enable safe practice and information flow. Without regulatory frameworks, clinical tools can\'t reach patients. Without knowledge sharing, insights stay siloed.',
+    players:['FDA','EU MDR','UKCA','IVRHA','JMIR','IEEE VR'],
+    connections:['① Tech','② Knowledge','③ Clinical','⑥ Economic'],
+    challenge:'Device classification for AI-personalized and biofeedback-responsive experiences re-opens with every new capability. International variation (EU MDR, UKCA, GDPR data localization) creates compounding costs most small teams can\'t absorb.',
+    opportunity:'Professional associations developing voluntary standards create the demonstrated-responsibility track record that encourages regulators toward clear frameworks rather than restrictive ones. Each clear pathway opens the field to the next platform.',
+    ripple:'⚡ A single clear FDA device classification pathway removes uncertainty for developers and investors simultaneously — one regulatory decision unblocks multiple ecosystem components at once.'
+  },
+  educators: {
+    color:'#e879f9', title:'EDUCATORS & TRAINERS', subtitle:'Training Programs · Certification Bodies · Academic Curricula',
+    role:'Build professional competency across the field. They translate research and clinical evidence into practitioner-ready skills and standards.',
+    players:['VRAR Association','Multiversity','University programs','Online platforms'],
+    connections:['④ Facilitators','③ Clinical','② Knowledge','⑤ Users'],
+    challenge:'Training programs vary widely (40–100 hours, no standardization), no recognized credential exists yet, and the field\'s first generation of practitioners — who built knowledge from scratch — risk aging out before systematic mentorship transfers it.',
+    opportunity:'Practitioner certification becoming an insurance-recognized credential is the leverage point — it simultaneously elevates quality, expands practitioner income, and makes the field legible to healthcare systems. University VR therapeutics curricula are already forming.',
+    ripple:'⚡ Standardized training raises the quality floor across all facilitators and clinicians — protecting users and making the field credible to regulators, insurers, and the public.'
+  }
+};
+
+const visited = new Set();
+function showPanel(id) {
+  const n = nodes[id];
+  document.getElementById('panel-empty').style.display = 'none';
+  const panel = document.getElementById('detail-panel');
+  panel.style.display = 'block';
+  panel.style.borderColor = n.color;
+
+  const dot = document.getElementById('panel-dot');
+  dot.style.background = n.color;
+  dot.style.boxShadow = `0 0 6px ${n.color}`;
+
+  document.getElementById('panel-title').style.color = n.color;
+  document.getElementById('panel-title').textContent = n.title;
+  document.getElementById('panel-subtitle').textContent = n.subtitle;
+  document.getElementById('panel-role').textContent = n.role;
+  document.getElementById('panel-challenge').textContent = n.challenge;
+  document.getElementById('panel-opportunity').textContent = n.opportunity;
+  document.getElementById('panel-ripple').innerHTML = `<span style="color:${n.color}">${n.ripple}</span>`;
+
+  document.getElementById('panel-players').innerHTML = n.players.map(p =>
+    `<span style="background:#1e293b;border:1px solid #334155;color:#94a3b8;padding:2px 6px;border-radius:4px;font-size:10px;">${p}</span>`
+  ).join('');
+
+  document.getElementById('panel-connections').innerHTML = n.connections.map(c =>
+    `<span style="background:#1e293b;border:1px solid #334155;color:#94a3b8;padding:2px 6px;border-radius:4px;font-size:10px;">${c}</span>`
+  ).join('');
+
+  visited.add(id);
+  document.getElementById('visited-badge').style.display = 'flex';
+  const pct = (visited.size / 8) * 100;
+  document.getElementById('progress-bar').style.width = pct + '%';
+  document.getElementById('progress-label').textContent = `${visited.size} / 8 visited`;
+  if (visited.size === 8) {
+    document.getElementById('progress-bar').style.background = '#34d399';
+    document.getElementById('progress-label').style.color = '#34d399';
+  }
+}
+</script>

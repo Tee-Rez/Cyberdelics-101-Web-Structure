@@ -1,7 +1,7 @@
 {
     "id": "combined_lesson_4_1",
     "title": "Purpose-Built Platforms: Mapping the Cyberdelic Application Landscape",
-    "description": "Map the four categories of cyberdelic applications, then examine TRIPP, Guided Meditation VR, Maloka, Flowly, and Innerworld as case studies in contrasting design philosophies and use contexts.",
+    "description": "Map the four categories of cyberdelic applications, then examine TRIPP, FloatVR, Enosis Therapeutics, Flowly, and Innerworld as case studies in contrasting design philosophies and use contexts.",
     "framerDescription": "The field isn't one thing. This lesson gives you the map and introduces the platforms that define the four categories -- so you can navigate and recommend with confidence.",
     "theme": {
         "primaryColor": "#5900ff",
@@ -16,7 +16,7 @@
                 "sections": [
                     {
                         "title": "Meditation & Mindfulness",
-                        "content": "<p>The first category is Meditation & Mindfulness - the wellness foundation of the cyberdelic landscape. These are platforms designed for daily practice, stress reduction, focus training, and building a consistent contemplative routine. Think of this as the VR equivalent of meditation apps like Headspace or Calm, but with the added dimension of full immersion.</p><ul><li><strong>Who it serves,</strong> People seeking consistent wellness practices, beginners to meditation, anyone managing everyday stress.</li><li><strong>Key characteristics,</strong> Accessible entry points, no clinical diagnosis required, designed for solo use, usually subscription-based.</li></ul>",
+                        "content": "<p>The first category is Meditation & Mindfulness - the wellness foundation of the cyberdelic landscape. These are platforms designed for daily practice, stress reduction, focus training, and building a consistent contemplative routine. Think of this as the VR equivalent of meditation apps like Headspace or Calm, but with the added dimension of full immersion.</p><ul><li><strong>Who it serves:</strong> People seeking consistent wellness practices, beginners to meditation, anyone managing everyday stress.</li><li><strong>Key characteristics:</strong> Accessible entry points, no clinical diagnosis required, designed for solo use, usually subscription-based.</li></ul>",
                         "media": {
                             "type": "image",
                             "src": "placeholder-meditation.jpg",
@@ -28,7 +28,7 @@
                     },
                     {
                         "title": "Therapeutic & Clinical",
-                        "content": "<p>The second category is Therapeutic & Clinical - evidence-based VR interventions for diagnosable conditions. These aren't wellness tools. They're medical-grade applications used by licensed healthcare providers to treat specific disorders like PTSD, phobias, chronic pain, and anxiety disorders.</p><ul><li><strong>Who it serves,</strong> Patients working with therapists, psychologists, pain specialists, or Licensed clinicians. Not for self-directed use.</li><li><strong>Key characteristics,</strong> Clinical validation required, used within healthcare settings, often covered by insurance, targets specific diagnoses.</li></ul>",
+                        "content": "<p>The second category is Therapeutic & Clinical - evidence-based VR interventions for diagnosable conditions. These aren't wellness tools. They're medical-grade applications used by licensed healthcare providers to treat specific disorders like PTSD, phobias, chronic pain, and anxiety disorders.</p><ul><li><strong>Who it serves:</strong> Patients working with therapists, psychologists, pain specialists, or Licensed clinicians. Not for self-directed use.</li><li><strong>Key characteristics:</strong> Clinical validation required, used within healthcare settings, often covered by insurance, targets specific diagnoses.</li></ul>",
                         "media": {
                             "type": "image",
                             "src": "placeholder-clinical.jpg",
@@ -40,7 +40,7 @@
                     },
                     {
                         "title": "Biofeedback-Enhanced",
-                        "content": "<p>The third category is Biofeedback-Enhanced - platforms that create a real-time loop between your body's signals and the virtual environment. Your heart rate, brainwaves, breathing pattern, or stress response literally shapes what you see and hear in VR. The experience responds to you, and you respond in turn.</p><ul><li><strong>Who it serves,</strong> People training specific physiological states (calm, focus), biohackers, clinical populations learning self-regulation.</li><li><strong>Key characteristics,</strong> Requires sensors (EEG, heart rate), higher cost barrier, steeper learning curve, uniquely cyberdelic feedback loops.</li></ul>",
+                        "content": "<p>The third category is Biofeedback-Enhanced - platforms that create a real-time loop between your body's signals and the virtual environment. Your heart rate, brainwaves, breathing pattern, or stress response literally shapes what you see and hear in VR. The experience responds to you, and you respond in turn.</p><ul><li><strong>Who it serves:</strong> People training specific physiological states (calm, focus), biohackers, clinical populations learning self-regulation.</li><li><strong>Key characteristics:</strong> Requires sensors (EEG, heart rate), higher cost barrier, steeper learning curve, uniquely cyberdelic feedback loops.</li></ul>",
                         "media": {
                             "type": "image",
                             "src": "placeholder-biofeedback.jpg",
@@ -52,7 +52,7 @@
                     },
                     {
                         "title": "Exploratory & Transformational",
-                        "content": "<p>The fourth category is Exploratory & Transformational - experiences designed for deep consciousness work, mystical states, ego dissolution, simulated psychedelic journeys, and profound perspective shifts. This is the far end of the spectrum where the goal isn't stress reduction or symptom relief. It's transformation, insight, awe, and altered states.</p><ul><li><strong>Who it serves,</strong> Experienced consciousness explorers, people in deep personal development work, facilitators-in-training.</li><li><strong>Key characteristics,</strong> High intensity, not for beginners without guidance, often facilitated, requires readiness screening and integration.</li></ul>",
+                        "content": "<p>The fourth category is Exploratory & Transformational - experiences designed for deep consciousness work, mystical states, ego dissolution, simulated psychedelic journeys, and profound perspective shifts. This is the far end of the spectrum where the goal isn't stress reduction or symptom relief. It's transformation, insight, awe, and altered states.</p><ul><li><strong>Who it serves:</strong> Experienced consciousness explorers, people in deep personal development work, facilitators-in-training.</li><li><strong>Key characteristics:</strong> High intensity, not for beginners without guidance, often facilitated, requires readiness screening and integration.</li></ul>",
                         "media": {
                             "type": "image",
                             "src": "placeholder-transformational.jpg",
@@ -64,7 +64,7 @@
                     },
                     {
                         "title": "The Spectrum & Choosing Your Category",
-                        "content": "<p>These four categories exist on a spectrum - not as rigid boxes, but as a continuum. Many platforms span multiple categories. What matters is knowing where an experience sits on this map so you can match it to the right person.</p><p><strong>Choosing Your Category - Key Questions</strong></p><ol><li><strong>Goal?</strong> (Stress vs. Treatment vs. Training vs. Insight)</li><li><strong>Comfort Level?</strong> (Beginner vs. Experienced)</li><li><strong>Support Needed?</strong> (Solo vs. Professional Oversight)</li><li><strong>Experience Level?</strong> (Foundation vs. Depth Work)</li></ol>",
+                        "content": "<p>These four categories exist on a spectrum - not as rigid boxes, but as a continuum. Many platforms span multiple categories. What matters is knowing where an experience sits on this map so you can match it to the right person.</p><p><strong>Choosing Your Category - Key Questions</strong></p><ul><li><strong>Goal?</strong> (Stress vs. Treatment vs. Training vs. Insight)</li><li><strong>Comfort Level?</strong> (Beginner vs. Experienced)</li><li><strong>Support Needed?</strong> (Solo vs. Professional Oversight)</li><li><strong>Experience Level?</strong> (Foundation vs. Depth Work)</li></ul>",
                         "media": {
                             "type": "image",
                             "src": "placeholder-spectrum.jpg",
@@ -85,7 +85,7 @@
                 "sections": [
                     {
                         "title": "TRIPP: The Engagement Philosophy",
-                        "content": "<p>TRIPP operates on the belief that traditional mindfulness can feel too slow or vague for modern minds. Its answer is <strong>wellness gamified</strong>. Every session gives feedback, tracks streaks, adapts to your mood, and rewards consistency.</p><ul><li><strong>Founded,</strong> 2017 by Nanea Reeves</li><li><strong>Key Feature,</strong> Visual progress tracking to combat 'meditation boredom'</li><li><strong>Platforms,</strong> Quest, PSVR2, Pico (~$15/mo)</li></ul>",
+                        "content": "<p>TRIPP operates on the belief that traditional mindfulness can feel too slow or vague for modern minds. Its answer is <strong>wellness gamified</strong>. Every session gives feedback, tracks streaks, adapts to your mood, and rewards consistency.</p><ul><li><strong>Founded:</strong> 2017 by Nanea Reeves</li><li><strong>Key Feature:</strong> Visual progress tracking to combat 'meditation boredom'</li><li><strong>Platforms:</strong> Quest, PSVR2, Pico (~$15/mo)</li></ul>",
                         "media": {
                             "type": "image",
                             "src": "placeholder-tripp.jpg",
@@ -97,34 +97,34 @@
                     },
                     {
                         "title": "TRIPP: The Four Modes",
-                        "content": "<p>TRIPP organizes experiences by intended state</p><ul><li><strong>CALM,</strong> Stress reduction, gentle visuals (5-10 min)</li><li><strong>FOCUS,</strong> Attention training, dynamic environments (10-15 min)</li><li><strong>SLEEP,</strong> Wind-down protocols, dimming visuals (15-30 min)</li><li><strong>DEEP,</strong> Extended altered states, intense visuals (20-40 min) - touches the 'Exploratory' boundary</li></ul><p>The platform adapts based on mood reports and optional biometric data.</p>",
+                        "content": "<p>TRIPP organizes experiences by intended state</p><ul><li><strong>CALM:</strong> Stress reduction, gentle visuals (5-10 min)</li><li><strong>FOCUS:</strong> Attention training, dynamic environments (10-15 min)</li><li><strong>SLEEP:</strong> Wind-down protocols, dimming visuals (15-30 min)</li><li><strong>DEEP:</strong> Extended altered states, intense visuals (20-40 min) - touches the 'Exploratory' boundary</li></ul><p>The platform adapts based on mood reports and optional biometric data.</p>",
                         "triggerLabel": "Gamification & Evidence"
                     },
                     {
                         "title": "TRIPP: Gamification & Evidence",
                         "content": "<p>TRIPP tracks streaks, minutes practiced, and mood shifts. Research backs this approach: a 2021 study with OHSU showed significant anxiety reduction from a single session. It also integrates with sensors (Apple Watch, Muse) for biofeedback, bridging the Wellness and Biofeedback categories.</p>",
-                        "triggerLabel": "Guided Meditation VR"
+                        "triggerLabel": "FloatVR"
                     },
                     {
-                        "title": "Guided Meditation VR: The Minimalist Philosophy",
-                        "content": "<p>Guided Meditation VR (GMVR) takes the opposite stance: remove the noise. No gamification, no streaks, no accounts required. Just 27+ photorealistic environments and optional narration.</p><ul><li><strong>Philosophy,</strong> 'Doing less is doing more'</li><li><strong>Content,</strong> Nature scenes (forests, beaches) + abstract spaces</li><li><strong>Cost,</strong> Generous free tier, Premium ~$10/mo</li></ul>",
+                        "title": "FloatVR: The Fascination Philosophy",
+                        "content": "<p>FloatVR was built on a specific insight from Attention Restoration Theory: directed concentration is exhausting, and most people already have too little of it. The way to restore the mind isn't to demand more effort from it but to give it something genuinely fascinating to drift through without strain.</p><p>Every FloatVR session drops you into a procedurally generated world that is different each time you visit. There are no meditation instructions, no breathing cues you're required to follow, no correct way to use it. You float through shifting, dreamlike environments accompanied by original music composed specifically for the experience.</p><ul><li><strong>Platform:</strong> Meta Quest</li><li><strong>Designed for:</strong> Anxiety relief, focus recovery, sleep preparation, and general mental renewal</li><li><strong>Notable:</strong> Built with particular attention to ADHD users who struggle with the concentration demands traditional meditation places on them</li></ul>",
                         "media": {
                             "type": "image",
-                            "src": "placeholder-gmvr.jpg",
-                            "alt": "Serene photorealistic VR nature environment",
+                            "src": "placeholder-floatvr.jpg",
+                            "alt": "Dreamlike generative VR environment representing FloatVR's aesthetic",
                             "position": "right",
-                            "aiPrompt": "Serene photorealistic VR nature environment - dense forest with sunlight filtering through tall trees, soft rays of light creating god rays through mist, ferns and moss on forest floor, sense of deep quiet and natural beauty, no human-made objects or UI elements, 16:9 aspect ratio"
+                            "aiPrompt": "Dreamlike generative VR environment representing FloatVR's aesthetic: otherworldly floating landscape with softly glowing abstract forms, bioluminescent creatures drifting through the scene, shifting pastel color palette transitioning through purples, teals, and warm ambers, sense of effortless drift and fascination rather than focused stillness, organic and flowing shapes without hard edges, one or two mysterious luminous creatures visible in mid-distance, 16:9 aspect ratio"
                         },
-                        "triggerLabel": "The 'No-Features' Feature"
+                        "triggerLabel": "FloatVR: Who It Serves Best"
                     },
                     {
-                        "title": "GMVR: The No-Features Feature",
-                        "content": "<p>GMVR appeals to experienced meditators who just want a container, or anyone overwhelmed by 'app culture.' The trade-off? Beginners can feel lost. Without structure or feedback, they might sit in a virtual forest for 30 seconds, think 'now what?', and quit. GMVR assumes you already know how to meditate; TRIPP assumes you're learning.</p>",
-                        "triggerLabel": "Comparison Summary"
+                        "title": "FloatVR: Who It Serves Best",
+                        "content": "<p>FloatVR's generative design means no two sessions are alike, which solves a problem that static environments can't: habituation. People stop returning to apps when the experience becomes predictable. FloatVR's worlds regenerate each visit, so there's always something new to notice and follow.</p><p>The platform appeals most to people who already know how to let go but want an environment that rewards that capacity:</p><ul><li><strong>Experienced meditators</strong> who find traditional apps too structured</li><li><strong>People with ADHD</strong> who find eyes-closed practices difficult</li><li><strong>High cognitive load professionals</strong> who need to release without adding more tasks to the recovery process</li></ul><p>The trade-off is the same one that defines FloatVR's whole philosophy: there is no structure, no instruction, and no guidance. Beginners who need to be taught how to meditate will not find that here. FloatVR assumes you are ready to receive an experience, not be guided through one.</p>",
+                        "triggerLabel": "TRIPP vs. FloatVR"
                     },
                     {
-                        "title": "TRIPP vs. GMVR: When to Recommend",
-                        "content": "<div style='display: grid; grid-template-columns: 1fr 1fr; gap: 20px;'><div style='background: rgba(89,0,255,0.1); padding: 15px; border-radius: 8px;'><strong>Recommend TRIPP when:</strong><ul><li>User needs structure/gamification</li><li>User wants biometric integration</li><li>User values visual richness</li><li>Budget allows ($15/mo)</li></ul></div><div style='background: rgba(0,217,255,0.1); padding: 15px; border-radius: 8px;'><strong>Recommend GMVR when:</strong><ul><li>User has established practice</li><li>User prefers silence/minimalism</li><li>User dislikes gamification</li><li>Budget is limited (Free tier)</li></ul></div></div>",
+                        "title": "TRIPP vs. FloatVR: When to Recommend Each",
+                        "content": "<p>Which do you recommend? It depends entirely on who you're talking to.</p><p><strong>Recommend TRIPP when the person:</strong></p><ul><li>Is new to meditation and needs structure</li><li>Responds well to progress tracking and visible milestones</li><li>Wants biometric integration or mood logging</li><li>Values polished production and session variety</li><li>Is willing to pay $15/month for a platform that actively supports their consistency</li></ul><p><strong>Recommend FloatVR when the person:</strong></p><ul><li>Is comfortable letting go without being guided</li><li>Finds gamification and tracking more distracting than motivating</li><li>Struggles with the concentration demands of traditional meditation (including ADHD or high cognitive fatigue)</li><li>Wants something genuinely new each session without requiring effort to access it</li></ul><p>Both are legitimate approaches to wellness VR. As a facilitator, the sophisticated recommendation is: 'Based on what you've told me about what motivates you and how you relate to structured practice, here's which one I think will actually work for you, and here's why.'</p>",
                         "triggerLabel": "Take Comparison Quiz"
                     }
                 ]
@@ -132,40 +132,40 @@
         },
         {
             "id": "module_4_1_3_progressive",
-            "title": "Depth and Breadth",
+            "title": "Enosis Therapeutics & Emerging Platforms",
             "type": "progressive-disclosure",
             "content": {
                 "sections": [
                     {
-                        "title": "Maloka: The Facilitated Journey",
-                        "content": "<p>Maloka is not a meditation app - it's a therapeutic journey platform. Designed by clinical psychologists and psychedelic therapy practitioners, it uses VR to create a container for high-intensity consciousness work.</p><ul><li><strong>Key Distinction,</strong> Requires a trained facilitator.</li><li><strong>Use Case,</strong> Trauma, depression, existential distress, transformation.</li><li><strong>Model,</strong> Client in VR, Facilitator monitoring (tablet/dashboard).</li></ul>",
+                        "title": "Enosis Therapeutics: VR as a Therapy Adjunct",
+                        "content": "<p>Enosis Therapeutics was founded by Australian researchers Agnieszka Sekula and Dr. Prash Puspanathan around a single observation: psychedelic experiences are embodied, emotional, and largely ineffable, but the therapy frameworks we use to integrate them are predominantly cognitive and verbal. Talk therapy asks someone to put into words something that resisted language while it was happening. That's a fundamental mismatch, and it's where insights get lost.</p><p>Enosis builds VR scenarios designed to bridge that gap. Their tools are not standalone wellness platforms — they're clinical adjuncts: software deployed at specific points in a psychedelic-assisted therapy protocol, always alongside a licensed provider, always in the context of a substance session.</p><ul><li><strong>First study:</strong> VR combined with psychedelics, conducted with Swinburne University</li><li><strong>First clinical deployment:</strong> Partnership with OVID Clinics in Berlin and the MIND Foundation</li></ul>",
                         "media": {
                             "type": "image",
-                            "src": "placeholder-maloka.jpg",
-                            "alt": "Split-screen: Facilitator monitoring client in VR",
+                            "src": "placeholder-enosis.jpg",
+                            "alt": "Serene moonlit beach VR environment with floating jewel-like orbs",
                             "position": "full-width",
-                            "aiPrompt": "Split-screen composition showing two perspectives of a Maloka session - left side shows facilitator at monitoring station with tablet displaying client's biometric data and session timeline, right side shows client in VR headset with serene focused expression, both in warm softly-lit therapeutic space, 16:9 aspect ratio"
+                            "aiPrompt": "Serene moonlit beach VR environment with softly glowing jewel-like orbs floating at chest height, patient in VR headset seated in clinical chair holding one of the luminous objects, therapist seated nearby with quiet attentive presence, warm low lighting, sense of both clinical safety and genuine wonder, abstract stars visible in the sky that mirror the floating jewels, 16:9 aspect ratio"
                         },
-                        "triggerLabel": "The 3-Phase Structure"
+                        "triggerLabel": "SurrenderVR & AnchoringVR"
                     },
                     {
-                        "title": "Structure: Preparation, Journey, Integration",
-                        "content": "<p>Maloka follows the psychedelic therapy protocol</p><ol><li><strong>Preparation (30-60m),</strong> Intention setting, safety protocols, building trust.</li><li><strong>Journey (60-90m),</strong> The immersive VR experience. Facilitator monitors and adjusts pacing in real-time.</li><li><strong>Integration (30-60m),</strong> Processing the experience. Making meaning of the insights.</li></ol><p><strong>Total time,</strong> ~2.5-3.5 hours. <strong>Cost,</strong> ~$150-300/session.</p>",
-                        "triggerLabel": "The Facilitator's Role"
+                        "title": "Surrender VR and Anchoring VR: The Two Core Tools",
+                        "content": "<p>Enosis has developed several VR scenarios deployed at different points in the therapeutic arc. Two are central to understanding their approach.</p><p>SurrenderVR is used on dose day, shortly after a patient has taken their psychedelic but before the full effects have arrived. It's a calming 15-to-20-minute meditative environment designed to reduce pre-peak anxiety and help the patient soften into the experience rather than resist it. The goal is not to direct the trip but to lower the psychological friction at the moment when letting go matters most. Critically, the headset comes off before the psychedelic experience peaks: Enosis is explicit that VR is not used during the active altered state.</p><p>AnchoringVR is used four to five hours later, as the experience begins to resolve. The patient enters a beachside VR environment and is presented with floating jewel-like objects. Holding each one, they speak aloud: recording an insight, a feeling, or an image that emerged during the session. Their own voice is attached to that object. Across subsequent integration sessions, these recorded insights can be revisited, they begin connecting to each other visually, and patients re-encounter the emotional quality of their experience in a way that talk therapy alone rarely achieves.</p>",
+                        "triggerLabel": "How Enosis Changes Integration"
                     },
                     {
-                        "title": "The Facilitator's Role",
-                        "content": "<p>The facilitator isn't just a tech support provider. They hold the therapeutic container.</p><ul><li>Monitor body language and breathing</li><li>Track biometric data (if used)</li><li>Adjust intensity/pacing remotely</li><li>Provide grounding interventions if needed</li></ul><p>Training (40-100 hours) covers trauma-informed practice and VR ethics. Facilitators may or may not be licensed clinicians, depending on local regulations and scope.</p>",
+                        "title": "How Enosis Changes Integration",
+                        "content": "<p>What makes AnchoringVR different from journaling or talking with a therapist is the multisensory quality of re-entry. When a patient returns to that beach environment in a later session and touches the object tied to a particular insight, they don't just recall the thought: they re-access something closer to the felt quality of the experience itself. Participants in Enosis's early studies reported being surprised by how much they remembered when prompted this way, and by how emotionally alive those memories remained.</p><p>Across multiple integration sessions, the insights grow and connect. Seeds planted on the beach get larger. Separate realizations merge into broader patterns. The patient's own words, recorded in the immediate aftermath of one of the most significant experiences of their life, become the primary material of integration: not the therapist's interpretation of what happened, but the patient's direct expression of it.</p><p>Enosis is not a consumer product. Practitioners encounter it through clinical partnerships, research collaborations, and the training pathways emerging around psychedelic-assisted therapy as the field develops regulatory frameworks. Its significance for this course is what it demonstrates about VR's potential at the clinical edge of the cyberdelic spectrum: precise, evidence-informed, and fundamentally oriented toward outcomes that no solo wellness platform could achieve.</p>",
                         "triggerLabel": "Flowly: Clinical Biofeedback"
                     },
                     {
                         "title": "Flowly: Biofeedback for Chronic Conditions",
-                        "content": "<p>Flowly sits between clinical and consumer worlds. It targets chronic pain and anxiety using real-time biofeedback to teach nervous system regulation.</p><ul><li><strong>Mechanism,</strong> VR environment expands/contracts based on heart rate/breathing (requires sensor like Muse).</li><li><strong>Status,</strong> Used in some pain clinics; subscription-based consumer access.</li><li><strong>Key Takeaway,</strong> Without sensors, it's just visuals. With sensors, it's a training tool.</li></ul>",
+                        "content": "<p>Flowly sits between clinical and consumer worlds. It targets chronic pain and anxiety using real-time biofeedback to teach nervous system regulation.</p><ul><li><strong>Mechanism:</strong> VR environment expands/contracts based on heart rate/breathing (requires sensor like Muse).</li><li><strong>Status:</strong> Used in some pain clinics; subscription-based consumer access.</li><li><strong>Key Takeaway:</strong> Without sensors, it's just visuals. With sensors, it's a training tool.</li></ul>",
                         "triggerLabel": "Innerworld: Peer Support"
                     },
                     {
                         "title": "Innerworld: Peer-Support Social VR",
-                        "content": "<p>Innerworld flips the model: Guides are community members with lived experience, not professionals. It offers group spaces for grief, anxiety, and recovery.</p><ul><li><strong>Model,</strong> Peer-led social VR (acquired by XRHealth in 2023).</li><li><strong>Pros,</strong> Authentic connection, accessible/low-cost.</li><li><strong>Cons,</strong> Variable quality, not for acute crisis.</li><li><strong>Question,</strong> Where is the line between peer support and professional care?</li></ul>",
+                        "content": "<p>Innerworld flips the model: Guides are community members with lived experience, not professionals. It offers group spaces for grief, anxiety, and recovery.</p><ul><li><strong>Model:</strong> Peer-led social VR (acquired by XRHealth in 2023).</li><li><strong>Pros:</strong> Authentic connection, accessible/low-cost.</li><li><strong>Cons:</strong> Variable quality, not for acute crisis.</li><li><strong>Question:</strong> Where is the line between peer support and professional care?</li></ul>",
                         "media": {
                             "type": "image",
                             "src": "placeholder-innerworld.jpg",
@@ -177,7 +177,7 @@
                     },
                     {
                         "title": "Three Models, Three Trade-offs",
-                        "content": "<div style='display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; font-size: 0.9em;'><div style='background: rgba(89,0,255,0.1); padding: 10px; border-radius: 8px;'><strong>Solo Wellness</strong><br>(TRIPP/GMVR)<br>+ Accessible, consistency<br>- No human support</div><div style='background: rgba(0,217,255,0.1); padding: 10px; border-radius: 8px;'><strong>Facilitated Depth</strong><br>(Maloka)<br>+ Deep safety, transformation<br>- Expensive, complex</div><div style='background: rgba(255,0,128,0.1); padding: 10px; border-radius: 8px;'><strong>Peer Community</strong><br>(Innerworld)<br>+ Authentic connection<br>- Variable quality</div></div>",
+                        "content": "<p>You now have three distinct platform models in view:</p><ul><li><strong>TRIPP and FloatVR (Solo Wellness):</strong> User-directed, affordable subscriptions, accessible entry, build daily practice. Trade-off: No human support, user must self-motivate, less depth than what clinical contexts can provide.</li><li><strong>Enosis Therapeutics (Clinical Adjunct):</strong> Precision VR tools deployed inside licensed psychedelic-assisted therapy, evidence-informed, designed for insight anchoring and integration. Trade-off: Requires a clinical provider and a substance session — this is not something a facilitator offers independently.</li><li><strong>Innerworld (Peer Community):</strong> Free or low-cost, authentic connection, lived experience, fills the gap between wellness apps and professional therapy. Trade-off: Variable quality, not appropriate for acute crisis, relies on volunteer sustainability.</li></ul><p>No single model is best. The sophisticated facilitator knows all three exist, can articulate who each serves, and understands which one requires a referral rather than a direct recommendation.</p>",
                         "triggerLabel": "Start Client Scenarios"
                     }
                 ]
@@ -191,7 +191,7 @@
                 "scenes": [
                     {
                         "id": "intro",
-                        "narrative": "<h3>The Facilitator's Challenge</h3><p>It's Monday morning. You have three consultations. Your job is to recommend the right platform and level of support for each.</p><ul style='text-align:left; font-size:0.9em;'><li><strong>Jordan (41),</strong> Stressed exec, wants consistency, failed with phone apps.</li><li><strong>Maya (37),</strong> Therapist, grieving brother, wants depth/transformation.</li><li><strong>David (52),</strong> Chronic pain, skeptical, not tech-savvy, low budget.</li></ul>",
+                        "narrative": "<h3>The Facilitator's Challenge</h3><p>It's Monday morning. You have three consultations. Your job is to recommend the right platform and level of support for each.</p><ul style='text-align:left; font-size:0.9em;'><li><strong>Jordan (41):</strong> Stressed exec, wants consistency, failed with phone apps.</li><li><strong>Maya (37):</strong> Therapist, grieving brother, wants depth/transformation.</li><li><strong>David (52):</strong> Chronic pain, skeptical, not tech-savvy, low budget.</li></ul>",
                         "choices": [
                             {
                                 "id": "start",
@@ -202,7 +202,7 @@
                     },
                     {
                         "id": "jordan_decision",
-                        "narrative": "<h3>Propfile: Jordan</h3><p><strong>Needs,</strong> Decompression, consistency.<br><strong>Constraint,</strong> 'I forget to do it.'<br><strong>Budget,</strong> ~$15/mo.</p><p><strong>Recommendation?</strong></p>",
+                        "narrative": "<h3>Propfile: Jordan</h3><p><strong>Needs:</strong> Decompression, consistency.<br><strong>Constraint:</strong> 'I forget to do it.'<br><strong>Budget:</strong> ~$15/mo.</p><p><strong>Recommendation?</strong></p>",
                         "choices": [
                             {
                                 "id": "j_tripp",
@@ -210,14 +210,14 @@
                                 "outcome": "jordan_optimal"
                             },
                             {
-                                "id": "j_gmvr",
-                                "label": "Guided Meditation VR (Free)",
-                                "outcome": "jordan_suboptimal_gmvr"
+                                "id": "j_floatvr",
+                                "label": "FloatVR",
+                                "outcome": "jordan_suboptimal_floatvr"
                             },
                             {
-                                "id": "j_maloka",
-                                "label": "Maloka (Facilitated)",
-                                "outcome": "jordan_suboptimal_maloka"
+                                "id": "j_enosis",
+                                "label": "Enosis Therapeutics (clinical referral)",
+                                "outcome": "jordan_suboptimal_enosis"
                             },
                             {
                                 "id": "j_inner",
@@ -228,7 +228,7 @@
                     },
                     {
                         "id": "jordan_optimal",
-                        "narrative": "<h3> Optimal: TRIPP</h3><p>'Based on your need for consistency, TRIPP is designed to solve the 'I forget' problem through gamification and tracking.'</p><p><strong>Why,</strong> Matches habits, budget, and tech comfort. Wellness scope.</p>",
+                        "narrative": "<h3> Optimal: TRIPP</h3><p>'Based on your need for consistency, TRIPP is designed to solve the 'I forget' problem through gamification and tracking.'</p><p><strong>Why:</strong> Matches habits, budget, and tech comfort. Wellness scope.</p>",
                         "choices": [
                             {
                                 "id": "next_maya",
@@ -238,8 +238,8 @@
                         ]
                     },
                     {
-                        "id": "jordan_suboptimal_maloka",
-                        "narrative": "<h3> Overkill</h3><p>Recommending a $200 facilitated session for basic stress relief is like prescribing an MRI for a stubbed toe. Jordan would feel overwhelmed and quit.</p>",
+                        "id": "jordan_suboptimal_enosis",
+                        "narrative": "<h3>Overkill</h3><p>Enosis Therapeutics operates inside licensed psychedelic therapy clinics. Jordan is not in therapy, has no diagnosed conditions, and is looking for a way to decompress after work. Referring someone without a clinical profile to a psychedelic therapy program is a serious mismatch of needs and tools. Jordan would likely feel overwhelmed, conclude VR is not for them, and disengage entirely. The art of good facilitation is meeting people where they are, not where you wish they were.</p>",
                         "choices": [
                             {
                                 "id": "retry_j",
@@ -249,11 +249,11 @@
                         ]
                     },
                     {
-                        "id": "jordan_suboptimal_gmvr",
-                        "narrative": "<h3> Missing the Mark</h3><p>GMVR lacks the structure and reminders Jordan specifically asked for. He failed with phone apps because of this - don't repeat the mistake.</p>",
+                        "id": "jordan_suboptimal_floatvr",
+                        "narrative": "<h3>Missing the Mark</h3><p>FloatVR lacks the structure and reminders Jordan specifically asked for. FloatVR assumes you're ready to receive an experience without guidance - Jordan failed with phone apps precisely because of the absence of feedback and visible progress. Don't recreate the same problem.</p>",
                         "choices": [
                             {
-                                "id": "retry_j_g",
+                                "id": "retry_j_f",
                                 "label": "Try Again",
                                 "outcome": "jordan_decision"
                             }
@@ -272,7 +272,7 @@
                     },
                     {
                         "id": "maya_decision",
-                        "narrative": "<h3>Profile: Maya</h3><p><strong>Context,</strong> Therapist processing deep grief.<br><strong>Goal,</strong> 'Go deeper than meditation.'<br><strong>Status,</strong> Stable, ready for intensity.</p><p><strong>Recommendation?</strong></p>",
+                        "narrative": "<h3>Profile: Maya</h3><p><strong>Context:</strong> Therapist processing deep grief.<br><strong>Goal:</strong> 'Go deeper than meditation.'<br><strong>Status:</strong> Stable, ready for intensity.</p><p><strong>Recommendation?</strong></p>",
                         "choices": [
                             {
                                 "id": "m_tripp_deep",
@@ -280,13 +280,13 @@
                                 "outcome": "maya_suboptimal_solo"
                             },
                             {
-                                "id": "m_gmvr",
-                                "label": "Guided Meditation VR",
+                                "id": "m_floatvr",
+                                "label": "FloatVR",
                                 "outcome": "maya_suboptimal_solo"
                             },
                             {
-                                "id": "m_maloka",
-                                "label": "Maloka (Facilitated)",
+                                "id": "m_enosis",
+                                "label": "Referral to psychedelic therapy clinic using Enosis VR protocols",
                                 "outcome": "maya_optimal"
                             },
                             {
@@ -298,7 +298,7 @@
                     },
                     {
                         "id": "maya_optimal",
-                        "narrative": "<h3> Optimal: Maloka</h3><p>'Grief at this depth deserves a professional container. I'll facilitate a session to hold space while you explore.'</p><p><strong>Why,</strong> Honors her experience level and need for safety in deep work.</p>",
+                        "narrative": "<h3>Optimal: Refer to Psychedelic Therapy Clinic</h3><p>Given your experience level, your therapeutic work around grief, and your goal of going deeper than meditation alone, I want to point you toward something different from a consumer VR platform. What you're describing is exactly the profile for psychedelic-assisted therapy. There are clinics now using VR protocols developed by a company called Enosis Therapeutics specifically designed to help anchor and integrate what emerges in those sessions. I can't facilitate that myself: it requires a licensed medical and therapeutic team. But I can help you identify clinics in your area working with this model and support you through whatever you decide.</p><p><strong>Why:</strong> Accurately frames Enosis as a clinical adjunct requiring licensed oversight. Positions the facilitator as a knowledgeable guide toward the right resource rather than the resource itself.</p>",
                         "choices": [
                             {
                                 "id": "next_david",
@@ -309,7 +309,7 @@
                     },
                     {
                         "id": "maya_suboptimal_solo",
-                        "narrative": "<h3> Too Shallow</h3><p>Solo apps are a lateral move for someone with her experience. Maya has earned depth work - don't hold her back with wellness tools.</p>",
+                        "narrative": "<h3>Too Shallow</h3><p>TRIPP and FloatVR are both legitimate wellness platforms, but they're designed for solo practice: not for the kind of supported, high-intensity grief work Maya is ready for. She explicitly said she wants to go deeper than meditation alone allows and she has 18 months of therapy already creating a foundation. A solo VR session would likely feel like a lateral move from her existing practice, not the breakthrough she's seeking. Maya has the psychological groundwork for something deeper. Match the tool to where she actually is.</p>",
                         "choices": [
                             {
                                 "id": "retry_m",
@@ -320,7 +320,7 @@
                     },
                     {
                         "id": "maya_suboptimal_peer",
-                        "narrative": "<h3> Insufficient Container</h3><p>Peer support is great, but for deep grief processing, a professional container (Maloka) is safer and more effective than a social group.</p>",
+                        "narrative": "<h3>Insufficient Container</h3><p>Peer support is meaningful, but for deep grief processing at this level, a referral to a clinical psychedelic therapy program using Enosis VR protocols is more appropriate than a social group. The depth Maya is seeking requires a licensed container, not a peer community.</p>",
                         "choices": [
                             {
                                 "id": "retry_m_p",
@@ -331,7 +331,7 @@
                     },
                     {
                         "id": "david_decision",
-                        "narrative": "<h3>Profile: David</h3><p><strong>Context,</strong> Chronic pain (12 yrs), skeptical, low budget.<br><strong>Need,</strong> Evidence-based relief, not 'games'.</p><p><strong>Recommendation?</strong></p>",
+                        "narrative": "<h3>Profile: David</h3><p><strong>Context:</strong> Chronic pain (12 yrs), skeptical, low budget.<br><strong>Need:</strong> Evidence-based relief, not 'games'.</p><p><strong>Recommendation?</strong></p>",
                         "choices": [
                             {
                                 "id": "d_tripp",
@@ -344,9 +344,9 @@
                                 "outcome": "david_optimal"
                             },
                             {
-                                "id": "d_maloka",
-                                "label": "Maloka (Deep Work)",
-                                "outcome": "david_suboptimal_maloka"
+                                "id": "d_enosis",
+                                "label": "Refer to psychedelic therapy clinic",
+                                "outcome": "david_suboptimal_enosis"
                             },
                             {
                                 "id": "d_refer",
@@ -357,7 +357,7 @@
                     },
                     {
                         "id": "david_optimal",
-                        "narrative": "<h3> Optimal: Flowly</h3><p>'Flowly is trained to regulate pain signals. It's medical-grade biofeedback, not just a game. Let's see if your clinic has a headset to try.'</p><p><strong>Why,</strong> Addresses the valid medical need with the specific tool designed for it.</p>",
+                        "narrative": "<h3> Optimal: Flowly</h3><p>'Flowly is trained to regulate pain signals. It's medical-grade biofeedback, not just a game. Let's see if your clinic has a headset to try.'</p><p><strong>Why:</strong> Addresses the valid medical need with the specific tool designed for it.</p>",
                         "choices": [
                             {
                                 "id": "finish",
@@ -389,11 +389,11 @@
                         ]
                     },
                     {
-                        "id": "david_suboptimal_maloka",
-                        "narrative": "<h3> Mismatch</h3><p>Deep psychological work might be valuable later, but his primary barrier is physical pain and cost. Address the immediate need first.</p>",
+                        "id": "david_suboptimal_enosis",
+                        "narrative": "<h3>Overshoot</h3><p>David has chronic physical pain and is on prescription opioids. Psychedelic-assisted therapy is an emerging area of research for pain, but it requires careful medical screening, is not widely available, and is not the indicated first step for someone who has never tried VR and is already skeptical about technology. There are biofeedback tools specifically designed and researched for chronic pain that are far more accessible and appropriate for where David is right now. Under-recommending the right tool in favor of a more dramatic option doesn't serve the client.</p>",
                         "choices": [
                             {
-                                "id": "retry_d_m",
+                                "id": "retry_d_e",
                                 "label": "Try Again",
                                 "outcome": "david_decision"
                             }
@@ -401,7 +401,7 @@
                     },
                     {
                         "id": "scenario_complete",
-                        "narrative": "<h3>Simulation Complete</h3><p>You matched Jordan to structure (TRIPP), Maya to depth (Maloka), and David to clinical specificity (Flowly). You're ready to facilitate.</p>",
+                        "narrative": "<h3>Simulation Complete</h3><p>You matched Jordan to structure (TRIPP), Maya to a clinical referral (Enosis VR protocols via psychedelic therapy clinic), and David to clinical specificity (Flowly). You understood which tools a facilitator can offer directly and which require a referral. You're ready to facilitate.</p>",
                         "choices": [
                             {
                                 "id": "continue",
@@ -419,7 +419,7 @@
             "type": "option-selector",
             "config": {
                 "mode": "single",
-                "style": "card",
+                "style": "text",
                 "questions": [
                     {
                         "question": "<h3>Scenario 1: Marcus</h3><p>Marcus is 34, works in tech, and is 'stressed but functional.' He's never meditated but wants a 10-15 minute morning routine to feel calmer. He has no diagnosed conditions and is comfortable with technology.</p><p><strong>Which category best fits his needs?</strong></p>",
@@ -482,18 +482,7 @@
                             "q2_d": "<p>Incorrect. While profound, this is clinical treatment of a disorder, not the open-ended consciousness exploration that defines the Exploratory category.</p>",
                             "q2_c": "<p><strong>Correct!</strong> This is Therapeutic & Clinical. The key factors are: diagnosed condition (PTSD), professional oversight (licensed psychologist), and evidence-based treatment protocols. The context makes it clinical.</p>"
                         }
-                    }
-                ]
-            }
-        },
-        {
-            "id": "quiz_4_1_2",
-            "title": "Comparison Quiz: Philosophy Matching",
-            "type": "option-selector",
-            "config": {
-                "mode": "single",
-                "style": "card",
-                "questions": [
+                    },
                     {
                         "question": "<h3>Scenario 1: Jamie</h3><p>Jamie (28) is a 'visual learner who needs structure.' They've tried phone apps but quit because they couldn't tell if it was 'working.' They want to build a consistent practice and don't mind paying $15/mo for something engaging.</p><p><strong>Which platform should you recommend?</strong></p>",
                         "options": [
@@ -504,29 +493,29 @@
                             },
                             {
                                 "id": "q1_b",
-                                "label": "Guided Meditation VR (Free)",
+                                "label": "FloatVR",
                                 "correct": false
                             },
                             {
                                 "id": "q1_c",
-                                "label": "Guided Meditation VR (Premium)",
+                                "label": "Neither (needs in-person instruction first)",
                                 "correct": false
                             },
                             {
                                 "id": "q1_d",
-                                "label": "Neither (needs in-person)",
+                                "label": "Neither (should build a phone-based practice first)",
                                 "correct": false
                             }
                         ],
                         "synthesis": {
-                            "q1_b": "<p>Not the best fit. GMVR removes tracking and gamification, which would likely recreate the 'lack of progress' feeling Jamie struggled with on phone apps.</p>",
-                            "q1_c": "<p>Incorrect. Even the premium tier of GMVR focuses on environments, not the structured feedback Jamie explicitly requested.</p>",
-                            "q1_d": "<p>Not necessary. Jamie is ready for VR - they just need the right tool. Their issue is consistency and motivation, which VR can address directly.</p>",
+                            "q1_b": "<p>Not the best fit. FloatVR is built on the principle that you just enter and drift, with no structure or guidance required. That's exactly the problem Jamie already has: they tried phone apps, felt calmer in the moment, but couldn't tell if it was working and lost motivation. FloatVR would recreate the same experience with better visuals but no more feedback. Try again and focus on Jamie's need for structure, visible progress, and something that actively shows them their practice is having an effect.</p>",
+                            "q1_c": "<p>There's no indication Jamie needs in-person instruction or a stepping-stone app. They've tried meditation before and understood the concept: they just struggled with consistency and motivation. VR can address that directly. Try again and think about which VR platform is specifically designed to keep beginners engaged through structure, tracking, and visible progress.</p>",
+                            "q1_d": "<p>There's no indication Jamie needs in-person instruction or a stepping-stone app. They've tried meditation before and understood the concept: they just struggled with consistency and motivation. VR can address that directly. Try again and think about which VR platform is specifically designed to keep beginners engaged through structure, tracking, and visible progress.</p>",
                             "q1_a": "<p><strong>Correct!</strong> Jamie is the textbook TRIPP user: needs structure, visual feedback, gamified progress, and is willing to pay for engagement. TRIPP directly addresses the 'is it working?' doubt.</p>"
                         }
                     },
                     {
-                        "question": "<h3>Scenario 2: Amir</h3><p>Amir has meditated daily for 8 years (Zen style, silence). He's curious about VR but worried about 'too many features' getting in the way. He wants beautiful environments but no guidance, and he's on a budget.</p><p><strong>Which platform fits best?</strong></p>",
+                        "question": "<h3>Scenario 2: Amir</h3><p>Amir has meditated daily for 8 years (Zen style, silence). He's curious about VR but worried about 'too many features' getting in the way. He wants to continue his practice in a new environment but doesn't need guidance or gamification, and he's on a budget.</p><p><strong>Which platform fits best?</strong></p>",
                         "options": [
                             {
                                 "id": "q2_a",
@@ -535,12 +524,12 @@
                             },
                             {
                                 "id": "q2_b",
-                                "label": "Guided Meditation VR (Free Tier)",
+                                "label": "FloatVR",
                                 "correct": true
                             },
                             {
                                 "id": "q2_c",
-                                "label": "Guided Meditation VR (Premium)",
+                                "label": "Neither (FloatVR requires too much tech comfort)",
                                 "correct": false
                             },
                             {
@@ -550,52 +539,41 @@
                             }
                         ],
                         "synthesis": {
-                            "q2_a": "<p>Not quite. While 'Deep' mode is intense, TRIPP's gamification and structure are exactly what Amir wants to avoid. He finds features distracting.</p>",
-                            "q2_c": "<p>Close, but unnecessary. Amir is budget-conscious and just wants a few high-quality silent spaces. He doesn't need the 27+ environment library right away.</p>",
-                            "q2_d": "<p>Incorrect. An experienced meditator is perfectly capable of using VR. The key is finding a platform that doesn't annoy him with unnecessary features.</p>",
-                            "q2_b": "<p><strong>Correct!</strong> Free GMVR is perfect: 5-6 high-quality environments, no cost, no gamification, no required guidance. It respects his established practice and budget.</p>"
+                            "q2_a": "<p>Not quite. While 'Deep' mode is intense, TRIPP's gamification and structure are exactly what Amir wants to avoid. He finds features distracting from his practice.</p>",
+                            "q2_c": "<p>There's no indication Amir is uncomfortable with technology: he's simply concerned about too many features getting in the way. And FloatVR doesn't require any tech sophistication beyond putting the headset on. The question isn't whether he can use it but whether it matches how he practices. Try again and focus on what FloatVR's philosophy actually demands of its users.</p>",
+                            "q2_d": "<p>Incorrect. An experienced meditator is perfectly capable of using VR. The key is finding a platform that doesn't interrupt his practice with unnecessary features.</p>",
+                            "q2_b": "<p><strong>Correct!</strong> FloatVR suits Amir precisely because it makes no demands on him. He already knows how to be present. FloatVR's generative worlds give him something genuinely new each session without asking him to do anything differently than he already does. That's the match.</p>"
                         }
-                    }
-                ]
-            }
-        },
-        {
-            "id": "quiz_4_1_3",
-            "title": "Concept Check: Platform Models",
-            "type": "option-selector",
-            "config": {
-                "mode": "single",
-                "style": "card",
-                "questions": [
+                    },
                     {
-                        "question": "<h3>Maloka vs. Others</h3><p>What makes Maloka fundamentally different from TRIPP or Guided Meditation VR?</p>",
+                        "question": "<h3>Enosis Therapeutics</h3><p>What is the most accurate description of how Enosis Therapeutics uses VR in psychedelic-assisted therapy?</p>",
                         "options": [
                             {
                                 "id": "q1_a",
-                                "label": "Better graphics",
+                                "label": "Enosis creates immersive VR journeys that replace the psychedelic experience for patients who can't access substances",
                                 "correct": false
                             },
                             {
                                 "id": "q1_b",
-                                "label": "Professional Facilitation & Structure",
+                                "label": "Enosis deploys VR at specific points in a clinical protocol - before and after the peak experience - to reduce anxiety and anchor insights",
                                 "correct": true
                             },
                             {
                                 "id": "q1_c",
-                                "label": "More expensive = better",
+                                "label": "Enosis provides a facilitated VR platform that therapists can offer independently, without requiring a substance session",
                                 "correct": false
                             },
                             {
                                 "id": "q1_d",
-                                "label": "Clinical research backing",
+                                "label": "Enosis is a consumer wellness app that uses psychedelic-inspired visuals to simulate altered states",
                                 "correct": false
                             }
                         ],
                         "synthesis": {
-                            "q1_a": "<p>Visual quality isn't the difference. The distinction is structural.</p>",
-                            "q1_c": "<p>Price reflects the human labor involved, not inherent quality.</p>",
-                            "q1_d": "<p>TRIPP also has research backing. The unique factor is the human guide.</p>",
-                            "q1_b": "<p><strong>Correct!</strong> Maloka uses a human facilitator and a 3-phase journey structure (Prep-Journey-Integration).</p>"
+                            "q1_a": "<p>Enosis is not a replacement for the psychedelic experience and does not attempt to simulate it. The VR headset comes off before the substance reaches its peak effect. The goal is to work around the experience, not replicate it. The problem Enosis solves is about memory and integration, not generating the altered state itself.</p>",
+                            "q1_b": "<p><strong>Correct!</strong> Enosis uses two core VR tools at precise points in the protocol: SurrenderVR on dose day before the peak, to reduce anxiety and support the patient's ability to let go, and AnchoringVR after the peak resolves, to capture insights in the patient's own voice while the emotional quality of the experience is still accessible. Neither tool is used during the active psychedelic state.</p>",
+                            "q1_c": "<p>Enosis is not a standalone facilitated platform that practitioners can offer independently. Its tools are designed as adjuncts to sessions where a licensed medical provider has already administered a psychedelic substance. There is no Enosis session without the clinical context. This is why Enosis is a referral destination, not something a facilitator deploys directly.</p>",
+                            "q1_d": "<p>Enosis is not a consumer app and does not attempt to simulate psychedelic states visually. The environments used, particularly AnchoringVR, are deliberately calm and neutral: a simple beachside scene with floating objects. The design priority is safety and ease of use during a vulnerable post-peak window, not visual intensity.</p>"
                         }
                     },
                     {

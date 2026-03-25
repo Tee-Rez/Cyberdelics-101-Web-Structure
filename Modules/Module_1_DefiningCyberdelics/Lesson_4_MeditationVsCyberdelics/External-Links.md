@@ -7,12 +7,12 @@ Resources exploring the intersection of traditional meditation practices, somati
 - [EEG Correlates of Different Meditative States](https://pubmed.ncbi.nlm.nih.gov/20153917/) - Foundational research on the brainwaves associated with meditation, which cyberdelics often aim to entrain or replicate.
 
 ### Articles & Essays
-- [Can Technology Hack Enlightenment?](https://www.theatlantic.com/health/archive/2015/06/can-technology-hack-enlightenment/395620/) - A critical look at the intersection of ancient contemplative practices and modern neuro-technology.
-- [The Monks and the Machines: Biofeedback in the Monastery](https://tricycle.org/magazine/biofeedback-meditation/) - Discusses the historical and modern experiments combining Buddhist meditation with continuous EEG monitoring.
+- [Can Technology Help Us Meditate?](https://tricycle.org/article/meditation-and-technology/) - A look at how technology can enhance and support contemplative practices.
+- [Biofeedback and Meditation: A New Frontier](https://greatergood.berkeley.edu/article/item/biofeedback_a_new_way_to_meditate) - Discusses the intersection of mindfulness and continuous physiological monitoring.
 
 ### Books & Literature
-- [Altered Traits: Science Reveals How Meditation Changes Your Mind, Brain, and Body by Daniel Goleman & Richard J. Davidson](https://www.danielgoleman.info/altered-traits/) - Explains the core neurobiology of meditation, setting the stage for how tech can interact with these neural pathways.
+- [Altered Traits: Science Reveals How Meditation Changes Your Mind, Brain, and Body](https://www.goodreads.com/book/show/34272471-altered-traits) - Explains the core neurobiology of meditation by Goleman & Davidson.
 - [The Science of Meditation: How to Change Your Brain, Mind and Body](https://www.amazon.com/Science-Meditation-Change-Brain-Mind/dp/0241975689) - Further explores the physiological changes brought on by deep meditation.
 
 ### Projects & Podcasts
-- [Mind & Life Institute Podcasts](https://www.mindandlife.org/podcast/) - Conversations bridging contemplative traditions with scientific, often technological, research.
+- [Mind & Life Institute Podcasts](https://www.mindandlife.org/insights/podcast/) - Conversations bridging contemplative traditions with scientific, often technological, research.
