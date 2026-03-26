@@ -1,4 +1,4 @@
-﻿{
+{
     "id": "combined_lesson_4_4",
     "title": "Specialized Applications & Hardware: From Breathwork to Headset Selection",
     "description": "Survey the specialized frontier of cyberdelics -- breathwork, sound, movement, nature immersion, creativity, and experimental states -- then navigate the hardware landscape to match the right device to the right user.",
@@ -168,7 +168,7 @@
                     },
                     {
                         "title": "Premium Tier: The Content Trap",
-                        "content": "<ul><li><strong>PSVR2 (~$550 + PS5):</strong> Excellent hardware, but locked ecosystem. Missing most cyberdelic apps (TRIPP/Maloka often unavailable).</li><li><strong>Apple Vision Pro ($3,500):</strong> Incredible specs, zero content. Not recommended for practitioners until library matures.</li><li><strong>Paradox:</strong> Better hardware often means *worse* cyberdelic access.</li></ul>",
+                        "content": "<ul><li><strong>PSVR2 (~$550 + PS5):</strong> Excellent hardware, but locked ecosystem. Missing most cyberdelic apps (TRIPP/Enosis often unavailable).</li><li><strong>Apple Vision Pro ($3,500):</strong> Incredible specs, zero content. Not recommended for practitioners until library matures.</li><li><strong>Paradox:</strong> Better hardware often means *worse* cyberdelic access.</li></ul>",
                         "triggerLabel": "International Alternative (Pico)"
                     },
                     {
@@ -509,7 +509,7 @@
                         "synthesis": {
                             "q2_a": "Useless if the app doesn't run.",
                             "q2_c": "Newer isn't always better for specific apps.",
-                            "q2_b": "<strong>Correct!</strong> Hardware is a vehicle for software. If it can't run TRIPP/Maloka, it fails the mission regardless of specs."
+                            "q2_b": "<strong>Correct!</strong> Hardware is a vehicle for software. If it can't run TRIPP/Enosis, it fails the mission regardless of specs."
                         }
                     }
                 ]

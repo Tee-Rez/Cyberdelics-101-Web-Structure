@@ -1,4 +1,4 @@
-﻿{
+{
     "id": "combined_lesson_4_3",
     "title": "Social VR & the Creator Ecosystem: Amplification, Platforms & Quality",
     "description": "Understand why social VR amplifies consciousness work, how to match users to the right social contexts, and how to evaluate creators and content quality -- including the pipeline from creation tools to distribution channels.",
@@ -334,7 +334,7 @@
                 "sections": [
                     {
                         "title": "Creation Engines",
-                        "content": "<ul><li><strong>Unity:</strong> The industry standard. Flexible, massive asset library. Most commercial apps (TRIPP, Maloka) use Unity.</li><li><strong>Unreal Engine:</strong> High fidelity. Used for photorealistic nature or cinematic experiences.</li><li><strong>Open Brush:</strong> Spatial painting. Used for creative flow states.</li><li><strong>Mozilla Hubs:</strong> Web-based, runs in browser. Accessible but lower fidelity.</li></ul>",
+                        "content": "<ul><li><strong>Unity:</strong> The industry standard. Flexible, massive asset library. Most commercial apps (TRIPP, Enosis) use Unity.</li><li><strong>Unreal Engine:</strong> High fidelity. Used for photorealistic nature or cinematic experiences.</li><li><strong>Open Brush:</strong> Spatial painting. Used for creative flow states.</li><li><strong>Mozilla Hubs:</strong> Web-based, runs in browser. Accessible but lower fidelity.</li></ul>",
                         "triggerLabel": "Distribution Channels"
                     },
                     {

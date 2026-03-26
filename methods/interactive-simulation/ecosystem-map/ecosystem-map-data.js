@@ -18,7 +18,7 @@
                 angle: 270,
                 subtitle: 'Hardware · Software · Open Source',
                 role: 'Build the tools the entire field runs on. Every platform, research protocol, and clinical application depends on hardware manufacturers and software developers whose strategic decisions define the field\'s capability ceiling.',
-                players: ['Meta Quest (77% share)', 'Apple Vision Pro', 'Pico / ByteDance', 'TRIPP', 'Healium', 'Guided Meditation VR'],
+                players: ['Meta Quest (77% share)', 'Apple Vision Pro', 'Pico / ByteDance', 'TRIPP', 'Healium', 'Float VR'],
                 connections: ['knowledge', 'economic', 'regulatory'],
                 challenge: 'Headsets weigh 500–650g, last 2–3 hours, and cause motion sickness in 10–30% of users. Fragmentation (Quest/Vision Pro/Pico incompatibility) multiplies developer costs and breaks research replication. TRIPP\'s consumer shutdown disrupted 85,000 subscribers and multiple university research partnerships simultaneously.',
                 opportunity: 'Sub-400g headsets, 4K per-eye resolution, and $199 price points are 2–3 years out. Eye-tracking opens new biofeedback channels. AI-personalized real-time environments are emerging as a distinct capability layer.',
