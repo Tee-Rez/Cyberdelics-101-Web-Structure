@@ -127,7 +127,7 @@
                     },
                     {
                         "id": "final_reflection",
-                        "narrative": "<h3>Final Reflection</h3><p>The Oculus Kickstarter was the moment when 30 years of vision met viable technology. Those who recognized the convergence of smartphone displays, gaming GPUs, and cultural readiness positioned themselves for the renaissance. The lesson: past failures don't guarantee future failures when fundamental conditions change.</p>",
+                        "narrative": "<h3>Scenario Complete</h3><p>The Oculus Kickstarter was the moment when 30 years of vision met viable technology. Those who recognized the convergence of smartphone displays, gaming GPUs, and cultural readiness positioned themselves for the renaissance. The lesson: past failures don't guarantee future failures when fundamental conditions change.</p>",
                         "media": {
                             "type": "image",
                             "src": "../assets/images/module2/lesson3/vr_evolution_compare.jpg",
@@ -137,6 +137,17 @@
                         "choices": [
                             {
                                 "id": "start_quiz",
+                                "label": "Reflect on This",
+                                "outcome": "reflection"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "reflection",
+                        "narrative": "<h3>Reflection</h3><p>In 2012, the Oculus Kickstarter wasn't just a funding campaign — it was a proof of convergence. Nothing about VR had fundamentally changed in terms of the underlying goal. What changed was every supporting condition simultaneously: displays got sharp enough, GPUs got fast enough, sensors got cheap enough, and culture got ready enough.</p><p>This is what convergence looks like from inside a moment. You can't see which technology-driven threshold you're standing at until it's already passed. The people who backed that Kickstarter didn't know they were funding the beginning of cyberdelic science. They just recognized a prototype that finally worked. Recognizing these inflection points — and having the courage to act on them — is one of the defining skills of practitioners in emerging fields.</p>",
+                        "choices": [
+                            {
+                                "id": "continue",
                                 "label": "Competitive Revolution",
                                 "outcome": "flow_next_module"
                             }
@@ -202,18 +213,18 @@
                             },
                             {
                                 "id": "q1_b",
-                                "label": "He used cheap smartphone components that had matured through mobile device market",
-                                "outcome": "quiz1_q1_correct"
-                            },
-                            {
-                                "id": "q1_c",
                                 "label": "Facebook gave him unlimited money to solve the problems",
                                 "outcome": "quiz1_q1_feedback_c"
                             },
                             {
-                                "id": "q1_d",
+                                "id": "q1_c",
                                 "label": "Governments finally legalized VR research",
                                 "outcome": "quiz1_q1_feedback_d"
+                            },
+                            {
+                                "id": "q1_d",
+                                "label": "He used cheap smartphone components that had matured through mobile device market",
+                                "outcome": "quiz1_q1_correct"
                             }
                         ]
                     },
@@ -342,13 +353,13 @@
                             },
                             {
                                 "id": "q1_b",
-                                "label": "It introduced room-scale tracking, allowing users to walk around and use hand controllers naturally",
-                                "outcome": "quiz2_q1_correct"
+                                "label": "It eliminated the need for powerful gaming computers",
+                                "outcome": "quiz2_q1_feedback_c"
                             },
                             {
                                 "id": "q1_c",
-                                "label": "It eliminated the need for powerful gaming computers",
-                                "outcome": "quiz2_q1_feedback_c"
+                                "label": "It introduced room-scale tracking, allowing users to walk around and use hand controllers naturally",
+                                "outcome": "quiz2_q1_correct"
                             },
                             {
                                 "id": "q1_d",
@@ -407,13 +418,13 @@
                         "choices": [
                             {
                                 "id": "q2_a",
-                                "label": "It confused consumers and slowed VR adoption",
-                                "outcome": "quiz2_q2_feedback_a"
+                                "label": "Different platforms served different audiences, accelerated innovation, and validated VR as viable market",
+                                "outcome": "quiz2_q2_correct"
                             },
                             {
                                 "id": "q2_b",
-                                "label": "Different platforms served different audiences, accelerated innovation, and validated VR as viable market",
-                                "outcome": "quiz2_q2_correct"
+                                "label": "It confused consumers and slowed VR adoption",
+                                "outcome": "quiz2_q2_feedback_a"
                             },
                             {
                                 "id": "q2_c",

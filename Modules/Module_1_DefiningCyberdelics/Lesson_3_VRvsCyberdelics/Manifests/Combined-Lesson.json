@@ -165,7 +165,7 @@
                             {
                                 "id": "continue",
                                 "label": "Complete Evaluation",
-                                "outcome": "complete"
+                                "outcome": "reflection"
                             }
                         ]
                     },
@@ -176,7 +176,18 @@
                             {
                                 "id": "continue",
                                 "label": "Complete Evaluation",
-                                "outcome": "complete"
+                                "outcome": "reflection"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "reflection",
+                        "narrative": "<h3>Reflection</h3><p>Across all three experiences, the deciding factor was never the visuals, the hardware, or even the intensity of the environment. The deciding factor was always the <em>direction of attention</em>. Entertainment pulls you outward into goals, scores, and fictional worlds. Cyberdelics use technology as a mirror — turning your awareness back toward your own inner state, breath, and consciousness.</p><p>Neon Strike engaged you externally. Lumen Breath made your biology visible to you. Zenith Reach aimed for an achievement. The same headset, three entirely different psychological orientations. That distinction is the foundation of cyberdelic design thinking.</p>",
+                        "choices": [
+                            {
+                                "id": "continue",
+                                "label": "Continue",
+                                "outcome": "flow_next_module"
                             }
                         ]
                     }
@@ -266,18 +277,18 @@
                         "options": [
                             {
                                 "id": "q1_2_a",
-                                "label": "True",
-                                "correct": false
+                                "label": "False",
+                                "correct": true
                             },
                             {
                                 "id": "q1_2_b",
-                                "label": "False",
-                                "correct": true
+                                "label": "True",
+                                "correct": false
                             }
                         ],
                         "synthesis": {
-                            "q1_2_a": "<p>Visual style is just aesthetics. Many games use psychedelic visuals for style or atmosphere while maintaining purely 'entertainment' mechanics (shooting, scoring, etc.). To be cyberdelic, the mechanics must turn attention inward. <strong>Try again.</strong></p>",
-                            "q1_2_b": "<h3>Quiz Complete!</h3><p>Correct. Aesthetics alone don't define the category. An experience is cyberdelic based on its <em>design mechanics</em> and its ability to facilitate self-reflection, biofeedback, or altered states of consciousness, regardless of whether it 'looks' trippy or realistic. <strong>Quiz Complete.</strong></p>"
+                            "q1_2_b": "<p>Visual style is just aesthetics. Many games use psychedelic visuals for style or atmosphere while maintaining purely 'entertainment' mechanics (shooting, scoring, etc.). To be cyberdelic, the mechanics must turn attention inward. <strong>Try again.</strong></p>",
+                            "q1_2_a": "<h3>Quiz Complete!</h3><p>Correct. Aesthetics alone don't define the category. An experience is cyberdelic based on its <em>design mechanics</em> and its ability to facilitate self-reflection, biofeedback, or altered states of consciousness, regardless of whether it 'looks' trippy or realistic. <strong>Quiz Complete.</strong></p>"
                         }
                     }
                 ]

@@ -270,13 +270,24 @@
                         ]
                     },
                     {
+                        "id": "reflection",
+                        "narrative": "<h3>Framework Reflection</h3><p>Three complex cases. Three different constraints that determined the right answer — and none of them were about which platform was most impressive.</p><p>Michael's answer came from his insurance coverage and clinical profile. Aisha's answer came from her non-negotiable privacy value. Sofia's answer came from her physical capacity and immediate need for gentle accessibility.</p><p>The four-step framework isn't a checklist you run in sequence. It's a way of seeing the person clearly enough that the recommendation becomes obvious. When you hold Goal, User, Context, and Iteration in mind simultaneously, the right answer tends to surface without forcing it.</p><p><strong>Before you move to the quiz:</strong> Which of the four steps do you find hardest to apply, and why? That's where your facilitation edge will sharpen with practice.</p>",
+                        "choices": [
+                            {
+                                "id": "to_quiz",
+                                "label": "Proceed to Final Quiz",
+                                "outcome": "modules_end"
+                            }
+                        ]
+                    },
+                    {
                         "id": "scenario_end",
-                        "narrative": "<h3>Scenario Complete</h3><p>Notice how the 'correct' answer wasn't about the 'best' platform in abstractâ€”it was about matching the specific person's goals, constraints, context, and capacity.</p><p>Michael needed clinical/insurance coverage. Aisha needed privacy-respecting diversity. Sofia needed gentle immediate accessibility.</p>",
+                        "narrative": "<h3>Scenario Complete</h3><p>Notice how the 'correct' answer wasn't about the 'best' platform in abstract—it was about matching the specific person's goals, constraints, context, and capacity.</p><p>Michael needed clinical/insurance coverage. Aisha needed privacy-respecting diversity. Sofia needed gentle immediate accessibility.</p>",
                         "choices": [
                             {
                                 "id": "take_quiz",
-                                "label": "Take Final Quiz",
-                                "outcome": "modules_end"
+                                "label": "Reflect",
+                                "outcome": "reflection"
                             }
                         ]
                     }
@@ -329,25 +340,25 @@
                             },
                             {
                                 "id": "q1_b",
-                                "label": "Because what serves someone changes over time, and trial reveals fit better than analysis alone.",
-                                "correct": true
-                            },
-                            {
-                                "id": "q1_c",
                                 "label": "Because platforms frequently shut down so users need backup options.",
                                 "correct": false
                             },
                             {
-                                "id": "q1_d",
+                                "id": "q1_c",
                                 "label": "Because it's impossible to know what someone needs without trying everything.",
                                 "correct": false
+                            },
+                            {
+                                "id": "q1_d",
+                                "label": "Because what serves someone changes over time, and trial reveals fit better than analysis alone.",
+                                "correct": true
                             }
                         ],
                         "synthesis": {
                             "q1_a": "<p>This is too pessimistic. The point is that the right platform for someone evolves as their practice deepens.</p>",
-                            "q1_b": "<p><strong>Correct!</strong> Beginners outgrow beginner platforms, and clinical needs shift as healing progresses. The right answer now isn't the right answer forever.</p>",
-                            "q1_c": "<p>Stability is a factor, but not the core reason for iteration in facilitation.</p>",
-                            "q1_d": "<p>Trial & Iterate doesn't mean random testing; it means informed starting choices followed by refinement.</p>"
+                            "q1_b": "<p>Stability is a factor, but not the core reason for iteration in facilitation.</p>",
+                            "q1_c": "<p>Trial & Iterate doesn't mean random testing; it means informed starting choices followed by refinement.</p>",
+                            "q1_d": "<p><strong>Correct!</strong> Beginners outgrow beginner platforms, and clinical needs shift as healing progresses. The right answer now isn't the right answer forever.</p>"
                         }
                     },
                     {

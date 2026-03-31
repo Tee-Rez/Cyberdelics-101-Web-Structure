@@ -172,17 +172,17 @@
                     },
                     {
                         "id": "outcome_a",
-                        "narrative": "<h3>Path A Selected: Research-First & Grant-Funded</h3><p><strong>Outcome:</strong> She establishes credibility through validation. Publications give her leverage for clinical licensing down the road. Open source builds community. Web-based removes hardware barriers for initial testing. <em>The weakness: slow path to sustainability, depends heavily on grant cycles.</em></p><p><strong>Feedback:</strong> This path prioritizes mission and credibility over speed. It's strong if she has an institutional affiliation that can support grant applications and if her goal is clinical integration rather than rapid consumer adoption. The breathwork community she already has gives her a built-in validation cohort. Consider whether grant timelines match her financial runway.</p>",
+                        "narrative": "<h3>Path A Selected: Research-First &amp; Grant-Funded</h3><p><strong>Outcome:</strong> She establishes credibility through validation. Publications give her leverage for clinical licensing down the road. Open source builds community. Web-based removes hardware barriers for initial testing. <em>The weakness: slow path to sustainability, depends heavily on grant cycles.</em></p><p><strong>Feedback:</strong> This path prioritizes mission and credibility over speed. It's strong if she has an institutional affiliation that can support grant applications and if her goal is clinical integration rather than rapid consumer adoption. The breathwork community she already has gives her a built-in validation cohort. Consider whether grant timelines match her financial runway.</p><p><strong>Reflection:</strong> <em>Which ecosystem components does this path strengthen most immediately, and which does it leave underdeveloped until later? Think about what the field gains when builders choose credibility over speed, and what it potentially loses in the meantime.</em></p>",
                         "choices": []
                     },
                     {
                         "id": "outcome_b",
-                        "narrative": "<h3>Path B Selected: Commercial & Subscription-Based</h3><p><strong>Outcome:</strong> Fastest path to market and revenue. Maximum consumer reach. <em>But without research validation, cautious clinical practitioners won't refer clients. Without clinical referrals, subscription churn is high. Without a large development budget, polish and support are thin.</em></p><p><strong>Feedback:</strong> This path prioritizes speed and reach over credibility. Possible, but high-risk without funding. Her breathwork practitioner community may be willing to pilot-test, but wider clinical adoption requires the research path she'd be skipping. A hybrid approach, building the consumer product while doing a small validation study in parallel, could bridge the gap.</p>",
+                        "narrative": "<h3>Path B Selected: Commercial &amp; Subscription-Based</h3><p><strong>Outcome:</strong> Fastest path to market and revenue. Maximum consumer reach. <em>But without research validation, cautious clinical practitioners won't refer clients. Without clinical referrals, subscription churn is high. Without a large development budget, polish and support are thin.</em></p><p><strong>Feedback:</strong> This path prioritizes speed and reach over credibility. Possible, but high-risk without funding. Her breathwork practitioner community may be willing to pilot-test, but wider clinical adoption requires the research path she'd be skipping. A hybrid approach, building the consumer product while doing a small validation study in parallel, could bridge the gap.</p><p><strong>Reflection:</strong> <em>What pressure does a consumer subscription model place on a platform's mission over time? Consider where a platform financially dependent on engagement metrics might drift from a platform accountable to transformation outcomes.</em></p>",
                         "choices": []
                     },
                     {
                         "id": "outcome_c",
-                        "narrative": "<h3>Path C Selected: B2B Clinical Licensing</h3><p><strong>Outcome:</strong> Her existing practitioner relationships become the distribution channel. The B2B model provides more stable revenue than consumer subscription. <em>But it requires significant sales effort and longer cycles. Needs enough polish for institutional approval.</em></p><p><strong>Feedback:</strong> This path fits her clinical background best. She already has the relationships and the clinical credibility, and the product just needs to meet institutional standards. The challenge is that clinical licensing requires resources for HIPAA compliance, liability documentation, and ongoing clinical support that go beyond the technical build.</p>",
+                        "narrative": "<h3>Path C Selected: B2B Clinical Licensing</h3><p><strong>Outcome:</strong> Her existing practitioner relationships become the distribution channel. The B2B model provides more stable revenue than consumer subscription. <em>But it requires significant sales effort and longer cycles. Needs enough polish for institutional approval.</em></p><p><strong>Feedback:</strong> This path fits her clinical background best. She already has the relationships and the clinical credibility, and the product just needs to meet institutional standards. The challenge is that clinical licensing requires resources for HIPAA compliance, liability documentation, and ongoing clinical support that go beyond the technical build.</p><p><strong>Reflection:</strong> <em>Of the three paths presented, which most naturally aligns with your own instincts or values? Not which one is 'right', but which one would you actually be drawn to if you were in her position, and what does that reveal about what you're optimizing for?</em></p>",
                         "choices": []
                     }
                 ]
@@ -242,25 +242,25 @@
                             },
                             {
                                 "id": "q1_b",
-                                "label": "Technology Providers, Software Developers, Facilitators, and Clinical Practitioners are all immediately affected, as developers lose a platform and practitioners lose a tool.",
-                                "correct": true
-                            },
-                            {
-                                "id": "q1_c",
                                 "label": "Only Users are affected because they can no longer buy the headset.",
                                 "correct": false
                             },
                             {
-                                "id": "q1_d",
+                                "id": "q1_c",
                                 "label": "Economic Infrastructure is the only component affected because of the financial loss.",
                                 "correct": false
+                            },
+                            {
+                                "id": "q1_d",
+                                "label": "Technology Providers, Software Developers, Facilitators, and Clinical Practitioners are all immediately affected, as developers lose a platform and practitioners lose a tool.",
+                                "correct": true
                             }
                         ],
                         "synthesis": {
                             "q1_a": "Hardware issues rarely stay contained at the Technology Provider level. Think about what happens to all the platforms built for that headset, and all the facilitators who recommended it.",
-                            "q1_c": "Users are affected, but they're not the only ones. Who builds the software running on that hardware? Who recommends the device to clients? Multiple components feel this simultaneously.",
-                            "q1_d": "Financial effects do ripple through Economic Infrastructure, but the immediate effects land elsewhere first, developers lose a platform, facilitators lose a tool, clinicians lose a clinical option.",
-                            "q1_b": "<strong>Exactly right.</strong> A headset discontinuation immediately affects software developers who built for that platform, facilitators and clinicians who recommend it to clients, and the economic infrastructure whose business models depended on it. The hardware decision is never just a hardware decision, it's an ecosystem event."
+                            "q1_b": "Users are affected, but they're not the only ones. Who builds the software running on that hardware? Who recommends the device to clients? Multiple components feel this simultaneously.",
+                            "q1_c": "Financial effects do ripple through Economic Infrastructure, but the immediate effects land elsewhere first, developers lose a platform, facilitators lose a tool, clinicians lose a clinical option.",
+                            "q1_d": "<strong>Exactly right.</strong> A headset discontinuation immediately affects software developers who built for that platform, facilitators and clinicians who recommend it to clients, and the economic infrastructure whose business models depended on it. The hardware decision is never just a hardware decision, it's an ecosystem event."
                         }
                     },
                     {
@@ -299,30 +299,30 @@
                         "options": [
                             {
                                 "id": "q1_a",
-                                "label": "Because Meta has better graphics capabilities than all other headsets.",
-                                "correct": false
-                            },
-                            {
-                                "id": "q1_b",
                                 "label": "Because Meta controls approximately 77% of consumer VR headset shipments, making it the only platform that provides access to most potential VR users.",
                                 "correct": true
                             },
                             {
-                                "id": "q1_c",
+                                "id": "q1_b",
                                 "label": "Because Meta's content policies are more permissive for consciousness applications.",
                                 "correct": false
                             },
                             {
-                                "id": "q1_d",
+                                "id": "q1_c",
                                 "label": "Because Meta headsets are the only ones compatible with biofeedback peripherals.",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_d",
+                                "label": "Because Meta has better graphics capabilities than all other headsets.",
                                 "correct": false
                             }
                         ],
                         "synthesis": {
-                            "q1_a": "Graphics capabilities are platform-dependent but not the decisive factor here. A developer with privacy-friendly values would still choose Meta for a different reason related to audience scale.",
-                            "q1_c": "Meta's content policies are actually a constraint for some consciousness applications, not an advantage. The reason to build for Meta is more fundamental.",
-                            "q1_d": "Biofeedback compatibility varies by application and headset, but it's not the primary reason Meta dominates developer decision-making.",
-                            "q1_b": "<strong>Right.</strong> Market share is the driver. Bypassing Meta means reaching a fraction of your potential audience. That mission constraint often outweighs other considerations for developers seeking widespread adoption, even ones with real concerns about Meta's data practices."
+                            "q1_a": "<strong>Right.</strong> Market share is the driver. Bypassing Meta means reaching a fraction of your potential audience. That mission constraint often outweighs other considerations for developers seeking widespread adoption, even ones with real concerns about Meta's data practices.",
+                            "q1_b": "Meta's content policies are actually a constraint for some consciousness applications, not an advantage. The reason to build for Meta is more fundamental.",
+                            "q1_c": "Biofeedback compatibility varies by application and headset, but it's not the primary reason Meta dominates developer decision-making.",
+                            "q1_d": "Graphics capabilities are platform-dependent but not the decisive factor here. A developer with privacy-friendly values would still choose Meta for a different reason related to audience scale."
                         }
                     },
                     {
@@ -366,25 +366,25 @@
                             },
                             {
                                 "id": "q1_b",
-                                "label": "Knowledge Producers benefit through expanded research access; Technology Providers benefit through new application categories; Facilitators benefit through affordable biofeedback integration.",
-                                "correct": true
-                            },
-                            {
-                                "id": "q1_c",
                                 "label": "Only Users benefit because they can now afford personal EEG equipment.",
                                 "correct": false
                             },
                             {
-                                "id": "q1_d",
+                                "id": "q1_c",
                                 "label": "Economic Infrastructure benefits through lower hardware costs driving more investment.",
                                 "correct": false
+                            },
+                            {
+                                "id": "q1_d",
+                                "label": "Knowledge Producers benefit through expanded research access; Technology Providers benefit through new application categories; Facilitators benefit through affordable biofeedback integration.",
+                                "correct": true
                             }
                         ],
                         "synthesis": {
                             "q1_a": "Cost reduction in hardware originates with Technology Providers, but the effects don't stay there. Who needs affordable neurofeedback equipment most?",
-                            "q1_c": "Personal EEG use by individuals is one effect, but the largest gains were in research and facilitation contexts that previously faced institutional procurement barriers.",
-                            "q1_d": "Investment may follow expanded capability, but the immediate beneficiaries are the practitioners and researchers who could now afford equipment.",
-                            "q1_b": "<strong>Exactly right.</strong> Cost democratization in hardware ripples across multiple components. Researchers who couldn't afford institutional EEG can now run neurofeedback studies. Developers can build biofeedback-responsive platforms. Facilitators can integrate real-time brainwave monitoring into session contexts. The price drop expanded what multiple ecosystem components could do."
+                            "q1_b": "Personal EEG use by individuals is one effect, but the largest gains were in research and facilitation contexts that previously faced institutional procurement barriers.",
+                            "q1_c": "Investment may follow expanded capability, but the immediate beneficiaries are the practitioners and researchers who could now afford equipment.",
+                            "q1_d": "<strong>Exactly right.</strong> Cost democratization in hardware ripples across multiple components. Researchers who couldn't afford institutional EEG can now run neurofeedback studies. Developers can build biofeedback-responsive platforms. Facilitators can integrate real-time brainwave monitoring into session contexts. The price drop expanded what multiple ecosystem components could do."
                         }
                     },
                     {
@@ -392,30 +392,30 @@
                         "options": [
                             {
                                 "id": "q2_a",
-                                "label": "Flow state optimization and UI accessibility, as therapy and game design have always overlapped.",
-                                "correct": false
-                            },
-                            {
-                                "id": "q2_b",
-                                "label": "Set and setting, and the preparation-experience-integration arc, as both fields work with altered states and require intentional context to produce beneficial outcomes.",
-                                "correct": true
-                            },
-                            {
-                                "id": "q2_c",
                                 "label": "Clinical trial methodology and risk assessment, as VR platforms can be considered medical devices.",
                                 "correct": false
                             },
                             {
-                                "id": "q2_d",
+                                "id": "q2_b",
                                 "label": "Subscription pricing and content licensing, as psychedelic therapy and VR apps share business models.",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_c",
+                                "label": "Set and setting, and the preparation-experience-integration arc, as both fields work with altered states and require intentional context to produce beneficial outcomes.",
+                                "correct": true
+                            },
+                            {
+                                "id": "q2_d",
+                                "label": "Flow state optimization and UI accessibility, as therapy and game design have always overlapped.",
                                 "correct": false
                             }
                         ],
                         "synthesis": {
-                            "q2_a": "Flow state optimization comes from gaming research, and accessibility principles come from HCI. Those did not originate in psychedelic therapy.",
-                            "q2_c": "Clinical trial methodology and risk assessment come from healthcare research generally, not from psychedelic therapy specifically.",
-                            "q2_d": "Business model concepts aren't what cyberdelics borrowed from psychedelic therapy. The transfer was about guiding humans through non-ordinary states.",
-                            "q2_b": "<strong>Right.</strong> Set (mindset, intention) and setting (environment, support) transfer directly because cyberdelic experiences, like psychedelic sessions, are powerfully context-dependent. The preparation-experience-integration arc transfers because both fields recognize that the session itself is not the whole intervention; the context before and after determines if the experience becomes lasting transformation. Altered states require intentional context."
+                            "q2_a": "Clinical trial methodology and risk assessment come from healthcare research generally, not from psychedelic therapy specifically.",
+                            "q2_b": "Business model concepts aren't what cyberdelics borrowed from psychedelic therapy. The transfer was about guiding humans through non-ordinary states.",
+                            "q2_c": "<strong>Right.</strong> Set (mindset, intention) and setting (environment, support) transfer directly because cyberdelic experiences, like psychedelic sessions, are powerfully context-dependent. The preparation-experience-integration arc transfers because both fields recognize that the session itself is not the whole intervention; the context before and after determines if the experience becomes lasting transformation. Altered states require intentional context.",
+                            "q2_d": "Flow state optimization comes from gaming research, and accessibility principles come from HCI. Those did not originate in psychedelic therapy."
                         }
                     }
                 ]

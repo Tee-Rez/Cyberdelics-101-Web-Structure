@@ -134,8 +134,7 @@
                             },
                             {
                                 "id": "B",
-                                "label": "Conflates immersion with presence. Resolution is an immersion factor, and while higher immersion can support presence, presence is a psychological outcome determined by multiple factors beyond display quality",
-                                "correct": true
+                                "label": "Is correct for clinical VR but not for consciousness-expansion applications"
                             },
                             {
                                 "id": "C",
@@ -143,7 +142,8 @@
                             },
                             {
                                 "id": "D",
-                                "label": "Is correct for clinical VR but not for consciousness-expansion applications"
+                                "label": "Conflates immersion with presence. Resolution is an immersion factor, and while higher immersion can support presence, presence is a psychological outcome determined by multiple factors beyond display quality",
+                                "correct": true
                             }
                         ],
                         "synthesis": {
@@ -158,12 +158,12 @@
                         "options": [
                             {
                                 "id": "A",
-                                "label": "The client is being resistant to the process and needs encouragement to surrender to the experience"
+                                "label": "The client is experiencing low Place Illusion; the sense of actually being in the virtual space hasn't established itself, signaling that presence hasn't reached threshold and the amplification conditions aren't in place",
+                                "correct": true
                             },
                             {
                                 "id": "B",
-                                "label": "The client is experiencing low Place Illusion; the sense of actually being in the virtual space hasn't established itself, signaling that presence hasn't reached threshold and the amplification conditions aren't in place",
-                                "correct": true
+                                "label": "The client is being resistant to the process and needs encouragement to surrender to the experience"
                             },
                             {
                                 "id": "C",
@@ -218,16 +218,16 @@
                             },
                             {
                                 "id": "B",
+                                "label": "It affects visual perception but not emotional responses or behavior"
+                            },
+                            {
+                                "id": "C",
                                 "label": "It can influence the person's behavior and self-perception in ways that extend beyond the VR session itself",
                                 "correct": true
                             },
                             {
-                                "id": "C",
-                                "label": "It produces effects only during the session, with no carry-over once the headset is removed"
-                            },
-                            {
                                 "id": "D",
-                                "label": "It affects visual perception but not emotional responses or behavior"
+                                "label": "It produces effects only during the session, with no carry-over once the headset is removed"
                             }
                         ],
                         "synthesis": {
@@ -246,16 +246,16 @@
                             },
                             {
                                 "id": "B",
-                                "label": "Adding full-body avatar tracking with first-person perspective and low synchrony latency",
-                                "correct": true
-                            },
-                            {
-                                "id": "C",
                                 "label": "Conducting a thorough pre-session preparation protocol"
                             },
                             {
-                                "id": "D",
+                                "id": "C",
                                 "label": "Upgrading to a higher-resolution headset"
+                            },
+                            {
+                                "id": "D",
+                                "label": "Adding full-body avatar tracking with first-person perspective and low synchrony latency",
+                                "correct": true
                             }
                         ],
                         "synthesis": {

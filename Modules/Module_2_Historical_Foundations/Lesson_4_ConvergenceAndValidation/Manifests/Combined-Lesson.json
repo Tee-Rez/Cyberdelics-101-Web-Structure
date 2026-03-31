@@ -1,4 +1,4 @@
-﻿{
+{
     "id": "combined_lesson_2_4",
     "title": "Convergence & Validation: COVID, Isness & the Brain Evidence",
     "description": "Examine three turning-point events that legitimized cyberdelics as a serious field: COVID's forced acceleration of VR adoption, the Isness mystical experience study, and the neural evidence from EEG and DeepDream VR.",
@@ -165,13 +165,13 @@
                             },
                             {
                                 "id": "q1_b",
-                                "label": "It normalized technology-mediated experience as genuinely meaningful",
-                                "outcome": "quiz1_q1_correct"
+                                "label": "It made VR completely replace all physical interactions",
+                                "outcome": "quiz1_q1_c_feedback"
                             },
                             {
                                 "id": "q1_c",
-                                "label": "It made VR completely replace all physical interactions",
-                                "outcome": "quiz1_q1_c_feedback"
+                                "label": "It normalized technology-mediated experience as genuinely meaningful",
+                                "outcome": "quiz1_q1_correct"
                             },
                             {
                                 "id": "q1_d",
@@ -235,18 +235,18 @@
                             },
                             {
                                 "id": "q2_b",
-                                "label": "It compressed 5-10 years of cultural acceptance into months",
-                                "outcome": "quiz1_q2_correct"
-                            },
-                            {
-                                "id": "q2_c",
                                 "label": "It eliminated all competition for VR companies",
                                 "outcome": "quiz1_q2_c_feedback"
                             },
                             {
-                                "id": "q2_d",
+                                "id": "q2_c",
                                 "label": "It made traditional meditation completely obsolete",
                                 "outcome": "quiz1_q2_d_feedback"
+                            },
+                            {
+                                "id": "q2_d",
+                                "label": "It compressed 5-10 years of cultural acceptance into months",
+                                "outcome": "quiz1_q2_correct"
                             }
                         ]
                     },
@@ -305,18 +305,18 @@
                             },
                             {
                                 "id": "q1_b",
-                                "label": "VR could produce mystical experiences comparable to high-dose psilocybin",
-                                "outcome": "quiz2_q1_correct"
-                            },
-                            {
-                                "id": "q1_c",
                                 "label": "VR was only useful for entertainment purposes",
                                 "outcome": "quiz2_q1_c_feedback"
                             },
                             {
-                                "id": "q1_d",
+                                "id": "q1_c",
                                 "label": "Mystical experiences only occur with substance use",
                                 "outcome": "quiz2_q1_d_feedback"
+                            },
+                            {
+                                "id": "q1_d",
+                                "label": "VR could produce mystical experiences comparable to high-dose psilocybin",
+                                "outcome": "quiz2_q1_correct"
                             }
                         ]
                     },
@@ -375,13 +375,13 @@
                             },
                             {
                                 "id": "q2_b",
-                                "label": "Energetic body representation, synchronized group movement, abstract environments, and intentional preparation",
-                                "outcome": "quiz2_q2_correct"
+                                "label": "Competitive gaming mechanics and achievement systems",
+                                "outcome": "quiz2_q2_c_feedback"
                             },
                             {
                                 "id": "q2_c",
-                                "label": "Competitive gaming mechanics and achievement systems",
-                                "outcome": "quiz2_q2_c_feedback"
+                                "label": "Energetic body representation, synchronized group movement, abstract environments, and intentional preparation",
+                                "outcome": "quiz2_q2_correct"
                             },
                             {
                                 "id": "q2_d",
@@ -440,13 +440,13 @@
                         "choices": [
                             {
                                 "id": "q1_a",
-                                "label": "VR only creates visual illusions with no real brain effects",
-                                "outcome": "quiz3_q1_a_feedback"
+                                "label": "VR produces measurable brain changes similar to psychedelics and meditation",
+                                "outcome": "quiz3_q1_correct"
                             },
                             {
                                 "id": "q1_b",
-                                "label": "VR produces measurable brain changes similar to psychedelics and meditation",
-                                "outcome": "quiz3_q1_correct"
+                                "label": "VR only creates visual illusions with no real brain effects",
+                                "outcome": "quiz3_q1_a_feedback"
                             },
                             {
                                 "id": "q1_c",
@@ -515,18 +515,18 @@
                             },
                             {
                                 "id": "q2_b",
-                                "label": "VR produces genuine consciousness changes validated across experiential, neural, and therapeutic levels",
-                                "outcome": "quiz3_q2_correct"
-                            },
-                            {
-                                "id": "q2_c",
                                 "label": "More research is needed before we can say anything definitive",
                                 "outcome": "quiz3_q2_c_feedback"
                             },
                             {
-                                "id": "q2_d",
+                                "id": "q2_c",
                                 "label": "Neural evidence contradicts the subjective reports",
                                 "outcome": "quiz3_q2_d_feedback"
+                            },
+                            {
+                                "id": "q2_d",
+                                "label": "VR produces genuine consciousness changes validated across experiential, neural, and therapeutic levels",
+                                "outcome": "quiz3_q2_correct"
                             }
                         ]
                     },
@@ -569,6 +569,17 @@
                         "choices": [
                             {
                                 "id": "finish_lesson",
+                                "label": "Reflect on This Arc",
+                                "outcome": "reflection"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "reflection",
+                        "narrative": "<h3>Reflection</h3><p>Three turning points. Three different kinds of proof. COVID-19 didn't create cyberdelics — it compressed the cultural timeline and forced millions of people to discover that mediated experiences could be genuinely meaningful. The Isness study didn't invent mystical states in VR — it measured them with the same tools used to validate psilocybin, making the comparison impossible to dismiss. The DeepDream EEG research didn't theorize that VR changes the brain — it recorded it.</p><p>By 2024, the arc that began with Leary's speculation in 1994 had closed. Not through a single breakthrough, but through the slow, compounding weight of evidence on three levels: experiential, neural, and therapeutic. This is how speculative fields become validated ones. Not with one eureka moment, but with enough convergent proof that skepticism requires more effort than belief.</p>",
+                        "choices": [
+                            {
+                                "id": "continue",
                                 "label": "Finish Lesson",
                                 "outcome": "flow_next_module"
                             }

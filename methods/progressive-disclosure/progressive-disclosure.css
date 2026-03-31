@@ -242,8 +242,8 @@
     max-width: 800px;
     /* Constrain width for readability & side interaction */
     margin: 0 auto;
-    padding: 0 var(--space-xl);
-    /* Extra padding */
+    padding: var(--space-xl);
+    /* Match image panel content padding on all sides */
 }
 
 /* --- Layout: Text with Bullet List (Left Aligned) --- */

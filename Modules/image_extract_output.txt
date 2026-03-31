@@ -1,0 +1,583 @@
+﻿=== Module_1_DefiningCyberdelics / Lesson_1_CoreDefinitions&Components ===
+  Src:      ../assets/images/module1/cyber.jpg
+  Alt:      
+  Position: 
+  Prompt:   The word CYBER in bold futuristic typography with circuit board patterns and digital nodes flowing through the letters, electric blue and white color scheme, representing technology and digital systems, clean modern design with subtle binary code in background, 16:9 aspect ratio
+
+=== Module_1_DefiningCyberdelics / Lesson_1_CoreDefinitions&Components ===
+  Src:      ../assets/images/module1/delic.jpg
+  Alt:      
+  Position: 
+  Prompt:   The word DELIC in flowing organic typography with mandala patterns, sacred geometry (Flower of Life), and radiating light waves emanating outward from the letters, purple and teal color scheme, representing consciousness and inner exploration, mystical yet modern aesthetic, 16:9 aspect ratio
+
+=== Module_1_DefiningCyberdelics / Lesson_1_CoreDefinitions&Components ===
+  Src:      ../assets/images/module1/tim-leary.jpg
+  Alt:      
+  Position: 
+  Prompt:   Black and white archival-style portrait of Timothy Leary from the 1990s era, looking thoughtful and visionary, with subtle double-exposure overlay of early computer graphics and VR wireframes, representing the bridge between psychedelic era and digital future, documentary photography style, 16:9 aspect ratio
+
+=== Module_1_DefiningCyberdelics / Lesson_1_CoreDefinitions&Components ===
+  Src:      ../assets/images/module1/DigitalTechnologies.jpg
+  Alt:      
+  Position: 
+  Prompt:   Modern VR headset (Meta Quest style), EEG headband, and HRV chest strap sensor arranged on a minimalist surface, professional product photography, soft directional lighting, tech-forward aesthetic, subtle Flower of Life sacred geometry pattern faintly visible in background, clean composition, 16:9 aspect ratio
+
+=== Module_1_DefiningCyberdelics / Lesson_1_CoreDefinitions&Components ===
+  Src:      ../assets/images/module1/meditation-comparison.jpg
+  Alt:      
+  Position: 
+  Prompt:   Split-screen composition : person in traditional meditation pose with eyes closed on the left side, and the same person wearing a VR headset in a similar meditative pose on the right side, both surrounded by soft glowing mandala patterns and sacred geometry, ethereal purple and teal color palette, spiritual atmosphere meeting technology, sense of expanded consciousness, 16:9 aspect ratio
+
+=== Module_1_DefiningCyberdelics / Lesson_1_CoreDefinitions&Components ===
+  Src:      ../assets/images/module1/AllThree.jpg
+  Alt:      
+  Position: 
+  Prompt:   Three overlapping circles forming a Venn diagram, each circle labeled and colored differently : Technology in electric blue, Altered States in deep purple, Transformation in teal. Glowing bright white center where all three intersect. Clean infographic style, modern educational design, dark background, subtle sacred geometry texture in circle fill areas, 16:9 aspect ratio
+
+=== Module_1_DefiningCyberdelics / Lesson_1_CoreDefinitions&Components ===
+  Src:      ../assets/images/module1/futurecontrolknobs.jpg
+  Alt:      
+  Position: 
+  Prompt:   Close-up of futuristic control knobs and sliders on a glowing interface, with labels like 'Dose', 'Intensity', 'Frequency', and 'Clarity', electric blue and purple lighting, representing the precision and control offered by technology-based consciousness tools, modern minimalist tech aesthetic, 16:9 aspect ratio
+
+=== Module_1_DefiningCyberdelics / Lesson_1_CoreDefinitions&Components ===
+  Src:      ../assets/images/module1/accessible-tech-future.jpg
+  Alt:      
+  Position: 
+  Prompt:   Diverse group of people in a modern, clean environment (not a clinic) using VR headsets and biofeedback headbands comfortably, soft natural lighting, positive and empowering atmosphere, representing the accessibility and mainstream potential of technology-based consciousness tools, 16:9 aspect ratio
+
+=== Module_1_DefiningCyberdelics / Lesson_1_CoreDefinitions&Components ===
+  Src:      ../assets/images/module1/mindfulness-brain-sync.jpg
+  Alt:      
+  Position: 
+  Prompt:   Abstract visualization of a human brain synchronized with a digital geometric pattern (like a Metatron's Cube), representing the development of mental skills through technology-aided practice, glowing teal and white energy lines, sophisticated and intelligent aesthetic, 16:9 aspect ratio
+
+=== Module_1_DefiningCyberdelics / Lesson_2_PsychedelicsVsCyberdelics ===
+  Src:      ../assets/images/module1/SharedIntention.jpg
+  Alt:      Two parallel pathways merging toward a single glowing destination on a distant mountain peak
+  Position: 
+  Prompt:   AI Prompt: Two parallel pathways merging toward a single glowing destination on a distant mountain peak : one path traced with subtle circuit board and tech imagery in electric blue, the other traced with natural organic botanical patterns in deep green and gold, both paths equally luminous, equally valid, converging at a shared point of radiant light on the horizon, purple and teal sky, inspirational and non-hierarchical composition, 16:9 aspect ratio
+
+=== Module_1_DefiningCyberdelics / Lesson_3_VRvsCyberdelics ===
+  Src:      ../assets/images/module1/lesson3/DirectionOfAttention.jpg
+  Alt:      A diagram showing two heads in VR, one with arrows pointing 'out' into a game world, the other with arrows curving 'back' toward the viewer's own body and awareness
+  Position: 
+  Prompt:   AI Prompt: Side-by-side comparison diagram of two human silhouettes wearing sleek VR headsets. LEFT silhouette has bright jagged arrows exploding outward from the headset into a chaotic, neon game world (entertainment). RIGHT silhouette has smooth, glowing blue lines curving from the headset back toward the heart and center of the silhouette (cyberdelic). Minimalist, clean medical-illustration style, deep purple background, 16:9 aspect ratio.
+
+=== Module_1_DefiningCyberdelics / Lesson_4_MeditationVsCyberdelics ===
+  Src:      ../assets/images/module1/MeditationApp.jpg
+  Alt:      Clean smartphone screen displaying a minimal meditation app interface
+  Position: 
+  Prompt:   AI Prompt: Clean smartphone screen displaying a minimal meditation app interface, soft gradient background in calming blue and lavender, simple breathing animation circle expanding and contracting, gentle typography, no VR hardware or biofeedback sensors visible, approachable and accessible aesthetic, warm soft lighting, 16:9 aspect ratio
+
+=== Module_1_DefiningCyberdelics / Lesson_4_MeditationVsCyberdelics ===
+  Src:      ../assets/images/module1/vr_meditation_biofeedback.jpg
+  Alt:      Person in meditation posture wearing a VR headset and EEG sensor band
+  Position: 
+  Prompt:   AI Prompt: Person in meditation posture wearing a VR headset and EEG sensor band, immersed in a responsive virtual environment shown in soft translucent overlay, flowing sacred geometry patterns pulsing in sync with a heartbeat monitor on their wrist, sense of deep immersion and inner state being reflected outward, purple and teal color palette, 16:9 aspect ratio
+
+=== Module_1_DefiningCyberdelics / Lesson_4_MeditationVsCyberdelics ===
+  Src:      ../assets/images/module1/lesson4/pathways_comparison.jpg
+  Alt:      Three parallel illuminated pathways showing different levels of meditative tech
+  Position: 
+  Prompt:   AI Prompt: Three parallel pathways shown side by side, each equally illuminated and equally valid, left pathway shows a person using a simple phone app for meditation (soft ambient light, relaxed posture), center pathway shows a person in a basic VR headset in an immersive meditation environment (moderate tech, deeper immersion), right pathway shows a person with VR headset and multiple biofeedback sensors in a full cyberdelic protocol (full tech stack, deep immersion). Progressive intensity without hierarchy, clean educational visualization, purple and teal gradient, 16:9 aspect ratio
+
+=== Module_2_Historical_Foundations / Lesson_1_TheVisionaries ===
+  Src:      ../assets/images/module2/TimLeary1960-2020.jpg
+  Alt:      Split-screen composition: left side shows Timothy Leary from 1960s Harvard era, right side shows older Leary from 1990s at computer
+  Position: 
+  Prompt:   
+
+=== Module_2_Historical_Foundations / Lesson_1_TheVisionaries ===
+  Src:      ../assets/images/module2/leary_prophecy.jpg
+  Alt:      Early 1990s computer monitor with fractal patterns and prophecy text
+  Position: 
+  Prompt:   
+
+=== Module_2_Historical_Foundations / Lesson_1_TheVisionaries ===
+  Src:      ../assets/images/module2/leary_concepts.jpg
+  Alt:      Concept bubbles for Electronic Spirituality, Digital Shamanism, Reality Hacking, and Neurological Self-Determination
+  Position: 
+  Prompt:   
+
+=== Module_2_Historical_Foundations / Lesson_1_TheVisionaries ===
+  Src:      ../assets/images/module2/vision_growth.jpg
+  Alt:      Seed representing Leary's vision growing through time layers to sprout in 2020
+  Position: 
+  Prompt:   
+
+=== Module_2_Historical_Foundations / Lesson_1_TheVisionaries ===
+  Src:      ../assets/images/module2/leary_legacy.jpg
+  Alt:      Timothy Leary as elder statesman of consciousness exploration with digital symbols
+  Position: 
+  Prompt:   
+
+=== Module_2_Historical_Foundations / Lesson_1_TheVisionaries ===
+  Src:      ../assets/images/module2/lanier_pioneer.jpg
+  Alt:      Jaron Lanier in late 1980s with DataGlove
+  Position: 
+  Prompt:   
+
+=== Module_2_Historical_Foundations / Lesson_1_TheVisionaries ===
+  Src:      ../assets/images/module2/laurel_theatre.jpg
+  Alt:      Portrait of Brenda Laurel from 1990s
+  Position: 
+  Prompt:   
+
+=== Module_2_Historical_Foundations / Lesson_1_TheVisionaries ===
+  Src:      ../assets/images/module2/videoplace.jpg
+  Alt:      Early computer art lab showing Myron Krueger's VIDEOPLACE system
+  Position: 
+  Prompt:   
+
+=== Module_2_Historical_Foundations / Lesson_1_TheVisionaries ===
+  Src:      ../assets/images/module2/vr_gap.jpg
+  Alt:      Contrast between sleek conceptual VR vision and actual clunky 1980s hardware
+  Position: 
+  Prompt:   
+
+=== Module_2_Historical_Foundations / Lesson_1_TheVisionaries ===
+  Src:      ../assets/images/module2/pioneer_foundations.jpg
+  Alt:      Concept constellation showing Transformative Space, Embodied Interaction, Presence, Responsive Environments, and Transformative Potential
+  Position: 
+  Prompt:   
+
+=== Module_2_Historical_Foundations / Lesson_1_TheVisionaries ===
+  Src:      ../assets/images/module2/cyberpunk_blueprint.jpg
+  Alt:      Cyberpunk book covers blending into neon-lit digital cityscape
+  Position: 
+  Prompt:   
+
+=== Module_2_Historical_Foundations / Lesson_1_TheVisionaries ===
+  Src:      ../assets/images/module2/rave_electronic.jpg
+  Alt:      1990s rave dancers in silhouette against laser light patterns
+  Position: 
+  Prompt:   
+
+=== Module_2_Historical_Foundations / Lesson_1_TheVisionaries ===
+  Src:      ../assets/images/module2/burning_man_tech.jpg
+  Alt:      Illuminated geometric sculpture at Burning Man at night
+  Position: 
+  Prompt:   
+
+=== Module_2_Historical_Foundations / Lesson_1_TheVisionaries ===
+  Src:      ../assets/images/module2/fractal_digital.jpg
+  Alt:      Intricate Mandelbrot-style fractal art
+  Position: 
+  Prompt:   
+
+=== Module_2_Historical_Foundations / Lesson_1_TheVisionaries ===
+  Src:      ../assets/images/module2/culture_convergence.jpg
+  Alt:      Four streams of culture converging into one larger Cyberdelic Culture river
+  Position: 
+  Prompt:   
+
+=== Module_2_Historical_Foundations / Lesson_2_TheGapYears ===
+  Src:      ../assets/images/module2/lesson2/vr_arcade_abandoned.jpg
+  Alt:      Abandoned VR arcade from early 2000s, dusty VR equipment on tables, empty mall space with 'Going Out of Business' sign, representing the commercial failure of 1990s VR, melancholic documentary photography style, faded colors suggesting obsolescence.
+  Position: 
+  Prompt:   
+
+=== Module_2_Historical_Foundations / Lesson_2_TheGapYears ===
+  Src:      ../assets/images/module2/lesson2/meditation_apps.jpg
+  Alt:      Clean product photography showing smartphone displaying Headspace app interface alongside another phone showing Calm app, both screens showing meditation timers and peaceful nature imagery, modern minimalist aesthetic, soft lighting, representing the normalization of digital meditation tools.
+  Position: 
+  Prompt:   
+
+=== Module_2_Historical_Foundations / Lesson_3_TheRenaissance ===
+  Src:      ../assets/images/module2/lesson3/palmer_garage.jpg
+  Alt:      Palmer Luckey in 2012 garage workshop holding early duct tape-wrapped Oculus Rift prototype, young and enthusiastic, surrounded by electronic components and tools, documentary photography style, representing grassroots innovation.
+  Position: 
+  Prompt:   
+
+=== Module_2_Historical_Foundations / Lesson_3_TheRenaissance ===
+  Src:      ../assets/images/module2/lesson3/oculus_kickstarter.jpg
+  Alt:      Kickstarter campaign page for Oculus Rift showing the funding goal dramatically exceeded, excited backer comments, and early prototype images, screen capture style from 2012 with authentic web design.
+  Position: 
+  Prompt:   
+
+=== Module_2_Historical_Foundations / Lesson_3_TheRenaissance ===
+  Src:      ../assets/images/module2/lesson3/vr_evolution_compare.jpg
+  Alt:      Before and after comparison: left side shows clunky 1990s VR headset (heavy, wired, primitive), right side shows sleek Oculus Rift CV1 from 2016 (elegant, refined, modern), dramatic contrast representing 20-year evolution.
+  Position: 
+  Prompt:   
+
+=== Module_2_Historical_Foundations / Lesson_3_TheRenaissance ===
+  Src:      ../assets/images/module2/lesson3/htc_vive_roomscale.jpg
+  Alt:      Person using HTC Vive in a cleared living room space, demonstrating room-scale VR with hand controllers, visible base station sensors in corners, sense of freedom and natural movement, representing the room-scale revolution.
+  Position: 
+  Prompt:   
+
+=== Module_2_Historical_Foundations / Lesson_4_ConvergenceAndValidation ===
+  Src:      ../../assets/Images/Modules/Module_2/Lesson_4/covid_shift.jpg
+  Alt:      
+  Position: 
+  Prompt:   
+
+=== Module_2_Historical_Foundations / Lesson_4_ConvergenceAndValidation ===
+  Src:      ../../assets/Images/Modules/Module_2/Lesson_4/isness_particles.jpg
+  Alt:      
+  Position: 
+  Prompt:   
+
+=== Module_2_Historical_Foundations / Lesson_4_ConvergenceAndValidation ===
+  Src:      ../../assets/Images/Modules/Module_2/Lesson_4/deepdream_brain.jpg
+  Alt:      
+  Position: 
+  Prompt:   
+
+=== Module_3_ScientificUnderstanding / Lesson_1_TheoriesOfConsciousness ===
+  Src:      ../assets/images/module3/global_workspace.jpg
+  Alt:      Abstract visualization of a central glowing workspace in a neural network
+  Position: 
+  Prompt:   
+
+=== Module_3_ScientificUnderstanding / Lesson_1_TheoriesOfConsciousness ===
+  Src:      ../assets/images/module3/integrated_information.jpg
+  Alt:      Abstract visualization of multiple sensory input streams weaving together
+  Position: 
+  Prompt:   
+
+=== Module_3_ScientificUnderstanding / Lesson_1_TheoriesOfConsciousness ===
+  Src:      ../assets/images/module3/predictive_brain.jpg
+  Alt:      Abstract visualization of a brain projecting predictions and receiving data
+  Position: 
+  Prompt:   
+
+=== Module_3_ScientificUnderstanding / Lesson_1_TheoriesOfConsciousness ===
+  Src:      ../assets/images/module3/vr_prediction.jpg
+  Alt:      Person in VR headset with brain prediction model overlay
+  Position: 
+  Prompt:   
+
+=== Module_3_ScientificUnderstanding / Lesson_1_TheoriesOfConsciousness ===
+  Src:      ../assets/images/module3/embodied_avatar.jpg
+  Alt:      Split view comparing normal human and energy body avatar
+  Position: 
+  Prompt:   
+
+=== Module_3_ScientificUnderstanding / Lesson_2_ScienceOfPresence ===
+  Src:      ../assets/images/module3/presence_vs_screen.jpg
+  Alt:      Split composition showing engaged VR user vs passive user
+  Position: 
+  Prompt:   
+
+=== Module_3_ScientificUnderstanding / Lesson_2_ScienceOfPresence ===
+  Src:      ../assets/images/module3/slater_model.jpg
+  Alt:      Diagram showing Place Illusion and Plausibility Illusion overlap
+  Position: 
+  Prompt:   
+
+=== Module_3_ScientificUnderstanding / Lesson_2_ScienceOfPresence ===
+  Src:      ../assets/images/module3/rubber_hand_illusion.jpg
+  Alt:      Clinical research visualization of the Rubber Hand Illusion
+  Position: 
+  Prompt:   
+
+=== Module_3_ScientificUnderstanding / Lesson_2_ScienceOfPresence ===
+  Src:      ../assets/images/module3/full_body_vr.jpg
+  Alt:      Person in VR headset looking at virtual avatar body forming
+  Position: 
+  Prompt:   
+
+=== Module_3_ScientificUnderstanding / Lesson_2_ScienceOfPresence ===
+  Src:      ../assets/images/module3/proteus_effect.jpg
+  Alt:      Conceptual visualization of the Proteus Effect with avatar versions
+  Position: 
+  Prompt:   
+
+=== Module_3_ScientificUnderstanding / Lesson_3_MechanismsOfAction ===
+  Src:      ../assets/images/module3/attentional_capture.jpg
+  Alt:      Abstract visualization of attention being claimed by immersive space
+  Position: 
+  Prompt:   
+
+=== Module_3_ScientificUnderstanding / Lesson_3_MechanismsOfAction ===
+  Src:      ../assets/images/module3/default_mode_network.jpg
+  Alt:      Abstract brain visualization highlighting the Default Mode Network
+  Position: 
+  Prompt:   
+
+=== Module_3_ScientificUnderstanding / Lesson_3_MechanismsOfAction ===
+  Src:      ../assets/images/module3/emotional_regulation.jpg
+  Alt:      A person in a VR headset with emotional tone flowing from environment into body
+  Position: 
+  Prompt:   
+
+=== Module_3_ScientificUnderstanding / Lesson_3_MechanismsOfAction ===
+  Src:      ../assets/images/module3/perspective_shift.jpg
+  Alt:      Conceptual visualization showing a person transitioning through 3 viewpoints
+  Position: 
+  Prompt:   
+
+=== Module_3_ScientificUnderstanding / Lesson_3_MechanismsOfAction ===
+  Src:      ../assets/images/module3/multimodal_synchrony.jpg
+  Alt:      Abstract visualization of multiple sensory input streams converging
+  Position: 
+  Prompt:   
+
+=== Module_3_ScientificUnderstanding / Lesson_4_ResearchEvidence ===
+  Src:      ../../assets/M3_L4_ML1_PD_SharedAbstractVirtualEnvironment.png
+  Alt:      Abstract VR visualization showing four to five glowing particle-body avatars in a shared dark geometric space
+  Position: 
+  Prompt:   
+
+=== Module_3_ScientificUnderstanding / Lesson_4_ResearchEvidence ===
+  Src:      ../../assets/M3_L4_ML2_PD_NeuralSignaturesEEG.png
+  Alt:      Abstract EEG waveform visualization showing three distinct neural signatures: frontal regions, alpha wave patterns, and Default Mode Network modulation
+  Position: 
+  Prompt:   
+
+=== Module_3_ScientificUnderstanding / Lesson_4_ResearchEvidence ===
+  Src:      ../../assets/M3_L4_ML3_PD_EvidenceSpectrumInfographic.png
+  Alt:      A horizontal spectrum visualization showing an evidence continuum from Established Evidence on the left to Emerging Evidence on the right
+  Position: 
+  Prompt:   
+
+=== Module_4_TheLandscape / Lesson_1_PurposeBuiltPlatforms ===
+  Src:      placeholder-meditation.jpg
+  Alt:      Peaceful VR meditation scene
+  Position: left
+  Prompt:   Peaceful VR meditation scene - person sitting in lotus position wearing VR headset, surrounded by soft glowing mandala patterns and gentle particle effects, serene expression, warm lighting, purple and teal color palette, sense of calm focus and daily wellness practice, 16:9 aspect ratio
+
+=== Module_4_TheLandscape / Lesson_1_PurposeBuiltPlatforms ===
+  Src:      placeholder-clinical.jpg
+  Alt:      Clinical VR therapy session
+  Position: right
+  Prompt:   Clinical VR therapy session - professional therapist with tablet monitoring patient in VR headset, calm medical office setting with certificates on wall, patient appears focused but comfortable, clean modern aesthetic, professional and reassuring tone, sense of evidence-based care, 16:9 aspect ratio
+
+=== Module_4_TheLandscape / Lesson_1_PurposeBuiltPlatforms ===
+  Src:      placeholder-biofeedback.jpg
+  Alt:      Biofeedback VR visualization
+  Position: full-width
+  Prompt:   Biofeedback VR visualization - person wearing VR headset and EEG sensor band, heart rate monitor visible on wrist, virtual environment display showing real-time responsive patterns (flowing colors, expanding/contracting geometries reacting to heartbeat), high-tech yet organic aesthetic, purple/teal sacred geometry influences, sense of body-technology integration, 16:9 aspect ratio
+
+=== Module_4_TheLandscape / Lesson_1_PurposeBuiltPlatforms ===
+  Src:      placeholder-transformational.jpg
+  Alt:      Transformational VR experience
+  Position: left
+  Prompt:   Transformational VR experience - person in VR headset with facilitator nearby (watchful presence in background), immersive abstract environment visible through translucent overlay showing fractal patterns and dissolving boundaries, sense of profound altered state but safe container, sacred geometry, mystical aesthetic, both expansive and grounded feeling, 16:9 aspect ratio
+
+=== Module_4_TheLandscape / Lesson_1_PurposeBuiltPlatforms ===
+  Src:      placeholder-spectrum.jpg
+  Alt:      Spectrum of Cyberdelic Categories
+  Position: full-width
+  Prompt:   Horizontal spectrum visualization showing four cyberdelic categories flowing into each other - left side labeled CLINICAL (medical cross icon, structured feeling), transitioning through WELLNESS & MINDFULNESS (lotus flower icon, accessible feeling), to BIOFEEDBACK-ENHANCED (heartbeat + brain wave icon, tech-enhanced feeling), to EXPLORATORY & TRANSFORMATIONAL (mandala/sacred geometry icon, mystical feeling). Gradient background from cool clinical blue through warm wellness purple/teal to deeper mystical indigo. Clean infographic style, 16:9 aspect ratio
+
+=== Module_4_TheLandscape / Lesson_1_PurposeBuiltPlatforms ===
+  Src:      placeholder-tripp.jpg
+  Alt:      Abstract colorful immersive VR environment representing TRIPP's aesthetic
+  Position: left
+  Prompt:   Abstract colorful immersive VR environment representing TRIPP's aesthetic - flowing geometric patterns in vibrant purple, teal, pink, orange gradients, sense of movement and energy, kaleidoscopic visual richness, floating particles and luminous shapes, engaging and dynamic feeling, 16:9 aspect ratio
+
+=== Module_4_TheLandscape / Lesson_1_PurposeBuiltPlatforms ===
+  Src:      placeholder-floatvr.jpg
+  Alt:      Dreamlike generative VR environment representing FloatVR's aesthetic
+  Position: right
+  Prompt:   Dreamlike generative VR environment representing FloatVR's aesthetic: otherworldly floating landscape with softly glowing abstract forms, bioluminescent creatures drifting through the scene, shifting pastel color palette transitioning through purples, teals, and warm ambers, sense of effortless drift and fascination rather than focused stillness, organic and flowing shapes without hard edges, one or two mysterious luminous creatures visible in mid-distance, 16:9 aspect ratio
+
+=== Module_4_TheLandscape / Lesson_1_PurposeBuiltPlatforms ===
+  Src:      placeholder-enosis.jpg
+  Alt:      Serene moonlit beach VR environment with floating jewel-like orbs
+  Position: full-width
+  Prompt:   Serene moonlit beach VR environment with softly glowing jewel-like orbs floating at chest height, patient in VR headset seated in clinical chair holding one of the luminous objects, therapist seated nearby with quiet attentive presence, warm low lighting, sense of both clinical safety and genuine wonder, abstract stars visible in the sky that mirror the floating jewels, 16:9 aspect ratio
+
+=== Module_4_TheLandscape / Lesson_1_PurposeBuiltPlatforms ===
+  Src:      placeholder-innerworld.jpg
+  Alt:      Innerworld peer support circle
+  Position: right
+  Prompt:   Warm inviting social VR environment showing diverse group of avatars in circle formation in virtual cozy space, avatars have gentle expressive body language, sense of peer connection rather than expert-to-student, inclusive aesthetic, 16:9 aspect ratio
+
+=== Module_4_TheLandscape / Lesson_2_ClinicalApplicationsAndBiofeedback ===
+  Src:      placeholder-vret-therapy.jpg
+  Alt:      Clinical VR exposure therapy session with therapist monitoring patient
+  Position: left
+  Prompt:   Clinical VR exposure therapy session - professional therapist (woman in her 40s, warm but focused expression) sitting beside patient in VR headset, therapist holding tablet showing session controls and patient's heart rate graph, patient appears engaged but slightly tense (hands gripping armrests), calm modern therapy office with plants and certificates on wall, sense of safe container for difficult work, natural lighting, professional medical aesthetic, 16:9 aspect ratio
+
+=== Module_4_TheLandscape / Lesson_2_ClinicalApplicationsAndBiofeedback ===
+  Src:      placeholder-snowworld.jpg
+  Alt:      Split view: Real hospital burn unit vs SnowWorld VR icy landscape
+  Position: full-width
+  Prompt:   Split composition - left half shows real hospital burn unit (sterile, clinical, person in bed receiving wound care treatment, medical staff in protective gear, sense of medical necessity but discomfort), right half shows the same person's perspective in SnowWorld VR (beautiful icy landscape, snowmen, playful snowball throwing, sense of wonder and distraction from pain), connecting line between the two sides showing the contrast, hope and innovation meeting medical reality, 16:9 aspect ratio
+
+=== Module_4_TheLandscape / Lesson_2_ClinicalApplicationsAndBiofeedback ===
+  Src:      placeholder-cybernetic-loop.jpg
+  Alt:      Diagram of the 5-step cybernetic feedback loop between user and VR system
+  Position: full-width
+  Prompt:   Circular diagram showing the five-step cybernetic feedback loop - starting with person's silhouette at top, moving clockwise through: (1) heart rate waveform emerging from chest, (2) wrist-worn sensor capturing signal, (3) floating algorithm visualization (geometric processing), (4) VR landscape responding with visual changes, (5) arrow back to person showing adjustment - continuous flow indicated by circular arrangement, purple/teal sacred geometry aesthetic, clean infographic style, sense of living system not mechanical process, 16:9 aspect ratio
+
+=== Module_4_TheLandscape / Lesson_2_ClinicalApplicationsAndBiofeedback ===
+  Src:      placeholder-hrv.jpg
+  Alt:      User with heart rate sensor in VR, visualization of HRV coherence waveform
+  Position: left
+  Prompt:   Person wearing VR headset with a small heart rate sensor clipped to their earlobe, calm focused expression, subtle heart rate variability coherence waveform overlaid in soft blue-green, the VR environment visible through a translucent layer showing an expanding floral landscape that responds to a smooth heartbeat rhythm, modern wellness aesthetic, 16:9 aspect ratio
+
+=== Module_4_TheLandscape / Lesson_2_ClinicalApplicationsAndBiofeedback ===
+  Src:      placeholder-heartmath.jpg
+  Alt:      HeartMath emWave sensor showing coherence waveform moving from jagged to smooth
+  Position: right
+  Prompt:   Split display showing HeartMath biofeedback in action : left side shows a small ear-clip sensor attached to a person's ear, right side shows a waveform visualization transitioning from jagged red incoherence to smooth flowing green coherence, overlaid on a soft VR environment of blooming flowers or expanding light patterns, sense of the nervous system being made visible, clinical but beautiful aesthetic, purple and teal tones, 16:9 aspect ratio
+
+=== Module_4_TheLandscape / Lesson_3_SocialVRAndTheCreatorEcosystem ===
+  Src:      placeholder-group-meditation.jpg
+  Alt:      Group of diverse people in VR headsets sitting in circle formation
+  Position: left
+  Prompt:   Group of diverse people in VR headsets sitting in circle formation, warm softly-lit room with plants and candles, visible sense of shared presence and mutual focus, each person appears calm but engaged, sense of collective container rather than isolated individuals, purple/teal ambient lighting, sacred communal aesthetic, overhead angle showing the full circle, 16:9 aspect ratio
+
+=== Module_4_TheLandscape / Lesson_3_SocialVRAndTheCreatorEcosystem ===
+  Src:      placeholder-isness.jpg
+  Alt:      Abstract energy avatar forms in a shared virtual space representing Isness-D
+  Position: left
+  Prompt:   Abstract glowing energy forms representing human presences in a shared dark virtual space, no humanoid features visible, each form a distinct luminous color, sense of collective presence and boundary dissolution, sacred geometry in the background, deep space aesthetic, feeling of mystical shared ritual without identifiable faces or bodies, purple and teal palette, 16:9 aspect ratio
+
+=== Module_4_TheLandscape / Lesson_3_SocialVRAndTheCreatorEcosystem ===
+  Src:      placeholder-anuma.jpg
+  Alt:      Group of participants in VR headsets during a facilitated aNUma XR session
+  Position: right
+  Prompt:   Small group of diverse participants seated in a circle, each wearing Meta Quest VR headsets, softly lit studio space with ambient purple and teal lighting, a guide visible at the edge of the frame in a facilitative posture, sense of shared inner journey and collective depth, calm and focused body language, sacred geometry subtle in background, 16:9 aspect ratio
+
+=== Module_4_TheLandscape / Lesson_3_SocialVRAndTheCreatorEcosystem ===
+  Src:      placeholder-innerworld-circle.jpg
+  Alt:      Peer support group in Innerworld
+  Position: left
+  Prompt:   Warm inviting virtual community space - diverse group of avatars seated in comfortable circle, soft ambient lighting with plants and calming colors, avatars show open body language suggesting vulnerability and trust, no single figure dominating (peer model not expert-to-student), sense of emotional safety and mutual support, inclusive and accessible design, 16:9 aspect ratio
+
+=== Module_4_TheLandscape / Lesson_4_SpecializedApplicationsAndHardware ===
+  Src:      placeholder-flowborne.jpg
+  Alt:      Person in VR headset floating through a glowing low-polygon landscape, movement powered by breath
+  Position: left
+  Prompt:   Person in Meta Quest VR headset floating gently through an enchanting low-polygon virtual landscape : soft grassy hills, glowing flowers, warm amber and teal lighting, sense of effortless movement driven by slow deep breathing, the path forward illuminated with each exhale, peaceful and contemplative mood, no additional hardware visible (no chest belt or EEG device), clean and accessible aesthetic, 16:9 aspect ratio
+
+=== Module_4_TheLandscape / Lesson_4_SpecializedApplicationsAndHardware ===
+  Src:      placeholder-hoame.jpg
+  Alt:      Virtual meditation studio with an instructor leading a breathwork session, participants visible in shared space
+  Position: right
+  Prompt:   Virtual meditation studio in VR : a calm, beautifully lit space with a visible instructor avatar sitting at the front in a teacher's posture, two or three participant avatars seated in a semicircle, warm golden and purple ambient lighting, candles or soft light sources, sense of genuine studio presence and human guidance rather than solo app use, serene and professional, 16:9 aspect ratio
+
+=== Module_4_TheLandscape / Lesson_4_SpecializedApplicationsAndHardware ===
+  Src:      placeholder-nature-vr.jpg
+  Alt:      Split view: Serene forest exploration vs. majestic underwater whale encounter
+  Position: full-width
+  Prompt:   Split composition nature VR scene - left half shows person walking through serene forest VR environment (sunlight through trees, ferns, sense of peaceful exploration), right half shows person encountering majestic blue whale in underwater VR scene (sense of awe and scale, whale making eye contact), both figures show visible emotional response and presence, contrasting gentle restoration vs. intense awe, 16:9 aspect ratio
+
+=== Module_4_TheLandscape / Lesson_4_SpecializedApplicationsAndHardware ===
+  Src:      placeholder-experimental-vr.jpg
+  Alt:      Abstract VR scene depicting ego dissolution
+  Position: left
+  Prompt:   Abstract experimental VR consciousness scene - person in VR headset experiencing profound altered state (body language shows both opening and vulnerability), environment shows dissolving boundaries and geometric abstractions representing ego dissolution, sense of intensity but contained space, facilitator presence subtly visible in background (protective container), mystical aesthetic with sacred geometry, both expansive and grounded simultaneously, 16:9 aspect ratio
+
+=== Module_4_TheLandscape / Lesson_4_SpecializedApplicationsAndHardware ===
+  Src:      placeholder-headset-comparison.jpg
+  Alt:      Side-by-side comparison of Quest 3S, Quest 3, Pico 4, and PSVR2
+  Position: full-width
+  Prompt:   Clean product comparison layout - four VR headsets displayed side by side on neutral background (Meta Quest 3S, Meta Quest 3, Pico 4, PlayStation VR2), each labeled with price point, slight angle showing form factor, professional product photography style, honest comparison aesthetic (not promotional), sense of informed decision-making, 16:9 aspect ratio
+
+=== Module_5_TheCyberdelicEcosystem / Lesson_1_EcosystemConceptAndTechnologyProviders ===
+  Src:      placeholder-ecosystem-web.jpg
+  Alt:      Circular web diagram showing eight interconnected ecosystem components with energy flow lines
+  Position: full-width
+  Prompt:   A circular web diagram showing eight ecosystem component nodes connected by glowing lines with an organic, interconnected aesthetic, deep purple and teal palette with sacred geometry influence. Each node slightly glowing, lines between them suggesting active energy flow. Dark background. The feel of a living nervous system or mycelial network. 16:9 aspect ratio.
+
+=== Module_5_TheCyberdelicEcosystem / Lesson_1_EcosystemConceptAndTechnologyProviders ===
+  Src:      placeholder-meta-timeline.jpg
+  Alt:      Graphic depicting Meta Quest hardware with a data visualization overlay showing 77% market share.
+  Position: full-width
+  Prompt:   Meta Quest hardware headset shown in soft studio lighting. Floating above or around it are clean, minimal data visualization elements (charts, glowing percentages) emphasizing a dominant 77% market share. Corporate but sleek aesthetic, representing both hardware capability and market dominance. 16:9 aspect ratio.
+
+=== Module_5_TheCyberdelicEcosystem / Lesson_1_EcosystemConceptAndTechnologyProviders ===
+  Src:      placeholder-developer-quadrant.jpg
+  Alt:      Four developer categories visualized as a quadrant matrix
+  Position: full-width
+  Prompt:   A quadrant or spectrum visualizing four developer categories (Commercial, Research, Community, Adapted). Axes might be 'Mission vs. Resources' or 'Rigid vs. Experimental'. Clean, infographic aesthetic with cyberdelic color touches (teal and purple gradients). 16:9 aspect ratio.
+
+=== Module_5_TheCyberdelicEcosystem / Lesson_1_EcosystemConceptAndTechnologyProviders ===
+  Src:      placeholder-bidirectional-flow.jpg
+  Alt:      Diagram showing adjacent fields feeding into cyberdelics and cyberdelics feeding back
+  Position: full-width
+  Prompt:   A dynamic infographic showing 'Bidirectional Flow'. Several conceptual orbits (representing Healthcare, Gaming, Contemplative Traditions, Psychedelic Therapy) feeding energy/data streams into a central 'Cyberdelics' core, and that core radiating new energy back to the outer orbits. Clean, modern, glowing aesthetic against a dark background. 16:9 aspect ratio.
+
+=== Module_5_TheCyberdelicEcosystem / Lesson_2_KnowledgeProducersAndHumanInfrastructure ===
+  Src:      placeholder-research-institution.jpg
+  Alt:      Diverse academic setting with a researcher at a computer overlaid with brain scan imagery and a VR headset on the desk
+  Position: full-width
+  Prompt:   Diverse academic setting with a researcher at a computer overlaid with brain scan imagery, a VR headset on the desk beside books and journals, large windows suggesting an international institution. Purposeful, credible aesthetic. Purple/teal accent tones.
+
+=== Module_5_TheCyberdelicEcosystem / Lesson_2_KnowledgeProducersAndHumanInfrastructure ===
+  Src:      placeholder-research-clinical-loop.jpg
+  Alt:      Research-Clinical feedback loop diagram
+  Position: full-width
+  Prompt:   Visual diagram of the research-clinical feedback loop, arrows showing bidirectional flow between a research institution setting (left) and a clinical practice setting (right). Knowledge, validation, and protocols flow right; real-world outcome data, case studies, and hypotheses flow left. Clean, professional infographic aesthetic with subtle cyberdelic accents.
+
+=== Module_5_TheCyberdelicEcosystem / Lesson_2_KnowledgeProducersAndHumanInfrastructure ===
+  Src:      placeholder-three-phase-facilitation.jpg
+  Alt:      Three-phase facilitation arc showing Before, During, and After stages with key activities
+  Position: full-width
+  Prompt:   Three-phase facilitation visual, a timeline or arc showing Before / During / After with icons for key activities in each phase. Clean, professional infographic layout with subtle cyberdelic color accents (teal/purple). Emphasizes flow and progression through the facilitation container.
+
+=== Module_5_TheCyberdelicEcosystem / Lesson_2_KnowledgeProducersAndHumanInfrastructure ===
+  Src:      placeholder-facilitator-revenue.jpg
+  Alt:      Clean revenue table visualization for cyberdelic facilitation session types
+  Position: full-width
+  Prompt:   Clean, professional revenue table visualization for cyberdelic facilitation, simple, unintimidating design with session types and price ranges. Minimal, data-forward aesthetic. Subtle cyberdelic color accents (teal/purple highlights on header row). No clutter.
+
+=== Module_5_TheCyberdelicEcosystem / Lesson_2_KnowledgeProducersAndHumanInfrastructure ===
+  Src:      placeholder-peer-network.jpg
+  Alt:      Peer network diagram showing bidirectional knowledge flow
+  Position: full-width
+  Prompt:   Peer network diagram showing bidirectional knowledge flow between community members, as contrast with a hierarchical expert-novice structure for visual clarity. Connected nodes glowing, emphasizing 'collective intelligence' over 'singular authority' in a sleek cyberdelic design.
+
+=== Module_5_TheCyberdelicEcosystem / Lesson_3_EconomicInfrastructureAndRegulatoryLandscape ===
+  Src:      placeholder-reimbursement.jpg
+  Alt:      Split composition showing VR headset and health insurance card connected by glowing line
+  Position: full-width
+  Prompt:   Clean split composition with a standalone VR headset (Quest-style) on the left side against a soft purple gradient, a health insurance card on the right side against a soft teal gradient, connected in the center by a single glowing line. Professional, clinical aesthetic. No text overlay needed.
+
+=== Module_5_TheCyberdelicEcosystem / Lesson_3_EconomicInfrastructureAndRegulatoryLandscape ===
+  Src:      placeholder-data-privacy.jpg
+  Alt:      VR headset with data streams flowing to secure vault connected by encrypted pathway
+  Position: full-width
+  Prompt:   Split composition with the left side showing a VR headset with faint data streams flowing from it (biometric/behavioral data visualization), right side shows a secure data vault with a lock, connected by an encrypted-looking pathway. Clean, professional, slightly futuristic aesthetic. Purple/teal palette.
+
+=== Module_5_TheCyberdelicEcosystem / Lesson_4_EcosystemChallengesAndOpportunities ===
+  Src:      placeholder-fragmented-ecosystem.jpg
+  Alt:      Fragmented mosaic of VR headset logos with broken connection lines between them suggesting incompatibility
+  Position: full-width
+  Prompt:   A fragmented mosaic of VR headset logos (Meta, Apple, Pico, Sony represented as abstract shapes) with broken connection lines between them, suggesting incompatibility and isolation. Purple/teal palette. Technical but slightly frustrated aesthetic.
+
+=== Module_5_TheCyberdelicEcosystem / Lesson_4_EcosystemChallengesAndOpportunities ===
+  Src:      placeholder-equity-split.jpg
+  Alt:      Split visual showing one person using VR comfortably in a well resourced setting and an empty chair with a sealed headset box on the other side
+  Position: full-width
+  Prompt:   A split visual with one side showing someone comfortably using a VR headset in a well-resourced setting; on the other side, an empty chair with a headset box sealed shut. The visual gap should feel like an equity question, not a product comparison. Muted, thoughtful tone. Purple/teal palette.
+
+=== Module_5_TheCyberdelicEcosystem / Lesson_4_EcosystemChallengesAndOpportunities ===
+  Src:      placeholder-market-opportunity-arc.jpg
+  Alt:      Upward trending arc visualization with four labeled market segments, Healthcare, Corporate Wellness, Education, Mainstream Consumer
+  Position: full-width
+  Prompt:   An upward-trending arc visualization with four labeled segments (Healthcare, Corporate Wellness, Education, Mainstream Consumer), each with small icons suggesting the sector. Clean, optimistic infographic aesthetic. Purple/teal gradient. Forward-facing energy.
+
+=== Module_5_TheCyberdelicEcosystem / Lesson_4_EcosystemChallengesAndOpportunities ===
+  Src:      placeholder-convergence-streams.jpg
+  Alt:      Four glowing streams labeled Technology, Market, Knowledge, Community flowing toward a central convergence point radiating outward
+  Position: full-width
+  Prompt:   Four glowing 'streams' (labeled Technology, Market, Knowledge, Community) flowing toward a central convergence point that radiates outward as a bright pulse. Sacred geometry influence; the convergence point has a subtle mandala or geometric pattern at its center. Purple/teal palette, forward-moving energy. Optimistic, not triumphant.
+
+=== Module_5_TheCyberdelicEcosystem / Lesson_5_YourRoleInTheEcosystem ===
+  Src:      placeholder-six-pathways-overview.jpg
+  Alt:      A diverse group of six people engaged in different aspects of the cyberdelic field, a facilitator with a client, a researcher at a workstation, a developer at a laptop, someone in a VR headset, a clinician reviewing documents, a speaker at a podium
+  Position: full-width
+  Prompt:   A diverse group of six people engaged in different aspects of the cyberdelic field, a facilitator sitting with a client in a relaxed session space, a researcher at a dual monitor workstation with brain imagery on screen, a developer at a laptop with VR development software visible, someone immersed in a VR headset in a calm environment, a clinician reviewing documentation in a healthcare setting, a person speaking to a small engaged audience. The composition should feel collaborative and purposeful, not staged, but alive. Purple/teal palette. Sacred geometry subtle background influence.
+
+=== Module_5_TheCyberdelicEcosystem / Lesson_5_YourRoleInTheEcosystem ===
+  Src:      placeholder-facilitation-threephase.jpg
+  Alt:      Three phase timeline arc showing Preparation, Session, and Integration phases of facilitation with distinct visual treatment for each
+  Position: full-width
+  Prompt:   A three phase timeline arc with distinct visual panels for Preparation (calm intake space, documents, intention setting), Session (facilitator with hand near a client who is wearing a VR headset, attentive posture), and Integration (quiet conversation in a relaxed post session setting, journal visible). Warm, human aesthetic, clinical but not cold. Purple/teal palette.
+
+=== Module_5_TheCyberdelicEcosystem / Lesson_5_YourRoleInTheEcosystem ===
+  Src:      placeholder-research-scholar.jpg
+  Alt:      Academic researcher in an international research setting with brain imagery and research documents, purposeful and credible
+  Position: full-width
+  Prompt:   An academic researcher in an international research institute setting, dual monitors with neural imaging data, peer reviewed journal articles spread across a desk, a VR headset to the side for experimental use. The setting reflects a diverse, purposeful research environment. Crisp, credible aesthetic. Purple/teal palette with warm academic undertones.
+
+TOTAL IMAGE ASSETS: 97

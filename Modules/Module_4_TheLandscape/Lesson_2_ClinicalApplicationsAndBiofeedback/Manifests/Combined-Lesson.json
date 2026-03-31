@@ -1,4 +1,4 @@
-﻿{
+{
     "id": "combined_lesson_4_2",
     "title": "Clinical VR & Biofeedback: From Pain Labs to the Cybernetic Loop",
     "description": "Examine the clinical evidence base for VR in anxiety, PTSD, and pain management, then explore the biofeedback loop that elevates standard VR into a cyberdelic experience -- including all four biofeedback types and the Healium case study.",
@@ -198,25 +198,25 @@
                             },
                             {
                                 "id": "q1_b",
-                                "label": "It creates real physiological arousal needed for extinction learning.",
-                                "correct": true
-                            },
-                            {
-                                "id": "q1_c",
                                 "label": "It allows for more intense fears than imagination.",
                                 "correct": false
                             },
                             {
-                                "id": "q1_d",
+                                "id": "q1_c",
                                 "label": "It provides better insurance documentation.",
                                 "correct": false
+                            },
+                            {
+                                "id": "q1_d",
+                                "label": "It creates real physiological arousal needed for extinction learning.",
+                                "correct": true
                             }
                         ],
                         "synthesis": {
                             "q1_a": "<p>Engagement matters, but it's not the *therapeutic* mechanism. The key is what happens in the nervous system.</p>",
-                            "q1_c": "<p>Actually, therapists often want *controlled* intensity, not just maximum intensity. The key is the body's response, not just the scare factor.</p>",
-                            "q1_d": "<p>Administrative benefits are nice, but they don't explain why the *patient* gets better results.</p>",
-                            "q1_b": "<p><strong>Correct!</strong> VR triggers genuine physiological responses (sweating, heart rate) that imagination rarely matches. This arousal is essential for the brain to learn safety (extinction learning).</p>"
+                            "q1_b": "<p>Actually, therapists often want *controlled* intensity, not just maximum intensity. The key is the body's response, not just the scare factor.</p>",
+                            "q1_c": "<p>Administrative benefits are nice, but they don't explain why the *patient* gets better results.</p>",
+                            "q1_d": "<p><strong>Correct!</strong> VR triggers genuine physiological responses (sweating, heart rate) that imagination rarely matches. This arousal is essential for the brain to learn safety (extinction learning).</p>"
                         }
                     },
                     {
@@ -255,13 +255,13 @@
                         "options": [
                             {
                                 "id": "q1_a",
-                                "label": "HRV (Heart Rate Variability)",
-                                "correct": false
+                                "label": "EEG (Brainwaves)",
+                                "correct": true
                             },
                             {
                                 "id": "q1_b",
-                                "label": "EEG (Brainwaves)",
-                                "correct": true
+                                "label": "HRV (Heart Rate Variability)",
+                                "correct": false
                             },
                             {
                                 "id": "q1_c",
@@ -275,10 +275,10 @@
                             }
                         ],
                         "synthesis": {
-                            "q1_a": "<p>HRV measures stress resilience, which supports focus, but doesn't directly track attention states.</p>",
+                            "q1_a": "<p><strong>Correct!</strong> EEG directly measures brain states (Alpha, Beta, Gamma) associated with attention and concentration. It is the primary tool for focus training.</p>",
+                            "q1_b": "<p>HRV measures stress resilience, which supports focus, but doesn't directly track attention states.</p>",
                             "q1_c": "<p>Breathing supports focus, but doesn't measure cognitive attention state directly.</p>",
-                            "q1_d": "<p>GSR measures emotional arousal, which is ambiguous (could be excitement or anxiety).</p>",
-                            "q1_b": "<p><strong>Correct!</strong> EEG directly measures brain states (Alpha, Beta, Gamma) associated with attention and concentration. It is the primary tool for focus training.</p>"
+                            "q1_d": "<p>GSR measures emotional arousal, which is ambiguous (could be excitement or anxiety).</p>"
                         }
                     },
                     {
@@ -291,13 +291,13 @@
                             },
                             {
                                 "id": "q2_b",
-                                "label": "HeartMath measures HRV coherence and feeds it back in real-time, enabling active self-regulation training.",
-                                "correct": true
+                                "label": "Apple Watch doesn't measure heart rate continuously.",
+                                "correct": false
                             },
                             {
                                 "id": "q2_c",
-                                "label": "Apple Watch doesn't measure heart rate continuously.",
-                                "correct": false
+                                "label": "HeartMath measures HRV coherence and feeds it back in real-time, enabling active self-regulation training.",
+                                "correct": true
                             },
                             {
                                 "id": "q2_d",
@@ -307,9 +307,9 @@
                         ],
                         "synthesis": {
                             "q2_a": "<p>Both devices measure heart rate accurately. Raw heart rate accuracy isn't the distinction.</p>",
-                            "q2_c": "<p>Apple Watch does measure heart rate continuously. The issue isn't measurement frequency.</p>",
-                            "q2_d": "<p>Battery life is a practical concern but not the therapeutic reason to choose HeartMath.</p>",
-                            "q2_b": "<p><strong>Correct.</strong> The Apple Watch reports a number. HeartMath trains a skill. The emWave provides real-time coherence feedback designed specifically for self-regulation practice : the feedback loop is the point. Passive measurement and active biofeedback training are functionally different tools even when they're measuring the same physiological signal.</p>"
+                            "q2_b": "<p>Apple Watch does measure heart rate continuously. The issue isn't measurement frequency.</p>",
+                            "q2_c": "<p><strong>Correct.</strong> The Apple Watch reports a number. HeartMath trains a skill. The emWave provides real-time coherence feedback designed specifically for self-regulation practice : the feedback loop is the point. Passive measurement and active biofeedback training are functionally different tools even when they're measuring the same physiological signal.</p>",
+                            "q2_d": "<p>Battery life is a practical concern but not the therapeutic reason to choose HeartMath.</p>"
                         }
                     },
                     {

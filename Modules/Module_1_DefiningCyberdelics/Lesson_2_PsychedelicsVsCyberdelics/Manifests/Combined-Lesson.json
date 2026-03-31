@@ -239,6 +239,17 @@
                         "choices": [
                             {
                                 "id": "next",
+                                "label": "Reflect on This Lesson",
+                                "outcome": "reflection"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "reflection",
+                        "narrative": "<h3>Reflection</h3><p>Three consultations, three different right answers. No path was universally superior — what mattered in every case was <em>fit</em>. When substances pose medical risks, cyberdelics open a door. When intensive catalytic work is the goal and all options are available, psychedelics may be ideal. When frequency, control, and repeatability matter most, cyberdelics are unmatched.</p><p>The practitioner's skill lies not in preferring one path but in accurately reading which tool serves the person, the moment, and the goal. Complementary doesn't just mean both exist — it means knowing exactly when to use each.</p>",
+                        "choices": [
+                            {
+                                "id": "continue",
                                 "label": "View Synthesis",
                                 "outcome": "flow_next_module"
                             }
@@ -294,13 +305,13 @@
                             },
                             {
                                 "id": "q1_1_b",
-                                "label": "The intention to facilitate transformation",
-                                "correct": true
+                                "label": "Legal status",
+                                "correct": false
                             },
                             {
                                 "id": "q1_1_c",
-                                "label": "Legal status",
-                                "correct": false
+                                "label": "The intention to facilitate transformation",
+                                "correct": true
                             },
                             {
                                 "id": "q1_1_d",
@@ -325,18 +336,18 @@
                             },
                             {
                                 "id": "q1_2_b",
-                                "label": "Yes, research shows comparable scores",
-                                "correct": true
-                            },
-                            {
-                                "id": "q1_2_c",
                                 "label": "Maybe, but less profound",
                                 "correct": false
                             },
                             {
-                                "id": "q1_2_d",
+                                "id": "q1_2_c",
                                 "label": "Depends on belief system",
                                 "correct": false
+                            },
+                            {
+                                "id": "q1_2_d",
+                                "label": "Yes, research shows comparable scores",
+                                "correct": true
                             }
                         ],
                         "synthesis": {
@@ -351,13 +362,13 @@
                         "options": [
                             {
                                 "id": "q2_1_a",
-                                "label": "The intention to facilitate transformation",
-                                "correct": false
+                                "label": "The method used to create the experience",
+                                "correct": true
                             },
                             {
                                 "id": "q2_1_b",
-                                "label": "The method used to create the experience",
-                                "correct": true
+                                "label": "The intention to facilitate transformation",
+                                "correct": false
                             },
                             {
                                 "id": "q2_1_c",
@@ -387,13 +398,13 @@
                             },
                             {
                                 "id": "q2_2_b",
-                                "label": "Medical contraindications, legal considerations, or personal preference",
-                                "correct": true
+                                "label": "Because technology is more spiritual than chemistry",
+                                "correct": false
                             },
                             {
                                 "id": "q2_2_c",
-                                "label": "Because technology is more spiritual than chemistry",
-                                "correct": false
+                                "label": "Medical contraindications, legal considerations, or personal preference",
+                                "correct": true
                             },
                             {
                                 "id": "q2_2_d",

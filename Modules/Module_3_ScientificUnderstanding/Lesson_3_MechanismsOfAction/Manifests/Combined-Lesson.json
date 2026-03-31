@@ -181,6 +181,17 @@
                             {
                                 "id": "continue",
                                 "label": "Test Your Understanding",
+                                "outcome": "reflection"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "reflection",
+                        "narrative": "<h3>Reflection</h3><p>Marcus's session was everything a session should be. Attentional Capture established. DMN Modulation active. Emotional Regulation shaping the arc. Multimodal Synchrony coherent. Neuroplasticity window open. Six mechanisms firing — and nothing lasting to show for it three weeks later.</p><p>The absence of the seventh mechanism, Integration, didn't cancel what happened. It just left it floating. The session planted something real; the bridge from that experience to Marcus's daily life was never built. This is the most important insight in all of Module 3: the technology can activate six of the seven mechanisms without any practitioner involvement. The seventh one is almost entirely yours. Without it, the most powerful experience in the world remains just an experience.</p>",
+                        "choices": [
+                            {
+                                "id": "quiz",
+                                "label": "Test Your Understanding",
                                 "outcome": "flow_next_module"
                             }
                         ]
@@ -234,20 +245,20 @@
                         "options": [
                             {
                                 "id": "A",
-                                "label": "Perspective Shift; the environmental change produced a viewpoint change in the client"
-                            },
-                            {
-                                "id": "B",
                                 "label": "Emotional Regulation; the emotional tone of the environment became the emotional tone of the person in it",
                                 "correct": true
                             },
                             {
-                                "id": "C",
+                                "id": "B",
                                 "label": "Attentional Capture; the visual novelty displaced the client's grief processing temporarily"
                             },
                             {
-                                "id": "D",
+                                "id": "C",
                                 "label": "DMN Modulation; the environment quieted the Default Mode Network enough for the emotion to surface"
+                            },
+                            {
+                                "id": "D",
+                                "label": "Perspective Shift; the environmental change produced a viewpoint change in the client"
                             }
                         ],
                         "synthesis": {
@@ -266,8 +277,7 @@
                             },
                             {
                                 "id": "B",
-                                "label": "Replicated research shows that this kind of perspective-taking experience can reduce implicit bias, but the ethical design of the experience requires explicit rationale, appropriate preparation, and integration support",
-                                "correct": true
+                                "label": "The effect will only work if the client consciously agrees with the goals of the protocol before entering"
                             },
                             {
                                 "id": "C",
@@ -275,7 +285,8 @@
                             },
                             {
                                 "id": "D",
-                                "label": "The effect will only work if the client consciously agrees with the goals of the protocol before entering"
+                                "label": "Replicated research shows that this kind of perspective-taking experience can reduce implicit bias, but the ethical design of the experience requires explicit rationale, appropriate preparation, and integration support",
+                                "correct": true
                             }
                         ],
                         "synthesis": {
@@ -294,12 +305,12 @@
                             },
                             {
                                 "id": "B",
-                                "label": "It will produce a qualitatively different neurological state by increasing the coherence of sensory inputs, reducing the cognitive effort required to register the experience as real",
-                                "correct": true
+                                "label": "It will improve aesthetic quality but have no measurable effect on the depth of altered states"
                             },
                             {
                                 "id": "C",
-                                "label": "It will improve aesthetic quality but have no measurable effect on the depth of altered states"
+                                "label": "It will produce a qualitatively different neurological state by increasing the coherence of sensory inputs, reducing the cognitive effort required to register the experience as real",
+                                "correct": true
                             },
                             {
                                 "id": "D",

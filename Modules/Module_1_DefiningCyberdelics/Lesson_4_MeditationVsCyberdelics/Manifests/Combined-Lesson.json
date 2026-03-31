@@ -209,7 +209,7 @@
                             {
                                 "id": "continue",
                                 "label": "Complete Challenge",
-                                "outcome": "complete"
+                                "outcome": "reflection"
                             }
                         ]
                     },
@@ -220,7 +220,7 @@
                             {
                                 "id": "continue",
                                 "label": "Complete Challenge",
-                                "outcome": "complete"
+                                "outcome": "reflection"
                             }
                         ]
                     },
@@ -231,7 +231,18 @@
                             {
                                 "id": "continue",
                                 "label": "Complete Challenge",
-                                "outcome": "complete"
+                                "outcome": "reflection"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "reflection",
+                        "narrative": "<h3>Reflection</h3><p>Three people, three correct answers — none of them the same. The Newcomer needed simplicity and accessibility. The experienced Practitioner needed depth and amplification. The Athlete needed performance optimization, not consciousness exploration. Each answer required listening to the actual person in front of you, not applying a default recommendation.</p><p>This is the core skill cyberdelics practitioners develop: reading the difference between someone's stated goal, their readiness level, and which tool family genuinely serves them. The distinction between wellness tech and cyberdelics isn't about hierarchy — it's about precision match between person, intention, and tool.</p>",
+                        "choices": [
+                            {
+                                "id": "continue",
+                                "label": "Continue",
+                                "outcome": "flow_next_module"
                             }
                         ]
                     }
@@ -297,18 +308,18 @@
                             },
                             {
                                 "id": "q1_1_b",
-                                "label": "Immersive VR environments with biofeedback creating responsive, altered state-inducing experiences",
-                                "correct": true
-                            },
-                            {
-                                "id": "q1_1_c",
                                 "label": "Whether it costs money or is free",
                                 "correct": false
                             },
                             {
-                                "id": "q1_1_d",
+                                "id": "q1_1_c",
                                 "label": "How many users it has",
                                 "correct": false
+                            },
+                            {
+                                "id": "q1_1_d",
+                                "label": "Immersive VR environments with biofeedback creating responsive, altered state-inducing experiences",
+                                "correct": true
                             }
                         ],
                         "synthesis": {
@@ -323,13 +334,13 @@
                         "options": [
                             {
                                 "id": "q1_2_a",
-                                "label": "Purely meditation tech, never cyberdelic",
-                                "correct": false
+                                "label": "In the overlap zone between meditation tech and cyberdelics",
+                                "correct": true
                             },
                             {
                                 "id": "q1_2_b",
-                                "label": "In the overlap zone between meditation tech and cyberdelics",
-                                "correct": true
+                                "label": "Purely meditation tech, never cyberdelic",
+                                "correct": false
                             },
                             {
                                 "id": "q1_2_c",
@@ -359,13 +370,13 @@
                             },
                             {
                                 "id": "q2_1_b",
-                                "label": "Whether the focus is on optimizing function or exploring consciousness",
-                                "correct": true
+                                "label": "The specific biofeedback sensors being used",
+                                "correct": false
                             },
                             {
                                 "id": "q2_1_c",
-                                "label": "The specific biofeedback sensors being used",
-                                "correct": false
+                                "label": "Whether the focus is on optimizing function or exploring consciousness",
+                                "correct": true
                             },
                             {
                                 "id": "q2_1_d",
@@ -385,13 +396,13 @@
                         "options": [
                             {
                                 "id": "q2_2_a",
-                                "label": "No, technology is designed for one purpose and can't meaningfully serve another",
-                                "correct": false
+                                "label": "Yes, the same device can serve wellness or cyberdelic purposes depending on intention and context",
+                                "correct": true
                             },
                             {
                                 "id": "q2_2_b",
-                                "label": "Yes, the same device can serve wellness or cyberdelic purposes depending on intention and context",
-                                "correct": true
+                                "label": "No, technology is designed for one purpose and can't meaningfully serve another",
+                                "correct": false
                             },
                             {
                                 "id": "q2_2_c",

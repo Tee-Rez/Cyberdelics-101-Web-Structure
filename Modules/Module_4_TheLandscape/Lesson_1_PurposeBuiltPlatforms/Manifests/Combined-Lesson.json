@@ -400,13 +400,24 @@
                         ]
                     },
                     {
+                        "id": "reflection",
+                        "narrative": "<h3>Facilitation Reflection</h3><p>You just navigated three very different clients with one shared challenge: the right cyberdelic tool isn't determined by what's most impressive — it's determined by who is in front of you.</p><p>Jordan needed structure to solve a consistency problem. Maya needed a clinical referral because the depth she was seeking required a licensed container. David needed a specific, evidence-based pain tool — not general wellness, not psychedelic therapy.</p><p>Notice what the framework demanded of you in each case: you had to hold the full landscape in view while reading a specific person. That's the facilitator's skill. The platforms are fixed. The art is in the matching.</p><p><strong>Before you move to the quiz:</strong> Think of someone in your life who might benefit from one of these three platforms. What would you say to them, and why?</p>",
+                        "choices": [
+                            {
+                                "id": "to_quiz",
+                                "label": "Proceed to Quiz",
+                                "outcome": "complete"
+                            }
+                        ]
+                    },
+                    {
                         "id": "scenario_complete",
                         "narrative": "<h3>Simulation Complete</h3><p>You matched Jordan to structure (TRIPP), Maya to a clinical referral (Enosis VR protocols via psychedelic therapy clinic), and David to clinical specificity (Flowly). You understood which tools a facilitator can offer directly and which require a referral. You're ready to facilitate.</p>",
                         "choices": [
                             {
                                 "id": "continue",
-                                "label": "Proceed to Quiz",
-                                "outcome": "complete"
+                                "label": "Reflect",
+                                "outcome": "reflection"
                             }
                         ]
                     }
@@ -431,25 +442,25 @@
                             },
                             {
                                 "id": "q1_b",
-                                "label": "Meditation & Mindfulness",
-                                "correct": true
-                            },
-                            {
-                                "id": "q1_c",
                                 "label": "Biofeedback-Enhanced",
                                 "correct": false
                             },
                             {
-                                "id": "q1_d",
+                                "id": "q1_c",
                                 "label": "Exploratory & Transformational",
                                 "correct": false
+                            },
+                            {
+                                "id": "q1_d",
+                                "label": "Meditation & Mindfulness",
+                                "correct": true
                             }
                         ],
                         "synthesis": {
                             "q1_a": "<p>Not quite. Therapeutic & Clinical applications are for treating diagnosed conditions with professional oversight. Marcus is 'stressed but functional' and looking for a wellness practice, not medical treatment.</p>",
-                            "q1_c": "<p>Not the best fit. Biofeedback requires extra sensors and has a steeper curve. Marcus wants something simple and accessible for a morning routine.</p>",
-                            "q1_d": "<p>Incorrect. Exploratory experiences are for deep consciousness work and altered states, not a quick 15-minute stress reduction practice.</p>",
-                            "q1_b": "<p><strong>Correct!</strong> Marcus fits squarely in Meditation & Mindfulness - daily wellness practice, no diagnosis, beginner-friendly, designed for solo use. This is the accessible foundation he needs.</p>"
+                            "q1_b": "<p>Not the best fit. Biofeedback requires extra sensors and has a steeper curve. Marcus wants something simple and accessible for a morning routine.</p>",
+                            "q1_c": "<p>Incorrect. Exploratory experiences are for deep consciousness work and altered states, not a quick 15-minute stress reduction practice.</p>",
+                            "q1_d": "<p><strong>Correct!</strong> Marcus fits squarely in Meditation & Mindfulness - daily wellness practice, no diagnosis, beginner-friendly, designed for solo use. This is the accessible foundation he needs.</p>"
                         }
                     },
                     {
@@ -519,13 +530,13 @@
                         "options": [
                             {
                                 "id": "q2_a",
-                                "label": "TRIPP (Deep Mode)",
-                                "correct": false
+                                "label": "FloatVR",
+                                "correct": true
                             },
                             {
                                 "id": "q2_b",
-                                "label": "FloatVR",
-                                "correct": true
+                                "label": "TRIPP (Deep Mode)",
+                                "correct": false
                             },
                             {
                                 "id": "q2_c",
@@ -539,10 +550,10 @@
                             }
                         ],
                         "synthesis": {
-                            "q2_a": "<p>Not quite. While 'Deep' mode is intense, TRIPP's gamification and structure are exactly what Amir wants to avoid. He finds features distracting from his practice.</p>",
+                            "q2_a": "<p><strong>Correct!</strong> FloatVR suits Amir precisely because it makes no demands on him. He already knows how to be present. FloatVR's generative worlds give him something genuinely new each session without asking him to do anything differently than he already does. That's the match.</p>",
+                            "q2_b": "<p>Not quite. While 'Deep' mode is intense, TRIPP's gamification and structure are exactly what Amir wants to avoid. He finds features distracting from his practice.</p>",
                             "q2_c": "<p>There's no indication Amir is uncomfortable with technology: he's simply concerned about too many features getting in the way. And FloatVR doesn't require any tech sophistication beyond putting the headset on. The question isn't whether he can use it but whether it matches how he practices. Try again and focus on what FloatVR's philosophy actually demands of its users.</p>",
-                            "q2_d": "<p>Incorrect. An experienced meditator is perfectly capable of using VR. The key is finding a platform that doesn't interrupt his practice with unnecessary features.</p>",
-                            "q2_b": "<p><strong>Correct!</strong> FloatVR suits Amir precisely because it makes no demands on him. He already knows how to be present. FloatVR's generative worlds give him something genuinely new each session without asking him to do anything differently than he already does. That's the match.</p>"
+                            "q2_d": "<p>Incorrect. An experienced meditator is perfectly capable of using VR. The key is finding a platform that doesn't interrupt his practice with unnecessary features.</p>"
                         }
                     },
                     {
@@ -555,13 +566,13 @@
                             },
                             {
                                 "id": "q1_b",
-                                "label": "Enosis deploys VR at specific points in a clinical protocol - before and after the peak experience - to reduce anxiety and anchor insights",
-                                "correct": true
+                                "label": "Enosis provides a facilitated VR platform that therapists can offer independently, without requiring a substance session",
+                                "correct": false
                             },
                             {
                                 "id": "q1_c",
-                                "label": "Enosis provides a facilitated VR platform that therapists can offer independently, without requiring a substance session",
-                                "correct": false
+                                "label": "Enosis deploys VR at specific points in a clinical protocol - before and after the peak experience - to reduce anxiety and anchor insights",
+                                "correct": true
                             },
                             {
                                 "id": "q1_d",
@@ -571,8 +582,8 @@
                         ],
                         "synthesis": {
                             "q1_a": "<p>Enosis is not a replacement for the psychedelic experience and does not attempt to simulate it. The VR headset comes off before the substance reaches its peak effect. The goal is to work around the experience, not replicate it. The problem Enosis solves is about memory and integration, not generating the altered state itself.</p>",
-                            "q1_b": "<p><strong>Correct!</strong> Enosis uses two core VR tools at precise points in the protocol: SurrenderVR on dose day before the peak, to reduce anxiety and support the patient's ability to let go, and AnchoringVR after the peak resolves, to capture insights in the patient's own voice while the emotional quality of the experience is still accessible. Neither tool is used during the active psychedelic state.</p>",
-                            "q1_c": "<p>Enosis is not a standalone facilitated platform that practitioners can offer independently. Its tools are designed as adjuncts to sessions where a licensed medical provider has already administered a psychedelic substance. There is no Enosis session without the clinical context. This is why Enosis is a referral destination, not something a facilitator deploys directly.</p>",
+                            "q1_b": "<p>Enosis is not a standalone facilitated platform that practitioners can offer independently. Its tools are designed as adjuncts to sessions where a licensed medical provider has already administered a psychedelic substance. There is no Enosis session without the clinical context. This is why Enosis is a referral destination, not something a facilitator deploys directly.</p>",
+                            "q1_c": "<p><strong>Correct!</strong> Enosis uses two core VR tools at precise points in the protocol: SurrenderVR on dose day before the peak, to reduce anxiety and support the patient's ability to let go, and AnchoringVR after the peak resolves, to capture insights in the patient's own voice while the emotional quality of the experience is still accessible. Neither tool is used during the active psychedelic state.</p>",
                             "q1_d": "<p>Enosis is not a consumer app and does not attempt to simulate psychedelic states visually. The environments used, particularly AnchoringVR, are deliberately calm and neutral: a simple beachside scene with floating objects. The design priority is safety and ease of use during a vulnerable post-peak window, not visual intensity.</p>"
                         }
                     },
@@ -586,24 +597,25 @@
                             },
                             {
                                 "id": "q2_b",
-                                "label": "Pro: Authentic Connection / Con: Variable Quality",
-                                "correct": true
-                            },
-                            {
-                                "id": "q2_c",
                                 "label": "Pro: Convenience / Con: Less effective",
                                 "correct": false
                             },
                             {
-                                "id": "q2_d",
+                                "id": "q2_c",
                                 "label": "Pro: No training / Con: Replaces therapy",
                                 "correct": false
+                            },
+                            {
+                                "id": "q2_d",
+                                "label": "Pro: Authentic Connection / Con: Variable Quality",
+                                "correct": true
                             }
                         ],
                         "synthesis": {
                             "q2_a": "<p>It's not just about cost, and safety standards do exist.</p>",
-                            "q2_c": "<p>Effectiveness is different, not 'less'. Different tools for different jobs.</p>",
-                            "q2_b": "<p><strong>Correct!</strong> The power is shared lived experience. The risk is that volunteers have different skill levels and aren't equipped for acute crises.</p>"
+                            "q2_b": "<p>Effectiveness is different, not 'less'. Different tools for different jobs.</p>",
+                            "q2_c": "<p>While training varies, that's part of the quality concern — not a standalone benefit/risk framing.</p>",
+                            "q2_d": "<p><strong>Correct!</strong> The power is shared lived experience. The risk is that volunteers have different skill levels and aren't equipped for acute crises.</p>"
                         }
                     }
                 ]

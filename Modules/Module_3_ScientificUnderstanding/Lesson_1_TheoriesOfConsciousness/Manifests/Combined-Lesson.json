@@ -1,4 +1,4 @@
-﻿{
+{
     "id": "combined_lesson_3_1",
     "title": "Theories of Consciousness: Four Frameworks for Understanding Altered States",
     "description": "Master the four major theories of consciousness that explain how VR produces altered states -- Global Workspace, Integrated Information, Predictive Processing, and Embodied Cognition -- then apply them in a real practitioner scenario.",
@@ -147,6 +147,17 @@
                             {
                                 "id": "continue",
                                 "label": "Test Your Understanding",
+                                "outcome": "reflection"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "reflection",
+                        "narrative": "<h3>Reflection</h3><p>Raquel's session was best explained not by one framework, but by two working together. Global Workspace Theory explained why the memory went quiet; it was crowded out, not suppressed. Predictive Processing explained why the boundary between self and space dissolved; her brain had no prior model for the environment, so it stopped trying to assert the usual boundaries.</p><p>This is what it means to hold multiple frameworks as a practitioner. Neither theory alone answered Raquel's question completely. Together, they gave her an explanation she could use, and gave you a map for what to design toward next time. Different theories illuminate different parts of the same experience. The practitioner who knows all four tools is the one who can reach the right one when the client needs it.</p>",
+                        "choices": [
+                            {
+                                "id": "quiz",
+                                "label": "Test Your Understanding",
                                 "outcome": "flow_next_module"
                             }
                         ]
@@ -204,12 +215,12 @@
                             },
                             {
                                 "id": "B",
-                                "label": "The immersive environment occupied the global workspace so fully that self-referential content lost broadcast priority",
-                                "correct": true
+                                "label": "Prolonged headset use temporarily disrupts neural activity in the prefrontal cortex"
                             },
                             {
                                 "id": "C",
-                                "label": "Prolonged headset use temporarily disrupts neural activity in the prefrontal cortex"
+                                "label": "The immersive environment occupied the global workspace so fully that self-referential content lost broadcast priority",
+                                "correct": true
                             },
                             {
                                 "id": "D",
@@ -232,16 +243,16 @@
                             },
                             {
                                 "id": "B",
-                                "label": "IIT suggests that synchronizing multiple sensory channels produces richer experiential states than improving any single channel in isolation",
-                                "correct": true
-                            },
-                            {
-                                "id": "C",
                                 "label": "Resolution improvements are too expensive to matter at current hardware price points"
                             },
                             {
-                                "id": "D",
+                                "id": "C",
                                 "label": "IIT proves that sound design is more important than visual design in every case"
+                            },
+                            {
+                                "id": "D",
+                                "label": "IIT suggests that synchronizing multiple sensory channels produces richer experiential states than improving any single channel in isolation",
+                                "correct": true
                             }
                         ],
                         "synthesis": {
@@ -256,16 +267,16 @@
                         "options": [
                             {
                                 "id": "A",
-                                "label": "The client has developed tolerance to VR, similar to how people develop drug tolerance"
-                            },
-                            {
-                                "id": "B",
                                 "label": "The client's brain has built a well-fitted prediction model for the environment, reducing prediction errors and diminishing the conditions for altered perception",
                                 "correct": true
                             },
                             {
-                                "id": "C",
+                                "id": "B",
                                 "label": "The headset's display quality has degraded over time, reducing immersion"
+                            },
+                            {
+                                "id": "C",
+                                "label": "The client has developed tolerance to VR, similar to how people develop drug tolerance"
                             },
                             {
                                 "id": "D",
@@ -316,16 +327,16 @@
                             },
                             {
                                 "id": "B",
-                                "label": "Predictive Processing suggests that familiar, realistic environments may actually generate fewer prediction errors than novel abstract ones, reducing altered state potential",
-                                "correct": true
-                            },
-                            {
-                                "id": "C",
                                 "label": "Visual realism is irrelevant because audio design is the primary driver of prediction error"
                             },
                             {
-                                "id": "D",
+                                "id": "C",
                                 "label": "Predictive Processing only applies to clinical VR, not cyberdelic applications"
+                            },
+                            {
+                                "id": "D",
+                                "label": "Predictive Processing suggests that familiar, realistic environments may actually generate fewer prediction errors than novel abstract ones, reducing altered state potential",
+                                "correct": true
                             }
                         ],
                         "synthesis": {
@@ -344,12 +355,12 @@
                             },
                             {
                                 "id": "B",
-                                "label": "Multiple frameworks provide complementary explanations because different theories illuminate different aspects of the same experience, and no single theory currently accounts for all cyberdelic phenomena",
-                                "correct": true
+                                "label": "The choice of theory doesn't matter as long as the practitioner believes in it sincerely"
                             },
                             {
                                 "id": "C",
-                                "label": "The choice of theory doesn't matter as long as the practitioner believes in it sincerely"
+                                "label": "Multiple frameworks provide complementary explanations because different theories illuminate different aspects of the same experience, and no single theory currently accounts for all cyberdelic phenomena",
+                                "correct": true
                             },
                             {
                                 "id": "D",

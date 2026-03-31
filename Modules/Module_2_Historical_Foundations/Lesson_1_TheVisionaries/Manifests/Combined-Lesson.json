@@ -138,6 +138,17 @@
                         "choices": [
                             {
                                 "id": "finish_scenario",
+                                "label": "Reflect on This Journey",
+                                "outcome": "reflection"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "reflection",
+                        "narrative": "<h3>Reflection</h3><p>All three paths through 1995 led to the same truth: Leary's vision was real, but only those who held onto it — or who remained open to recognizing <em>when</em> it arrived — were positioned to participate in its validation. The dismissers missed the inflection point. The cautious hedgers bridged both worlds. The full believers built the foundations others would stand on.</p><p>This is the lesson of every field that matures across decades: the gap between vision and proof requires someone to carry the torch. In 1995, the technology wasn't ready. By 2020, the science confirmed what Leary saw. The distance between those two moments was filled by people who didn't abandon the question.</p>",
+                        "choices": [
+                            {
+                                "id": "continue",
                                 "label": "Establish Foundation",
                                 "outcome": "flow_next_module"
                             }
@@ -291,18 +302,18 @@
                             },
                             {
                                 "id": "q1_b",
-                                "label": "\"The PC is the LSD of the 1990s\" - computers as consciousness tools",
-                                "outcome": "quiz1_q2"
-                            },
-                            {
-                                "id": "q1_c",
                                 "label": "Everyone should abandon meditation and use only technology",
                                 "outcome": "quiz1_q1_wrong_c"
                             },
                             {
-                                "id": "q1_d",
+                                "id": "q1_c",
                                 "label": "Psychedelics would soon be legalized worldwide",
                                 "outcome": "quiz1_q1_wrong_d"
+                            },
+                            {
+                                "id": "q1_d",
+                                "label": "\"The PC is the LSD of the 1990s\" - computers as consciousness tools",
+                                "outcome": "quiz1_q2"
                             }
                         ]
                     },
@@ -420,13 +431,13 @@
                             },
                             {
                                 "id": "q1_b",
-                                "label": "The goal should be transformation of the user through experience, not just usability",
-                                "outcome": "quiz2_q2"
+                                "label": "Virtual reality should completely replace physical reality",
+                                "outcome": "quiz2_q1_wrong_c"
                             },
                             {
                                 "id": "q1_c",
-                                "label": "Virtual reality should completely replace physical reality",
-                                "outcome": "quiz2_q1_wrong_c"
+                                "label": "The goal should be transformation of the user through experience, not just usability",
+                                "outcome": "quiz2_q2"
                             },
                             {
                                 "id": "q1_d",

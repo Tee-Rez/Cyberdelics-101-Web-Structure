@@ -114,6 +114,17 @@
                             {
                                 "id": "complete",
                                 "label": "Continue to Summary",
+                                "outcome": "reflection"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "reflection",
+                        "narrative": "<h3>Reflection</h3><p>Yusuf's question — 'What actually happened in my brain just now?' — was an invitation, not a challenge. He wasn't asking you to defend the session. He was asking you to meet him at the level he operates at: precise, evidence-based, honest about what we know and what we don't.</p><p>The practitioner who defaulted to jargon, overclaiming, or epistemic retreat all failed the same test: they prioritized how they wanted to appear over what Yusuf actually needed. Calibrated communication isn't about having all the answers. It's about being accurate with the answers you have, clear about the ones you don't, and willing to be useful at that boundary. That's what made Yusuf say 'I can work with that' — and that moment of genuine engagement is the foundation of everything that follows.</p>",
+                        "choices": [
+                            {
+                                "id": "quiz",
+                                "label": "Continue to Summary",
                                 "outcome": "complete"
                             }
                         ]
@@ -134,13 +145,13 @@
                         "options": [
                             {
                                 "id": "opt_a",
-                                "label": "The client has developed a therapeutic relationship with the practitioner that is creating dependency and reducing the session's impact",
-                                "correct": false
+                                "label": "The environment has become familiar enough that attentional capture is weaker; the brain has mapped it sufficiently to generate fewer prediction errors, reducing the depth of immersion",
+                                "correct": true
                             },
                             {
                                 "id": "opt_b",
-                                "label": "The environment has become familiar enough that attentional capture is weaker; the brain has mapped it sufficiently to generate fewer prediction errors, reducing the depth of immersion",
-                                "correct": true
+                                "label": "The client has developed a therapeutic relationship with the practitioner that is creating dependency and reducing the session's impact",
+                                "correct": false
                             },
                             {
                                 "id": "opt_c",
@@ -201,13 +212,13 @@
                             },
                             {
                                 "id": "opt_b",
-                                "label": "Your brain was fully occupied processing a coherent and novel environment; the network associated with self-referential thought quiets when attentional resources are fully engaged elsewhere. You didn't suppress the inner critic; the environment claimed your attention completely",
-                                "correct": true
+                                "label": "The experience produced a mild dissociative state that temporarily disconnected self-critical thinking from conscious awareness",
+                                "correct": false
                             },
                             {
                                 "id": "opt_c",
-                                "label": "The experience produced a mild dissociative state that temporarily disconnected self-critical thinking from conscious awareness",
-                                "correct": false
+                                "label": "Your brain was fully occupied processing a coherent and novel environment; the network associated with self-referential thought quiets when attentional resources are fully engaged elsewhere. You didn't suppress the inner critic; the environment claimed your attention completely",
+                                "correct": true
                             },
                             {
                                 "id": "opt_d",

@@ -121,11 +121,22 @@
                     },
                     {
                         "id": "final_reflection",
-                        "narrative": "<h3>Final Reflection</h3><p>The gap years tested whether VR - and by extension, cyberdelics - would survive long enough to get its second chance. Those who kept working despite mainstream dismissal built the foundations for later success. The lesson: apparent stagnation often masks necessary preparation. Progress isn't always visible.</p>",
+                        "narrative": "<h3>Scenario Complete</h3><p>The gap years tested whether VR - and by extension, cyberdelics - would survive long enough to get its second chance. Those who kept working despite mainstream dismissal built the foundations for later success. The lesson: apparent stagnation often masks necessary preparation. Progress isn't always visible.</p>",
                         "choices": [
                             {
                                 "id": "start_quiz",
-                                "label": "Quite Revolution",
+                                "label": "Reflect on This",
+                                "outcome": "reflection"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "reflection",
+                        "narrative": "<h3>Reflection</h3><p>The gap years weren't empty — they were invisible. The technologies that eventually made cyberdelics possible (smartphone displays, gaming GPUs, cheap motion sensors) were advancing in adjacent industries, completely disconnected from VR's dormancy. The field didn't survive because the world kept watching it; it survived because a handful of true believers refused to stop working while everyone else had moved on.</p><p>This pattern recurs throughout the history of transformative technologies: the gap between a premature vision and its realized form is always filled by people who treat apparent stagnation as hidden preparation. If you're working on something that the world hasn't caught up to yet, this era is the precedent. Wilderness years are not evidence that you're wrong. They're often evidence that you're early.</p>",
+                        "choices": [
+                            {
+                                "id": "continue",
+                                "label": "The Quiet Revolution",
                                 "outcome": "flow_next_module"
                             }
                         ]
@@ -190,13 +201,13 @@
                             },
                             {
                                 "id": "q1_b",
-                                "label": "The technology wasn't ready - poor displays, high latency, motion sickness, and prohibitive costs",
-                                "outcome": "quiz1_q1_correct"
+                                "label": "People weren't interested in virtual experiences",
+                                "outcome": "quiz1_q1_feedback_c"
                             },
                             {
                                 "id": "q1_c",
-                                "label": "People weren't interested in virtual experiences",
-                                "outcome": "quiz1_q1_feedback_c"
+                                "label": "The technology wasn't ready - poor displays, high latency, motion sickness, and prohibitive costs",
+                                "outcome": "quiz1_q1_correct"
                             },
                             {
                                 "id": "q1_d",
@@ -325,13 +336,13 @@
                         "choices": [
                             {
                                 "id": "q1_a",
-                                "label": "They proved meditation was superior to all other practices",
-                                "outcome": "quiz2_q1_feedback_a"
+                                "label": "They made using technology FOR consciousness culturally acceptable and normal",
+                                "outcome": "quiz2_q1_correct"
                             },
                             {
                                 "id": "q1_b",
-                                "label": "They made using technology FOR consciousness culturally acceptable and normal",
-                                "outcome": "quiz2_q1_correct"
+                                "label": "They proved meditation was superior to all other practices",
+                                "outcome": "quiz2_q1_feedback_a"
                             },
                             {
                                 "id": "q1_c",
@@ -400,18 +411,18 @@
                             },
                             {
                                 "id": "q2_b",
-                                "label": "Phones are distraction devices, audio-only limits immersion, solo practice only, and users plateau",
-                                "outcome": "quiz2_q2_correct"
-                            },
-                            {
-                                "id": "q2_c",
                                 "label": "Traditional meditators rejected all digital tools",
                                 "outcome": "quiz2_q2_feedback_c"
                             },
                             {
-                                "id": "q2_d",
+                                "id": "q2_c",
                                 "label": "The apps required too much technical expertise to use",
                                 "outcome": "quiz2_q2_feedback_d"
+                            },
+                            {
+                                "id": "q2_d",
+                                "label": "Phones are distraction devices, audio-only limits immersion, solo practice only, and users plateau",
+                                "outcome": "quiz2_q2_correct"
                             }
                         ]
                     },

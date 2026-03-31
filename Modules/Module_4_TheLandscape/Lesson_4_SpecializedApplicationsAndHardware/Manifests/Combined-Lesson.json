@@ -202,25 +202,25 @@
                             },
                             {
                                 "id": "q1_b",
-                                "label": "Active vocal feedback loop",
-                                "correct": true
-                            },
-                            {
-                                "id": "q1_c",
                                 "label": "Higher audio quality",
                                 "correct": false
                             },
                             {
-                                "id": "q1_d",
+                                "id": "q1_c",
                                 "label": "Designed for psychedelics",
                                 "correct": false
+                            },
+                            {
+                                "id": "q1_d",
+                                "label": "Active vocal feedback loop",
+                                "correct": true
                             }
                         ],
                         "synthesis": {
                             "q1_a": "<p>Many apps use frequencies. That's not the unique mechanism.</p>",
-                            "q1_c": "<p>Quality matters, but doesn't change the *interaction*.</p>",
-                            "q1_d": "<p>It's a technology-based alternative, not a companion.</p>",
-                            "q1_b": "<p><strong>Correct!</strong> It creates a 'technodelic loop' where your own voice generates the environment in real-time. You are an active participant, not a passive listener.</p>"
+                            "q1_b": "<p>Quality matters, but doesn't change the *interaction*.</p>",
+                            "q1_c": "<p>It's a technology-based alternative, not a companion.</p>",
+                            "q1_d": "<p><strong>Correct!</strong> It creates a 'technodelic loop' where your own voice generates the environment in real-time. You are an active participant, not a passive listener.</p>"
                         }
                     },
                     {
@@ -233,7 +233,7 @@
                             },
                             {
                                 "id": "q2_b",
-                                "label": "Wavepaths",
+                                "label": "TRIPP",
                                 "correct": false
                             },
                             {
@@ -243,15 +243,15 @@
                             },
                             {
                                 "id": "q2_d",
-                                "label": "TRIPP",
+                                "label": "Wavepaths",
                                 "correct": false
                             }
                         ],
                         "synthesis": {
                             "q2_a": "<p>Soundself is for individual vocalization, not group breathing.</p>",
                             "q2_b": "<p>Wavepaths provides music, not visual breath pacing.</p>",
-                            "q2_d": "<p>TRIPP is primarily for solo wellness.</p>",
-                            "q2_c": "<p><strong>Correct!</strong> Othership is specifically designed for group facilitation, offering synchronized sessions with clear visual pacing for everyone.</p>"
+                            "q2_c": "<p><strong>Correct!</strong> Othership is specifically designed for group facilitation, offering synchronized sessions with clear visual pacing for everyone.</p>",
+                            "q2_d": "<p>TRIPP is primarily for solo wellness.</p>"
                         }
                     },
                     {
@@ -259,30 +259,30 @@
                         "options": [
                             {
                                 "id": "q1_a",
-                                "label": "High intensity (burning calories)",
-                                "correct": false
-                            },
-                            {
-                                "id": "q1_b",
-                                "label": "Clear goals + Challenge-skill balance",
-                                "correct": true
-                            },
-                            {
-                                "id": "q1_c",
                                 "label": "Long duration (45+ mins)",
                                 "correct": false
                             },
                             {
-                                "id": "q1_d",
+                                "id": "q1_b",
+                                "label": "High intensity (burning calories)",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_c",
                                 "label": "Social competition",
                                 "correct": false
+                            },
+                            {
+                                "id": "q1_d",
+                                "label": "Clear goals + Challenge-skill balance",
+                                "correct": true
                             }
                         ],
                         "synthesis": {
                             "q1_a": "Intensity without balance creates anxiety or exhaustion.",
-                            "q1_c": "Flow happens in minutes if conditions are right.",
-                            "q1_d": "Competition can help some, but isn't a requirement.",
-                            "q1_b": "<strong>Correct!</strong> When the challenge matches your skill and feedback is immediate, action merges with awareness."
+                            "q1_b": "Flow happens in minutes if conditions are right.",
+                            "q1_c": "Competition can help some, but isn't a requirement.",
+                            "q1_d": "<strong>Correct!</strong> When the challenge matches your skill and feedback is immediate, action merges with awareness."
                         }
                     },
                     {
@@ -290,13 +290,13 @@
                         "options": [
                             {
                                 "id": "q2_a",
-                                "label": "Supernatural (distraction)",
-                                "correct": false
+                                "label": "Nature Treks VR (exposure)",
+                                "correct": true
                             },
                             {
                                 "id": "q2_b",
-                                "label": "Nature Treks VR (exposure)",
-                                "correct": true
+                                "label": "Supernatural (distraction)",
+                                "correct": false
                             },
                             {
                                 "id": "q2_c",
@@ -310,10 +310,10 @@
                             }
                         ],
                         "synthesis": {
-                            "q2_a": "Distraction avoids the issue. Exposure engages it.",
+                            "q2_a": "<p><strong>Correct!</strong> It provides a safe, graded way to experience open spaces (70% effective restoration) without triggering the full panic of leaving home.</p>",
+                            "q2_b": "Distraction avoids the issue. Exposure engages it.",
                             "q2_c": "VR *is* a valid therapeutic step, significantly better than total isolation.",
-                            "q2_d": "Social support doesn't address the specific environment fear.",
-                            "q2_b": "<strong>Correct!</strong> It provides a safe, graded way to experience open spaces (70% effective restoration) without triggering the full panic of leaving home."
+                            "q2_d": "Social support doesn't address the specific environment fear."
                         }
                     },
                     {
@@ -321,13 +321,13 @@
                         "options": [
                             {
                                 "id": "q1_a",
-                                "label": "It replaces psychedelics perfectly.",
-                                "correct": false
+                                "label": "It produces comparable short-term effects (insight, catharsis).",
+                                "correct": true
                             },
                             {
                                 "id": "q1_b",
-                                "label": "It produces comparable short-term effects (insight, catharsis).",
-                                "correct": true
+                                "label": "It replaces psychedelics perfectly.",
+                                "correct": false
                             },
                             {
                                 "id": "q1_c",
@@ -341,9 +341,9 @@
                             }
                         ],
                         "synthesis": {
-                            "q1_a": "It's comparable, not identical.",
-                            "q1_c": "Intensity creates *more* need for prep.",
-                            "q1_b": "<strong>Correct!</strong> It validated that VR can induce states functionally similar to LSD/psilocybin in key dimensions."
+                            "q1_a": "<p><strong>Correct!</strong> It validated that VR can induce states functionally similar to LSD/psilocybin in key dimensions.</p>",
+                            "q1_b": "It's comparable, not identical.",
+                            "q1_c": "Intensity creates *more* need for prep."
                         }
                     },
                     {
@@ -462,13 +462,13 @@
                             },
                             {
                                 "id": "q1_b",
-                                "label": "Quest 3 has significantly better comfort/optics for long wear.",
-                                "correct": true
+                                "label": "Quest 3S requires a PC.",
+                                "correct": false
                             },
                             {
                                 "id": "q1_c",
-                                "label": "Quest 3S requires a PC.",
-                                "correct": false
+                                "label": "Quest 3 has significantly better comfort/optics for long wear.",
+                                "correct": true
                             },
                             {
                                 "id": "q1_d",
@@ -478,8 +478,8 @@
                         ],
                         "synthesis": {
                             "q1_a": "They run the same library.",
-                            "q1_c": "Both are standalone.",
-                            "q1_b": "<strong>Correct!</strong> For 60-minute sessions, the front-heavy Quest 3S becomes painful. Pancake lenses and balance justify the cost."
+                            "q1_b": "Both are standalone.",
+                            "q1_c": "<strong>Correct!</strong> For 60-minute sessions, the front-heavy Quest 3S becomes painful. Pancake lenses and balance justify the cost."
                         }
                     },
                     {

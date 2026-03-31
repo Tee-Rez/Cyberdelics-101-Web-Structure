@@ -1,4 +1,4 @@
-﻿{
+{
     "id": "combined_lesson_4_3",
     "title": "Social VR & the Creator Ecosystem: Amplification, Platforms & Quality",
     "description": "Understand why social VR amplifies consciousness work, how to match users to the right social contexts, and how to evaluate creators and content quality -- including the pipeline from creation tools to distribution channels.",
@@ -269,13 +269,24 @@
                         ]
                     },
                     {
+                        "id": "reflection",
+                        "narrative": "<h3>Facilitation Reflection</h3><p>Three people. Three needs. Three different matches — and the same small platform set.</p><p>Ava needed structure and predictability in a group container. Ben needed genuine depth — the kind that solo wellness apps can't produce. Carmen needed connection around a specific human experience, not a general consciousness journey.</p><p>What the scenario actually tested wasn't your platform knowledge. It was your ability to <em>read the person first</em> and let the platform choice follow from that reading.</p><p><strong>Before you continue:</strong> What signal in each profile made the correct recommendation obvious once you saw it? Naming that signal is how you build pattern recognition for future clients.</p>",
+                        "choices": [
+                            {
+                                "id": "to_quiz",
+                                "label": "Proceed to Lesson Quiz",
+                                "outcome": "complete"
+                            }
+                        ]
+                    },
+                    {
                         "id": "scenario_complete",
                         "narrative": "<h3>Scenarios Complete</h3><p>Three different needs, three different matches. Ava needed structure and predictability. Ben needed genuine depth. Carmen needed specific peer connection. The platform set is small. What changes is how precisely you read the person in front of you.</p>",
                         "choices": [
                             {
                                 "id": "continue",
-                                "label": "Proceed to Quiz",
-                                "outcome": "complete"
+                                "label": "Reflect",
+                                "outcome": "reflection"
                             }
                         ]
                     }
@@ -358,25 +369,25 @@
                             },
                             {
                                 "id": "q1_b",
-                                "label": "Isness-D",
-                                "correct": true
-                            },
-                            {
-                                "id": "q1_c",
                                 "label": "Innerworld",
                                 "correct": false
                             },
                             {
-                                "id": "q1_d",
+                                "id": "q1_c",
                                 "label": "All of them",
                                 "correct": false
+                            },
+                            {
+                                "id": "q1_d",
+                                "label": "Isness-D",
+                                "correct": true
                             }
                         ],
                         "synthesis": {
                             "q1_a": "<p>aNUma XR produces deep group states and is facilitated, but its design intent is guided inner journey rather than the specific synchronized ritual mechanism Isness-D uses to target collective effervescence.</p>",
-                            "q1_c": "<p>Innerworld creates genuine connection, but peer support is a different mechanism from the synchronized ritual and abstract avatar design Isness-D uses to dissolve ordinary social boundaries.</p>",
-                            "q1_d": "<p>All three create forms of shared experience, but design intention is what distinguishes them. Only one was built specifically to produce the mystical-state outcomes Durkheim described.</p>",
-                            "q1_b": "<p><strong>Correct!</strong> Isness-D uses abstract energy avatars and synchronized movement specifically to dissolve self-consciousness and induce collective mystical states. The 2020 MEQ-30 study validated that it does this reliably.</p>"
+                            "q1_b": "<p>Innerworld creates genuine connection, but peer support is a different mechanism from the synchronized ritual and abstract avatar design Isness-D uses to dissolve ordinary social boundaries.</p>",
+                            "q1_c": "<p>All three create forms of shared experience, but design intention is what distinguishes them. Only one was built specifically to produce the mystical-state outcomes Durkheim described.</p>",
+                            "q1_d": "<p><strong>Correct!</strong> Isness-D uses abstract energy avatars and synchronized movement specifically to dissolve self-consciousness and induce collective mystical states. The 2020 MEQ-30 study validated that it does this reliably.</p>"
                         }
                     },
                     {
@@ -415,13 +426,13 @@
                         "options": [
                             {
                                 "id": "q1_a",
-                                "label": "It's on SideQuest",
-                                "correct": false
+                                "label": "Unsubstantiated medical claims + Pseudoscientific jargon + Anonymity",
+                                "correct": true
                             },
                             {
                                 "id": "q1_b",
-                                "label": "Unsubstantiated medical claims + Pseudoscientific jargon + Anonymity",
-                                "correct": true
+                                "label": "It's on SideQuest",
+                                "correct": false
                             },
                             {
                                 "id": "q1_c",
@@ -435,10 +446,10 @@
                             }
                         ],
                         "synthesis": {
-                            "q1_a": "<p>SideQuest is fine for experiments. The claims are the problem.</p>",
+                            "q1_a": "<p><strong>Correct!</strong> 'Cure' is a regulated claim. 'Advanced neural entrainment' is vague jargon. Anonymity means zero accountability. Run away.</p>",
+                            "q1_b": "<p>SideQuest is fine for experiments. The claims are the problem.</p>",
                             "q1_c": "<p>Free isn't the issue. Accountability is.</p>",
-                            "q1_d": "<p>Neural entrainment is real, but vague jargon without explanation is a warning sign.</p>",
-                            "q1_b": "<p><strong>Correct!</strong> 'Cure' is a regulated claim. 'Advanced neural entrainment' is vague jargon. Anonymity means zero accountability. Run away.</p>"
+                            "q1_d": "<p>Neural entrainment is real, but vague jargon without explanation is a warning sign.</p>"
                         }
                     },
                     {

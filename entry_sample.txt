@@ -1,0 +1,14 @@
+### M1.L1.01 — `cyber.jpg`
+**Save Path:** `assets/images/module1/cyber.jpg`
+
+**Mode:** Mode 2 — Framed Illustration (evokes a feeling, illustrates a concept, or sets a scene)
+
+**Panel Title:** CYBER — The Digital Half
+
+**Panel Content:**
+> The prefix 'Cyber' comes from cybernetics — the science of systems, feedback, and control. In the context of cyberdelics, 'cyber' represents the technology layer: VR hardware, biofeedback sensors, spatial audio, and the digital environments that create the conditions for altered states.
+
+**Generation Prompt:**
+> The word CYBER in bold futuristic typography with circuit board patterns and
+digital nodes flowing through the letters, electric blue and white color scheme,
+clean modern design with subtle binary
