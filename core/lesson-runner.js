@@ -137,8 +137,19 @@
                 }
             };
 
-            // Run after paint so layout is fully computed
+            // Run after paint — but the header image may not have loaded yet,
+            // so the overlay has no real height on the very first rAF.
+            // We fire on rAF, on image load, and after a short timeout as a fallback.
             requestAnimationFrame(fitTitleToOverlay);
+            setTimeout(fitTitleToOverlay, 150);
+            const _imgEl = screen.querySelector('.header-bg');
+            if (_imgEl) {
+                if (_imgEl.complete) {
+                    requestAnimationFrame(fitTitleToOverlay);
+                } else {
+                    _imgEl.addEventListener('load', () => requestAnimationFrame(fitTitleToOverlay), { once: true });
+                }
+            }
 
             // Re-run on resize (e.g. window/panel resize changes vw-based dimensions)
             const _resizeHandler = () => requestAnimationFrame(fitTitleToOverlay);
@@ -268,7 +279,7 @@
                 // Removed marginTop: 'auto' so it hugs the bottom of the simulation canvas rather than pushing to the bottom of the screen
                 footer.innerHTML = `<button class="btn-continue" style="display: ${showContinue ? 'block' : 'none'};">Continue <span>▶</span></button>`;
 
-                targetContainerForEngine.appendChild(footer);
+                moduleContainer.appendChild(footer);
             }
 
             instance.on('complete', () => {

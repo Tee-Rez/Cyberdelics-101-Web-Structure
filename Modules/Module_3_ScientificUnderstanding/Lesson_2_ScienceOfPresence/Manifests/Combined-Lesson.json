@@ -180,18 +180,7 @@
                             "C": "Presence research is specific about this: when a client remains aware of their physical surroundings and describes the experience observationally rather than participatorily, the presence threshold has not been crossed. This matters because presence functions as an amplifier for therapeutic content. A session where presence is never established is unlikely to reach the depth needed for meaningful work. This is a signal worth responding to, not a condition to accept as normal. Try again.",
                             "D": "Hardware is one factor, but presence is a psychological outcome with multiple contributors. Before recommending equipment changes that may not be accessible or necessary, a practitioner would look at whether tracking latency is causing the disconnect, whether pre-session preparation was adequate to orient the client, whether the audio is coherent with the visuals, and whether the client is physically comfortable in the headset. Prescribing new hardware as a first response bypasses the factors that are actually within facilitation control. Try again."
                         }
-                    }
-                ]
-            }
-        },
-        {
-            "id": "quiz_3_2_2",
-            "title": "Test Your Understanding",
-            "type": "option-selector",
-            "config": {
-                "mode": "single",
-                "style": "text",
-                "questions": [
+                    },
                     {
                         "question": "A client who has lived with chronic body image distress is coming for their first cyberdelic session. The platform being used allows avatar customization. Based on embodiment research, which approach is most likely to serve the therapeutic work?",
                         "options": [
@@ -247,18 +236,7 @@
                             "C": "This is the exact opposite of what the Proteus Effect demonstrated. The finding that made the research significant was the transfer: participants showed behavioral changes in subsequent non-VR situations based on the avatar they had inhabited. The effect persists beyond the session. That persistence is what gives embodiment therapeutic relevance and also what creates the ethical responsibility to design avatar choices thoughtfully. Try again.",
                             "D": "The Proteus Effect research measured behavioral changes, including negotiation patterns, savings decisions, and exercise behavior, not visual perception changes. Embodiment affects how people act and relate to themselves, not just what they see. These are cognitive, emotional, and behavioral outcomes, which is precisely what makes avatar design therapeutically significant. Try again."
                         }
-                    }
-                ]
-            }
-        },
-        {
-            "id": "quiz_3_2_3",
-            "title": "Test Your Understanding",
-            "type": "option-selector",
-            "config": {
-                "mode": "single",
-                "style": "text",
-                "questions": [
+                    },
                     {
                         "question": "Based on the four session design profiles, which single design change most reliably increases Embodiment Depth without necessarily increasing Presence?",
                         "options": [

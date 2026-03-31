@@ -276,7 +276,7 @@
 }
 
 .pes-app .profiles-grid-hdr {
-    font-size: 0.58rem;
+    font-size: 0.72rem;
     letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--muted);
@@ -316,7 +316,7 @@
 }
 
 .pes-app .pg-item-name {
-    font-size: 0.58rem;
+    font-size: 0.72rem;
     letter-spacing: 0.06em;
     font-weight: 500;
     color: var(--muted);
@@ -360,7 +360,7 @@
 }
 
 .pes-app .ctrl-section-label {
-    font-size: 0.62rem;
+    font-size: 0.76rem;
     letter-spacing: 0.16em;
     text-transform: uppercase;
     font-weight: 500;
@@ -408,7 +408,7 @@
 }
 
 .pes-app .slider-name {
-    font-size: 0.71rem;
+    font-size: 0.85rem;
     font-weight: 400;
     color: var(--text);
     letter-spacing: 0.03em;
@@ -421,7 +421,7 @@
 }
 
 .pes-app .slider-ends span {
-    font-size: 0.58rem;
+    font-size: 0.72rem;
     color: var(--muted);
     letter-spacing: 0.04em;
 }
@@ -481,7 +481,7 @@
 }
 
 .pes-app .slider-desc-name {
-    font-size: 0.62rem;
+    font-size: 0.76rem;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     font-weight: 500;
@@ -495,7 +495,7 @@
 }
 
 .pes-app .slider-desc-text {
-    font-size: 0.75rem;
+    font-size: 0.88rem;
     line-height: 1.65;
     color: var(--muted);
     transition: color 0.3s ease;
@@ -507,7 +507,7 @@
 }
 
 .pes-app .slider-desc-idle {
-    font-size: 0.68rem;
+    font-size: 0.82rem;
     color: var(--muted);
     letter-spacing: 0.05em;
     opacity: 0.6;
