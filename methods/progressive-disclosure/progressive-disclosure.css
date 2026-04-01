@@ -260,24 +260,24 @@
 }
 
 /* --- Layout: Left --- */
-/* Image takes 30%, Content takes 70% */
+/* Image takes 45%, Content takes 55% */
 .pd-layout-left .pd-flex-wrapper {
     flex-direction: row;
 }
 
 .pd-layout-left .pd-media-container {
-    width: 30%;
+    width: 65%;
     flex-shrink: 0;
 }
 
 /* --- Layout: Right --- */
-/* Image takes 30% (on right), Content takes 70% */
+/* Image takes 45% (on right), Content takes 55% */
 .pd-layout-right .pd-flex-wrapper {
     flex-direction: row-reverse;
 }
 
 .pd-layout-right .pd-media-container {
-    width: 30%;
+    width: 65%;
     flex-shrink: 0;
 }
 

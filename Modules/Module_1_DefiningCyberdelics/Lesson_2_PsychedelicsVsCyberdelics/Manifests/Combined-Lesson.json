@@ -21,13 +21,6 @@
                     },
                     {
                         "title": "Shared Intention",
-                        "media": {
-                            "type": "image",
-                            "src": "../assets/images/module1/SharedIntention.jpg",
-                            "alt": "Two parallel pathways merging toward a single glowing destination on a distant mountain peak",
-                            "notes": "AI Prompt: Two parallel pathways merging toward a single glowing destination on a distant mountain peak : one path traced with subtle circuit board and tech imagery in electric blue, the other traced with natural organic botanical patterns in deep green and gold, both paths equally luminous, equally valid, converging at a shared point of radiant light on the horizon, purple and teal sky, inspirational and non-hierarchical composition, 16:9 aspect ratio"
-                        },
-                        "mediaLayout": "full",
                         "content": "<p>Both psychedelics and cyberdelics exist for the same fundamental purpose: facilitating consciousness exploration, personal transformation, and spiritual development. Whether using substances or technology, the underlying intention is identical, to expand awareness, facilitate healing, and support personal growth. Purpose is the foundation both fields share.</p>",
                         "triggerLabel": "Shared Outcomes"
                     },

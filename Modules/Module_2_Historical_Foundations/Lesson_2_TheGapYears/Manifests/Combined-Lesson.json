@@ -18,7 +18,7 @@
                         "title": "The Spectacular Failures",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module2/lesson2/vr_arcade_abandoned.jpg",
+                            "src": "../assets/images/module2/lesson2/vr_arcade_abandoned.png",
                             "alt": "Abandoned VR arcade from early 2000s, dusty VR equipment on tables, empty mall space with 'Going Out of Business' sign, representing the commercial failure of 1990s VR, melancholic documentary photography style, faded colors suggesting obsolescence."
                         },
                         "mediaLayout": "left",
@@ -154,7 +154,7 @@
                         "title": "The Meditation App Revolution",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module2/lesson2/meditation_apps.jpg",
+                            "src": "../assets/images/module2/meditation_apps.png",
                             "alt": "Clean product photography showing smartphone displaying Headspace app interface alongside another phone showing Calm app, both screens showing meditation timers and peaceful nature imagery, modern minimalist aesthetic, soft lighting, representing the normalization of digital meditation tools."
                         },
                         "mediaLayout": "right",

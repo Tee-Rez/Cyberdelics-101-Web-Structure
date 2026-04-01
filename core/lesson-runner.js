@@ -315,7 +315,7 @@
                 window.LessonUI.update(null, 1.0); // Ensure progress reaches 100%
                 window.LessonUI.setBackAction(null);
             }
-            
+
             const container = window.LessonUI ? window.LessonUI.getContentContainer() : this.container;
             container.innerHTML = `
                 <div class="lesson-complete-screen">
@@ -332,6 +332,27 @@
                     </div>
                 </div>
             `;
+            // ── NOTIFY FRAMER ─────────────────────────────────────────────
+            // Fires once when the lesson complete screen renders.
+            // The Framer CyberdelicsLesson component listens for this message
+            // and calls its onLessonComplete event prop, which you wire in
+            // the Framer canvas to set a boolean variable (e.g. lesson_1_1_complete = true).
+            //
+            // lessonId is read from the manifest root field: "lessonId": "module_1_lesson_1"
+            // If that field is absent, falls back to the manifest title slug.
+            const lessonId = this.currentLesson.lessonId
+                || this.currentLesson.id
+                || (this.currentLesson.title || 'unknown')
+                    .toLowerCase().replace(/\s+/g, '_').replace(/[^a-z0-9_]/g, '');
+
+            const payload = {
+                type: 'LESSON_COMPLETE',
+                lessonId: lessonId,
+                timestamp: new Date().toISOString()
+            };
+
+            console.log('[LessonRunner] Sending LESSON_COMPLETE to Framer:', payload);
+            window.parent.postMessage(payload, '*');
         }
 
         _applyTheme(theme) {

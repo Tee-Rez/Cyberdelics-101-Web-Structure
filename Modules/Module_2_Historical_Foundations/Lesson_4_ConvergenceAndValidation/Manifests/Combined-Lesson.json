@@ -18,7 +18,7 @@
                         "mediaLayout": "full",
                         "media": {
                             "type": "image",
-                            "src": "../../assets/Images/Modules/Module_2/Lesson_4/covid_shift.jpg"
+                            "src": "../../assets/Images/Module2/covid_shift.png"
                         },
                         "title": "The Sudden Shift (March 2020)",
                         "content": "When COVID-19 lockdowns began in March 2020, billions of people suddenly couldn't see friends or family in person, attend events, concerts, or gatherings, go to offices, schools, or social spaces, or maintain normal social lives. The question became urgent: how do we maintain human connection without physical proximity? Technology became the only option, not a choice but necessity.",
@@ -58,11 +58,6 @@
                 "sections": [
                     {
                         "id": "section_1",
-                        "mediaLayout": "left",
-                        "media": {
-                            "type": "image",
-                            "src": "../../assets/Images/Modules/Module_2/Lesson_4/isness_particles.jpg"
-                        },
                         "title": "The Study That Changed Everything",
                         "content": "Published in PLOS ONE, June 2020, 'Isness: Using Multi-Person VR to Design Peak Mystical Type Experiences Comparable to Psychedelics' by David Glowacki and team at University of Bristol. The setup: 57 participants experienced a 13-minute shared multi-person VR experience where each person was represented as an energetic body made of moving particles, synchronized movement and interaction in abstract virtual space, and post-experience measurement using standard Mystical Experience Questionnaire (MEQ30) that psychedelic researchers use.",
                         "triggerLabel": "See the Results"
@@ -101,11 +96,6 @@
                 "sections": [
                     {
                         "id": "section_1",
-                        "mediaLayout": "right",
-                        "media": {
-                            "type": "image",
-                            "src": "../../assets/Images/Modules/Module_2/Lesson_4/deepdream_brain.jpg"
-                        },
                         "title": "DeepDream VR - Hallucinogenic Technology",
                         "content": "Published in Nature Scientific Reports, DeepDream VR applied Google's pattern-recognition neural network to 360-degree video in real-time, creating VR environments where the world constantly shifts into hallucinogenic patterns. The concept: if psychedelics produce visual distortions through affecting visual processing, could artificially creating similar distortions produce similar consciousness changes? Participants described experiences as 'psychedelic-like,' with visual patterns similar to substance experiences, and some couldn't distinguish from mild psychedelic experiences.",
                         "triggerLabel": "See Neural Findings"

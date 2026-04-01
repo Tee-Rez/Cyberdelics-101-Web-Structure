@@ -23,7 +23,7 @@
                         "title": "Simple Meditation Apps",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module1/MeditationApp.jpg",
+                            "src": "../assets/images/module1/MeditationApp.png",
                             "alt": "Clean smartphone screen displaying a minimal meditation app interface",
                             "notes": "AI Prompt: Clean smartphone screen displaying a minimal meditation app interface, soft gradient background in calming blue and lavender, simple breathing animation circle expanding and contracting, gentle typography, no VR hardware or biofeedback sensors visible, approachable and accessible aesthetic, warm soft lighting, 16:9 aspect ratio"
                         },
@@ -35,7 +35,7 @@
                         "title": "VR Meditation With Biofeedback",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module1/vr_meditation_biofeedback.jpg",
+                            "src": "../assets/images/module1/vr_meditation_biofeedback.png",
                             "alt": "Person in meditation posture wearing a VR headset and EEG sensor band",
                             "notes": "AI Prompt: Person in meditation posture wearing a VR headset and EEG sensor band, immersed in a responsive virtual environment shown in soft translucent overlay, flowing sacred geometry patterns pulsing in sync with a heartbeat monitor on their wrist, sense of deep immersion and inner state being reflected outward, purple and teal color palette, 16:9 aspect ratio"
                         },
@@ -279,7 +279,7 @@
                         "title": "Multiple Valid Tools",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module1/lesson4/pathways_comparison.jpg",
+                            "src": "../assets/images/module1/lesson4/pathways_comparison.png",
                             "alt": "Three parallel illuminated pathways showing different levels of meditative tech",
                             "notes": "AI Prompt: Three parallel pathways shown side by side, each equally illuminated and equally valid, left pathway shows a person using a simple phone app for meditation (soft ambient light, relaxed posture), center pathway shows a person in a basic VR headset in an immersive meditation environment (moderate tech, deeper immersion), right pathway shows a person with VR headset and multiple biofeedback sensors in a full cyberdelic protocol (full tech stack, deep immersion). Progressive intensity without hierarchy, clean educational visualization, purple and teal gradient, 16:9 aspect ratio"
                         },

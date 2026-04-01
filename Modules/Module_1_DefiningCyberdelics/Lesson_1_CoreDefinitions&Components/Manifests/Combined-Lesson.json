@@ -23,7 +23,7 @@
                         "title": "\"Cyber\" : The Digital Realm",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module1/cyber.jpg",
+                            "src": "../assets/images/module1/cyber.png",
                             "aiPrompt": "The word CYBER in bold futuristic typography with circuit board patterns and digital nodes flowing through the letters, electric blue and white color scheme, representing technology and digital systems, clean modern design with subtle binary code in background, 16:9 aspect ratio"
                         },
                         "mediaLayout": "left",
@@ -34,7 +34,7 @@
                         "title": "\"Delic\" : Mind-Manifesting",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module1/delic.jpg",
+                            "src": "../assets/images/module1/delic.png",
                             "aiPrompt": "The word DELIC in flowing organic typography with mandala patterns, sacred geometry (Flower of Life), and radiating light waves emanating outward from the letters, purple and teal color scheme, representing consciousness and inner exploration, mystical yet modern aesthetic, 16:9 aspect ratio"
                         },
                         "mediaLayout": "right",
@@ -48,12 +48,6 @@
                     },
                     {
                         "title": "Historical Context",
-                        "media": {
-                            "type": "image",
-                            "src": "../assets/images/module1/tim-leary.jpg",
-                            "aiPrompt": "Black and white archival-style portrait of Timothy Leary from the 1990s era, looking thoughtful and visionary, with subtle double-exposure overlay of early computer graphics and VR wireframes, representing the bridge between psychedelic era and digital future, documentary photography style, 16:9 aspect ratio"
-                        },
-                        "mediaLayout": "full",
                         "content": "<p>The term 'cyberdelics' was popularized by Timothy Leary in the 1990s. Leary, known for his earlier psychedelic research, recognized that technology could serve similar consciousness-expanding purposes as substances. He foresaw a future where virtual reality and digital tools would become valid paths for inner exploration. We're now living in that future he envisioned.</p>",
                         "triggerLabel": "Try the Simulation"
                     }
@@ -75,7 +69,7 @@
                         "title": "Component 1 : Digital Technologies",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module1/DigitalTechnologies.jpg",
+                            "src": "../assets/images/module1/DigitalTechnologies.png",
                             "aiPrompt": "Modern VR headset (Meta Quest style), EEG headband, and HRV chest strap sensor arranged on a minimalist surface, professional product photography, soft directional lighting, tech-forward aesthetic, subtle Flower of Life sacred geometry pattern faintly visible in background, clean composition, 16:9 aspect ratio"
                         },
                         "mediaLayout": "right",
@@ -86,7 +80,7 @@
                         "title": "Component 2 : Altered States",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module1/meditation-comparison.jpg",
+                            "src": "../assets/images/module1/meditation-comparison.png",
                             "aiPrompt": "Split-screen composition : person in traditional meditation pose with eyes closed on the left side, and the same person wearing a VR headset in a similar meditative pose on the right side, both surrounded by soft glowing mandala patterns and sacred geometry, ethereal purple and teal color palette, spiritual atmosphere meeting technology, sense of expanded consciousness, 16:9 aspect ratio"
                         },
                         "mediaLayout": "left",
@@ -102,10 +96,10 @@
                         "title": "All Three Required",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module1/AllThree.jpg",
+                            "src": "../assets/images/module1/AllThree.png",
                             "aiPrompt": "Three overlapping circles forming a Venn diagram, each circle labeled and colored differently : Technology in electric blue, Altered States in deep purple, Transformation in teal. Glowing bright white center where all three intersect. Clean infographic style, modern educational design, dark background, subtle sacred geometry texture in circle fill areas, 16:9 aspect ratio"
                         },
-                        "mediaLayout": "full",
+                        "mediaLayout": "right",
                         "content": "<p>All three components must be present. A VR game might use technology and create immersion, but without transformational intent it's not cyberdelic. A meditation app might aim for transformation and use some tech, but without intentionally facilitating altered states through immersive technology it's not fully cyberdelic. The intersection of all three is what defines the field.</p><table style='width:100%; border-collapse:collapse; margin-top:10px; margin-bottom:16px; font-size:0.86em; text-align:left;'><thead><tr style='background:rgba(255,255,255,0.15); border-bottom:2px solid rgba(255,255,255,0.3);'><th style='padding:10px 12px; font-weight:600; letter-spacing:0.03em;'>Experience Type</th><th style='padding:10px 12px; font-weight:600; letter-spacing:0.03em;'>Digital Technology</th><th style='padding:10px 12px; font-weight:600; letter-spacing:0.03em;'>Altered States</th><th style='padding:10px 12px; font-weight:600; letter-spacing:0.03em;'>Transformational Intent</th><th style='padding:10px 12px; font-weight:600; letter-spacing:0.03em;'>Cyberdelic?</th></tr></thead><tbody><tr style='border-bottom:1px solid rgba(255,255,255,0.1); background:rgba(255,255,255,0.03);'><td style='padding:9px 12px;'><strong>VR game</strong></td><td style='padding:9px 12px;'>Yes</td><td style='padding:9px 12px;'>Sometimes</td><td style='padding:9px 12px;'>No</td><td style='padding:9px 12px;'>No</td></tr><tr style='border-bottom:1px solid rgba(255,255,255,0.1);'><td style='padding:9px 12px;'><strong>Meditation app</strong></td><td style='padding:9px 12px;'>Partial</td><td style='padding:9px 12px;'>Sometimes</td><td style='padding:9px 12px;'>Sometimes</td><td style='padding:9px 12px;'>Borderline</td></tr><tr style='background:rgba(255,255,255,0.03);'><td style='padding:9px 12px;'><strong>Cyberdelic experience</strong></td><td style='padding:9px 12px;'>Yes</td><td style='padding:9px 12px;'>Yes</td><td style='padding:9px 12px;'>Yes</td><td style='padding:9px 12px;'>Yes</td></tr></tbody></table>",
                         "triggerLabel": "Evaluate Experiences"
                     }
@@ -353,7 +347,7 @@
                         "title": "Reliability & Repeatability",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module1/futurecontrolknobs.jpg",
+                            "src": "../assets/images/module1/futurecontrolknobs.png",
                             "aiPrompt": "Close-up of futuristic control knobs and sliders on a glowing interface, with labels like 'Dose', 'Intensity', 'Frequency', and 'Clarity', electric blue and purple lighting, representing the precision and control offered by technology-based consciousness tools, modern minimalist tech aesthetic, 16:9 aspect ratio"
                         },
                         "mediaLayout": "right",
@@ -362,12 +356,6 @@
                     },
                     {
                         "title": "Wider Accessibility",
-                        "media": {
-                            "type": "image",
-                            "src": "../assets/images/module1/accessible-tech-future.jpg",
-                            "aiPrompt": "Diverse group of people in a modern, clean environment (not a clinic) using VR headsets and biofeedback headbands comfortably, soft natural lighting, positive and empowering atmosphere, representing the accessibility and mainstream potential of technology-based consciousness tools, 16:9 aspect ratio"
-                        },
-                        "mediaLayout": "left",
                         "content": "<p>Cyberdelic tools can be used in many places where substances cannot : schools, workplaces, wellness centers, and homes. Because they don't involve pharmaceutical intervention, they bypass many legal, medical, and social barriers. This allows more people to explore consciousness safely and legally across different cultures and regulatory environments.</p>",
                         "triggerLabel": "Next Reason"
                     },
@@ -375,10 +363,10 @@
                         "title": "The 'Skill' of Presence",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module1/mindfulness-brain-sync.jpg",
+                            "src": "../assets/images/module1/mindfulness-brain-sync.png",
                             "aiPrompt": "Abstract visualization of a human brain synchronized with a digital geometric pattern (like a Metatron's Cube), representing the development of mental skills through technology-aided practice, glowing teal and white energy lines, sophisticated and intelligent aesthetic, 16:9 aspect ratio"
                         },
-                        "mediaLayout": "right",
+                        "mediaLayout": "left",
                         "content": "<p>Cyberdelics often focus on 'training' the mind. Instead of a substance doing the work for you, technology facilitates you doing the work yourself. Biofeedback, for example, rewards your brain for reaching specific states. This builds mental 'muscles' and skills that you can carry with you even after you take the headset off. It's an active practice, not a passive experience.</p>",
                         "triggerLabel": "Summary"
                     },

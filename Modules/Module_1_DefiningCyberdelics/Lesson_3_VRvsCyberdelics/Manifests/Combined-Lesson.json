@@ -23,11 +23,11 @@
                         "title": "Direction of Attention",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module1/lesson3/DirectionOfAttention.jpg",
+                            "src": "../assets/images/module1/DirectionOfAttention.png",
                             "alt": "A diagram showing two heads in VR, one with arrows pointing 'out' into a game world, the other with arrows curving 'back' toward the viewer's own body and awareness",
                             "notes": "AI Prompt: Side-by-side comparison diagram of two human silhouettes wearing sleek VR headsets. LEFT silhouette has bright jagged arrows exploding outward from the headset into a chaotic, neon game world (entertainment). RIGHT silhouette has smooth, glowing blue lines curving from the headset back toward the heart and center of the silhouette (cyberdelic). Minimalist, clean medical-illustration style, deep purple background, 16:9 aspect ratio."
                         },
-                        "mediaLayout": "full",
+                        "mediaLayout": "left",
                         "content": "<p>In <strong>Entertainment VR</strong>, your attention is pulled <strong>outward</strong> toward the content, the score, the enemies, the external goals. In <strong>Cyberdelic VR</strong>, the technology is used to pull your attention <strong>inward</strong> toward your own internal state, breath, or consciousness. The tech is the mirror, not just the window.</p>",
                         "triggerLabel": "Entertainment Questions"
                     },
