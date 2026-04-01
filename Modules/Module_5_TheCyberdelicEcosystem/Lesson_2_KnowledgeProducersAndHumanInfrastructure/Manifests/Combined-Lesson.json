@@ -19,12 +19,12 @@
                         "content": "<p>There is no shortcut around research validation for a field that wants to be taken seriously by healthcare systems, insurance providers, regulators, and the wider public.</p><p>Anecdotal reports matter; practitioner experience is real and valuable. But anecdote alone doesn't move insurance reimbursement decisions, doesn't satisfy IRB review boards, and doesn't give a skeptical psychiatrist grounds to recommend a VR protocol to their patients. Peer-reviewed publication does.</p><p><strong>What research specifically adds:</strong> independent replication that removes individual bias; controlled methodology that rules out placebo effects and confounds; statistical power that distinguishes real signal from noise; institutional credibility that transfers to the platforms and protocols built on the findings.</p><p>The cyberdelic field has built its credibility on a relatively small but high-quality body of published research. Understanding who is producing it, and where, gives you the ability to evaluate claims, anticipate what's coming, and recognize when a platform's marketing outpaces its evidence base.</p>",
                         "media": {
                             "type": "image",
-                            "src": "placeholder-research-institution.jpg",
+                            "src": "../assets/images/module5/research-institution.png",
                             "alt": "Diverse academic setting with a researcher at a computer overlaid with brain scan imagery and a VR headset on the desk",
-                            "position": "full-width",
                             "aiPrompt": "Diverse academic setting with a researcher at a computer overlaid with brain scan imagery, a VR headset on the desk beside books and journals, large windows suggesting an international institution. Purposeful, credible aesthetic. Purple/teal accent tones."
                         },
-                        "triggerLabel": "Stanford & Yale"
+                        "triggerLabel": "Stanford & Yale",
+                        "mediaLayout": "left"
                     },
                     {
                         "title": "US Foundational Labs, Stanford and Yale",
@@ -75,12 +75,12 @@
                         "content": "<p>The relationship between research institutions and clinical practitioners is not one-directional. It's an iterative loop that accelerates both.</p><p><strong>Research to Clinical:</strong> Published findings give practitioners evidence-based justification for integration. Validated protocols give them starting frameworks. Measurement tools (like the MEQ) give them outcome tracking instruments.</p><p><strong>Clinical to Research:</strong> Real-world outcome data from clinical settings surfaces patterns that controlled studies miss. Practitioner feedback identifies which research protocols actually survive contact with diverse clinical populations. Case studies from clinical contexts generate new hypotheses for formal study. Clinical champions within healthcare systems create institutional access for researcher recruitment.</p><p>The loop creates interdependency, a field that generates only research with no clinical adoption loses relevance; a field that generates only clinical practice with no research loses credibility.</p>",
                         "media": {
                             "type": "image",
-                            "src": "placeholder-research-clinical-loop.jpg",
+                            "src": "../assets/images/module5/research-clinical-loop.png",
                             "alt": "Research-Clinical feedback loop diagram",
-                            "position": "full-width",
                             "aiPrompt": "Visual diagram of the research-clinical feedback loop, arrows showing bidirectional flow between a research institution setting (left) and a clinical practice setting (right). Knowledge, validation, and protocols flow right; real-world outcome data, case studies, and hypotheses flow left. Clean, professional infographic aesthetic with subtle cyberdelic accents."
                         },
-                        "triggerLabel": "Systemic Challenges"
+                        "triggerLabel": "Systemic Challenges",
+                        "mediaLayout": "left"
                     },
                     {
                         "title": "Systemic Challenges for Clinical Integration",
@@ -106,12 +106,12 @@
                         "content": "<p>Effective facilitation isn't what happens during the VR session. It's what happens in all three phases,</p><h3>BEFORE, Preparation and Holding</h3><ul><li><strong>Assess readiness:</strong> Is this person in a suitable state of mental, emotional, and physical health for a cyberdelic experience?</li><li><strong>Screen for contraindications:</strong> Active psychosis, severe dissociation history, recent trauma destabilization, photosensitive epilepsy, certain medications</li><li><strong>Set expectations:</strong> What this experience is, what it is not, what they might encounter, what support is available</li><li><strong>Establish informed consent:</strong> Clear communication about the experience, risks, facilitator role and limitations, and the person's right to stop at any time</li><li><strong>Establish trust:</strong> The relationship quality before the session significantly determines what becomes possible during it</li></ul><h3>DURING, Presence and Support</h3><ul><li><strong>Technical support:</strong> Ensuring the hardware functions, managing transitions, troubleshooting without breaking state</li><li><strong>Monitor state:</strong> Reading non-verbal cues, checking in appropriately, recognizing difficulty vs. depth</li><li><strong>Hold container:</strong> Maintaining a calm, grounded presence that communicates safety without intrusion</li></ul><h3>AFTER, Integration</h3><ul><li><strong>Process the experience:</strong> Space for the person to articulate, make meaning, and begin understanding what they encountered</li><li><strong>Support integration:</strong> Practical guidance on carrying insights forward into daily life</li><li><strong>Follow-up:</strong> Checking in at 24 hours, 1 week, and longer intervals, integration is not a single conversation</li><li><strong>Know when to refer:</strong> Recognizing when the experience has surfaced material requiring clinical support beyond facilitation scope</li></ul>",
                         "media": {
                             "type": "image",
-                            "src": "placeholder-three-phase-facilitation.jpg",
+                            "src": "../assets/images/module5/three-phase-facilitation.png",
                             "alt": "Three-phase facilitation arc showing Before, During, and After stages with key activities",
-                            "position": "full-width",
                             "aiPrompt": "Three-phase facilitation visual, a timeline or arc showing Before / During / After with icons for key activities in each phase. Clean, professional infographic layout with subtle cyberdelic color accents (teal/purple). Emphasizes flow and progression through the facilitation container."
                         },
-                        "triggerLabel": "Training Requirements"
+                        "triggerLabel": "Training Requirements",
+                        "mediaLayout": "right"
                     },
                     {
                         "title": "Training, What Competent Facilitation Requires",
@@ -128,12 +128,12 @@
                         "content": "<p>Facilitation is a profession, and that means it requires viable economics.</p><table style='width:100%; border-collapse:collapse; margin-top:10px; font-size:0.9em; text-align:left;'><tr style='background:rgba(255,255,255,0.1); border-bottom:1px solid rgba(255,255,255,0.2)'><th style='padding:10px;'>Session Type</th><th style='padding:10px;'>Typical Price Range</th></tr><tr style='border-bottom:1px solid rgba(255,255,255,0.1)'><td style='padding:10px;'>Private individual session (1 to 2 hours)</td><td style='padding:10px;'>$75 to $300</td></tr><tr style='border-bottom:1px solid rgba(255,255,255,0.1)'><td style='padding:10px;'>Group session (per person)</td><td style='padding:10px;'>$30 to $100</td></tr><tr style='border-bottom:1px solid rgba(255,255,255,0.1)'><td style='padding:10px;'>Day retreat</td><td style='padding:10px;'>$300 to $800</td></tr><tr style='border-bottom:1px solid rgba(255,255,255,0.1)'><td style='padding:10px;'>Multi-day retreat</td><td style='padding:10px;'>$500 to $3,000+</td></tr><tr style='border-bottom:1px solid rgba(255,255,255,0.1)'><td style='padding:10px;'>Institutional contract (per day)</td><td style='padding:10px;'>$1,000 to $5,000+</td></tr></table><p style='margin-top:15px;'><strong>Full-time income range,</strong> $40,000 to $100,000+ annually, with significant location, experience, and niche variance.</p><p><strong>Sustainability realities,</strong> Building a facilitation practice takes 1 to 3 years of consistent effort before it becomes a primary income source for most practitioners. Hybrid models (combining facilitation with teaching, corporate wellness work, or adjacent services) are the norm, not the exception. Institutional pathways offer more reliable revenue than purely private practice.</p><p>The economics will improve as clinical reimbursement expands, facilitator certification becomes standardized, and mainstream cultural acceptance increases. Early practitioners are building the profession that later ones will inherit.</p>",
                         "media": {
                             "type": "image",
-                            "src": "placeholder-facilitator-revenue.jpg",
+                            "src": "../assets/images/module5/facilitator-revenue.png",
                             "alt": "Clean revenue table visualization for cyberdelic facilitation session types",
-                            "position": "full-width",
                             "aiPrompt": "Clean, professional revenue table visualization for cyberdelic facilitation, simple, unintimidating design with session types and price ranges. Minimal, data-forward aesthetic. Subtle cyberdelic color accents (teal/purple highlights on header row). No clutter."
                         },
-                        "triggerLabel": "Apply This, Scope of Practice Scenario"
+                        "triggerLabel": "Apply This, Scope of Practice Scenario",
+                        "mediaLayout": "left"
                     }
                 ]
             }
@@ -222,12 +222,12 @@
                         "content": "<p>Communities serve four distinct functions: <strong>Knowledge sharing</strong>, <strong>Emotional support</strong>, <strong>Standards development</strong>, and <strong>Advocacy</strong>.</p><h3>The Peer-to-Peer Model</h3><p>Unlike expert-to-novice teaching relationships, healthy field communities operate on the assumption that everyone has something to contribute, and that the collective knowledge exceeds any individual's. This aligns with cyberdelic values and is practically suited to an emerging field where the \"experts\" are only a few years ahead of the \"novices.\"</p><p>The value of the peer model is speed and breadth. The limitation is that pure peer consensus, without quality controls, can be biased. Sophisticated practitioners use community knowledge as one input among several, cross-referencing with research literature rather than treating consensus as authoritative.</p>",
                         "media": {
                             "type": "image",
-                            "src": "placeholder-peer-network.jpg",
+                            "src": "../assets/images/module5/peer-network.png",
                             "alt": "Peer network diagram showing bidirectional knowledge flow",
-                            "position": "full-width",
                             "aiPrompt": "Peer network diagram showing bidirectional knowledge flow between community members, as contrast with a hierarchical expert-novice structure for visual clarity. Connected nodes glowing, emphasizing 'collective intelligence' over 'singular authority' in a sleek cyberdelic design."
                         },
-                        "triggerLabel": "Take the Quiz"
+                        "triggerLabel": "Take the Quiz",
+                        "mediaLayout": "left"
                     }
                 ]
             }

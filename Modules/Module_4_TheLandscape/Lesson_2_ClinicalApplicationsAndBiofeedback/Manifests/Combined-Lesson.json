@@ -19,12 +19,12 @@
                         "content": "<p>Virtual Reality Exposure Therapy (VRET) works by exposing patients to the thing they fear in a controlled, graduated, safe environment. If you have a phobia of flying, you don't board an actual plane - you experience a virtual flight that your therapist can control and adjust in real time.</p><p>This triggers <strong>extinction learning</strong> - the gradual weakening of the fear response through repeated safe exposure. It works because VR creates genuine physiological arousal (sweating, heart rate increase) that imagination alone rarely triggers, allowing the brain to learn safety in the presence of the threat.</p>",
                         "media": {
                             "type": "image",
-                            "src": "placeholder-vret-therapy.jpg",
+                            "src": "../assets/images/module4/vret-therapy.png",
                             "alt": "Clinical VR exposure therapy session with therapist monitoring patient",
-                            "position": "left",
                             "aiPrompt": "Clinical VR exposure therapy session - professional therapist (woman in her 40s, warm but focused expression) sitting beside patient in VR headset, therapist holding tablet showing session controls and patient's heart rate graph, patient appears engaged but slightly tense (hands gripping armrests), calm modern therapy office with plants and certificates on wall, sense of safe container for difficult work, natural lighting, professional medical aesthetic, 16:9 aspect ratio"
                         },
-                        "triggerLabel": "See Success Rates"
+                        "triggerLabel": "See Success Rates",
+                        "mediaLayout": "left"
                     },
                     {
                         "title": "Success Rates - The Evidence",
@@ -60,12 +60,12 @@
                         "content": "<p>In the late 90s, researchers Hunter Hoffman and David Patterson created <strong>SnowWorld</strong> for burn patients undergoing excruciating wound care. Patients threw virtual snowballs at penguins while nurses worked.</p><p><strong>The Result:</strong> 30-50% pain reduction (comparable to opioids). fMRI scans showed significantly less pain activity in the brain. It proved that if VR captures enough attention, pain processing literally gets less neural real estate.</p>",
                         "media": {
                             "type": "image",
-                            "src": "placeholder-snowworld.jpg",
+                            "src": "../assets/images/module4/snowworld.png",
                             "alt": "Split view: Real hospital burn unit vs SnowWorld VR icy landscape",
-                            "position": "full-width",
                             "aiPrompt": "Split composition - left half shows real hospital burn unit (sterile, clinical, person in bed receiving wound care treatment, medical staff in protective gear, sense of medical necessity but discomfort), right half shows the same person's perspective in SnowWorld VR (beautiful icy landscape, snowmen, playful snowball throwing, sense of wonder and distraction from pain), connecting line between the two sides showing the contrast, hope and innovation meeting medical reality, 16:9 aspect ratio"
                         },
-                        "triggerLabel": "The 4 Mechanisms"
+                        "triggerLabel": "The 4 Mechanisms",
+                        "mediaLayout": "right"
                     },
                     {
                         "title": "The Four Mechanisms",
@@ -106,12 +106,12 @@
                         "content": "<ul><li><strong>Signal Generation:</strong> Body produces data (heart rate, brainwaves).</li><li><strong>Sensor Detection:</strong> Device (watch, headband) reads the signal.</li><li><strong>Processing:</strong> Algorithm interprets state (e.g., 'high stress').</li><li><strong>Response:</strong> VR environment changes (colors dim, geometry contracts).</li><li><strong>Adjustment:</strong> You perceive the change and shift your state, starting the loop again.</li></ul>",
                         "media": {
                             "type": "image",
-                            "src": "placeholder-cybernetic-loop.jpg",
+                            "src": "../assets/images/module4/cybernetic-loop.png",
                             "alt": "Diagram of the 5-step cybernetic feedback loop between user and VR system",
-                            "position": "full-width",
                             "aiPrompt": "Circular diagram showing the five-step cybernetic feedback loop - starting with person's silhouette at top, moving clockwise through: (1) heart rate waveform emerging from chest, (2) wrist-worn sensor capturing signal, (3) floating algorithm visualization (geometric processing), (4) VR landscape responding with visual changes, (5) arrow back to person showing adjustment - continuous flow indicated by circular arrangement, purple/teal sacred geometry aesthetic, clean infographic style, sense of living system not mechanical process, 16:9 aspect ratio"
                         },
-                        "triggerLabel": "The Mirror Relationship"
+                        "triggerLabel": "The Mirror Relationship",
+                        "mediaLayout": "right"
                     },
                     {
                         "title": "The Mirror Relationship",
@@ -132,12 +132,12 @@
                         "content": "<ul><li><strong>Measures:</strong> The variation in time between heartbeats. Higher HRV = resilience.</li><li><strong>Devices:</strong> Apple Watch, Polar H10, HeartMath emWave.</li><li><strong>Training Goal:</strong> Stress management, emotional regulation.</li><li><strong>VR Response:</strong> As HRV increases, the environment expands and becomes more vibrant (e.g., flowers blooming), rewarding your calm state.</li></ul>",
                         "media": {
                             "type": "image",
-                            "src": "placeholder-hrv.jpg",
+                            "src": "../assets/images/module4/hrv.png",
                             "alt": "User with heart rate sensor in VR, visualization of HRV coherence waveform",
-                            "position": "left",
                             "aiPrompt": "Person wearing VR headset with a small heart rate sensor clipped to their earlobe, calm focused expression, subtle heart rate variability coherence waveform overlaid in soft blue-green, the VR environment visible through a translucent layer showing an expanding floral landscape that responds to a smooth heartbeat rhythm, modern wellness aesthetic, 16:9 aspect ratio"
                         },
-                        "triggerLabel": "Next: EEG"
+                        "triggerLabel": "Next: EEG",
+                        "mediaLayout": "right"
                     },
                     {
                         "title": "2. EEG (Brainwaves)",
@@ -159,12 +159,12 @@
                         "content": "<p><strong>HeartMath Institute</strong> has been researching HRV coherence since 1991. Their emWave device and Inner Balance sensor are among the most studied biofeedback tools in existence, with over 300 peer-reviewed publications connected to their research program.</p><ul><li><strong>Mechanism:</strong> The emWave measures beat-to-beat HRV from an ear clip or fingertip sensor. When your HRV enters a smooth, coherent rhythm (achieved through slow, intentional breathing), the visual display shifts from incoherence to coherence : low, medium, or high, represented in real-time.</li><li><strong>VR Integration:</strong> HeartMath's coherence feedback can be layered into VR environments where the landscape literally brightens, blooms, or expands as coherence increases. The environment becomes a mirror for your nervous system state.</li><li><strong>Why it matters for facilitators:</strong> HeartMath gives you a teachable, research-backed framework for explaining HRV to clients. The visual feedback loop is immediate and convincing : people who are skeptical about 'feeling calm' often trust a coherence score.</li><li><strong>Evidence level:</strong> Strong. Independent replication across stress reduction, emotional regulation, and cardiac health contexts.</li></ul>",
                         "media": {
                             "type": "image",
-                            "src": "placeholder-heartmath.jpg",
+                            "src": "../assets/images/module4/heartmath.png",
                             "alt": "HeartMath emWave sensor showing coherence waveform moving from jagged to smooth",
-                            "position": "right",
                             "aiPrompt": "Split display showing HeartMath biofeedback in action : left side shows a small ear-clip sensor attached to a person's ear, right side shows a waveform visualization transitioning from jagged red incoherence to smooth flowing green coherence, overlaid on a soft VR environment of blooming flowers or expanding light patterns, sense of the nervous system being made visible, clinical but beautiful aesthetic, purple and teal tones, 16:9 aspect ratio"
                         },
-                        "triggerLabel": "Take Knowledge Check"
+                        "triggerLabel": "Take Knowledge Check",
+                        "mediaLayout": "right"
                     }
                 ]
             }

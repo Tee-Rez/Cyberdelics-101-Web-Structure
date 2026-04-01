@@ -15,7 +15,7 @@
                 "sections": [
                     {
                         "id": "section_1",
-                        "mediaLayout": "full",
+                        "mediaLayout": "right",
                         "media": {
                             "type": "image",
                             "src": "../../assets/Images/Module2/covid_shift.png"

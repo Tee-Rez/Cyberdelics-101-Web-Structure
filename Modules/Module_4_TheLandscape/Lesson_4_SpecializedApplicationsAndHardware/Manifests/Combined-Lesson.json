@@ -24,24 +24,24 @@
                         "content": "<p><strong>Flowborne VR</strong> was created by psychological scientists Johannes Blum and Christoph Rockstroh at the University of Freiburg. It is the most research-backed standalone VR breathwork platform currently available.</p><ul><li><strong>Mechanism:</strong> No extra sensors required. The VR controller detects the subtle movement of your abdomen during respiration. Your exhale literally propels you forward through dreamlike environments. The world moves because you breathe.</li><li><strong>Research backing:</strong> A peer-reviewed controlled laboratory study (Blum, Rockstroh & Göritz, 2020, Applied Psychophysiology and Biofeedback) found six sessions significantly increased perceived breath awareness, improved diaphragmatic technique, reduced perceived stress, and reduced burnout symptoms.</li><li><strong>Platform:</strong> Meta Quest 2 and Quest 3. Free or low cost. No additional hardware.</li><li><strong>Best for:</strong> Learners who want breathwork biofeedback without the sensor cost barrier. The no-hardware approach is a genuine access advantage.</li></ul>",
                         "media": {
                             "type": "image",
-                            "src": "placeholder-flowborne.jpg",
+                            "src": "../assets/images/module4/flowborne.png",
                             "alt": "Person in VR headset floating through a glowing low-polygon landscape, movement powered by breath",
-                            "position": "left",
                             "aiPrompt": "Person in Meta Quest VR headset floating gently through an enchanting low-polygon virtual landscape : soft grassy hills, glowing flowers, warm amber and teal lighting, sense of effortless movement driven by slow deep breathing, the path forward illuminated with each exhale, peaceful and contemplative mood, no additional hardware visible (no chest belt or EEG device), clean and accessible aesthetic, 16:9 aspect ratio"
                         },
-                        "triggerLabel": "Hoame : Guided Breathwork"
+                        "triggerLabel": "Hoame : Guided Breathwork",
+                        "mediaLayout": "right"
                     },
                     {
                         "title": "Hoame : Somatic Breathwork with Expert Guidance",
                         "content": "<p><strong>Hoame</strong> started as North America's largest in-person meditation studio in Toronto, founded by two licensed mental health clinicians : Carolyn Plater (MSW, RSW) and Stephanie Kersta (MSc, RP). Their VR app brings that studio into Meta Quest.</p><ul><li><strong>Breathwork approach:</strong> Somatic-style protocols led by 10 certified breathwork trainers. Sessions range from coherence breathing for stress relief to more intense activation protocols for emotional release.</li><li><strong>What makes it distinct from Flowborne:</strong> Where Flowborne trains technique through environmental feedback, Hoame provides human-guided breathwork with a real instructor present in the virtual space. It is the studio experience, not the training tool.</li><li><strong>Platform:</strong> Meta Quest. Subscription-based ($9.99/month). 350+ guided sessions across meditation, breathwork, sound baths, and movement.</li><li><strong>Best for:</strong> Learners who want instructor-led breathwork in VR, especially those transitioning from in-person studio classes or wanting somatic protocols with human presence.</li><li><strong>Limitation:</strong> No biofeedback loop. Hoame is guided practice, not responsive training.</li></ul>",
                         "media": {
                             "type": "image",
-                            "src": "placeholder-hoame.jpg",
+                            "src": "../assets/images/module4/hoame.png",
                             "alt": "Virtual meditation studio with an instructor leading a breathwork session, participants visible in shared space",
-                            "position": "right",
                             "aiPrompt": "Virtual meditation studio in VR : a calm, beautifully lit space with a visible instructor avatar sitting at the front in a teacher's posture, two or three participant avatars seated in a semicircle, warm golden and purple ambient lighting, candles or soft light sources, sense of genuine studio presence and human guidance rather than solo app use, serene and professional, 16:9 aspect ratio"
                         },
-                        "triggerLabel": "Therapeutic Sound"
+                        "triggerLabel": "Therapeutic Sound",
+                        "mediaLayout": "left"
                     },
                     {
                         "title": "Therapeutic Sound Mechanisms",
@@ -87,12 +87,12 @@
                         "content": "<ul><li><strong>Nature Treks VR:</strong> Open exploration. Good for daily grounding, freedom. Low cost ($10).</li><li><strong>The Blu:</strong> Intense, curated encounters (e.g., eye contact with a blue whale). Used for awe induction and exposure therapy.</li><li><strong>Contrast:</strong> Ongoing restoration (Nature Treks) vs. Peak experience (The Blu).</li></ul>",
                         "media": {
                             "type": "image",
-                            "src": "placeholder-nature-vr.jpg",
+                            "src": "../assets/images/module4/nature-vr.png",
                             "alt": "Split view: Serene forest exploration vs. majestic underwater whale encounter",
-                            "position": "full-width",
                             "aiPrompt": "Split composition nature VR scene - left half shows person walking through serene forest VR environment (sunlight through trees, ferns, sense of peaceful exploration), right half shows person encountering majestic blue whale in underwater VR scene (sense of awe and scale, whale making eye contact), both figures show visible emotional response and presence, contrasting gentle restoration vs. intense awe, 16:9 aspect ratio"
                         },
-                        "triggerLabel": "Clinical Implications"
+                        "triggerLabel": "Clinical Implications",
+                        "mediaLayout": "right"
                     },
                     {
                         "title": "Accessibility & Clinical Relevance",
@@ -118,12 +118,12 @@
                         "content": "<p><strong>Beyond Wellness:</strong></p><ul><li><strong>OBE Simulations:</strong> Uses body-swapping illusions to loosen ego identification (University of Barcelona).</li><li><strong>NDE Simulations:</strong> Guided death/rebirth narratives (tunnels of light, life review).</li><li><strong>Lucid Dreaming:</strong> Reality testing training in surreal VR environments.</li></ul><p>These target <strong>transformation</strong>, not relaxation. They carry high intensity.</p>",
                         "media": {
                             "type": "image",
-                            "src": "placeholder-experimental-vr.jpg",
+                            "src": "../assets/images/module4/experimental-vr.png",
                             "alt": "Abstract VR scene depicting ego dissolution",
-                            "position": "left",
                             "aiPrompt": "Abstract experimental VR consciousness scene - person in VR headset experiencing profound altered state (body language shows both opening and vulnerability), environment shows dissolving boundaries and geometric abstractions representing ego dissolution, sense of intensity but contained space, facilitator presence subtly visible in background (protective container), mystical aesthetic with sacred geometry, both expansive and grounded simultaneously, 16:9 aspect ratio"
                         },
-                        "triggerLabel": "Riva's Research (2025)"
+                        "triggerLabel": "Riva's Research (2025)",
+                        "mediaLayout": "left"
                     },
                     {
                         "title": "Giuseppe Riva's Research (Milan, 2025)",
@@ -159,12 +159,12 @@
                         "content": "<ul><li><strong>Quest 3S (~$300):</strong> Best entry point. Good enough visuals, runs full library. Front-heavy.</li><li><strong>Quest 3 (~$500):</strong> The anchor recommendation. Pancake lenses (clearer), better comfort/MR. The practical choice for 80% of users.</li><li><strong>Why Meta?:</strong> Subsidized hardware + massive library = unbeatable value proposition despite data concerns.</li></ul>",
                         "media": {
                             "type": "image",
-                            "src": "placeholder-headset-comparison.jpg",
+                            "src": "../assets/images/module4/headset-comparison.png",
                             "alt": "Side-by-side comparison of Quest 3S, Quest 3, Pico 4, and PSVR2",
-                            "position": "full-width",
                             "aiPrompt": "Clean product comparison layout - four VR headsets displayed side by side on neutral background (Meta Quest 3S, Meta Quest 3, Pico 4, PlayStation VR2), each labeled with price point, slight angle showing form factor, professional product photography style, honest comparison aesthetic (not promotional), sense of informed decision-making, 16:9 aspect ratio"
                         },
-                        "triggerLabel": "Premium Tier (Sony/Apple)"
+                        "triggerLabel": "Premium Tier (Sony/Apple)",
+                        "mediaLayout": "right"
                     },
                     {
                         "title": "Premium Tier: The Content Trap",

@@ -20,7 +20,7 @@
                         "title": "Global Workspace Theory",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module3/global_workspace.jpg",
+                            "src": "../assets/images/module3/global_workspace.png",
                             "alt": "Abstract visualization of a central glowing workspace in a neural network",
                             "prompt": "Abstract visualization of a central glowing workspace in a neural network, surrounded by smaller specialized processing nodes in grey, with luminous information streams broadcasting outward from the center into the network, sense of a single spotlight illuminating what was previously background activity, purple and teal color palette on dark background, 16:9 aspect ratio"
                         },
@@ -32,7 +32,7 @@
                         "title": "Integrated Information Theory",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module3/integrated_information.jpg",
+                            "src": "../assets/images/module3/integrated_information.png",
                             "alt": "Abstract visualization of multiple sensory input streams weaving together",
                             "prompt": "Abstract visualization of multiple sensory input streams, visual, auditory, kinesthetic, represented as colored light channels, weaving together into a single integrated core, with phi symbol glowing at the center of integration, representing the relationship between coherence and conscious richness, geometric and fluid simultaneously, teal and purple palette, 16:9 aspect ratio"
                         },
@@ -63,11 +63,11 @@
                         "title": "The Brain Doesn't Perceive Reality. It Predicts It.",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module3/predictive_brain.jpg",
+                            "src": "../assets/images/module3/predictive_brain.png",
                             "alt": "Abstract visualization of a brain projecting predictions and receiving data",
                             "prompt": "Abstract visualization of a brain at center generating outward projection lines representing predictions, with incoming sensory data streams flowing inward in contrasting color, some prediction lines matching incoming data (shown as aligned and fading), some showing bright glowing mismatches where prediction errors occur, sense of the brain as active model-generator rather than passive receiver, deep blue and purple palette with teal error highlights, 16:9 aspect ratio"
                         },
-                        "mediaLayout": "full",
+                        "mediaLayout": "right",
                         "content": "<p>Here is one of the most counterintuitive findings in modern neuroscience, and it's been replicated enough to state with confidence: your brain does not passively receive sensory information and assemble it into perception. It does the opposite. It constantly generates predictions about what should be arriving, and only updates when those predictions are wrong.</p><p>What you experience as 'seeing' or 'hearing' is mostly your brain's best current model of what's out there, corrected continuously by incoming data when the model fails. The experience of reality is, in significant part, a sophisticated controlled hallucination running in real time.</p><p>This matters for cyberdelics because it means VR doesn't need to fool the brain perfectly. It needs to generate predictions the brain can't easily correct.</p>",
                         "triggerLabel": "Predictive Processing Defined"
                     },
@@ -80,11 +80,11 @@
                         "title": "How VR Exploits Predictive Processing",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module3/vr_prediction.jpg",
+                            "src": "../assets/images/module3/vr_prediction.png",
                             "alt": "Person in VR headset with brain prediction model overlay",
                             "prompt": "Person in VR headset, surrounded by an abstract visualization showing their brain's prediction model as a semi-transparent geometric overlay on the environment, some areas where predictions match (calm blue), other areas where novel environment generates prediction errors (glowing amber), representing the brain actively updating in real time, cyberdelic aesthetic, 16:9 aspect ratio"
                         },
-                        "mediaLayout": "right",
+                        "mediaLayout": "left",
                         "content": "<p>High-quality immersive VR works, from a Predictive Processing standpoint, by generating systematic prediction errors that the brain resolves by updating its model rather than by acting to correct the environment.</p><p>When someone puts on a headset and enters a well-designed VR space, their visual system generates predictions about what moving their head should produce. Those predictions are met; the environment responds correctly to movement. The brain updates: this is where I am, this is real. That rapid model update is the mechanism behind the sense of presence.</p><p>Cyberdelic VR goes further by introducing novel coherent environments that generate prediction errors at a higher level, environments the person has no prior model for. Without an established model to fall back on, the brain is forced into genuine updating. This is one explanation for why novel VR environments can produce states of expanded attention and awareness that feel qualitatively different from ordinary perception.</p>",
                         "triggerLabel": "Embodied Cognition"
                     },
@@ -92,11 +92,11 @@
                         "title": "Embodied Cognition",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module3/embodied_avatar.jpg",
+                            "src": "../assets/images/module3/embodied_avatar.png",
                             "alt": "Split view comparing normal human and energy body avatar",
                             "prompt": "Split composition: on the left, a standard neutral human figure in VR, surrounded by cool neutral tones; on the right, the same person inhabiting a glowing abstract particle-body avatar, surrounded by warmer tones and expanded spatial presence, representing how body representation shapes the quality of experience, sense of the body as a cognitive instrument rather than a neutral container, 16:9 aspect ratio"
                         },
-                        "mediaLayout": "left",
+                        "mediaLayout": "right",
                         "content": "<p>Embodied Cognition, developed through the work of Francisco Varela, Evan Thompson, and Eleanor Rosch, challenges the assumption that cognition happens in the brain alone. Their claim, supported by a substantial body of research, is that cognition is shaped by the whole body's interaction with its environment; not just the neural substrate, but the body's shape, its sensorimotor history, and the way it moves through and acts on the world.</p><p>The practical implication: what kind of body a person inhabits during a VR session affects how they think and feel within it. This isn't just metaphor. Stanford's Virtual Human Interaction Lab has replicated findings showing that embodying a virtual body with specific characteristics, such as different height, different age, or different physical condition, produces measurable changes in attitudes, emotional responses, and self-perception during and after the session.</p><p>The body you put someone into is a design decision with cognitive and therapeutic consequences.</p>",
                         "triggerLabel": "What Practitioners Do With These Frameworks"
                     },

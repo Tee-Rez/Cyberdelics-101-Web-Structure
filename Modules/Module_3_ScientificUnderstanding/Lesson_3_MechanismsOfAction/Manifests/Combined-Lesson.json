@@ -20,7 +20,7 @@
                         "title": "Mechanism 1: Attentional Capture",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module3/attentional_capture.jpg",
+                            "src": "../assets/images/module3/attentional_capture.png",
                             "alt": "Abstract visualization of attention being claimed by immersive space",
                             "prompt": "Abstract visualization of a human figure surrounded by flowing thought-stream lines representing self-referential mental activity, with a vivid immersive VR environment expanding outward from a central point, the thought-streams gradually fading as the environment fills the frame, representing attention being fully claimed by an immersive experience, purple and teal on dark background, 16:9 aspect ratio"
                         },
@@ -32,11 +32,11 @@
                         "title": "The Default Mode Network in Ordinary Consciousness",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module3/default_mode_network.jpg",
+                            "src": "../assets/images/module3/default_mode_network.png",
                             "alt": "Abstract brain visualization highlighting the Default Mode Network",
                             "prompt": "Abstract brain visualization with the Default Mode Network highlighted in soft warm gold, the medial prefrontal cortex and posterior cingulate cortex glowing distinctly, surrounding network activity quieter and grey, with subtle thought-bubble imagery around the brain representing self-referential mental content, clean scientific aesthetic with warmth, 16:9 aspect ratio"
                         },
-                        "mediaLayout": "full",
+                        "mediaLayout": "left",
                         "content": "<p>Before covering what cyberdelic experiences do to the Default Mode Network, it's worth being precise about what the DMN actually is.</p><p>The Default Mode Network is a set of connected brain regions, primarily the medial prefrontal cortex and posterior cingulate cortex, that become active when the mind is not focused on a specific external task. It's associated with self-referential thinking, mind-wandering, rumination, narrative about the self, and the persistent sense of being a 'me' moving through time. When you're staring out a window and your mind is elsewhere, the DMN is likely what's active.</p><p>In most people during most waking hours, the DMN is highly active. It is, in a meaningful sense, the network that generates the ordinary experience of selfhood. This is why what happens to it during altered states matters so much.</p>",
                         "triggerLabel": "Mechanism 2: Default Mode Network Modulation"
                     },
@@ -66,13 +66,6 @@
                     },
                     {
                         "title": "The Emotional Environment as Co-Facilitator",
-                        "media": {
-                            "type": "image",
-                            "src": "../assets/images/module3/emotional_regulation.jpg",
-                            "alt": "A person in a VR headset with emotional tone flowing from environment into body",
-                            "prompt": "A person in a VR headset seated in a chair, with a soft abstract visualization of emotional tone flowing from the virtual environment into their body; gentle color gradients moving from cool neutral tones representing initial state to warm amber and gold representing emotional shift, representing the environment as active emotional co-facilitator, calm and warm visual language, 16:9 aspect ratio"
-                        },
-                        "mediaLayout": "left",
                         "content": "<p>The practitioner implication of Emotional Regulation is direct: the emotional tone of the environment becomes the emotional tone of the person in it.</p><p>This is both the mechanism's power and its responsibility. A well-designed environment with clear therapeutic intent can create conditions for grief, release, insight, or peaceful absorption. A poorly designed or misaligned environment can activate threat responses, increase rather than decrease distress, or produce emotional experiences the client is not equipped to process without support.</p><p>Session experience: clients often report that their emotional state shifted without conscious effort. 'I wasn't trying to feel peaceful; I just did.' Or: 'I didn't expect to cry; but something in the environment opened that.' These are descriptions of Emotional Regulation working as intended.</p><p>The practitioner's job is to know what emotional register the environment is designed to create, match that to what the client needs, and have a response ready if the response that emerges isn't what was planned.</p>",
                         "triggerLabel": "Mechanism 4: Perspective Shift"
                     },
@@ -80,7 +73,7 @@
                         "title": "Mechanism 4: Perspective Shift",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module3/perspective_shift.jpg",
+                            "src": "../assets/images/module3/perspective_shift.png",
                             "alt": "Conceptual visualization showing a person transitioning through 3 viewpoints",
                             "prompt": "Conceptual visualization showing a person transitioning through three distinct first-person viewpoints: their own, a taller figure, and an older figure, each represented as a glowing perspective frame with different visual qualities. Arrows of influence flowing from each virtual perspective toward real-world behavior representations. Visual language of identity fluidity, warm purple and gold palette, 16:9 aspect ratio"
                         },
@@ -121,11 +114,11 @@
                         "title": "Mechanism 6: Multimodal Synchrony",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module3/multimodal_synchrony.jpg",
+                            "src": "../assets/images/module3/multimodal_synchrony.png",
                             "alt": "Abstract visualization of multiple sensory input streams converging",
                             "prompt": "Abstract visualization of multiple sensory input streams converging into a unified experience: flowing light channels representing visual input in purple, auditory waveforms in teal, haptic vibration patterns in amber, and proprioceptive movement lines in white, all weaving together into a single coherent core that glows with combined intensity, representing the qualitative difference of multimodal synchrony versus isolated inputs, 16:9 aspect ratio"
                         },
-                        "mediaLayout": "full",
+                        "mediaLayout": "right",
                         "content": "<p>Multimodal Synchrony is the mechanism by which synchronized, coherent inputs across multiple sensory channels produce a qualitatively different kind of experience than any single channel can produce alone.</p><p>The principle connects to Integrated Information Theory from Lesson 3.1: when visual, auditory, haptic, and proprioceptive inputs are synchronized and mutually reinforcing, the brain treats the combined experience as higher-fidelity reality. The ordinary cognitive effort of believing the experience is real decreases. It simply registers as real to the nervous system.</p><p>Session experience: the difference between a VR environment with excellent visuals but generic audio, and a VR environment where spatial audio shifts precisely with movement, where the soundscape is emotionally coherent with the visuals, where haptic feedback confirms what the eyes see. The second environment doesn't just feel better. It produces a qualitatively different neurological state.</p><p>Multimodal Synchrony is why experienced cyberdelic designers treat sound design as equal in importance to visual design, and why haptic elements, even modest ones, can produce disproportionate presence effects.</p>",
                         "triggerLabel": "Mechanism 7: Integration"
                     },

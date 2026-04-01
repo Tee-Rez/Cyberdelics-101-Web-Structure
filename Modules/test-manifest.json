@@ -1,594 +1,422 @@
 {
-    "id": "combined_lesson_2_4",
-    "title": "Convergence & Validation: COVID, Isness & the Brain Evidence",
-    "description": "Examine three turning-point events that legitimized cyberdelics as a serious field: COVID's forced acceleration of VR adoption, the Isness mystical experience study, and the neural evidence from EEG and DeepDream VR.",
-    "framerDescription": "The field didn't become real all at once. It crossed a threshold through three distinct events that each shifted what was provable, what was adopted, and what was taken seriously by science.",
+    "id": "combined_lesson_5_1",
+    "title": "The Cyberdelic Ecosystem: Systems Thinking, Hardware, Software & Open Source",
+    "description": "Establish ecosystem thinking as the module's core lens, then examine how hardware manufacturers, software developers, and open source communities each shape the possibilities and constraints of the cyberdelic field.",
+    "framerDescription": "The field isn't a collection of products, it's a living system. This lesson installs the ecosystem lens you'll use for the rest of the module.",
     "theme": {
-        "primaryColor": "#5900ff",
+        "primaryColor": "#00c9a7",
         "fontBody": "Rajdhani, sans-serif"
     },
     "modules": [
         {
-            "id": "progressive_disclosure_covid_catalyst",
+            "id": "module_5_1_1_pd",
+            "title": "Thinking in Ecosystems",
             "type": "progressive-disclosure",
             "content": {
                 "sections": [
                     {
-                        "id": "section_1",
-                        "mediaLayout": "right",
+                        "title": "The Ecosystem Concept, why Isolated Product Thinking Fails",
+                        "content": "<p>In nature, an ecosystem is a community of living organisms interacting with each other and their environment. No single species exists in isolation, each depends on others.</p><p>The cyberdelic field works the same way. You could think of it as a collection of individual apps and headsets. That view is useful for picking tools. But it's dangerously incomplete for understanding <em>why</em> certain tools exist, <em>how</em> they survive, and <em>what's coming next</em>.</p><p>Isolated product thinking leads to surprises: a platform you've been recommending shuts down because its investor pulled funding. A headset you depend on gets discontinued after a corporate pivot. These aren't random events, they're ecosystem dynamics. Understanding the ecosystem means fewer surprises and better decisions.</p><p><strong>Key Takeaway:</strong> Cyberdelics is a living system, not a product catalog. Systems thinkers navigate it better than informed consumers do.</p>",
+                        "triggerLabel": "The Eight Components"
+                    },
+                    {
+                        "title": "The Eight Ecosystem Components",
+                        "content": "<p>Eight interconnected components make the cyberdelic field possible:</p><ul><li><strong>Technology Providers:</strong> hardware manufacturers and software developers who build the tools the field runs on</li><li><strong>Knowledge Producers:</strong> research institutions and academics who validate effectiveness and establish safety</li><li><strong>Clinical Practitioners:</strong> therapists and healthcare professionals who bring VR tools into real patient care</li><li><strong>Facilitators &amp; Guides:</strong> non-clinical professionals who guide experiences in wellness and transformational contexts</li><li><strong>Users &amp; Communities:</strong> practitioners and peer networks who generate real-world feedback and cultural momentum</li><li><strong>Economic Infrastructure:</strong> investors, VCs, and business models that determine which ideas get resources to develop</li><li><strong>Educators &amp; Trainers:</strong> organizations and individuals who build professional competency across the field</li><li><strong>Regulatory &amp; Knowledge Sharing:</strong> government frameworks, professional associations, conferences, and publications that enable safe practice</li></ul><p>No single component is sufficient. All are necessary. The field is only as strong as its weakest interdependency.</p>",
                         "media": {
                             "type": "image",
-                            "src": "../../assets/Images/Module2/covid_shift.png"
+                            "src": "../assets/images/module5/ecosystem-web.png",
+                            "alt": "Circular web diagram showing eight interconnected ecosystem components with energy flow lines",
+                            "aiPrompt": "A circular web diagram showing eight ecosystem component nodes connected by glowing lines with an organic, interconnected aesthetic, deep purple and teal palette with sacred geometry influence. Each node slightly glowing, lines between them suggesting active energy flow. Dark background. The feel of a living nervous system or mycelial network. 16:9 aspect ratio."
                         },
-                        "title": "The Sudden Shift (March 2020)",
-                        "content": "When COVID-19 lockdowns began in March 2020, billions of people suddenly couldn't see friends or family in person, attend events, concerts, or gatherings, go to offices, schools, or social spaces, or maintain normal social lives. The question became urgent: how do we maintain human connection without physical proximity? Technology became the only option, not a choice but necessity.",
-                        "triggerLabel": "See the Impact"
+                        "triggerLabel": "Ripple Example: Hardware Launch",
+                        "mediaLayout": "right"
                     },
                     {
-                        "id": "section_2",
-                        "title": "The VR Sales Surge",
-                        "content": "VR headset sales exploded: Oculus Quest 2 (released September 2020) became fastest-selling VR device ever with Meta selling over 10 million units in first 18 months. Other manufacturers saw similar surges. VR went from niche hobby to mainstream consideration. Why? Social connection through VR meetups and hangouts. Entertainment escape when physical travel was impossible. VR fitness when gyms were closed. Alternative to video call fatigue. But most significantly, cultural attitudes toward mediated experience shifted.",
-                        "triggerLabel": "Understand the Cultural Shift"
+                        "title": "Interdependency: A New Hardware Launch",
+                        "content": "<p>When Meta releases a new headset, the effects ripple outward in ways most people don't trace:</p><ul><li><strong>Technology Providers</strong> release improved hardware with new capabilities</li><li><strong>Knowledge Producers</strong> study its effectiveness for specific therapeutic applications</li><li>Findings are <strong>published</strong>, adding to the field's evidence base (Knowledge Sharing)</li><li><strong>Clinical Practitioners</strong> adopt based on published evidence</li><li><strong>Economic Infrastructure</strong>, insurers consider reimbursement as evidence accumulates</li><li><strong>Investor</strong> confidence increases as clinical adoption signals market viability</li><li><strong>Educators</strong> update curricula to include the new hardware's capabilities</li><li><strong>User Communities</strong> grow as accessibility improves</li></ul><p>The hardware launch started a chain reaction across all eight components. That's not coincidence, that's how ecosystems work.</p>",
+                        "triggerLabel": "Ripple Example: Research Breakthrough"
                     },
                     {
-                        "id": "section_3",
-                        "title": "The Normalization of Mediated Experience",
-                        "content": "Pre-COVID attitudes: 'real' connection requires physical presence, technology-mediated relationships are inferior, virtual experiences can't substitute for real ones, spending time in virtual worlds is escapism or addiction. Post-COVID attitudes: technology enables genuine connection despite distance, virtual experiences have real value and meaning, mediated doesn't mean fake - it means accessible, digital spaces can be emotionally significant. Billions discovered connection through technology CAN be meaningful when physical gathering is impossible.",
-                        "triggerLabel": "Explore Virtual Events"
+                        "title": "Interdependency: A Research Breakthrough",
+                        "content": "<p>In 2017, the Isness-D team published VR mystical experience results in PLOS ONE. Follow the ripple:</p><ul><li><strong>Knowledge Producers</strong> publish peer-reviewed findings on VR-induced mystical experience</li><li><strong>Media</strong> coverage increases public awareness (Knowledge Sharing)</li><li><strong>Investors</strong> see scientific validation, increase funding to consciousness tech startups (Economic Infrastructure)</li><li><strong>Software Developers</strong> create platforms exploring similar mechanisms (Technology Providers)</li><li><strong>Facilitator training programs</strong> incorporate the MEQ framework (Educators)</li><li><strong>Regulators</strong> begin engaging with mental health policy implications (Regulatory)</li><li><strong>Clinical Practitioners</strong> gain confidence to recommend VR as adjunct to therapeutic practice</li></ul><p>One piece of research reshaped multiple ecosystem components simultaneously. Understanding this is what distinguishes field builders from informed consumers.</p>",
+                        "triggerLabel": "Why This Matters for You"
                     },
                     {
-                        "id": "section_4",
-                        "title": "Virtual Events Proliferate",
-                        "content": "During lockdown, virtual events exploded: Travis Scott concert in Fortnite (12 million participants), Burning Man went virtual, virtual graduations, weddings, and funerals, virtual meditation groups and spiritual gatherings. People discovered shared virtual experiences could be genuinely meaningful, not identical to physical presence but valuable in their own right. This cultural learning directly supported cyberdelics: if virtual concerts and weddings could be meaningful, why not virtual consciousness experiences?",
-                        "triggerLabel": "Mental Health Connection"
-                    },
-                    {
-                        "id": "section_5",
-                        "title": "Mental Health Tech Surge",
-                        "content": "COVID created mental health crisis with anxiety and depression rates doubling, isolation-related distress widespread, and traditional therapy overwhelmed. Response: massive adoption of mental health tech. Calm and Headspace saw 2-3x user growth, therapy apps expanded rapidly, mindfulness courses exploded, and VR therapy for anxiety gained legitimacy. The pandemic normalized using technology for mental health and consciousness work. By late 2020, the cultural conditions were perfect: millions owned VR headsets, virtual gathering was normalized, mental health tech was mainstream, technology for consciousness was accepted, and people had time and space to explore.",
-                        "triggerLabel": "Explore the Isness Study"
-                    }
-                ]
-            }
-        },
-        {
-            "id": "progressive_disclosure_isness_study",
-            "type": "progressive-disclosure",
-            "content": {
-                "sections": [
-                    {
-                        "id": "section_1",
-                        "title": "The Study That Changed Everything",
-                        "content": "Published in PLOS ONE, June 2020, 'Isness: Using Multi-Person VR to Design Peak Mystical Type Experiences Comparable to Psychedelics' by David Glowacki and team at University of Bristol. The setup: 57 participants experienced a 13-minute shared multi-person VR experience where each person was represented as an energetic body made of moving particles, synchronized movement and interaction in abstract virtual space, and post-experience measurement using standard Mystical Experience Questionnaire (MEQ30) that psychedelic researchers use.",
-                        "triggerLabel": "See the Results"
-                    },
-                    {
-                        "id": "section_2",
-                        "title": "The Groundbreaking Results",
-                        "content": "Average MEQ30 score: above 0.6 (the threshold typically considered 'complete mystical experience'). This score was comparable to high-dose psilocybin studies from Johns Hopkins and Imperial College research. Specific findings: 56% of participants reported 'unity' experiences, 62% reported 'transcendence of time and space,' 71% reported 'positive mood,' and effects persisted at follow-up measurements. This was the first rigorous demonstration that VR could produce genuine mystical experiences, not just interesting visuals.",
-                        "triggerLabel": "Why It Mattered"
-                    },
-                    {
-                        "id": "section_3",
-                        "title": "Why This Mattered",
-                        "content": "This study transformed the field by providing the first rigorous demonstration that VR could produce genuine mystical experiences, the experiences were comparable to psychedelics as measured by same validated scales, shared aspects amplified individual experience (multiple people in same space created stronger effects than solo), and no substances were required. For the first time, cyberdelic practitioners could point to peer-reviewed research showing measurable mystical experiences, not just subjective reports or enthusiasm.",
-                        "triggerLabel": "Design Principles"
-                    },
-                    {
-                        "id": "section_4",
-                        "title": "The Design Principles Identified",
-                        "content": "Researchers identified key elements that facilitated mystical experiences: energetic body representation (seeing yourself as flowing energy, not solid avatar, facilitated boundary dissolution), synchronized movement (group moving together created collective flow), abstract environment (non-realistic space reduced ego attachment to normal identity), and intentional preparation (pre-session guidance primed participants for openness). These design principles became foundational for cyberdelic platform development.",
-                        "triggerLabel": "Leary's Prophecy"
-                    },
-                    {
-                        "id": "section_5",
-                        "title": "Leary's Prophecy Validated",
-                        "content": "Timothy Leary's 1994 prediction - 'The PC is the LSD of the 1990s' - was validated in 2020, 26 years later. He was right about the direction, just early on the timeline. The arc from vision (1994) through gap years (2000-2012), technology maturation (2012-2020), to scientific validation (2020) was complete. Cyberdelics was no longer speculative vision; it was validated science.",
-                        "triggerLabel": "Explore Neural Validation"
-                    }
-                ]
-            }
-        },
-        {
-            "id": "progressive_disclosure_neural_validation",
-            "type": "progressive-disclosure",
-            "content": {
-                "sections": [
-                    {
-                        "id": "section_1",
-                        "title": "DeepDream VR - Hallucinogenic Technology",
-                        "content": "Published in Nature Scientific Reports, DeepDream VR applied Google's pattern-recognition neural network to 360-degree video in real-time, creating VR environments where the world constantly shifts into hallucinogenic patterns. The concept: if psychedelics produce visual distortions through affecting visual processing, could artificially creating similar distortions produce similar consciousness changes? Participants described experiences as 'psychedelic-like,' with visual patterns similar to substance experiences, and some couldn't distinguish from mild psychedelic experiences.",
-                        "triggerLabel": "See Neural Findings"
-                    },
-                    {
-                        "id": "section_2",
-                        "title": "The Neural Findings (EEG Studies)",
-                        "content": "Research by Greco et al. (2021) measured brain activity during DeepDream VR: increased frontal entropy (brain activity became less predictable, more flexible), decreased neural complexity (similar to psychedelic states), alpha wave enhancement (associated with meditative states), and Default Mode Network modulation (reduced self-referential thinking). These neural signatures resembled psychedelic and meditative states, not identical but similar patterns of brain activity changes.",
-                        "triggerLabel": "Brain Evidence Proven"
-                    },
-                    {
-                        "id": "section_3",
-                        "title": "What the Brain Evidence Proved",
-                        "content": "The neural research showed: VR doesn't just create illusions - it changes brain activity measurably. The changes resemble known consciousness-altering states (psychedelics and meditation). Visual distortion alone can influence consciousness; you don't need chemical neurotransmitter changes. Technology can produce genuine altered states, not just subjective impressions. The brain treats technology-induced altered states as real neurological events, not mere imagination.",
-                        "triggerLabel": "Evidence Convergence"
-                    },
-                    {
-                        "id": "section_4",
-                        "title": "Convergence of Evidence",
-                        "content": "By 2024, multiple research streams converged to validate cyberdelics: subjective mystical experiences (Isness study showing MEQ30 scores comparable to psilocybin), neural changes (DeepDream, EEG studies showing measurable brain alterations), therapeutic outcomes (clinical trials showing effectiveness for pain, anxiety, phobias), and embodiment and presence (cognitive neuroscience validating virtual body ownership and psychological reality of VR). The evidence was overwhelming: VR produces genuine consciousness changes with real effects.",
-                        "triggerLabel": "Arc Complete"
-                    },
-                    {
-                        "id": "section_5",
-                        "title": "From Vision to Validated Science - The Arc Complete",
-                        "content": "<p>The 30-year arc reached completion not through a single breakthrough but through six distinct phases, each building on what the one before it made possible.</p><table style='width:100%; border-collapse:collapse; margin-top:10px; margin-bottom:16px; font-size:0.86em; text-align:left;'><thead><tr style='background:rgba(255,255,255,0.15); border-bottom:2px solid rgba(255,255,255,0.3);'><th style='padding:10px 12px; font-weight:600; letter-spacing:0.03em;'>Period</th><th style='padding:10px 12px; font-weight:600; letter-spacing:0.03em;'>Phase</th><th style='padding:10px 12px; font-weight:600; letter-spacing:0.03em;'>Defining Event</th></tr></thead><tbody><tr style='border-bottom:1px solid rgba(255,255,255,0.1); background:rgba(255,255,255,0.03);'><td style='padding:9px 12px;'>1994</td><td style='padding:9px 12px;'><strong>Leary's Vision</strong></td><td style='padding:9px 12px;'>T'he PC is the LSD of the 1990s' -- speculation without the technology to prove it</td></tr><tr style='border-bottom:1px solid rgba(255,255,255,0.1);'><td style='padding:9px 12px;'>1987-1999</td><td style='padding:9px 12px;'><strong>Early Pioneers</strong></td><td style='padding:9px 12px;'>Lanier, Laurel, Krueger establish core concepts; hardware too primitive for the vision</td></tr><tr style='border-bottom:1px solid rgba(255,255,255,0.1); background:rgba(255,255,255,0.03);'><td style='padding:9px 12px;'>2000-2012</td><td style='padding:9px 12px;'><strong>Gap Years</strong></td><td style='padding:9px 12px;'>Commercial VR collapses; underground progress in labs, gaming, and smartphones</td></tr><tr style='border-bottom:1px solid rgba(255,255,255,0.1);'><td style='padding:9px 12px;'>2012-2016</td><td style='padding:9px 12px;'><strong>VR Renaissance</strong></td><td style='padding:9px 12px;'>Oculus Kickstarter and Facebook acquisition; consumer hardware finally viable</td></tr><tr style='border-bottom:1px solid rgba(255,255,255,0.1); background:rgba(255,255,255,0.03);'><td style='padding:9px 12px;'>2016-2019</td><td style='padding:9px 12px;'><strong>Early Experiments</strong></td><td style='padding:9px 12px;'>First cyberdelic platforms emerge; concepts tested in the field</td></tr><tr style='background:rgba(255,255,255,0.03);'><td style='padding:9px 12px;'>2020-2024</td><td style='padding:9px 12px;'><strong>Scientific Validation</strong></td><td style='padding:9px 12px;'>Isness study, DeepDream EEG findings, COVID-accelerated adoption; vision becomes validated field</td></tr></tbody></table><p>We now have working technology, scientific validation, therapeutic applications, cultural acceptance, theoretical frameworks, training programs, and business models. Cyberdelics has transitioned from vision to validated field.</p>",
+                        "title": "Why Ecosystem Thinking Matters for You",
+                        "content": "<p>The eight-component framework isn't just interesting context, it's a practical tool.</p><p>As a <strong>facilitator</strong>, it tells you how to evaluate whether a platform will still exist in two years, check investor backing, business model, clinical adoption rate, developer team size.</p><p>As a <strong>researcher</strong>, it tells you where your work can have the greatest leverage. Knowledge Producers have disproportionate downstream influence on every other component.</p><p>As an <strong>advocate or educator</strong>, it tells you which ecosystem bottlenecks are choking field development and where effort creates the most systemic change.</p><p>As a <strong>field builder</strong> of any kind, it gives you a map. Every lesson in Module 5 adds detail to one or more sections of this map. By the end, you'll be able to read ecosystem health the way an ecologist reads a forest, not just noting what's present, but understanding what it means for everything else.</p>",
                         "triggerLabel": "Take the Quiz"
                     }
                 ]
             }
         },
         {
-            "id": "culture_map_2.3",
-            "title": "Culture-Tech Convergence Map",
-            "type": "interactive-simulation",
+            "id": "module_5_1_2_pd",
+            "title": "Hardware Manufacturers: Strategic Players",
+            "type": "progressive-disclosure",
             "content": {
-                "engine": "CyberdelicConvergence",
-                "placeholder": true,
-                "notes": "Interactive visualization of 1980-2020 timeline comparing Cultural Movements vs Tech Development. Convergence points highlighted.",
-                "graphic_src": "../assets/images/module2/convergence_map_placeholder.jpg"
-            }
-        },
-        {
-            "id": "quiz_lesson_4_combined",
-            "type": "scenario-based",
-            "title": "Module 2 Lesson 4 Quiz",
-            "content": {
-                "scenes": [
+                "sections": [
                     {
-                        "id": "quiz1_q1",
-                        "narrative": "<p><strong>What was the most significant cultural shift that COVID-19 created for cyberdelics?</strong></p>",
-                        "choices": [
-                            {
-                                "id": "q1_a",
-                                "label": "It proved virtual reality was only for entertainment",
-                                "outcome": "quiz1_q1_a_feedback"
-                            },
-                            {
-                                "id": "q1_b",
-                                "label": "It made VR completely replace all physical interactions",
-                                "outcome": "quiz1_q1_c_feedback"
-                            },
-                            {
-                                "id": "q1_c",
-                                "label": "It normalized technology-mediated experience as genuinely meaningful",
-                                "outcome": "quiz1_q1_correct"
-                            },
-                            {
-                                "id": "q1_d",
-                                "label": "It decreased interest in all forms of technology",
-                                "outcome": "quiz1_q1_d_feedback"
-                            }
-                        ]
+                        "title": "Hardware Manufacturers as Ecosystem Players",
+                        "content": "<p>Hardware manufacturers in the cyberdelic space aren't just building consumer products. They are making bets about the future of computing, and those bets have profound consequences for what every developer can build and every practitioner can recommend.</p><p>When a manufacturer decides how to price hardware, what app distribution model to use, how to handle user data, or what rendering capabilities to prioritize, those decisions define the playing field for an entire field of developers. A cyberdelic platform doesn't exist in the abstract. It runs on specific hardware with specific capabilities and constraints set by a manufacturer whose primary goals may have nothing to do with consciousness exploration.</p><p><strong>Core Question:</strong> Whose strategic interests are shaping the tools we use, and what does that mean for where the field can go?</p>",
+                        "triggerLabel": "Meta's Dominance"
                     },
                     {
-                        "id": "quiz1_q1_a_feedback",
-                        "narrative": "<p><strong>Incorrect.</strong> Actually, COVID proved the opposite: VR and technology-mediated experiences could serve genuine human needs beyond entertainment. Virtual graduations, memorials, support groups, and therapy sessions showed technology could facilitate meaningful experiences. The shift was toward taking mediated experiences seriously, not dismissing them as mere entertainment.</p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "quiz1_q1"
-                            }
-                        ]
+                        "title": "Meta: Dominance, Strategy, and Implications",
+                        "content": "<p>Meta controls approximately 77% of global consumer VR headset shipments as of 2024. For cyberdelic developers, this isn't a stat, it's a constraint.</p><p><strong>The subsidized hardware strategy:</strong> Meta sells Quest headsets below cost and recovers margin through the Meta Quest Store's 30% app fee. This drives adoption while creating platform dependency (developers need Meta's distribution to reach most VR users).</p><p><strong>Platform control implications:</strong> Building for Meta Quest maximizes reach. But it also means navigating Meta's content policies, accepting their revenue share, and operating within their approval processes. A consciousness app that Meta decides violates platform guidelines loses access to 77% of potential users overnight.</p><p><strong>Privacy concerns:</strong> Meta's business model is built on data collection and advertising. Users with privacy concerns face a real trade-off: the best-supported platform also has the most surveillance-adjacent business model.</p><p><strong>The bottom line:</strong> Most cyberdelic content is Quest-first by necessity, not by preference. Maximum reach requires Meta.</p>",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module5/meta-timeline.png",
+                            "alt": "Graphic depicting Meta Quest hardware with a data visualization overlay showing 77% market share.",
+                            "aiPrompt": "Meta Quest hardware headset shown in soft studio lighting. Floating above or around it are clean, minimal data visualization elements (charts, glowing percentages) emphasizing a dominant 77% market share. Corporate but sleek aesthetic, representing both hardware capability and market dominance. 16:9 aspect ratio."
+                        },
+                        "triggerLabel": "Apple's Legitimacy Signal",
+                        "mediaLayout": "left"
                     },
                     {
-                        "id": "quiz1_q1_c_feedback",
-                        "narrative": "<p><strong>Incorrect.</strong> COVID didn't make virtual experiences replace physical ones entirely; it showed they could complement them and fill gaps when physical isn't possible. People still valued physical connection but learned virtual connection had its own validity. It was about expanding what counts as 'real' connection, not replacing one with the other.</p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "quiz1_q1"
-                            }
-                        ]
+                        "title": "Apple: The Legitimacy Signal",
+                        "content": "<p>Apple Vision Pro isn't trying to win the volume war. It's playing a different game.</p><p>Apple's Vision Pro launch positioned spatial computing as a premium, high-capability platform, separate from gaming-focused VR. The messaging is enterprise and productivity, not entertainment. For the cyberdelic field, this matters less as a current tool (limited consciousness-focused content exists on Vision Pro today) and more as a legitimacy signal.</p><p>When Apple enters a space, it signals maturity and cultural acceptance. The Vision Pro's existence says: spatial computing is serious, premium, and here to stay. As consciousness-focused content matures and demand from wellness and clinical markets grows, Vision Pro could become a significant platform for high-fidelity therapeutic and exploratory experiences.</p><p><strong>For facilitators:</strong> Apple's current limited cyberdelic content library makes it a poor immediate recommendation for most clients. But the platform's trajectory, premium hardware, strong privacy positioning, and enterprise credibility, points toward future relevance.</p>",
+                        "triggerLabel": "Pico & Institutional Markets"
                     },
                     {
-                        "id": "quiz1_q1_d_feedback",
-                        "narrative": "<p><strong>Incorrect.</strong> COVID massively increased technology adoption, not decreased it. VR sales surged, video call usage exploded, digital tools became essential. The pandemic accelerated technology integration into daily life by years. Interest and adoption increased dramatically, not decreased.</p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "quiz1_q1"
-                            }
-                        ]
+                        "title": "Pico: International Alternative & Regulatory Context",
+                        "content": "<p>Pico (owned by ByteDance) is the fastest-growing international VR alternative to Meta, with particular traction in Europe and Asia.</p><p><strong>Why Pico is growing internationally:</strong> Meta faces significant regulatory resistance in the EU and other markets over data practices and privacy frameworks. ByteDance's alternative, despite its own Chinese ownership concerns, is often perceived as the lesser regulatory friction by European distributors and institutions.</p><p><strong>The privacy positioning play:</strong> Pico markets itself as a privacy-friendlier choice for institutional and clinical customers where Meta's data model creates procurement obstacles. European hospitals, university research labs, and government-funded wellness initiatives have found Pico easier to navigate from a procurement and compliance standpoint.</p><p><strong>For developers and facilitators:</strong> Pico's relative US niche status means building for it adds scope without proportional audience gain domestically. Internationally, however, it opens institutional doors that Meta can't for clinical licensing approaches.</p>",
+                        "triggerLabel": "The Shared Constraint"
                     },
                     {
-                        "id": "quiz1_q1_correct",
-                        "narrative": "<p><strong>Correct!</strong> The most important shift was cultural: before COVID, virtual experiences were seen as inferior substitutes for 'real' physical experiences. After COVID, billions discovered technology-mediated connection could be genuinely meaningful when physical gathering was impossible. This shift in cultural attitudes - from 'virtual is fake' to 'virtual is a valid form of real' - prepared people to take cyberdelic experiences seriously as legitimate consciousness work, not just digital entertainment.</p>",
-                        "choices": [
-                            {
-                                "id": "next",
-                                "label": "Next Question",
-                                "outcome": "quiz1_q2"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "quiz1_q2",
-                        "narrative": "<p><strong>How did COVID-19 accelerate the timeline for cyberdelic acceptance?</strong></p>",
-                        "choices": [
-                            {
-                                "id": "q2_a",
-                                "label": "It gave everyone unlimited free time to meditate",
-                                "outcome": "quiz1_q2_a_feedback"
-                            },
-                            {
-                                "id": "q2_b",
-                                "label": "It eliminated all competition for VR companies",
-                                "outcome": "quiz1_q2_c_feedback"
-                            },
-                            {
-                                "id": "q2_c",
-                                "label": "It made traditional meditation completely obsolete",
-                                "outcome": "quiz1_q2_d_feedback"
-                            },
-                            {
-                                "id": "q2_d",
-                                "label": "It compressed 5-10 years of cultural acceptance into months",
-                                "outcome": "quiz1_q2_correct"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "quiz1_q2_a_feedback",
-                        "narrative": "<p><strong>Incorrect.</strong> While some people had more time, this wasn't the main mechanism. The acceleration came from forced normalization of technology-mediated experiences. When virtual gatherings became necessary rather than optional, cultural resistance to 'mediated = fake' collapsed. Attitudes that might have taken 5-10 years to shift changed in months because circumstances forced reevaluation.</p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "quiz1_q2"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "quiz1_q2_c_feedback",
-                        "narrative": "<p><strong>Incorrect.</strong> COVID didn't eliminate competition; it expanded the VR market overall with multiple companies benefiting (Meta, HTC, Sony, etc.). The acceleration was about market growth and cultural acceptance, not monopoly creation. All VR companies saw increased interest and adoption.</p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "quiz1_q2"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "quiz1_q2_d_feedback",
-                        "narrative": "<p><strong>Incorrect.</strong> COVID didn't make traditional practices obsolete. Many people deepened traditional meditation during lockdown. What changed was openness to technology-assisted practices as complementary tools, not replacements. Technology and tradition both grew, not one replacing the other.</p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "quiz1_q2"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "quiz1_q2_correct",
-                        "narrative": "<p><strong>Correct!</strong> COVID acted as cultural catalyst, compressing years of gradual acceptance into rapid shift. Forced isolation made virtual connection necessary, millions experienced meaningful virtual gatherings (weddings, memorials, support groups), mental health tech became mainstream necessity not fringe interest, and resistance to 'consciousness tech' dissolved when technology became essential for wellbeing. What might have taken a decade of slow cultural change happened in months because crisis created urgency.</p>",
-                        "choices": [
-                            {
-                                "id": "next",
-                                "label": "Next Question",
-                                "outcome": "quiz2_q1"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "quiz2_q1",
-                        "narrative": "<p><strong>What did the Isness VR study (June 2020) demonstrate?</strong></p>",
-                        "choices": [
-                            {
-                                "id": "q1_a",
-                                "label": "VR could create better graphics than traditional video games",
-                                "outcome": "quiz2_q1_a_feedback"
-                            },
-                            {
-                                "id": "q1_b",
-                                "label": "VR was only useful for entertainment purposes",
-                                "outcome": "quiz2_q1_c_feedback"
-                            },
-                            {
-                                "id": "q1_c",
-                                "label": "Mystical experiences only occur with substance use",
-                                "outcome": "quiz2_q1_d_feedback"
-                            },
-                            {
-                                "id": "q1_d",
-                                "label": "VR could produce mystical experiences comparable to high-dose psilocybin",
-                                "outcome": "quiz2_q1_correct"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "quiz2_q1_a_feedback",
-                        "narrative": "<p><strong>Incorrect.</strong> The study wasn't about graphics quality; it was about consciousness states. The research measured whether VR could produce mystical experiences using the same validated questionnaire (MEQ30) used in psychedelic research. The findings were about consciousness and transformation, not visual fidelity.</p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "quiz2_q1"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "quiz2_q1_c_feedback",
-                        "narrative": "<p><strong>Incorrect.</strong> The study demonstrated the opposite: VR could facilitate profound mystical states associated with transformation and meaning, not just entertainment. The research specifically measured transcendence, unity, and transformational experiences. It proved VR's potential for consciousness work, not limitations to entertainment.</p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "quiz2_q1"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "quiz2_q1_d_feedback",
-                        "narrative": "<p><strong>Incorrect.</strong> The study directly contradicted this assumption by showing VR could produce mystical experiences without any substances. The whole point was demonstrating that technology alone could facilitate these states. Substances are one path; the study proved technology is another.</p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "quiz2_q1"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "quiz2_q1_correct",
-                        "narrative": "<p><strong>Correct!</strong> The Isness study's groundbreaking finding was that VR produced MEQ30 scores above 0.6 (the threshold for 'complete mystical experience'), comparable to scores from high-dose psilocybin research at Johns Hopkins and Imperial College. This was the first rigorous scientific demonstration that technology could produce the same category of consciousness states as psychedelic substances, using identical measurement tools.</p>",
-                        "choices": [
-                            {
-                                "id": "next",
-                                "label": "Next Question",
-                                "outcome": "quiz2_q2"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "quiz2_q2",
-                        "narrative": "<p><strong>What design features did Isness researchers identify as key to facilitating mystical experiences?</strong></p>",
-                        "choices": [
-                            {
-                                "id": "q2_a",
-                                "label": "Photorealistic graphics and familiar environments",
-                                "outcome": "quiz2_q2_a_feedback"
-                            },
-                            {
-                                "id": "q2_b",
-                                "label": "Competitive gaming mechanics and achievement systems",
-                                "outcome": "quiz2_q2_c_feedback"
-                            },
-                            {
-                                "id": "q2_c",
-                                "label": "Energetic body representation, synchronized group movement, abstract environments, and intentional preparation",
-                                "outcome": "quiz2_q2_correct"
-                            },
-                            {
-                                "id": "q2_d",
-                                "label": "Solo experiences with no social interaction",
-                                "outcome": "quiz2_q2_d_feedback"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "quiz2_q2_a_feedback",
-                        "narrative": "<p><strong>Incorrect.</strong> Actually, the opposite: the study used abstract environments and energetic particle bodies, not realistic graphics. The researchers found that abstract, non-realistic spaces helped facilitate mystical experiences by reducing ego attachment to normal identity. Familiar realism wasn't key; boundary-dissolving abstraction was.</p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "quiz2_q2"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "quiz2_q2_c_feedback",
-                        "narrative": "<p><strong>Incorrect.</strong> Competitive elements and achievements would work against mystical experience by reinforcing ego and external goals. The Isness study deliberately avoided these features, instead creating collaborative, non-competitive space focused on shared experience rather than individual achievement. Mystical states arise from ego dissolution, not ego reinforcement.</p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "quiz2_q2"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "quiz2_q2_d_feedback",
-                        "narrative": "<p><strong>Incorrect.</strong> The Isness study specifically found that multi-person shared experiences amplified mystical states beyond solo experiences. The social, synchronized group movement created stronger effects than individual practice. Shared presence was a key facilitating factor, not a limitation.</p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "quiz2_q2"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "quiz2_q2_correct",
-                        "narrative": "<p><strong>Correct!</strong> The study identified these key design principles: representing participants as flowing energy particles rather than realistic avatars facilitated boundary dissolution, synchronized group movement created collective flow states, abstract non-realistic environments reduced normal ego identification, and intentional preparation through pre-session guidance primed openness to the experience. These principles became foundational for subsequent cyberdelic platform design.</p>",
-                        "choices": [
-                            {
-                                "id": "next",
-                                "label": "Next Question",
-                                "outcome": "quiz3_q1"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "quiz3_q1",
-                        "narrative": "<p><strong>What did DeepDream VR and EEG studies demonstrate about technology-induced altered states?</strong></p>",
-                        "choices": [
-                            {
-                                "id": "q1_a",
-                                "label": "VR produces measurable brain changes similar to psychedelics and meditation",
-                                "outcome": "quiz3_q1_correct"
-                            },
-                            {
-                                "id": "q1_b",
-                                "label": "VR only creates visual illusions with no real brain effects",
-                                "outcome": "quiz3_q1_a_feedback"
-                            },
-                            {
-                                "id": "q1_c",
-                                "label": "Only substances can create genuine altered states",
-                                "outcome": "quiz3_q1_c_feedback"
-                            },
-                            {
-                                "id": "q1_d",
-                                "label": "Brain activity remains completely unchanged during VR experiences",
-                                "outcome": "quiz3_q1_d_feedback"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "quiz3_q1_a_feedback",
-                        "narrative": "<p><strong>Incorrect.</strong> The research proved the opposite: VR creates measurable changes in brain activity patterns including increased neural entropy, altered Default Mode Network activity, and enhanced alpha waves. These are real neurological changes, not just visual tricks. The brain responds to VR-induced states similarly to how it responds to meditation and psychedelics.</p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "quiz3_q1"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "quiz3_q1_c_feedback",
-                        "narrative": "<p><strong>Incorrect.</strong> The neural research directly contradicted this by showing VR creates measurable brain changes similar to substance-induced states. Different methods (technology vs. chemistry) can produce similar neural patterns. The research proved technology is a valid alternative pathway to altered states, not that substances are the only way.</p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "quiz3_q1"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "quiz3_q1_d_feedback",
-                        "narrative": "<p><strong>Incorrect.</strong> This is completely wrong. The whole point of the neural research was demonstrating VR creates significant measurable changes in brain activity. EEG studies showed multiple changes in neural patterns, network activity, and brainwave states. VR profoundly affects brain activity; it doesn't leave it unchanged.</p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "quiz3_q1"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "quiz3_q1_correct",
-                        "narrative": "<p><strong>Correct!</strong> EEG studies of DeepDream VR showed genuine neural changes: increased frontal entropy (more flexible, less predictable brain activity), Default Mode Network modulation (reduced self-referential thinking), alpha wave enhancement (meditative states), and decreased neural complexity similar to psychedelic states. These aren't subjective impressions; they're measurable brain activity changes proving VR genuinely alters consciousness at neurological level.</p>",
-                        "choices": [
-                            {
-                                "id": "next",
-                                "label": "Next Question",
-                                "outcome": "quiz3_q2"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "quiz3_q2",
-                        "narrative": "<p><strong>What does the convergence of evidence (subjective reports + neural changes + therapeutic outcomes) prove about cyberdelics?</strong></p>",
-                        "choices": [
-                            {
-                                "id": "q2_a",
-                                "label": "Cyberdelics is still just an unproven theory",
-                                "outcome": "quiz3_q2_a_feedback"
-                            },
-                            {
-                                "id": "q2_b",
-                                "label": "More research is needed before we can say anything definitive",
-                                "outcome": "quiz3_q2_c_feedback"
-                            },
-                            {
-                                "id": "q2_c",
-                                "label": "Neural evidence contradicts the subjective reports",
-                                "outcome": "quiz3_q2_d_feedback"
-                            },
-                            {
-                                "id": "q2_d",
-                                "label": "VR produces genuine consciousness changes validated across experiential, neural, and therapeutic levels",
-                                "outcome": "quiz3_q2_correct"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "quiz3_q2_a_feedback",
-                        "narrative": "<p><strong>Incorrect.</strong> By 2024, cyberdelics has multiple streams of rigorous evidence: subjective mystical experiences measured with validated tools (Isness study), measurable brain changes (EEG research), therapeutic effectiveness (clinical trials), and theoretical understanding of mechanisms. This isn't unproven theory; it's validated science with evidence at experiential, neural, and therapeutic levels.</p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "quiz3_q2"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "quiz3_q2_c_feedback",
-                        "narrative": "<p><strong>Incorrect.</strong> While more research is always valuable for refinement, the fundamental question - 'Does VR produce genuine altered states and transformative effects?' - has been definitively answered: yes. We have rigorous evidence at multiple levels. Future research will deepen understanding and optimize applications, but the core validation is complete.</p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "quiz3_q2"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "quiz3_q2_d_feedback",
-                        "narrative": "<p><strong>Incorrect.</strong> The neural evidence actually confirms and supports subjective reports. When people report mystical experiences in VR, brain scans show corresponding changes in neural activity. The experiential and neural findings converge and reinforce each other; they don't contradict.</p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "quiz3_q2"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "quiz3_q2_correct",
-                        "narrative": "<h3>Quiz Complete!</h3><p><strong>Correct.</strong> The convergence of evidence is comprehensive: experiential validation (MEQ30 scores comparable to psychedelics), neural validation (measurable brain activity changes), therapeutic validation (clinical effectiveness for pain, anxiety, phobias), and mechanistic understanding (how it works through presence, embodiment, DMN modulation). This multi-level validation proves cyberdelics produces real effects, not placebo or imagination. The field has transitioned from speculation to validated science.</p>",
-                        "choices": [
-                            {
-                                "id": "finish_lesson",
-                                "label": "Reflect on This Arc",
-                                "outcome": "reflection"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "reflection",
-                        "narrative": "<h3>Reflection</h3><p>Three turning points. Three different kinds of proof. COVID-19 didn't create cyberdelics — it compressed the cultural timeline and forced millions of people to discover that mediated experiences could be genuinely meaningful. The Isness study didn't invent mystical states in VR — it measured them with the same tools used to validate psilocybin, making the comparison impossible to dismiss. The DeepDream EEG research didn't theorize that VR changes the brain — it recorded it.</p><p>By 2024, the arc that began with Leary's speculation in 1994 had closed. Not through a single breakthrough, but through the slow, compounding weight of evidence on three levels: experiential, neural, and therapeutic. This is how speculative fields become validated ones. Not with one eureka moment, but with enough convergent proof that skepticism requires more effort than belief.</p>",
-                        "choices": [
-                            {
-                                "id": "continue",
-                                "label": "Finish Lesson",
-                                "outcome": "flow_next_module"
-                            }
-                        ]
+                        "title": "The Shared Constraint: Hardware Capability Defines the Ceiling",
+                        "content": "<p>Every VR developer works within a ceiling set by available hardware. This is the shared constraint that unites all Technology Providers.</p><p>Display resolution determines immersion quality. Tracking precision determines interaction fidelity. Processing power determines how complex an environment can be rendered in real-time. Battery life determines session length. Comfort determines how long someone can remain present.</p><p>When Meta improves the Quest's eye tracking, new biofeedback-aware applications become possible. When Apple's chip advances spatial audio quality, presence research gets new instruments. When hardware costs drop, new populations of users become accessible.</p><p>The hardware manufacturers don't know they're building consciousness tools. But every decision they make, processor roadmaps, tracking methodologies, distribution models, and pricing tiers, constrains or expands what the cyberdelic field can do next. They are ecosystem players, not just product vendors.</p>",
+                        "triggerLabel": "Take the Quiz"
                     }
                 ]
             }
         },
         {
-            "id": "completion_screen",
+            "id": "module_5_1_sim",
+            "title": "The Cyberdelic Ecosystem: Living Map",
+            "type": "interactive-simulation",
+            "content": {
+                "engine": "EcosystemMap",
+                "title": "The Cyberdelic Ecosystem",
+                "description": "Explore all eight ecosystem components. Click each node to understand its role, key players, challenge, and opportunity. Visit all eight to continue.",
+                "hideContinueButton": true
+            }
+        },
+        {
+            "id": "module_5_1_3_pd",
+            "title": "Software Developers: The Builder Landscape",
             "type": "progressive-disclosure",
             "content": {
                 "sections": [
                     {
-                        "id": "final_summary",
-                        "mediaLayout": "full",
-                        "title": "Module Complete: Convergence and Validation",
-                        "content": "<p><strong>Key Takeaways:</strong></p><ul><li>COVID-19 (2020) compressed 5-10 years of cultural acceptance into months, normalizing virtual experiences as genuinely meaningful</li><li>Isness VR study (June 2020) demonstrated VR produces mystical experiences (MEQ30 >0.6) comparable to high-dose psilocybin</li><li>Neural research (DeepDream VR, EEG studies) showed measurable brain changes similar to psychedelics and meditation</li><li>By 2024, multi-level validation complete: subjective, neural, therapeutic, and mechanistic evidence converged</li></ul>",
-                        "triggerLabel": "Finish Module"
+                        "title": "Four Categories of Software Developers",
+                        "content": "<p>Not all cyberdelic software comes from the same kind of builder. Understanding the categories reveals why the landscape looks the way it does, specifically what gets built, how it's maintained, and what you can rely on.</p><p><strong>Commercial platforms</strong> (TRIPP, Enosis, XRHealth): Sustainable teams with business accountability. Investor-backed or revenue-generating. Driven by growth metrics as much as mission. Resources for consistent updates, but face pressure to prioritize features that drive subscriptions.</p><p><strong>Research tools</strong> (Isness-D, university labs): Validation-focused, often open access. Built to prove something, not sell something. Slower polish, but high credibility and willing to experiment with radical designs.</p><p><strong>Community creators</strong> (VRChat worlds, Open Brush artists): Volunteer-driven and authentic. Built out of passion. Variable quality and consistency, but often the source of the field's most innovative experiences. Fill gaps commercial platforms don't see.</p><p><strong>Adapted platforms</strong> (Supernatural, FitXR): Gaming and fitness platforms discovering consciousness benefits in their design. Important source of cross-pollination, where transformational intent emerges from unexpected contexts.</p>",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module5/developer-quadrant.png",
+                            "alt": "Four developer categories visualized as a quadrant matrix",
+                            "aiPrompt": "A quadrant or spectrum visualizing four developer categories (Commercial, Research, Community, Adapted). Axes might be 'Mission vs. Resources' or 'Rigid vs. Experimental'. Clean, infographic aesthetic with cyberdelic color touches (teal and purple gradients). 16:9 aspect ratio."
+                        },
+                        "triggerLabel": "The Development Pipeline",
+                        "mediaLayout": "left"
+                    },
+                    {
+                        "title": "The Development Pipeline",
+                        "content": "<p>Most successful cyberdelic platforms don't emerge fully formed. They move through a recognizable pipeline:</p><ul><li><strong>Research prototype:</strong> where a lab builds something to test a hypothesis</li><li><strong>Open source release:</strong> where findings and sometimes code are shared publicly</li><li><strong>Commercial adaptation:</strong> where an entrepreneur packages the validated approach for a market</li><li><strong>Platform integration:</strong> where the application finds its home on distribution channels</li><li><strong>Clinical validation:</strong> where formal studies confirm efficacy in clinical populations</li><li><strong>Mainstream adoption:</strong> where healthcare systems, insurance, and the general public engage</li></ul><p>This pipeline explains why the field's timeline feels slow to outsiders. From hypothesis to clinical adoption typically takes 5 to 10 years. Commercially, the steps compress somewhat, yet clinical credibility still requires the research legs.</p><p>Understanding this reveals where to look for what's coming: university lab projects today are often the commercial platforms of 2028.</p>",
+                        "triggerLabel": "Business Models"
+                    },
+                    {
+                        "title": "Business Models and Their Trade-Offs",
+                        "content": "<p>How a platform makes money shapes what it builds and who it serves. The main models:</p><p><strong>Subscription (B2C):</strong> Monthly fee, consumer-facing. Accessible to individuals, but vulnerable to churn. Weakness: pressure to optimize for engagement over depth.</p><p><strong>Clinical licensing (B2B):</strong> Enterprise contracts with clinics/hospitals. More stable revenue, but longer sales cycles and institutional approval processes. Strength: aligns platform success with clinical outcomes.</p><p><strong>One-time purchase:</strong> Single payment, permanent access. Limits ongoing revenue and update incentives. More common in research tools.</p><p><strong>Freemium:</strong> Free core access with paid premium features. Maximizes top-of-funnel reach. Risks: free tier must retain users, premium tier must compel conversion.</p><p><strong>Grant-funded:</strong> University labs, nonprofit initiatives. Zero commercial pressure, yet dependent on funding cycles and not sustainable independently.</p><p>The key tension across all models: <strong>mission vs. sustainability</strong>. A platform that can't generate revenue can't keep its servers on.</p>",
+                        "triggerLabel": "The Trade-Off Map"
+                    },
+                    {
+                        "title": "The Business Model Trade-Off Map",
+                        "content": "<table style='width:100%; border-collapse:collapse; margin-top:10px; font-size:0.9em; text-align:left;'><tr style='background:rgba(255,255,255,0.1); border-bottom:1px solid rgba(255,255,255,0.2)'><th style='padding:10px;'>Model</th><th style='padding:10px;'>Access</th><th style='padding:10px;'>Revenue Stability</th><th style='padding:10px;'>Mission Alignment Risk</th></tr><tr style='border-bottom:1px solid rgba(255,255,255,0.1)'><td style='padding:10px;'>Subscription (B2C)</td><td style='padding:10px;'>High</td><td style='padding:10px;'>Medium</td><td style='padding:10px;'>Engagement optimization can drift from depth</td></tr><tr style='border-bottom:1px solid rgba(255,255,255,0.1)'><td style='padding:10px;'>Clinical licensing (B2B)</td><td style='padding:10px;'>Low</td><td style='padding:10px;'>High</td><td style='padding:10px;'>Low, as clinical outcomes are the product</td></tr><tr style='border-bottom:1px solid rgba(255,255,255,0.1)'><td style='padding:10px;'>One-time purchase</td><td style='padding:10px;'>Medium</td><td style='padding:10px;'>Low</td><td style='padding:10px;'>Low, but update incentives weaken</td></tr><tr style='border-bottom:1px solid rgba(255,255,255,0.1)'><td style='padding:10px;'>Freemium</td><td style='padding:10px;'>Very high</td><td style='padding:10px;'>Medium</td><td style='padding:10px;'>Moderate, due to premium conversion pressure</td></tr><tr style='border-bottom:1px solid rgba(255,255,255,0.1)'><td style='padding:10px;'>Grant-funded</td><td style='padding:10px;'>High</td><td style='padding:10px;'>Very low</td><td style='padding:10px;'>Very low, though not sustainable independently</td></tr></table><p style='margin-top:15px;'>No model is perfect. The most resilient platforms often combine models: clinical licensing for institutional revenue stability plus consumer subscription for mission reach.</p>",
+                        "triggerLabel": "Reading the Landscape"
+                    },
+                    {
+                        "title": "Reading the Builder Landscape",
+                        "content": "<p>Knowing who built a platform and how it's funded tells you a lot about what to expect from it.</p><p>A <strong>subscription-based commercial platform</strong> with VC funding will have polished UX, responsive customer support, and regular updates, though it may face pressure to chase engagement metrics. Evaluate it on: does it measure transformation or time-in-app?</p><p>A <strong>research-origin tool</strong> with open access will have credible mechanisms and validated protocols, but possibly rough UX and limited support. Evaluate it on: what populations was it validated with?</p><p>A <strong>community creator project</strong> will have authentic vision and cultural resonance, but variable maintenance. Evaluate it on: is the community still active? Does it serve your specific facilitation context?</p><p>This is the evaluative thinking that separates sophisticated facilitators from enthusiastic early adopters.</p>",
+                        "triggerLabel": "Apply This to a Scenario"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "module_5_1_3_scenario",
+            "title": "The Builder's Dilemma",
+            "type": "scenario-based",
+            "content": {
+                "title": "Advising a New Cyberdelic Creator",
+                "scenes": [
+                    {
+                        "id": "intro",
+                        "narrative": "<p>A colleague approaches you. She has a PhD in clinical psychology, has been running breathwork sessions for five years, and has a clear vision for a VR breathwork guidance platform, specifically one that uses binaural audio, real-time breathing feedback, and guided visualization to create genuine altered states through breath alone, no substances.</p><p>She has the clinical knowledge. She has the content. She has relationships with breathwork practitioners who would use it.</p><p><strong>What she doesn't have:</strong> software development experience, business experience, or funding. She's asking for your guidance on how to start navigating the development pipeline and business models.</p><p>Which path do you recommend she take?</p>",
+                        "choices": [
+                            {
+                                "id": "choice_a",
+                                "label": "Path A: Research prototype first, open source, web-based entry, grant-funded",
+                                "outcome": "outcome_a"
+                            },
+                            {
+                                "id": "choice_b",
+                                "label": "Path B: Commercial platform, proprietary, Meta Quest Store first, subscription",
+                                "outcome": "outcome_b"
+                            },
+                            {
+                                "id": "choice_c",
+                                "label": "Path C: Clinical licensing first, proprietary, partnership with an existing clinical network",
+                                "outcome": "outcome_c"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "outcome_a",
+                        "narrative": "<h3>Path A Selected: Research-First &amp; Grant-Funded</h3><p><strong>Outcome:</strong> She establishes credibility through validation. Publications give her leverage for clinical licensing down the road. Open source builds community. Web-based removes hardware barriers for initial testing. <em>The weakness: slow path to sustainability, depends heavily on grant cycles.</em></p><p><strong>Feedback:</strong> This path prioritizes mission and credibility over speed. It's strong if she has an institutional affiliation that can support grant applications and if her goal is clinical integration rather than rapid consumer adoption. The breathwork community she already has gives her a built-in validation cohort. Consider whether grant timelines match her financial runway.</p><p><strong>Reflection:</strong> <em>Which ecosystem components does this path strengthen most immediately, and which does it leave underdeveloped until later? Think about what the field gains when builders choose credibility over speed, and what it potentially loses in the meantime.</em></p>",
+                        "choices": []
+                    },
+                    {
+                        "id": "outcome_b",
+                        "narrative": "<h3>Path B Selected: Commercial &amp; Subscription-Based</h3><p><strong>Outcome:</strong> Fastest path to market and revenue. Maximum consumer reach. <em>But without research validation, cautious clinical practitioners won't refer clients. Without clinical referrals, subscription churn is high. Without a large development budget, polish and support are thin.</em></p><p><strong>Feedback:</strong> This path prioritizes speed and reach over credibility. Possible, but high-risk without funding. Her breathwork practitioner community may be willing to pilot-test, but wider clinical adoption requires the research path she'd be skipping. A hybrid approach, building the consumer product while doing a small validation study in parallel, could bridge the gap.</p><p><strong>Reflection:</strong> <em>What pressure does a consumer subscription model place on a platform's mission over time? Consider where a platform financially dependent on engagement metrics might drift from a platform accountable to transformation outcomes.</em></p>",
+                        "choices": []
+                    },
+                    {
+                        "id": "outcome_c",
+                        "narrative": "<h3>Path C Selected: B2B Clinical Licensing</h3><p><strong>Outcome:</strong> Her existing practitioner relationships become the distribution channel. The B2B model provides more stable revenue than consumer subscription. <em>But it requires significant sales effort and longer cycles. Needs enough polish for institutional approval.</em></p><p><strong>Feedback:</strong> This path fits her clinical background best. She already has the relationships and the clinical credibility, and the product just needs to meet institutional standards. The challenge is that clinical licensing requires resources for HIPAA compliance, liability documentation, and ongoing clinical support that go beyond the technical build.</p><p><strong>Reflection:</strong> <em>Of the three paths presented, which most naturally aligns with your own instincts or values? Not which one is 'right', but which one would you actually be drawn to if you were in her position, and what does that reveal about what you're optimizing for?</em></p>",
+                        "choices": []
+                    }
+                ]
+            }
+        },
+        {
+            "id": "module_5_1_4_pd",
+            "title": "Open Source & Cross-Pollination",
+            "type": "progressive-disclosure",
+            "content": {
+                "sections": [
+                    {
+                        "title": "Major Open Source Contributions",
+                        "content": "<p>One of the most distinctive things about the cyberdelic field is how much of its foundation was built as a gift. Three tools deserve specific recognition:</p><p><strong>Open Brush:</strong> When Google abandoned Tilt Brush, the community forked it into a free, open-source VR spatial painting app. For facilitators using visual art, it became a core tool precisely because it isn't owned by anyone with a commercial interest in restricting it.</p><p><strong>OpenBCI:</strong> Professional EEG equipment used to cost $2,000 to $10,000. OpenBCI entered with open designs priced at $200 to $500. Independent researchers suddenly had access to brainwave monitoring. The neurofeedback-enhanced VR category exists largely because OpenBCI democratized the sensing layer.</p><p><strong>Mozilla Hubs:</strong> Web-based social VR requiring no headset. For community gatherings and peer-support circles, Hubs created a zero-hardware-barrier entry point with a privacy-respecting architecture.</p>",
+                        "triggerLabel": "The Gift Economy"
+                    },
+                    {
+                        "title": "The Gift Economy Philosophy",
+                        "content": "<p>Open source in the cyberdelic space isn't just a licensing choice, it's often a philosophical statement.</p><p>The gift economy perspective holds that code can be commons, that information freely shared multiplies rather than diminishes, that paying forward is the appropriate response to having received. This aligns naturally with consciousness work traditions: meditation teachings passed student-to-student, ceremonial knowledge shared within communities, harm reduction information distributed freely.</p><p>The practical implication: when you encounter an open-source tool here, there's often a community of practitioners who trust it specifically because it <em>isn't</em> owned by a profit motive. That trust is a form of community infrastructure.</p><p>The tension: gift economy tools need maintainers, and time requires sustainability. The most resilient projects have found hybrid ways to accept donations or grants to sustain the commons without closing it.</p>",
+                        "triggerLabel": "Borrowed Wisdom"
+                    },
+                    {
+                        "title": "Cross-Pollination from Adjacent Fields",
+                        "content": "<p>Cyberdelics didn't invent most of its best ideas. It borrowed them:</p><p><strong>From psychedelic therapy:</strong> Set (mindset, intention) and setting (environment, support) as dual determinants of experience quality. The preparation-experience-integration arc. The Mystical Experience Questionnaire (MEQ) for measuring transformational depth.</p><p><strong>From contemplative traditions:</strong> Mindfulness techniques and breath awareness as access tools for altered states. Teacher-student training models. Sangha (community) for peer support.</p><p><strong>From gaming:</strong> Flow state engineering, providing an optimal challenge/skill balance. Engagement design and onboarding so users aren't overwhelmed.</p><p><strong>From healthcare:</strong> Evidence-based standards for clinical credibility. Risk assessment frameworks for contraindications.</p><p><strong>From Human-Computer Interaction (HCI):</strong> UI design principles for reducing cognitive load in novel interfaces.</p>",
+                        "triggerLabel": "The Bidirectional Flow"
+                    },
+                    {
+                        "title": "The Bidirectional Flow",
+                        "content": "<p>Cyberdelics borrowed from adjacent fields. It is now beginning to give back.</p><ul><li><strong>Psychedelic therapy</strong> is using VR for preparation and integration alongside or instead of substance-based sessions.</li><li><strong>Meditation app developers</strong> are studying cyberdelic platform design for insights about deepening engagement beyond ambient music.</li><li><strong>Gaming studios</strong> are exploring consciousness-oriented design as a new content category.</li><li><strong>Healthcare researchers</strong> are using VR-induced altered states to understand consciousness itself, not just as a treatment mechanism.</li></ul><p>The field that spent a decade borrowing is now a reference point for others. That's a signal of ecosystem maturity, and an invitation for practitioners to contribute to the exchange, not just receive it.</p>",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module5/bidirectional-flow.png",
+                            "alt": "Diagram showing adjacent fields feeding into cyberdelics and cyberdelics feeding back",
+                            "aiPrompt": "A dynamic infographic showing 'Bidirectional Flow'. Several conceptual orbits (representing Healthcare, Gaming, Contemplative Traditions, Psychedelic Therapy) feeding energy/data streams into a central 'Cyberdelics' core, and that core radiating new energy back to the outer orbits. Clean, modern, glowing aesthetic against a dark background. 16:9 aspect ratio."
+                        },
+                        "triggerLabel": "Take the Quiz",
+                        "mediaLayout": "left"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "module_5_1_1_quiz",
+            "title": "Systems Thinking Check",
+            "type": "option-selector",
+            "config": {
+                "mode": "single",
+                "style": "text",
+                "questions": [
+                    {
+                        "question": "<h3>Ecosystem Cascade</h3><p>If a major VR hardware manufacturer discontinues a popular headset, which ecosystem components are immediately affected?</p>",
+                        "options": [
+                            {
+                                "id": "q1_a",
+                                "label": "Only Technology Providers are affected, as it's a hardware issue.",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_b",
+                                "label": "Only Users are affected because they can no longer buy the headset.",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_c",
+                                "label": "Economic Infrastructure is the only component affected because of the financial loss.",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_d",
+                                "label": "Technology Providers, Software Developers, Facilitators, and Clinical Practitioners are all immediately affected, as developers lose a platform and practitioners lose a tool.",
+                                "correct": true
+                            }
+                        ],
+                        "synthesis": {
+                            "q1_a": "Hardware issues rarely stay contained at the Technology Provider level. Think about what happens to all the platforms built for that headset, and all the facilitators who recommended it.",
+                            "q1_b": "Users are affected, but they're not the only ones. Who builds the software running on that hardware? Who recommends the device to clients? Multiple components feel this simultaneously.",
+                            "q1_c": "Financial effects do ripple through Economic Infrastructure, but the immediate effects land elsewhere first, developers lose a platform, facilitators lose a tool, clinicians lose a clinical option.",
+                            "q1_d": "<strong>Exactly right.</strong> A headset discontinuation immediately affects software developers who built for that platform, facilitators and clinicians who recommend it to clients, and the economic infrastructure whose business models depended on it. The hardware decision is never just a hardware decision, it's an ecosystem event."
+                        }
+                    },
+                    {
+                        "question": "<h3>The Credibility Chain</h3><p>Which ecosystem component provides the scientific credibility that allows clinical practitioners to adopt new VR tools?</p>",
+                        "options": [
+                            {
+                                "id": "q2_a",
+                                "label": "Economic Infrastructure, because funding drives development.",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_b",
+                                "label": "Educators & Trainers, because they teach practitioners how to use the tools.",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_c",
+                                "label": "Knowledge Producers, because peer-reviewed research establishes safety and effectiveness.",
+                                "correct": true
+                            },
+                            {
+                                "id": "q2_d",
+                                "label": "Technology Providers, because the tools have to exist before anyone can adopt them.",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "q2_a": "Funding enables development, but it doesn't provide clinical credibility. A well-funded app with no research backing still won't earn adoption from cautious clinical practitioners.",
+                            "q2_b": "Educators train practitioners to use validated tools. But they're not the ones who establish whether a tool should be used, that requires the evidence base educators then teach from.",
+                            "q2_d": "The tools obviously have to exist, but existence alone doesn't confer clinical credibility. What separates a research-validated VR protocol from a therapy app a clinician won't touch?",
+                            "q2_c": "<strong>Yes.</strong> Knowledge Producers, researchers and academic institutions, generate the peer-reviewed evidence that clinical practitioners require before integrating new tools into patient care. Without that validation, a VR application is an interesting product, not a credible intervention."
+                        }
+                    },
+                    {
+                        "question": "<h3>The Reach Compromise</h3><p>A cyberdelic developer wants maximum reach for their new platform. Why does this almost certainly mean building for Meta Quest first, even if they have concerns about Meta's data practices?</p>",
+                        "options": [
+                            {
+                                "id": "q1_a",
+                                "label": "Because Meta controls approximately 77% of consumer VR headset shipments, making it the only platform that provides access to most potential VR users.",
+                                "correct": true
+                            },
+                            {
+                                "id": "q1_b",
+                                "label": "Because Meta's content policies are more permissive for consciousness applications.",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_c",
+                                "label": "Because Meta headsets are the only ones compatible with biofeedback peripherals.",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_d",
+                                "label": "Because Meta has better graphics capabilities than all other headsets.",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "q1_a": "<strong>Right.</strong> Market share is the driver. Bypassing Meta means reaching a fraction of your potential audience. That mission constraint often outweighs other considerations for developers seeking widespread adoption, even ones with real concerns about Meta's data practices.",
+                            "q1_b": "Meta's content policies are actually a constraint for some consciousness applications, not an advantage. The reason to build for Meta is more fundamental.",
+                            "q1_c": "Biofeedback compatibility varies by application and headset, but it's not the primary reason Meta dominates developer decision-making.",
+                            "q1_d": "Graphics capabilities are platform-dependent but not the decisive factor here. A developer with privacy-friendly values would still choose Meta for a different reason related to audience scale."
+                        }
+                    },
+                    {
+                        "question": "<h3>The Alternative Context</h3><p>Why is Pico growing internationally while remaining relatively niche in the US market?</p>",
+                        "options": [
+                            {
+                                "id": "q2_a",
+                                "label": "Because Pico hardware has higher resolution displays than Meta.",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_b",
+                                "label": "Because Pico is cheaper than Meta Quest in all markets.",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_c",
+                                "label": "Because Meta faces significant regulatory resistance and procurement friction in European/Asian markets around data privacy, making Pico an easier option for institutions there.",
+                                "correct": true
+                            },
+                            {
+                                "id": "q2_d",
+                                "label": "Because Pico has more consciousness-focused applications in its app store.",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "q2_a": "Hardware specs are comparable between major manufacturers and aren't the primary driver of Pico's international market share.",
+                            "q2_b": "Pico's pricing is competitive but not uniformly cheaper than Meta, especially given Meta's subsidized hardware strategy.",
+                            "q2_d": "Pico doesn't have a significantly larger consciousness-focused app library than Meta. The growth is driven by regulatory and institutional context, not content differentiation.",
+                            "q2_c": "<strong>Exactly.</strong> Regulatory and procurement context drives Pico's international growth. European institutions operating under GDPR often find Meta's data collection model creates compliance obstacles. Pico's positioning as a privacy-friendlier alternative navigates that procurement friction more easily in many institutional contexts."
+                        }
+                    },
+                    {
+                        "question": "<h3>The Ripple of Open Hardware</h3><p>What does it mean for the cyberdelic ecosystem that OpenBCI lowered the cost of EEG equipment from $2,000+ to $200 to $500? Which ecosystem components benefit most and how?</p>",
+                        "options": [
+                            {
+                                "id": "q1_a",
+                                "label": "Only Technology Providers benefit, as it's a hardware cost reduction.",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_b",
+                                "label": "Only Users benefit because they can now afford personal EEG equipment.",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_c",
+                                "label": "Economic Infrastructure benefits through lower hardware costs driving more investment.",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_d",
+                                "label": "Knowledge Producers benefit through expanded research access; Technology Providers benefit through new application categories; Facilitators benefit through affordable biofeedback integration.",
+                                "correct": true
+                            }
+                        ],
+                        "synthesis": {
+                            "q1_a": "Cost reduction in hardware originates with Technology Providers, but the effects don't stay there. Who needs affordable neurofeedback equipment most?",
+                            "q1_b": "Personal EEG use by individuals is one effect, but the largest gains were in research and facilitation contexts that previously faced institutional procurement barriers.",
+                            "q1_c": "Investment may follow expanded capability, but the immediate beneficiaries are the practitioners and researchers who could now afford equipment.",
+                            "q1_d": "<strong>Exactly right.</strong> Cost democratization in hardware ripples across multiple components. Researchers who couldn't afford institutional EEG can now run neurofeedback studies. Developers can build biofeedback-responsive platforms. Facilitators can integrate real-time brainwave monitoring into session contexts. The price drop expanded what multiple ecosystem components could do."
+                        }
+                    },
+                    {
+                        "question": "<h3>Borrowed Frameworks</h3><p>Name two concepts borrowed from psychedelic therapy that cyberdelic platforms now use, and explain why they transferred so naturally.</p>",
+                        "options": [
+                            {
+                                "id": "q2_a",
+                                "label": "Clinical trial methodology and risk assessment, as VR platforms can be considered medical devices.",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_b",
+                                "label": "Subscription pricing and content licensing, as psychedelic therapy and VR apps share business models.",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_c",
+                                "label": "Set and setting, and the preparation-experience-integration arc, as both fields work with altered states and require intentional context to produce beneficial outcomes.",
+                                "correct": true
+                            },
+                            {
+                                "id": "q2_d",
+                                "label": "Flow state optimization and UI accessibility, as therapy and game design have always overlapped.",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "q2_a": "Clinical trial methodology and risk assessment come from healthcare research generally, not from psychedelic therapy specifically.",
+                            "q2_b": "Business model concepts aren't what cyberdelics borrowed from psychedelic therapy. The transfer was about guiding humans through non-ordinary states.",
+                            "q2_c": "<strong>Right.</strong> Set (mindset, intention) and setting (environment, support) transfer directly because cyberdelic experiences, like psychedelic sessions, are powerfully context-dependent. The preparation-experience-integration arc transfers because both fields recognize that the session itself is not the whole intervention; the context before and after determines if the experience becomes lasting transformation. Altered states require intentional context.",
+                            "q2_d": "Flow state optimization comes from gaming research, and accessibility principles come from HCI. Those did not originate in psychedelic therapy."
+                        }
                     }
                 ]
             }
