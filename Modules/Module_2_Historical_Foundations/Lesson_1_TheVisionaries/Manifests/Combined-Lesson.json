@@ -19,7 +19,7 @@
                         "content": "<p>Most people know Timothy Leary for his 1960s psychedelic research at Harvard. But by the 1990s, Leary had completely evolved his thinking. He became fascinated by personal computers and virtual reality, seeing in them the potential to achieve what psychedelics promised - consciousness expansion, reality hacking, liberation from consensus limitations - but through digital means.</p><p>He didn't abandon his earlier work. He extended it. The question driving both phases of his career was the same: how do humans access deeper levels of awareness? The medium changed; the mission didn't.</p>",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module2/TimLeary1960-2020.png",
+                            "src": "../assets/images/module2/TimLeary1960-2020.webp",
                             "alt": "Split-screen composition: left side shows Timothy Leary from 1960s Harvard era, right side shows older Leary from 1990s at computer"
                         },
                         "mediaLayout": "right",
@@ -34,7 +34,7 @@
                         "title": "Key Concepts He Introduced",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module2/leary_concepts.png",
+                            "src": "../assets/images/module2/leary_concepts.webp",
                             "alt": "Concept bubbles for Electronic Spirituality, Digital Shamanism, Reality Hacking, and Neurological Self-Determination"
                         },
                         "mediaLayout": "left",
@@ -45,7 +45,7 @@
                         "title": "Why He Was Early, Not Wrong",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module2/vision_growth.png",
+                            "src": "../assets/images/module2/vision_growth.webp",
                             "alt": "Seed representing Leary's vision growing through time layers to sprout in 2020"
                         },
                         "mediaLayout": "right",
@@ -155,7 +155,7 @@
                         "title": "Jaron Lanier : Naming Virtual Reality",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module2/lanier_pioneer.png",
+                            "src": "../assets/images/module2/lanier_pioneer.webp",
                             "alt": "Jaron Lanier in late 1980s with DataGlove"
                         },
                         "mediaLayout": "left",
@@ -166,7 +166,7 @@
                         "title": "Brenda Laurel : Transformation Through Technology",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module2/laurel_theatre.png",
+                            "src": "../assets/images/module2/laurel_theatre.webp",
                             "alt": "Portrait of Brenda Laurel from 1990s"
                         },
                         "mediaLayout": "right",
@@ -177,7 +177,7 @@
                         "title": "Myron Krueger : Artificial Reality",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module2/videoplace.png",
+                            "src": "../assets/images/module2/videoplace.webp",
                             "alt": "Early computer art lab showing Myron Krueger's VIDEOPLACE system"
                         },
                         "mediaLayout": "left",
@@ -188,7 +188,7 @@
                         "title": "The Gap They Couldn't Cross",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module2/vr_gap.png",
+                            "src": "../assets/images/module2/vr_gap.webp",
                             "alt": "Contrast between sleek conceptual VR vision and actual clunky 1980s hardware"
                         },
                         "mediaLayout": "right",
@@ -199,7 +199,7 @@
                         "title": "What They Established",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module2/pioneer_foundations.png",
+                            "src": "../assets/images/module2/pioneer_foundations.webp",
                             "alt": "Concept constellation showing Transformative Space, Embodied Interaction, Presence, Responsive Environments, and Transformative Potential"
                         },
                         "mediaLayout": "left",
@@ -239,7 +239,7 @@
                         "title": "Cultural Preparation Complete",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module2/culture_convergence.png",
+                            "src": "../assets/images/module2/culture_convergence.webp",
                             "alt": "Four streams of culture converging into one larger Cyberdelic Culture river"
                         },
                         "mediaLayout": "right",

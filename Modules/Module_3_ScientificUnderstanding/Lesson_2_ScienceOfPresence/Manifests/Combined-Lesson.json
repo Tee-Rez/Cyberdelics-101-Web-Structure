@@ -15,7 +15,7 @@
                         "title": "Not All VR Is Equally Real to the Brain",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module3/presence_vs_screen.png",
+                            "src": "../assets/images/module3/presence_vs_screen.webp",
                             "alt": "Split composition showing engaged VR user vs passive user",
                             "prompt": "Split composition showing two VR users side by side: on the left, a person visibly absorbed, leaning forward, arms instinctively extended as if touching the virtual environment, expression of genuine engagement; on the right, a person sitting upright and passive, arms at sides, clearly aware they are wearing a headset. Same virtual environment visible in both. Abstract visualization of presence as a warm glowing field surrounding the first user and absent around the second. Purple and teal palette on dark background, 16:9 aspect ratio"
                         },
@@ -32,7 +32,7 @@
                         "title": "Slater's Two-Component Model",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module3/slater_model.png",
+                            "src": "../assets/images/module3/slater_model.webp",
                             "alt": "Diagram showing Place Illusion and Plausibility Illusion overlap",
                             "prompt": "Abstract diagram visualization showing two overlapping conceptual zones: one labeled 'Place Illusion' with imagery of a person's silhouette nested within a virtual space, tracking lines connecting body to environment; the second labeled 'Plausibility Illusion' with imagery of a responsive virtual world reacting to the person's presence, ripple effects emanating outward from human figure. The overlap zone glows with combined presence. Clean, conceptual illustration style, purple and teal palette, 16:9 aspect ratio"
                         },
@@ -63,7 +63,7 @@
                         "title": "The Rubber Hand Illusion as Foundation",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module3/rubber_hand_illusion.png",
+                            "src": "../assets/images/module3/rubber_hand_illusion.webp",
                             "alt": "Clinical research visualization of the Rubber Hand Illusion",
                             "prompt": "Clinical research visualization of the Rubber Hand Illusion: a person's real hand hidden on one side, a realistic rubber hand placed visibly on a table, a researcher's hand with a paintbrush stroking both synchronously, with subtle glowing lines representing the neural connection forming between the person's sense of self and the rubber hand, clean scientific aesthetic with warm undertones, 16:9 aspect ratio"
                         },
@@ -75,7 +75,7 @@
                         "title": "Body Ownership Illusion in Full-Body VR",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module3/full_body_vr.png",
+                            "src": "../assets/images/module3/full_body_vr.webp",
                             "alt": "Person in VR headset looking at virtual avatar body forming",
                             "prompt": "Person in VR headset looking down at their hands, with a transparent overlay showing their virtual avatar body aligned with their physical body, glowing synchronization lines connecting real movement to virtual response, the overlay shifting from separate to unified as visual-motor synchrony establishes, warm teal glow representing the embodiment illusion forming, 16:9 aspect ratio"
                         },
@@ -87,7 +87,7 @@
                         "title": "The Proteus Effect",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module3/proteus_effect.png",
+                            "src": "../assets/images/module3/proteus_effect.webp",
                             "alt": "Conceptual visualization of the Proteus Effect with avatar versions",
                             "prompt": "Conceptual visualization of the Proteus Effect: a central human figure surrounded by three avatar versions of themselves, a taller confident version, an older version, a physically stronger version, with behavioral arrows showing how each avatar characteristic flows back into real-world behavior. Visual language of identity fluidity and transformation, warm gold and purple tones, sense of the self as malleable through experience, 16:9 aspect ratio"
                         },

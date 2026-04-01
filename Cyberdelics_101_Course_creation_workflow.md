@@ -417,15 +417,15 @@ M1_L1_MiniLesson3_WithoutSubstances
 
 **File Naming Convention:**
 ```
-M[Module#]_L[Lesson#]_ML[MiniLesson#]_[Method]_[Description].png
+M[Module#]_L[Lesson#]_ML[MiniLesson#]_[Method]_[Description].webp
 
 Examples:
-M1_L1_ML1_PD_VRHeadsetBiofeedback.png
-M1_L1_ML1_Scenario_AlexPortrait.png
-M1_L1_ML1_Scenario_AlexTryingVR.png
-M1_L1_ML3_PD_LegalWorldwideGraphic.png
-M1_L1_ML3_Scenario_SophiePortrait.png
-M1_L1_ML3_Scenario_SplitScreenChoice.png
+M1_L1_ML1_PD_VRHeadsetBiofeedback.webp
+M1_L1_ML1_Scenario_AlexPortrait.webp
+M1_L1_ML1_Scenario_AlexTryingVR.webp
+M1_L1_ML3_PD_LegalWorldwideGraphic.webp
+M1_L1_ML3_Scenario_SophiePortrait.webp
+M1_L1_ML3_Scenario_SplitScreenChoice.webp
 ```
 
 **Folder Structure:**
@@ -434,12 +434,12 @@ M1_L1_ML3_Scenario_SplitScreenChoice.png
   /module-1
     /lesson-1
       /images
-        M1_L1_ML1_PD_VRHeadsetBiofeedback.png
-        M1_L1_ML1_Scenario_AlexPortrait.png
-        M1_L1_ML1_Scenario_AlexTryingVR.png
-        M1_L1_ML3_PD_LegalWorldwideGraphic.png
-        M1_L1_ML3_Scenario_SophiePortrait.png
-        M1_L1_ML3_Scenario_SplitScreenChoice.png
+        M1_L1_ML1_PD_VRHeadsetBiofeedback.webp
+        M1_L1_ML1_Scenario_AlexPortrait.webp
+        M1_L1_ML1_Scenario_AlexTryingVR.webp
+        M1_L1_ML3_PD_LegalWorldwideGraphic.webp
+        M1_L1_ML3_Scenario_SophiePortrait.webp
+        M1_L1_ML3_Scenario_SplitScreenChoice.webp
       /json
         M1_L1_MiniLesson1_CoreDefinition.json
         M1_L1_MiniLesson2_Distinctions.json
@@ -926,11 +926,11 @@ a unique and accessible approach to consciousness exploration."
 
 3. **Organize files:**
    ```
-   M1_L1_ML1_PD_VRHeadsetBiofeedback.png
-   M1_L1_ML1_PD_MeditationSplitScreen.png
-   M1_L1_ML1_PD_NoSubstancesSymbol.png
-   M1_L1_ML1_Scenario_JamiePortrait.png
-   M1_L1_ML1_Scenario_VRMeditationScene.png
+   M1_L1_ML1_PD_VRHeadsetBiofeedback.webp
+   M1_L1_ML1_PD_MeditationSplitScreen.webp
+   M1_L1_ML1_PD_NoSubstancesSymbol.webp
+   M1_L1_ML1_Scenario_JamiePortrait.webp
+   M1_L1_ML1_Scenario_VRMeditationScene.webp
    ```
 
 4. **Upload to builder and re-export JSON**
@@ -1032,19 +1032,19 @@ a unique and accessible approach to consciousness exploration."
 /assets
   /images
     /characters
-      jamie-meditation-teacher.png [AI generated]
-      alex-vr-designer.png [AI generated]
-      dr-chen-researcher.png [AI generated]
+      jamie-meditation-teacher.webp [AI generated]
+      alex-vr-designer.webp [AI generated]
+      dr-chen-researcher.webp [AI generated]
     /infographics
-      cyberdelic-definition.png [AI generated]
-      technology-toolkit.png [AI generated]
-      no-substances-symbol.png [AI generated]
+      cyberdelic-definition.webp [AI generated]
+      technology-toolkit.webp [AI generated]
+      no-substances-symbol.webp [AI generated]
     /diagrams
       brainwave-frequencies.svg
-      spectrum-visual.png [AI generated]
+      spectrum-visual.webp [AI generated]
     /scenes
-      vr-meditation-environment.png [AI generated]
-      lab-setting.png [AI generated]
+      vr-meditation-environment.webp [AI generated]
+      lab-setting.webp [AI generated]
   /videos
     /intro
       M1_L1_intro.mp4

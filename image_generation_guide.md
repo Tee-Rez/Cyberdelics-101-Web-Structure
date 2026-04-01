@@ -27,7 +27,7 @@ Style: painterly, cinematic, or photographic — not diagrammatic.
 
 ### Generation Rules
 
-1. Aspect Ratio: 16:9 for all images unless filename ends in .png (check individually)
+1. Aspect Ratio: 16:9 for all images unless filename ends in .webp (check individually)
 2. Resolution: Minimum 1920x1080
 3. Save to the exact Save Path shown — filenames must match manifests exactly
 4. Process one asset at a time
@@ -1007,8 +1007,8 @@ multimodal alignment, 16:9 aspect ratio
 
 ---
 
-### M3.L4.01 — `M3_L4_ML1_PD_SharedAbstractVirtualEnvironment.png`
-**Save Path:** `assets/M3_L4_ML1_PD_SharedAbstractVirtualEnvironment.png`
+### M3.L4.01 — `M3_L4_ML1_PD_SharedAbstractVirtualEnvironment.webp`
+**Save Path:** `assets/M3_L4_ML1_PD_SharedAbstractVirtualEnvironment.webp`
 
 **Mode:** Mode 2 — Framed Illustration (evokes a feeling, illustrates a concept, or sets a scene)
 
@@ -1026,8 +1026,8 @@ surfaces. Sense of collective presence in a shared digital space,
 
 ---
 
-### M3.L4.02 — `M3_L4_ML2_PD_NeuralSignaturesEEG.png`
-**Save Path:** `assets/M3_L4_ML2_PD_NeuralSignaturesEEG.png`
+### M3.L4.02 — `M3_L4_ML2_PD_NeuralSignaturesEEG.webp`
+**Save Path:** `assets/M3_L4_ML2_PD_NeuralSignaturesEEG.webp`
 
 **Mode:** Mode 1 — Infographic (explains a process, compares ideas, or shows data)
 
@@ -1044,8 +1044,8 @@ purple palette, 16:9 aspect ratio
 
 ---
 
-### M3.L4.03 — `M3_L4_ML3_PD_EvidenceSpectrumInfographic.png`
-**Save Path:** `assets/M3_L4_ML3_PD_EvidenceSpectrumInfographic.png`
+### M3.L4.03 — `M3_L4_ML3_PD_EvidenceSpectrumInfographic.webp`
+**Save Path:** `assets/M3_L4_ML3_PD_EvidenceSpectrumInfographic.webp`
 
 **Mode:** Mode 1 — Infographic (explains a process, compares ideas, or shows data)
 

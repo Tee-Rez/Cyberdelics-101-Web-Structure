@@ -20,7 +20,7 @@
                         "title": "Global Workspace Theory",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module3/global_workspace.png",
+                            "src": "../assets/images/module3/global_workspace.webp",
                             "alt": "Abstract visualization of a central glowing workspace in a neural network",
                             "prompt": "Abstract visualization of a central glowing workspace in a neural network, surrounded by smaller specialized processing nodes in grey, with luminous information streams broadcasting outward from the center into the network, sense of a single spotlight illuminating what was previously background activity, purple and teal color palette on dark background, 16:9 aspect ratio"
                         },
@@ -32,7 +32,7 @@
                         "title": "Integrated Information Theory",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module3/integrated_information.png",
+                            "src": "../assets/images/module3/integrated_information.webp",
                             "alt": "Abstract visualization of multiple sensory input streams weaving together",
                             "prompt": "Abstract visualization of multiple sensory input streams, visual, auditory, kinesthetic, represented as colored light channels, weaving together into a single integrated core, with phi symbol glowing at the center of integration, representing the relationship between coherence and conscious richness, geometric and fluid simultaneously, teal and purple palette, 16:9 aspect ratio"
                         },
@@ -63,7 +63,7 @@
                         "title": "The Brain Doesn't Perceive Reality. It Predicts It.",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module3/predictive_brain.png",
+                            "src": "../assets/images/module3/predictive_brain.webp",
                             "alt": "Abstract visualization of a brain projecting predictions and receiving data",
                             "prompt": "Abstract visualization of a brain at center generating outward projection lines representing predictions, with incoming sensory data streams flowing inward in contrasting color, some prediction lines matching incoming data (shown as aligned and fading), some showing bright glowing mismatches where prediction errors occur, sense of the brain as active model-generator rather than passive receiver, deep blue and purple palette with teal error highlights, 16:9 aspect ratio"
                         },
@@ -80,7 +80,7 @@
                         "title": "How VR Exploits Predictive Processing",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module3/vr_prediction.png",
+                            "src": "../assets/images/module3/vr_prediction.webp",
                             "alt": "Person in VR headset with brain prediction model overlay",
                             "prompt": "Person in VR headset, surrounded by an abstract visualization showing their brain's prediction model as a semi-transparent geometric overlay on the environment, some areas where predictions match (calm blue), other areas where novel environment generates prediction errors (glowing amber), representing the brain actively updating in real time, cyberdelic aesthetic, 16:9 aspect ratio"
                         },
@@ -92,7 +92,7 @@
                         "title": "Embodied Cognition",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module3/embodied_avatar.png",
+                            "src": "../assets/images/module3/embodied_avatar.webp",
                             "alt": "Split view comparing normal human and energy body avatar",
                             "prompt": "Split composition: on the left, a standard neutral human figure in VR, surrounded by cool neutral tones; on the right, the same person inhabiting a glowing abstract particle-body avatar, surrounded by warmer tones and expanded spatial presence, representing how body representation shapes the quality of experience, sense of the body as a cognitive instrument rather than a neutral container, 16:9 aspect ratio"
                         },

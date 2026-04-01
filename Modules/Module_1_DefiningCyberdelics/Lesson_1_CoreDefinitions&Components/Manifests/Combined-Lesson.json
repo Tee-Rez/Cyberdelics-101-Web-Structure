@@ -23,7 +23,7 @@
                         "title": "\"Cyber\" : The Digital Realm",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module1/cyber.png",
+                            "src": "../assets/images/module1/cyber.webp",
                             "aiPrompt": "The word CYBER in bold futuristic typography with circuit board patterns and digital nodes flowing through the letters, electric blue and white color scheme, representing technology and digital systems, clean modern design with subtle binary code in background, 16:9 aspect ratio"
                         },
                         "mediaLayout": "left",
@@ -34,7 +34,7 @@
                         "title": "\"Delic\" : Mind-Manifesting",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module1/delic.png",
+                            "src": "../assets/images/module1/delic.webp",
                             "aiPrompt": "The word DELIC in flowing organic typography with mandala patterns, sacred geometry (Flower of Life), and radiating light waves emanating outward from the letters, purple and teal color scheme, representing consciousness and inner exploration, mystical yet modern aesthetic, 16:9 aspect ratio"
                         },
                         "mediaLayout": "right",
@@ -69,7 +69,7 @@
                         "title": "Component 1 : Digital Technologies",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module1/DigitalTechnologies.png",
+                            "src": "../assets/images/module1/DigitalTechnologies.webp",
                             "aiPrompt": "Modern VR headset (Meta Quest style), EEG headband, and HRV chest strap sensor arranged on a minimalist surface, professional product photography, soft directional lighting, tech-forward aesthetic, subtle Flower of Life sacred geometry pattern faintly visible in background, clean composition, 16:9 aspect ratio"
                         },
                         "mediaLayout": "right",
@@ -80,7 +80,7 @@
                         "title": "Component 2 : Altered States",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module1/meditation-comparison.png",
+                            "src": "../assets/images/module1/meditation-comparison.webp",
                             "aiPrompt": "Split-screen composition : person in traditional meditation pose with eyes closed on the left side, and the same person wearing a VR headset in a similar meditative pose on the right side, both surrounded by soft glowing mandala patterns and sacred geometry, ethereal purple and teal color palette, spiritual atmosphere meeting technology, sense of expanded consciousness, 16:9 aspect ratio"
                         },
                         "mediaLayout": "left",
@@ -96,7 +96,7 @@
                         "title": "All Three Required",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module1/AllThree.png",
+                            "src": "../assets/images/module1/AllThree.webp",
                             "aiPrompt": "Three overlapping circles forming a Venn diagram, each circle labeled and colored differently : Technology in electric blue, Altered States in deep purple, Transformation in teal. Glowing bright white center where all three intersect. Clean infographic style, modern educational design, dark background, subtle sacred geometry texture in circle fill areas, 16:9 aspect ratio"
                         },
                         "mediaLayout": "right",
@@ -347,7 +347,7 @@
                         "title": "Reliability & Repeatability",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module1/futurecontrolknobs.png",
+                            "src": "../assets/images/module1/futurecontrolknobs.webp",
                             "aiPrompt": "Close-up of futuristic control knobs and sliders on a glowing interface, with labels like 'Dose', 'Intensity', 'Frequency', and 'Clarity', electric blue and purple lighting, representing the precision and control offered by technology-based consciousness tools, modern minimalist tech aesthetic, 16:9 aspect ratio"
                         },
                         "mediaLayout": "right",
@@ -363,7 +363,7 @@
                         "title": "The 'Skill' of Presence",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module1/mindfulness-brain-sync.png",
+                            "src": "../assets/images/module1/mindfulness-brain-sync.webp",
                             "aiPrompt": "Abstract visualization of a human brain synchronized with a digital geometric pattern (like a Metatron's Cube), representing the development of mental skills through technology-aided practice, glowing teal and white energy lines, sophisticated and intelligent aesthetic, 16:9 aspect ratio"
                         },
                         "mediaLayout": "left",

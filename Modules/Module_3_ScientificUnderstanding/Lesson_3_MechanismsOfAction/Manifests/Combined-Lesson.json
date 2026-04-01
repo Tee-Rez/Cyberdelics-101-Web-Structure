@@ -20,7 +20,7 @@
                         "title": "Mechanism 1: Attentional Capture",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module3/attentional_capture.png",
+                            "src": "../assets/images/module3/attentional_capture.webp",
                             "alt": "Abstract visualization of attention being claimed by immersive space",
                             "prompt": "Abstract visualization of a human figure surrounded by flowing thought-stream lines representing self-referential mental activity, with a vivid immersive VR environment expanding outward from a central point, the thought-streams gradually fading as the environment fills the frame, representing attention being fully claimed by an immersive experience, purple and teal on dark background, 16:9 aspect ratio"
                         },
@@ -32,7 +32,7 @@
                         "title": "The Default Mode Network in Ordinary Consciousness",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module3/default_mode_network.png",
+                            "src": "../assets/images/module3/default_mode_network.webp",
                             "alt": "Abstract brain visualization highlighting the Default Mode Network",
                             "prompt": "Abstract brain visualization with the Default Mode Network highlighted in soft warm gold, the medial prefrontal cortex and posterior cingulate cortex glowing distinctly, surrounding network activity quieter and grey, with subtle thought-bubble imagery around the brain representing self-referential mental content, clean scientific aesthetic with warmth, 16:9 aspect ratio"
                         },
@@ -73,7 +73,7 @@
                         "title": "Mechanism 4: Perspective Shift",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module3/perspective_shift.png",
+                            "src": "../assets/images/module3/perspective_shift.webp",
                             "alt": "Conceptual visualization showing a person transitioning through 3 viewpoints",
                             "prompt": "Conceptual visualization showing a person transitioning through three distinct first-person viewpoints: their own, a taller figure, and an older figure, each represented as a glowing perspective frame with different visual qualities. Arrows of influence flowing from each virtual perspective toward real-world behavior representations. Visual language of identity fluidity, warm purple and gold palette, 16:9 aspect ratio"
                         },
@@ -114,7 +114,7 @@
                         "title": "Mechanism 6: Multimodal Synchrony",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module3/multimodal_synchrony.png",
+                            "src": "../assets/images/module3/multimodal_synchrony.webp",
                             "alt": "Abstract visualization of multiple sensory input streams converging",
                             "prompt": "Abstract visualization of multiple sensory input streams converging into a unified experience: flowing light channels representing visual input in purple, auditory waveforms in teal, haptic vibration patterns in amber, and proprioceptive movement lines in white, all weaving together into a single coherent core that glows with combined intensity, representing the qualitative difference of multimodal synchrony versus isolated inputs, 16:9 aspect ratio"
                         },
