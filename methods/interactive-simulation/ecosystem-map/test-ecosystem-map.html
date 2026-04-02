@@ -22,7 +22,7 @@
         #test-controls {
             position: fixed;
             top: 10px;
-            right: 10px;
+            left: 10px;
             background: rgba(10, 22, 40, 0.95);
             border: 1px solid #1e293b;
             border-radius: 6px;
@@ -112,7 +112,8 @@
         console.log('[Test] Engine ready. Access via window.engine');
         console.log('[Test] Data accessible via window.DATA');
         console.log('[Test] Nodes:', window.DATA.nodes.length);
-        console.log('[Test] Lateral connections:', window.DATA.lateralConnections.length);
+        console.log('[Test] Connection descriptions:', Object.keys(window.DATA.connectionDescriptions).length);
+        console.log('[Test] Ripple chains:', window.DATA.rippleChains.length);
     </script>
 </body>
 </html>

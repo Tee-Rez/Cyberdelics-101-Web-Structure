@@ -50,6 +50,17 @@
             }
         },
         {
+            "id": "module_5_1_sim",
+            "title": "The Cyberdelic Ecosystem: Living Map",
+            "type": "interactive-simulation",
+            "content": {
+                "engine": "EcosystemMap",
+                "title": "The Cyberdelic Ecosystem",
+                "description": "Explore all eight ecosystem components. Click each node to understand its role, key players, challenge, and opportunity. Visit all eight to continue.",
+                "hideContinueButton": true
+            }
+        },
+        {
             "id": "module_5_1_2_pd",
             "title": "Hardware Manufacturers: Strategic Players",
             "type": "progressive-disclosure",
@@ -88,17 +99,6 @@
                         "triggerLabel": "Take the Quiz"
                     }
                 ]
-            }
-        },
-        {
-            "id": "module_5_1_sim",
-            "title": "The Cyberdelic Ecosystem: Living Map",
-            "type": "interactive-simulation",
-            "content": {
-                "engine": "EcosystemMap",
-                "title": "The Cyberdelic Ecosystem",
-                "description": "Explore all eight ecosystem components. Click each node to understand its role, key players, challenge, and opportunity. Visit all eight to continue.",
-                "hideContinueButton": true
             }
         },
         {
