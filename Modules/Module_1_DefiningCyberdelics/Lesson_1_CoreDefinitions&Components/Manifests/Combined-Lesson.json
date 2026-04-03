@@ -23,7 +23,7 @@
                         "title": "\"Cyber\" : The Digital Realm",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module1/cyber.webp",
+                            "src": "../assets/images/module1/Cyber.webp",
                             "aiPrompt": "The word CYBER in bold futuristic typography with circuit board patterns and digital nodes flowing through the letters, electric blue and white color scheme, representing technology and digital systems, clean modern design with subtle binary code in background, 16:9 aspect ratio"
                         },
                         "mediaLayout": "left",
@@ -104,7 +104,7 @@
                             "src": "../assets/images/module1/AllThree.webp",
                             "aiPrompt": "Three overlapping circles forming a Venn diagram, each circle labeled and colored differently : Technology in electric blue, Altered States in deep purple, Transformation in teal. Glowing bright white center where all three intersect. Clean infographic style, modern educational design, dark background, subtle sacred geometry texture in circle fill areas, 16:9 aspect ratio"
                         },
-                        "mediaLayout": "right",
+                        "mediaLayout": "full",
                         "content": "<p>All three components must be present. A VR game might use technology and create immersion, but without transformational intent it's not cyberdelic. A meditation app might aim for transformation and use some tech, but without intentionally facilitating altered states through immersive technology it's not fully cyberdelic. The intersection of all three is what defines the field.</p><table style='width:100%; border-collapse:collapse; margin-top:10px; margin-bottom:16px; font-size:0.86em; text-align:left;'><thead><tr style='background:rgba(255,255,255,0.15); border-bottom:2px solid rgba(255,255,255,0.3);'><th style='padding:10px 12px; font-weight:600; letter-spacing:0.03em;'>Experience Type</th><th style='padding:10px 12px; font-weight:600; letter-spacing:0.03em;'>Digital Technology</th><th style='padding:10px 12px; font-weight:600; letter-spacing:0.03em;'>Altered States</th><th style='padding:10px 12px; font-weight:600; letter-spacing:0.03em;'>Transformational Intent</th><th style='padding:10px 12px; font-weight:600; letter-spacing:0.03em;'>Cyberdelic?</th></tr></thead><tbody><tr style='border-bottom:1px solid rgba(255,255,255,0.1); background:rgba(255,255,255,0.03);'><td style='padding:9px 12px;'><strong>VR game</strong></td><td style='padding:9px 12px;'>Yes</td><td style='padding:9px 12px;'>Sometimes</td><td style='padding:9px 12px;'>No</td><td style='padding:9px 12px;'>No</td></tr><tr style='border-bottom:1px solid rgba(255,255,255,0.1);'><td style='padding:9px 12px;'><strong>Meditation app</strong></td><td style='padding:9px 12px;'>Partial</td><td style='padding:9px 12px;'>Sometimes</td><td style='padding:9px 12px;'>Sometimes</td><td style='padding:9px 12px;'>Borderline</td></tr><tr style='background:rgba(255,255,255,0.03);'><td style='padding:9px 12px;'><strong>Cyberdelic experience</strong></td><td style='padding:9px 12px;'>Yes</td><td style='padding:9px 12px;'>Yes</td><td style='padding:9px 12px;'>Yes</td><td style='padding:9px 12px;'>Yes</td></tr></tbody></table>",
                         "triggerLabel": "Evaluate Experiences"
                     }

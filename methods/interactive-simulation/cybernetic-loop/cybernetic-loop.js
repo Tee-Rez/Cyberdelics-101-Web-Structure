@@ -87,8 +87,11 @@
             canvas.height = this.H;
             this.CX = this.W / 2;
             this.CY = this.H / 2;
-            this.RADIUS = Math.min(this.W, this.H) * 0.34;
-            this.ORBIT_R = Math.min(this.W, this.H) * 0.455;
+            const minDim = Math.min(this.W, this.H);
+            this.RADIUS = minDim * 0.34;
+            this.ORBIT_R = minDim * 0.455;
+            // Dynamically scale node radius based on window size (baseline ~54 at 800px)
+            this.simConfig.nodeRadius = Math.max(20, minDim * 0.0675);
         },
 
         update: function (dt, params) {
@@ -1066,7 +1069,7 @@
         _buildLayout: function (container) {
             container.innerHTML = `
                 <div id="canvas-wrap">
-                    <canvas id="c"></canvas>
+                    <canvas id="c" class="sim-canvas"></canvas>
                     <div class="sim-signal-selectors">
                         <div class="signal-group align-left">
                             <button class="signal-btn active" data-signal="eeg">EEG (Brain)</button>

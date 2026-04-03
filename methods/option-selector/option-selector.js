@@ -125,6 +125,12 @@
                 // Wrapper
                 const wrapper = document.createElement('div');
                 wrapper.className = 'os-container';
+                wrapper.innerHTML = `
+                    <div class="os-corner-node top-left"></div>
+                    <div class="os-corner-node top-right"></div>
+                    <div class="os-corner-node bottom-left"></div>
+                    <div class="os-corner-node bottom-right"></div>
+                `;
 
                 // Question
                 const questionEl = document.createElement('div');

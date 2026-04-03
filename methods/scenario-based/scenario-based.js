@@ -115,7 +115,11 @@
                     html += `<h1 class="module-title">${this.moduleTitle}</h1>`;
                 }
 
-                html += `<div class="scene-content">`;
+                html += `<div class="scene-content">
+                    <div class="sb-corner-node top-left"></div>
+                    <div class="sb-corner-node top-right"></div>
+                    <div class="sb-corner-node bottom-left"></div>
+                    <div class="sb-corner-node bottom-right"></div>`;
 
                 // Media
                 if (scene.media) {

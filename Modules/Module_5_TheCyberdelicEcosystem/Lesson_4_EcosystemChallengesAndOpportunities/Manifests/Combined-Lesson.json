@@ -62,7 +62,7 @@
                             "src": "../assets/images/module5/equity-split.webp"
                         },
                         "mediaLayout": "right",
-                        "content": "<p>The cyberdelic field genuinely wants to democratize consciousness exploration. The economics of its current form work directly against that aspiration.</p><p><strong>The full first year cost for a new practitioner or client:</strong></p><ul><li>VR headset (entry level), $299 to $429 (Meta Quest 3s or Quest 3)</li><li>Platform subscription (one platform), $10 to $20/month which is $120 to $240/year</li><li>Facilitated sessions (4 sessions at mid range pricing), $300 to $600</li><li><strong>Total first year investment, $700 to $1,300+</strong></li></ul><p>This is before any facilitation training costs, additional platform subscriptions, or hardware accessories. For a household earning the US median income, this is a significant discretionary expenditure. For lower income households, it is simply inaccessible without subsidy.</p><p><strong>The implications cascade:</strong></p><ul><li>The current user base skews affluent, educated, and tech comfortable, the field lacks the diverse representation needed for research generalizability and cultural credibility</li><li>The facilitation profession, built on serving this current user base, inherits the same demographic skew</li><li>Clinical applications that receive insurance coverage (RelieVRx, XRHealth) begin to address this, but coverage remains narrow</li><li>Community access programs and shared hardware models (libraries, wellness centers, community health organizations) represent partial solutions that the field has been slow to develop systematically</li></ul><p>This isn't an argument against the field, it's an argument for expanding access as a field level priority, not just an individual ethics consideration.</p>",
+                        "content": "<p>The cyberdelic field genuinely wants to democratize consciousness exploration. The economics of its current form work directly against that aspiration.</p><p><strong>The full first year cost for a new practitioner or client:</strong></p><ul><li>VR headset (entry level), $299 to $429 (Meta Quest 3s or Quest 3)</li><li>Platform subscription (one platform), $10 to $20/month which is $120 to $240/year</li><li>Facilitated sessions (4 sessions at mid range pricing), $300 to $600</li><li>Total first year investment, $700 to $1,300+</li></ul><p>This is before any facilitation training costs, additional platform subscriptions, or hardware accessories. For a household earning the US median income, this is a significant discretionary expenditure. For lower income households, it is simply inaccessible without subsidy.</p><p><strong>The implications cascade:</strong></p><ul><li>The current user base skews affluent, educated, and tech comfortable, the field lacks the diverse representation needed for research generalizability and cultural credibility</li><li>The facilitation profession, built on serving this current user base, inherits the same demographic skew</li><li>Clinical applications that receive insurance coverage (RelieVRx, XRHealth) begin to address this, but coverage remains narrow</li><li>Community access programs and shared hardware models (libraries, wellness centers, community health organizations) represent partial solutions that the field has been slow to develop systematically</li></ul><p>This isn't an argument against the field, it's an argument for expanding access as a field level priority, not just an individual ethics consideration.</p>",
                         "triggerLabel": "Business Model Uncertainty"
                     },
                     {
@@ -101,22 +101,22 @@
                         "choices": [
                             {
                                 "id": "choice_a",
-                                "label": "Decision 1, Pricing, Flat pricing for everyone ($150/session), simplest and most predictable",
+                                "label": "Decision 1 Pricing - Flat pricing for everyone ($150/session), simplest and most predictable",
                                 "outcome": "outcome_pricing_flat"
                             },
                             {
                                 "id": "choice_b",
-                                "label": "Decision 1, Pricing, A tiered sliding scale (Supported $60 to $80, Standard $120 to $150, Sustaining $180 to $220 to subsidize lower tiers)",
+                                "label": "Decision 1 Pricing - A tiered sliding scale (Supported $60 to $80, Standard $120 to $150, Sustaining $180 to $220 to subsidize lower tiers)",
                                 "outcome": "outcome_pricing_tiered"
                             },
                             {
                                 "id": "choice_c",
-                                "label": "Decision 1, Pricing, Free sessions for everyone until you have a client base",
+                                "label": "Decision 1 Pricing - Free sessions for everyone until you have a client base",
                                 "outcome": "outcome_pricing_free"
                             },
                             {
                                 "id": "choice_d",
-                                "label": "Decision 1, Pricing, Group sessions exclusively, lower cost per person, viable at smaller scale",
+                                "label": "Decision 1 Pricing - Group sessions exclusively, lower cost per person, viable at smaller scale",
                                 "outcome": "outcome_pricing_group"
                             }
                         ]
@@ -127,12 +127,12 @@
                         "choices": [
                             {
                                 "id": "choice_lang_a",
-                                "label": "Decision 2, Language, \"My sessions support anxiety relief and may reduce anxiety symptoms.\"",
+                                "label": "Decision 2 Language - \"My sessions support anxiety relief and may reduce anxiety symptoms.\"",
                                 "outcome": "outcome_language_clinical"
                             },
                             {
                                 "id": "choice_lang_b",
-                                "label": "Decision 2, Language, \"I offer VR facilitated experiences for personal exploration and insight. Some clients find these support their overall wellbeing, including how they relate to stress and difficult emotions.\"",
+                                "label": "Decision 2 Language - \"I offer VR facilitated experiences for personal exploration and insight. Some clients find these support their overall wellbeing, including how they relate to stress and difficult emotions.\"",
                                 "outcome": "outcome_language_wellness"
                             }
                         ]
@@ -143,12 +143,12 @@
                         "choices": [
                             {
                                 "id": "choice_lang_a",
-                                "label": "Decision 2, Language, \"My sessions support anxiety relief and may reduce anxiety symptoms.\"",
+                                "label": "Decision 2 Language - \"My sessions support anxiety relief and may reduce anxiety symptoms.\"",
                                 "outcome": "outcome_language_clinical"
                             },
                             {
                                 "id": "choice_lang_b",
-                                "label": "Decision 2, Language, \"I offer VR facilitated experiences for personal exploration and insight. Some clients find these support their overall wellbeing, including how they relate to stress and difficult emotions.\"",
+                                "label": "Decision 2 Language - \"I offer VR facilitated experiences for personal exploration and insight. Some clients find these support their overall wellbeing, including how they relate to stress and difficult emotions.\"",
                                 "outcome": "outcome_language_wellness"
                             }
                         ]
@@ -159,12 +159,12 @@
                         "choices": [
                             {
                                 "id": "choice_lang_a",
-                                "label": "Decision 2, Language, \"My sessions support anxiety relief and may reduce anxiety symptoms.\"",
+                                "label": "Decision 2 Language - \"My sessions support anxiety relief and may reduce anxiety symptoms.\"",
                                 "outcome": "outcome_language_clinical"
                             },
                             {
                                 "id": "choice_lang_b",
-                                "label": "Decision 2, Language, \"I offer VR facilitated experiences for personal exploration and insight. Some clients find these support their overall wellbeing, including how they relate to stress and difficult emotions.\"",
+                                "label": "Decision 2 Language - \"I offer VR facilitated experiences for personal exploration and insight. Some clients find these support their overall wellbeing, including how they relate to stress and difficult emotions.\"",
                                 "outcome": "outcome_language_wellness"
                             }
                         ]
@@ -175,12 +175,12 @@
                         "choices": [
                             {
                                 "id": "choice_lang_a",
-                                "label": "Decision 2, Language, \"My sessions support anxiety relief and may reduce anxiety symptoms.\"",
+                                "label": "Decision 2 Language - \"My sessions support anxiety relief and may reduce anxiety symptoms.\"",
                                 "outcome": "outcome_language_clinical"
                             },
                             {
                                 "id": "choice_lang_b",
-                                "label": "Decision 2, Language, \"I offer VR facilitated experiences for personal exploration and insight. Some clients find these support their overall wellbeing, including how they relate to stress and difficult emotions.\"",
+                                "label": "Decision 2 Language - \"I offer VR facilitated experiences for personal exploration and insight. Some clients find these support their overall wellbeing, including how they relate to stress and difficult emotions.\"",
                                 "outcome": "outcome_language_wellness"
                             }
                         ]
@@ -191,7 +191,7 @@
                         "choices": [
                             {
                                 "id": "choice_allies",
-                                "label": "Decision 3, See the recommended ecosystem allies and what to ask them",
+                                "label": "Decision 3 - See the recommended ecosystem allies and what to ask them",
                                 "outcome": "outcome_allies"
                             }
                         ]
@@ -202,14 +202,14 @@
                         "choices": [
                             {
                                 "id": "choice_allies",
-                                "label": "Decision 3, See the recommended ecosystem allies and what to ask them",
+                                "label": "Decision 3 - See the recommended ecosystem allies and what to ask them",
                                 "outcome": "outcome_allies"
                             }
                         ]
                     },
                     {
                         "id": "outcome_allies",
-                        "narrative": "<h3>Decision 3, Ecosystem Allies</h3><p>No new facilitator should navigate these challenges alone. Here's who to turn to and what to specifically ask,</p><ul><li><strong>Experienced facilitators in your professional community:</strong> \"How do you handle the sliding scale economics in practice? What is your actual break even, and how long did it take to reach it?\" Real world economics are more instructive than theoretical models.</li><li><strong>Your professional association (Cyberdelic Nexus, emerging facilitator networks):</strong> \"Do you have guidance on language for describing facilitation services without triggering regulatory issues? Is there a template informed consent document I can adapt?\" Associations exist specifically to develop these shared resources.</li><li><strong>A lawyer familiar with digital health and alternative wellness:</strong> \"Does my service description create any regulatory exposure under my state's healing arts statutes? What should I avoid?\" A single one hour consultation ($200 to $400) is a legitimate business expense that can prevent much more costly problems. This is responsible professional practice.</li><li><strong>Platform support teams (TRIPP, Enosis, etc.):</strong> \"What language do you recommend facilitators use when recommending your platform to clients?\" Platform developers have navigated this exact question for their own marketing and often have guidance for facilitators.</li><li><strong>Peer facilitator circles:</strong> \"How have you handled a situation where a client's expectations exceeded facilitation scope?\" Peer consultation on specific cases provides pattern recognition that individual practice alone can't develop.</li></ul><p><strong>The through line across all three decisions:</strong> Mission and sustainability aren't in opposition when you design for both from the start. The practitioners who build durable practices are the ones who treat economics, language, and professional relationships as ecosystem infrastructure, not afterthoughts.</p><p><strong>Reflection:</strong> <em>Of the three decisions in this scenario, which felt most personally uncertain to you, and why? The decisions that produce hesitation tend to reveal the gaps between your ideals and the practical constraints of building a real practice. What does your hesitation point toward as your most important next step?</em></p>",
+                        "narrative": "<h3>Decision 3 - Ecosystem Allies</h3><p>No new facilitator should navigate these challenges alone. Here's who to turn to and what to specifically ask,</p><ul><li><strong>Experienced facilitators in your professional community:</strong> \"How do you handle the sliding scale economics in practice? What is your actual break even, and how long did it take to reach it?\" Real world economics are more instructive than theoretical models.</li><li><strong>Your professional association (Cyberdelic Nexus, emerging facilitator networks):</strong> \"Do you have guidance on language for describing facilitation services without triggering regulatory issues? Is there a template informed consent document I can adapt?\" Associations exist specifically to develop these shared resources.</li><li><strong>A lawyer familiar with digital health and alternative wellness:</strong> \"Does my service description create any regulatory exposure under my state's healing arts statutes? What should I avoid?\" A single one hour consultation ($200 to $400) is a legitimate business expense that can prevent much more costly problems. This is responsible professional practice.</li><li><strong>Platform support teams (TRIPP, Enosis, etc.):</strong> \"What language do you recommend facilitators use when recommending your platform to clients?\" Platform developers have navigated this exact question for their own marketing and often have guidance for facilitators.</li><li><strong>Peer facilitator circles:</strong> \"How have you handled a situation where a client's expectations exceeded facilitation scope?\" Peer consultation on specific cases provides pattern recognition that individual practice alone can't develop.</li></ul><p><strong>The through line across all three decisions:</strong> Mission and sustainability aren't in opposition when you design for both from the start. The practitioners who build durable practices are the ones who treat economics, language, and professional relationships as ecosystem infrastructure, not afterthoughts.</p><p><strong>Reflection:</strong> <em>Of the three decisions in this scenario, which felt most personally uncertain to you, and why? The decisions that produce hesitation tend to reveal the gaps between your ideals and the practical constraints of building a real practice. What does your hesitation point toward as your most important next step?</em></p>",
                         "choices": []
                     }
                 ]

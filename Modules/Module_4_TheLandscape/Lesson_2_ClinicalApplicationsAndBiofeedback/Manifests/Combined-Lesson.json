@@ -106,7 +106,7 @@
                         "content": "<ul><li><strong>Signal Generation:</strong> Body produces data (heart rate, brainwaves).</li><li><strong>Sensor Detection:</strong> Device (watch, headband) reads the signal.</li><li><strong>Processing:</strong> Algorithm interprets state (e.g., 'high stress').</li><li><strong>Response:</strong> VR environment changes (colors dim, geometry contracts).</li><li><strong>Adjustment:</strong> You perceive the change and shift your state, starting the loop again.</li></ul>",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module4/cybernetic-loop.webp",
+                            "src": "../assets/images/module4/cybernetic_loop.webp",
                             "alt": "Diagram of the 5-step cybernetic feedback loop between user and VR system",
                             "aiPrompt": "Circular diagram showing the five-step cybernetic feedback loop - starting with person's silhouette at top, moving clockwise through: (1) heart rate waveform emerging from chest, (2) wrist-worn sensor capturing signal, (3) floating algorithm visualization (geometric processing), (4) VR landscape responding with visual changes, (5) arrow back to person showing adjustment - continuous flow indicated by circular arrangement, purple/teal sacred geometry aesthetic, clean infographic style, sense of living system not mechanical process, 16:9 aspect ratio"
                         },

@@ -58,7 +58,7 @@
                             "aiPrompt": "An academic researcher in an international research institute setting, dual monitors with neural imaging data, peer reviewed journal articles spread across a desk, a VR headset to the side for experimental use. The setting reflects a diverse, purposeful research environment. Crisp, credible aesthetic. Purple/teal palette with warm academic undertones."
                         },
                         "triggerLabel": "Pathway 5: Clinical Practice Integration",
-                        "mediaLayout": "left"
+                        "mediaLayout": "right"
                     },
                     {
                         "title": "Pathway 5: Clinical Practice Integration",
@@ -377,15 +377,10 @@
                         "choices": [
                             {
                                 "id": "bridge_continue",
-                                "label": "Complete the module",
+                                "label": "Take the final quiz",
                                 "outcome": "bridge_note"
                             }
                         ]
-                    },
-                    {
-                        "id": "bridge_note",
-                        "narrative": "<div class=\"module-bridge-note\"><h2>Module 5 Complete</h2><p>You've now completed the foundational architecture of Cyberdelics 101, from defining the field, to its history, to the science, to what exists, to how it sustains itself.</p><p>What comes next builds on everything you've learned here, applying it in practice, with real people, in real contexts. Wherever your path in this field leads, personal practice, facilitation, research, development, clinical work, or advocacy, you carry with you a systems level understanding that most people in this space don't have.</p><p>That's not a small thing. Use it well.</p></div>",
-                        "choices": []
                     }
                 ]
             }

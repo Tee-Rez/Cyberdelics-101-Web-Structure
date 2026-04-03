@@ -234,7 +234,13 @@
                     options.sections.forEach((sec, idx) => {
                         const isFirst = idx === 0 ? 'active' : '';
                         const layout = sec.mediaLayout || 'full';
-                        const layoutClass = `pd-layout-${layout}`;
+                        let layoutClass = `pd-layout-${layout}`;
+
+                        // Auto-detect large amounts of text to widen the layout
+                        const rawTextLength = sec.content ? sec.content.replace(/<[^>]*>?/gm, '').length : 0;
+                        if (rawTextLength > 1200) {
+                            layoutClass += ' pd-layout-wide';
+                        }
 
                         let mediaHTML = this._generateMediaHTML(sec.media);
                         if (mediaHTML) {
@@ -244,16 +250,42 @@
                         let contentHTML = '';
                         if (layout === 'full') {
                             contentHTML = `
-                                ${sec.title ? `<h2 class="section-title">${sec.title}</h2>` : ''}
+                                ${sec.title ? `
+                                <h2 class="section-title">
+                                    <div class="pd-corner-node top-left"></div>
+                                    <div class="pd-corner-node top-right"></div>
+                                    <div class="pd-corner-node bottom-left"></div>
+                                    <div class="pd-corner-node bottom-right"></div>
+                                    ${sec.title}
+                                </h2>` : ''}
                                 ${mediaHTML}
-                                <div class="pd-text-content section-content">${sec.content}</div>
+                                <div class="pd-text-content section-content">
+                                    <div class="pd-corner-node top-left"></div>
+                                    <div class="pd-corner-node top-right"></div>
+                                    <div class="pd-corner-node bottom-left"></div>
+                                    <div class="pd-corner-node bottom-right"></div>
+                                    ${sec.content}
+                                </div>
                             `;
                         } else {
                             contentHTML = `
-                                ${sec.title ? `<h2 class="section-title">${sec.title}</h2>` : ''}
+                                ${sec.title ? `
+                                <h2 class="section-title">
+                                    <div class="pd-corner-node top-left"></div>
+                                    <div class="pd-corner-node top-right"></div>
+                                    <div class="pd-corner-node bottom-left"></div>
+                                    <div class="pd-corner-node bottom-right"></div>
+                                    ${sec.title}
+                                </h2>` : ''}
                                 <div class="pd-flex-wrapper">
                                     ${mediaHTML}
-                                    <div class="pd-text-content section-content">${sec.content}</div>
+                                    <div class="pd-text-content section-content">
+                                        <div class="pd-corner-node top-left"></div>
+                                        <div class="pd-corner-node top-right"></div>
+                                        <div class="pd-corner-node bottom-left"></div>
+                                        <div class="pd-corner-node bottom-right"></div>
+                                        ${sec.content}
+                                    </div>
                                 </div>
                             `;
                         }

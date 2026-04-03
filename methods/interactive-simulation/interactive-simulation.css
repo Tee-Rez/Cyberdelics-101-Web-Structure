@@ -8,7 +8,23 @@
     padding: 1.5rem;
     background: var(--color-surface, #12121a);
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ------------------------------------------------------------------
+   SIMULATION HEADER
+   ------------------------------------------------------------------ */
+.sim-header {
+    text-align: center;
+    width: 100%;
+}
+
+.sim-header h3 {
+    font-family: 'Oxanium', var(--font-family);
+    font-size: 2rem; /* Make the title a bit bigger */
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin: 0;
+    letter-spacing: 1px;
 }
 
 

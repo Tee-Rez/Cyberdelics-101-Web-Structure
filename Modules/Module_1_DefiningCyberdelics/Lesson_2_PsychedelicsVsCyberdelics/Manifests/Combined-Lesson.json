@@ -43,16 +43,6 @@
             }
         },
         {
-            "id": "spectrum_sim_2.2",
-            "title": "Psychedelic - Cyberdelic Spectrum Explorer",
-            "type": "interactive-simulation",
-            "content": {
-                "engine": "spectrum-explorer",
-                "startValue": 50,
-                "hideContinueButton": true
-            }
-        },
-        {
             "id": "complementary_scenario_2.3",
             "title": "Consulting Scenarios",
             "type": "scenario-based",

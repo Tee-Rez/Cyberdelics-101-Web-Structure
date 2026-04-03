@@ -95,7 +95,7 @@
 
 /* NODE DETAIL PANEL */
 .interactive-simulation-container[data-engine="CyberneticLoop"] .detail-panel {
-    width: 280px;
+    width: 380px;
     flex-shrink: 0;
     background: rgba(2, 2, 12, 0.96);
     border-left: 1px solid rgba(0, 217, 255, 0.14);
@@ -136,7 +136,7 @@
 }
 
 .interactive-simulation-container[data-engine="CyberneticLoop"] .detail-body {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     line-height: 1.75;
     color: #aac0d0;
     margin-bottom: 16px;
