@@ -54,18 +54,59 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background: #000;
+            background: #03010f; /* Deep cyberdelic backplate */
             color: #0ff;
             z-index: 9999;
-            transition: opacity 0.5s;
+            transition: opacity 0.8s ease-in-out;
+            font-family: 'Orbitron', 'Rajdhani', sans-serif;
+        }
+
+        .loader-title {
+            font-size: 1.5rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+            animation: pulse-text 2s infinite ease-in-out;
+            text-align: center;
+        }
+
+        .cyber-loading-bar {
+            width: 320px;
+            max-width: 80vw;
+            height: 4px;
+            background: rgba(0, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+            border-radius: 2px;
+            margin-bottom: 1.5rem;
+        }
+
+        .cyber-loading-fill {
+            height: 100%;
+            width: 0%;
+            background: #00c9a7; /* Accent color */
+            box-shadow: 0 0 10px #00c9a7, 0 0 20px #00c9a7;
+            animation: load-fill 1.8s cubic-bezier(0.65, 0, 0.35, 1) infinite;
         }
 
         .spinner {
-            margin-top: 20px;
-            font-size: 0.9em;
-            letter-spacing: 2px;
+            font-size: 0.8em;
+            letter-spacing: 3px;
             text-transform: uppercase;
-            opacity: 0.8;
+            opacity: 0.5;
+            animation: pulse-text 2s infinite ease-in-out reverse;
+        }
+
+        @keyframes load-fill {
+            0% { width: 0%; transform: translateX(0%); }
+            50% { width: 100%; transform: translateX(0%); }
+            100% { width: 100%; transform: translateX(100%); }
+        }
+        
+        @keyframes pulse-text {
+            0%, 100% { opacity: 0.6; text-shadow: 0 0 8px rgba(0,255,255,0.3); }
+            50% { opacity: 1; text-shadow: 0 0 15px rgba(0,255,255,0.8); }
         }
     </style>
 </head>
@@ -73,8 +114,11 @@
 <body>
 
     <div id="loader">
-        <h2>CONNECTING TO NODE...</h2>
-        <div class="spinner">Initializing Neural Interface...</div>
+        <h2 class="loader-title">Cyberdelic Lesson initializing</h2>
+        <div class="cyber-loading-bar">
+            <div class="cyber-loading-fill"></div>
+        </div>
+        <div class="spinner">Synchronizing Protocols...</div>
     </div>
 
     <div id="lesson-root"></div>
