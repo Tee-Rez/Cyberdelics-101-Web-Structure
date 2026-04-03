@@ -1,50 +1,51 @@
 /**
  * SPECTRUM EXPLORER ENGINE
- * Module 1.2.2 - Psychedelic <-> Cyberdelic Interface
+ * Prism / Particle Accelerator Redesign
  */
 
 (function () {
     const SpectrumExplorer = {
-        name: 'Spectrum Explorer',
+        name: 'Spectrum Prism',
         showPlaybackControls: false,
-        defaults: {
-            startValue: 50
-        },
 
-        /* Spec Data */
         data: {
             attributes: [
-                { id: 'method', label: 'Method', psych: 'Chemical substance ingestion', cyber: 'Digital technology immersion', infoPsych: 'Relies on introducing molecules (tryptamines, phenethylamines) to bind with serotonin receptors.', infoCyber: 'Relies on audiovisual stimulation and biofeedback to entrain brainwaves and alter perception.' },
-                { id: 'legality', label: 'Legality', psych: 'Restricted in most jurisdictions', cyber: 'Legal worldwide, no restrictions', infoPsych: 'Most classical psychedelics are Schedule I controlled substances, creating legal risk.', infoCyber: 'Cyberdelic hardware and software are legal consumer products with no restrictions.' },
-                { id: 'safety', label: 'Physical Safety', psych: 'Metabolic processing required', cyber: 'No chemical metabolism involved', infoPsych: 'Requires liver processing; potential contraindications with MAOIs or heart conditions.', infoCyber: 'Purely sensory; no toxicity or metabolic load. Safe for those who cannot take substances.' },
-                { id: 'duration', label: 'Duration Control', psych: 'Fixed once ingested', cyber: 'Adjustable in real-time', infoPsych: 'Once active, the trip lasts 4-12 hours depending on the substance. No off switch.', infoCyber: 'Experience can be paused or stopped instantly by removing the headset.' },
-                { id: 'repeatability', label: 'Repeatability', psych: 'Tolerance reduces effects', cyber: 'Consistent and repeatable', infoPsych: 'Brain builds immediate tolerance; requires days/weeks between sessions for full effect.', infoCyber: 'No physiological tolerance buildup. Same stimulus produces consistent results daily.' },
-                { id: 'accessibility', label: 'Accessibility', psych: 'Medical screening required', cyber: 'Broadly accessible', infoPsych: 'Contraindicated for certain mental health conditions and physical ailments.', infoCyber: 'Accessible to a wider demographic, though photosensitivity precautions apply.' }
+                { id: 'method', label: 'Method', x: 150, y: 70, psych: 'Chemical substance', cyber: 'Digital immersion', infoPsych: 'Relies on introducing molecules to bind with serotonin receptors.', infoCyber: 'Relies on audiovisual stimulation to entrain brainwaves.' },
+                { id: 'legality', label: 'Legality', x: 260, y: 40, psych: 'Heavily restricted', cyber: 'Fully open', infoPsych: 'Most classical psychedelics are Schedule I controlled substances.', infoCyber: 'Cyberdelic hardware and software are legal consumer products.' },
+                { id: 'safety', label: 'Safety', x: 370, y: 20, psych: 'Metabolic processing', cyber: 'Non-metabolic', infoPsych: 'Requires liver processing; potential contraindications with heart conditions.', infoCyber: 'Purely sensory; no toxicity or metabolic load.' },
+                { id: 'duration', label: 'Duration', x: 480, y: 20, psych: 'Fixed trajectory', cyber: 'Real-time control', infoPsych: 'Once active, the trip lasts 4-12 hours. No off switch.', infoCyber: 'Experience can be paused or stopped instantly by removing the headset.' },
+                { id: 'repeat', label: 'Repeatability', x: 590, y: 40, psych: 'Tolerance builds', cyber: 'Consistent', infoPsych: 'Brain builds immediate tolerance; requires waiting weeks.', infoCyber: 'No physiological tolerance buildup. Consistent results daily.' },
+                { id: 'access', label: 'Accessibility', x: 700, y: 70, psych: 'Screening required', cyber: 'Broadly accessible', infoPsych: 'Contraindicated for certain mental health conditions.', infoCyber: 'Accessible to a wider demographic, minus photosensitivity.' }
             ],
             constants: [
-                { label: 'Intention', desc: 'Consciousness exploration and transformation' },
-                { label: 'Potential Outcomes', desc: 'Mystical experiences, therapeutic breakthroughs' },
-                { label: 'Integration Need', desc: 'Processing and meaning-making afterward' },
-                { label: 'Value of Guidance', desc: 'Skilled facilitation enhances outcomes' },
-                { label: 'Set and Setting', desc: 'Context matters profoundly' }
-            ],
+                "Intention: Consciousness exploration",
+                "Outcomes: Mystical experiences",
+                "Need: Integration and processing",
+                "Set & Setting: Profound impact"
+            ]
         },
 
         init: function (container, params, host) {
-            console.log('[SpectrumExplorer] Init called', container, params);
             this.container = container;
-            this.params = params;
             this.host = host;
-            this.value = params.startValue || 50;
-            this.zonesVisited = { left: false, center: true, right: false }; // Center true by default
+            
+            this.state = {
+                psychBeam: false,
+                cyberBeam: false,
+                activeNode: null,
+                beamParticles: []
+            };
+
             this.tooltipsOpened = new Set();
-            this.activeDiscovery = null;
+            this.completed = false;
+
+            this.svgProps = { width: 850, height: 400, px: 425, py: 220 }; // Prism center
+            this.lastTime = performance.now();
 
             this.render();
             this.bindEvents();
-            this.currentLens = 'none'; // Track current lens
+            this.initEngine();
 
-            // Hide continue button until simulation is complete
             setTimeout(() => {
                 const parent = this.container.closest('.interactive-simulation-container');
                 if (parent) {
@@ -55,256 +56,291 @@
         },
 
         render: function () {
-            console.log('[SpectrumExplorer] Rendering to container', this.container);
             this.container.innerHTML = `
-                <div class="spectrum-explorer lens-mode-none">
-                    <div class="se-container">
-                        
-                        <!-- LENS TOGGLES -->
-                        <div class="lens-controls">
-                            <button class="lens-btn lens-psych-btn" data-lens="psych">
-                                <span class="lens-icon">✺</span>
-                                <span class="lens-label">PSYCHEDELIC LENS</span>
-                            </button>
-                            <button class="lens-btn lens-cyber-btn" data-lens="cyber">
-                                <span class="lens-icon">⎔</span>
-                                <span class="lens-label">CYBERDELIC LENS</span>
-                            </button>
-                        </div>
+                <div class="spectrum-explorer">
+                    
+                    <div class="se-viewport">
+                        <svg class="se-svg-canvas" viewBox="0 0 ${this.svgProps.width} ${this.svgProps.height}">
+                            <defs>
+                                <radialGradient id="bg-grad" cx="50%" cy="50%" r="50%">
+                                    <stop offset="0%" stop-color="#020408" />
+                                    <stop offset="100%" stop-color="#000000" />
+                                </radialGradient>
+                                <filter id="glow-p">
+                                    <feGaussianBlur stdDeviation="5" result="blur" />
+                                    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                                </filter>
+                                <filter id="glow-c">
+                                    <feGaussianBlur stdDeviation="5" result="blur" />
+                                    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                                </filter>
+                                <filter id="glow-g">
+                                    <feGaussianBlur stdDeviation="6" result="blur" />
+                                    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                                </filter>
+                            </defs>
+                            <rect width="100%" height="100%" fill="url(#bg-grad)" />
 
-                        <!-- PROMPT ROW -->
-                        <div class="se-prompt-row">
-                            <div class="prompt-content">Activate a lens to explore the spectrum.</div>
-                        </div>
+                            <!-- Background Grid -->
+                            <g opacity="0.1">
+                                <line x1="425" y1="0" x2="425" y2="400" stroke="#475569" />
+                                <line x1="0" y1="220" x2="850" y2="220" stroke="#475569" />
+                                <circle cx="425" cy="220" r="150" fill="none" stroke="#475569" />
+                            </g>
 
-                        <!-- MAIN LENS DISPLAY -->
-                        <div class="se-grid">
+                            <!-- Lasers -->
+                            <g id="laser-layer"></g>
+                            <g id="particle-layer"></g>
+
+                            <!-- Nodes -->
+                            <g id="nodes-layer">
+                                ${this.data.attributes.map(attr => `
+                                    <g class="attr-node" data-id="${attr.id}" transform="translate(${attr.x}, ${attr.y})">
+                                        <circle class="attr-bg" r="25" fill="#111" stroke="#333" stroke-width="2" />
+                                        <circle class="attr-core" r="4" fill="#666" />
+                                        <text y="42" text-anchor="middle" fill="#888" font-size="12px" font-family="monospace">${attr.label}</text>
+                                    </g>
+                                `).join('')}
+                            </g>
+
+                            <!-- The Prism -->
+                            <g id="central-prism" transform="translate(${this.svgProps.px}, ${this.svgProps.py})">
+                                <polygon points="0,-40 35,0 0,40 -35,0" fill="rgba(255,255,255,0.05)" stroke="#666" stroke-width="2" />
+                                <circle r="8" fill="#fff" opacity="0.2" />
+                                <text class="prism-text" y="65" text-anchor="middle" fill="#666" font-size="14px" letter-spacing="3" font-family="sans-serif">MIND</text>
+                            </g>
+
+                            <!-- Cannons -->
+                            <g class="cannon-group" id="cannon-psych" transform="translate(100, 350)">
+                                <rect class="cannon-bg" x="-40" y="-20" width="80" height="40" rx="5" fill="#1a0b2e" stroke="#8B5CF6" stroke-width="2" />
+                                <text y="5" text-anchor="middle" fill="#A78BFA" font-size="12px" font-family="monospace" pointer-events="none">BOTANICAL</text>
+                                <text y="40" text-anchor="middle" fill="#8B5CF6" font-size="10px" pointer-events="none">EMITTER</text>
+                            </g>
+
+                            <g class="cannon-group" id="cannon-cyber" transform="translate(750, 350)">
+                                <rect class="cannon-bg" x="-40" y="-20" width="80" height="40" rx="5" fill="#041f24" stroke="#14B8A6" stroke-width="2" />
+                                <text y="5" text-anchor="middle" fill="#5EEAD4" font-size="12px" font-family="monospace" pointer-events="none">DIGITAL</text>
+                                <text y="40" text-anchor="middle" fill="#14B8A6" font-size="10px" pointer-events="none">EMITTER</text>
+                            </g>
+                        </svg>
+                    </div>
+
+                    <!-- Information HUD -->
+                    <div class="se-hud">
+                        <div class="hud-target-panel">
+                            <div class="hud-title">AWAITING TARGET</div>
+                            <div class="hud-subtitle">Select an attribute node above.</div>
                             
-                            <!-- LEFT/DYNAMIC: WHAT CHANGES -->
-                            <div class="col-dynamic">
-                                <div class="col-header" style="color: var(--text-primary)">
-                                    WHAT CHANGES
+                            <div class="hud-comparisons">
+                                <div class="hud-side psych-side">
+                                    <div class="side-title">PSYCHEDELIC BEAM</div>
+                                    <div class="side-content">Fire emitter to scan.</div>
                                 </div>
-                                <div class="cards-wrapper">
-                                    ${this.data.attributes.map(attr => `
-                                        <div class="attribute-card" data-id="${attr.id}">
-                                            <div class="attr-header">
-                                                <span>${attr.label}</span>
-                                                <span class="info-icon">ⓘ</span>
-                                            </div>
-                                            <div class="attr-states">
-                                                <div class="state-text state-neutral">Select a lens to view differences</div>
-                                                <div class="state-text state-psych">${attr.psych}</div>
-                                                <div class="state-text state-cyber">${attr.cyber}</div>
-                                            </div>
-                                            <div class="attr-tooltip" data-psych="${attr.infoPsych}" data-cyber="${attr.infoCyber}">
-                                                Activate a lens for details.
-                                            </div>
-                                        </div>
-                                    `).join('')}
+                                <div class="hud-side cyber-side">
+                                    <div class="side-title">CYBERDELIC BEAM</div>
+                                    <div class="side-content">Fire emitter to scan.</div>
                                 </div>
                             </div>
+                        </div>
 
-                            <!-- RIGHT/STATIC: THE CORE (SHARED TERRITORY) -->
-                            <div class="col-static core-territory">
-                                <div class="core-glow"></div>
-                                <div class="col-header core-header" style="color: var(--gold-light)">
-                                    <span style="font-size: 1.5rem">❂</span> THE CORE: SHARED TERRITORY
-                                </div>
-                                <div class="core-constants">
-                                    ${this.data.constants.map(c => `
-                                        <div class="static-item">
-                                            <div class="static-dot"></div>
-                                            <div class="static-content">
-                                                <span class="static-label">${c.label}</span>
-                                                <span class="static-desc">${c.desc}</span>
-                                            </div>
-                                        </div>
-                                    `).join('')}
-                                </div>
-                                <!-- DISCOVERY CARD OVERLAY -->
-                                <div class="discovery-card">
-                                    <div class="discovery-header">
-                                        <span style="font-size: 1.5rem">✦</span>
-                                        <span class="discovery-title">TITLE</span>
-                                    </div>
-                                    <div class="discovery-text">Content goes here...</div>
-                                </div>
-                            </div>
-
+                        <div class="hud-core-panel">
+                            <div class="core-title">SHARED SPECTRUM</div>
+                            <ul class="core-list">
+                                ${this.data.constants.map(c => `<li>${c}</li>`).join('')}
+                            </ul>
                         </div>
                     </div>
+
                 </div>
             `;
 
-            // Cache Elements
             this.el = {
-                wrapper: this.container.querySelector('.spectrum-explorer'),
-                container: this.container.querySelector('.se-container'),
-                lensBtns: this.container.querySelectorAll('.lens-btn'),
-                prompt: this.container.querySelector('.prompt-content'),
-                discovery: this.container.querySelector('.discovery-card'),
-                cards: this.container.querySelectorAll('.attribute-card')
+                svg: this.container.querySelector('.se-svg-canvas'),
+                laserLayer: this.container.querySelector('#laser-layer'),
+                particlesLayer: this.container.querySelector('#particle-layer'),
+                nodes: Array.from(this.container.querySelectorAll('.attr-node')),
+                prism: this.container.querySelector('#central-prism polygon'),
+                btnPsych: this.container.querySelector('#cannon-psych'),
+                btnCyber: this.container.querySelector('#cannon-cyber'),
+                hudTitle: this.container.querySelector('.hud-title'),
+                hudSubtitle: this.container.querySelector('.hud-subtitle'),
+                hudPsych: this.container.querySelector('.psych-side .side-content'),
+                hudCyber: this.container.querySelector('.cyber-side .side-content'),
+                corePanel: this.container.querySelector('.hud-core-panel')
             };
+
         },
 
         bindEvents: function () {
-            // Lens Toggle Buttons
-            this.el.lensBtns.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const lens = btn.dataset.lens;
-                    this.updateState(lens);
-                });
+            // Cannon Toggles
+            this.el.btnPsych.addEventListener('click', () => {
+                this.state.psychBeam = !this.state.psychBeam;
+                this.el.btnPsych.classList.toggle('active', this.state.psychBeam);
+                this.updateLasers();
             });
 
-            // Discovery Dismiss
-            this.el.discovery.addEventListener('click', () => {
-                this.el.discovery.classList.remove('active');
+            this.el.btnCyber.addEventListener('click', () => {
+                this.state.cyberBeam = !this.state.cyberBeam;
+                this.el.btnCyber.classList.toggle('active', this.state.cyberBeam);
+                this.updateLasers();
             });
 
-            // Tooltips
-            this.el.cards.forEach(card => {
-                const icon = card.querySelector('.info-icon');
-                icon.addEventListener('click', (e) => {
-                    e.stopPropagation();
+            // Node Selection
+            this.el.nodes.forEach(nodeGrp => {
+                nodeGrp.addEventListener('click', () => {
+                    const id = nodeGrp.dataset.id;
+                    
+                    // visual deselect all
+                    this.el.nodes.forEach(n => n.querySelector('.attr-bg').setAttribute('stroke', '#333'));
+                    
+                    // highlight active
+                    nodeGrp.querySelector('.attr-bg').setAttribute('stroke', '#fff');
 
-                    // Only open tooltips if a lens is active
-                    if (this.currentLens === 'none') {
-                        // Shake the cards wrapper to indicate they need to pick a lens
-                        const wrapper = this.container.querySelector('.cards-wrapper');
-                        wrapper.classList.remove('shake');
-                        void wrapper.offsetWidth;
-                        wrapper.classList.add('shake');
-                        return;
-                    }
+                    this.state.activeNode = this.data.attributes.find(a => a.id === id);
+                    this.tooltipsOpened.add(id);
 
-                    // Toggle current
-                    card.classList.toggle('tooltip-open');
-
-                    if (card.classList.contains('tooltip-open')) {
-                        this.tooltipsOpened.add(card.dataset.id);
-                        this.checkCompletion();
-                    }
-
-                    // Close others (optional, but cleaner)
-                    this.el.cards.forEach(c => {
-                        if (c !== card) c.classList.remove('tooltip-open');
-                    });
+                    this.updateHUD();
+                    this.updateLasers();
                 });
             });
         },
 
-        updateState: function (lensMode) {
-            // Early return if same mode
-            if (this.currentLens === lensMode) return;
+        updateHUD: function() {
+            if (!this.state.activeNode) return;
 
-            this.currentLens = lensMode;
+            const n = this.state.activeNode;
+            this.el.hudTitle.textContent = n.label.toUpperCase();
+            this.el.hudSubtitle.textContent = "Analyzing parameter structural differences...";
 
-            // 1. Update Container Classes for Global CSS 
-            this.el.wrapper.classList.remove('lens-mode-none', 'lens-mode-psych', 'lens-mode-cyber');
-            this.el.wrapper.classList.add(`lens-mode-${lensMode}`);
-
-            // 2. Update Button Active States
-            this.el.lensBtns.forEach(btn => {
-                btn.classList.toggle('active', btn.dataset.lens === lensMode);
-            });
-
-            // 3. Update Attribute Cards content & tooltips based on exact lens
-            this.el.cards.forEach(card => {
-                const tooltip = card.querySelector('.attr-tooltip');
-
-                // Clear any open tooltips when changing lens
-                card.classList.remove('tooltip-open');
-
-                if (lensMode === 'psych') {
-                    const psychText = tooltip.dataset.psych;
-                    if (tooltip.textContent !== psychText) tooltip.textContent = psychText;
-                } else if (lensMode === 'cyber') {
-                    const cyberText = tooltip.dataset.cyber;
-                    if (tooltip.textContent !== cyberText) tooltip.textContent = cyberText;
-                } else {
-                    tooltip.textContent = "Activate a lens for details.";
-                }
-            });
-
-            // 4. Update Border Colors explicitly via JS (though CSS classes handle most of this now)
-            if (lensMode === 'psych') {
-                this.el.container.style.borderColor = 'rgba(139, 92, 246, 0.8)';
-                this.el.container.style.boxShadow = '0 0 30px rgba(139, 92, 246, 0.15)';
-            } else if (lensMode === 'cyber') {
-                this.el.container.style.borderColor = 'rgba(20, 184, 166, 0.8)';
-                this.el.container.style.boxShadow = '0 0 30px rgba(20, 184, 166, 0.15)';
+            // Update panels based on active beams
+            if (this.state.psychBeam) {
+                this.el.hudPsych.innerHTML = `<strong>${n.psych}</strong><br><span style="font-size:0.85em; opacity:0.8">${n.infoPsych}</span>`;
+                this.el.hudPsych.parentElement.classList.add('active');
             } else {
-                this.el.container.style.borderColor = 'var(--border-subtle)';
-                this.el.container.style.boxShadow = 'none';
+                this.el.hudPsych.innerHTML = `Fire emitter to scan.`;
+                this.el.hudPsych.parentElement.classList.remove('active');
             }
 
-            // 5. Track visits for completion
-            if (lensMode === 'psych') this.zonesVisited.left = true;
-            if (lensMode === 'cyber') this.zonesVisited.right = true;
+            if (this.state.cyberBeam) {
+                this.el.hudCyber.innerHTML = `<strong>${n.cyber}</strong><br><span style="font-size:0.85em; opacity:0.8">${n.infoCyber}</span>`;
+                this.el.hudCyber.parentElement.classList.add('active');
+            } else {
+                this.el.hudCyber.innerHTML = `Fire emitter to scan.`;
+                this.el.hudCyber.parentElement.classList.remove('active');
+            }
 
-            // 6. Update Prompt
-            this.updatePrompt(lensMode);
+            // Central Core lights up when BOTH fire
+            if (this.state.psychBeam && this.state.cyberBeam) {
+                this.el.corePanel.classList.add('illuminated');
+                this.el.prism.setAttribute('fill', 'rgba(245, 158, 11, 0.4)');
+                this.el.prism.setAttribute('stroke', '#F59E0B');
+                this.el.prism.setAttribute('filter', 'url(#glow-g)');
+            } else {
+                this.el.corePanel.classList.remove('illuminated');
+                this.el.prism.setAttribute('fill', 'rgba(255,255,255,0.05)');
+                this.el.prism.setAttribute('stroke', '#666');
+                this.el.prism.removeAttribute('filter');
+            }
+
             this.checkCompletion();
         },
 
-        updatePrompt: function (lensMode) {
-            let msg = "Activate a lens to explore the spectrum.";
+        updateLasers: function() {
+            this.updateHUD();
+            this.el.laserLayer.innerHTML = '';
+            
+            const pX = this.svgProps.px;
+            const pY = this.svgProps.py;
 
-            if (lensMode === 'psych') msg = "In the Psychedelic zone, chemistry drives the experience.";
-            else if (lensMode === 'cyber') msg = "In the Cyberdelic zone, technology drives the experience.";
+            // Draw Psych Beam
+            if (this.state.psychBeam) {
+                // Glow 
+                const l1B = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                l1B.setAttribute('x1', '100'); l1B.setAttribute('y1', '330');
+                l1B.setAttribute('x2', pX); l1B.setAttribute('y2', pY);
+                l1B.setAttribute('stroke', '#8B5CF6'); l1B.setAttribute('stroke-width', '8');
+                l1B.setAttribute('opacity', '0.4');
+                this.el.laserLayer.appendChild(l1B);
 
-            if (this.completed) {
-                msg = '<span style="color:var(--gold-light)">EXPLORATION COMPLETE.</span><br>You have mapped the territory.';
+                const l1 = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                l1.setAttribute('x1', '100'); l1.setAttribute('y1', '330');
+                l1.setAttribute('x2', pX); l1.setAttribute('y2', pY);
+                l1.setAttribute('stroke', '#E9D5FF'); l1.setAttribute('stroke-width', '2');
+                this.el.laserLayer.appendChild(l1);
+
+                if (this.state.activeNode) {
+                    const l2 = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                    l2.setAttribute('x1', pX); l2.setAttribute('y1', pY);
+                    l2.setAttribute('x2', this.state.activeNode.x); l2.setAttribute('y2', this.state.activeNode.y);
+                    l2.setAttribute('stroke', '#A78BFA'); l2.setAttribute('stroke-width', '3');
+                    l2.classList.add('beam-scatter-p');
+                    this.el.laserLayer.appendChild(l2);
+                }
             }
 
-            this.el.prompt.innerHTML = msg;
+            // Draw Cyber Beam
+            if (this.state.cyberBeam) {
+                // Glow 
+                const l1B = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                l1B.setAttribute('x1', '750'); l1B.setAttribute('y1', '330');
+                l1B.setAttribute('x2', pX); l1B.setAttribute('y2', pY);
+                l1B.setAttribute('stroke', '#0D9488'); l1B.setAttribute('stroke-width', '8');
+                l1B.setAttribute('opacity', '0.4');
+                this.el.laserLayer.appendChild(l1B);
+
+                const l1 = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                l1.setAttribute('x1', '750'); l1.setAttribute('y1', '330');
+                l1.setAttribute('x2', pX); l1.setAttribute('y2', pY);
+                l1.setAttribute('stroke', '#CCFBF1'); l1.setAttribute('stroke-width', '2');
+                this.el.laserLayer.appendChild(l1);
+
+                if (this.state.activeNode) {
+                    const l2 = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                    l2.setAttribute('x1', pX); l2.setAttribute('y1', pY);
+                    l2.setAttribute('x2', this.state.activeNode.x); l2.setAttribute('y2', this.state.activeNode.y);
+                    l2.setAttribute('stroke', '#5EEAD4'); l2.setAttribute('stroke-width', '3');
+                    l2.classList.add('beam-scatter-c');
+                    this.el.laserLayer.appendChild(l2);
+                }
+            }
+        },
+
+        initEngine: function () {
+            this.isRunning = true;
+            this.loop = this.loop.bind(this);
+            requestAnimationFrame(this.loop);
+        },
+
+        loop: function (time) {
+            if (!this.isRunning) return;
+            // Particles logic can be minimal for now, handled purely by CSS on beams inside CSS file.
+            requestAnimationFrame(this.loop);
         },
 
         checkCompletion: function () {
             if (this.completed) return;
+            const allTooltips = this.tooltipsOpened.size >= 4;
+            const sawBoth = this.state.psychBeam && this.state.cyberBeam;
 
-            const allZones = this.zonesVisited.left && this.zonesVisited.right;
-            const enoughTooltips = this.tooltipsOpened.size >= 3;
-
-            if (allZones && enoughTooltips) {
+            if (allTooltips && sawBoth) {
                 this.completed = true;
-                this.updatePrompt(this.currentLens);
-                // Reveal host continue button now that exploration is done
-                this.showCompleteButton();
-            }
-        },
-
-        showCompleteButton: function () {
-            // Find Main Wrapper (Grandparent of container usually in LessonRunner)
-            const parent = this.container.closest('.interactive-simulation-container');
-            if (!parent) return;
-
-            // Instead of creating our own complete button, reveal the host's continue button
-            const continueBtn = parent.querySelector('.btn-continue');
-            if (continueBtn) {
-                // If it was explicitly hidden via inline style due to hideContinueButton
-                if (continueBtn.style.display === 'none') {
-                    continueBtn.style.display = 'block';
-                }
                 
-                // Animate it in via classes if they exist, or just ensure it's visible
-                requestAnimationFrame(() => {
-                    continueBtn.classList.add('visible');
-                    // Add a pulse or highlight to draw attention
-                    continueBtn.style.boxShadow = '0 0 15px var(--gold-glow)';
-                });
-            } else {
-                console.warn('[SpectrumExplorer] Host continue button not found');
+                const parent = this.container.closest('.interactive-simulation-container');
+                if (parent) {
+                    const continueBtn = parent.querySelector('.btn-continue');
+                    if (continueBtn) {
+                        continueBtn.style.display = 'block';
+                        continueBtn.style.boxShadow = '0 0 15px #F59E0B';
+                    }
+                }
             }
         },
 
         destroy: function () {
-            // Cleanup events if needed
+            this.isRunning = false;
         }
     };
 
-    // Export to Window (for Factory to find)
     window.SimulationEngines = window.SimulationEngines || {};
     window.SimulationEngines['spectrum-explorer'] = SpectrumExplorer;
 

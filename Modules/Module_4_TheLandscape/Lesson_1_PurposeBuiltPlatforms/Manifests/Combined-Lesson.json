@@ -52,6 +52,11 @@
                     },
                     {
                         "title": "Exploratory & Transformational",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module4/transformational.webp"
+                        },
+                        "mediaLayout": "right",
                         "content": "<p>The fourth category is Exploratory & Transformational - experiences designed for deep consciousness work, mystical states, ego dissolution, simulated psychedelic journeys, and profound perspective shifts. This is the far end of the spectrum where the goal isn't stress reduction or symptom relief. It's transformation, insight, awe, and altered states.</p><ul><li><strong>Who it serves:</strong> Experienced consciousness explorers, people in deep personal development work, facilitators-in-training.</li><li><strong>Key characteristics:</strong> High intensity, not for beginners without guidance, often facilitated, requires readiness screening and integration.</li></ul>",
                         "triggerLabel": "View The Spectrum"
                     },
@@ -60,9 +65,7 @@
                         "content": "<p>These four categories exist on a spectrum - not as rigid boxes, but as a continuum. Many platforms span multiple categories. What matters is knowing where an experience sits on this map so you can match it to the right person.</p><p><strong>Choosing Your Category - Key Questions</strong></p><ul><li><strong>Goal?</strong> (Stress vs. Treatment vs. Training vs. Insight)</li><li><strong>Comfort Level?</strong> (Beginner vs. Experienced)</li><li><strong>Support Needed?</strong> (Solo vs. Professional Oversight)</li><li><strong>Experience Level?</strong> (Foundation vs. Depth Work)</li></ul>",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module4/spectrum.webp",
-                            "alt": "Spectrum of Cyberdelic Categories",
-                            "aiPrompt": "Horizontal spectrum visualization showing four cyberdelic categories flowing into each other - left side labeled CLINICAL (medical cross icon, structured feeling), transitioning through WELLNESS & MINDFULNESS (lotus flower icon, accessible feeling), to BIOFEEDBACK-ENHANCED (heartbeat + brain wave icon, tech-enhanced feeling), to EXPLORATORY & TRANSFORMATIONAL (mandala/sacred geometry icon, mystical feeling). Gradient background from cool clinical blue through warm wellness purple/teal to deeper mystical indigo. Clean infographic style, 16:9 aspect ratio"
+                            "src": "../assets/images/module4/spectrum.webp"
                         },
                         "triggerLabel": "Take Concept Check",
                         "mediaLayout": "left"
@@ -100,6 +103,11 @@
                     },
                     {
                         "title": "FloatVR: The Fascination Philosophy",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module4/floatvr.webp"
+                        },
+                        "mediaLayout": "left",
                         "content": "<p>FloatVR was built on a specific insight from Attention Restoration Theory: directed concentration is exhausting, and most people already have too little of it. The way to restore the mind isn't to demand more effort from it but to give it something genuinely fascinating to drift through without strain.</p><p>Every FloatVR session drops you into a procedurally generated world that is different each time you visit. There are no meditation instructions, no breathing cues you're required to follow, no correct way to use it. You float through shifting, dreamlike environments accompanied by original music composed specifically for the experience.</p><ul><li><strong>Platform:</strong> Meta Quest</li><li><strong>Designed for:</strong> Anxiety relief, focus recovery, sleep preparation, and general mental renewal</li><li><strong>Notable:</strong> Built with particular attention to ADHD users who struggle with the concentration demands traditional meditation places on them</li></ul>",
                         "triggerLabel": "FloatVR: Who It Serves Best"
                     },

@@ -16,6 +16,11 @@
                 "sections": [
                     {
                         "title": "Social Facilitation Theory",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module4/group-meditation.webp"
+                        },
+                        "mediaLayout": "left",
                         "content": "<p><strong>Social Facilitation Theory</strong> was first documented by psychologist Norman Triplett in 1898. He noticed that cyclists raced faster when competing against others than when alone. The presence of others heightens arousal, enhancing performance on well-learned tasks and amplifying experience intensity.</p><p>In consciousness work, this translates to deeper engagement. When meditating alone, there's no external accountability. In a group - even a virtual one - you feel a subtle pressure to stay present and honor the collective container.</p><p><strong>Practical Implication:</strong> Group sessions often produce states of focus and depth that solo practice doesn't reliably access. Humans practice better together.</p>",
                         "triggerLabel": "Collective Effervescence"
                     },

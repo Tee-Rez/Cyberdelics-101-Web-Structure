@@ -59,6 +59,11 @@
                     {
                         "id": "section_1",
                         "title": "The Study That Changed Everything",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module2/isness_particles.webp"
+                        },
+                        "mediaLayout": "left",
                         "content": "Published in PLOS ONE, June 2020, 'Isness: Using Multi-Person VR to Design Peak Mystical Type Experiences Comparable to Psychedelics' by David Glowacki and team at University of Bristol. The setup: 57 participants experienced a 13-minute shared multi-person VR experience where each person was represented as an energetic body made of moving particles, synchronized movement and interaction in abstract virtual space, and post-experience measurement using standard Mystical Experience Questionnaire (MEQ30) that psychedelic researchers use.",
                         "triggerLabel": "See the Results"
                     },
@@ -97,6 +102,11 @@
                     {
                         "id": "section_1",
                         "title": "DeepDream VR - Hallucinogenic Technology",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module2/deepdream_brain.webp"
+                        },
+                        "mediaLayout": "left",
                         "content": "Published in Nature Scientific Reports, DeepDream VR applied Google's pattern-recognition neural network to 360-degree video in real-time, creating VR environments where the world constantly shifts into hallucinogenic patterns. The concept: if psychedelics produce visual distortions through affecting visual processing, could artificially creating similar distortions produce similar consciousness changes? Participants described experiences as 'psychedelic-like,' with visual patterns similar to substance experiences, and some couldn't distinguish from mild psychedelic experiences.",
                         "triggerLabel": "See Neural Findings"
                     },

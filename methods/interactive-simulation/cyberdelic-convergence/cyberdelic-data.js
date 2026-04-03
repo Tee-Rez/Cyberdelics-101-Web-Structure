@@ -10,37 +10,37 @@
             {
                 id: 'psychedelic',
                 name: 'Psychedelic\nResearch',
-                color: '#9D4EDD',
+                color: '#a855f7',
                 angle: 0
             },
             {
                 id: 'vr-tech',
                 name: 'VR/AR\nTechnology',
-                color: '#00D9FF',
+                color: '#06b6d4',
                 angle: 60
             },
             {
                 id: 'neuroscience',
                 name: 'Neuroscience',
-                color: '#FF6B9D',
+                color: '#ec4899',
                 angle: 120
             },
             {
                 id: 'contemplative',
                 name: 'Contemplative\nPractices',
-                color: '#FFD700',
+                color: '#f59e0b',
                 angle: 180
             },
             {
                 id: 'gaming',
                 name: 'Gaming',
-                color: '#39FF14',
+                color: '#10b981',
                 angle: 240
             },
             {
                 id: 'digital-art',
                 name: 'Digital Art',
-                color: '#FF006E',
+                color: '#e879f9',
                 angle: 300
             }
         ],
@@ -150,6 +150,15 @@
                 yearAppears: 2021,
                 strengthByYear: {
                     2021: 0.3, 2022: 0.4, 2023: 0.5, 2024: 0.6, 2025: 0.7
+                }
+            },
+            {
+                source: 'digital-art',
+                target: 'gaming',
+                yearAppears: 2017,
+                strengthByYear: {
+                    2017: 0.3, 2018: 0.4, 2019: 0.5, 2020: 0.6, 2021: 0.7,
+                    2022: 0.75, 2023: 0.8, 2024: 0.85, 2025: 0.9
                 }
             }
         ],

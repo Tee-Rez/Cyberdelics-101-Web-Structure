@@ -7,16 +7,17 @@
 /* Wrapper: SVG + panel side by side */
 .ecosystem-map-wrapper {
     display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     width: 100%;
-    /* Remove height 100% so it can hug the aspect ratio of the content */
-    aspect-ratio: 16 / 10.5;
-    /* Typical widescreen layout */
-    max-height: 85vh;
-    /* Prevent it from being taller than the screen */
+    height: 100%;
     gap: 0;
     align-items: stretch;
-    background: #060b13;
-    /* Optional faint bg to ground it */
+    background: radial-gradient(circle at center, rgba(6, 182, 212, 0.06) 0%, rgba(2, 6, 12, 1) 100%), #02060c;
+    border: 1px solid rgba(0, 217, 255, 0.1);
     border-radius: 8px;
     overflow: hidden;
 }
@@ -26,8 +27,8 @@
     flex: 1 1 60%;
     min-width: 0;
     position: relative;
-    background: radial-gradient(circle at center, rgba(6, 182, 212, 0.06) 0%, rgba(8, 13, 20, 0) 70%);
-    /* Seamless background that bleeds beyond SVG bounds */
+    /* Transparent so the wrapper's background glows through seamlessly */
+    background: transparent;
 }
 
 .ecosystem-map-svg-container svg {

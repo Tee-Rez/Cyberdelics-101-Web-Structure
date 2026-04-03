@@ -76,7 +76,7 @@
                 svg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
                 svg.style.width = '100%';
                 svg.style.height = '100%';
-                svg.style.background = 'radial-gradient(circle at center, rgba(157, 78, 221, 0.1) 0%, rgba(10, 10, 15, 0.5) 100%)';
+                svg.style.background = 'radial-gradient(circle at center, #060d1a 0%, #02060c 80%)';
                 container.appendChild(svg);
             }
             this.svg = svg;
@@ -197,29 +197,74 @@
             const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
             g.id = 'connections-group';
 
-            DATA.connections.forEach((conn, i) => {
-                const src = this.domainPositions.find(d => d.id === conn.source);
-                const tgt = this.domainPositions.find(d => d.id === conn.target);
-                if (!src || !tgt) return;
-
+            // Spoke Connections to Center
+            this.domainPositions.forEach(src => {
                 // Glow
                 const glow = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-                glow.classList.add('connection-glow');
-                glow.id = `conn-glow-${i}`;
+                glow.classList.add('center-connection-glow');
                 glow.setAttribute('x1', src.x); glow.setAttribute('y1', src.y);
-                glow.setAttribute('x2', tgt.x); glow.setAttribute('y2', tgt.y);
-                glow.setAttribute('stroke', '#00D9FF');
+                glow.setAttribute('x2', this.simConfig.svg.centerX); glow.setAttribute('y2', this.simConfig.svg.centerY);
+                glow.setAttribute('stroke', src.color);
+                glow.setAttribute('stroke-width', 3);
+                glow.setAttribute('opacity', 0.15);
                 glow.style.filter = 'blur(4px)';
                 g.appendChild(glow);
 
                 // Line
                 const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                line.classList.add('center-connection-line');
+                line.setAttribute('x1', src.x); line.setAttribute('y1', src.y);
+                line.setAttribute('x2', this.simConfig.svg.centerX); line.setAttribute('y2', this.simConfig.svg.centerY);
+                line.setAttribute('stroke', src.color);
+                line.setAttribute('stroke-width', 1);
+                line.setAttribute('opacity', 0.3);
+                g.appendChild(line);
+            });
+
+            DATA.connections.forEach((conn, i) => {
+                const src = this.domainPositions.find(d => d.id === conn.source);
+                const tgt = this.domainPositions.find(d => d.id === conn.target);
+                if (!src || !tgt) return;
+
+                let diff = Math.abs(src.angle - tgt.angle);
+                if (diff > 180) diff = 360 - diff;
+                const isAcross = diff > 135;
+
+                // Glow
+                const glow = document.createElementNS('http://www.w3.org/2000/svg', isAcross ? 'path' : 'line');
+                glow.classList.add('connection-glow');
+                glow.id = `conn-glow-${i}`;
+                glow.setAttribute('stroke', src.color);
+                glow.setAttribute('fill', 'none');
+                glow.style.filter = 'blur(4px)';
+                g.appendChild(glow);
+
+                // Line
+                const line = document.createElementNS('http://www.w3.org/2000/svg', isAcross ? 'path' : 'line');
                 line.classList.add('connection-line');
                 line.id = `conn-${i}`;
-                line.setAttribute('x1', src.x); line.setAttribute('y1', src.y);
-                line.setAttribute('x2', tgt.x); line.setAttribute('y2', tgt.y);
-                line.setAttribute('stroke', '#00D9FF');
+                line.setAttribute('stroke', src.color);
+                line.setAttribute('fill', 'none');
                 g.appendChild(line);
+
+                if (!isAcross) {
+                    glow.setAttribute('x1', src.x); glow.setAttribute('y1', src.y);
+                    glow.setAttribute('x2', tgt.x); glow.setAttribute('y2', tgt.y);
+                    line.setAttribute('x1', src.x); line.setAttribute('y1', src.y);
+                    line.setAttribute('x2', tgt.x); line.setAttribute('y2', tgt.y);
+                } else {
+                    const r = this.simConfig.nodes.orbitRadius;
+                    const cx = this.simConfig.svg.centerX;
+                    const cy = this.simConfig.svg.centerY;
+                    const v1x = src.x - cx, v1y = src.y - cy;
+                    const v2x = tgt.x - cx, v2y = tgt.y - cy;
+                    const cross = v1x * v2y - v1y * v2x;
+                    const sweep = cross > 0 ? 1 : 0;
+                    
+                    const d = `M ${src.x} ${src.y} A ${r} ${r} 0 0 ${sweep} ${tgt.x} ${tgt.y}`;
+                    glow.setAttribute('d', d);
+                    line.setAttribute('d', d);
+                }
             });
 
             this.svg.appendChild(g);
@@ -264,7 +309,7 @@
                 circle.setAttribute('cy', d.y);
                 circle.setAttribute('r', this.simConfig.nodes.domainRadius);
                 circle.setAttribute('fill', d.color);
-                circle.setAttribute('fill-opacity', 0.3);
+                circle.setAttribute('fill-opacity', 0.15);
                 circle.setAttribute('stroke', d.color);
                 circle.setAttribute('stroke-width', 3);
                 g.appendChild(circle);
@@ -353,8 +398,16 @@
                 tx: this.simConfig.svg.centerX,
                 ty: this.simConfig.svg.centerY,
                 progress: 0,
-                color: '#00D9FF'
+                color: src.color,
+                domainId: src.id
             });
+
+            const nodeG = this.svg.querySelector(`.domain-node[data-id="${src.id}"]`);
+            if (nodeG) {
+                nodeG.classList.remove('ripple-source');
+                void nodeG.offsetWidth; 
+                nodeG.classList.add('ripple-source');
+            }
         },
 
         _renderParticles: function (year) {
@@ -372,13 +425,25 @@
                 const cx = p.x + (p.tx - p.x) * p.progress;
                 const cy = p.y + (p.ty - p.y) * p.progress;
 
-                const c = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-                c.setAttribute('cx', cx);
-                c.setAttribute('cy', cy);
-                c.setAttribute('r', 2.5);
-                c.setAttribute('fill', p.color);
-                c.setAttribute('opacity', 1 - p.progress); // Fade out
-                g.appendChild(c);
+                // Aura shape
+                const aura = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+                aura.setAttribute('cx', cx);
+                aura.setAttribute('cy', cy);
+                aura.setAttribute('r', 9);
+                aura.setAttribute('fill', p.color);
+                aura.setAttribute('opacity', (1 - p.progress) * 0.5);
+                aura.style.filter = `drop-shadow(0 0 8px ${p.color})`;
+                g.appendChild(aura);
+
+                // Core dot
+                const core = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+                core.setAttribute('cx', cx);
+                core.setAttribute('cy', cy);
+                core.setAttribute('r', 3);
+                core.setAttribute('fill', '#ffffff'); // bright core
+                core.setAttribute('opacity', 1 - p.progress);
+                core.style.filter = `drop-shadow(0 0 4px ${p.color})`;
+                g.appendChild(core);
             });
         },
 

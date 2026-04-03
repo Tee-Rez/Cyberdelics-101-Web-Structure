@@ -48,6 +48,11 @@
                     },
                     {
                         "title": "Historical Context",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module1/tim-leary.webp"
+                        },
+                        "mediaLayout": "left",
                         "content": "<p>The term 'cyberdelics' was popularized by Timothy Leary in the 1990s. Leary, known for his earlier psychedelic research, recognized that technology could serve similar consciousness-expanding purposes as substances. He foresaw a future where virtual reality and digital tools would become valid paths for inner exploration. We're now living in that future he envisioned.</p>",
                         "triggerLabel": "Try the Simulation"
                     }
@@ -356,6 +361,11 @@
                     },
                     {
                         "title": "Wider Accessibility",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module1/accessible-tech-future.webp"
+                        },
+                        "mediaLayout": "left",
                         "content": "<p>Cyberdelic tools can be used in many places where substances cannot : schools, workplaces, wellness centers, and homes. Because they don't involve pharmaceutical intervention, they bypass many legal, medical, and social barriers. This allows more people to explore consciousness safely and legally across different cultures and regulatory environments.</p>",
                         "triggerLabel": "Next Reason"
                     },
@@ -366,7 +376,7 @@
                             "src": "../assets/images/module1/mindfulness-brain-sync.webp",
                             "aiPrompt": "Abstract visualization of a human brain synchronized with a digital geometric pattern (like a Metatron's Cube), representing the development of mental skills through technology-aided practice, glowing teal and white energy lines, sophisticated and intelligent aesthetic, 16:9 aspect ratio"
                         },
-                        "mediaLayout": "left",
+                        "mediaLayout": "right",
                         "content": "<p>Cyberdelics often focus on 'training' the mind. Instead of a substance doing the work for you, technology facilitates you doing the work yourself. Biofeedback, for example, rewards your brain for reaching specific states. This builds mental 'muscles' and skills that you can carry with you even after you take the headset off. It's an active practice, not a passive experience.</p>",
                         "triggerLabel": "Summary"
                     },

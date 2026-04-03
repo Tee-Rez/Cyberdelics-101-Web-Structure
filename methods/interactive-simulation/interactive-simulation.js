@@ -168,6 +168,8 @@
             _buildControls: function (config) {
                 console.log("[InteractiveSimulation] _buildControls called with config:", config);
                 const controlsContainer = this._elements.controls;
+                if (!controlsContainer) return;
+
                 // Clear existing except buttons
                 const buttons = controlsContainer.querySelector('.playback-controls');
                 controlsContainer.innerHTML = '';
@@ -194,12 +196,9 @@
                         input.addEventListener('input', (e) => {
                             const val = parseFloat(e.target.value);
                             this._state.params[param.id] = val;
-                            // Update label - scoped to this control group ideally, but here using global ID assumption (risky)
-                            // Refactor: use local lookup
                             const lbl = group.querySelector(`#val-${param.id}`);
                             if (lbl) lbl.textContent = val;
 
-                            // Notify engine of update
                             if (this._state.engine.onParamChange) {
                                 this._state.engine.onParamChange(param.id, val);
                             }
@@ -214,6 +213,13 @@
                 // Re-append buttons
                 if (buttons) controlsContainer.appendChild(buttons);
                 else this._createDefaultButtons(controlsContainer);
+
+                // Auto-hide the container if it's completely empty to collapse any padding/margins
+                if (controlsContainer.childNodes.length === 0) {
+                    controlsContainer.style.display = 'none';
+                } else {
+                    controlsContainer.style.display = '';
+                }
             },
 
             _createDefaultButtons: function (container) {

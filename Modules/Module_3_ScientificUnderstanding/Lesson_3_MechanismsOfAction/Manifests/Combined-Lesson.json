@@ -61,6 +61,11 @@
                 "sections": [
                     {
                         "title": "Mechanism 3: Emotional Regulation",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module3/emotional_regulation.webp"
+                        },
+                        "mediaLayout": "left",
                         "content": "<p>Emotional Regulation describes the process by which VR environments influence a person's physiological and emotional state during a session. The mechanism operates through three distinct pathways:</p><ul><li><strong>Positive environment induction:</strong> immersive environments designed around safety, beauty, and natural settings reliably produce physiological calming responses. Heart rate variability, skin conductance, and self-reported affect all shift in response to well-designed positive VR environments.</li><li><strong>Controlled exposure:</strong> VR's controllability makes it possible to approach emotionally activating content at calibrated intensity, a core mechanism in VR exposure therapy for anxiety and phobias.</li><li><strong>Narrative immersion:</strong> when a person is absorbed in a meaningful story or symbolic experience, their emotional system responds as if the events are real. This is the same mechanism that makes films move us; applied in a cyberdelic session with intention, it produces genuine emotional processing.</li></ul>",
                         "triggerLabel": "The Emotional Environment as Co-Facilitator"
                     },
@@ -73,9 +78,7 @@
                         "title": "Mechanism 4: Perspective Shift",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module3/perspective_shift.webp",
-                            "alt": "Conceptual visualization showing a person transitioning through 3 viewpoints",
-                            "prompt": "Conceptual visualization showing a person transitioning through three distinct first-person viewpoints: their own, a taller figure, and an older figure, each represented as a glowing perspective frame with different visual qualities. Arrows of influence flowing from each virtual perspective toward real-world behavior representations. Visual language of identity fluidity, warm purple and gold palette, 16:9 aspect ratio"
+                            "src": "../assets/images/module3/perspective_shift.webp"
                         },
                         "mediaLayout": "right",
                         "content": "<p>Perspective Shift is the mechanism by which embodying a different body, viewpoint, or relational position in VR produces measurable changes in attitudes, empathy, and self-perception that persist after the session ends.</p><p>The replicated research foundation is the Proteus Effect, covered in Lesson 3.2: inhabiting a virtual body with specific characteristics changes how the person relates to themselves. That finding extends beyond body characteristics to viewpoint more broadly.</p><p>Stanford's Virtual Human Interaction Lab and subsequent researchers have demonstrated that taking on a different racial identity in VR reduced implicit bias in participants; that inhabiting an elderly avatar increased empathic responses toward older populations; and that experiencing a scene from the perspective of a person in crisis increased prosocial behavior in subsequent real-world contexts.</p><p>The key finding across these studies: the shift isn't just emotional. It is attitudinal and behavioral, and it persists.</p>",
@@ -114,9 +117,7 @@
                         "title": "Mechanism 6: Multimodal Synchrony",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module3/multimodal_synchrony.webp",
-                            "alt": "Abstract visualization of multiple sensory input streams converging",
-                            "prompt": "Abstract visualization of multiple sensory input streams converging into a unified experience: flowing light channels representing visual input in purple, auditory waveforms in teal, haptic vibration patterns in amber, and proprioceptive movement lines in white, all weaving together into a single coherent core that glows with combined intensity, representing the qualitative difference of multimodal synchrony versus isolated inputs, 16:9 aspect ratio"
+                            "src": "../assets/images/module3/multimodal_synchrony.webp"
                         },
                         "mediaLayout": "right",
                         "content": "<p>Multimodal Synchrony is the mechanism by which synchronized, coherent inputs across multiple sensory channels produce a qualitatively different kind of experience than any single channel can produce alone.</p><p>The principle connects to Integrated Information Theory from Lesson 3.1: when visual, auditory, haptic, and proprioceptive inputs are synchronized and mutually reinforcing, the brain treats the combined experience as higher-fidelity reality. The ordinary cognitive effort of believing the experience is real decreases. It simply registers as real to the nervous system.</p><p>Session experience: the difference between a VR environment with excellent visuals but generic audio, and a VR environment where spatial audio shifts precisely with movement, where the soundscape is emotionally coherent with the visuals, where haptic feedback confirms what the eyes see. The second environment doesn't just feel better. It produces a qualitatively different neurological state.</p><p>Multimodal Synchrony is why experienced cyberdelic designers treat sound design as equal in importance to visual design, and why haptic elements, even modest ones, can produce disproportionate presence effects.</p>",

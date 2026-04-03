@@ -57,6 +57,11 @@
                 "sections": [
                     {
                         "title": "The Affordability Problem, Who Gets Left Out",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module5/equity-split.webp"
+                        },
+                        "mediaLayout": "right",
                         "content": "<p>The cyberdelic field genuinely wants to democratize consciousness exploration. The economics of its current form work directly against that aspiration.</p><p><strong>The full first year cost for a new practitioner or client:</strong></p><ul><li>VR headset (entry level), $299 to $429 (Meta Quest 3s or Quest 3)</li><li>Platform subscription (one platform), $10 to $20/month which is $120 to $240/year</li><li>Facilitated sessions (4 sessions at mid range pricing), $300 to $600</li><li><strong>Total first year investment, $700 to $1,300+</strong></li></ul><p>This is before any facilitation training costs, additional platform subscriptions, or hardware accessories. For a household earning the US median income, this is a significant discretionary expenditure. For lower income households, it is simply inaccessible without subsidy.</p><p><strong>The implications cascade:</strong></p><ul><li>The current user base skews affluent, educated, and tech comfortable, the field lacks the diverse representation needed for research generalizability and cultural credibility</li><li>The facilitation profession, built on serving this current user base, inherits the same demographic skew</li><li>Clinical applications that receive insurance coverage (RelieVRx, XRHealth) begin to address this, but coverage remains narrow</li><li>Community access programs and shared hardware models (libraries, wellness centers, community health organizations) represent partial solutions that the field has been slow to develop systematically</li></ul><p>This isn't an argument against the field, it's an argument for expanding access as a field level priority, not just an individual ethics consideration.</p>",
                         "triggerLabel": "Business Model Uncertainty"
                     },

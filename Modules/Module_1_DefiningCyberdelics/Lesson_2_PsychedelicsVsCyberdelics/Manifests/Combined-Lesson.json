@@ -21,6 +21,11 @@
                     },
                     {
                         "title": "Shared Intention",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module1/shared-intention.webp"
+                        },
+                        "mediaLayout": "left",
                         "content": "<p>Both psychedelics and cyberdelics exist for the same fundamental purpose: facilitating consciousness exploration, personal transformation, and spiritual development. Whether using substances or technology, the underlying intention is identical, to expand awareness, facilitate healing, and support personal growth. Purpose is the foundation both fields share.</p>",
                         "triggerLabel": "Shared Outcomes"
                     },
