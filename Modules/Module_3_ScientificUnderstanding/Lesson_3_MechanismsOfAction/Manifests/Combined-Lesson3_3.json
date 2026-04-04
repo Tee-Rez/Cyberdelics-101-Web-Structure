@@ -115,11 +115,6 @@
                     },
                     {
                         "title": "Mechanism 6: Multimodal Synchrony",
-                        "media": {
-                            "type": "image",
-                            "src": "../assets/images/module3/multimodal_synchrony.webp"
-                        },
-                        "mediaLayout": "right",
                         "content": "<p>Multimodal Synchrony is the mechanism by which synchronized, coherent inputs across multiple sensory channels produce a qualitatively different kind of experience than any single channel can produce alone.</p><p>The principle connects to Integrated Information Theory from Lesson 3.1: when visual, auditory, haptic, and proprioceptive inputs are synchronized and mutually reinforcing, the brain treats the combined experience as higher-fidelity reality. The ordinary cognitive effort of believing the experience is real decreases. It simply registers as real to the nervous system.</p><p>Session experience: the difference between a VR environment with excellent visuals but generic audio, and a VR environment where spatial audio shifts precisely with movement, where the soundscape is emotionally coherent with the visuals, where haptic feedback confirms what the eyes see. The second environment doesn't just feel better. It produces a qualitatively different neurological state.</p><p>Multimodal Synchrony is why experienced cyberdelic designers treat sound design as equal in importance to visual design, and why haptic elements, even modest ones, can produce disproportionate presence effects.</p>",
                         "triggerLabel": "Mechanism 7: Integration"
                     },

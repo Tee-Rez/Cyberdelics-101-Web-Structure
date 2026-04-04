@@ -29,7 +29,7 @@
                         "title": "The Kickstarter That Changed Everything",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module2/lesson3/oculus_kickstarter.jpg",
+                            "src": "../assets/images/module2/oculus_kickstarter.jpg",
                             "alt": "Kickstarter campaign page for Oculus Rift showing the funding goal dramatically exceeded, excited backer comments, and early prototype images, screen capture style from 2012 with authentic web design."
                         },
                         "mediaLayout": "right",
@@ -130,7 +130,7 @@
                         "narrative": "<h3>Scenario Complete</h3><p>The Oculus Kickstarter was the moment when 30 years of vision met viable technology. Those who recognized the convergence of smartphone displays, gaming GPUs, and cultural readiness positioned themselves for the renaissance. The lesson: past failures don't guarantee future failures when fundamental conditions change.</p>",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module2/lesson3/vr_evolution_compare.jpg",
+                            "src": "../assets/images/module2/vr_evolution_compare.jpg",
                             "alt": "Before and after comparison: left side shows clunky 1990s VR headset (heavy, wired, primitive), right side shows sleek Oculus Rift CV1 from 2016 (elegant, refined, modern), dramatic contrast representing 20-year evolution."
                         },
                         "mediaLayout": "full",
@@ -166,7 +166,7 @@
                         "title": "HTC Vive - Room-Scale Revolution",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module2/lesson3/htc_vive_roomscale.jpg",
+                            "src": "../assets/images/module2/htc_vive_roomscale.jpg",
                             "alt": "Person using HTC Vive in a cleared living room space, demonstrating room-scale VR with hand controllers, visible base station sensors in corners, sense of freedom and natural movement, representing the room-scale revolution."
                         },
                         "mediaLayout": "left",

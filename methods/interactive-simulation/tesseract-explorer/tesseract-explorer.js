@@ -49,15 +49,6 @@
             // Generate Layout
             this._buildLayout(container);
 
-            // Hide continue button until simulation is complete
-            setTimeout(() => {
-                const parent = container.closest('.interactive-simulation-container');
-                if (parent) {
-                    const btn = parent.querySelector('.btn-continue');
-                    if (btn) btn.style.display = 'none';
-                }
-            }, 50);
-
             this._ensureThreeJS(() => {
                 // Initialize 3D Scene
                 this._init3DVisualization();

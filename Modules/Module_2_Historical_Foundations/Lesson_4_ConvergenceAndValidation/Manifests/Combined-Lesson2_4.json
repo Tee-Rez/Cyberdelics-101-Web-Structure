@@ -18,7 +18,7 @@
                         "mediaLayout": "right",
                         "media": {
                             "type": "image",
-                            "src": "../../assets/Images/Module2/covid_shift.webp"
+                            "src": "../assets/images/module2/covid_shift.webp"
                         },
                         "title": "The Sudden Shift (March 2020)",
                         "content": "When COVID-19 lockdowns began in March 2020, billions of people suddenly couldn't see friends or family in person, attend events, concerts, or gatherings, go to offices, schools, or social spaces, or maintain normal social lives. The question became urgent: how do we maintain human connection without physical proximity? Technology became the only option, not a choice but necessity.",
@@ -139,13 +139,12 @@
         },
         {
             "id": "culture_map_2.3",
-            "title": "Culture-Tech Convergence Map",
+            "title": "Cyberdelic Convergence Map",
             "type": "interactive-simulation",
             "content": {
                 "engine": "CyberdelicConvergence",
                 "placeholder": true,
-                "notes": "Interactive visualization of 1980-2020 timeline comparing Cultural Movements vs Tech Development. Convergence points highlighted.",
-                "graphic_src": "../assets/images/module2/convergence_map_placeholder.jpg"
+                "notes": "Interactive visualization of 1980-2020 timeline comparing Cultural Movements vs Tech Development. Convergence points highlighted."
             }
         },
         {

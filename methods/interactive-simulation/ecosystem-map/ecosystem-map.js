@@ -360,14 +360,13 @@
                 this._updateProgress();
             }
 
-            // Completion gate
+            // Interaction complete signal (Unlocks but does not force transition)
             if (this.visitedNodes.size === 8 && !this.continueUnlocked) {
                 this.continueUnlocked = true;
-                setTimeout(() => {
-                    if (this.host && typeof this.host.markComplete === 'function') {
-                        this.host.markComplete();
-                    }
-                }, 600);
+                const simContainer = this.host._elements.container.querySelector('.interactive-simulation-container') || this.host._elements.container;
+                if (simContainer) {
+                    simContainer.classList.add('interaction-complete');
+                }
             }
         },
 

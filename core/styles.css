@@ -186,6 +186,7 @@ body {
     /* Ensure it fills viewport or parent iframe */
     overflow: hidden;
     /* Prevent scroll */
+    box-shadow: inset 0 0 0 1px rgba(123, 92, 255, 0.2);
 }
 
 /* ---------- Typography ---------- */
@@ -1411,11 +1412,35 @@ button.btn-continue:hover,
     letter-spacing: 2px;
     cursor: pointer;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    /* Neon Glow */
-    box-shadow: 0 0 15px rgba(0, 217, 255, 0.1), inset 0 0 10px rgba(0, 217, 255, 0.05);
-    border-radius: 4px;
-    /* Hidden by default (logic toggles display:block) */
-    display: none;
+    box-shadow: 0 0 15px rgba(0, 217, 255, 0.1);
+    position: relative;
+}
+
+/* Flash/Pulse Highlight on Completion */
+.interaction-complete + .sim-footer .btn-continue,
+.interaction-complete .btn-continue {
+    border-color: var(--color-accent) !important;
+    box-shadow: 0 0 25px rgba(0, 217, 255, 0.4);
+    animation: btn-glow-pulse 2s infinite;
+}
+
+@keyframes btn-glow-pulse {
+    0% {
+        box-shadow: 0 0 15px rgba(0, 217, 255, 0.3);
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: 0 0 35px rgba(0, 217, 255, 0.7);
+        transform: scale(1.05);
+    }
+    100% {
+        box-shadow: 0 0 15px rgba(0, 217, 255, 0.3);
+        transform: scale(1);
+    }
+}
+
+.module-interactive-simulation .btn-continue {
+    /* Ensure it remains visible if lesson runner set it, but flex for icons */
     display: flex;
     align-items: center;
     gap: 12px;

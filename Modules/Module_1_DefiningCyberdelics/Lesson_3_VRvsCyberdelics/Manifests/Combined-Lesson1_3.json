@@ -229,8 +229,7 @@
             "type": "interactive-simulation",
             "content": {
                 "engine": "TesseractExplorer",
-                "params": {},
-                "hideContinueButton": true
+                "params": {}
             }
         },
         {
