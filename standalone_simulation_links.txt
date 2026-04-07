@@ -1,0 +1,47 @@
+# Standalone Interactive Simulation Links
+
+Here are the direct links to the standalone interactive simulations hosted on GitHub Pages.
+
+## Raw URLs
+
+Cyberdelic Convergence:
+https://tee-rez.github.io/Cyberdelics-101-Web-Structure/Modules/standalone/cyberdelic-convergence.html
+
+Cybernetic Loop:
+https://tee-rez.github.io/Cyberdelics-101-Web-Structure/Modules/standalone/cybernetic-loop.html
+
+Presence Embodiment:
+https://tee-rez.github.io/Cyberdelics-101-Web-Structure/Modules/standalone/presence-embodiment.html
+
+Spectrum Explorer:
+https://tee-rez.github.io/Cyberdelics-101-Web-Structure/Modules/standalone/spectrum-explorer.html
+
+Tesseract Explorer:
+https://tee-rez.github.io/Cyberdelics-101-Web-Structure/Modules/standalone/tesseract-explorer.html
+
+Ecosystem Map:
+https://tee-rez.github.io/Cyberdelics-101-Web-Structure/Modules/standalone/ecosystem-map.html
+
+---
+
+## HTML Embed Links / Anchor Tags
+
+If you need to paste these as actual HTML anchor tags into a page:
+
+```html
+<a href="https://tee-rez.github.io/Cyberdelics-101-Web-Structure/Modules/standalone/cyberdelic-convergence.html" target="_blank">Cyberdelic Convergence</a>
+
+<a href="https://tee-rez.github.io/Cyberdelics-101-Web-Structure/Modules/standalone/cybernetic-loop.html" target="_blank">Cybernetic Loop</a>
+
+<a href="https://tee-rez.github.io/Cyberdelics-101-Web-Structure/Modules/standalone/presence-embodiment.html" target="_blank">Presence Embodiment</a>
+
+<a href="https://tee-rez.github.io/Cyberdelics-101-Web-Structure/Modules/standalone/spectrum-explorer.html" target="_blank">Spectrum Explorer</a>
+
+<a href="https://tee-rez.github.io/Cyberdelics-101-Web-Structure/Modules/standalone/tesseract-explorer.html" target="_blank">Tesseract Explorer</a>
+
+<a href="https://tee-rez.github.io/Cyberdelics-101-Web-Structure/Modules/standalone/ecosystem-map.html" target="_blank">Ecosystem Map</a>
+```
+
+## Hosted Root Level (Alternative Full Integrations)
+https://tee-rez.github.io/Cyberdelics-101-Web-Structure/CyberneticLoop.html
+https://tee-rez.github.io/Cyberdelics-101-Web-Structure/PresenceEmbodimentSim.html
