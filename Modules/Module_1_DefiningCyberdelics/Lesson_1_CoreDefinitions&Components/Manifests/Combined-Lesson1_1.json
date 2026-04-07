@@ -1,4 +1,4 @@
-﻿{
+{
     "id": "combined_lesson_1_1",
     "title": "What Cyberdelics Actually Are: From Etymology to Principle",
     "description": "A complete foundation in the definition, components, and guiding principles of cyberdelics -- from the meaning of the word itself to the technology-first, none-substance approach that defines this field.",
@@ -296,43 +296,63 @@
                         "choices": [
                             {
                                 "id": "continue",
-                                "label": "The Principles",
-                                "outcome": "principles"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "principles",
-                        "narrative": "<h3>The Principle</h3><p>'The medium is the message' is a famous phrase from media theorist Marshall McLuhan. In cyberdelics it's reversed, the technology is the medium, but consciousness exploration is the message. The tool doesn't define the purpose, the purpose defines how the tool is used.</p>",
-                        "choices": [
-                            {
-                                "id": "asking",
-                                "label": "Asking the Right Question",
-                                "outcome": "question"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "question",
-                        "narrative": "<h3>Asking the Right Question</h3><p>When evaluating any technology-based experience, ask one question: What is this designed to facilitate? Entertainment or transformation? External engagement or internal exploration? Distraction or presence? The answer to that question tells you whether you're looking at cyberdelics or something else entirely.</p>",
-                        "choices": [
-                            {
-                                "id": "final",
-                                "label": "Same Headset, Different Worlds",
-                                "outcome": "final_logic"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "final_logic",
-                        "narrative": "<h3>Same Headset, Different Worlds</h3><p>The same VR headset can transport you into a zombie shooter or into a guided journey through your own consciousness. The same biofeedback sensor can gamify productivity or reveal patterns in your meditative practice. Hardware is neutral, intention determines the category.</p>",
-                        "choices": [
-                            {
-                                "id": "quiz",
-                                "label": "Explore None-Substance Principle",
+                                "label": "Explore The Principles",
                                 "outcome": "complete"
                             }
                         ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "progressive_disclosure_1.1.3b",
+            "title": "The Medium is the Message",
+            "type": "progressive-disclosure",
+            "content": {
+                "sections": [
+                    {
+                        "title": "The Message in the Medium",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module1/medium-is-message.webp",
+                            "aiPrompt": "A glowing, ethereal VR headset floating in a dark void, with radiant light waves and sacred geometry overflowing from the lenses, representing technology as purely a vessel for consciousness, electric blue and vibrant purple, mystical and modern, 16:9 aspect ratio"
+                        },
+                        "mediaLayout": "left",
+                        "content": "<p>'The medium is the message' is a famous phrase from media theorist Marshall McLuhan. In cyberdelics it's reversed, the technology is the medium, but consciousness exploration is the message. The tool doesn't define the purpose, the purpose defines how the tool is used.</p>",
+                        "triggerLabel": "Asking the Right Question"
+                    },
+                    {
+                        "title": "Asking the Right Question",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module1/asking-right-question.webp",
+                            "aiPrompt": "A split conceptual image showing two paths extending from a futuristic interface, one path leading towards a brightly lit amusement park (entertainment), the other leading towards a serene, glowing mandala-filled meditation temple (transformation), high contrast lighting, cyberdelic aesthetic, 16:9 aspect ratio"
+                        },
+                        "mediaLayout": "right",
+                        "content": "<p>When evaluating any technology-based experience, ask one question: What is this designed to facilitate? Entertainment or transformation? External engagement or internal exploration? Distraction or presence? The answer to that question tells you whether you're looking at cyberdelics or something else entirely.</p>",
+                        "triggerLabel": "Same Headset, Different Worlds"
+                    },
+                    {
+                        "title": "Same Headset, Different Worlds",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module1/same-headset-different-worlds.webp",
+                            "aiPrompt": "A single sleek VR headset seen from the front, reflecting a chaotic neon game world in one lens and a calm, deep space nebula with geometric patterns in the second lens, emphasizing the duality of purpose, hyper-realistic, vivid colors, 16:9 aspect ratio"
+                        },
+                        "mediaLayout": "left",
+                        "content": "<p>The same VR headset can transport you into a zombie shooter or into a guided journey through your own consciousness. The same biofeedback sensor can gamify productivity or reveal patterns in your meditative practice. Hardware is neutral, intention determines the category.</p>",
+                        "triggerLabel": "Intention as the OS"
+                    },
+                    {
+                        "title": "Intention as the Operating System",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module1/intention-operating-system.webp",
+                            "aiPrompt": "An abstract representation of a human mind intersecting with a digital neural network, glowing lines of code transforming into organic glowing roots and branches, symbolizing intention overriding hardware, soft teal and gold color palette, complex and beautiful, 16:9 aspect ratio"
+                        },
+                        "mediaLayout": "right",
+                        "content": "<p>In the end, the most important software running any cyberdelic experience isn't written in code—it's the intention of both the creator and the participant. The hardware is just the vehicle. The true operating system of cyberdelics is the transformational intent.</p>",
+                        "triggerLabel": "Explore None-Substance Principle"
                     }
                 ]
             }

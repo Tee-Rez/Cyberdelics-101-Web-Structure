@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberdelics 101 - Module 1 Lesson 1</title>
+
+    <!-- GOOGLE FONTS: Font Pairings for Opening Screen -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;500&family=Oxanium:wght@400;700&family=Space+Mono&family=Sora:wght@300;600&family=Montserrat:wght@300;500&display=swap"
+        rel="stylesheet">
+
+    <!-- CORE STYLES -->
+    <link rel="stylesheet" href="../core/styles.css">
+
+    <!-- METHOD STYLES -->
+    <link rel="stylesheet" href="../methods/progressive-disclosure/progressive-disclosure.css">
+    <link rel="stylesheet" href="../methods/scenario-based/scenario-based.css">
+    <link rel="stylesheet" href="../methods/interactive-simulation/interactive-simulation.css">
+    <link rel="stylesheet" href="../methods/option-selector/option-selector.css">
+    <link rel="stylesheet" href="../methods/knowledge-construction/knowledge-construction.css">
+
+    <style>
+        body {
+            margin: 0;
+            background: #000;
+            overflow: hidden;
+            font-family: 'Rajdhani', sans-serif;
+        }
+
+        #lesson-root {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        /* Loading State Overlay */
+        #loader {
+            position: fixed;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: #03010f;
+            color: #0ff;
+            z-index: 9999;
+            transition: opacity 0.8s ease-in-out;
+            font-family: 'Orbitron', 'Rajdhani', sans-serif;
+        }
+
+        .loader-title {
+            font-size: 1.5rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+            animation: pulse-text 2s infinite ease-in-out;
+            text-align: center;
+        }
+
+        .cyber-loading-bar {
+            width: 320px;
+            max-width: 80vw;
+            height: 4px;
+            background: rgba(0, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+            border-radius: 2px;
+            margin-bottom: 1.5rem;
+        }
+
+        .cyber-loading-fill {
+            height: 100%;
+            width: 0%;
+            background: #00c9a7;
+            box-shadow: 0 0 10px #00c9a7, 0 0 20px #00c9a7;
+            animation: load-fill 1.8s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+        }
+
+        .spinner {
+            font-size: 0.8em;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            opacity: 0.5;
+            animation: pulse-text 2s infinite ease-in-out reverse;
+        }
+
+        @keyframes load-fill {
+            0% { width: 0%; transform: translateX(0%); }
+            50% { width: 100%; transform: translateX(0%); }
+            100% { width: 100%; transform: translateX(100%); }
+        }
+        
+        @keyframes pulse-text {
+            0%, 100% { opacity: 0.6; text-shadow: 0 0 8px rgba(0,255,255,0.3); }
+            50% { opacity: 1; text-shadow: 0 0 15px rgba(0,255,255,0.8); }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="loader">
+        <h2 class="loader-title">Initializing: Module 1 Lesson 1</h2>
+        <div class="cyber-loading-bar">
+            <div class="cyber-loading-fill"></div>
+        </div>
+        <div class="spinner">Synchronizing Protocols...</div>
+    </div>
+
+    <div id="lesson-root"></div>
+
+    <!-- CORE DEPENDENCIES -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="../core/method-base.js"></script>
+    <script src="../core/tutorial-overlay.js"></script>
+    <script src="../core/method-loader.js"></script>
+    <script src="../core/lesson-ui.js"></script>
+    <script src="../core/artifact-system.js"></script>
+    <script src="../core/course-core.js"></script>
+    <script src="../core/state-manager.js"></script>
+    <script src="../core/audio-player.js"></script>
+    <script src="../core/neural-background.js"></script>
+
+    <!-- METHOD FACTORIES (Include base methods needed) -->
+    <script src="../methods/progressive-disclosure/progressive-disclosure.js"></script>
+    <script src="../methods/scenario-based/scenario-based.js"></script>
+    <script src="../methods/interactive-simulation/interactive-simulation.js"></script>
+    <script src="../methods/option-selector/option-selector.js"></script>
+    <script src="../methods/knowledge-construction/knowledge-construction.js"></script>
+
+    <!-- THE ENGINE -->
+    <script src="../core/lesson-runner.js"></script>
+
+    <script>
+        (function () {
+            console.log('[Standalone Player] Booting Module 1 Lesson 1...');
+
+            // 1. Initialize Engine
+            LessonRunner.init('#lesson-root');
+
+            // 2. Initialize StateManager
+            if (window.StateManager) window.StateManager.init();
+
+            // 3. Define Loader Removal
+            const removeLoader = () => {
+                const loader = document.getElementById('loader');
+                if (loader) {
+                    loader.style.opacity = '0';
+                    setTimeout(() => loader.remove(), 500);
+                }
+            };
+
+            // 4. Fetch the specific JSON file for this lesson
+            fetch('./Module_1_DefiningCyberdelics/Lesson_1_CoreDefinitions&Components/Manifests/Combined-Lesson1_1.json')
+                .then(response => {
+                    if (!response.ok) throw new Error('Network response was not ok');
+                    return response.json();
+                })
+                .then(manifest => {
+                    removeLoader();
+                    LessonRunner.loadLesson(manifest);
+                })
+                .catch(error => {
+                    console.error('[Standalone Player] Failed to load manifest:', error);
+                    const loader = document.getElementById('loader');
+                    if (loader) {
+                        loader.innerHTML = `<h2 style="color:red">ERROR LOADING LESSON</h2><pre>${error.message}</pre>`;
+                    }
+                });
+        })();
+    </script>
+</body>
+
+</html>

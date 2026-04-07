@@ -1,420 +1,667 @@
 {
-    "id": "combined_lesson_5_1",
-    "title": "The Cyberdelic Ecosystem: Systems Thinking, Hardware, Software & Open Source",
-    "description": "Establish ecosystem thinking as the module's core lens, then examine how hardware manufacturers, software developers, and open source communities each shape the possibilities and constraints of the cyberdelic field.",
-    "framerDescription": "The field isn't a collection of products, it's a living system. This lesson installs the ecosystem lens you'll use for the rest of the module.",
+    "id": "combined_lesson_1_1",
+    "title": "What Cyberdelics Actually Are: From Etymology to Principle",
+    "description": "A complete foundation in the definition, components, and guiding principles of cyberdelics -- from the meaning of the word itself to the technology-first, none-substance approach that defines this field.",
+    "framerDescription": "This lesson takes you from the very first question -- what does the word cyberdelics even mean? -- all the way through to the core principles that make this field unique. You'll understand where the word came from, what three components must always be present, how to tell cyberdelic from non-cyberdelic use of the same hardware, and why the none-substance principle opens doors that other paths cannot reach. By the end, you'll be able to define, recognize, and evaluate cyberdelic experiences with precision.",
     "theme": {
-        "primaryColor": "#00c9a7",
+        "primaryColor": "#5900ff",
         "fontBody": "Rajdhani, sans-serif"
     },
     "modules": [
         {
-            "id": "module_5_1_1_pd",
-            "title": "Thinking in Ecosystems",
+            "id": "progressive_disclosure_1.1.1",
+            "title": "Breaking Down 'Cyberdelics'",
             "type": "progressive-disclosure",
             "content": {
                 "sections": [
                     {
-                        "title": "The Ecosystem Concept, why Isolated Product Thinking Fails",
-                        "content": "<p>In nature, an ecosystem is a community of living organisms interacting with each other and their environment. No single species exists in isolation, each depends on others.</p><p>The cyberdelic field works the same way. You could think of it as a collection of individual apps and headsets. That view is useful for picking tools. But it's dangerously incomplete for understanding <em>why</em> certain tools exist, <em>how</em> they survive, and <em>what's coming next</em>.</p><p>Isolated product thinking leads to surprises: a platform you've been recommending shuts down because its investor pulled funding. A headset you depend on gets discontinued after a corporate pivot. These aren't random events, they're ecosystem dynamics. Understanding the ecosystem means fewer surprises and better decisions.</p><p><strong>Key Takeaway:</strong> Cyberdelics is a living system, not a product catalog. Systems thinkers navigate it better than informed consumers do.</p>",
-                        "triggerLabel": "The Eight Components"
+                        "title": "A Fusion Word",
+                        "content": "<p>The word 'cyberdelics' isn't random. It's a deliberate fusion of two powerful concepts. Understanding where this word comes from helps us grasp what the field actually is. Let's break it down piece by piece.</p>",
+                        "triggerLabel": "Let's break it down"
                     },
                     {
-                        "title": "The Eight Ecosystem Components",
-                        "content": "<p>Eight interconnected components make the cyberdelic field possible:</p><ul><li><strong>Technology Providers:</strong> hardware manufacturers and software developers who build the tools the field runs on</li><li><strong>Knowledge Producers:</strong> research institutions and academics who validate effectiveness and establish safety</li><li><strong>Clinical Practitioners:</strong> therapists and healthcare professionals who bring VR tools into real patient care</li><li><strong>Facilitators &amp; Guides:</strong> non-clinical professionals who guide experiences in wellness and transformational contexts</li><li><strong>Users &amp; Communities:</strong> practitioners and peer networks who generate real-world feedback and cultural momentum</li><li><strong>Economic Infrastructure:</strong> investors, VCs, and business models that determine which ideas get resources to develop</li><li><strong>Educators &amp; Trainers:</strong> organizations and individuals who build professional competency across the field</li><li><strong>Regulatory &amp; Knowledge Sharing:</strong> government frameworks, professional associations, conferences, and publications that enable safe practice</li></ul><p>No single component is sufficient. All are necessary. The field is only as strong as its weakest interdependency.</p>",
+                        "title": "\"Cyber\" : The Digital Realm",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module5/ecosystem-web.webp",
-                            "alt": "Circular web diagram showing eight interconnected ecosystem components with energy flow lines",
-                            "aiPrompt": "A circular web diagram showing eight ecosystem component nodes connected by glowing lines with an organic, interconnected aesthetic, deep purple and teal palette with sacred geometry influence. Each node slightly glowing, lines between them suggesting active energy flow. Dark background. The feel of a living nervous system or mycelial network. 16:9 aspect ratio."
+                            "src": "../assets/images/module1/Cyber.webp",
+                            "aiPrompt": "The word CYBER in bold futuristic typography with circuit board patterns and digital nodes flowing through the letters, electric blue and white color scheme, representing technology and digital systems, clean modern design with subtle binary code in background, 16:9 aspect ratio"
                         },
-                        "triggerLabel": "Ripple Example: Hardware Launch",
-                        "mediaLayout": "right"
+                        "mediaLayout": "left",
+                        "content": "<p>'Cyber' comes from 'cybernetics,' coined by Norbert Wiener in 1948. It refers to systems of communication and control, particularly involving technology and feedback loops. In modern usage, 'cyber' represents the digital, technological, and virtual dimensions of experience. It's the realm of VR headsets, AR overlays, biofeedback devices, and human-computer interaction. The medium through which we engage the world digitally.</p>",
+                        "triggerLabel": "Next Component"
                     },
                     {
-                        "title": "Interdependency: A New Hardware Launch",
-                        "content": "<p>When Meta releases a new headset, the effects ripple outward in ways most people don't trace:</p><ul><li><strong>Technology Providers</strong> release improved hardware with new capabilities</li><li><strong>Knowledge Producers</strong> study its effectiveness for specific therapeutic applications</li><li>Findings are <strong>published</strong>, adding to the field's evidence base (Knowledge Sharing)</li><li><strong>Clinical Practitioners</strong> adopt based on published evidence</li><li><strong>Economic Infrastructure</strong>, insurers consider reimbursement as evidence accumulates</li><li><strong>Investor</strong> confidence increases as clinical adoption signals market viability</li><li><strong>Educators</strong> update curricula to include the new hardware's capabilities</li><li><strong>User Communities</strong> grow as accessibility improves</li></ul><p>The hardware launch started a chain reaction across all eight components. That's not coincidence, that's how ecosystems work.</p>",
-                        "triggerLabel": "Ripple Example: Research Breakthrough"
+                        "title": "\"Delic\" : Mind-Manifesting",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module1/delic.webp",
+                            "aiPrompt": "The word DELIC in flowing organic typography with mandala patterns, sacred geometry (Flower of Life), and radiating light waves emanating outward from the letters, purple and teal color scheme, representing consciousness and inner exploration, mystical yet modern aesthetic, 16:9 aspect ratio"
+                        },
+                        "mediaLayout": "right",
+                        "content": "<p>'Delic' comes from 'psychedelic,' which literally means 'mind-manifesting' (from Greek: psyche = mind/soul, delos = manifest/reveal). This suffix carries the essence of consciousness exploration, expanded awareness, and transformative experiences. It's about revealing what's hidden in consciousness, making the invisible visible. The goal is revelation, not hallucinations..</p>",
+                        "triggerLabel": "The Fusion"
                     },
                     {
-                        "title": "Interdependency: A Research Breakthrough",
-                        "content": "<p>In 2017, the Isness-D team published VR mystical experience results in PLOS ONE. Follow the ripple:</p><ul><li><strong>Knowledge Producers</strong> publish peer-reviewed findings on VR-induced mystical experience</li><li><strong>Media</strong> coverage increases public awareness (Knowledge Sharing)</li><li><strong>Investors</strong> see scientific validation, increase funding to consciousness tech startups (Economic Infrastructure)</li><li><strong>Software Developers</strong> create platforms exploring similar mechanisms (Technology Providers)</li><li><strong>Facilitator training programs</strong> incorporate the MEQ framework (Educators)</li><li><strong>Regulators</strong> begin engaging with mental health policy implications (Regulatory)</li><li><strong>Clinical Practitioners</strong> gain confidence to recommend VR as adjunct to therapeutic practice</li></ul><p>One piece of research reshaped multiple ecosystem components simultaneously. Understanding this is what distinguishes field builders from informed consumers.</p>",
-                        "triggerLabel": "Why This Matters for You"
+                        "title": "The Fusion",
+                        "content": "<p>When you combine 'cyber' and 'delic,' you get a field that uses digital technology (cyber) to manifest and explore consciousness (delic). Technology in service of inner revelation. The word itself tells you what the field is about: using computers and sensors as tools for mind-manifesting experiences. This wasn't accidental naming. It was a deliberate declaration of intent.</p>",
+                        "triggerLabel": "Historical Context"
                     },
                     {
-                        "title": "Why Ecosystem Thinking Matters for You",
-                        "content": "<p>The eight-component framework isn't just interesting context, it's a practical tool.</p><p>As a <strong>facilitator</strong>, it tells you how to evaluate whether a platform will still exist in two years, check investor backing, business model, clinical adoption rate, developer team size.</p><p>As a <strong>researcher</strong>, it tells you where your work can have the greatest leverage. Knowledge Producers have disproportionate downstream influence on every other component.</p><p>As an <strong>advocate or educator</strong>, it tells you which ecosystem bottlenecks are choking field development and where effort creates the most systemic change.</p><p>As a <strong>field builder</strong> of any kind, it gives you a map. Every lesson in Module 5 adds detail to one or more sections of this map. By the end, you'll be able to read ecosystem health the way an ecologist reads a forest, not just noting what's present, but understanding what it means for everything else.</p>",
-                        "triggerLabel": "Take the Quiz"
+                        "title": "Historical Context",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module1/tim-leary.webp"
+                        },
+                        "mediaLayout": "left",
+                        "content": "<p>The term 'cyberdelics' was popularized by Timothy Leary in the 1990s. Leary, known for his earlier psychedelic research, recognized that technology could serve similar consciousness-expanding purposes as substances. He foresaw a future where virtual reality and digital tools would become valid paths for inner exploration. We're now living in that future he envisioned.</p>",
+                        "triggerLabel": "Try the Simulation"
                     }
                 ]
             }
         },
         {
-            "id": "module_5_1_sim",
-            "title": "The Cyberdelic Ecosystem: Living Map",
-            "type": "interactive-simulation",
-            "content": {
-                "engine": "EcosystemMap",
-                "title": "The Cyberdelic Ecosystem",
-                "description": "Explore all eight ecosystem components. Click each node to understand its role, key players, challenge, and opportunity. Visit all eight to continue."
-            }
-        },
-        {
-            "id": "module_5_1_2_pd",
-            "title": "Hardware Manufacturers: Strategic Players",
+            "id": "progressive_disclosure_1.1.2",
+            "title": "The Three Essential Components",
             "type": "progressive-disclosure",
             "content": {
                 "sections": [
                     {
-                        "title": "Hardware Manufacturers as Ecosystem Players",
-                        "content": "<p>Hardware manufacturers in the cyberdelic space aren't just building consumer products. They are making bets about the future of computing, and those bets have profound consequences for what every developer can build and every practitioner can recommend.</p><p>When a manufacturer decides how to price hardware, what app distribution model to use, how to handle user data, or what rendering capabilities to prioritize, those decisions define the playing field for an entire field of developers. A cyberdelic platform doesn't exist in the abstract. It runs on specific hardware with specific capabilities and constraints set by a manufacturer whose primary goals may have nothing to do with consciousness exploration.</p><p><strong>Core Question:</strong> Whose strategic interests are shaping the tools we use, and what does that mean for where the field can go?</p>",
-                        "triggerLabel": "Meta's Dominance"
+                        "title": "Three Legs of the Same Stool",
+                        "content": "<p>A cyberdelic experience requires three essential components working together. Remove any one of these, and it's no longer cyberdelic. Think of them as three legs of a stool, all must be present for it to stand. This framework is your primary evaluation tool for the rest of this course.</p>",
+                        "triggerLabel": "Component 1"
                     },
                     {
-                        "title": "Meta: Dominance, Strategy, and Implications",
-                        "content": "<p>Meta controls approximately 77% of global consumer VR headset shipments as of 2024. For cyberdelic developers, this isn't a stat, it's a constraint.</p><p><strong>The subsidized hardware strategy:</strong> Meta sells Quest headsets below cost and recovers margin through the Meta Quest Store's 30% app fee. This drives adoption while creating platform dependency (developers need Meta's distribution to reach most VR users).</p><p><strong>Platform control implications:</strong> Building for Meta Quest maximizes reach. But it also means navigating Meta's content policies, accepting their revenue share, and operating within their approval processes. A consciousness app that Meta decides violates platform guidelines loses access to 77% of potential users overnight.</p><p><strong>Privacy concerns:</strong> Meta's business model is built on data collection and advertising. Users with privacy concerns face a real trade-off: the best-supported platform also has the most surveillance-adjacent business model.</p><p><strong>The bottom line:</strong> Most cyberdelic content is Quest-first by necessity, not by preference. Maximum reach requires Meta.</p>",
+                        "title": "Component 1 : Digital Technologies",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module5/meta-timeline.webp",
-                            "alt": "Graphic depicting Meta Quest hardware with a data visualization overlay showing 77% market share.",
-                            "aiPrompt": "Meta Quest hardware headset shown in soft studio lighting. Floating above or around it are clean, minimal data visualization elements (charts, glowing percentages) emphasizing a dominant 77% market share. Corporate but sleek aesthetic, representing both hardware capability and market dominance. 16:9 aspect ratio."
+                            "src": "../assets/images/module1/DigitalTechnologies.webp",
+                            "aiPrompt": "Modern VR headset (Meta Quest style), EEG headband, and HRV chest strap sensor arranged on a minimalist surface, professional product photography, soft directional lighting, tech-forward aesthetic, subtle Flower of Life sacred geometry pattern faintly visible in background, clean composition, 16:9 aspect ratio"
                         },
-                        "triggerLabel": "Apple's Legitimacy Signal",
-                        "mediaLayout": "left"
+                        "mediaLayout": "right",
+                        "content": "<p>The first component is digital technology as the medium. This includes VR headsets, AR experiences, and biofeedback devices like EEG sensors or heart rate monitors. But not just any tech use qualifies, the technology must be purposefully designed to facilitate consciousness exploration. The device is the delivery system, not the destination.</p>",
+                        "triggerLabel": "Component 2"
                     },
                     {
-                        "title": "Apple: The Legitimacy Signal",
-                        "content": "<p>Apple Vision Pro isn't trying to win the volume war. It's playing a different game.</p><p>Apple's Vision Pro launch positioned spatial computing as a premium, high-capability platform, separate from gaming-focused VR. The messaging is enterprise and productivity, not entertainment. For the cyberdelic field, this matters less as a current tool (limited consciousness-focused content exists on Vision Pro today) and more as a legitimacy signal.</p><p>When Apple enters a space, it signals maturity and cultural acceptance. The Vision Pro's existence says: spatial computing is serious, premium, and here to stay. As consciousness-focused content matures and demand from wellness and clinical markets grows, Vision Pro could become a significant platform for high-fidelity therapeutic and exploratory experiences.</p><p><strong>For facilitators:</strong> Apple's current limited cyberdelic content library makes it a poor immediate recommendation for most clients. But the platform's trajectory, premium hardware, strong privacy positioning, and enterprise credibility, points toward future relevance.</p>",
-                        "triggerLabel": "Pico & Institutional Markets"
+                        "title": "Component 2 : Altered States",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module1/meditation-comparison.webp",
+                            "aiPrompt": "Split-screen composition : person in traditional meditation pose with eyes closed on the left side, and the same person wearing a VR headset in a similar meditative pose on the right side, both surrounded by soft glowing mandala patterns and sacred geometry, ethereal purple and teal color palette, spiritual atmosphere meeting technology, sense of expanded consciousness, 16:9 aspect ratio"
+                        },
+                        "mediaLayout": "left",
+                        "content": "<p>The second component is the intentional cultivation of altered or expanded states of consciousness. This isn't accidental entertainment-induced immersion. It's a deliberate shift in awareness, whether that's deep meditative states, expanded perception, or transcendent experiences. The technology is used specifically to facilitate these states, not just to entertain or distract.</p>",
+                        "triggerLabel": "Component 3"
                     },
                     {
-                        "title": "Pico: International Alternative & Regulatory Context",
-                        "content": "<p>Pico (owned by ByteDance) is the fastest-growing international VR alternative to Meta, with particular traction in Europe and Asia.</p><p><strong>Why Pico is growing internationally:</strong> Meta faces significant regulatory resistance in the EU and other markets over data practices and privacy frameworks. ByteDance's alternative, despite its own Chinese ownership concerns, is often perceived as the lesser regulatory friction by European distributors and institutions.</p><p><strong>The privacy positioning play:</strong> Pico markets itself as a privacy-friendlier choice for institutional and clinical customers where Meta's data model creates procurement obstacles. European hospitals, university research labs, and government-funded wellness initiatives have found Pico easier to navigate from a procurement and compliance standpoint.</p><p><strong>For developers and facilitators:</strong> Pico's relative US niche status means building for it adds scope without proportional audience gain domestically. Internationally, however, it opens institutional doors that Meta can't for clinical licensing approaches.</p>",
-                        "triggerLabel": "The Shared Constraint"
+                        "title": "Component 3 : Transformational Intent",
+                        "content": "<p>The third component is transformational purpose. The experience is designed for personal growth, healing, spiritual exploration, or consciousness development. This is the 'why' behind everything. Entertainment might be enjoyable. Wellness might be beneficial. But cyberdelics aim for transformation at a deeper level : a shift in how you see yourself and the world.</p>",
+                        "triggerLabel": "All Three Required"
                     },
                     {
-                        "title": "The Shared Constraint: Hardware Capability Defines the Ceiling",
-                        "content": "<p>Every VR developer works within a ceiling set by available hardware. This is the shared constraint that unites all Technology Providers.</p><p>Display resolution determines immersion quality. Tracking precision determines interaction fidelity. Processing power determines how complex an environment can be rendered in real-time. Battery life determines session length. Comfort determines how long someone can remain present.</p><p>When Meta improves the Quest's eye tracking, new biofeedback-aware applications become possible. When Apple's chip advances spatial audio quality, presence research gets new instruments. When hardware costs drop, new populations of users become accessible.</p><p>The hardware manufacturers don't know they're building consciousness tools. But every decision they make, processor roadmaps, tracking methodologies, distribution models, and pricing tiers, constrains or expands what the cyberdelic field can do next. They are ecosystem players, not just product vendors.</p>",
-                        "triggerLabel": "Take the Quiz"
+                        "title": "All Three Required",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module1/AllThree.webp",
+                            "aiPrompt": "Three overlapping circles forming a Venn diagram, each circle labeled and colored differently : Technology in electric blue, Altered States in deep purple, Transformation in teal. Glowing bright white center where all three intersect. Clean infographic style, modern educational design, dark background, subtle sacred geometry texture in circle fill areas, 16:9 aspect ratio"
+                        },
+                        "mediaLayout": "full",
+                        "content": "<p>All three components must be present. A VR game might use technology and create immersion, but without transformational intent it's not cyberdelic. A meditation app might aim for transformation and use some tech, but without intentionally facilitating altered states through immersive technology it's not fully cyberdelic. The intersection of all three is what defines the field.</p><table style='width:100%; border-collapse:collapse; margin-top:10px; margin-bottom:16px; font-size:0.86em; text-align:left;'><thead><tr style='background:rgba(255,255,255,0.15); border-bottom:2px solid rgba(255,255,255,0.3);'><th style='padding:10px 12px; font-weight:600; letter-spacing:0.03em;'>Experience Type</th><th style='padding:10px 12px; font-weight:600; letter-spacing:0.03em;'>Digital Technology</th><th style='padding:10px 12px; font-weight:600; letter-spacing:0.03em;'>Altered States</th><th style='padding:10px 12px; font-weight:600; letter-spacing:0.03em;'>Transformational Intent</th><th style='padding:10px 12px; font-weight:600; letter-spacing:0.03em;'>Cyberdelic?</th></tr></thead><tbody><tr style='border-bottom:1px solid rgba(255,255,255,0.1); background:rgba(255,255,255,0.03);'><td style='padding:9px 12px;'><strong>VR game</strong></td><td style='padding:9px 12px;'>Yes</td><td style='padding:9px 12px;'>Sometimes</td><td style='padding:9px 12px;'>No</td><td style='padding:9px 12px;'>No</td></tr><tr style='border-bottom:1px solid rgba(255,255,255,0.1);'><td style='padding:9px 12px;'><strong>Meditation app</strong></td><td style='padding:9px 12px;'>Partial</td><td style='padding:9px 12px;'>Sometimes</td><td style='padding:9px 12px;'>Sometimes</td><td style='padding:9px 12px;'>Borderline</td></tr><tr style='background:rgba(255,255,255,0.03);'><td style='padding:9px 12px;'><strong>Cyberdelic experience</strong></td><td style='padding:9px 12px;'>Yes</td><td style='padding:9px 12px;'>Yes</td><td style='padding:9px 12px;'>Yes</td><td style='padding:9px 12px;'>Yes</td></tr></tbody></table>",
+                        "triggerLabel": "Evaluate Experiences"
                     }
                 ]
             }
         },
         {
-            "id": "module_5_1_3_pd",
-            "title": "Software Developers: The Builder Landscape",
-            "type": "progressive-disclosure",
-            "content": {
-                "sections": [
-                    {
-                        "title": "Four Categories of Software Developers",
-                        "content": "<p>Not all cyberdelic software comes from the same kind of builder. Understanding the categories reveals why the landscape looks the way it does, specifically what gets built, how it's maintained, and what you can rely on.</p><p><strong>Commercial platforms</strong> (TRIPP, Enosis, XRHealth): Sustainable teams with business accountability. Investor-backed or revenue-generating. Driven by growth metrics as much as mission. Resources for consistent updates, but face pressure to prioritize features that drive subscriptions.</p><p><strong>Research tools</strong> (Isness-D, university labs): Validation-focused, often open access. Built to prove something, not sell something. Slower polish, but high credibility and willing to experiment with radical designs.</p><p><strong>Community creators</strong> (VRChat worlds, Open Brush artists): Volunteer-driven and authentic. Built out of passion. Variable quality and consistency, but often the source of the field's most innovative experiences. Fill gaps commercial platforms don't see.</p><p><strong>Adapted platforms</strong> (Supernatural, FitXR): Gaming and fitness platforms discovering consciousness benefits in their design. Important source of cross-pollination, where transformational intent emerges from unexpected contexts.</p>",
-                        "media": {
-                            "type": "image",
-                            "src": "../assets/images/module5/developer-quadrant.webp",
-                            "alt": "Four developer categories visualized as a quadrant matrix",
-                            "aiPrompt": "A quadrant or spectrum visualizing four developer categories (Commercial, Research, Community, Adapted). Axes might be 'Mission vs. Resources' or 'Rigid vs. Experimental'. Clean, infographic aesthetic with cyberdelic color touches (teal and purple gradients). 16:9 aspect ratio."
-                        },
-                        "triggerLabel": "The Development Pipeline",
-                        "mediaLayout": "left"
-                    },
-                    {
-                        "title": "The Development Pipeline",
-                        "content": "<p>Most successful cyberdelic platforms don't emerge fully formed. They move through a recognizable pipeline:</p><ul><li><strong>Research prototype:</strong> where a lab builds something to test a hypothesis</li><li><strong>Open source release:</strong> where findings and sometimes code are shared publicly</li><li><strong>Commercial adaptation:</strong> where an entrepreneur packages the validated approach for a market</li><li><strong>Platform integration:</strong> where the application finds its home on distribution channels</li><li><strong>Clinical validation:</strong> where formal studies confirm efficacy in clinical populations</li><li><strong>Mainstream adoption:</strong> where healthcare systems, insurance, and the general public engage</li></ul><p>This pipeline explains why the field's timeline feels slow to outsiders. From hypothesis to clinical adoption typically takes 5 to 10 years. Commercially, the steps compress somewhat, yet clinical credibility still requires the research legs.</p><p>Understanding this reveals where to look for what's coming: university lab projects today are often the commercial platforms of 2028.</p>",
-                        "triggerLabel": "Business Models"
-                    },
-                    {
-                        "title": "Business Models and Their Trade-Offs",
-                        "content": "<p>How a platform makes money shapes what it builds and who it serves. The main models:</p><p><strong>Subscription (B2C):</strong> Monthly fee, consumer-facing. Accessible to individuals, but vulnerable to churn. Weakness: pressure to optimize for engagement over depth.</p><p><strong>Clinical licensing (B2B):</strong> Enterprise contracts with clinics/hospitals. More stable revenue, but longer sales cycles and institutional approval processes. Strength: aligns platform success with clinical outcomes.</p><p><strong>One-time purchase:</strong> Single payment, permanent access. Limits ongoing revenue and update incentives. More common in research tools.</p><p><strong>Freemium:</strong> Free core access with paid premium features. Maximizes top-of-funnel reach. Risks: free tier must retain users, premium tier must compel conversion.</p><p><strong>Grant-funded:</strong> University labs, nonprofit initiatives. Zero commercial pressure, yet dependent on funding cycles and not sustainable independently.</p><p>The key tension across all models: <strong>mission vs. sustainability</strong>. A platform that can't generate revenue can't keep its servers on.</p>",
-                        "triggerLabel": "The Trade-Off Map"
-                    },
-                    {
-                        "title": "The Business Model Trade-Off Map",
-                        "content": "<table style='width:100%; border-collapse:collapse; margin-top:10px; font-size:0.9em; text-align:left;'><tr style='background:rgba(255,255,255,0.1); border-bottom:1px solid rgba(255,255,255,0.2)'><th style='padding:10px;'>Model</th><th style='padding:10px;'>Access</th><th style='padding:10px;'>Revenue Stability</th><th style='padding:10px;'>Mission Alignment Risk</th></tr><tr style='border-bottom:1px solid rgba(255,255,255,0.1)'><td style='padding:10px;'>Subscription (B2C)</td><td style='padding:10px;'>High</td><td style='padding:10px;'>Medium</td><td style='padding:10px;'>Engagement optimization can drift from depth</td></tr><tr style='border-bottom:1px solid rgba(255,255,255,0.1)'><td style='padding:10px;'>Clinical licensing (B2B)</td><td style='padding:10px;'>Low</td><td style='padding:10px;'>High</td><td style='padding:10px;'>Low, as clinical outcomes are the product</td></tr><tr style='border-bottom:1px solid rgba(255,255,255,0.1)'><td style='padding:10px;'>One-time purchase</td><td style='padding:10px;'>Medium</td><td style='padding:10px;'>Low</td><td style='padding:10px;'>Low, but update incentives weaken</td></tr><tr style='border-bottom:1px solid rgba(255,255,255,0.1)'><td style='padding:10px;'>Freemium</td><td style='padding:10px;'>Very high</td><td style='padding:10px;'>Medium</td><td style='padding:10px;'>Moderate, due to premium conversion pressure</td></tr><tr style='border-bottom:1px solid rgba(255,255,255,0.1)'><td style='padding:10px;'>Grant-funded</td><td style='padding:10px;'>High</td><td style='padding:10px;'>Very low</td><td style='padding:10px;'>Very low, though not sustainable independently</td></tr></table><p style='margin-top:15px;'>No model is perfect. The most resilient platforms often combine models: clinical licensing for institutional revenue stability plus consumer subscription for mission reach.</p>",
-                        "triggerLabel": "Reading the Landscape"
-                    },
-                    {
-                        "title": "Reading the Builder Landscape",
-                        "content": "<p>Knowing who built a platform and how it's funded tells you a lot about what to expect from it.</p><p>A <strong>subscription-based commercial platform</strong> with VC funding will have polished UX, responsive customer support, and regular updates, though it may face pressure to chase engagement metrics. Evaluate it on: does it measure transformation or time-in-app?</p><p>A <strong>research-origin tool</strong> with open access will have credible mechanisms and validated protocols, but possibly rough UX and limited support. Evaluate it on: what populations was it validated with?</p><p>A <strong>community creator project</strong> will have authentic vision and cultural resonance, but variable maintenance. Evaluate it on: is the community still active? Does it serve your specific facilitation context?</p><p>This is the evaluative thinking that separates sophisticated facilitators from enthusiastic early adopters.</p>",
-                        "triggerLabel": "Apply This to a Scenario"
-                    }
-                ]
-            }
-        },
-        {
-            "id": "module_5_1_3_scenario",
-            "title": "The Builder's Dilemma",
+            "id": "scenario_1.1.3",
+            "title": "Experience Evaluation",
             "type": "scenario-based",
             "content": {
-                "title": "Advising a New Cyberdelic Creator",
                 "scenes": [
                     {
                         "id": "intro",
-                        "narrative": "<p>A colleague approaches you. She has a PhD in clinical psychology, has been running breathwork sessions for five years, and has a clear vision for a VR breathwork guidance platform, specifically one that uses binaural audio, real-time breathing feedback, and guided visualization to create genuine altered states through breath alone, no substances.</p><p>She has the clinical knowledge. She has the content. She has relationships with breathwork practitioners who would use it.</p><p><strong>What she doesn't have:</strong> software development experience, business experience, or funding. She's asking for your guidance on how to start navigating the development pipeline and business models.</p><p>Which path do you recommend she take?</p>",
+                        "narrative": "<p>You're evaluating three VR experiences to determine which qualify as cyberdelic. Same hardware, different intentions. Let's see how your understanding holds up.</p>",
                         "choices": [
                             {
-                                "id": "choice_a",
-                                "label": "Path A: Research prototype first, open source, web-based entry, grant-funded",
-                                "outcome": "outcome_a"
-                            },
-                            {
-                                "id": "choice_b",
-                                "label": "Path B: Commercial platform, proprietary, Meta Quest Store first, subscription",
-                                "outcome": "outcome_b"
-                            },
-                            {
-                                "id": "choice_c",
-                                "label": "Path C: Clinical licensing first, proprietary, partnership with an existing clinical network",
-                                "outcome": "outcome_c"
+                                "id": "start",
+                                "label": "Begin Evaluation",
+                                "outcome": "exp1"
                             }
                         ]
                     },
                     {
-                        "id": "outcome_a",
-                        "narrative": "<h3>Path A Selected: Research-First &amp; Grant-Funded</h3><p><strong>Outcome:</strong> She establishes credibility through validation. Publications give her leverage for clinical licensing down the road. Open source builds community. Web-based removes hardware barriers for initial testing. <em>The weakness: slow path to sustainability, depends heavily on grant cycles.</em></p><p><strong>Feedback:</strong> This path prioritizes mission and credibility over speed. It's strong if she has an institutional affiliation that can support grant applications and if her goal is clinical integration rather than rapid consumer adoption. The breathwork community she already has gives her a built-in validation cohort. Consider whether grant timelines match her financial runway.</p><p><strong>Reflection:</strong> <em>Which ecosystem components does this path strengthen most immediately, and which does it leave underdeveloped until later? Think about what the field gains when builders choose credibility over speed, and what it potentially loses in the meantime.</em></p>",
-                        "choices": []
+                        "id": "exp1",
+                        "narrative": "<h3>EXPERIENCE 1 : Virtual Temple Meditation</h3><p>A VR meditation environment where users sit in a virtual temple, follow guided breathwork, and practice present-moment awareness. The visuals are serene and minimal. Biofeedback adjusts the ambient lighting based on heart rate variability. The technology fades into the background as users turn attention inward.</p><p><strong>Is this cyberdelic?</strong></p>",
+                        "choices": [
+                            {
+                                "id": "exp1_a",
+                                "label": "No, because it uses technology instead of traditional meditation",
+                                "outcome": "exp1_a_out"
+                            },
+                            {
+                                "id": "exp1_b",
+                                "label": "Yes, it uses technology to facilitate altered states and transformation",
+                                "outcome": "exp1_b_out"
+                            },
+                            {
+                                "id": "exp1_c",
+                                "label": "Only if the graphics are high-resolution and photorealistic",
+                                "outcome": "exp1_c_out"
+                            }
+                        ]
                     },
                     {
-                        "id": "outcome_b",
-                        "narrative": "<h3>Path B Selected: Commercial &amp; Subscription-Based</h3><p><strong>Outcome:</strong> Fastest path to market and revenue. Maximum consumer reach. <em>But without research validation, cautious clinical practitioners won't refer clients. Without clinical referrals, subscription churn is high. Without a large development budget, polish and support are thin.</em></p><p><strong>Feedback:</strong> This path prioritizes speed and reach over credibility. Possible, but high-risk without funding. Her breathwork practitioner community may be willing to pilot-test, but wider clinical adoption requires the research path she'd be skipping. A hybrid approach, building the consumer product while doing a small validation study in parallel, could bridge the gap.</p><p><strong>Reflection:</strong> <em>What pressure does a consumer subscription model place on a platform's mission over time? Consider where a platform financially dependent on engagement metrics might drift from a platform accountable to transformation outcomes.</em></p>",
-                        "choices": []
+                        "id": "exp1_a_out",
+                        "narrative": "<p>This misunderstands what cyberdelics is. The field isn't opposed to technology; it uses technology purposefully for consciousness exploration. This experience has all three components: digital technology (VR and biofeedback), intentional altered states (meditative awareness), and transformational intent (inner exploration and development). It's cyberdelic.</p><p><em>Reflection: Technology serving consciousness exploration is exactly what cyberdelics means.</em></p>",
+                        "choices": [
+                            {
+                                "id": "next",
+                                "label": "Next Experience",
+                                "outcome": "exp2"
+                            }
+                        ]
                     },
                     {
-                        "id": "outcome_c",
-                        "narrative": "<h3>Path C Selected: B2B Clinical Licensing</h3><p><strong>Outcome:</strong> Her existing practitioner relationships become the distribution channel. The B2B model provides more stable revenue than consumer subscription. <em>But it requires significant sales effort and longer cycles. Needs enough polish for institutional approval.</em></p><p><strong>Feedback:</strong> This path fits her clinical background best. She already has the relationships and the clinical credibility, and the product just needs to meet institutional standards. The challenge is that clinical licensing requires resources for HIPAA compliance, liability documentation, and ongoing clinical support that go beyond the technical build.</p><p><strong>Reflection:</strong> <em>Of the three paths presented, which most naturally aligns with your own instincts or values? Not which one is 'right', but which one would you actually be drawn to if you were in her position, and what does that reveal about what you're optimizing for?</em></p>",
-                        "choices": []
+                        "id": "exp1_b_out",
+                        "narrative": "<p>Correct. This is a cyberdelic experience. It has all three essential components: technology as medium (VR and biofeedback), intentional cultivation of altered states (meditative awareness), and transformational purpose (consciousness exploration and inner development). The technology serves the inward journey.</p><p><em>Reflection: When technology facilitates consciousness work, that's cyberdelic.</em></p>",
+                        "choices": [
+                            {
+                                "id": "next",
+                                "label": "Next Experience",
+                                "outcome": "exp2"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "exp1_c_out",
+                        "narrative": "<p>Visual quality doesn't determine what's cyberdelic. This experience could have simple graphics and still be deeply cyberdelic because of its intention and design. What matters is the purpose: facilitating consciousness exploration, not the technical specifications of the visuals.</p><p><em>Reflection: Design intent, not technical specs, defines cyberdelic nature.</em></p>",
+                        "choices": [
+                            {
+                                "id": "next",
+                                "label": "Next Experience",
+                                "outcome": "exp2"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "exp2",
+                        "narrative": "<h3>EXPERIENCE 2 : VR Roller Coaster</h3><p>A thrilling VR roller coaster experience with loops, drops, and high-speed turns. Users experience adrenaline, excitement, and sensory intensity. The technology creates full immersion in an external adventure. Heart rate monitoring displays your excitement level as a score.</p><p><strong>Is this cyberdelic?</strong></p>",
+                        "choices": [
+                            {
+                                "id": "exp2_a",
+                                "label": "Yes, because it uses VR technology and affects consciousness",
+                                "outcome": "exp2_a_out"
+                            },
+                            {
+                                "id": "exp2_b",
+                                "label": "Yes, because biofeedback is monitoring heart rate",
+                                "outcome": "exp2_b_out"
+                            },
+                            {
+                                "id": "exp2_c",
+                                "label": "No, the purpose is entertainment rather than consciousness exploration",
+                                "outcome": "exp2_c_out"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "exp2_a_out",
+                        "narrative": "<p>Not quite. While it uses technology and creates an experience, it lacks two critical components. There's no intentional cultivation of altered states, only entertainment-induced excitement. And the purpose is external entertainment, not transformation or inner exploration. This is entertainment VR, not cyberdelic.</p><p><em>Reflection: Technology alone doesn't make something cyberdelic. Intention matters.</em></p>",
+                        "choices": [
+                            {
+                                "id": "next",
+                                "label": "Next Experience",
+                                "outcome": "exp3"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "exp2_b_out",
+                        "narrative": "<p>The presence of biofeedback sensors doesn't automatically make something cyberdelic. Here, heart rate is gamified as a score for entertainment, not used to facilitate consciousness exploration or altered states. The purpose is still external thrills, not transformational inner work.</p><p><em>Reflection: How technology is used matters more than which technologies are present.</em></p>",
+                        "choices": [
+                            {
+                                "id": "next",
+                                "label": "Next Experience",
+                                "outcome": "exp3"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "exp2_c_out",
+                        "narrative": "<p>Correct. Despite using the same VR headset and even biofeedback, this experience isn't cyberdelic. It lacks transformational intent and doesn't facilitate consciousness-exploring altered states. The technology serves entertainment and external engagement, not inner exploration. Same tools, different purpose.</p><p><em>Reflection: The medium is neutral; purpose determines whether it's cyberdelic.</em></p>",
+                        "choices": [
+                            {
+                                "id": "next",
+                                "label": "Next Experience",
+                                "outcome": "exp3"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "exp3",
+                        "narrative": "<h3>EXPERIENCE 3 : Social VR Hangout</h3><p>A VR platform where users hang out together in virtual spaces, chat, attend events, play casual games, and socialize. The technology creates presence and connection. Users feel like they're really together despite physical distance.</p><p><strong>Is this cyberdelic?</strong></p>",
+                        "choices": [
+                            {
+                                "id": "exp3_a",
+                                "label": "Yes, because connection and presence are forms of consciousness",
+                                "outcome": "exp3_a_out"
+                            },
+                            {
+                                "id": "exp3_b",
+                                "label": "No, it's designed for social connection rather than consciousness exploration",
+                                "outcome": "exp3_b_out"
+                            },
+                            {
+                                "id": "exp3_c",
+                                "label": "It depends on how self-aware users are during conversations",
+                                "outcome": "exp3_c_out"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "exp3_a_out",
+                        "narrative": "<p>While connection is valuable and VR creates meaningful presence, this experience lacks the intentional cultivation of altered states and transformational purpose that define cyberdelics. It's designed for social interaction and entertainment, not consciousness exploration or inner development. This is social VR, not cyberdelic.</p><p><em>Reflection: NNot all meaningful VR experiences are cyberdelic. Intention matters.</em></p>",
+                        "choices": [
+                            {
+                                "id": "finish",
+                                "label": "Final Reflection",
+                                "outcome": "reflection"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "exp3_b_out",
+                        "narrative": "<p>Correct. This is social VR, not cyberdelics. While valuable for connection, it lacks the transformational intent and altered state cultivation that define cyberdelic experiences. The technology facilitates external social engagement rather than internal exploration.</p><p><em>Reflection: Different VR applications serve different purposes. Not all are cyberdelic.</em></p>",
+                        "choices": [
+                            {
+                                "id": "finish",
+                                "label": "Final Reflection",
+                                "outcome": "reflection"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "exp3_c_out",
+                        "narrative": "<p>User mindfulness doesn't change the experience's design intent. This platform is designed for social entertainment, not consciousness exploration. Even if someone brings awareness to their social interactions, that doesn't make the platform itself cyberdelic. The design purpose matters more than individual user intention.</p><p><em>Reflection: Individual awareness doesn't override design intention when categorizing experiences.</em></p>",
+                        "choices": [
+                            {
+                                "id": "finish",
+                                "label": "Final Reflection",
+                                "outcome": "reflection"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "reflection",
+                        "narrative": "<p>You've now evaluated three VR experiences using the same hardware. One is cyberdelic (the meditation temple). Two are not (the roller coaster, the social hangout). The technology is neutral, what makes something cyberdelic is the purpose it serves. When technology is designed to facilitate inward exploration and transformation, that's cyberdelics.</p>",
+                        "choices": [
+                            {
+                                "id": "continue",
+                                "label": "Explore The Principles",
+                                "outcome": "complete"
+                            }
+                        ]
                     }
                 ]
             }
         },
         {
-            "id": "module_5_1_4_pd",
-            "title": "Open Source & Cross-Pollination",
+            "id": "progressive_disclosure_1.1.3b",
+            "title": "The Medium is the Message",
             "type": "progressive-disclosure",
             "content": {
                 "sections": [
                     {
-                        "title": "Major Open Source Contributions",
-                        "content": "<p>One of the most distinctive things about the cyberdelic field is how much of its foundation was built as a gift. Three tools deserve specific recognition:</p><p><strong>Open Brush:</strong> When Google abandoned Tilt Brush, the community forked it into a free, open-source VR spatial painting app. For facilitators using visual art, it became a core tool precisely because it isn't owned by anyone with a commercial interest in restricting it.</p><p><strong>OpenBCI:</strong> Professional EEG equipment used to cost $2,000 to $10,000. OpenBCI entered with open designs priced at $200 to $500. Independent researchers suddenly had access to brainwave monitoring. The neurofeedback-enhanced VR category exists largely because OpenBCI democratized the sensing layer.</p><p><strong>Mozilla Hubs:</strong> Web-based social VR requiring no headset. For community gatherings and peer-support circles, Hubs created a zero-hardware-barrier entry point with a privacy-respecting architecture.</p>",
-                        "triggerLabel": "The Gift Economy"
-                    },
-                    {
-                        "title": "The Gift Economy Philosophy",
-                        "content": "<p>Open source in the cyberdelic space isn't just a licensing choice, it's often a philosophical statement.</p><p>The gift economy perspective holds that code can be commons, that information freely shared multiplies rather than diminishes, that paying forward is the appropriate response to having received. This aligns naturally with consciousness work traditions: meditation teachings passed student-to-student, ceremonial knowledge shared within communities, harm reduction information distributed freely.</p><p>The practical implication: when you encounter an open-source tool here, there's often a community of practitioners who trust it specifically because it <em>isn't</em> owned by a profit motive. That trust is a form of community infrastructure.</p><p>The tension: gift economy tools need maintainers, and time requires sustainability. The most resilient projects have found hybrid ways to accept donations or grants to sustain the commons without closing it.</p>",
-                        "triggerLabel": "Borrowed Wisdom"
-                    },
-                    {
-                        "title": "Cross-Pollination from Adjacent Fields",
-                        "content": "<p>Cyberdelics didn't invent most of its best ideas. It borrowed them:</p><p><strong>From psychedelic therapy:</strong> Set (mindset, intention) and setting (environment, support) as dual determinants of experience quality. The preparation-experience-integration arc. The Mystical Experience Questionnaire (MEQ) for measuring transformational depth.</p><p><strong>From contemplative traditions:</strong> Mindfulness techniques and breath awareness as access tools for altered states. Teacher-student training models. Sangha (community) for peer support.</p><p><strong>From gaming:</strong> Flow state engineering, providing an optimal challenge/skill balance. Engagement design and onboarding so users aren't overwhelmed.</p><p><strong>From healthcare:</strong> Evidence-based standards for clinical credibility. Risk assessment frameworks for contraindications.</p><p><strong>From Human-Computer Interaction (HCI):</strong> UI design principles for reducing cognitive load in novel interfaces.</p>",
-                        "triggerLabel": "The Bidirectional Flow"
-                    },
-                    {
-                        "title": "The Bidirectional Flow",
-                        "content": "<p>Cyberdelics borrowed from adjacent fields. It is now beginning to give back.</p><ul><li><strong>Psychedelic therapy</strong> is using VR for preparation and integration alongside or instead of substance-based sessions.</li><li><strong>Meditation app developers</strong> are studying cyberdelic platform design for insights about deepening engagement beyond ambient music.</li><li><strong>Gaming studios</strong> are exploring consciousness-oriented design as a new content category.</li><li><strong>Healthcare researchers</strong> are using VR-induced altered states to understand consciousness itself, not just as a treatment mechanism.</li></ul><p>The field that spent a decade borrowing is now a reference point for others. That's a signal of ecosystem maturity, and an invitation for practitioners to contribute to the exchange, not just receive it.</p>",
+                        "title": "The Message in the Medium",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module5/bidirectional-flow.webp",
-                            "alt": "Diagram showing adjacent fields feeding into cyberdelics and cyberdelics feeding back",
-                            "aiPrompt": "A dynamic infographic showing 'Bidirectional Flow'. Several conceptual orbits (representing Healthcare, Gaming, Contemplative Traditions, Psychedelic Therapy) feeding energy/data streams into a central 'Cyberdelics' core, and that core radiating new energy back to the outer orbits. Clean, modern, glowing aesthetic against a dark background. 16:9 aspect ratio."
+                            "src": "../assets/images/module1/medium-is-message.webp",
+                            "aiPrompt": "A glowing, ethereal VR headset floating in a dark void, with radiant light waves and sacred geometry overflowing from the lenses, representing technology as purely a vessel for consciousness, electric blue and vibrant purple, mystical and modern, 16:9 aspect ratio"
                         },
-                        "triggerLabel": "Take the Quiz",
-                        "mediaLayout": "left"
+                        "mediaLayout": "left",
+                        "content": "<p>'The medium is the message' is a famous phrase from media theorist Marshall McLuhan. In cyberdelics it's reversed, the technology is the medium, but consciousness exploration is the message. The tool doesn't define the purpose, the purpose defines how the tool is used.</p>",
+                        "triggerLabel": "Asking the Right Question"
+                    },
+                    {
+                        "title": "Asking the Right Question",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module1/asking-right-question.webp",
+                            "aiPrompt": "A split conceptual image showing two paths extending from a futuristic interface, one path leading towards a brightly lit amusement park (entertainment), the other leading towards a serene, glowing mandala-filled meditation temple (transformation), high contrast lighting, cyberdelic aesthetic, 16:9 aspect ratio"
+                        },
+                        "mediaLayout": "right",
+                        "content": "<p>When evaluating any technology-based experience, ask one question: What is this designed to facilitate? Entertainment or transformation? External engagement or internal exploration? Distraction or presence? The answer to that question tells you whether you're looking at cyberdelics or something else entirely.</p>",
+                        "triggerLabel": "Same Headset, Different Worlds"
+                    },
+                    {
+                        "title": "Same Headset, Different Worlds",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module1/same-headset.webp",
+                            "aiPrompt": "A single sleek VR headset seen from the front, reflecting a chaotic neon game world in one lens and a calm, deep space nebula with geometric patterns in the second lens, emphasizing the duality of purpose, hyper-realistic, vivid colors, 16:9 aspect ratio"
+                        },
+                        "mediaLayout": "left",
+                        "content": "<p>The same VR headset can transport you into a zombie shooter or into a guided journey through your own consciousness. The same biofeedback sensor can gamify productivity or reveal patterns in your meditative practice. Hardware is neutral, intention determines the category.</p>",
+                        "triggerLabel": "Intention as the OS"
+                    },
+                    {
+                        "title": "Intention as the Operating System",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module1/intention-operating.webp",
+                            "aiPrompt": "An abstract representation of a human mind intersecting with a digital neural network, glowing lines of code transforming into organic glowing roots and branches, symbolizing intention overriding hardware, soft teal and gold color palette, complex and beautiful, 16:9 aspect ratio"
+                        },
+                        "mediaLayout": "right",
+                        "content": "<p>In the end, the most important software running any cyberdelic experience isn't written in code—it's the intention of both the creator and the participant. The hardware is just the vehicle. The true operating system of cyberdelics is the transformational intent.</p>",
+                        "triggerLabel": "Explore None-Substance Principle"
                     }
                 ]
             }
         },
         {
-            "id": "module_5_1_1_quiz",
-            "title": "Systems Thinking Check",
+            "id": "progressive_disclosure_1.1.4",
+            "title": "The 'None-Substance' Principle",
+            "type": "progressive-disclosure",
+            "content": {
+                "sections": [
+                    {
+                        "title": "Focus on Technology",
+                        "content": "<p>While the word 'cyberdelics' draws from 'psychedelic,' our definition specifically focuses on experiences facilitated by technology without the use of chemical substances. This isn't a judgment on substances; it's a focus on the unique possibilities of digital tools. Let's explore why this distinction matters.</p>",
+                        "triggerLabel": "Why None-Substance?"
+                    },
+                    {
+                        "title": "Reliability & Repeatability",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module1/futurecontrolknobs.webp",
+                            "aiPrompt": "Close-up of futuristic control knobs and sliders on a glowing interface, with labels like 'Dose', 'Intensity', 'Frequency', and 'Clarity', electric blue and purple lighting, representing the precision and control offered by technology-based consciousness tools, modern minimalist tech aesthetic, 16:9 aspect ratio"
+                        },
+                        "mediaLayout": "right",
+                        "content": "<p>One major advantage of technology is control. You can 'turn it off' instantly. You can adjust the intensity, duration, and specific parameters of the experience with precision. Digital tools offer a level of repeatability and safety that is difficult to achieve with biological substances. This makes them highly accessible for a wider range of people and contexts.</p>",
+                        "triggerLabel": "Next Reason"
+                    },
+                    {
+                        "title": "Wider Accessibility",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module1/accessible-tech-future.webp"
+                        },
+                        "mediaLayout": "left",
+                        "content": "<p>Cyberdelic tools can be used in many places where substances cannot : schools, workplaces, wellness centers, and homes. Because they don't involve pharmaceutical intervention, they bypass many legal, medical, and social barriers. This allows more people to explore consciousness safely and legally across different cultures and regulatory environments.</p>",
+                        "triggerLabel": "Next Reason"
+                    },
+                    {
+                        "title": "The 'Skill' of Presence",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module1/mindfulness-brain-sync.webp",
+                            "aiPrompt": "Abstract visualization of a human brain synchronized with a digital geometric pattern (like a Metatron's Cube), representing the development of mental skills through technology-aided practice, glowing teal and white energy lines, sophisticated and intelligent aesthetic, 16:9 aspect ratio"
+                        },
+                        "mediaLayout": "right",
+                        "content": "<p>Cyberdelics often focus on 'training' the mind. Instead of a substance doing the work for you, technology facilitates you doing the work yourself. Biofeedback, for example, rewards your brain for reaching specific states. This builds mental 'muscles' and skills that you can carry with you even after you take the headset off. It's an active practice, not a passive experience.</p>",
+                        "triggerLabel": "Summary"
+                    },
+                    {
+                        "title": "A Unique Path",
+                        "content": "<p>In summary, the 'none-substance' principle defines cyberdelics as a technology-first approach to consciousness exploration. It emphasizes safety, control, accessibility, and skill-building. It's not a replacement for other paths it's a unique and increasingly important field of its own, built for the digital age.</p>",
+                        "triggerLabel": "Take the Quiz"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "quiz_1.1_combined",
+            "title": "Module 1 Lesson 1 Quiz",
             "type": "option-selector",
             "config": {
                 "mode": "single",
                 "style": "text",
                 "questions": [
                     {
-                        "question": "<h3>Ecosystem Cascade</h3><p>If a major VR hardware manufacturer discontinues a popular headset, which ecosystem components are immediately affected?</p>",
+                        "question": "What does the 'cyber' in cyberdelics primarily refer to?",
                         "options": [
                             {
-                                "id": "q1_a",
-                                "label": "Only Technology Providers are affected, as it's a hardware issue.",
+                                "id": "q1_1_a",
+                                "label": "Cybersecurity and protecting digital information",
                                 "correct": false
                             },
                             {
-                                "id": "q1_b",
-                                "label": "Only Users are affected because they can no longer buy the headset.",
-                                "correct": false
-                            },
-                            {
-                                "id": "q1_c",
-                                "label": "Economic Infrastructure is the only component affected because of the financial loss.",
-                                "correct": false
-                            },
-                            {
-                                "id": "q1_d",
-                                "label": "Technology Providers, Software Developers, Facilitators, and Clinical Practitioners are all immediately affected, as developers lose a platform and practitioners lose a tool.",
+                                "id": "q1_1_b",
+                                "label": "Digital technology and virtual environments as tools for experience",
                                 "correct": true
+                            },
+                            {
+                                "id": "q1_1_c",
+                                "label": "Social media and online communication platforms",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_1_d",
+                                "label": "Artificial intelligence and machine learning systems",
+                                "correct": false
                             }
                         ],
                         "synthesis": {
-                            "q1_a": "Hardware issues rarely stay contained at the Technology Provider level. Think about what happens to all the platforms built for that headset, and all the facilitators who recommended it.",
-                            "q1_b": "Users are affected, but they're not the only ones. Who builds the software running on that hardware? Who recommends the device to clients? Multiple components feel this simultaneously.",
-                            "q1_c": "Financial effects do ripple through Economic Infrastructure, but the immediate effects land elsewhere first, developers lose a platform, facilitators lose a tool, clinicians lose a clinical option.",
-                            "q1_d": "<strong>Exactly right.</strong> A headset discontinuation immediately affects software developers who built for that platform, facilitators and clinicians who recommend it to clients, and the economic infrastructure whose business models depended on it. The hardware decision is never just a hardware decision, it's an ecosystem event."
+                            "q1_1_a": "<p>While 'cyber' is used in cybersecurity, that's not what it means in cyberdelics. Here, 'cyber' refers to the broader realm of digital technology, virtual environments, and human-computer interaction, which are the tools we use to facilitate consciousness exploration. Think cybernetics and feedback systems, not security. <strong>Try again.</strong></p>",
+                            "q1_1_c": "<p>While social media exists in the digital realm, 'cyber' in cyberdelics specifically refers to immersive and biofeedback technologies used for consciousness exploration. Social platforms are about external communication, while cyberdelics focus on internal exploration using specialized tech. <strong>Try again.</strong></p>",
+                            "q1_1_d": "<p>AI and machine learning might be tools within cyberdelic experiences, but 'cyber' here primarily refers to the immersive digital technologies (VR, AR, biofeedback) that create the environment for consciousness exploration. It's about the interface between human and technology, not autonomous intelligent systems. <strong>Try again.</strong></p>",
+                            "q1_1_b": "<p>Exactly. 'Cyber' in cyberdelics refers to the digital technological realm : VR, AR, biofeedback devices, and computer-mediated experiences. It's about using technology as the medium for consciousness work. This connects back to cybernetics, the study of communication and control systems.</p>"
                         }
                     },
                     {
-                        "question": "<h3>The Credibility Chain</h3><p>Which ecosystem component provides the scientific credibility that allows clinical practitioners to adopt new VR tools?</p>",
+                        "question": "What does 'delic' (from psychedelic) literally mean?",
                         "options": [
                             {
-                                "id": "q2_a",
-                                "label": "Economic Infrastructure, because funding drives development.",
+                                "id": "q1_2_a",
+                                "label": "Creating hallucinations or visual distortions",
                                 "correct": false
                             },
                             {
-                                "id": "q2_b",
-                                "label": "Educators & Trainers, because they teach practitioners how to use the tools.",
-                                "correct": false
-                            },
-                            {
-                                "id": "q2_c",
-                                "label": "Knowledge Producers, because peer-reviewed research establishes safety and effectiveness.",
+                                "id": "q1_2_b",
+                                "label": "Mind-manifesting or revealing consciousness",
                                 "correct": true
                             },
                             {
-                                "id": "q2_d",
-                                "label": "Technology Providers, because the tools have to exist before anyone can adopt them.",
+                                "id": "q1_2_c",
+                                "label": "Causing euphoria and pleasure",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_2_d",
+                                "label": "Altering brain chemistry through substances",
                                 "correct": false
                             }
                         ],
                         "synthesis": {
-                            "q2_a": "Funding enables development, but it doesn't provide clinical credibility. A well-funded app with no research backing still won't earn adoption from cautious clinical practitioners.",
-                            "q2_b": "Educators train practitioners to use validated tools. But they're not the ones who establish whether a tool should be used, that requires the evidence base educators then teach from.",
-                            "q2_d": "The tools obviously have to exist, but existence alone doesn't confer clinical credibility. What separates a research-validated VR protocol from a therapy app a clinician won't touch?",
-                            "q2_c": "<strong>Yes.</strong> Knowledge Producers, researchers and academic institutions, generate the peer-reviewed evidence that clinical practitioners require before integrating new tools into patient care. Without that validation, a VR application is an interesting product, not a credible intervention."
+                            "q1_2_a": "<p>This is a common misconception. 'Delic' comes from Greek words meaning 'mind-manifesting' or 'revealing the mind/soul.' It's about making consciousness visible and exploring inner dimensions, not just creating visual effects. Hallucinations might occur, but they're not the definition; revelation of consciousness is. <strong>Try again.</strong></p>",
+                            "q1_2_c": "<p>While consciousness exploration might involve pleasurable states, 'delic' doesn't mean pleasure. It means 'mind-manifesting' : revealing and exploring consciousness. The focus is on revelation and awareness expansion, not just feeling good. Transformation can be challenging, not always euphoric. <strong>Try again.</strong></p>",
+                            "q1_2_d": "<p>That's one method of creating mind-manifesting experiences (psychedelics), but 'delic' itself just means 'mind-manifesting.' It doesn't specify the method. This is exactly why cyberdelics can use the same suffix : both psychedelics and cyberdelics aim to manifest consciousness, just through different means. <strong>Try again.</strong></p>",
+                            "q1_2_b": "<p>Exactly right. 'Delic' comes from the Greek 'delos' (to manifest/reveal) and relates to 'psyche' (mind/soul). It's about revealing what's hidden in consciousness, expanding awareness, and making the invisible aspects of mind visible. This is the core of what both psychedelics and cyberdelics aim to do.</p>"
                         }
                     },
                     {
-                        "question": "<h3>The Reach Compromise</h3><p>A cyberdelic developer wants maximum reach for their new platform. Why does this almost certainly mean building for Meta Quest first, even if they have concerns about Meta's data practices?</p>",
+                        "question": "You're evaluating three different VR experiences. Which one demonstrates all three cyberdelic components?",
                         "options": [
                             {
-                                "id": "q1_a",
-                                "label": "Because Meta controls approximately 77% of consumer VR headset shipments, making it the only platform that provides access to most potential VR users.",
+                                "id": "q2_1_a",
+                                "label": "A VR fitness game that tracks heart rate and makes workouts more engaging through gamification",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_1_b",
+                                "label": "A VR meditation environment with biofeedback that adapts based on brainwave patterns, designed to facilitate deep contemplative states",
                                 "correct": true
                             },
                             {
-                                "id": "q1_b",
-                                "label": "Because Meta's content policies are more permissive for consciousness applications.",
+                                "id": "q2_1_c",
+                                "label": "A beautifully designed VR nature walk with calming music for stress relief",
                                 "correct": false
                             },
                             {
-                                "id": "q1_c",
-                                "label": "Because Meta headsets are the only ones compatible with biofeedback peripherals.",
-                                "correct": false
-                            },
-                            {
-                                "id": "q1_d",
-                                "label": "Because Meta has better graphics capabilities than all other headsets.",
+                                "id": "q2_1_d",
+                                "label": "A VR social platform where users hang out in virtual spaces and attend events together",
                                 "correct": false
                             }
                         ],
                         "synthesis": {
-                            "q1_a": "<strong>Right.</strong> Market share is the driver. Bypassing Meta means reaching a fraction of your potential audience. That mission constraint often outweighs other considerations for developers seeking widespread adoption, even ones with real concerns about Meta's data practices.",
-                            "q1_b": "Meta's content policies are actually a constraint for some consciousness applications, not an advantage. The reason to build for Meta is more fundamental.",
-                            "q1_c": "Biofeedback compatibility varies by application and headset, but it's not the primary reason Meta dominates developer decision-making.",
-                            "q1_d": "Graphics capabilities are platform-dependent but not the decisive factor here. A developer with privacy-friendly values would still choose Meta for a different reason related to audience scale."
+                            "q2_1_a": "<p>This uses technology and biofeedback, but the purpose is fitness optimization, not consciousness exploration or personal transformation. The altered state here is just elevated heart rate from exercise, not an intentional shift in awareness. Without transformational intent focused on consciousness, this is wellness tech rather than cyberdelic. <strong>Try again.</strong></p>",
+                            "q2_1_c": "<p>While this uses VR technology and might help you relax, it's missing two critical components. There's no biofeedback or intentional cultivation of altered states, only passive relaxation. And the purpose is stress relief (wellness), not consciousness exploration or transformation. Relaxation and transformation are different goals. <strong>Try again.</strong></p>",
+                            "q2_1_d": "<p>This is social VR or entertainment. While it uses immersive technology, there's no intention to facilitate altered states of consciousness or serve transformational purposes. It's designed for connection and fun, which are valuable but different from cyberdelic aims. <strong>Try again.</strong></p>",
+                            "q2_1_b": "<p>Exactly right. This has all three components: technology (VR and EEG biofeedback), altered states (deep contemplative states intentionally cultivated), and transformational intent (designed for consciousness exploration and meditation practice). All three legs of the stool are present. This is a cyberdelic experience.</p>"
                         }
                     },
                     {
-                        "question": "<h3>The Alternative Context</h3><p>Why is Pico growing internationally while remaining relatively niche in the US market?</p>",
+                        "question": "A company adds biofeedback sensors to their existing VR game. Does this automatically make it cyberdelic?",
                         "options": [
                             {
-                                "id": "q2_a",
-                                "label": "Because Pico hardware has higher resolution displays than Meta.",
+                                "id": "q2_2_a",
+                                "label": "Yes, because it now has technology and biofeedback working together",
                                 "correct": false
                             },
                             {
-                                "id": "q2_b",
-                                "label": "Because Pico is cheaper than Meta Quest in all markets.",
-                                "correct": false
-                            },
-                            {
-                                "id": "q2_c",
-                                "label": "Because Meta faces significant regulatory resistance and procurement friction in European/Asian markets around data privacy, making Pico an easier option for institutions there.",
+                                "id": "q2_2_b",
+                                "label": "No, unless the experience is redesigned to intentionally facilitate altered states and serve transformational purposes",
                                 "correct": true
                             },
                             {
-                                "id": "q2_d",
-                                "label": "Because Pico has more consciousness-focused applications in its app store.",
+                                "id": "q2_2_c",
+                                "label": "Yes, because biofeedback sensors create altered states automatically",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_2_d",
+                                "label": "It depends on whether the graphics are high quality and immersive",
                                 "correct": false
                             }
                         ],
                         "synthesis": {
-                            "q2_a": "Hardware specs are comparable between major manufacturers and aren't the primary driver of Pico's international market share.",
-                            "q2_b": "Pico's pricing is competitive but not uniformly cheaper than Meta, especially given Meta's subsidized hardware strategy.",
-                            "q2_d": "Pico doesn't have a significantly larger consciousness-focused app library than Meta. The growth is driven by regulatory and institutional context, not content differentiation.",
-                            "q2_c": "<strong>Exactly.</strong> Regulatory and procurement context drives Pico's international growth. European institutions operating under GDPR often find Meta's data collection model creates compliance obstacles. Pico's positioning as a privacy-friendlier alternative navigates that procurement friction more easily in many institutional contexts."
+                            "q2_2_a": "<p>Technology and biofeedback are necessary but not sufficient. You also need the experience to intentionally facilitate altered states AND have transformational purpose. If the game is still focused on entertainment or competition rather than consciousness exploration, adding sensors doesn't change its fundamental nature. All three components must be present. <strong>Try again.</strong></p>",
+                            "q2_2_c": "<p>Biofeedback sensors measure physiological states, but they don't automatically create altered states of consciousness. The experience design must intentionally use that data to facilitate shifts in awareness. Sensors alone are just measurement tools; they need to be part of a larger system designed for consciousness exploration. <strong>Try again.</strong></p>",
+                            "q2_2_d": "<p>Visual quality and immersion don't determine whether something is cyberdelic. You can have stunning graphics that serve entertainment, or simple visuals that facilitate deep transformation. What matters is the design intent : whether the experience is purposefully created to explore consciousness and facilitate personal growth, regardless of graphical fidelity. <strong>Try again.</strong></p>",
+                            "q2_2_b": "<p>Exactly. Simply adding biofeedback to a game doesn't make it cyberdelic. The entire experience must be designed with the intention of facilitating consciousness exploration and transformation. The technology serves the transformational purpose; it's not about the devices themselves, but how they're used and why.</p>"
                         }
                     },
                     {
-                        "question": "<h3>The Ripple of Open Hardware</h3><p>What does it mean for the cyberdelic ecosystem that OpenBCI lowered the cost of EEG equipment from $2,000+ to $200 to $500? Which ecosystem components benefit most and how?</p>",
+                        "question": "A developer wants to create a cyberdelic experience. What should they prioritize in their design?",
                         "options": [
                             {
-                                "id": "q1_a",
-                                "label": "Only Technology Providers benefit, as it's a hardware cost reduction.",
+                                "id": "q3_1_a",
+                                "label": "The highest resolution graphics and most realistic environments possible",
                                 "correct": false
                             },
                             {
-                                "id": "q1_b",
-                                "label": "Only Users benefit because they can now afford personal EEG equipment.",
-                                "correct": false
-                            },
-                            {
-                                "id": "q1_c",
-                                "label": "Economic Infrastructure benefits through lower hardware costs driving more investment.",
-                                "correct": false
-                            },
-                            {
-                                "id": "q1_d",
-                                "label": "Knowledge Producers benefit through expanded research access; Technology Providers benefit through new application categories; Facilitators benefit through affordable biofeedback integration.",
+                                "id": "q3_1_b",
+                                "label": "Facilitating inward exploration and consciousness shifts, with technology supporting that purpose",
                                 "correct": true
+                            },
+                            {
+                                "id": "q3_1_c",
+                                "label": "Making the experience as entertaining and engaging as possible to keep users coming back",
+                                "correct": false
+                            },
+                            {
+                                "id": "q3_1_d",
+                                "label": "Adding as many technological features as possible to seem cutting-edge",
+                                "correct": false
                             }
                         ],
                         "synthesis": {
-                            "q1_a": "Cost reduction in hardware originates with Technology Providers, but the effects don't stay there. Who needs affordable neurofeedback equipment most?",
-                            "q1_b": "Personal EEG use by individuals is one effect, but the largest gains were in research and facilitation contexts that previously faced institutional procurement barriers.",
-                            "q1_c": "Investment may follow expanded capability, but the immediate beneficiaries are the practitioners and researchers who could now afford equipment.",
-                            "q1_d": "<strong>Exactly right.</strong> Cost democratization in hardware ripples across multiple components. Researchers who couldn't afford institutional EEG can now run neurofeedback studies. Developers can build biofeedback-responsive platforms. Facilitators can integrate real-time brainwave monitoring into session contexts. The price drop expanded what multiple ecosystem components could do."
+                            "q3_1_a": "<p>Graphics quality doesn't determine whether something is cyberdelic. Some of the most effective consciousness exploration tools use simple visuals. What matters is whether the experience facilitates inner exploration and transformation, not how photorealistic it looks. <strong>Try again.</strong></p>",
+                            "q3_1_c": "<p>Entertainment and engagement are different from transformation. While cyberdelic experiences can be engaging, entertainment shouldn't be the primary goal. Entertainment focuses on external stimulation and distraction, while cyberdelics focus on inner exploration and presence. These are fundamentally different design intentions. <strong>Try again.</strong></p>",
+                            "q3_1_d": "<p>More technology doesn't equal more cyberdelic. You could have a simple breath-awareness experience with minimal tech that's deeply cyberdelic, or a feature-packed VR game with every sensor imaginable that's pure entertainment. Technology serves the purpose. It isn't the purpose itself. <strong>Try again.</strong></p>",
+                            "q3_1_b": "<p>Exactly right. The primary design goal should be facilitating consciousness exploration and transformation. The technology, whether VR, biofeedback, or AR, exists to serve that purpose. Start with the transformational intention, then choose the tools that best support it. This is what makes an experience cyberdelic rather than just technically impressive.</p>"
                         }
                     },
                     {
-                        "question": "<h3>Borrowed Frameworks</h3><p>Name two concepts borrowed from psychedelic therapy that cyberdelic platforms now use, and explain why they transferred so naturally.</p>",
+                        "question": "What's the key difference between a VR roller coaster and a VR meditation experience?",
                         "options": [
                             {
-                                "id": "q2_a",
-                                "label": "Clinical trial methodology and risk assessment, as VR platforms can be considered medical devices.",
+                                "id": "q3_2_a",
+                                "label": "The meditation experience is slower-paced",
                                 "correct": false
                             },
                             {
-                                "id": "q2_b",
-                                "label": "Subscription pricing and content licensing, as psychedelic therapy and VR apps share business models.",
+                                "id": "q3_2_b",
+                                "label": "The roller coaster is more immersive and engaging",
                                 "correct": false
                             },
                             {
-                                "id": "q2_c",
-                                "label": "Set and setting, and the preparation-experience-integration arc, as both fields work with altered states and require intentional context to produce beneficial outcomes.",
+                                "id": "q3_2_c",
+                                "label": "The meditation experience is designed for inward exploration, while the roller coaster is designed for external entertainment",
                                 "correct": true
                             },
                             {
-                                "id": "q2_d",
-                                "label": "Flow state optimization and UI accessibility, as therapy and game design have always overlapped.",
+                                "id": "q3_2_d",
+                                "label": "The meditation experience requires biofeedback sensors",
                                 "correct": false
                             }
                         ],
                         "synthesis": {
-                            "q2_a": "Clinical trial methodology and risk assessment come from healthcare research generally, not from psychedelic therapy specifically.",
-                            "q2_b": "Business model concepts aren't what cyberdelics borrowed from psychedelic therapy. The transfer was about guiding humans through non-ordinary states.",
-                            "q2_c": "<strong>Right.</strong> Set (mindset, intention) and setting (environment, support) transfer directly because cyberdelic experiences, like psychedelic sessions, are powerfully context-dependent. The preparation-experience-integration arc transfers because both fields recognize that the session itself is not the whole intervention; the context before and after determines if the experience becomes lasting transformation. Altered states require intentional context.",
-                            "q2_d": "Flow state optimization comes from gaming research, and accessibility principles come from HCI. Those did not originate in psychedelic therapy."
+                            "q3_2_a": "<p>Pacing alone doesn't determine what's cyberdelic. Some consciousness exploration experiences might be dynamic and fast-moving, while some entertainment experiences might be slow and contemplative. What matters is the intention behind the design : whether it's facilitating inner exploration or external entertainment. <strong>Try again.</strong></p>",
+                            "q3_2_b": "<p>Both can be equally immersive. Immersion and engagement don't determine what's cyberdelic; purpose does. A VR roller coaster creates immersion for entertainment, while VR meditation creates immersion for consciousness exploration. Both are immersive, but serve different intentions. <strong>Try again.</strong></p>",
+                            "q3_2_d": "<p>Not all cyberdelic experiences require biofeedback sensors, and not all experiences with biofeedback are cyberdelic. Sensors are one possible tool, but what makes something cyberdelic is the intention to facilitate consciousness exploration and transformation, not the specific technologies used. <strong>Try again.</strong></p>",
+                            "q3_2_c": "<p>Exactly. The fundamental difference is design intention. The meditation experience uses technology to facilitate turning attention inward and exploring consciousness. The roller coaster uses technology to create external thrills and entertainment. Same medium, different messages. This is what distinguishes cyberdelic from non-cyberdelic uses of technology.</p>"
+                        }
+                    },
+                    {
+                        "question": "Why is the 'none-substance' distinction important in cyberdelics?",
+                        "options": [
+                            {
+                                "id": "q4_1_a",
+                                "label": "Because technology is better and more powerful than substances in every way",
+                                "correct": false
+                            },
+                            {
+                                "id": "q4_1_b",
+                                "label": "Because it emphasizes safety, precision control, and wider accessibility for consciousness exploration",
+                                "correct": true
+                            },
+                            {
+                                "id": "q4_1_c",
+                                "label": "Because substances are illegal everywhere, so we have to use technology instead",
+                                "correct": false
+                            },
+                            {
+                                "id": "q4_1_d",
+                                "label": "Because substances don't actually work, while technology does",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "q4_1_a": "<p>This isn't about one being 'better' than the other. Both paths have value. Cyberdelics focuses on technology because of specific benefits it offers (like repeatability and control), not because it's trying to replace or compete with other methods. <strong>Try again.</strong></p>",
+                            "q4_1_c": "<p>Legal status varies widely around the world and isn't the primary reason for the focus on technology. The core reasons are functional : precision, safety, and the ability to build mental skills through active participation. <strong>Try again.</strong></p>",
+                            "q4_1_d": "<p>Both technology and substances have documented effects on consciousness. The 'none-substance' principle isn't about effectiveness; it's about the medium and the methodology. Cyberdelics specifically explores the potential of digital tools for this work. <strong>Try again.</strong></p>",
+                            "q4_1_b": "<p>Exactly. By focusing on technology alone, cyberdelics offers a path for consciousness exploration that is highly controllable, repeatable, and accessible to a broad audience without the medical or legal complexities of pharmaceutical substances.</p>"
+                        }
+                    },
+                    {
+                        "question": "What does it mean that cyberdelics is an 'active' practice?",
+                        "options": [
+                            {
+                                "id": "q4_2_a",
+                                "label": "You have to move around physically while using the technology",
+                                "correct": false
+                            },
+                            {
+                                "id": "q4_2_b",
+                                "label": "The technology helps you train your own mental skills (like focus or calm) rather than doing it for you",
+                                "correct": true
+                            },
+                            {
+                                "id": "q4_2_c",
+                                "label": "You have to be an expert in technology to use the tools",
+                                "correct": false
+                            },
+                            {
+                                "id": "q4_2_d",
+                                "label": "The experiences are always fast-paced and high-energy",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "q4_2_a": "<p>While some experiences might involve physical movement, 'active' in this context refers to mental engagement. It's about how you use your mind during the experience, not necessarily horizontal or vertical movement. <strong>Try again.</strong></p>",
+                            "q4_2_c": "<p>Cyberdelic tools are designed to be intuitive and accessible to everyone, regardless of technical expertise. You don't need to be a 'techie' to benefit from consciousness exploration. <strong>Try again.</strong></p>",
+                            "q4_2_d": "<p>Many cyberdelic experiences are actually very calm and slow-paced (like meditation). 'Active' refers to the mental effort and skill-building involved, not the visual or sensory intensity of the experience. <strong>Try again.</strong></p>",
+                            "q4_2_b": "<p>Precisely. Unlike pharmaceutical interventions where the effect is passive, cyberdelic tools often use biofeedback or interactive elements to help you learn how to navigate your own mind. This builds skills that you maintain after the experience is over. <strong>Quiz Complete.</strong></p>"
                         }
                     }
                 ]

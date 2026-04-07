@@ -10,6 +10,7 @@
     "modules": [
         {
             "id": "progressive_disclosure_covid_catalyst",
+            "title": "The COVID Catalyst: Accelerating Cultural Readiness",
             "type": "progressive-disclosure",
             "content": {
                 "sections": [
@@ -53,6 +54,7 @@
         },
         {
             "id": "progressive_disclosure_isness_study",
+            "title": "The Isness Study: Proving Peak Experience",
             "type": "progressive-disclosure",
             "content": {
                 "sections": [
@@ -96,6 +98,7 @@
         },
         {
             "id": "progressive_disclosure_neural_validation",
+            "title": "Neural Validation: The Brain on Cyberdelics",
             "type": "progressive-disclosure",
             "content": {
                 "sections": [
@@ -589,6 +592,7 @@
         },
         {
             "id": "completion_screen",
+            "title": "Lesson Summary: The Arc of Validation",
             "type": "progressive-disclosure",
             "content": {
                 "sections": [

@@ -135,7 +135,8 @@
 }
 
 /* ========== Italic Text Styling ========== */
-em, i {
+em,
+i {
     color: rgba(255, 255, 255, 0.95);
     font-size: 1em;
 }
@@ -186,7 +187,7 @@ body {
     /* Ensure it fills viewport or parent iframe */
     overflow: hidden;
     /* Prevent scroll */
-    box-shadow: inset 0 0 0 1px rgba(123, 92, 255, 0.2);
+    box-shadow: inset 0 0 0 4px rgba(123, 92, 255, 0.2);
 }
 
 /* ---------- Typography ---------- */
@@ -1417,7 +1418,7 @@ button.btn-continue:hover,
 }
 
 /* Flash/Pulse Highlight on Completion */
-.interaction-complete + .sim-footer .btn-continue,
+.interaction-complete+.sim-footer .btn-continue,
 .interaction-complete .btn-continue {
     border-color: var(--color-accent) !important;
     box-shadow: 0 0 25px rgba(0, 217, 255, 0.4);
@@ -1429,10 +1430,12 @@ button.btn-continue:hover,
         box-shadow: 0 0 15px rgba(0, 217, 255, 0.3);
         transform: scale(1);
     }
+
     50% {
         box-shadow: 0 0 35px rgba(0, 217, 255, 0.7);
         transform: scale(1.05);
     }
+
     100% {
         box-shadow: 0 0 15px rgba(0, 217, 255, 0.3);
         transform: scale(1);

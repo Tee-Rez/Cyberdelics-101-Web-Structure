@@ -238,7 +238,7 @@
                             "type": "image",
                             "src": "../assets/images/module2/rave_electronic.webp"
                         },
-                        "mediaLayout": "left",
+                        "mediaLayout": "right",
                         "content": "<p>Starting in late 1980s UK and spreading globally through the 1990s, rave culture created massive gatherings centered on electronic music, light shows, and collective altered states. Ravers discovered that technology could facilitate collective transcendence: electronic music as consciousness technology, lighting creating immersive sensory environments, collective energy producing shared altered states.</p><p>The principle - technology enabling transcendence - was the same as cyberdelics would later demonstrate, just through sound and light rather than VR. Rave culture also normalized the idea of seeking altered states for transformation rather than just intoxication, which mattered for how later cyberdelic communities framed their work.</p>",
                         "triggerLabel": "Burning Man"
                     },
@@ -258,7 +258,7 @@
                             "type": "image",
                             "src": "../assets/images/module2/fractal_digital.webp"
                         },
-                        "mediaLayout": "left",
+                        "mediaLayout": "right",
                         "content": "<p>The 1990s saw an explosion of computer-generated art exploring consciousness themes. Fractal art revealed infinite mathematical complexity resembling psychedelic visions: Mandelbrot sets and Julia sets producing imagery that looked uncannily similar to what people described seeing on psychedelics. Early VR art like Char Davies' Osmose (1995) created contemplative spaces with breathing-controlled navigation.</p><p>Artists discovered that algorithms could produce imagery comparable to mystical geometric visions. This established a crucial cultural proof: technology could serve artistic and spiritual expression, not just calculation and commerce. It expanded who saw cyberdelics as relevant to them.</p>",
                         "triggerLabel": "Ready for Convergence"
                     },
@@ -269,7 +269,7 @@
                             "src": "../assets/images/module2/culture_convergence.webp",
                             "alt": "Four streams of culture converging into one larger Cyberdelic Culture river"
                         },
-                        "mediaLayout": "right",
+                        "mediaLayout": "left",
                         "content": "<p>These movements didn't create cyberdelics. But they prepared the cultural ground in four ways.</p><ul><li><strong>Imagination:</strong> They made tech-consciousness fusion imaginable before it was achievable.</li><li><strong>Community:</strong> They created communities already oriented toward exploration and transformation.</li><li><strong>Language:</strong> They established shared language: cyberspace, metaverse, reality hacking, digital shamanism.</li><li><strong>Demand:</strong> They demonstrated demand: millions of people were seeking exactly what cyberdelics would eventually offer.</li></ul><p>When VR was reborn in the 2010s, it entered a culture that had been imagining and preparing for this for 30 years. The soil was prepared; technology finally arrived to plant seeds.</p>",
                         "triggerLabel": "Explore the Map"
                     }
