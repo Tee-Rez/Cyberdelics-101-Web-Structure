@@ -1,8 +1,8 @@
 {
     "id": "combined_lesson_4_3",
     "title": "Social VR & the Creator Ecosystem: Amplification, Platforms & Quality",
-    "description": "Understand why social VR amplifies consciousness work, how to match users to the right social contexts, and how to evaluate creators and content quality -- including the pipeline from creation tools to distribution channels.",
-    "framerDescription": "Cyberdelics doesn't have to be a solo journey. This lesson maps the social and creator layer of the field -- who's building what, and how to evaluate whether it's worth recommending.",
+    "description": "Understand why social VR amplifies consciousness work, how to match users to the right social contexts, and how to evaluate creators and content quality, including the pipeline from creation tools to distribution channels.",
+    "framerDescription": "Cyberdelics doesn't have to be a solo journey. This lesson maps the social and creator layer of the field, who's building what, and how to evaluate whether it's worth recommending.",
     "theme": {
         "primaryColor": "#00d9ff",
         "fontBody": "Rajdhani, sans-serif"
@@ -21,7 +21,7 @@
                             "src": "../assets/images/module4/group-meditation.webp"
                         },
                         "mediaLayout": "left",
-                        "content": "<p><strong>Social Facilitation Theory</strong> was first documented by psychologist Norman Triplett in 1898. He noticed that cyclists raced faster when competing against others than when alone. The presence of others heightens arousal, enhancing performance on well-learned tasks and amplifying experience intensity.</p><p>In consciousness work, this translates to deeper engagement. When meditating alone, there's no external accountability. In a group - even a virtual one - you feel a subtle pressure to stay present and honor the collective container.</p><p><strong>Practical Implication:</strong> Group sessions often produce states of focus and depth that solo practice doesn't reliably access. Humans practice better together.</p>",
+                        "content": "<p><strong>Social Facilitation Theory</strong> was first documented by psychologist Norman Triplett in 1898. He noticed that cyclists raced faster when competing against others than when alone. The presence of others heightens arousal, enhancing performance on well-learned tasks and amplifying experience intensity.</p><p>In consciousness work, this translates to deeper engagement. When meditating alone, there's no external accountability. In a group - even a virtual one - you feel a subtle pressure to stay present and honor the collective container.</p><p><strong>Practical Implication.</strong> Group sessions often produce states of focus and depth that solo practice doesn't reliably access. Humans practice better together.</p>",
                         "triggerLabel": "Collective Effervescence"
                     },
                     {
@@ -31,12 +31,12 @@
                     },
                     {
                         "title": "Mirror Neuron Activation",
-                        "content": "<p><strong>Mirror neurons</strong> fire both when you perform an action and when you observe someone else doing it. They are the basis for empathy and emotional contagion.</p><p>In VR, these systems remain active even when observing avatars. When you see another avatar sit in meditation or breathe rhythmically, your brain mirrors that pattern. This creates <strong>sympathetic resonance</strong> - the group's state influences each individual, creating an upward spiral of depth and calm.</p><p><strong>Practical Implication:</strong> Facilitators must manage the group field, not just individuals, because the presence of others actively shapes the experience.</p>",
+                        "content": "<p><strong>Mirror neurons</strong> fire both when you perform an action and when you observe someone else doing it. They are the basis for empathy and emotional contagion.</p><p>In VR, these systems remain active even when observing avatars. When you see another avatar sit in meditation or breathe rhythmically, your brain mirrors that pattern. This creates <strong>sympathetic resonance</strong> - the group's state influences each individual, creating an upward spiral of depth and calm.</p><p><strong>Practical Implication.</strong> Facilitators must manage the group field, not just individuals, because the presence of others actively shapes the experience.</p>",
                         "triggerLabel": "Isolation Reduction"
                     },
                     {
                         "title": "Isolation Reduction",
-                        "content": "<p><strong>Isolation Reduction</strong> is clinically significant. Chronic loneliness carries health risks comparable to smoking 15 cigarettes a day. Traditional support groups have barriers (transportation, anxiety), but VR reduces these.</p><p>You can join a VR circle from your bedroom or hospital bed. For populations with chronic illness, disabilities, or social anxiety, this access is transformative. It's not just technology; it's connection.</p><p><strong>Practical Implication:</strong> For therapeutic populations, the social dimension may matter as much as the content. Recommending platforms like Innerworld is recommending connection itself.</p>",
+                        "content": "<p><strong>Isolation Reduction</strong> is clinically significant. Chronic loneliness carries health risks comparable to smoking 15 cigarettes a day. Traditional support groups have barriers (transportation, anxiety), but VR reduces these.</p><p>You can join a VR circle from your bedroom or hospital bed. For populations with chronic illness, disabilities, or social anxiety, this access is transformative. It's not just technology; it's connection.</p><p><strong>Practical Implication.</strong> For therapeutic populations, the social dimension may matter as much as the content. Recommending platforms like Innerworld is recommending connection itself.</p>",
                         "triggerLabel": "Continue to Platforms"
                     }
                 ]
@@ -50,7 +50,7 @@
                 "sections": [
                     {
                         "title": "Isness-D - Validated Mystical Experience",
-                        "content": "<p><strong>Isness-D</strong> is a group VR platform designed by researcher David Glowacki to produce collective effervescence through synchronized ritual. Rather than humanoid avatars, participants appear to each other as abstract energy forms, which reduces self-consciousness and loosens ordinary social identity enough for genuine boundary dissolution to occur.</p><p>A 2020 peer-reviewed study measured participants using the MEQ-30, the same validated scale used in psychedelic research, and found scores comparable to moderate doses of psilocybin. That finding matters: it is the most direct scientific evidence that a VR environment, without any substance, can facilitate genuine mystical-type states in a group.</p><ul><li><strong>Limitation:</strong> Isness-D remains a research platform. It is not available for independent consumer use. When it appears in your recommendations, it functions as a reference point for what this category can produce, not as something you can book a session in today.</li></ul>",
+                        "content": "<p><strong>Isness-D</strong> is a group VR platform designed by researcher David Glowacki to produce collective effervescence through synchronized ritual. Rather than humanoid avatars, participants appear to each other as abstract energy forms, which reduces self-consciousness and loosens ordinary social identity enough for genuine boundary dissolution to occur.</p><p>A 2020 peer-reviewed study measured participants using the MEQ-30, the same validated scale used in psychedelic research, and found scores comparable to moderate doses of psilocybin. That finding matters. it is the most direct scientific evidence that a VR environment, without any substance, can facilitate genuine mystical-type states in a group.</p><ul><li><strong>Limitation:</strong> Isness-D remains a research platform. It is not available for independent consumer use. When it appears in your recommendations, it functions as a reference point for what this category can produce, not as something you can book a session in today.</li></ul>",
                         "media": {
                             "type": "image",
                             "src": "../assets/images/module4/isness.webp",
@@ -62,7 +62,7 @@
                     },
                     {
                         "title": "aNUma XR - The Accessible Group Journey",
-                        "content": "<p><strong>aNUma XR</strong> by Numadelics Lab occupies the space Isness-D points toward but can't yet fill publicly: a facilitated group VR journey that anyone with a Meta Quest headset can actually access today.</p><p>The design philosophy is deliberate restraint. The visuals are minimal and strikingly spare. The weight of the experience is carried by the soundscape and the guide, whose role is central rather than incidental. Sessions run 60 minutes and are booked through anuma.com. Participants have reported states including deep meditative stillness, ego dissolution, transcendental awareness, and out-of-body sensations.</p><ul><li><strong>Platform:</strong> Meta Quest 2 and 3. Free.</li><li><strong>Format:</strong> Expert-facilitated group session. Not a drop-in experience.</li><li><strong>Best for:</strong> Clients ready for depth work who need a structured, guided container and don't yet have access to retreat or clinical settings.</li><li><strong>Limitation:</strong> Sessions must be booked in advance. This is not on-demand solo content.</li></ul>",
+                        "content": "<p><strong>aNUma XR</strong> by Numadelics Lab occupies the space Isness-D points toward but can't yet fill publicly. a facilitated group VR journey that anyone with a Meta Quest headset can actually access today.</p><p>The design philosophy is deliberate restraint. The visuals are minimal and strikingly spare. The weight of the experience is carried by the soundscape and the guide, whose role is central rather than incidental. Sessions run 60 minutes and are booked through anuma.com. Participants have reported states including deep meditative stillness, ego dissolution, transcendental awareness, and out-of-body sensations.</p><ul><li><strong>Platform:</strong> Meta Quest 2 and 3. Free.</li><li><strong>Format:</strong> Expert-facilitated group session. Not a drop-in experience.</li><li><strong>Best for:</strong> Clients ready for depth work who need a structured, guided container and don't yet have access to retreat or clinical settings.</li><li><strong>Limitation:</strong> Sessions must be booked in advance. This is not on-demand solo content.</li></ul>",
                         "media": {
                             "type": "image",
                             "src": "../assets/images/module4/anuma.webp",
@@ -74,7 +74,7 @@
                     },
                     {
                         "title": "Innerworld - Peer Mental Health",
-                        "content": "<p><strong>Innerworld</strong> (now part of XRHealth) centers on peer support. Guides are community members with lived experience, not clinicians.</p><p>That distinction defines both its strength and its limit. The strength is authentic connection: someone who has been through grief, addiction, or anxiety and comes out the other side carries a kind of credibility no credential provides. The limit is that peer guides are not equipped for acute crisis, and the quality of any given session depends on who is in the room that day.</p><p>Innerworld sits in a real gap between wellness apps and clinical care. For clients who need connection more than instruction, and who are stable enough for peer support rather than professional intervention, it is often the most precisely matched recommendation in the social VR category.</p>",
+                        "content": "<p><strong>Innerworld</strong> (now part of XRHealth) centers on peer support. Guides are community members with lived experience, not clinicians.</p><p>That distinction defines both its strength and its limit. The strength is authentic connection. someone who has been through grief, addiction, or anxiety and comes out the other side carries a kind of credibility no credential provides. The limit is that peer guides are not equipped for acute crisis, and the quality of any given session depends on who is in the room that day.</p><p>Innerworld sits in a real gap between wellness apps and clinical care. For clients who need connection more than instruction, and who are stable enough for peer support rather than professional intervention, it is often the most precisely matched recommendation in the social VR category.</p>",
                         "media": {
                             "type": "image",
                             "src": "../assets/images/module4/innerworld-circle.webp",
@@ -106,7 +106,7 @@
                     },
                     {
                         "id": "ava_profile",
-                        "narrative": "<h3>Profile: Ava (33)</h3><p><strong>Context:</strong> Introverted, socially anxious. Has practiced solo VR meditation for 6 months.<br><strong>Need:</strong> 'I crave connection but large groups make me panic. I need structure and I need to know what I'm walking into.'</p>",
+                        "narrative": "<h3>Profile. Ava (33)</h3><p><strong>Context.</strong> Introverted, socially anxious. Has practiced solo VR meditation for 6 months.<br><strong>Need.</strong> 'I crave connection but large groups make me panic. I need structure and I need to know what I'm walking into.'</p>",
                         "choices": [
                             {
                                 "id": "a_isness",
@@ -127,7 +127,7 @@
                     },
                     {
                         "id": "ava_optimal",
-                        "narrative": "<h3>Optimal: aNUma XR</h3><p>'aNUma XR runs facilitated group sessions with a skilled guide setting the container before anyone enters. You'll know exactly what the session involves, the group is intentional, and you can book it in advance so there are no surprises. Your six months of solo practice has prepared you for this.'</p><p><strong>Why:</strong> Expert facilitation, a defined container, and advance booking directly address Ava's need for structure and predictability in a group setting.</p>",
+                        "narrative": "<h3>Optimal. aNUma XR</h3><p>'aNUma XR runs facilitated group sessions with a skilled guide setting the container before anyone enters. You'll know exactly what the session involves, the group is intentional, and you can book it in advance so there are no surprises. Your six months of solo practice has prepared you for this.'</p><p><strong>Why.</strong> Expert facilitation, a defined container, and advance booking directly address Ava's need for structure and predictability in a group setting.</p>",
                         "choices": [
                             {
                                 "id": "next_ben",
@@ -160,7 +160,7 @@
                     },
                     {
                         "id": "ben_profile",
-                        "narrative": "<h3>Profile: Ben (19)</h3><p><strong>Context:</strong> CS student, psychonaut. Bored by wellness apps.<br><strong>Need:</strong> 'I want something that can actually shift my state. Something with real depth, not just pretty visuals.'</p>",
+                        "narrative": "<h3>Profile. Ben (19)</h3><p><strong>Context.</strong> CS student, psychonaut. Bored by wellness apps.<br><strong>Need.</strong> 'I want something that can actually shift my state. Something with real depth, not just pretty visuals.'</p>",
                         "choices": [
                             {
                                 "id": "b_isness",
@@ -181,7 +181,7 @@
                     },
                     {
                         "id": "ben_optimal",
-                        "narrative": "<h3>Optimal: aNUma XR</h3><p>'Isness-D is the research benchmark for what you're describing, but it's not publicly available. aNUma XR is the closest accessible equivalent: expert-facilitated, 60 minutes, designed explicitly for depth work and altered states in a group container. Go in with an open intention and no expectations about what it will look like.'</p><p><strong>Why:</strong> Ben needs genuine depth, not distraction. aNUma XR's facilitated format and orientation toward ego dissolution and transcendental states is precisely matched to what he's asking for, and it's something he can actually book.</p>",
+                        "narrative": "<h3>Optimal. aNUma XR</h3><p>'Isness-D is the research benchmark for what you're describing, but it's not publicly available. aNUma XR is the closest accessible equivalent. expert-facilitated, 60 minutes, designed explicitly for depth work and altered states in a group container. Go in with an open intention and no expectations about what it will look like.'</p><p><strong>Why.</strong> Ben needs genuine depth, not distraction. aNUma XR's facilitated format and orientation toward ego dissolution and transcendental states is precisely matched to what he's asking for, and it's something he can actually book.</p>",
                         "choices": [
                             {
                                 "id": "next_carmen",
@@ -214,7 +214,7 @@
                     },
                     {
                         "id": "carmen_profile",
-                        "narrative": "<h3>Profile: Carmen (56)</h3><p><strong>Context:</strong> Recently widowed, grieving. Not tech-savvy. Fearful of what she might encounter online.<br><strong>Need:</strong> 'I need people who understand loss. And I need someone to help me get set up. The technology intimidates me.'</p>",
+                        "narrative": "<h3>Profile. Carmen (56)</h3><p><strong>Context.</strong> Recently widowed, grieving. Not tech-savvy. Fearful of what she might encounter online.<br><strong>Need.</strong> 'I need people who understand loss. And I need someone to help me get set up. The technology intimidates me.'</p>",
                         "choices": [
                             {
                                 "id": "c_isness",
@@ -235,7 +235,7 @@
                     },
                     {
                         "id": "carmen_optimal",
-                        "narrative": "<h3>Optimal: Innerworld</h3><p>'Innerworld has peer grief groups led by guides who have experienced loss themselves. That shared lived experience is something no facilitated session can replicate. And on the tech front: let's schedule a session together before your first group so you walk in feeling prepared, not overwhelmed.'</p><p><strong>Why:</strong> Carmen needs peer connection around a specific lived experience, not a general depth session. Innerworld's grief-specific groups and its peer model match her need precisely. The tech barrier is solved through practical support, not by avoiding VR.</p>",
+                        "narrative": "<h3>Optimal. Innerworld</h3><p>'Innerworld has peer grief groups led by guides who have experienced loss themselves. That shared lived experience is something no facilitated session can replicate. And on the tech front. let's schedule a session together before your first group so you walk in feeling prepared, not overwhelmed.'</p><p><strong>Why.</strong> Carmen needs peer connection around a specific lived experience, not a general depth session. Innerworld's grief-specific groups and its peer model match her need precisely. The tech barrier is solved through practical support, not by avoiding VR.</p>",
                         "choices": [
                             {
                                 "id": "finish",
@@ -257,7 +257,7 @@
                     },
                     {
                         "id": "carmen_bad_anuma",
-                        "narrative": "<h3>Close, but Not the Right Container</h3><p>aNUma XR is a strong facilitated experience, but it is designed for contemplative depth work in a general group context. Carmen needs connection around a specific experience: grief. Innerworld's peer model, where guides share lived experience with loss, is the more precise match for what she's actually asking for.</p>",
+                        "narrative": "<h3>Close, but Not the Right Container</h3><p>aNUma XR is a strong facilitated experience, but it is designed for contemplative depth work in a general group context. Carmen needs connection around a specific experience. grief. Innerworld's peer model, where guides share lived experience with loss, is the more precise match for what she's actually asking for.</p>",
                         "choices": [
                             {
                                 "id": "retry_c_a",
@@ -268,7 +268,7 @@
                     },
                     {
                         "id": "reflection",
-                        "narrative": "<h3>Facilitation Reflection</h3><p>Three people. Three needs. Three different matches — and the same small platform set.</p><p>Ava needed structure and predictability in a group container. Ben needed genuine depth — the kind that solo wellness apps can't produce. Carmen needed connection around a specific human experience, not a general consciousness journey.</p><p>What the scenario actually tested wasn't your platform knowledge. It was your ability to <em>read the person first</em> and let the platform choice follow from that reading.</p><p><strong>Before you continue:</strong> What signal in each profile made the correct recommendation obvious once you saw it? Naming that signal is how you build pattern recognition for future clients.</p>",
+                        "narrative": "<h3>Facilitation Reflection</h3><p>Three people. Three needs. Three different matches, and the same small platform set.</p><p>Ava needed structure and predictability in a group container. Ben needed genuine depth, the kind that solo wellness apps can't produce. Carmen needed connection around a specific human experience, not a general consciousness journey.</p><p>What the scenario actually tested wasn't your platform knowledge. It was your ability to <em>read the person first</em> and let the platform choice follow from that reading.</p><p><strong>Before you continue.</strong> What signal in each profile made the correct recommendation obvious once you saw it? Naming that signal is how you build pattern recognition for future clients.</p>",
                         "choices": [
                             {
                                 "id": "to_quiz",
@@ -416,7 +416,7 @@
                             "q2_a": "<p>Isness-D is a research platform and not publicly available. Beyond that, its orientation toward ego dissolution and altered states is the opposite of what this client said they need right now.</p>",
                             "q2_b": "<p>aNUma XR is a strong facilitated experience, but 60 minutes of guided depth work oriented toward altered states is exactly what this client said they aren't ready for. The session format doesn't match the stated readiness level.</p>",
                             "q2_d": "<p>The phrasing 'not ready for anything too intense' is a meaningful signal. aNUma XR's depth orientation makes it a mismatch for someone who has already named that boundary. When a client sets a limit, the recommendation should honor it precisely.</p>",
-                            "q2_c": "<p><strong>Correct!</strong> Innerworld's peer support model matches both signals: the need for connection around a shared human experience, and the explicit request for something that doesn't push into intensity. It meets the client where they are.</p>"
+                            "q2_c": "<p><strong>Correct!</strong> Innerworld's peer support model matches both signals. the need for connection around a shared human experience, and the explicit request for something that doesn't push into intensity. It meets the client where they are.</p>"
                         }
                     },
                     {

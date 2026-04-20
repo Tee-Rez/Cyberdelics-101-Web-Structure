@@ -1,8 +1,8 @@
 {
     "id": "combined_lesson_1_3",
     "title": "Entertainment vs. Cyberdelics: Direction of Attention & Design Dimensions",
-    "description": "Understand exactly what separates generic VR from cyberdelic VR -- from the direction of attention principle to the six design dimensions that define every intentional cyberdelic experience.",
-    "framerDescription": "The same headset. Two completely different kinds of experience. This lesson shows you how to tell them apart -- and how to think like a designer when you do.",
+    "description": "Understand exactly what separates generic VR from cyberdelic VR, from the direction of attention principle to the six design dimensions that define every intentional cyberdelic experience.",
+    "framerDescription": "The same headset. Two completely different kinds of experience. This lesson shows you how to tell them apart, and how to think like a designer when you do.",
     "theme": {
         "primaryColor": "#00d9ff",
         "fontBody": "Rajdhani, sans-serif"
@@ -33,12 +33,12 @@
                     },
                     {
                         "title": "Entertainment Questions",
-                        "content": "<p>Entertainment VR asks: <em>'What can I do in this world?'</em> or <em>'How do I win?'</em> It focuses on agency within a simulation. The goal is often distraction or thrill, moving away from your current state into a fictional one.</p>",
+                        "content": "<p>Entertainment VR asks. <em>'What can I do in this world?'</em> or <em>'How do I win?'</em> It focuses on agency within a simulation. The goal is often distraction or thrill, moving away from your current state into a fictional one.</p>",
                         "triggerLabel": "Cyberdelic Questions"
                     },
                     {
                         "title": "Cyberdelic Questions",
-                        "content": "<p>Cyberdelic VR asks: <em>'What am I feeling right now?'</em> or <em>'How is my awareness changing?'</em> It focuses on self-observation. The goal is presence, moving toward a deeper understanding of your own consciousness through the technological interface.</p>",
+                        "content": "<p>Cyberdelic VR asks. <em>'What am I feeling right now?'</em> or <em>'How is my awareness changing?'</em> It focuses on self-observation. The goal is presence, moving toward a deeper understanding of your own consciousness through the technological interface.</p>",
                         "triggerLabel": "The Different Needs"
                     },
                     {
@@ -68,7 +68,7 @@
                     },
                     {
                         "id": "zombie_bash",
-                        "narrative": "<h3>Experience A - 'Neon Strike'</h3><p><strong>Persona: The Action Gamer (Reviewer)</strong></p><p>A high-speed rhythm game where you dodge obstacles and hit targets to a pulsing soundtrack. You are constantly monitoring your health bar and multiplier score.</p>",
+                        "narrative": "<h3>Experience A - 'Neon Strike'</h3><p><strong>Persona. The Action Gamer (Reviewer)</strong></p><p>A high-speed rhythm game where you dodge obstacles and hit targets to a pulsing soundtrack. You are constantly monitoring your health bar and multiplier score.</p>",
                         "choices": [
                             {
                                 "id": "pure_ent",
@@ -106,7 +106,7 @@
                     },
                     {
                         "id": "breath_viz",
-                        "narrative": "<h3>Experience B - 'Lumen Breath'</h3><p><strong>Persona: The Meditator (Reviewer)</strong></p><p>A serene environment where a glowing nebula expands and contracts in sync with your actual breathing, captured via a chest strap or controller movement. There are no scores or levels, only the visualization of your internal rhythm.</p>",
+                        "narrative": "<h3>Experience B - 'Lumen Breath'</h3><p><strong>Persona. The Meditator (Reviewer)</strong></p><p>A serene environment where a glowing nebula expands and contracts in sync with your actual breathing, captured via a chest strap or controller movement. There are no scores or levels, only the visualization of your internal rhythm.</p>",
                         "choices": [
                             {
                                 "id": "cyber_pure",
@@ -144,7 +144,7 @@
                     },
                     {
                         "id": "mountain_climb",
-                        "narrative": "<h3>Experience C - 'Zenith Reach'</h3><p><strong>Persona: The Explorer (Reviewer)</strong></p><p>A photorealistic mountain climbing simulation. You feel the physical strain of the climb, but the goal is to reach the summit to unlock a cinematic view of the horizon.</p>",
+                        "narrative": "<h3>Experience C - 'Zenith Reach'</h3><p><strong>Persona. The Explorer (Reviewer)</strong></p><p>A photorealistic mountain climbing simulation. You feel the physical strain of the climb, but the goal is to reach the summit to unlock a cinematic view of the horizon.</p>",
                         "choices": [
                             {
                                 "id": "ent_mountain",
@@ -182,7 +182,7 @@
                     },
                     {
                         "id": "reflection",
-                        "narrative": "<h3>Reflection</h3><p>Across all three experiences, the deciding factor was never the visuals, the hardware, or even the intensity of the environment. The deciding factor was always the <em>direction of attention</em>. Entertainment pulls you outward into goals, scores, and fictional worlds. Cyberdelics use technology as a mirror — turning your awareness back toward your own inner state, breath, and consciousness.</p><p>Neon Strike engaged you externally. Lumen Breath made your biology visible to you. Zenith Reach aimed for an achievement. The same headset, three entirely different psychological orientations. That distinction is the foundation of cyberdelic design thinking.</p>",
+                        "narrative": "<h3>Reflection</h3><p>Across all three experiences, the deciding factor was never the visuals, the hardware, or even the intensity of the environment. The deciding factor was always the <em>direction of attention</em>. Entertainment pulls you outward into goals, scores, and fictional worlds. Cyberdelics use technology as a mirror, turning your awareness back toward your own inner state, breath, and consciousness.</p><p>Neon Strike engaged you externally. Lumen Breath made your biology visible to you. Zenith Reach aimed for an achievement. The same headset, three entirely different psychological orientations. That distinction is the foundation of cyberdelic design thinking.</p>",
                         "choices": [
                             {
                                 "id": "continue",

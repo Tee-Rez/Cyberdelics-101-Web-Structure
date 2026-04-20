@@ -65,8 +65,8 @@ exception.
 -   Never use em dashes (\--) in any content. Replace with a period,
     comma, or rewrite the sentence.
 
--   Never use bullet points inside Progressive Disclosure panels or
-    scenario narratives. Write in prose.
+-   Never use colon's (:), unless its following a bullet point. 
+    replace with a period, comma, or rewrite the sentence.
 
 -   Never use headers inside a panel or scenario. Structure should come
     from the writing, not from visual hierarchy within a single
@@ -413,23 +413,8 @@ withholding.
 -   Do not write more than 120 words per panel. If a concept requires
     more space, break it into two panels with distinct angles.
 
-**3.2 Mini-Lesson Descriptions (Framer Text)**
 
-These paragraphs appear before embedded components and set the
-learner\'s purpose for engaging. Write them as if you are speaking
-directly to someone who just asked: \'What am I about to learn and why
-should I care?\'
-
--   Three to five sentences. No more.
-
--   Answer the purpose question in sentence one or two.
-
--   End with something that makes the learner want to begin, not a
-    summary of what they will learn, but a reason to engage with it.
-
--   Do not use the phrase \'you will learn\' or \'in this mini-lesson.\'
-
-**3.3 Scenario Narratives**
+**3.2 Scenario Narratives**
 
 Scenarios put the learner in a decision moment. The situation should
 feel realistic enough that the learner draws on actual judgment, not
@@ -448,7 +433,7 @@ just content recall.
 -   Feedback on correct answers should add something the learner did not
     already know, not just confirm they were right.
 
-**3.4 Quiz Questions**
+**3.3 Quiz Questions**
 
 Scenario-based questions are stronger than factual recall questions at
 every level of the course. When a factual question is necessary, embed
@@ -463,18 +448,6 @@ it in a situation where the fact matters.
 -   Question stems should be clear on first read. If a learner re-reads
     to understand the question, the stem needs revision.
 
-**3.5 Knowledge Construction**
-
-These drag-and-drop activities should represent genuine synthesis, not
-categorization of things already explicitly labeled. The learner should
-be doing something with their knowledge, not just recognizing it.
-
--   Completion messages should feel like genuine acknowledgment of the
-    work done, not a trophy for clicking correctly.
-
--   Distractor items should be plausible enough that the learner thinks
-    about them. If the distractors are too obviously wrong, the exercise
-    has no intellectual value.
 
 **Part 4: Quick Reference**
 

@@ -1,8 +1,8 @@
 {
     "id": "combined_lesson_1_2",
     "title": "Psychedelics & Cyberdelics: Shared Ground, Different Paths",
-    "description": "A full examination of the relationship between psychedelics and cyberdelics -- from the territory they share to the practical differences that matter, and how they function as complementary rather than competing approaches.",
-    "framerDescription": "These two fields share more than most people realize -- and differ in ways that actually matter when you're guiding someone. This lesson builds that understanding in three stages: first, what they share; next, where they diverge; finally, how to use both as a practitioner. You'll finish ready to advise real situations that require you to know which path fits.",
+    "description": "A full examination of the relationship between psychedelics and cyberdelics, from the territory they share to the practical differences that matter, and how they function as complementary rather than competing approaches.",
+    "framerDescription": "These two fields share more than most people realize, and differ in ways that actually matter when you're guiding someone. This lesson builds that understanding in three stages. first, what they share; next, where they diverge; finally, how to use both as a practitioner. You'll finish ready to advise real situations that require you to know which path fits.",
     "theme": {
         "primaryColor": "#5900ff",
         "fontBody": "Rajdhani, sans-serif"
@@ -26,7 +26,7 @@
                             "src": "../assets/images/module1/shared-intention.webp"
                         },
                         "mediaLayout": "left",
-                        "content": "<p>Both psychedelics and cyberdelics exist for the same fundamental purpose: facilitating consciousness exploration, personal transformation, and spiritual development. Whether using substances or technology, the underlying intention is identical, to expand awareness, facilitate healing, and support personal growth. Purpose is the foundation both fields share.</p>",
+                        "content": "<p>Both psychedelics and cyberdelics exist for the same fundamental purpose. facilitating consciousness exploration, personal transformation, and spiritual development. Whether using substances or technology, the underlying intention is identical, to expand awareness, facilitate healing, and support personal growth. Purpose is the foundation both fields share.</p>",
                         "triggerLabel": "Shared Outcomes"
                     },
                     {
@@ -61,7 +61,7 @@
                     },
                     {
                         "id": "client1",
-                        "narrative": "<h3>CLIENT 1: Medical Considerations</h3><p>Someone reaches out wanting to explore consciousness for healing and personal growth. They have a heart condition and take blood pressure medication. They're concerned about safety but deeply motivated to begin this work.</p><p><strong>What would you recommend?</strong></p>",
+                        "narrative": "<h3>CLIENT 1. Medical Considerations</h3><p>Someone reaches out wanting to explore consciousness for healing and personal growth. They have a heart condition and take blood pressure medication. They're concerned about safety but deeply motivated to begin this work.</p><p><strong>What would you recommend?</strong></p>",
                         "choices": [
                             {
                                 "id": "c1_a",
@@ -82,7 +82,7 @@
                     },
                     {
                         "id": "c1_unsafe",
-                        "narrative": "<h3>Medical Danger</h3><p>This isn't safe. The medical contraindications are real, psychedelics can interact with heart medications and affect cardiovascular function. Recommending this approach without medical clearance could cause serious harm. This is exactly the situation where cyberdelics offer a safer alternative path.</p><p><em>Reflection: Medical considerations matter. When substances pose risks, cyberdelics provide an accessible and safe alternative.</em></p>",
+                        "narrative": "<h3>Medical Danger</h3><p>This isn't safe. The medical contraindications are real, psychedelics can interact with heart medications and affect cardiovascular function. Recommending this approach without medical clearance could cause serious harm. This is exactly the situation where cyberdelics offer a safer alternative path.</p><p><em>Reflection. Medical considerations matter. When substances pose risks, cyberdelics provide an accessible and safe alternative.</em></p>",
                         "choices": [
                             {
                                 "id": "retry",
@@ -93,7 +93,7 @@
                     },
                     {
                         "id": "c1_limiting",
-                        "narrative": "<h3>Unnecessary Limitation</h3><p>This unnecessarily limits their options. While traditional psychedelics may not be appropriate, cyberdelics offer a valid alternative path. There's no reason to exclude someone from consciousness exploration when safer technological approaches exist.</p><p><em>Reflection: The emergence of cyberdelics means more people can access this work safely. No one should be turned away without exploring alternatives.</em></p>",
+                        "narrative": "<h3>Unnecessary Limitation</h3><p>This unnecessarily limits their options. While traditional psychedelics may not be appropriate, cyberdelics offer a valid alternative path. There's no reason to exclude someone from consciousness exploration when safer technological approaches exist.</p><p><em>Reflection. The emergence of cyberdelics means more people can access this work safely. No one should be turned away without exploring alternatives.</em></p>",
                         "choices": [
                             {
                                 "id": "retry",
@@ -104,7 +104,7 @@
                     },
                     {
                         "id": "c1_correct",
-                        "narrative": "<h3>Appropriate Recommendation</h3><p>This is the appropriate recommendation. Cyberdelic approaches don't involve chemical metabolism or cardiovascular effects from substances. They can facilitate deep consciousness exploration and transformation safely for someone with heart conditions.</p><p><em>Reflection: Different circumstances call for different tools. This is exactly where cyberdelics expand access to consciousness work.</em></p>",
+                        "narrative": "<h3>Appropriate Recommendation</h3><p>This is the appropriate recommendation. Cyberdelic approaches don't involve chemical metabolism or cardiovascular effects from substances. They can facilitate deep consciousness exploration and transformation safely for someone with heart conditions.</p><p><em>Reflection. Different circumstances call for different tools. This is exactly where cyberdelics expand access to consciousness work.</em></p>",
                         "choices": [
                             {
                                 "id": "next",
@@ -115,7 +115,7 @@
                     },
                     {
                         "id": "client2",
-                        "narrative": "<h3>CLIENT 2: Intensive Healing Work</h3><p>Someone seeks support for deep trauma work. They have no medical contraindications, access to legal psychedelic therapy, and are looking for the most intensive catalytic approach available. They're prepared for challenging experiences.</p><p><strong>What would you recommend?</strong></p>",
+                        "narrative": "<h3>CLIENT 2. Intensive Healing Work</h3><p>Someone seeks support for deep trauma work. They have no medical contraindications, access to legal psychedelic therapy, and are looking for the most intensive catalytic approach available. They're prepared for challenging experiences.</p><p><strong>What would you recommend?</strong></p>",
                         "choices": [
                             {
                                 "id": "c2_a",
@@ -136,7 +136,7 @@
                     },
                     {
                         "id": "c2_limiting",
-                        "narrative": "<h3>Limiting Options</h3><p>While cyberdelics could certainly help, you may be limiting their options unnecessarily. With no contraindications and access to legal psychedelic therapy, they have the full toolkit available. For intensive trauma work, psychedelic-assisted therapy has extensive research support and may offer the catalytic depth they're seeking.</p><p><em>Reflection: When all options are available, consider what best serves the specific goal, not what's most accessible by default.</em></p>",
+                        "narrative": "<h3>Limiting Options</h3><p>While cyberdelics could certainly help, you may be limiting their options unnecessarily. With no contraindications and access to legal psychedelic therapy, they have the full toolkit available. For intensive trauma work, psychedelic-assisted therapy has extensive research support and may offer the catalytic depth they're seeking.</p><p><em>Reflection. When all options are available, consider what best serves the specific goal, not what's most accessible by default.</em></p>",
                         "choices": [
                             {
                                 "id": "retry",
@@ -147,7 +147,7 @@
                     },
                     {
                         "id": "c2_correct",
-                        "narrative": "<h3>Strong Match</h3><p>This is a strong recommendation given their circumstances. With no contraindications, legal access, and a desire for intensive work, psychedelic therapy is well-suited to their needs. context pointed clearly here.</p><p><em>Reflection: Both approaches are valid. Context is what determines the recommendation, not preference for one path over the other.</em></p>",
+                        "narrative": "<h3>Strong Match</h3><p>This is a strong recommendation given their circumstances. With no contraindications, legal access, and a desire for intensive work, psychedelic therapy is well-suited to their needs. context pointed clearly here.</p><p><em>Reflection. Both approaches are valid. Context is what determines the recommendation, not preference for one path over the other.</em></p>",
                         "choices": [
                             {
                                 "id": "next",
@@ -158,7 +158,7 @@
                     },
                     {
                         "id": "c2_combined",
-                        "narrative": "<h3>Synergistic Approach</h3><p>This could work exceptionally well. They could use psychedelic sessions for intensive catalytic work, with cyberdelic sessions supporting integration and ongoing practice between major sessions. Many people find value in combining approaches strategically, one for depth, one for continuity.</p><p><em>Reflection: The complementary relationship means both can be used together, not just chosen between.</em></p>",
+                        "narrative": "<h3>Synergistic Approach</h3><p>This could work exceptionally well. They could use psychedelic sessions for intensive catalytic work, with cyberdelic sessions supporting integration and ongoing practice between major sessions. Many people find value in combining approaches strategically, one for depth, one for continuity.</p><p><em>Reflection. The complementary relationship means both can be used together, not just chosen between.</em></p>",
                         "choices": [
                             {
                                 "id": "next",
@@ -169,7 +169,7 @@
                     },
                     {
                         "id": "client3",
-                        "narrative": "<h3>CLIENT 3: Regular Practice</h3><p>Someone wants to establish a regular consciousness exploration practice alongside their existing meditation routine. They're interested in technology, want frequent sessions (weekly), and prefer experiences they can adjust in real-time.</p><p><strong>What would you recommend?</strong></p>",
+                        "narrative": "<h3>CLIENT 3. Regular Practice</h3><p>Someone wants to establish a regular consciousness exploration practice alongside their existing meditation routine. They're interested in technology, want frequent sessions (weekly), and prefer experiences they can adjust in real-time.</p><p><strong>What would you recommend?</strong></p>",
                         "choices": [
                             {
                                 "id": "c3_a",
@@ -190,7 +190,7 @@
                     },
                     {
                         "id": "c3_impractical",
-                        "narrative": "<h3>Impractical Choice</h3><p>This isn't practical or advisable. Psychedelics develop tolerance with frequent use, and weekly sessions would likely diminish in effectiveness. Additionally, the intensity and duration make them poorly suited to regular frequent practice.</p><p><em>Reflection: Frequency and control considerations matter when choosing between approaches.</em></p>",
+                        "narrative": "<h3>Impractical Choice</h3><p>This isn't practical or advisable. Psychedelics develop tolerance with frequent use, and weekly sessions would likely diminish in effectiveness. Additionally, the intensity and duration make them poorly suited to regular frequent practice.</p><p><em>Reflection. Frequency and control considerations matter when choosing between approaches.</em></p>",
                         "choices": [
                             {
                                 "id": "retry",
@@ -201,7 +201,7 @@
                     },
                     {
                         "id": "c3_alignment",
-                        "narrative": "<h3>Alignment Issue</h3><p>While microdosing could support regular practice, it doesn't address their interest in immersive experiences they can adjust in real-time. Given their specific preferences, technology, control, and frequent immersive sessions, cyberdelics are more directly aligned.</p><p><em>Reflection: Listen to what someone actually wants and needs, not just what might technically work in a general sense.</em></p>",
+                        "narrative": "<h3>Alignment Issue</h3><p>While microdosing could support regular practice, it doesn't address their interest in immersive experiences they can adjust in real-time. Given their specific preferences, technology, control, and frequent immersive sessions, cyberdelics are more directly aligned.</p><p><em>Reflection. Listen to what someone actually wants and needs, not just what might technically work in a general sense.</em></p>",
                         "choices": [
                             {
                                 "id": "retry",
@@ -212,7 +212,7 @@
                     },
                     {
                         "id": "c3_correct",
-                        "narrative": "<h3>Perfect Alignment</h3><p>This aligns perfectly with their needs. Cyberdelics don't involve tolerance issues, can be done frequently, offer real-time adjustability, and integrate naturally with existing practice.</p><p><em>Reflection: Different use cases call for different tools. Regular, repeatable practice is where cyberdelics particularly shine.</em></p>",
+                        "narrative": "<h3>Perfect Alignment</h3><p>This aligns perfectly with their needs. Cyberdelics don't involve tolerance issues, can be done frequently, offer real-time adjustability, and integrate naturally with existing practice.</p><p><em>Reflection. Different use cases call for different tools. Regular, repeatable practice is where cyberdelics particularly shine.</em></p>",
                         "choices": [
                             {
                                 "id": "finish",
@@ -234,7 +234,7 @@
                     },
                     {
                         "id": "reflection",
-                        "narrative": "<h3>Reflection</h3><p>Three consultations, three different right answers. No path was universally superior — what mattered in every case was <em>fit</em>. When substances pose medical risks, cyberdelics open a door. When intensive catalytic work is the goal and all options are available, psychedelics may be ideal. When frequency, control, and repeatability matter most, cyberdelics are unmatched.</p><p>The practitioner's skill lies not in preferring one path but in accurately reading which tool serves the person, the moment, and the goal. Complementary doesn't just mean both exist — it means knowing exactly when to use each.</p>",
+                        "narrative": "<h3>Reflection</h3><p>Three consultations, three different right answers. No path was universally superior, what mattered in every case was <em>fit</em>. When substances pose medical risks, cyberdelics open a door. When intensive catalytic work is the goal and all options are available, psychedelics may be ideal. When frequency, control, and repeatability matter most, cyberdelics are unmatched.</p><p>The practitioner's skill lies not in preferring one path but in accurately reading which tool serves the person, the moment, and the goal. Complementary doesn't just mean both exist, it means knowing exactly when to use each.</p>",
                         "choices": [
                             {
                                 "id": "continue",
@@ -264,7 +264,7 @@
                     },
                     {
                         "title": "Expanding Access",
-                        "content": "<p>Cyberdelics make consciousness exploration accessible to people who couldn't access it through substances : those with medical contraindications, those in locations where psychedelics remain illegal, those who prefer technological approaches, and those seeking more frequent practice. This expansion of access benefits the entire field.</p>",
+                        "content": "<p>Cyberdelics make consciousness exploration accessible to people who couldn't access it through substances . those with medical contraindications, those in locations where psychedelics remain illegal, those who prefer technological approaches, and those seeking more frequent practice. This expansion of access benefits the entire field.</p>",
                         "triggerLabel": "Personal Choice"
                     },
                     {
@@ -373,7 +373,7 @@
                             "q2_1_a": "<p>Intention is actually what they share, not what differs. Both psychedelics and cyberdelics exist to facilitate consciousness exploration and personal transformation. What differs is the method, substances versus technology. The purpose aligns even as the path diverges. <strong>Try again.</strong></p>",
                             "q2_1_c": "<p>Both approaches can facilitate mystical experiences, this is what they share, not what differs. Research shows that properly designed cyberdelic experiences can produce mystical states comparable to psychedelics. What differs is how those states are achieved, not whether they're possible. <strong>Try again.</strong></p>",
                             "q2_1_d": "<p>Integration is important for both approaches. Whether you've had a profound experience through substances or technology, processing and meaning-making afterward is valuable. This is a shared characteristic, not a difference. What differs is the method, not the need for integration. <strong>Try again.</strong></p>",
-                            "q2_1_b": "<h3>Correct!</h3><p>Exactly. The primary difference is the method: psychedelics use chemical substances to alter consciousness, while cyberdelics use digital technology. This methodological difference creates various practical distinctions in legality, safety profiles, and control, but the core transformational intention remains the same.</p>"
+                            "q2_1_b": "<h3>Correct!</h3><p>Exactly. The primary difference is the method. psychedelics use chemical substances to alter consciousness, while cyberdelics use digital technology. This methodological difference creates various practical distinctions in legality, safety profiles, and control, but the core transformational intention remains the same.</p>"
                         }
                     },
                     {
@@ -404,7 +404,7 @@
                             "q2_2_a": "<p>Neither approach is universally more powerful or effective, they're different tools for different contexts. The choice isn't about one being objectively better. It's about what works for a particular person's situation, needs, medical considerations, and preferences. <strong>Try again.</strong></p>",
                             "q2_2_c": "<p>Neither method is inherently more or less spiritual. Spirituality emerges from intention and experience, not from the medium used. Some people find deep spiritual connection through substances, others through technology, many through both. The medium doesn't determine spiritual validity. <strong>Try again.</strong></p>",
                             "q2_2_d": "<p>While cyberdelics have different safety considerations than psychedelics, consciousness exploration through any method involves psychological and emotional challenges. Cyberdelics aren't risk-free, they're differently safe. The choice should be about finding the appropriate method for one's situation, not about avoiding challenge entirely. <strong>Try again.</strong></p>",
-                            "q2_2_b": "<h3>Quiz Complete!</h3><p>Exactly. People might choose cyberdelics for various valid reasons : health conditions that contraindicate substances, legal restrictions in their location, preference for repeatable and controllable experiences, or simply genuine resonance with technological approaches. Different paths serve different needs and contexts. <strong>Quiz Complete.</strong></p>"
+                            "q2_2_b": "<h3>Quiz Complete!</h3><p>Exactly. People might choose cyberdelics for various valid reasons . health conditions that contraindicate substances, legal restrictions in their location, preference for repeatable and controllable experiences, or simply genuine resonance with technological approaches. Different paths serve different needs and contexts. <strong>Quiz Complete.</strong></p>"
                         }
                     }
                 ]

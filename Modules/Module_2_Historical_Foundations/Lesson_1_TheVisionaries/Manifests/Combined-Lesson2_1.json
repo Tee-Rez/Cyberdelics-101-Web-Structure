@@ -1,7 +1,7 @@
 {
     "id": "combined_lesson_2_1",
     "title": "The Visionaries: Leary, the Pioneers & the Culture That Made It Possible",
-    "description": "Meet the visionaries who imagined the cyberdelic future before it existed -- from Timothy Leary's digital prophecy to the VR pioneers who built the foundation, and the cultural movements that prepared the soil.",
+    "description": "Meet the visionaries who imagined the cyberdelic future before it existed, from Timothy Leary's digital prophecy to the VR pioneers who built the foundation, and the cultural movements that prepared the soil.",
     "framerDescription": "Before there was an industry, there were people who looked at the technology of their era and saw something nobody else did. This lesson introduces three groups of visionaries who made today's cyberdelic field possible.",
     "theme": {
         "primaryColor": "#5900ff",
@@ -16,7 +16,7 @@
                 "sections": [
                     {
                         "title": "The Evolution Nobody Knows About",
-                        "content": "<p>Most people know Timothy Leary for his 1960s psychedelic research at Harvard. But by the 1990s, Leary had completely evolved his thinking. He became fascinated by personal computers and virtual reality, seeing in them the potential to achieve what psychedelics promised - consciousness expansion, reality hacking, liberation from consensus limitations - but through digital means.</p><p>He didn't abandon his earlier work. He extended it. The question driving both phases of his career was the same: how do humans access deeper levels of awareness? The medium changed; the mission didn't.</p>",
+                        "content": "<p>Most people know Timothy Leary for his 1960s psychedelic research at Harvard. But by the 1990s, Leary had completely evolved his thinking. He became fascinated by personal computers and virtual reality, seeing in them the potential to achieve what psychedelics promised - consciousness expansion, reality hacking, liberation from consensus limitations - but through digital means.</p><p>He didn't abandon his earlier work. He extended it. The question driving both phases of his career was the same. how do humans access deeper levels of awareness? The medium changed; the mission didn't.</p>",
                         "media": {
                             "type": "image",
                             "src": "../assets/images/module2/TimLeary1960-2020.webp"
@@ -31,7 +31,7 @@
                             "src": "../assets/images/module2/leary_prophecy.webp"
                         },
                         "mediaLayout": "left",
-                        "content": "<p>In 1994, Leary made his most prescient prediction: \"The PC is the LSD of the 1990s.\" Think about what this meant. He was declaring that personal computers would become tools for consciousness exploration comparable to psychedelic substances.</p><p>In 1994, VR was primitive, consumer internet was brand new, there were no smartphones. Yet Leary saw where it was heading. He wasn't predicting better productivity software. He was predicting a new category of consciousness technology, something that would let people explore inner space the way psychedelics did, but without the legal and physiological complexity of substances.</p>",
+                        "content": "<p>In 1994, Leary made his most prescient prediction. \"The PC is the LSD of the 1990s.\" Think about what this meant. He was declaring that personal computers would become tools for consciousness exploration comparable to psychedelic substances.</p><p>In 1994, VR was primitive, consumer internet was brand new, there were no smartphones. Yet Leary saw where it was heading. He wasn't predicting better productivity software. He was predicting a new category of consciousness technology, something that would let people explore inner space the way psychedelics did, but without the legal and physiological complexity of substances.</p>",
                         "triggerLabel": "Key Concepts"
                     },
                     {
@@ -51,7 +51,7 @@
                             "src": "../assets/images/module2/vision_growth.webp"
                         },
                         "mediaLayout": "left",
-                        "content": "<p>Leary died in 1996, decades before seeing his vision validated. The technology he imagined took 20-30 more years to mature. Research proving VR could produce mystical experiences wouldn't emerge until 2020. But he got the essential insight right: technology could serve consciousness exploration and transformation, not just entertainment or productivity.</p><p>This matters for how you understand the field's history. The gap between his prediction and its proof wasn't evidence that he was wrong. It was evidence that visionary ideas routinely precede the technology required to demonstrate them.</p>",
+                        "content": "<p>Leary died in 1996, decades before seeing his vision validated. The technology he imagined took 20-30 more years to mature. Research proving VR could produce mystical experiences wouldn't emerge until 2020. But he got the essential insight right. technology could serve consciousness exploration and transformation, not just entertainment or productivity.</p><p>This matters for how you understand the field's history. The gap between his prediction and its proof wasn't evidence that he was wrong. It was evidence that visionary ideas routinely precede the technology required to demonstrate them.</p>",
                         "triggerLabel": "His Legacy"
                     },
                     {
@@ -75,7 +75,7 @@
                 "scenes": [
                     {
                         "id": "start",
-                        "narrative": "<h3>1995 Tech Conference</h3><p>It's 1995. You're at a technology conference where Timothy Leary is presenting. Most attendees are skeptical: VR has failed commercially, and this former psychedelic advocate is making bold claims about computers becoming consciousness tools.</p><p><strong>How do you react to Leary's vision?</strong></p>",
+                        "narrative": "<h3>1995 Tech Conference</h3><p>It's 1995. You're at a technology conference where Timothy Leary is presenting. Most attendees are skeptical. VR has failed commercially, and this former psychedelic advocate is making bold claims about computers becoming consciousness tools.</p><p><strong>How do you react to Leary's vision?</strong></p>",
                         "choices": [
                             {
                                 "id": "choice_a",
@@ -96,7 +96,7 @@
                     },
                     {
                         "id": "outcome_a",
-                        "narrative": "<h3>Outcome: Dismiss the vision</h3><p>You join the majority of tech industry professionals in 1995 who dismissed Leary's vision. VR headsets are clunky and cause motion sickness. The idea of mystical experiences through computers seems absurd. You write it off as the rambling of someone stuck in the psychedelic era.</p><p>Fast forward to 2020: The Isness VR study validates exactly what Leary predicted - VR producing mystical experiences comparable to psychedelics. You realize you witnessed prophecy but mistook it for fantasy.</p><p><em>Reflection: Vision often looks like delusion until technology catches up. The question isn't whether the vision is crazy: it's whether the timing is right.</em></p>",
+                        "narrative": "<h3>Outcome. Dismiss the vision</h3><p>You join the majority of tech industry professionals in 1995 who dismissed Leary's vision. VR headsets are clunky and cause motion sickness. The idea of mystical experiences through computers seems absurd. You write it off as the rambling of someone stuck in the psychedelic era.</p><p>Fast forward to 2020. The Isness VR study validates exactly what Leary predicted - VR producing mystical experiences comparable to psychedelics. You realize you witnessed prophecy but mistook it for fantasy.</p><p><em>Reflection. Vision often looks like delusion until technology catches up. The question isn't whether the vision is crazy. it's whether the timing is right.</em></p>",
                         "choices": [
                             {
                                 "id": "next",
@@ -107,7 +107,7 @@
                     },
                     {
                         "id": "outcome_b",
-                        "narrative": "<h3>Outcome: Right vision, wrong timing</h3><p>You understand what Leary is pointing toward - the potential for technology to facilitate consciousness work. But looking at current VR technology (heavy headsets, low resolution, limited computing power), you think it's at least 20-30 years away.</p><p>You're exactly right. Leary's vision was correct, but the timeline was off by 25+ years. The technology needed smartphones to improve displays, gaming to advance GPUs, and neuroscience to validate mechanisms. Sometimes being right about direction is different from being right about when.</p><p><em>Reflection: Great visions require patience. The gap between seeing possibility and achieving viability can span decades.</em></p>",
+                        "narrative": "<h3>Outcome. Right vision, wrong timing</h3><p>You understand what Leary is pointing toward - the potential for technology to facilitate consciousness work. But looking at current VR technology (heavy headsets, low resolution, limited computing power), you think it's at least 20-30 years away.</p><p>You're exactly right. Leary's vision was correct, but the timeline was off by 25+ years. The technology needed smartphones to improve displays, gaming to advance GPUs, and neuroscience to validate mechanisms. Sometimes being right about direction is different from being right about when.</p><p><em>Reflection. Great visions require patience. The gap between seeing possibility and achieving viability can span decades.</em></p>",
                         "choices": [
                             {
                                 "id": "next",
@@ -118,7 +118,7 @@
                     },
                     {
                         "id": "outcome_c",
-                        "narrative": "<h3>Outcome: Commit to the vision</h3><p>Leary's talk ignites your imagination. Despite primitive technology, you begin exploring how computers might facilitate consciousness work. You spend the next 20 years in academic labs, meditation tech startups, and VR experiments, often dismissed as fringe.</p><p>By 2020, when breakthrough research validates the vision, you're already an established expert. You were one of the few who kept working during the \"wilderness years\" when everyone else had moved on. Your persistence made the validation possible.</p><p><em>Reflection: Someone has to keep the vision alive during the gap between prophecy and proof. Early believers enable later breakthroughs.</em></p>",
+                        "narrative": "<h3>Outcome. Commit to the vision</h3><p>Leary's talk ignites your imagination. Despite primitive technology, you begin exploring how computers might facilitate consciousness work. You spend the next 20 years in academic labs, meditation tech startups, and VR experiments, often dismissed as fringe.</p><p>By 2020, when breakthrough research validates the vision, you're already an established expert. You were one of the few who kept working during the \"wilderness years\" when everyone else had moved on. Your persistence made the validation possible.</p><p><em>Reflection. Someone has to keep the vision alive during the gap between prophecy and proof. Early believers enable later breakthroughs.</em></p>",
                         "choices": [
                             {
                                 "id": "next",
@@ -129,7 +129,7 @@
                     },
                     {
                         "id": "quiz_intro",
-                        "narrative": "<h3>Scenario Complete</h3><p>History reveals Leary was prescient, not deluded. But in 1995, with the technology not yet ready, it was impossible to know for certain. The lesson holds across every emerging field : visionary ideas routinely require decades before technology enables them. Distinguishing vision from fantasy in real time requires both imagination and patience.</p>",
+                        "narrative": "<h3>Scenario Complete</h3><p>History reveals Leary was prescient, not deluded. But in 1995, with the technology not yet ready, it was impossible to know for certain. The lesson holds across every emerging field . visionary ideas routinely require decades before technology enables them. Distinguishing vision from fantasy in real time requires both imagination and patience.</p>",
                         "choices": [
                             {
                                 "id": "finish_scenario",
@@ -140,7 +140,7 @@
                     },
                     {
                         "id": "reflection",
-                        "narrative": "<h3>Reflection</h3><p>All three paths through 1995 led to the same truth: Leary's vision was real, but only those who held onto it — or who remained open to recognizing <em>when</em> it arrived — were positioned to participate in its validation. The dismissers missed the inflection point. The cautious hedgers bridged both worlds. The full believers built the foundations others would stand on.</p><p>This is the lesson of every field that matures across decades: the gap between vision and proof requires someone to carry the torch. In 1995, the technology wasn't ready. By 2020, the science confirmed what Leary saw. The distance between those two moments was filled by people who didn't abandon the question.</p>",
+                        "narrative": "<h3>Reflection</h3><p>All three paths through 1995 led to the same truth. Leary's vision was real, but only those who held onto it, or who remained open to recognizing <em>when</em> it arrived, were positioned to participate in its validation. The dismissers missed the inflection point. The cautious hedgers bridged both worlds. The full believers built the foundations others would stand on.</p><p>This is the lesson of every field that matures across decades. the gap between vision and proof requires someone to carry the torch. In 1995, the technology wasn't ready. By 2020, the science confirmed what Leary saw. The distance between those two moments was filled by people who didn't abandon the question.</p>",
                         "choices": [
                             {
                                 "id": "continue",
@@ -166,7 +166,7 @@
                             "alt": "Jaron Lanier in late 1980s with DataGlove"
                         },
                         "mediaLayout": "left",
-                        "content": "<p>In 1987, computer scientist and musician Jaron Lanier coined the term 'virtual reality' and founded VPL Research, selling the first VR equipment - the DataGlove and EyePhone head-mounted display. His systems cost hundreds of thousands of dollars, but more importantly, he articulated a humanistic vision: 'Virtual reality is the first medium that doesn't narrow us. Instead, it expands what we can be and what we can communicate.'</p><p>He saw VR not as a display technology but as a consciousness expansion tool. That distinction - between VR as medium for entertainment versus VR as medium for transformation - is still one of the defining questions in the field today.</p>",
+                        "content": "<p>In 1987, computer scientist and musician Jaron Lanier coined the term 'virtual reality' and founded VPL Research, selling the first VR equipment - the DataGlove and EyePhone head-mounted display. His systems cost hundreds of thousands of dollars, but more importantly, he articulated a humanistic vision. 'Virtual reality is the first medium that doesn't narrow us. Instead, it expands what we can be and what we can communicate.'</p><p>He saw VR not as a display technology but as a consciousness expansion tool. That distinction - between VR as medium for entertainment versus VR as medium for transformation - is still one of the defining questions in the field today.</p>",
                         "triggerLabel": "Transformation"
                     },
                     {
@@ -177,7 +177,7 @@
                             "alt": "Portrait of Brenda Laurel from 1990s"
                         },
                         "mediaLayout": "right",
-                        "content": "<p>Brenda Laurel brought theatrical thinking to VR in her groundbreaking book 'Computers as Theatre' (1991). She argued that human-computer interaction should create transformative experiences, not just functional ones. Her company Purple Moon created virtual environments for emotional development.</p><p>She wrote: 'The goal of interaction design should not just be usability, but the transformation of the user through the experience.' That phrase - transformation through experience - became core to cyberdelic practice. It isn't enough for technology to work correctly; it should facilitate personal growth and change. Laurel was insisting on this in 1991.</p>",
+                        "content": "<p>Brenda Laurel brought theatrical thinking to VR in her groundbreaking book 'Computers as Theatre' (1991). She argued that human-computer interaction should create transformative experiences, not just functional ones. Her company Purple Moon created virtual environments for emotional development.</p><p>She wrote. 'The goal of interaction design should not just be usability, but the transformation of the user through the experience.' That phrase - transformation through experience - became core to cyberdelic practice. It isn't enough for technology to work correctly; it should facilitate personal growth and change. Laurel was insisting on this in 1991.</p>",
                         "triggerLabel": "Artificial Reality"
                     },
                     {
@@ -188,7 +188,7 @@
                             "alt": "Early computer art lab showing Myron Krueger's VIDEOPLACE system"
                         },
                         "mediaLayout": "left",
-                        "content": "<p>Before 'virtual reality' became standard terminology, Myron Krueger coined 'artificial reality' to describe his VIDEOPLACE system (1974-1990). Users moved naturally in physical space while cameras tracked them, creating responsive virtual environments without headsets or gloves.</p><p>His key insight: responsive environments that react to human presence can alter consciousness even without blocking out the physical world. This understanding - that altered states don't require total sensory replacement - influenced later cyberdelic design significantly. You don't need to lock someone inside a headset to shift their state.</p>",
+                        "content": "<p>Before 'virtual reality' became standard terminology, Myron Krueger coined 'artificial reality' to describe his VIDEOPLACE system (1974-1990). Users moved naturally in physical space while cameras tracked them, creating responsive virtual environments without headsets or gloves.</p><p>His key insight. responsive environments that react to human presence can alter consciousness even without blocking out the physical world. This understanding - that altered states don't require total sensory replacement - influenced later cyberdelic design significantly. You don't need to lock someone inside a headset to shift their state.</p>",
                         "triggerLabel": "The Gap"
                     },
                     {
@@ -199,7 +199,7 @@
                             "alt": "Contrast between sleek conceptual VR vision and actual clunky 1980s hardware"
                         },
                         "mediaLayout": "right",
-                        "content": "<p>These pioneers had grand visions, but 1980s-90s technology couldn't deliver on them. Head-mounted displays weighed several pounds and caused neck strain. Resolution was extremely low: like looking through mesh. Refresh rates caused motion sickness within minutes. Complete systems cost $100,000-$250,000. Only universities and military budgets could afford them.</p><p>The vision existed. The capability didn't. And that gap - between what you can imagine and what you can actually build - is one of the most important recurring themes in the history of cyberdelics.</p>",
+                        "content": "<p>These pioneers had grand visions, but 1980s-90s technology couldn't deliver on them. Head-mounted displays weighed several pounds and caused neck strain. Resolution was extremely low. like looking through mesh. Refresh rates caused motion sickness within minutes. Complete systems cost $100,000-$250,000. Only universities and military budgets could afford them.</p><p>The vision existed. The capability didn't. And that gap - between what you can imagine and what you can actually build - is one of the most important recurring themes in the history of cyberdelics.</p>",
                         "triggerLabel": "Legacy"
                     },
                     {
@@ -229,7 +229,7 @@
                             "src": "../assets/images/module2/cyberpunk_blueprint.webp"
                         },
                         "mediaLayout": "left",
-                        "content": "<p>In the 1980s, writers like William Gibson (Neuromancer, 1984) and Neal Stephenson (Snow Crash, 1992) imagined worlds where technology and consciousness directly interfaced. Gibson coined 'cyberspace' - a consensual hallucination experienced daily by billions. Stephenson imagined the 'metaverse.' These novels established cultural templates: neural interfaces, virtual reality as equally real as physical reality, identity fluidity, reality as hackable.</p><p>They made VR's eventual emergence feel inevitable rather than alien. When people first put on Oculus headsets in 2016, many described it as 'stepping into Neuromancer.' Fiction had been rehearsing this moment for thirty years.</p>",
+                        "content": "<p>In the 1980s, writers like William Gibson (Neuromancer, 1984) and Neal Stephenson (Snow Crash, 1992) imagined worlds where technology and consciousness directly interfaced. Gibson coined 'cyberspace' - a consensual hallucination experienced daily by billions. Stephenson imagined the 'metaverse.' These novels established cultural templates. neural interfaces, virtual reality as equally real as physical reality, identity fluidity, reality as hackable.</p><p>They made VR's eventual emergence feel inevitable rather than alien. When people first put on Oculus headsets in 2016, many described it as 'stepping into Neuromancer.' Fiction had been rehearsing this moment for thirty years.</p>",
                         "triggerLabel": "Rave Culture"
                     },
                     {
@@ -239,7 +239,7 @@
                             "src": "../assets/images/module2/rave_electronic.webp"
                         },
                         "mediaLayout": "right",
-                        "content": "<p>Starting in late 1980s UK and spreading globally through the 1990s, rave culture created massive gatherings centered on electronic music, light shows, and collective altered states. Ravers discovered that technology could facilitate collective transcendence: electronic music as consciousness technology, lighting creating immersive sensory environments, collective energy producing shared altered states.</p><p>The principle - technology enabling transcendence - was the same as cyberdelics would later demonstrate, just through sound and light rather than VR. Rave culture also normalized the idea of seeking altered states for transformation rather than just intoxication, which mattered for how later cyberdelic communities framed their work.</p>",
+                        "content": "<p>Starting in late 1980s UK and spreading globally through the 1990s, rave culture created massive gatherings centered on electronic music, light shows, and collective altered states. Ravers discovered that technology could facilitate collective transcendence. electronic music as consciousness technology, lighting creating immersive sensory environments, collective energy producing shared altered states.</p><p>The principle - technology enabling transcendence - was the same as cyberdelics would later demonstrate, just through sound and light rather than VR. Rave culture also normalized the idea of seeking altered states for transformation rather than just intoxication, which mattered for how later cyberdelic communities framed their work.</p>",
                         "triggerLabel": "Burning Man"
                     },
                     {
@@ -249,7 +249,7 @@
                             "src": "../assets/images/module2/burning_man_tech.webp"
                         },
                         "mediaLayout": "left",
-                        "content": "<p>Founded in 1986, Burning Man created a temporary city in Nevada's desert dedicated to radical self-expression, community, and art. Large-scale interactive installations, LED art, and tech-enhanced experiences became testing grounds for blending technology with transformation. Many early VR developers and consciousness researchers were Burners.</p><p>The festival demonstrated something important: technology-enhanced experiences could create genuine awe, foster deep community, facilitate personal transformation, and integrate rather than oppose nature and spirituality. Burning Man was a live proof-of-concept for ideas that cyberdelics would later develop into systematic practice.</p>",
+                        "content": "<p>Founded in 1986, Burning Man created a temporary city in Nevada's desert dedicated to radical self-expression, community, and art. Large-scale interactive installations, LED art, and tech-enhanced experiences became testing grounds for blending technology with transformation. Many early VR developers and consciousness researchers were Burners.</p><p>The festival demonstrated something important. technology-enhanced experiences could create genuine awe, foster deep community, facilitate personal transformation, and integrate rather than oppose nature and spirituality. Burning Man was a live proof-of-concept for ideas that cyberdelics would later develop into systematic practice.</p>",
                         "triggerLabel": "Digital Art"
                     },
                     {
@@ -259,7 +259,7 @@
                             "src": "../assets/images/module2/fractal_digital.webp"
                         },
                         "mediaLayout": "right",
-                        "content": "<p>The 1990s saw an explosion of computer-generated art exploring consciousness themes. Fractal art revealed infinite mathematical complexity resembling psychedelic visions: Mandelbrot sets and Julia sets producing imagery that looked uncannily similar to what people described seeing on psychedelics. Early VR art like Char Davies' Osmose (1995) created contemplative spaces with breathing-controlled navigation.</p><p>Artists discovered that algorithms could produce imagery comparable to mystical geometric visions. This established a crucial cultural proof: technology could serve artistic and spiritual expression, not just calculation and commerce. It expanded who saw cyberdelics as relevant to them.</p>",
+                        "content": "<p>The 1990s saw an explosion of computer-generated art exploring consciousness themes. Fractal art revealed infinite mathematical complexity resembling psychedelic visions. Mandelbrot sets and Julia sets producing imagery that looked uncannily similar to what people described seeing on psychedelics. Early VR art like Char Davies' Osmose (1995) created contemplative spaces with breathing-controlled navigation.</p><p>Artists discovered that algorithms could produce imagery comparable to mystical geometric visions. This established a crucial cultural proof. technology could serve artistic and spiritual expression, not just calculation and commerce. It expanded who saw cyberdelics as relevant to them.</p>",
                         "triggerLabel": "Ready for Convergence"
                     },
                     {
@@ -310,7 +310,7 @@
                     },
                     {
                         "id": "quiz1_q1_wrong_a",
-                        "narrative": "<p>Leary didn't predict VR replacing physical reality. His vision was more nuanced: he believed computers could serve consciousness exploration and transformation similar to how psychedelics did. Technology as tool for inner work, not escape from reality. <strong>Try again.</strong></p>",
+                        "narrative": "<p>Leary didn't predict VR replacing physical reality. His vision was more nuanced. he believed computers could serve consciousness exploration and transformation similar to how psychedelics did. Technology as tool for inner work, not escape from reality. <strong>Try again.</strong></p>",
                         "choices": [
                             {
                                 "id": "retry",
@@ -332,7 +332,7 @@
                     },
                     {
                         "id": "quiz1_q1_wrong_d",
-                        "narrative": "<p>While Leary may have hoped for psychedelic legalization, his key insight about technology was different: he recognized that digital tools could serve similar consciousness-exploring purposes as substances. This was about adding a new category of tools, not just advocating for legalizing old ones. <strong>Try again.</strong></p>",
+                        "narrative": "<p>While Leary may have hoped for psychedelic legalization, his key insight about technology was different. he recognized that digital tools could serve similar consciousness-exploring purposes as substances. This was about adding a new category of tools, not just advocating for legalizing old ones. <strong>Try again.</strong></p>",
                         "choices": [
                             {
                                 "id": "retry",
@@ -343,7 +343,7 @@
                     },
                     {
                         "id": "quiz1_q2",
-                        "narrative": "<p>Exactly right. In 1994, Leary predicted that personal computers would become tools for consciousness exploration comparable to psychedelic substances. He saw technology serving the same intentions : expanding awareness, facilitating transformation, enabling self-directed exploration. He was correct about the vision but 25+ years early on the timeline.</p><p>Now, <strong>Why was Leary \"right but early\" with his 1994 prediction?</strong></p>",
+                        "narrative": "<p>Exactly right. In 1994, Leary predicted that personal computers would become tools for consciousness exploration comparable to psychedelic substances. He saw technology serving the same intentions . expanding awareness, facilitating transformation, enabling self-directed exploration. He was correct about the vision but 25+ years early on the timeline.</p><p>Now, <strong>Why was Leary \"right but early\" with his 1994 prediction?</strong></p>",
                         "choices": [
                             {
                                 "id": "q2_a",
@@ -369,7 +369,7 @@
                     },
                     {
                         "id": "quiz1_quiz_complete",
-                        "narrative": "<h3>Correct!</h3><p>Precisely. 1980s-90s VR had massive technical limitations : displays with terrible resolution (320x200 or worse), headsets weighing several pounds, 50-100ms tracking latency causing motion sickness, and complete systems costing $100,000-$250,000. The vision was clear, but the technology to realize it didn't exist yet. It would take 20-30 more years for hardware to catch up.</p>",
+                        "narrative": "<h3>Correct!</h3><p>Precisely. 1980s-90s VR had massive technical limitations . displays with terrible resolution (320x200 or worse), headsets weighing several pounds, 50-100ms tracking latency causing motion sickness, and complete systems costing $100,000-$250,000. The vision was clear, but the technology to realize it didn't exist yet. It would take 20-30 more years for hardware to catch up.</p>",
                         "choices": [
                             {
                                 "id": "next",
@@ -380,7 +380,7 @@
                     },
                     {
                         "id": "quiz1_q2_wrong_b",
-                        "narrative": "<p>Actually, cultural acceptance wasn't the main barrier. The technology simply didn't work well enough in the 1990s : headsets were clunky, caused motion sickness, and couldn't create compelling experiences. Even people open to the idea couldn't have meaningful experiences because the hardware wasn't ready. It was technical limitation, not cultural resistance. <strong>Try again.</strong></p>",
+                        "narrative": "<p>Actually, cultural acceptance wasn't the main barrier. The technology simply didn't work well enough in the 1990s . headsets were clunky, caused motion sickness, and couldn't create compelling experiences. Even people open to the idea couldn't have meaningful experiences because the hardware wasn't ready. It was technical limitation, not cultural resistance. <strong>Try again.</strong></p>",
                         "choices": [
                             {
                                 "id": "retry",
@@ -391,7 +391,7 @@
                     },
                     {
                         "id": "quiz1_q2_wrong_c",
-                        "narrative": "<p>There were no government bans on VR or consciousness technology development. The barrier was purely technical : displays, processing power, tracking systems, and supporting technologies weren't mature enough. VR failed commercially in the 1990s because the technology couldn't deliver on its promise, not because of regulatory barriers. <strong>Try again.</strong></p>",
+                        "narrative": "<p>There were no government bans on VR or consciousness technology development. The barrier was purely technical . displays, processing power, tracking systems, and supporting technologies weren't mature enough. VR failed commercially in the 1990s because the technology couldn't deliver on its promise, not because of regulatory barriers. <strong>Try again.</strong></p>",
                         "choices": [
                             {
                                 "id": "retry",
@@ -402,7 +402,7 @@
                     },
                     {
                         "id": "quiz1_q2_wrong_d",
-                        "narrative": "<p>Interest wasn't the problem : capability was. Many people were intrigued by Leary's vision, but 1990s VR couldn't deliver meaningful consciousness experiences. The hardware caused headaches, the graphics were primitive, and the experiences were underwhelming. Interest existed, but viable technology didn't. <strong>Try again.</strong></p>",
+                        "narrative": "<p>Interest wasn't the problem . capability was. Many people were intrigued by Leary's vision, but 1990s VR couldn't deliver meaningful consciousness experiences. The hardware caused headaches, the graphics were primitive, and the experiences were underwhelming. Interest existed, but viable technology didn't. <strong>Try again.</strong></p>",
                         "choices": [
                             {
                                 "id": "retry",
@@ -472,7 +472,7 @@
                     },
                     {
                         "id": "quiz2_q2",
-                        "narrative": "<p>Exactly. Laurel argued that technology should be designed to transform users, not just function well. This was radical in a commercial tech culture focused on productivity and usability. Her phrase \"transformation through experience\" became foundational for cyberdelic thinking: it's not enough for technology to work; it should facilitate personal growth and change.</p><p>Now, <strong>Why couldn't the early VR pioneers (1980s-1990s) fully realize their visions?</strong></p>",
+                        "narrative": "<p>Exactly. Laurel argued that technology should be designed to transform users, not just function well. This was radical in a commercial tech culture focused on productivity and usability. Her phrase \"transformation through experience\" became foundational for cyberdelic thinking. it's not enough for technology to work; it should facilitate personal growth and change.</p><p>Now, <strong>Why couldn't the early VR pioneers (1980s-1990s) fully realize their visions?</strong></p>",
                         "choices": [
                             {
                                 "id": "q2_a",
@@ -486,7 +486,7 @@
                             },
                             {
                                 "id": "q2_c",
-                                "label": "The technology wasn't ready: displays were poor, systems were expensive ($100K+), and experiences caused motion sickness",
+                                "label": "The technology wasn't ready. displays were poor, systems were expensive ($100K+), and experiences caused motion sickness",
                                 "outcome": "quiz2_quiz_complete"
                             },
                             {
@@ -498,7 +498,7 @@
                     },
                     {
                         "id": "quiz2_quiz_complete",
-                        "narrative": "<h3>Quiz Complete!</h3><p>Precisely. 1980s-90s VR had massive technical limitations: displays with terrible resolution (320x200 or worse), headsets weighing several pounds, 50-100ms tracking latency causing motion sickness, and complete systems costing $100,000-$250,000. The vision was clear, but the technology to realize it didn't exist yet. It would take 20-30 more years for hardware to catch up.</p> <strong>Quiz Complete.</strong>",
+                        "narrative": "<h3>Quiz Complete!</h3><p>Precisely. 1980s-90s VR had massive technical limitations. displays with terrible resolution (320x200 or worse), headsets weighing several pounds, 50-100ms tracking latency causing motion sickness, and complete systems costing $100,000-$250,000. The vision was clear, but the technology to realize it didn't exist yet. It would take 20-30 more years for hardware to catch up.</p> <strong>Quiz Complete.</strong>",
                         "choices": [
                             {
                                 "id": "next",
@@ -509,7 +509,7 @@
                     },
                     {
                         "id": "quiz2_q2_wrong_a",
-                        "narrative": "<p>There were no regulatory barriers to VR development. The problem was purely technical: the technology simply wasn't good enough. Displays were poor, tracking was inaccurate, processing power was insufficient, and systems were prohibitively expensive. Capability, not regulation, was the barrier. <strong>Try again.</strong></p>",
+                        "narrative": "<p>There were no regulatory barriers to VR development. The problem was purely technical. the technology simply wasn't good enough. Displays were poor, tracking was inaccurate, processing power was insufficient, and systems were prohibitively expensive. Capability, not regulation, was the barrier. <strong>Try again.</strong></p>",
                         "choices": [
                             {
                                 "id": "retry",
@@ -520,7 +520,7 @@
                     },
                     {
                         "id": "quiz2_q2_wrong_b",
-                        "narrative": "<p>Interest existed: universities, military, and researchers were very invested. The problem was that the technology couldn't deliver meaningful experiences. Headsets were heavy, caused motion sickness, had terrible resolution, and cost over $100,000. The hardware limited adoption, not lack of interest. <strong>Try again.</strong></p>",
+                        "narrative": "<p>Interest existed. universities, military, and researchers were very invested. The problem was that the technology couldn't deliver meaningful experiences. Headsets were heavy, caused motion sickness, had terrible resolution, and cost over $100,000. The hardware limited adoption, not lack of interest. <strong>Try again.</strong></p>",
                         "choices": [
                             {
                                 "id": "retry",

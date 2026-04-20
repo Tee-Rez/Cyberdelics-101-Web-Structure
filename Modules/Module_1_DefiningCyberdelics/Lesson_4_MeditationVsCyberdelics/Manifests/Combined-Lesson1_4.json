@@ -1,7 +1,7 @@
 {
     "id": "combined_lesson_1_4",
     "title": "Meditation/Wellness Tech & Cyberdelics: Mapping the Overlap",
-    "description": "Navigate the genuinely blurry boundary between wellness meditation technology and cyberdelic experiences -- understanding the overlap zone and when intention transforms a device into a cyberdelic tool.",
+    "description": "Navigate the genuinely blurry boundary between wellness meditation technology and cyberdelic experiences, understanding the overlap zone and when intention transforms a device into a cyberdelic tool.",
     "framerDescription": "This is the most nuanced boundary in the module. The overlap is real, and mapping it honestly makes you a better practitioner.",
     "theme": {
         "primaryColor": "#5900ff",
@@ -75,7 +75,7 @@
                     },
                     {
                         "id": "person1_begin",
-                        "narrative": "<h3>PERSON 1 - Starting Simple</h3><p><strong>Persona: The Newcomer (Consultant)</strong></p><p>Someone is new to both meditation and technology. They want to start a basic mindfulness practice and prefer something simple and accessible. They're not seeking intense experiences yet, just building a foundation they can maintain consistently. What would you recommend?</p>",
+                        "narrative": "<h3>PERSON 1 - Starting Simple</h3><p><strong>Persona. The Newcomer (Consultant)</strong></p><p>Someone is new to both meditation and technology. They want to start a basic mindfulness practice and prefer something simple and accessible. They're not seeking intense experiences yet, just building a foundation they can maintain consistently. What would you recommend?</p>",
                         "choices": [
                             {
                                 "id": "p1_a",
@@ -129,7 +129,7 @@
                     },
                     {
                         "id": "person2_depth",
-                        "narrative": "<h3>PERSON 2 - Seeking Depth</h3><p><strong>Persona: The Practitioner (Consultant)</strong></p><p>Someone has five years of daily meditation practice. They've experienced some altered states through traditional sitting practice but want to go deeper. They're curious about technology that could facilitate more profound experiences while supporting and extending their existing practice. What would you recommend?</p>",
+                        "narrative": "<h3>PERSON 2 - Seeking Depth</h3><p><strong>Persona. The Practitioner (Consultant)</strong></p><p>Someone has five years of daily meditation practice. They've experienced some altered states through traditional sitting practice but want to go deeper. They're curious about technology that could facilitate more profound experiences while supporting and extending their existing practice. What would you recommend?</p>",
                         "choices": [
                             {
                                 "id": "p2_a",
@@ -183,7 +183,7 @@
                     },
                     {
                         "id": "person3_athletic",
-                        "narrative": "<h3>PERSON 3 - Athletic Performance Focus</h3><p><strong>Persona: The Athlete (Consultant)</strong></p><p>An athlete wants to use meditation technology to improve focus and reduce pre-competition anxiety. They're interested in measurable outcomes like better sleep, faster recovery, and sharper mental clarity. They're not seeking spiritual experiences or consciousness exploration for its own sake. What would you recommend?</p>",
+                        "narrative": "<h3>PERSON 3 - Athletic Performance Focus</h3><p><strong>Persona. The Athlete (Consultant)</strong></p><p>An athlete wants to use meditation technology to improve focus and reduce pre-competition anxiety. They're interested in measurable outcomes like better sleep, faster recovery, and sharper mental clarity. They're not seeking spiritual experiences or consciousness exploration for its own sake. What would you recommend?</p>",
                         "choices": [
                             {
                                 "id": "p3_a",
@@ -237,7 +237,7 @@
                     },
                     {
                         "id": "reflection",
-                        "narrative": "<h3>Reflection</h3><p>Three people, three correct answers — none of them the same. The Newcomer needed simplicity and accessibility. The experienced Practitioner needed depth and amplification. The Athlete needed performance optimization, not consciousness exploration. Each answer required listening to the actual person in front of you, not applying a default recommendation.</p><p>This is the core skill cyberdelics practitioners develop: reading the difference between someone's stated goal, their readiness level, and which tool family genuinely serves them. The distinction between wellness tech and cyberdelics isn't about hierarchy — it's about precision match between person, intention, and tool.</p>",
+                        "narrative": "<h3>Reflection</h3><p>Three people, three correct answers, none of them the same. The Newcomer needed simplicity and accessibility. The experienced Practitioner needed depth and amplification. The Athlete needed performance optimization, not consciousness exploration. Each answer required listening to the actual person in front of you, not applying a default recommendation.</p><p>This is the core skill cyberdelics practitioners develop. reading the difference between someone's stated goal, their readiness level, and which tool family genuinely serves them. The distinction between wellness tech and cyberdelics isn't about hierarchy, it's about precision match between person, intention, and tool.</p>",
                         "choices": [
                             {
                                 "id": "continue",
@@ -257,12 +257,12 @@
                 "sections": [
                     {
                         "title": "The Intention Shift",
-                        "content": "<p>Technology becomes cyberdelic when the primary intention shifts from optimization to exploration. Wellness tech asks: how can I function better? Cyberdelics asks: what can I discover about consciousness itself? Both are valid questions. They just lead to fundamentally different tools, designs, and experiences.</p>",
+                        "content": "<p>Technology becomes cyberdelic when the primary intention shifts from optimization to exploration. Wellness tech asks. how can I function better? Cyberdelics asks. what can I discover about consciousness itself? Both are valid questions. They just lead to fundamentally different tools, designs, and experiences.</p>",
                         "triggerLabel": "From Outcome to Process"
                     },
                     {
                         "title": "From Outcome to Process",
-                        "content": "<p>Wellness tech focuses on outcomes: better sleep, reduced stress, improved focus, faster recovery. These are external measures of improvement. Cyberdelics focuses on the process: exploring consciousness, transforming your relationship with experience, cultivating presence. The journey is the destination. Neither orientation is wrong, they're aimed at different things.</p>",
+                        "content": "<p>Wellness tech focuses on outcomes. better sleep, reduced stress, improved focus, faster recovery. These are external measures of improvement. Cyberdelics focuses on the process. exploring consciousness, transforming your relationship with experience, cultivating presence. The journey is the destination. Neither orientation is wrong, they're aimed at different things.</p>",
                         "triggerLabel": "Same Device, Different Use"
                     },
                     {
@@ -385,10 +385,10 @@
                             }
                         ],
                         "synthesis": {
-                            "q2_1_a": "<p>Cost doesn't determine the category. Free experiences can be cyberdelic, and expensive wellness tech can be purely optimization-focused. What matters is the intention: optimizing function (wellness) versus exploring consciousness (cyberdelic). <strong>Try again.</strong></p>",
+                            "q2_1_a": "<p>Cost doesn't determine the category. Free experiences can be cyberdelic, and expensive wellness tech can be purely optimization-focused. What matters is the intention. optimizing function (wellness) versus exploring consciousness (cyberdelic). <strong>Try again.</strong></p>",
                             "q2_1_c": "<p>The same biofeedback sensors can be used for wellness or cyberdelics. HRV monitoring can track athletic recovery (wellness) or facilitate altered state exploration (cyberdelic). The sensors themselves don't determine the category, the intention and application do. <strong>Try again.</strong></p>",
                             "q2_1_d": "<p>Facilitation can be part of either wellness tech or cyberdelic experiences. Some wellness programs use coaches. Some cyberdelic experiences are self-guided. The presence of a facilitator doesn't determine whether the focus is optimization or exploration. <strong>Try again.</strong></p>",
-                            "q2_1_b": "<h3>Correct!</h3><p>Exactly. Wellness tech aims to optimize how you function : better sleep, less stress, improved performance. Cyberdelics aims to explore consciousness itself : altered states, transformation, self-discovery. The same technologies can serve either purpose depending on design intent and user engagement.</p>"
+                            "q2_1_b": "<h3>Correct!</h3><p>Exactly. Wellness tech aims to optimize how you function . better sleep, less stress, improved performance. Cyberdelics aims to explore consciousness itself . altered states, transformation, self-discovery. The same technologies can serve either purpose depending on design intent and user engagement.</p>"
                         }
                     },
                     {
