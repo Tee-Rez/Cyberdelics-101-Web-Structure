@@ -145,17 +145,17 @@
                                 "correct": false
                             },
                             {
-                                "id": "opt_b",
+                                "id": "opt_c",
                                 "label": "The researchers partnered directly with Johns Hopkins, giving the study institutional credibility equivalent to their psilocybin trials",
                                 "correct": false
                             },
                             {
-                                "id": "opt_c",
+                                "id": "opt_d",
                                 "label": "The study used a placebo-controlled design, which is the same standard as clinical psychedelic trials",
                                 "correct": false
                             },
                             {
-                                "id": "opt_d",
+                                "id": "opt_b",
                                 "label": "The study used the MEQ30 as its primary outcome measure; the same validated scale used in the major psilocybin studies at Johns Hopkins and Imperial College, which means the scores can be placed on the same scale as psychedelic mystical experience scores",
                                 "correct": true
                             }
@@ -176,17 +176,17 @@
                                 "correct": false
                             },
                             {
-                                "id": "opt_b",
+                                "id": "opt_d",
                                 "label": "The social element of group VR is sufficient on its own to produce mystical experiences, regardless of environment design",
                                 "correct": false
                             },
                             {
-                                "id": "opt_c",
+                                "id": "opt_b",
                                 "label": "Shared synchronized presence in abstract virtual environments may amplify individual states; facilitators working with groups can use this as an informed design principle while recognizing the finding comes from a specific protocol",
                                 "correct": true
                             },
                             {
-                                "id": "opt_d",
+                                "id": "opt_c",
                                 "label": "Multi-person VR is always more effective than solo VR for any therapeutic or consciousness-expansion goal",
                                 "correct": false
                             }
@@ -202,12 +202,12 @@
                         "question": "<h3>The EEG findings from Greco et al. showed 'increased frontal entropy' during DeepDream VR. What does this mean in practical terms, and why is it significant for understanding how VR alters consciousness?</h3>",
                         "options": [
                             {
-                                "id": "opt_a",
+                                "id": "opt_b",
                                 "label": "The brain's electrical activity in frontal regions became less predictable and more varied than at baseline, which in consciousness neuroscience is associated with increased cognitive flexibility and reduced habitual processing patterns",
                                 "correct": true
                             },
                             {
-                                "id": "opt_b",
+                                "id": "opt_a",
                                 "label": "The brain's electrical activity in frontal regions became more chaotic and disorganized, indicating stress or cognitive overload",
                                 "correct": false
                             },

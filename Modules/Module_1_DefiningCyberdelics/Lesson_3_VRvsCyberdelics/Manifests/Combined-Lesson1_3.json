@@ -287,7 +287,68 @@
                         ],
                         "synthesis": {
                             "q1_2_b": "<p>Visual style is just aesthetics. Many games use psychedelic visuals for style or atmosphere while maintaining purely 'entertainment' mechanics (shooting, scoring, etc.). To be cyberdelic, the mechanics must turn attention inward. <strong>Try again.</strong></p>",
-                            "q1_2_a": "<h3>Quiz Complete!</h3><p>Correct. Aesthetics alone don't define the category. An experience is cyberdelic based on its <em>design mechanics</em> and its ability to facilitate self-reflection, biofeedback, or altered states of consciousness, regardless of whether it 'looks' trippy or realistic. <strong>Quiz Complete.</strong></p>"
+                            "q1_2_a": "<h3>Correct!</h3><p>Correct. Aesthetics alone don't define the category. An experience is cyberdelic based on its <em>design mechanics</em> and its ability to facilitate self-reflection, biofeedback, or altered states of consciousness, regardless of whether it 'looks' trippy or realistic.</p>"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "dimensions_quiz_3.2",
+            "title": "Design Dimensions Quiz",
+            "type": "option-selector",
+            "config": {
+                "mode": "single",
+                "style": "text",
+                "questions": [
+                    {
+                        "question": "A designer creates an experience where the environment is a bioluminescent forest that reacts to a learner's tactile touch on a physical controller. Which two dimensions form the substrate of this setup?",
+                        "options": [
+                            {
+                                "id": "q2_1_a",
+                                "label": "Reality and Sensory Channels",
+                                "correct": true
+                            },
+                            {
+                                "id": "q2_1_b",
+                                "label": "Presence and States",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_1_c",
+                                "label": "Traits and Meaning",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "q2_1_a": "<h3>Correct!</h3><p>The bioluminescent forest is the Reality dimension. The tactile feedback from the controller is the Sensory dimension. Together, they form the perceptual substrate of the experience.</p>",
+                            "q2_1_b": "<p>These dimensions describe the internal shift of the learner. The forest and the controller are the external building blocks used to create that shift. <strong>Try again.</strong></p>",
+                            "q2_1_c": "<p>Traits and Meaning focus on the lasting impact and the narrative soul of the work. The forest and the controller are the immediate perceptual tools. <strong>Try again.</strong></p>"
+                        }
+                    },
+                    {
+                        "question": "A learner feels a temporary sense of deep calm during a session. Six weeks later, they notice they are consistently less reactive during stressful work meetings. Which dimension describes this long-term shift?",
+                        "options": [
+                            {
+                                "id": "q2_2_a",
+                                "label": "States",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_2_b",
+                                "label": "Traits",
+                                "correct": true
+                            },
+                            {
+                                "id": "q2_2_c",
+                                "label": "Presence",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "q2_2_a": "<p>The temporary calm felt during the session was a State. The shift that persists weeks later belongs to a different dimension. <strong>Try again.</strong></p>",
+                            "q2_2_b": "<h3>Quiz Complete!</h3><p>Correct. Traits are the enduring changes that remain with a person long after the technology is removed. This long-term shift is the ultimate goal of many cyberdelic interventions. <strong>Quiz Complete.</strong></p>",
+                            "q2_2_c": "<p>Presence refers to the quality of awareness during the experience itself. The lasting change in daily life is an enduring Trait. <strong>Try again.</strong></p>"
                         }
                     }
                 ]

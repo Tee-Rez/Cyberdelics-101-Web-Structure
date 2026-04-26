@@ -23,7 +23,7 @@
                         "title": "Shared Intention",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module1/shared-intention.webp"
+                            "src": "../assets/images/module1/SharedIntention.webp"
                         },
                         "mediaLayout": "left",
                         "content": "<p>Both psychedelics and cyberdelics exist for the same fundamental purpose. facilitating consciousness exploration, personal transformation, and spiritual development. Whether using substances or technology, the underlying intention is identical, to expand awareness, facilitate healing, and support personal growth. Purpose is the foundation both fields share.</p>",
@@ -292,12 +292,12 @@
                                 "correct": false
                             },
                             {
-                                "id": "q1_1_b",
+                                "id": "q1_1_c",
                                 "label": "Legal status",
                                 "correct": false
                             },
                             {
-                                "id": "q1_1_c",
+                                "id": "q1_1_b",
                                 "label": "The intention to facilitate transformation",
                                 "correct": true
                             },
@@ -323,17 +323,17 @@
                                 "correct": false
                             },
                             {
-                                "id": "q1_2_b",
+                                "id": "q1_2_c",
                                 "label": "Maybe, but less profound",
                                 "correct": false
                             },
                             {
-                                "id": "q1_2_c",
+                                "id": "q1_2_d",
                                 "label": "Depends on belief system",
                                 "correct": false
                             },
                             {
-                                "id": "q1_2_d",
+                                "id": "q1_2_b",
                                 "label": "Yes, research shows comparable scores",
                                 "correct": true
                             }
@@ -349,17 +349,17 @@
                         "question": "Which aspect primarily DIFFERS between psychedelics and cyberdelics?",
                         "options": [
                             {
-                                "id": "q2_1_a",
+                                "id": "q2_1_b",
                                 "label": "The method used to create the experience",
                                 "correct": true
                             },
                             {
-                                "id": "q2_1_b",
+                                "id": "q2_1_a",
                                 "label": "The intention to facilitate transformation",
                                 "correct": false
                             },
                             {
-                                "id": "q2_1_c",
+                                 "id": "q2_1_c",
                                 "label": "The potential for mystical experiences",
                                 "correct": false
                             },
@@ -385,12 +385,12 @@
                                 "correct": false
                             },
                             {
-                                "id": "q2_2_b",
+                                "id": "q2_2_c",
                                 "label": "Because technology is more spiritual than chemistry",
                                 "correct": false
                             },
                             {
-                                "id": "q2_2_c",
+                                "id": "q2_2_b",
                                 "label": "Medical contraindications, legal considerations, or personal preference",
                                 "correct": true
                             },

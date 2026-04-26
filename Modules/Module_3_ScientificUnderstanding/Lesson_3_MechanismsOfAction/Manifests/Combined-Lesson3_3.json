@@ -233,20 +233,20 @@
                         "question": "A cyberdelic session is designed around a virtual nature environment that gradually transitions from a barren winter landscape to a lush spring setting. The client, who is processing grief, reports. 'I didn't decide to let go of something. It just happened in me while the environment changed.' Which mechanism most directly describes what occurred?",
                         "options": [
                             {
-                                "id": "A",
+                                "id": "B",
                                 "label": "Emotional Regulation; the emotional tone of the environment became the emotional tone of the person in it",
                                 "correct": true
                             },
                             {
-                                "id": "B",
+                                "id": "C",
                                 "label": "Attentional Capture; the visual novelty displaced the client's grief processing temporarily"
                             },
                             {
-                                "id": "C",
+                                "id": "D",
                                 "label": "DMN Modulation; the environment quieted the Default Mode Network enough for the emotion to surface"
                             },
                             {
-                                "id": "D",
+                                "id": "A",
                                 "label": "Perspective Shift; the environmental change produced a viewpoint change in the client"
                             }
                         ],
@@ -265,7 +265,7 @@
                                 "label": "This design is ethically neutral because the experience is virtual and the effects don't persist beyond the session"
                             },
                             {
-                                "id": "B",
+                                "id": "D",
                                 "label": "The effect will only work if the client consciously agrees with the goals of the protocol before entering"
                             },
                             {
@@ -273,7 +273,7 @@
                                 "label": "Perspective Shift only affects attitudes toward oneself, not toward other groups"
                             },
                             {
-                                "id": "D",
+                                "id": "B",
                                 "label": "Replicated research shows that this kind of perspective-taking experience can reduce implicit bias, but the ethical design of the experience requires explicit rationale, appropriate preparation, and integration support",
                                 "correct": true
                             }
@@ -293,11 +293,11 @@
                                 "label": "It will primarily increase Attentional Capture by making the environment more novel"
                             },
                             {
-                                "id": "B",
+                                "id": "C",
                                 "label": "It will improve aesthetic quality but have no measurable effect on the depth of altered states"
                             },
                             {
-                                "id": "C",
+                                "id": "B",
                                 "label": "It will produce a qualitatively different neurological state by increasing the coherence of sensory inputs, reducing the cognitive effort required to register the experience as real",
                                 "correct": true
                             },

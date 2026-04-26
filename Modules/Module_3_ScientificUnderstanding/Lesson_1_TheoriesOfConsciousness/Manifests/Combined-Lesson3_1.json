@@ -214,11 +214,11 @@
                                 "label": "The VR experience suppressed the brain's language centers through audio stimulation"
                             },
                             {
-                                "id": "B",
+                                "id": "C",
                                 "label": "Prolonged headset use temporarily disrupts neural activity in the prefrontal cortex"
                             },
                             {
-                                "id": "C",
+                                "id": "B",
                                 "label": "The immersive environment occupied the global workspace so fully that self-referential content lost broadcast priority",
                                 "correct": true
                             },
@@ -242,15 +242,15 @@
                                 "label": "Visual resolution is irrelevant to the quality of a cyberdelic experience"
                             },
                             {
-                                "id": "B",
+                                "id": "C",
                                 "label": "Resolution improvements are too expensive to matter at current hardware price points"
                             },
                             {
-                                "id": "C",
+                                "id": "D",
                                 "label": "IIT proves that sound design is more important than visual design in every case"
                             },
                             {
-                                "id": "D",
+                                "id": "B",
                                 "label": "IIT suggests that synchronizing multiple sensory channels produces richer experiential states than improving any single channel in isolation",
                                 "correct": true
                             }
@@ -266,16 +266,16 @@
                         "question": "A facilitator has been using the same VR environment with a client for six consecutive sessions. The client reports that the first two sessions felt profound and disorienting in a good way, but the last three have felt 'flat, like watching a familiar movie.' Based on Predictive Processing, what is the most plausible explanation?",
                         "options": [
                             {
-                                "id": "A",
+                                "id": "B",
                                 "label": "The client's brain has built a well-fitted prediction model for the environment, reducing prediction errors and diminishing the conditions for altered perception",
                                 "correct": true
                             },
                             {
-                                "id": "B",
+                                "id": "C",
                                 "label": "The headset's display quality has degraded over time, reducing immersion"
                             },
                             {
-                                "id": "C",
+                                "id": "A",
                                 "label": "The client has developed tolerance to VR, similar to how people develop drug tolerance"
                             },
                             {
@@ -326,15 +326,15 @@
                                 "label": "The developer is correct because higher fidelity always produces more presence and deeper states"
                             },
                             {
-                                "id": "B",
+                                "id": "C",
                                 "label": "Visual realism is irrelevant because audio design is the primary driver of prediction error"
                             },
                             {
-                                "id": "C",
+                                "id": "D",
                                 "label": "Predictive Processing only applies to clinical VR, not cyberdelic applications"
                             },
                             {
-                                "id": "D",
+                                "id": "B",
                                 "label": "Predictive Processing suggests that familiar, realistic environments may actually generate fewer prediction errors than novel abstract ones, reducing altered state potential",
                                 "correct": true
                             }
@@ -354,11 +354,11 @@
                                 "label": "Using a single theory is best practice; consistency of interpretation improves session quality"
                             },
                             {
-                                "id": "B",
+                                "id": "C",
                                 "label": "The choice of theory doesn't matter as long as the practitioner believes in it sincerely"
                             },
                             {
-                                "id": "C",
+                                "id": "B",
                                 "label": "Multiple frameworks provide complementary explanations because different theories illuminate different aspects of the same experience, and no single theory currently accounts for all cyberdelic phenomena",
                                 "correct": true
                             },

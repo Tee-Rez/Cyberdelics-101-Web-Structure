@@ -1,0 +1,167 @@
+Image Creation Guide
+
+ASSET TYPE: Information display frame / UI container background
+
+Generate a UI frame / container image to be used as a background 
+
+for displaying text, data, diagrams, or quotes within the course.
+
+Composition:
+
+— The image is a FRAME — it has a clear inner open zone 
+
+  (center 60% of the image) that is kept very dark and minimal — 
+
+  close to solid deep purple-black — this is where readable text 
+
+  will be placed
+
+— The outer border and corner regions are visually rich: 
+
+  detailed sacred geometry tracery, iridescent circuit-organic patterns, 
+
+  thin lines of glowing teal and violet forming geometric border elements
+
+— The border should feel like: the edge of a shamanic ritual space, 
+
+  a circuit board that grew organically, 
+
+  or the frame of an alien artifact
+
+Border element details:
+
+— Thin glowing geometric lines in electric cyan and phosphorescent violet
+
+— Corner accents: small intricate geometric nodes — 
+
+  like a Metatron's cube compressed into a corner piece
+
+— Subtle iridescent bubble texture washes across the outer 10% of each edge
+
+— Faint inner vignette — the border glows, the center breathes dark
+
+Generate 3 subtle variants of this frame in the same style:
+
+— Variant A: border emphasis on TOP and BOTTOM only (wide data bar style)
+
+— Variant B: full border frame (all four sides — for quote cards)
+
+— Variant C: LEFT SIDE accent bar only (for text-heavy slides with 
+
+  a thin decorative column on the left)
+
+Do not include any text or UI elements — raw background frames only.
+
+Output: Ultra-clean geometry on edges, ultra-dark center, 
+
+iridescent sheen on all geometric elements.
+
+BASE ENVIRONMENT — Cyberdelic Academy Room (asset: Cyberdelic Academy Room)
+
+All course images (Mode 1 and Mode 2) are composited onto the Cyberdelic Academy Room as the base layer. This is the universal environment for every visual in the course.
+
+The clean room image contains:
+
+
+
+
+
+Futuristic hallway with celestial ceiling displaying constellations and astrological symbols
+
+
+
+Sacred geometry holographic projections suspended in space (star tetrahedron, Sri Yantra)
+
+
+
+Purple and teal ambient lighting throughout
+
+
+
+Polished reflective floor surfaces
+
+
+
+Open central area — this is where generated content is placed
+
+The generated image (infographic or illustration) is composited INTO the room's central open area, as if projected or displayed within the space.
+
+IMAGE CREATION MODES — all course visuals follow one of two paths:
+
+MODE 1: INFOGRAPHIC IMAGE Use when the content is data, processes, comparisons, timelines, or conceptual frameworks.
+
+The infographic is composited into the Cyberdelic Academy Room (Cyberdelic Academy Room) as a projected display within the room's central area. Design infographics with a transparent or near-black background so they integrate seamlessly with the room environment.
+
+Four approved infographic templates:
+
+
+
+
+
+Flowchart / Process Diagram — Vertical sacred geometry nodes connected by glowing circuit-organic pathways. For step-by-step processes, sequences, decision trees.
+
+
+
+Radial / Mandala Data Display — Central hub with data radiating outward in concentric rings or spoke patterns. For ecosystems, interconnected concepts, holistic models.
+
+
+
+Timeline / Progression — Bioluminescent pathway with milestone nodes and branching info panels. For chronological content, evolution of ideas, journey maps.
+
+
+
+Comparison / Stats Panel — Structured grid of geometric containers holding data visualizations. For metrics, side-by-side comparisons, feature breakdowns.
+
+
+
+Hierarchy / Tree Map — A sacred Tree of Life structure branching from a single root node through multiple levels into leaf nodes. Circuit-organic pathways connect luminous geometric containers (hexagons, diamonds) at each tier, with glow intensity shifting by depth level. Use for: taxonomies, knowledge domain maps, nested categories, organizational structures, concept breakdowns from broad to specific.
+
+
+
+Spectrum / Scale Diagram — A vertical or horizontal axis with crystalline markers at key points, concentric energy halos radiating from each measurement node, and branching data panels. Gradient shifts across the palette from violet to cyan along the spectrum. Use for: ranges between two poles, consciousness/frequency models, skill progression scales, maturity models, any content that moves along a continuum.
+
+
+
+Network / Constellation Map — Neural-web of interconnected nodes, for concept relationships, mind maps, ecosystems
+
+
+
+Pyramid / Layered Stack — Ascending tiers of crystallized light, for hierarchical models, maturity frameworks, priority levels
+
+
+
+Cycle / Loop Diagram — Toroidal energy loop with flowing stages, for feedback loops, iterative processes, cyclical models
+
+All infographics MUST include real, readable text — labels, titles, data points, comparison headers, and key terms drawn from the Panel Content provided with each image entry. Infographics exist to communicate specific information (comparisons, processes, data, frameworks) and require legible typography to function. Text should be styled in clean, modern, futuristic typography that fits the Cyberdelic aesthetic — glowing, luminous letterforms in electric cyan or white against the deep violet backgrounds. Apply full Master Aesthetic System palette, sacred geometry structure, iridescent surface sheen, and inner-glow lighting.
+
+MODE 2: FRAMED ILLUSTRATION Use when the content is a scene, concept visualization, character, environment, or metaphorical image.
+
+This is a two-layer composite:
+
+
+
+
+
+BASE LAYER — Cyberdelic Academy Room (Cyberdelic Academy Room): The clean room environment serves as the scene backdrop.
+
+
+
+MIDDLE LAYER — Generated Image: The scene/illustration generated using Uni-1, placed into the room's central display area as if projected or displayed within the space. Must respect the Master Aesthetic System.
+
+
+
+OUTER LAYER — Border Frame: The approved Cyberdelic border frame (thin hairline sacred geometry borders) overlaid on top. Select the appropriate frame variant based on layout needs.
+
+The border frame is NOT generated with the image — it is a separate asset layered over or around the illustration.
+
+CHOOSING THE MODE:
+
+
+
+
+
+If the slide explains a process, compares ideas, or shows data → Mode 1 (Infographic)
+
+
+
+If the slide evokes a feeling, illustrates a concept, or sets a scene → Mode 2 (Framed Illustration)

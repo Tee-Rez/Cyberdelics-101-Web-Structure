@@ -1,667 +1,345 @@
 {
-    "id": "combined_lesson_1_1",
-    "title": "What Cyberdelics Actually Are: From Etymology to Principle",
-    "description": "A complete foundation in the definition, components, and guiding principles of cyberdelics -- from the meaning of the word itself to the technology-first, none-substance approach that defines this field.",
-    "framerDescription": "This lesson takes you from the very first question -- what does the word cyberdelics even mean? -- all the way through to the core principles that make this field unique. You'll understand where the word came from, what three components must always be present, how to tell cyberdelic from non-cyberdelic use of the same hardware, and why the none-substance principle opens doors that other paths cannot reach. By the end, you'll be able to define, recognize, and evaluate cyberdelic experiences with precision.",
+    "id": "combined_lesson_4_2",
+    "title": "Clinical VR & Biofeedback: From Pain Labs to the Cybernetic Loop",
+    "description": "Examine the clinical evidence base for VR in anxiety, PTSD, and pain management, then explore the biofeedback loop that elevates standard VR into a cyberdelic experience, including all four biofeedback types and the Healium case study.",
+    "framerDescription": "Clinical VR and biofeedback are where the science gets hardest and the stakes get highest. This lesson covers what's proven, what makes it work, and what tools you need to recognize it.",
     "theme": {
         "primaryColor": "#5900ff",
         "fontBody": "Rajdhani, sans-serif"
     },
     "modules": [
         {
-            "id": "progressive_disclosure_1.1.1",
-            "title": "Breaking Down 'Cyberdelics'",
+            "id": "module_4_2_1_progressive",
+            "title": "The Clinical Standard",
             "type": "progressive-disclosure",
             "content": {
                 "sections": [
                     {
-                        "title": "A Fusion Word",
-                        "content": "<p>The word 'cyberdelics' isn't random. It's a deliberate fusion of two powerful concepts. Understanding where this word comes from helps us grasp what the field actually is. Let's break it down piece by piece.</p>",
-                        "triggerLabel": "Let's break it down"
-                    },
-                    {
-                        "title": "\"Cyber\" : The Digital Realm",
+                        "title": "How VRET Works - The Mechanism",
+                        "content": "<p>Virtual Reality Exposure Therapy (VRET) works by exposing patients to the thing they fear in a controlled, graduated, safe environment. If you have a phobia of flying, you don't board an actual plane - you experience a virtual flight that your therapist can control and adjust in real time.</p><p>This triggers <strong>extinction learning</strong> - the gradual weakening of the fear response through repeated safe exposure. It works because VR creates genuine physiological arousal (sweating, heart rate increase) that imagination alone rarely triggers, allowing the brain to learn safety in the presence of the threat.</p>",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module1/Cyber.webp",
-                            "aiPrompt": "The word CYBER in bold futuristic typography with circuit board patterns and digital nodes flowing through the letters, electric blue and white color scheme, representing technology and digital systems, clean modern design with subtle binary code in background, 16:9 aspect ratio"
+                            "src": "../assets/images/module4/vret-therapy.webp",
+                            "alt": "Clinical VR exposure therapy session with therapist monitoring patient",
+                            "aiPrompt": "Clinical VR exposure therapy session - professional therapist (woman in her 40s, warm but focused expression) sitting beside patient in VR headset, therapist holding tablet showing session controls and patient's heart rate graph, patient appears engaged but slightly tense (hands gripping armrests), calm modern therapy office with plants and certificates on wall, sense of safe container for difficult work, natural lighting, professional medical aesthetic, 16:9 aspect ratio"
                         },
-                        "mediaLayout": "left",
-                        "content": "<p>'Cyber' comes from 'cybernetics,' coined by Norbert Wiener in 1948. It refers to systems of communication and control, particularly involving technology and feedback loops. In modern usage, 'cyber' represents the digital, technological, and virtual dimensions of experience. It's the realm of VR headsets, AR overlays, biofeedback devices, and human-computer interaction. The medium through which we engage the world digitally.</p>",
-                        "triggerLabel": "Next Component"
+                        "triggerLabel": "See Success Rates",
+                        "mediaLayout": "left"
                     },
                     {
-                        "title": "\"Delic\" : Mind-Manifesting",
-                        "media": {
-                            "type": "image",
-                            "src": "../assets/images/module1/delic.webp",
-                            "aiPrompt": "The word DELIC in flowing organic typography with mandala patterns, sacred geometry (Flower of Life), and radiating light waves emanating outward from the letters, purple and teal color scheme, representing consciousness and inner exploration, mystical yet modern aesthetic, 16:9 aspect ratio"
-                        },
-                        "mediaLayout": "right",
-                        "content": "<p>'Delic' comes from 'psychedelic,' which literally means 'mind-manifesting' (from Greek: psyche = mind/soul, delos = manifest/reveal). This suffix carries the essence of consciousness exploration, expanded awareness, and transformative experiences. It's about revealing what's hidden in consciousness, making the invisible visible. The goal is revelation, not hallucinations..</p>",
-                        "triggerLabel": "The Fusion"
+                        "title": "Success Rates - The Evidence",
+                        "content": "<p>VRET isn't experimental. The research base spans over 20 years</p><ul><li><strong>Specific Phobias:</strong> 80-90% success rate (comparable to in-vivo exposure).</li><li><strong>Social Anxiety:</strong> 60-75% significant symptom reduction.</li><li><strong>PTSD:</strong> 50-70% clinically significant improvement, especially for combat-related PTSD.</li><li><strong>Panic Disorder:</strong> 60-80% improvement in functioning.</li></ul><p>These are standardized clinical measures showing lasting reduction in avoidance behaviors and symptoms.</p>",
+                        "triggerLabel": "European Standard"
                     },
                     {
-                        "title": "The Fusion",
-                        "content": "<p>When you combine 'cyber' and 'delic,' you get a field that uses digital technology (cyber) to manifest and explore consciousness (delic). Technology in service of inner revelation. The word itself tells you what the field is about: using computers and sensors as tools for mind-manifesting experiences. This wasn't accidental naming. It was a deliberate declaration of intent.</p>",
-                        "triggerLabel": "Historical Context"
+                        "title": "Psious - The European Clinical Standard",
+                        "content": "<p><strong>Psious</strong> was founded in Barcelona and built around a single practical constraint. most therapists who wanted to offer VRET couldn't afford or operate the expensive, technically complex systems that research labs used. Psious solved that by designing for the clinic, not the lab. Its platform is hardware agnostic, runs on a standard VR headset, and includes a web-based clinician control panel that requires no installation or technical expertise.</p><p>The platform offers over 70 virtual environments covering specific phobias, social anxiety, OCD, PTSD, panic disorder, and agoraphobia, alongside relaxation and mindfulness modules. What distinguishes the clinical experience is the real-time therapist dashboard. the clinician sees exactly what the patient sees, controls exposure intensity from a tablet, and can adjust or stop any scenario at any moment. Psious also ships with an electrodermal activity sensor, making physiological monitoring a standard part of the session rather than an add-on.</p><p>Its regulatory trajectory reflects the platform's growing reach. Psious expanded from Spain into the wider European market and then into the United States in 2019. In February 2024 it received FDA 510(k) authorization for its VR therapy program to treat adult anxiety disorders, which gave it a regulatory foothold in the US clinical market alongside its established European presence. In 2023 the company had rebranded as Amelia Virtual Care and subsequently merged with XRHealth, consolidating its mental health VR content library and clinical infrastructure into that platform.</p><p>For learners, Psious matters for two reasons. It is the clearest demonstration that VRET adoption was never limited to US research institutions, it became a clinical standard across Spain, the UK, France, and Germany before achieving US regulatory clearance. And its journey from Spanish startup to FDA-authorized platform absorbed into a larger telehealth company illustrates how the clinical VR field matures. validation, international expansion, regulatory clearance, consolidation.</p>",
+                        "triggerLabel": "US & UK Innovations"
                     },
                     {
-                        "title": "Historical Context",
-                        "media": {
-                            "type": "image",
-                            "src": "../assets/images/module1/tim-leary.webp"
-                        },
-                        "mediaLayout": "left",
-                        "content": "<p>The term 'cyberdelics' was popularized by Timothy Leary in the 1990s. Leary, known for his earlier psychedelic research, recognized that technology could serve similar consciousness-expanding purposes as substances. He foresaw a future where virtual reality and digital tools would become valid paths for inner exploration. We're now living in that future he envisioned.</p>",
-                        "triggerLabel": "Try the Simulation"
+                        "title": "What This Evidence Means for the Field",
+                        "content": "<p>VRET is the field's proof of concept. When skeptics question if 'headset experiences' can be therapeutic, VRET is the answer.</p><p><strong>Three Implications</strong></p><ul><li><strong>Credibility:</strong> 80%+ success rates lend weight to newer applications.</li><li><strong>Regulatory Pathways:</strong> FDA clearances for VRET pave the way for other tools.</li><li><strong>Infrastructure:</strong> 20+ years of research created the safety protocols and ethical frameworks we use today.</li></ul>",
+                        "triggerLabel": "Take Concept Check"
+                    },
+                    {
+                        "title": "Bravemind, Oxford VR, and Limbix",
+                        "content": "<p>Three platforms that shaped what clinical VR looks like in practice.</p><p><strong>Bravemind (USC Institute for Creative Technologies)</strong> was created by Dr. Albert 'Skip' Rizzo and his team, originally funded by the Office of Naval Research. It places veterans inside 14 reconstructed combat environments - Iraqi roads, Afghan villages, military bases - where a therapist controls the intensity in real time, allowing graduated exposure at a pace the patient can tolerate. In the largest randomised controlled trial to date, Bravemind performed equivalent to Prolonged Exposure, the gold standard PTSD treatment, and outperformed it in patients with co-morbid major depression. 76% of incoming patients preferred VR over traditional therapy. It has now been distributed to over 170 clinical sites, and through a partnership with the SoldierStrong Foundation, the software, equipment, and clinical training are provided free of charge to VA medical centers.</p><p><strong>Oxford VR's gameChangeVR</strong> is a University of Oxford spin-out that automated the delivery of CBT inside VR entirely - meaning a trained virtual coach guides patients through the program without a therapist present in real time. The therapy runs across six sessions totalling three hours, placing patients in simulated everyday situations - a café, a bus, a doctor's surgery - that many people with psychosis find too anxiety-provoking to enter in real life. Tested in the largest ever clinical trial of VR for mental health, a 346-patient randomised controlled trial across nine NHS Trusts published in The Lancet Psychiatry in 2022, gameChange produced significant reductions in agoraphobic avoidance and distress. The greatest benefits were in the most severely affected patients, and they held at the six-month follow-up. gameChange subsequently received NICE Early Value Assessment approval, making it the first VR therapy recommended for use in NHS mental health services.</p><p><strong>Limbix</strong> began as a VR platform building therapist-administered exposure therapy tools for adolescents, and its early work demonstrated the category's viability for that population. It pivoted to a smartphone-based format in 2019 and was acquired by digital health company Big Health in 2023, where its adolescent depression product SparkRx continues under that portfolio. Limbix is included here as a marker of how the clinical VR field has evolved. companies that validated concepts in VR sometimes carry that evidence base into adjacent formats as the technology and market mature.</p>",
+                        "triggerLabel": "Why Evidence Matters"
                     }
                 ]
             }
         },
         {
-            "id": "progressive_disclosure_1.1.2",
-            "title": "The Three Essential Components",
+            "id": "module_4_2_2_progressive",
+            "title": "The Breakthrough",
             "type": "progressive-disclosure",
             "content": {
                 "sections": [
                     {
-                        "title": "Three Legs of the Same Stool",
-                        "content": "<p>A cyberdelic experience requires three essential components working together. Remove any one of these, and it's no longer cyberdelic. Think of them as three legs of a stool, all must be present for it to stand. This framework is your primary evaluation tool for the rest of this course.</p>",
-                        "triggerLabel": "Component 1"
-                    },
-                    {
-                        "title": "Component 1 : Digital Technologies",
+                        "title": "SnowWorld - Where It Started",
+                        "content": "<p>In the late 90s, researchers Hunter Hoffman and David Patterson created <strong>SnowWorld</strong> for burn patients undergoing excruciating wound care. Patients threw virtual snowballs at penguins while nurses worked.</p><p><strong>The Result.</strong> 30-50% pain reduction (comparable to opioids). fMRI scans showed significantly less pain activity in the brain. It proved that if VR captures enough attention, pain processing literally gets less neural real estate.</p>",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module1/DigitalTechnologies.webp",
-                            "aiPrompt": "Modern VR headset (Meta Quest style), EEG headband, and HRV chest strap sensor arranged on a minimalist surface, professional product photography, soft directional lighting, tech-forward aesthetic, subtle Flower of Life sacred geometry pattern faintly visible in background, clean composition, 16:9 aspect ratio"
+                            "src": "../assets/images/module4/snowworld.webp",
+                            "alt": "Split view: Real hospital burn unit vs SnowWorld VR icy landscape",
+                            "aiPrompt": "Split composition - left half shows real hospital burn unit (sterile, clinical, person in bed receiving wound care treatment, medical staff in protective gear, sense of medical necessity but discomfort), right half shows the same person's perspective in SnowWorld VR (beautiful icy landscape, snowmen, playful snowball throwing, sense of wonder and distraction from pain), connecting line between the two sides showing the contrast, hope and innovation meeting medical reality, 16:9 aspect ratio"
                         },
-                        "mediaLayout": "right",
-                        "content": "<p>The first component is digital technology as the medium. This includes VR headsets, AR experiences, and biofeedback devices like EEG sensors or heart rate monitors. But not just any tech use qualifies, the technology must be purposefully designed to facilitate consciousness exploration. The device is the delivery system, not the destination.</p>",
-                        "triggerLabel": "Component 2"
+                        "triggerLabel": "The 4 Mechanisms",
+                        "mediaLayout": "right"
                     },
                     {
-                        "title": "Component 2 : Altered States",
-                        "media": {
-                            "type": "image",
-                            "src": "../assets/images/module1/meditation-comparison.webp",
-                            "aiPrompt": "Split-screen composition : person in traditional meditation pose with eyes closed on the left side, and the same person wearing a VR headset in a similar meditative pose on the right side, both surrounded by soft glowing mandala patterns and sacred geometry, ethereal purple and teal color palette, spiritual atmosphere meeting technology, sense of expanded consciousness, 16:9 aspect ratio"
-                        },
-                        "mediaLayout": "left",
-                        "content": "<p>The second component is the intentional cultivation of altered or expanded states of consciousness. This isn't accidental entertainment-induced immersion. It's a deliberate shift in awareness, whether that's deep meditative states, expanded perception, or transcendent experiences. The technology is used specifically to facilitate these states, not just to entertain or distract.</p>",
-                        "triggerLabel": "Component 3"
+                        "title": "The Four Mechanisms",
+                        "content": "<p>VR engages four distinct pathways</p><ul><li><strong>Attentional Capture (Cognitive):</strong> VR floods the senses, leaving limited bandwidth for pain processing.</li><li><strong>Gate Control (Neurological):</strong> Sensory input closes spinal 'gates', blocking pain signals.</li><li><strong>Emotional Regulation (Psychological):</strong> Shifting emotional state reduces pain <em>suffering</em>.</li><li><strong>Expectation Effects (Psychophysiological):</strong> Neural changes driven by the belief in the treatment (placebo effect).</li></ul>",
+                        "triggerLabel": "Beyond Pain"
                     },
                     {
-                        "title": "Component 3 : Transformational Intent",
-                        "content": "<p>The third component is transformational purpose. The experience is designed for personal growth, healing, spiritual exploration, or consciousness development. This is the 'why' behind everything. Entertainment might be enjoyable. Wellness might be beneficial. But cyberdelics aim for transformation at a deeper level : a shift in how you see yourself and the world.</p>",
-                        "triggerLabel": "All Three Required"
+                        "title": "The Same Mechanisms, A Broader Question",
+                        "content": "<p>SnowWorld used these four mechanisms as a side effect. The goal was pain relief, and immersion delivered it by accident of attention. Nobody designed SnowWorld to teach burn patients how to regulate their nervous systems. It worked because VR captured attention so completely that the brain had less left over for suffering.</p><p>That observation raised a different question for the researchers and designers who came after. what happens when you build an experience that targets these mechanisms on purpose? Not as a byproduct of distraction, but as the primary design intent.</p><p>Attentional capture becomes presence training. Emotional regulation becomes mood architecture. Expectation effects become intention-setting protocols. The same four pathways that reduce pain in a burn unit become the foundation for deliberate consciousness work.</p>",
+                        "triggerLabel": "Designing for the Loop"
                     },
                     {
-                        "title": "All Three Required",
-                        "media": {
-                            "type": "image",
-                            "src": "../assets/images/module1/AllThree.webp",
-                            "aiPrompt": "Three overlapping circles forming a Venn diagram, each circle labeled and colored differently : Technology in electric blue, Altered States in deep purple, Transformation in teal. Glowing bright white center where all three intersect. Clean infographic style, modern educational design, dark background, subtle sacred geometry texture in circle fill areas, 16:9 aspect ratio"
-                        },
-                        "mediaLayout": "full",
-                        "content": "<p>All three components must be present. A VR game might use technology and create immersion, but without transformational intent it's not cyberdelic. A meditation app might aim for transformation and use some tech, but without intentionally facilitating altered states through immersive technology it's not fully cyberdelic. The intersection of all three is what defines the field.</p><table style='width:100%; border-collapse:collapse; margin-top:10px; margin-bottom:16px; font-size:0.86em; text-align:left;'><thead><tr style='background:rgba(255,255,255,0.15); border-bottom:2px solid rgba(255,255,255,0.3);'><th style='padding:10px 12px; font-weight:600; letter-spacing:0.03em;'>Experience Type</th><th style='padding:10px 12px; font-weight:600; letter-spacing:0.03em;'>Digital Technology</th><th style='padding:10px 12px; font-weight:600; letter-spacing:0.03em;'>Altered States</th><th style='padding:10px 12px; font-weight:600; letter-spacing:0.03em;'>Transformational Intent</th><th style='padding:10px 12px; font-weight:600; letter-spacing:0.03em;'>Cyberdelic?</th></tr></thead><tbody><tr style='border-bottom:1px solid rgba(255,255,255,0.1); background:rgba(255,255,255,0.03);'><td style='padding:9px 12px;'><strong>VR game</strong></td><td style='padding:9px 12px;'>Yes</td><td style='padding:9px 12px;'>Sometimes</td><td style='padding:9px 12px;'>No</td><td style='padding:9px 12px;'>No</td></tr><tr style='border-bottom:1px solid rgba(255,255,255,0.1);'><td style='padding:9px 12px;'><strong>Meditation app</strong></td><td style='padding:9px 12px;'>Partial</td><td style='padding:9px 12px;'>Sometimes</td><td style='padding:9px 12px;'>Sometimes</td><td style='padding:9px 12px;'>Borderline</td></tr><tr style='background:rgba(255,255,255,0.03);'><td style='padding:9px 12px;'><strong>Cyberdelic experience</strong></td><td style='padding:9px 12px;'>Yes</td><td style='padding:9px 12px;'>Yes</td><td style='padding:9px 12px;'>Yes</td><td style='padding:9px 12px;'>Yes</td></tr></tbody></table>",
-                        "triggerLabel": "Evaluate Experiences"
+                        "title": "From Side Effect to Design Intent",
+                        "content": "<p>This shift matters practically. When you evaluate a cyberdelic platform, you are asking which of these mechanisms it is activating and whether it is doing so deliberately or incidentally.</p><p>A wellness VR environment that is simply beautiful is using attentional capture and emotional regulation, but passively. The experience shapes your state because immersion tends to do that. A biofeedback-enhanced platform uses those same mechanisms, but closes the loop. your state shapes the experience, which shapes your state again. The mechanism becomes bidirectional.</p><p>That bidirectional loop is what separates standard VR from the cyberdelic category. SnowWorld proved the mechanisms were real. What follows in this lesson is what happens when designers build for them directly.</p>",
+                        "triggerLabel": "The Cybernetic Loop"
+                    },
+                    {
+                        "title": "What SnowWorld Actually Proved",
+                        "content": "<p>SnowWorld's legacy is not the snowballs. It is the demonstration that a digital environment can intervene in a biological process that medicine had previously only addressed with chemistry. That is a significant claim, and it held up across replications and fMRI validation.</p><p>The field built on that proof in two directions. One went toward clinical infrastructure. FDA authorization, insurance reimbursement, hospital adoption. The other went toward intentional design. if these mechanisms work under clinical constraints, what becomes possible when the environment is built specifically to engage them? The biofeedback section of this lesson is that second direction.</p>",
+                        "triggerLabel": "Build The Framework"
                     }
                 ]
             }
         },
         {
-            "id": "scenario_1.1.3",
-            "title": "Experience Evaluation",
-            "type": "scenario-based",
-            "content": {
-                "scenes": [
-                    {
-                        "id": "intro",
-                        "narrative": "<p>You're evaluating three VR experiences to determine which qualify as cyberdelic. Same hardware, different intentions. Let's see how your understanding holds up.</p>",
-                        "choices": [
-                            {
-                                "id": "start",
-                                "label": "Begin Evaluation",
-                                "outcome": "exp1"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "exp1",
-                        "narrative": "<h3>EXPERIENCE 1 : Virtual Temple Meditation</h3><p>A VR meditation environment where users sit in a virtual temple, follow guided breathwork, and practice present-moment awareness. The visuals are serene and minimal. Biofeedback adjusts the ambient lighting based on heart rate variability. The technology fades into the background as users turn attention inward.</p><p><strong>Is this cyberdelic?</strong></p>",
-                        "choices": [
-                            {
-                                "id": "exp1_a",
-                                "label": "No, because it uses technology instead of traditional meditation",
-                                "outcome": "exp1_a_out"
-                            },
-                            {
-                                "id": "exp1_b",
-                                "label": "Yes, it uses technology to facilitate altered states and transformation",
-                                "outcome": "exp1_b_out"
-                            },
-                            {
-                                "id": "exp1_c",
-                                "label": "Only if the graphics are high-resolution and photorealistic",
-                                "outcome": "exp1_c_out"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "exp1_a_out",
-                        "narrative": "<p>This misunderstands what cyberdelics is. The field isn't opposed to technology; it uses technology purposefully for consciousness exploration. This experience has all three components: digital technology (VR and biofeedback), intentional altered states (meditative awareness), and transformational intent (inner exploration and development). It's cyberdelic.</p><p><em>Reflection: Technology serving consciousness exploration is exactly what cyberdelics means.</em></p>",
-                        "choices": [
-                            {
-                                "id": "next",
-                                "label": "Next Experience",
-                                "outcome": "exp2"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "exp1_b_out",
-                        "narrative": "<p>Correct. This is a cyberdelic experience. It has all three essential components: technology as medium (VR and biofeedback), intentional cultivation of altered states (meditative awareness), and transformational purpose (consciousness exploration and inner development). The technology serves the inward journey.</p><p><em>Reflection: When technology facilitates consciousness work, that's cyberdelic.</em></p>",
-                        "choices": [
-                            {
-                                "id": "next",
-                                "label": "Next Experience",
-                                "outcome": "exp2"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "exp1_c_out",
-                        "narrative": "<p>Visual quality doesn't determine what's cyberdelic. This experience could have simple graphics and still be deeply cyberdelic because of its intention and design. What matters is the purpose: facilitating consciousness exploration, not the technical specifications of the visuals.</p><p><em>Reflection: Design intent, not technical specs, defines cyberdelic nature.</em></p>",
-                        "choices": [
-                            {
-                                "id": "next",
-                                "label": "Next Experience",
-                                "outcome": "exp2"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "exp2",
-                        "narrative": "<h3>EXPERIENCE 2 : VR Roller Coaster</h3><p>A thrilling VR roller coaster experience with loops, drops, and high-speed turns. Users experience adrenaline, excitement, and sensory intensity. The technology creates full immersion in an external adventure. Heart rate monitoring displays your excitement level as a score.</p><p><strong>Is this cyberdelic?</strong></p>",
-                        "choices": [
-                            {
-                                "id": "exp2_a",
-                                "label": "Yes, because it uses VR technology and affects consciousness",
-                                "outcome": "exp2_a_out"
-                            },
-                            {
-                                "id": "exp2_b",
-                                "label": "Yes, because biofeedback is monitoring heart rate",
-                                "outcome": "exp2_b_out"
-                            },
-                            {
-                                "id": "exp2_c",
-                                "label": "No, the purpose is entertainment rather than consciousness exploration",
-                                "outcome": "exp2_c_out"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "exp2_a_out",
-                        "narrative": "<p>Not quite. While it uses technology and creates an experience, it lacks two critical components. There's no intentional cultivation of altered states, only entertainment-induced excitement. And the purpose is external entertainment, not transformation or inner exploration. This is entertainment VR, not cyberdelic.</p><p><em>Reflection: Technology alone doesn't make something cyberdelic. Intention matters.</em></p>",
-                        "choices": [
-                            {
-                                "id": "next",
-                                "label": "Next Experience",
-                                "outcome": "exp3"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "exp2_b_out",
-                        "narrative": "<p>The presence of biofeedback sensors doesn't automatically make something cyberdelic. Here, heart rate is gamified as a score for entertainment, not used to facilitate consciousness exploration or altered states. The purpose is still external thrills, not transformational inner work.</p><p><em>Reflection: How technology is used matters more than which technologies are present.</em></p>",
-                        "choices": [
-                            {
-                                "id": "next",
-                                "label": "Next Experience",
-                                "outcome": "exp3"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "exp2_c_out",
-                        "narrative": "<p>Correct. Despite using the same VR headset and even biofeedback, this experience isn't cyberdelic. It lacks transformational intent and doesn't facilitate consciousness-exploring altered states. The technology serves entertainment and external engagement, not inner exploration. Same tools, different purpose.</p><p><em>Reflection: The medium is neutral; purpose determines whether it's cyberdelic.</em></p>",
-                        "choices": [
-                            {
-                                "id": "next",
-                                "label": "Next Experience",
-                                "outcome": "exp3"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "exp3",
-                        "narrative": "<h3>EXPERIENCE 3 : Social VR Hangout</h3><p>A VR platform where users hang out together in virtual spaces, chat, attend events, play casual games, and socialize. The technology creates presence and connection. Users feel like they're really together despite physical distance.</p><p><strong>Is this cyberdelic?</strong></p>",
-                        "choices": [
-                            {
-                                "id": "exp3_a",
-                                "label": "Yes, because connection and presence are forms of consciousness",
-                                "outcome": "exp3_a_out"
-                            },
-                            {
-                                "id": "exp3_b",
-                                "label": "No, it's designed for social connection rather than consciousness exploration",
-                                "outcome": "exp3_b_out"
-                            },
-                            {
-                                "id": "exp3_c",
-                                "label": "It depends on how self-aware users are during conversations",
-                                "outcome": "exp3_c_out"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "exp3_a_out",
-                        "narrative": "<p>While connection is valuable and VR creates meaningful presence, this experience lacks the intentional cultivation of altered states and transformational purpose that define cyberdelics. It's designed for social interaction and entertainment, not consciousness exploration or inner development. This is social VR, not cyberdelic.</p><p><em>Reflection: NNot all meaningful VR experiences are cyberdelic. Intention matters.</em></p>",
-                        "choices": [
-                            {
-                                "id": "finish",
-                                "label": "Final Reflection",
-                                "outcome": "reflection"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "exp3_b_out",
-                        "narrative": "<p>Correct. This is social VR, not cyberdelics. While valuable for connection, it lacks the transformational intent and altered state cultivation that define cyberdelic experiences. The technology facilitates external social engagement rather than internal exploration.</p><p><em>Reflection: Different VR applications serve different purposes. Not all are cyberdelic.</em></p>",
-                        "choices": [
-                            {
-                                "id": "finish",
-                                "label": "Final Reflection",
-                                "outcome": "reflection"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "exp3_c_out",
-                        "narrative": "<p>User mindfulness doesn't change the experience's design intent. This platform is designed for social entertainment, not consciousness exploration. Even if someone brings awareness to their social interactions, that doesn't make the platform itself cyberdelic. The design purpose matters more than individual user intention.</p><p><em>Reflection: Individual awareness doesn't override design intention when categorizing experiences.</em></p>",
-                        "choices": [
-                            {
-                                "id": "finish",
-                                "label": "Final Reflection",
-                                "outcome": "reflection"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "reflection",
-                        "narrative": "<p>You've now evaluated three VR experiences using the same hardware. One is cyberdelic (the meditation temple). Two are not (the roller coaster, the social hangout). The technology is neutral, what makes something cyberdelic is the purpose it serves. When technology is designed to facilitate inward exploration and transformation, that's cyberdelics.</p>",
-                        "choices": [
-                            {
-                                "id": "continue",
-                                "label": "Explore The Principles",
-                                "outcome": "complete"
-                            }
-                        ]
-                    }
-                ]
-            }
-        },
-        {
-            "id": "progressive_disclosure_1.1.3b",
-            "title": "The Medium is the Message",
+            "id": "module_4_2_3_progressive",
+            "title": "Biofeedback Integration",
             "type": "progressive-disclosure",
             "content": {
                 "sections": [
                     {
-                        "title": "The Message in the Medium",
-                        "media": {
-                            "type": "image",
-                            "src": "../assets/images/module1/medium-is-message.webp",
-                            "aiPrompt": "A glowing, ethereal VR headset floating in a dark void, with radiant light waves and sacred geometry overflowing from the lenses, representing technology as purely a vessel for consciousness, electric blue and vibrant purple, mystical and modern, 16:9 aspect ratio"
-                        },
-                        "mediaLayout": "left",
-                        "content": "<p>'The medium is the message' is a famous phrase from media theorist Marshall McLuhan. In cyberdelics it's reversed, the technology is the medium, but consciousness exploration is the message. The tool doesn't define the purpose, the purpose defines how the tool is used.</p>",
-                        "triggerLabel": "Asking the Right Question"
+                        "title": "What Makes Biofeedback Different",
+                        "content": "<p>Standard VR delivers preset content. Biofeedback-enhanced VR creates a <strong>two-way conversation</strong>.</p><p>It creates a cybernetic loop, your body signal shapes the environment, which shapes your body signal. This makes internal states (calm, focus, anxiety) <strong>visible</strong> in real-time, accelerating self-regulation learning.</p>",
+                        "triggerLabel": "The 5-Step Loop"
                     },
                     {
-                        "title": "Asking the Right Question",
+                        "title": "The 5 Steps of the Loop",
+                        "content": "<ul><li><strong>Signal Generation:</strong> Body produces data (heart rate, brainwaves).</li><li><strong>Sensor Detection:</strong> Device (watch, headband) reads the signal.</li><li><strong>Processing:</strong> Algorithm interprets state (e.g., 'high stress').</li><li><strong>Response:</strong> VR environment changes (colors dim, geometry contracts).</li><li><strong>Adjustment:</strong> You perceive the change and shift your state, starting the loop again.</li></ul>",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module1/asking-right-question.webp",
-                            "aiPrompt": "A split conceptual image showing two paths extending from a futuristic interface, one path leading towards a brightly lit amusement park (entertainment), the other leading towards a serene, glowing mandala-filled meditation temple (transformation), high contrast lighting, cyberdelic aesthetic, 16:9 aspect ratio"
+                            "src": "../assets/images/module4/cybernetic_loop.webp",
+                            "alt": "Diagram of the 5-step cybernetic feedback loop between user and VR system",
+                            "aiPrompt": "Circular diagram showing the five-step cybernetic feedback loop - starting with person's silhouette at top, moving clockwise through: (1) heart rate waveform emerging from chest, (2) wrist-worn sensor capturing signal, (3) floating algorithm visualization (geometric processing), (4) VR landscape responding with visual changes, (5) arrow back to person showing adjustment - continuous flow indicated by circular arrangement, purple/teal sacred geometry aesthetic, clean infographic style, sense of living system not mechanical process, 16:9 aspect ratio"
                         },
-                        "mediaLayout": "right",
-                        "content": "<p>When evaluating any technology-based experience, ask one question: What is this designed to facilitate? Entertainment or transformation? External engagement or internal exploration? Distraction or presence? The answer to that question tells you whether you're looking at cyberdelics or something else entirely.</p>",
-                        "triggerLabel": "Same Headset, Different Worlds"
+                        "triggerLabel": "The Mirror Relationship",
+                        "mediaLayout": "right"
                     },
                     {
-                        "title": "Same Headset, Different Worlds",
-                        "media": {
-                            "type": "image",
-                            "src": "../assets/images/module1/same-headset.webp",
-                            "aiPrompt": "A single sleek VR headset seen from the front, reflecting a chaotic neon game world in one lens and a calm, deep space nebula with geometric patterns in the second lens, emphasizing the duality of purpose, hyper-realistic, vivid colors, 16:9 aspect ratio"
-                        },
-                        "mediaLayout": "left",
-                        "content": "<p>The same VR headset can transport you into a zombie shooter or into a guided journey through your own consciousness. The same biofeedback sensor can gamify productivity or reveal patterns in your meditative practice. Hardware is neutral, intention determines the category.</p>",
-                        "triggerLabel": "Intention as the OS"
-                    },
-                    {
-                        "title": "Intention as the Operating System",
-                        "media": {
-                            "type": "image",
-                            "src": "../assets/images/module1/intention-operating.webp",
-                            "aiPrompt": "An abstract representation of a human mind intersecting with a digital neural network, glowing lines of code transforming into organic glowing roots and branches, symbolizing intention overriding hardware, soft teal and gold color palette, complex and beautiful, 16:9 aspect ratio"
-                        },
-                        "mediaLayout": "right",
-                        "content": "<p>In the end, the most important software running any cyberdelic experience isn't written in code—it's the intention of both the creator and the participant. The hardware is just the vehicle. The true operating system of cyberdelics is the transformational intent.</p>",
-                        "triggerLabel": "Explore None-Substance Principle"
+                        "title": "The Mirror Relationship",
+                        "content": "<p>The cybernetic loop creates an honest mirror. In meditation, you might <em>think</em> you're calm when you're not. Biofeedback shows you the truth.</p><p>This is 'steering through feedback' - adjusting based on real-time data. It makes the invisible visible.</p>",
+                        "triggerLabel": "Explore Biofeedback Types"
                     }
                 ]
             }
         },
         {
-            "id": "progressive_disclosure_1.1.4",
-            "title": "The 'None-Substance' Principle",
+            "id": "module_4_2_4_progressive",
+            "title": "Biofeedback Types Explorer",
             "type": "progressive-disclosure",
             "content": {
                 "sections": [
                     {
-                        "title": "Focus on Technology",
-                        "content": "<p>While the word 'cyberdelics' draws from 'psychedelic,' our definition specifically focuses on experiences facilitated by technology without the use of chemical substances. This isn't a judgment on substances; it's a focus on the unique possibilities of digital tools. Let's explore why this distinction matters.</p>",
-                        "triggerLabel": "Why None-Substance?"
-                    },
-                    {
-                        "title": "Reliability & Repeatability",
+                        "title": "1. Heart Rate Variability (HRV)",
+                        "content": "<ul><li><strong>Measures:</strong> The variation in time between heartbeats. Higher HRV = resilience.</li><li><strong>Devices:</strong> Apple Watch, Polar H10, HeartMath emWave.</li><li><strong>Training Goal:</strong> Stress management, emotional regulation.</li><li><strong>VR Response:</strong> As HRV increases, the environment expands and becomes more vibrant (e.g., flowers blooming), rewarding your calm state.</li></ul>",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module1/futurecontrolknobs.webp",
-                            "aiPrompt": "Close-up of futuristic control knobs and sliders on a glowing interface, with labels like 'Dose', 'Intensity', 'Frequency', and 'Clarity', electric blue and purple lighting, representing the precision and control offered by technology-based consciousness tools, modern minimalist tech aesthetic, 16:9 aspect ratio"
+                            "src": "../assets/images/module4/hrv.webp",
+                            "alt": "User with heart rate sensor in VR, visualization of HRV coherence waveform",
+                            "aiPrompt": "Person wearing VR headset with a small heart rate sensor clipped to their earlobe, calm focused expression, subtle heart rate variability coherence waveform overlaid in soft blue-green, the VR environment visible through a translucent layer showing an expanding floral landscape that responds to a smooth heartbeat rhythm, modern wellness aesthetic, 16:9 aspect ratio"
                         },
-                        "mediaLayout": "right",
-                        "content": "<p>One major advantage of technology is control. You can 'turn it off' instantly. You can adjust the intensity, duration, and specific parameters of the experience with precision. Digital tools offer a level of repeatability and safety that is difficult to achieve with biological substances. This makes them highly accessible for a wider range of people and contexts.</p>",
-                        "triggerLabel": "Next Reason"
+                        "triggerLabel": "Next: EEG",
+                        "mediaLayout": "right"
                     },
                     {
-                        "title": "Wider Accessibility",
+                        "title": "2. EEG (Brainwaves)",
+                        "content": "<ul><li><strong>Measures:</strong> Brainwave frequencies (Alpha, Beta, Theta, Gamma).</li><li><strong>Devices:</strong> Muse headband, OpenBCI.</li><li><strong>Training Goal:</strong> Focus, deep meditation, anxiety reduction.</li><li><strong>VR Response:</strong> High Alpha (relaxed awareness) might make the environment luminous and spacious. High Beta (stress/busy mind) might cause visual noise or storms.</li></ul>",
+                        "triggerLabel": "Next: Respiration"
+                    },
+                    {
+                        "title": "3. Respiration (Breathing)",
+                        "content": "<ul><li><strong>Measures:</strong> Rate and depth of breathing.</li><li><strong>Devices:</strong> Chest belt, pressure sensors, or VR controller motion (no extra hardware required).</li><li><strong>Training Goal:</strong> Anxiety management, vagus nerve stimulation, diaphragmatic breathing.</li><li><strong>VR Response:</strong> The world breathes with you. Inhale = environment expands/brightens; Exhale = contracts/settles. Synchronization creates deep regulation.</li></ul>",
+                        "triggerLabel": "Next: GSR"
+                    },
+                    {
+                        "title": "4. Galvanic Skin Response (GSR)",
+                        "content": "<ul><li><strong>Measures:</strong> Skin conductance (sweat gland activity) reflecting emotional arousal.</li><li><strong>Devices:</strong> Empatica wristband, Pip sensor.</li><li><strong>Training Goal:</strong> Arousal regulation, stress awareness.</li><li><strong>VR Response:</strong> High arousal makes the world intense/fast; low arousal makes it calm/slow.</li></ul>",
+                        "triggerLabel": "Case Study: HeartMath"
+                    },
+                    {
+                        "title": "Case Study: HeartMath & HRV Coherence",
+                        "content": "<p><strong>HeartMath Institute</strong> has been researching HRV coherence since 1991. Their emWave device and Inner Balance sensor are among the most studied biofeedback tools in existence, with over 300 peer-reviewed publications connected to their research program.</p><ul><li><strong>Mechanism:</strong> The emWave measures beat-to-beat HRV from an ear clip or fingertip sensor. When your HRV enters a smooth, coherent rhythm (achieved through slow, intentional breathing), the visual display shifts from incoherence to coherence : low, medium, or high, represented in real-time.</li><li><strong>VR Integration:</strong> HeartMath's coherence feedback can be layered into VR environments where the landscape literally brightens, blooms, or expands as coherence increases. The environment becomes a mirror for your nervous system state.</li><li><strong>Why it matters for facilitators:</strong> HeartMath gives you a teachable, research-backed framework for explaining HRV to clients. The visual feedback loop is immediate and convincing : people who are skeptical about 'feeling calm' often trust a coherence score.</li><li><strong>Evidence level:</strong> Strong. Independent replication across stress reduction, emotional regulation, and cardiac health contexts.</li></ul>",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module1/accessible-tech-future.webp"
+                            "src": "../assets/images/module4/heartmath.webp",
+                            "alt": "HeartMath emWave sensor showing coherence waveform moving from jagged to smooth",
+                            "aiPrompt": "Split display showing HeartMath biofeedback in action : left side shows a small ear-clip sensor attached to a person's ear, right side shows a waveform visualization transitioning from jagged red incoherence to smooth flowing green coherence, overlaid on a soft VR environment of blooming flowers or expanding light patterns, sense of the nervous system being made visible, clinical but beautiful aesthetic, purple and teal tones, 16:9 aspect ratio"
                         },
-                        "mediaLayout": "left",
-                        "content": "<p>Cyberdelic tools can be used in many places where substances cannot : schools, workplaces, wellness centers, and homes. Because they don't involve pharmaceutical intervention, they bypass many legal, medical, and social barriers. This allows more people to explore consciousness safely and legally across different cultures and regulatory environments.</p>",
-                        "triggerLabel": "Next Reason"
-                    },
-                    {
-                        "title": "The 'Skill' of Presence",
-                        "media": {
-                            "type": "image",
-                            "src": "../assets/images/module1/mindfulness-brain-sync.webp",
-                            "aiPrompt": "Abstract visualization of a human brain synchronized with a digital geometric pattern (like a Metatron's Cube), representing the development of mental skills through technology-aided practice, glowing teal and white energy lines, sophisticated and intelligent aesthetic, 16:9 aspect ratio"
-                        },
-                        "mediaLayout": "right",
-                        "content": "<p>Cyberdelics often focus on 'training' the mind. Instead of a substance doing the work for you, technology facilitates you doing the work yourself. Biofeedback, for example, rewards your brain for reaching specific states. This builds mental 'muscles' and skills that you can carry with you even after you take the headset off. It's an active practice, not a passive experience.</p>",
-                        "triggerLabel": "Summary"
-                    },
-                    {
-                        "title": "A Unique Path",
-                        "content": "<p>In summary, the 'none-substance' principle defines cyberdelics as a technology-first approach to consciousness exploration. It emphasizes safety, control, accessibility, and skill-building. It's not a replacement for other paths it's a unique and increasingly important field of its own, built for the digital age.</p>",
-                        "triggerLabel": "Take the Quiz"
+                        "triggerLabel": "Take Knowledge Check",
+                        "mediaLayout": "right"
                     }
                 ]
             }
         },
         {
-            "id": "quiz_1.1_combined",
-            "title": "Module 1 Lesson 1 Quiz",
+            "id": "module_4_2_3_simulation",
+            "title": "The Cybernetic Loop",
+            "type": "interactive-simulation",
+            "content": {
+                "engine": "CyberneticLoop",
+                "params": {
+                    "speed": 4
+                }
+            }
+        },
+        {
+            "id": "quiz_4_2_1",
+            "title": "Concept Check: Mechanisms & Platforms",
             "type": "option-selector",
             "config": {
                 "mode": "single",
                 "style": "text",
                 "questions": [
                     {
-                        "question": "What does the 'cyber' in cyberdelics primarily refer to?",
+                        "question": "<h3>Mechanism Check</h3><p>A colleague asks. 'Why is VR exposure more effective than just imagining the fear? Imagination is free.'</p><p><strong>How do you respond?</strong></p>",
                         "options": [
                             {
-                                "id": "q1_1_a",
-                                "label": "Cybersecurity and protecting digital information",
+                                "id": "q1_a",
+                                "label": "It's more entertaining, so patients stick with it.",
                                 "correct": false
                             },
                             {
-                                "id": "q1_1_b",
-                                "label": "Digital technology and virtual environments as tools for experience",
+                                "id": "q1_b",
+                                "label": "It allows for more intense fears than imagination.",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_c",
+                                "label": "It provides better insurance documentation.",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_d",
+                                "label": "It creates real physiological arousal needed for extinction learning.",
                                 "correct": true
-                            },
-                            {
-                                "id": "q1_1_c",
-                                "label": "Social media and online communication platforms",
-                                "correct": false
-                            },
-                            {
-                                "id": "q1_1_d",
-                                "label": "Artificial intelligence and machine learning systems",
-                                "correct": false
                             }
                         ],
                         "synthesis": {
-                            "q1_1_a": "<p>While 'cyber' is used in cybersecurity, that's not what it means in cyberdelics. Here, 'cyber' refers to the broader realm of digital technology, virtual environments, and human-computer interaction, which are the tools we use to facilitate consciousness exploration. Think cybernetics and feedback systems, not security. <strong>Try again.</strong></p>",
-                            "q1_1_c": "<p>While social media exists in the digital realm, 'cyber' in cyberdelics specifically refers to immersive and biofeedback technologies used for consciousness exploration. Social platforms are about external communication, while cyberdelics focus on internal exploration using specialized tech. <strong>Try again.</strong></p>",
-                            "q1_1_d": "<p>AI and machine learning might be tools within cyberdelic experiences, but 'cyber' here primarily refers to the immersive digital technologies (VR, AR, biofeedback) that create the environment for consciousness exploration. It's about the interface between human and technology, not autonomous intelligent systems. <strong>Try again.</strong></p>",
-                            "q1_1_b": "<p>Exactly. 'Cyber' in cyberdelics refers to the digital technological realm : VR, AR, biofeedback devices, and computer-mediated experiences. It's about using technology as the medium for consciousness work. This connects back to cybernetics, the study of communication and control systems.</p>"
+                            "q1_a": "<p>Engagement matters, but it's not the *therapeutic* mechanism. The key is what happens in the nervous system.</p>",
+                            "q1_b": "<p>Actually, therapists often want *controlled* intensity, not just maximum intensity. The key is the body's response, not just the scare factor.</p>",
+                            "q1_c": "<p>Administrative benefits are nice, but they don't explain why the *patient* gets better results.</p>",
+                            "q1_d": "<p><strong>Correct!</strong> VR triggers genuine physiological responses (sweating, heart rate) that imagination rarely matches. This arousal is essential for the brain to learn safety (extinction learning).</p>"
                         }
                     },
                     {
-                        "question": "What does 'delic' (from psychedelic) literally mean?",
+                        "question": "<h3>Platform Matching</h3><p>A London therapist wants to add VR for social anxiety but needs an <strong>automated</strong> solution for home use because they can't always be present.</p><p><strong>Which platform fits best?</strong></p>",
                         "options": [
                             {
-                                "id": "q1_2_a",
-                                "label": "Creating hallucinations or visual distortions",
+                                "id": "q2_a",
+                                "label": "Psious",
                                 "correct": false
                             },
                             {
-                                "id": "q1_2_b",
-                                "label": "Mind-manifesting or revealing consciousness",
+                                "id": "q2_b",
+                                "label": "Limbix",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_c",
+                                "label": "Oxford VR",
                                 "correct": true
                             },
                             {
-                                "id": "q1_2_c",
-                                "label": "Causing euphoria and pleasure",
-                                "correct": false
-                            },
-                            {
-                                "id": "q1_2_d",
-                                "label": "Altering brain chemistry through substances",
+                                "id": "q2_d",
+                                "label": "Bravemind",
                                 "correct": false
                             }
                         ],
                         "synthesis": {
-                            "q1_2_a": "<p>This is a common misconception. 'Delic' comes from Greek words meaning 'mind-manifesting' or 'revealing the mind/soul.' It's about making consciousness visible and exploring inner dimensions, not just creating visual effects. Hallucinations might occur, but they're not the definition; revelation of consciousness is. <strong>Try again.</strong></p>",
-                            "q1_2_c": "<p>While consciousness exploration might involve pleasurable states, 'delic' doesn't mean pleasure. It means 'mind-manifesting' : revealing and exploring consciousness. The focus is on revelation and awareness expansion, not just feeling good. Transformation can be challenging, not always euphoric. <strong>Try again.</strong></p>",
-                            "q1_2_d": "<p>That's one method of creating mind-manifesting experiences (psychedelics), but 'delic' itself just means 'mind-manifesting.' It doesn't specify the method. This is exactly why cyberdelics can use the same suffix : both psychedelics and cyberdelics aim to manifest consciousness, just through different means. <strong>Try again.</strong></p>",
-                            "q1_2_b": "<p>Exactly right. 'Delic' comes from the Greek 'delos' (to manifest/reveal) and relates to 'psyche' (mind/soul). It's about revealing what's hidden in consciousness, expanding awareness, and making the invisible aspects of mind visible. This is the core of what both psychedelics and cyberdelics aim to do.</p>"
+                            "q2_a": "<p>Psious is great, but it's designed for therapist-led sessions, not automated home use.</p>",
+                            "q2_b": "<p>Limbix focuses on US adolescents, not the general UK adult population or automated delivery specifically.</p>",
+                            "q2_d": "<p>Bravemind is for military PTSD research, not social anxiety or general clinical use.</p>",
+                            "q2_c": "<p><strong>Correct!</strong> Oxford VR (UK-based) specializes in automated CBT using virtual coaches, specifically for conditions like social anxiety and agoraphobia. It matches the 'automated' and 'UK' context perfectly.</p>"
                         }
                     },
                     {
-                        "question": "You're evaluating three different VR experiences. Which one demonstrates all three cyberdelic components?",
+                        "question": "<h3>Focus Training Recommendation</h3><p>A client wants to train <strong>sustained attention</strong> and reduce mind-wandering. Which biofeedback type is best?</p>",
                         "options": [
                             {
-                                "id": "q2_1_a",
-                                "label": "A VR fitness game that tracks heart rate and makes workouts more engaging through gamification",
-                                "correct": false
-                            },
-                            {
-                                "id": "q2_1_b",
-                                "label": "A VR meditation environment with biofeedback that adapts based on brainwave patterns, designed to facilitate deep contemplative states",
+                                "id": "q1_a",
+                                "label": "EEG (Brainwaves)",
                                 "correct": true
                             },
                             {
-                                "id": "q2_1_c",
-                                "label": "A beautifully designed VR nature walk with calming music for stress relief",
+                                "id": "q1_b",
+                                "label": "HRV (Heart Rate Variability)",
                                 "correct": false
                             },
                             {
-                                "id": "q2_1_d",
-                                "label": "A VR social platform where users hang out in virtual spaces and attend events together",
+                                "id": "q1_c",
+                                "label": "Respiration",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_d",
+                                "label": "GSR (Skin Conductance)",
                                 "correct": false
                             }
                         ],
                         "synthesis": {
-                            "q2_1_a": "<p>This uses technology and biofeedback, but the purpose is fitness optimization, not consciousness exploration or personal transformation. The altered state here is just elevated heart rate from exercise, not an intentional shift in awareness. Without transformational intent focused on consciousness, this is wellness tech rather than cyberdelic. <strong>Try again.</strong></p>",
-                            "q2_1_c": "<p>While this uses VR technology and might help you relax, it's missing two critical components. There's no biofeedback or intentional cultivation of altered states, only passive relaxation. And the purpose is stress relief (wellness), not consciousness exploration or transformation. Relaxation and transformation are different goals. <strong>Try again.</strong></p>",
-                            "q2_1_d": "<p>This is social VR or entertainment. While it uses immersive technology, there's no intention to facilitate altered states of consciousness or serve transformational purposes. It's designed for connection and fun, which are valuable but different from cyberdelic aims. <strong>Try again.</strong></p>",
-                            "q2_1_b": "<p>Exactly right. This has all three components: technology (VR and EEG biofeedback), altered states (deep contemplative states intentionally cultivated), and transformational intent (designed for consciousness exploration and meditation practice). All three legs of the stool are present. This is a cyberdelic experience.</p>"
+                            "q1_a": "<p><strong>Correct!</strong> EEG directly measures brain states (Alpha, Beta, Gamma) associated with attention and concentration. It is the primary tool for focus training.</p>",
+                            "q1_b": "<p>HRV measures stress resilience, which supports focus, but doesn't directly track attention states.</p>",
+                            "q1_c": "<p>Breathing supports focus, but doesn't measure cognitive attention state directly.</p>",
+                            "q1_d": "<p>GSR measures emotional arousal, which is ambiguous (could be excitement or anxiety).</p>"
                         }
                     },
                     {
-                        "question": "A company adds biofeedback sensors to their existing VR game. Does this automatically make it cyberdelic?",
+                        "question": "<h3>HeartMath vs. Standard Fitness Tracker</h3><p>A client already owns an Apple Watch that tracks heart rate. Why would you recommend a dedicated HeartMath sensor instead for biofeedback training?</p>",
                         "options": [
                             {
-                                "id": "q2_2_a",
-                                "label": "Yes, because it now has technology and biofeedback working together",
+                                "id": "q2_a",
+                                "label": "HeartMath is more accurate at measuring raw heart rate.",
                                 "correct": false
                             },
                             {
-                                "id": "q2_2_b",
-                                "label": "No, unless the experience is redesigned to intentionally facilitate altered states and serve transformational purposes",
+                                "id": "q2_b",
+                                "label": "Apple Watch doesn't measure heart rate continuously.",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_c",
+                                "label": "HeartMath measures HRV coherence and feeds it back in real-time, enabling active self-regulation training.",
                                 "correct": true
                             },
                             {
-                                "id": "q2_2_c",
-                                "label": "Yes, because biofeedback sensors create altered states automatically",
-                                "correct": false
-                            },
-                            {
-                                "id": "q2_2_d",
-                                "label": "It depends on whether the graphics are high quality and immersive",
+                                "id": "q2_d",
+                                "label": "HeartMath has better battery life.",
                                 "correct": false
                             }
                         ],
                         "synthesis": {
-                            "q2_2_a": "<p>Technology and biofeedback are necessary but not sufficient. You also need the experience to intentionally facilitate altered states AND have transformational purpose. If the game is still focused on entertainment or competition rather than consciousness exploration, adding sensors doesn't change its fundamental nature. All three components must be present. <strong>Try again.</strong></p>",
-                            "q2_2_c": "<p>Biofeedback sensors measure physiological states, but they don't automatically create altered states of consciousness. The experience design must intentionally use that data to facilitate shifts in awareness. Sensors alone are just measurement tools; they need to be part of a larger system designed for consciousness exploration. <strong>Try again.</strong></p>",
-                            "q2_2_d": "<p>Visual quality and immersion don't determine whether something is cyberdelic. You can have stunning graphics that serve entertainment, or simple visuals that facilitate deep transformation. What matters is the design intent : whether the experience is purposefully created to explore consciousness and facilitate personal growth, regardless of graphical fidelity. <strong>Try again.</strong></p>",
-                            "q2_2_b": "<p>Exactly. Simply adding biofeedback to a game doesn't make it cyberdelic. The entire experience must be designed with the intention of facilitating consciousness exploration and transformation. The technology serves the transformational purpose; it's not about the devices themselves, but how they're used and why.</p>"
+                            "q2_a": "<p>Both devices measure heart rate accurately. Raw heart rate accuracy isn't the distinction.</p>",
+                            "q2_b": "<p>Apple Watch does measure heart rate continuously. The issue isn't measurement frequency.</p>",
+                            "q2_c": "<p><strong>Correct.</strong> The Apple Watch reports a number. HeartMath trains a skill. The emWave provides real-time coherence feedback designed specifically for self-regulation practice . the feedback loop is the point. Passive measurement and active biofeedback training are functionally different tools even when they're measuring the same physiological signal.</p>",
+                            "q2_d": "<p>Battery life is a practical concern but not the therapeutic reason to choose HeartMath.</p>"
                         }
                     },
                     {
-                        "question": "A developer wants to create a cyberdelic experience. What should they prioritize in their design?",
+                        "question": "<h3>System Reliability</h3><p>If a biofeedback sensor is inaccurate or the algorithm misinterprets your state, what happens?</p>",
                         "options": [
                             {
-                                "id": "q3_1_a",
-                                "label": "The highest resolution graphics and most realistic environments possible",
+                                "id": "q3_a",
+                                "label": "The system crashes.",
                                 "correct": false
                             },
                             {
-                                "id": "q3_1_b",
-                                "label": "Facilitating inward exploration and consciousness shifts, with technology supporting that purpose",
+                                "id": "q3_b",
+                                "label": "You verify the data manually.",
+                                "correct": false
+                            },
+                            {
+                                "id": "q3_c",
+                                "label": "You learn the wrong patterns.",
                                 "correct": true
                             },
                             {
-                                "id": "q3_1_c",
-                                "label": "Making the experience as entertaining and engaging as possible to keep users coming back",
-                                "correct": false
-                            },
-                            {
-                                "id": "q3_1_d",
-                                "label": "Adding as many technological features as possible to seem cutting-edge",
+                                "id": "q3_d",
+                                "label": "Placebo effect fixes it.",
                                 "correct": false
                             }
                         ],
                         "synthesis": {
-                            "q3_1_a": "<p>Graphics quality doesn't determine whether something is cyberdelic. Some of the most effective consciousness exploration tools use simple visuals. What matters is whether the experience facilitates inner exploration and transformation, not how photorealistic it looks. <strong>Try again.</strong></p>",
-                            "q3_1_c": "<p>Entertainment and engagement are different from transformation. While cyberdelic experiences can be engaging, entertainment shouldn't be the primary goal. Entertainment focuses on external stimulation and distraction, while cyberdelics focus on inner exploration and presence. These are fundamentally different design intentions. <strong>Try again.</strong></p>",
-                            "q3_1_d": "<p>More technology doesn't equal more cyberdelic. You could have a simple breath-awareness experience with minimal tech that's deeply cyberdelic, or a feature-packed VR game with every sensor imaginable that's pure entertainment. Technology serves the purpose. It isn't the purpose itself. <strong>Try again.</strong></p>",
-                            "q3_1_b": "<p>Exactly right. The primary design goal should be facilitating consciousness exploration and transformation. The technology, whether VR, biofeedback, or AR, exists to serve that purpose. Start with the transformational intention, then choose the tools that best support it. This is what makes an experience cyberdelic rather than just technically impressive.</p>"
-                        }
-                    },
-                    {
-                        "question": "What's the key difference between a VR roller coaster and a VR meditation experience?",
-                        "options": [
-                            {
-                                "id": "q3_2_a",
-                                "label": "The meditation experience is slower-paced",
-                                "correct": false
-                            },
-                            {
-                                "id": "q3_2_b",
-                                "label": "The roller coaster is more immersive and engaging",
-                                "correct": false
-                            },
-                            {
-                                "id": "q3_2_c",
-                                "label": "The meditation experience is designed for inward exploration, while the roller coaster is designed for external entertainment",
-                                "correct": true
-                            },
-                            {
-                                "id": "q3_2_d",
-                                "label": "The meditation experience requires biofeedback sensors",
-                                "correct": false
-                            }
-                        ],
-                        "synthesis": {
-                            "q3_2_a": "<p>Pacing alone doesn't determine what's cyberdelic. Some consciousness exploration experiences might be dynamic and fast-moving, while some entertainment experiences might be slow and contemplative. What matters is the intention behind the design : whether it's facilitating inner exploration or external entertainment. <strong>Try again.</strong></p>",
-                            "q3_2_b": "<p>Both can be equally immersive. Immersion and engagement don't determine what's cyberdelic; purpose does. A VR roller coaster creates immersion for entertainment, while VR meditation creates immersion for consciousness exploration. Both are immersive, but serve different intentions. <strong>Try again.</strong></p>",
-                            "q3_2_d": "<p>Not all cyberdelic experiences require biofeedback sensors, and not all experiences with biofeedback are cyberdelic. Sensors are one possible tool, but what makes something cyberdelic is the intention to facilitate consciousness exploration and transformation, not the specific technologies used. <strong>Try again.</strong></p>",
-                            "q3_2_c": "<p>Exactly. The fundamental difference is design intention. The meditation experience uses technology to facilitate turning attention inward and exploring consciousness. The roller coaster uses technology to create external thrills and entertainment. Same medium, different messages. This is what distinguishes cyberdelic from non-cyberdelic uses of technology.</p>"
-                        }
-                    },
-                    {
-                        "question": "Why is the 'none-substance' distinction important in cyberdelics?",
-                        "options": [
-                            {
-                                "id": "q4_1_a",
-                                "label": "Because technology is better and more powerful than substances in every way",
-                                "correct": false
-                            },
-                            {
-                                "id": "q4_1_b",
-                                "label": "Because it emphasizes safety, precision control, and wider accessibility for consciousness exploration",
-                                "correct": true
-                            },
-                            {
-                                "id": "q4_1_c",
-                                "label": "Because substances are illegal everywhere, so we have to use technology instead",
-                                "correct": false
-                            },
-                            {
-                                "id": "q4_1_d",
-                                "label": "Because substances don't actually work, while technology does",
-                                "correct": false
-                            }
-                        ],
-                        "synthesis": {
-                            "q4_1_a": "<p>This isn't about one being 'better' than the other. Both paths have value. Cyberdelics focuses on technology because of specific benefits it offers (like repeatability and control), not because it's trying to replace or compete with other methods. <strong>Try again.</strong></p>",
-                            "q4_1_c": "<p>Legal status varies widely around the world and isn't the primary reason for the focus on technology. The core reasons are functional : precision, safety, and the ability to build mental skills through active participation. <strong>Try again.</strong></p>",
-                            "q4_1_d": "<p>Both technology and substances have documented effects on consciousness. The 'none-substance' principle isn't about effectiveness; it's about the medium and the methodology. Cyberdelics specifically explores the potential of digital tools for this work. <strong>Try again.</strong></p>",
-                            "q4_1_b": "<p>Exactly. By focusing on technology alone, cyberdelics offers a path for consciousness exploration that is highly controllable, repeatable, and accessible to a broad audience without the medical or legal complexities of pharmaceutical substances.</p>"
-                        }
-                    },
-                    {
-                        "question": "What does it mean that cyberdelics is an 'active' practice?",
-                        "options": [
-                            {
-                                "id": "q4_2_a",
-                                "label": "You have to move around physically while using the technology",
-                                "correct": false
-                            },
-                            {
-                                "id": "q4_2_b",
-                                "label": "The technology helps you train your own mental skills (like focus or calm) rather than doing it for you",
-                                "correct": true
-                            },
-                            {
-                                "id": "q4_2_c",
-                                "label": "You have to be an expert in technology to use the tools",
-                                "correct": false
-                            },
-                            {
-                                "id": "q4_2_d",
-                                "label": "The experiences are always fast-paced and high-energy",
-                                "correct": false
-                            }
-                        ],
-                        "synthesis": {
-                            "q4_2_a": "<p>While some experiences might involve physical movement, 'active' in this context refers to mental engagement. It's about how you use your mind during the experience, not necessarily horizontal or vertical movement. <strong>Try again.</strong></p>",
-                            "q4_2_c": "<p>Cyberdelic tools are designed to be intuitive and accessible to everyone, regardless of technical expertise. You don't need to be a 'techie' to benefit from consciousness exploration. <strong>Try again.</strong></p>",
-                            "q4_2_d": "<p>Many cyberdelic experiences are actually very calm and slow-paced (like meditation). 'Active' refers to the mental effort and skill-building involved, not the visual or sensory intensity of the experience. <strong>Try again.</strong></p>",
-                            "q4_2_b": "<p>Precisely. Unlike pharmaceutical interventions where the effect is passive, cyberdelic tools often use biofeedback or interactive elements to help you learn how to navigate your own mind. This builds skills that you maintain after the experience is over. <strong>Quiz Complete.</strong></p>"
+                            "q3_a": "<p>The system usually keeps running, just with bad data.</p>",
+                            "q3_d": "<p>Placebo isn't magic. Bad feedback teaches bad habits.</p>",
+                            "q3_c": "<p><strong>Correct!</strong> If the mirror is distorted, you adjust based on false info. You might learn to tense up if the system incorrectly rewards tension as 'calm'. Accuracy matters.</p>"
                         }
                     }
                 ]

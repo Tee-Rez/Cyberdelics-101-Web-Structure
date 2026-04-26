@@ -307,17 +307,17 @@
                                 "correct": false
                             },
                             {
-                                "id": "q1_1_b",
+                                "id": "q1_1_c",
                                 "label": "Whether it costs money or is free",
                                 "correct": false
                             },
                             {
-                                "id": "q1_1_c",
+                                "id": "q1_1_d",
                                 "label": "How many users it has",
                                 "correct": false
                             },
                             {
-                                "id": "q1_1_d",
+                                "id": "q1_1_b",
                                 "label": "Immersive VR environments with biofeedback creating responsive, altered state-inducing experiences",
                                 "correct": true
                             }
@@ -333,12 +333,12 @@
                         "question": "Where would a VR meditation environment without any biofeedback sensors fall on the spectrum?",
                         "options": [
                             {
-                                "id": "q1_2_a",
+                                "id": "q1_2_b",
                                 "label": "In the overlap zone between meditation tech and cyberdelics",
                                 "correct": true
                             },
                             {
-                                "id": "q1_2_b",
+                                "id": "q1_2_a",
                                 "label": "Purely meditation tech, never cyberdelic",
                                 "correct": false
                             },
@@ -369,12 +369,12 @@
                                 "correct": false
                             },
                             {
-                                "id": "q2_1_b",
+                                "id": "q2_1_c",
                                 "label": "The specific biofeedback sensors being used",
                                 "correct": false
                             },
                             {
-                                "id": "q2_1_c",
+                                "id": "q2_1_b",
                                 "label": "Whether the focus is on optimizing function or exploring consciousness",
                                 "correct": true
                             },
@@ -395,12 +395,12 @@
                         "question": "Can the same technology be both wellness tech and cyberdelic depending on how it's used?",
                         "options": [
                             {
-                                "id": "q2_2_a",
+                                "id": "q2_2_b",
                                 "label": "Yes, the same device can serve wellness or cyberdelic purposes depending on intention and context",
                                 "correct": true
                             },
                             {
-                                "id": "q2_2_b",
+                                "id": "q2_2_a",
                                 "label": "No, technology is designed for one purpose and can't meaningfully serve another",
                                 "correct": false
                             },

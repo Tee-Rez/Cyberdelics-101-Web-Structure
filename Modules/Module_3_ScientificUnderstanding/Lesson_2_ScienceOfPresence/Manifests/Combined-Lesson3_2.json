@@ -133,7 +133,7 @@
                                 "label": "Is fully correct; higher resolution directly increases presence"
                             },
                             {
-                                "id": "B",
+                                "id": "D",
                                 "label": "Is correct for clinical VR but not for consciousness-expansion applications"
                             },
                             {
@@ -141,7 +141,7 @@
                                 "label": "Is incorrect because resolution has no effect on the VR experience at all"
                             },
                             {
-                                "id": "D",
+                                "id": "B",
                                 "label": "Conflates immersion with presence. Resolution is an immersion factor, and while higher immersion can support presence, presence is a psychological outcome determined by multiple factors beyond display quality",
                                 "correct": true
                             }
@@ -157,12 +157,12 @@
                         "question": "During a session, a client says. 'I keep noticing that I'm in a room with a headset on. I can feel my chair. I know this isn't real.' Based on presence research, what does this describe and what facilitation response is most appropriate?",
                         "options": [
                             {
-                                "id": "A",
+                                "id": "B",
                                 "label": "The client is experiencing low Place Illusion; the sense of actually being in the virtual space hasn't established itself, signaling that presence hasn't reached threshold and the amplification conditions aren't in place",
                                 "correct": true
                             },
                             {
-                                "id": "B",
+                                "id": "A",
                                 "label": "The client is being resistant to the process and needs encouragement to surrender to the experience"
                             },
                             {
@@ -217,16 +217,16 @@
                                 "label": "It can temporarily change how someone looks to other users in a shared VR space, but has no effect on the person inhabiting the avatar"
                             },
                             {
-                                "id": "B",
+                                "id": "D",
                                 "label": "It affects visual perception but not emotional responses or behavior"
                             },
                             {
-                                "id": "C",
+                                "id": "B",
                                 "label": "It can influence the person's behavior and self-perception in ways that extend beyond the VR session itself",
                                 "correct": true
                             },
                             {
-                                "id": "D",
+                                "id": "C",
                                 "label": "It produces effects only during the session, with no carry-over once the headset is removed"
                             }
                         ],
@@ -245,15 +245,15 @@
                                 "label": "Improving environmental audio quality and spatial coherence"
                             },
                             {
-                                "id": "B",
+                                "id": "C",
                                 "label": "Conducting a thorough pre-session preparation protocol"
                             },
                             {
-                                "id": "C",
+                                "id": "D",
                                 "label": "Upgrading to a higher-resolution headset"
                             },
                             {
-                                "id": "D",
+                                "id": "B",
                                 "label": "Adding full-body avatar tracking with first-person perspective and low synchrony latency",
                                 "correct": true
                             }

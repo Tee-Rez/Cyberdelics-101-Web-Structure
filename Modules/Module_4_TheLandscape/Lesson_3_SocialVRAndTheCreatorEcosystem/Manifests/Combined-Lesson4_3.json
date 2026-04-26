@@ -88,6 +88,106 @@
             }
         },
         {
+            "id": "module_4_3_3_progressive",
+            "title": "The Creator's Pipeline",
+            "type": "progressive-disclosure",
+            "content": {
+                "sections": [
+                    {
+                        "title": "The Engine Layer",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module4/engine-layer.webp",
+                            "alt": "Abstract visualization of a cyberdelic XR digital creation engine.",
+                            "aiPrompt": "Abstract visualization of a cyberdelic XR digital creation engine, a structural wireframe blueprint transforming into a vivid, glowing virtual reality environment. Teal and purple neon colors, immersive, expansive network of nodes, representing the pipeline from code to consciousness. No text. 16:9 aspect ratio"
+                        },
+                        "mediaLayout": "left",
+                        "content": "<p>The pipeline begins with the engine. Unity dominates the cyberdelic space because it prioritizes flexibility and runs smoothly on standalone headsets like the Meta Quest. Most commercial platforms use Unity as their foundation. Unreal Engine is less common but handles high-fidelity, photorealistic natural environments better, making it the choice for experiences demanding intense visual realism. WebXR frameworks like A-Frame trade high-end graphical fidelity for immediate, zero-friction accessibility. By letting developers build directly for the open web, they allow users to enter a shared cyberdelic space across any device without requiring specialized hardware or app store downloads.</p>",
+                        "triggerLabel": "The Distribution Funnel"
+                    },
+                    {
+                        "title": "The Distribution Funnel",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module4/distribution-funnel.webp",
+                            "alt": "Abstract visualization of a cyberdelic XR digital creation engine.",
+                            "aiPrompt": "Abstract visualization of a cyberdelic XR digital creation engine, a structural wireframe blueprint transforming into a vivid, glowing virtual reality environment. Teal and purple neon colors, immersive, expansive network of nodes, representing the pipeline from code to consciousness. No text. 16:9 aspect ratio"
+                        },
+                        "mediaLayout": "right",
+                        "content": "<p>Where an application lives tells you how thoroughly it has been vetted. The official Meta Quest Store and Steam act as gated channels. Applications there have passed technical reviews and content guidelines, which provides a baseline of stability. Conversely, platforms like itch.io or SideQuest operate with minimal gatekeeping. They are the proving grounds where independent creators release raw prototypes. A presence on SideQuest indicates experimental innovation, but it shifts the burden of quality control entirely onto the learner.</p>",
+                        "triggerLabel": "The Maturation Stages"
+                    },
+                    {
+                        "title": "The Maturation Stages",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module4/maturation-stages.webp",
+                            "alt": "Abstract visualization of a cyberdelic XR digital creation engine.",
+                            "aiPrompt": "Abstract visualization of a cyberdelic XR digital creation engine, a structural wireframe blueprint transforming into a vivid, glowing virtual reality environment. Teal and purple neon colors, immersive, expansive network of nodes, representing the pipeline from code to consciousness. No text. 16:9 aspect ratio"
+                        },
+                        "mediaLayout": "left",
+                        "content": "<p>A cyberdelic application rarely launches complete. It begins as a prototype testing core emotional mechanics, often shared freely in creator communities. If the mechanics work, it enters an alpha or beta phase on an open distribution channel, where developers fix bugs based on early user feedback. A full release on a gated store marks maturity as a polished consumer product. The final and most difficult stage is clinical integration. To be prescribed as a therapeutic, an application must undergo rigorous FDA validation, moving from an unregulated wellness tool to a classified medical device.</p>",
+                        "triggerLabel": "Vetting via Pipeline Position"
+                    },
+                    {
+                        "title": "Vetting via Pipeline Position",
+                        "content": "<p>You can use an application's position in this pipeline as an initial filter. A featured application on a gated store carries high technical trust. An application launched yesterday on SideQuest carries an unknown risk profile. This does not mean you only recommend mainstream applications. A sophisticated facilitator understands when to say that an application is experimental and rough around the edges, but offers a depth of experience that the polished commercial platforms have not yet reached.</p>",
+                        "triggerLabel": "Continue to Evaluating Quality"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "module_4_3_4_progressive",
+            "title": "Evaluating Quality",
+            "type": "progressive-disclosure",
+            "content": {
+                "sections": [
+                    {
+                        "title": "The Four Creator Ecosystems",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module4/creator-ecosystem.webp",
+                            "alt": "Conceptual visualization of evaluating quality in a digital ecosystem.",
+                            "aiPrompt": "Conceptual visualization of evaluating quality in a digital ecosystem. Four glowing architectural pillars in a dark cyberspace, representing different creator models. Calm, trustworthy and analytical vibe, glowing teal and soft gold accents, symmetrical composition, no text. 16:9 aspect ratio"
+                        },
+                        "mediaLayout": "right",
+                        "content": "<p>Not all cyberdelic applications are built for the same purpose because their creators operate under different models. Commercial platforms are heavily funded and polished, but they face immense pressure to monetize and scale. Research institutions build platforms to be scientifically rigorous, but they often lack the interface design necessary for public use. Community creators build passion projects in open social VR environments, which offer authentic connection but wildly variable quality. Hybrid developers attempt to balance mission-driven therapeutic design with sustainable business models.</p>",
+                        "triggerLabel": "Identifying Green Flags"
+                    },
+                    {
+                        "title": "Identifying Green Flags",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module4/green-flags.webp",
+                            "alt": "Conceptual visualization of evaluating quality in a digital ecosystem.",
+                            "aiPrompt": "Conceptual visualization of evaluating quality in a digital ecosystem. Four glowing architectural pillars in a dark cyberspace, representing different creator models. Calm, trustworthy and analytical vibe, glowing teal and soft gold accents, symmetrical composition, no text. 16:9 aspect ratio"
+                        },
+                        "mediaLayout": "left",
+                        "content": "<p>Quality in this space looks like transparency and care for psychological safety. An application built with integrity clearly cites its underlying research and explicitly states its intended use, including who should not use it. The developers provide training resources or integration guides for facilitators, recognizing that the technology alone is insufficient. Active development is another strong signal. You should see regular updates, bug fixes, and a responsive channel for user support. These indicate a team committed to long-term impact rather than a quick release.</p>",
+                        "triggerLabel": "Spotting Red Flags"
+                    },
+                    {
+                        "title": "Spotting Red Flags",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module4/red-flags.webp",
+                            "alt": "Conceptual visualization of evaluating quality in a digital ecosystem.",
+                            "aiPrompt": "Conceptual visualization of evaluating quality in a digital ecosystem. Four glowing architectural pillars in a dark cyberspace, representing different creator models. Calm, trustworthy and analytical vibe, glowing teal and soft gold accents, symmetrical composition, no text. 16:9 aspect ratio"
+                        },
+                        "mediaLayout": "right",
+                        "content": "<p>The most dangerous red flag is an unsubstantiated medical claim. An application claiming to cure anxiety or treat trauma without explicit FDA medical device clearance is operating unsafely and unethically. A lack of preparation and integration mechanics is equally concerning. Dropping a user into an intense state-shifting experience without a framework to process it violates basic therapeutic principles. Anonymous developers provide zero accountability when things go wrong. Predatory pricing models that trap users in subscriptions signal that the platform prioritizes extraction over healing.</p>",
+                        "triggerLabel": "Applying the Framework"
+                    },
+                    {
+                        "title": "Applying the Framework",
+                        "content": "<p>Evaluation requires more than sorting applications into good and bad categories. It requires matching the tool's maturity and safety profile to a specific need. An application with all green flags can be recommended freely to a general audience. An application with mixed signals might be appropriate for an experienced psychonaut, provided you contextualize it as early-stage and unpolished. An application displaying predatory behavior or making illegal medical claims must be avoided completely. The facilitator's role is to act as a trusted filter in an unregulated landscape.</p>",
+                        "triggerLabel": "Test Your Judgment"
+                    }
+                ]
+            }
+        },
+        {
             "id": "module_4_3_2_scenario",
             "title": "Scenario: Three People, Three Needs",
             "type": "scenario-based",
@@ -287,64 +387,6 @@
                                 "outcome": "reflection"
                             }
                         ]
-                    }
-                ]
-            }
-        },
-        {
-            "id": "module_4_3_3_progressive",
-            "title": "The Creator's Pipeline",
-            "type": "progressive-disclosure",
-            "content": {
-                "sections": [
-                    {
-                        "title": "Creation Engines",
-                        "content": "<ul><li><strong>Unity:</strong> The industry standard. Flexible, massive asset library. Most commercial apps (TRIPP, Enosis) use Unity.</li><li><strong>Unreal Engine:</strong> High fidelity. Used for photorealistic nature or cinematic experiences.</li><li><strong>Open Brush:</strong> Spatial painting. Used for creative flow states.</li><li><strong>Mozilla Hubs:</strong> Web-based, runs in browser. Accessible but lower fidelity.</li></ul>",
-                        "triggerLabel": "Distribution Channels"
-                    },
-                    {
-                        "title": "Distribution Channels",
-                        "content": "<p>Where an app lives tells you its maturity</p><ul><li><strong>Quest Store:</strong> Vetted, polished, safe. Takes months to approve.</li><li><strong>SideQuest:</strong> Indepentent, experimental. Where innovation happens first, but 'buyer beware'.</li><li><strong>Steam:</strong> PC VR. Mid-tier vetting, home of indie experiments.</li><li><strong>itch.io:</strong> Zero gatekeeping. Raw prototypes and passion projects.</li></ul>",
-                        "triggerLabel": "The Pipeline Stages"
-                    },
-                    {
-                        "title": "The Pipeline Stages",
-                        "content": "<ul><li><strong>Prototype (itch.io):</strong> Rough concept, testing mechanics.</li><li><strong>Alpha/Beta (SideQuest):</strong> Core features working, buggy.</li><li><strong>Full Release (Steam/Quest):</strong> Polished, stable product.</li><li><strong>Expansion:</strong> Marketing, partnerships.</li><li><strong>Integration (Clinical):</strong> FDA/Insurance validation (RelieVRx).</li></ul>",
-                        "triggerLabel": "Vetting Signals"
-                    },
-                    {
-                        "title": "Vetting via Distribution",
-                        "content": "<ul><li><strong>High Trust:</strong> Quest Store featured apps, Steam with many positive reviews.</li><li><strong>Medium Trust:</strong> SideQuest with strong dev reputation.</li><li><strong>Lower Trust:</strong> Brand new SideQuest/itch.io releases with no reviews.</li><li><strong>Sophisticated Advice:</strong> 'This is on SideQuest, so it's experimental. Expect bugs, but it's cutting edge.'</li></ul>",
-                        "triggerLabel": "Continue to Creator Types"
-                    }
-                ]
-            }
-        },
-        {
-            "id": "module_4_3_4_progressive",
-            "title": "Evaluating Quality",
-            "type": "progressive-disclosure",
-            "content": {
-                "sections": [
-                    {
-                        "title": "The Four Creator Types",
-                        "content": "<ul><li><strong>Commercial Platforms (TRIPP):</strong> Funded, polished, accountable. Pressure to monetize.</li><li><strong>Research Institutions (Isness-D):</strong> Rigorous, evidence-backed. Often unpolished or hard to access.</li><li><strong>Community Creators (VRChat):</strong> Passion-driven. Authentic but variable quality.</li><li><strong>Hybrid Developers (Flowly):</strong> Mission-driven but sustainable. Often clinician-led.</li></ul>",
-                        "triggerLabel": "Green Flags"
-                    },
-                    {
-                        "title": "Green Flag Quality Indicators",
-                        "content": "<ul><li><strong>Transparent Evidence:</strong> Cites research, explains mechanisms.</li><li><strong>Clear Intended Use:</strong> States who it's for/not for. Includes disclaimers.</li><li><strong>Facilitator Resources:</strong> Training or guides available.</li><li><strong>Active Development:</strong> Regular updates, bug fixes.</li><li><strong>Responsive Support:</strong> A way to get help.</li></ul>",
-                        "triggerLabel": "Red Flags"
-                    },
-                    {
-                        "title": "Red Flag Warning Signs",
-                        "content": "<ul><li><strong>Medical Claims Without Validation:</strong> 'Cures anxiety' without FDA clearance is a huge red flag.</li><li><strong>No Prep/Integration:</strong> Drop-in, intense experience, drop-out. Unsafe.</li><li><strong>Anonymous Developers:</strong> No accountability.</li><li><strong>No Reviews/Community:</strong> If it's old but empty, it failed.</li><li><strong>Predatory Pricing:</strong> High fees, no trial, hard to cancel.</li></ul>",
-                        "triggerLabel": "Applying the Framework"
-                    },
-                    {
-                        "title": "Applying the Framework",
-                        "content": "<ul><li><strong>High Trust:</strong> Green flags, no red flags. Recommend freely.</li><li><strong>Conditional:</strong> Mix of signals. 'This is early stage, expect roughness.'</li><li><strong>Avoid:</strong> Red flags like medical claims or predatory pricing. 'I cannot recommend this safely.'</li><li><strong>Sophisticated Stance:</strong> Don't just judge good/bad. Judge fit for purpose and risk level.</li></ul>",
-                        "triggerLabel": "Test Your Judgment"
                     }
                 ]
             }

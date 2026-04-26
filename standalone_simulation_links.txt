@@ -22,6 +22,9 @@ https://tee-rez.github.io/Cyberdelics-101-Web-Structure/Modules/standalone/tesse
 Ecosystem Map:
 https://tee-rez.github.io/Cyberdelics-101-Web-Structure/Modules/standalone/ecosystem-map.html
 
+Module 1 Lesson 1 Player:
+https://tee-rez.github.io/Cyberdelics-101-Web-Structure/Modules/module1-lesson1-player.html
+
 ---
 
 ## HTML Embed Links / Anchor Tags
@@ -40,6 +43,8 @@ If you need to paste these as actual HTML anchor tags into a page:
 <a href="https://tee-rez.github.io/Cyberdelics-101-Web-Structure/Modules/standalone/tesseract-explorer.html" target="_blank">Tesseract Explorer</a>
 
 <a href="https://tee-rez.github.io/Cyberdelics-101-Web-Structure/Modules/standalone/ecosystem-map.html" target="_blank">Ecosystem Map</a>
+
+<a href="https://tee-rez.github.io/Cyberdelics-101-Web-Structure/Modules/module1-lesson1-player.html" target="_blank">Module 1 Lesson 1 Player</a>
 ```
 
 ## Hosted Root Level (Alternative Full Integrations)

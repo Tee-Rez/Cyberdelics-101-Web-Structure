@@ -53,6 +53,10 @@
             this._bindEvents();
             this.recalc();
             this.resize(this.container.clientWidth, this.container.clientHeight);
+            
+            const s1El = this.container.querySelector('#s1');
+            if (s1El) this.onSliderInput(s1El);
+            
             console.log('[PresenceEmbodimentSim] Initialized');
         },
 
@@ -68,43 +72,53 @@
                     </div>
 
                     <div class="pes-grid">
-                        <div class="viewer">
-                            <div class="viewer-bar">
-                                <span class="viewer-bar-label">Session View</span>
-                                <div class="viewer-meters">
-                                    <div class="v-meter pres">
-                                        <div class="v-meter-dot"></div>
-                                        <div class="v-meter-track"><div class="v-meter-fill" id="pm" style="width:0%"></div></div>
-                                        <span class="v-meter-num" id="pn">0%</span>
+                        <div class="left-col" style="display: flex; flex-direction: column; gap: 20px; min-width: 0;">
+                            <div class="viewer">
+                                <div class="viewer-bar">
+                                    <span class="viewer-bar-label">Session View</span>
+                                    <div class="viewer-meters">
+                                        <div class="v-meter pres">
+                                            <div class="v-meter-dot"></div>
+                                            <div class="v-meter-track"><div class="v-meter-fill" id="pm" style="width:0%"></div></div>
+                                            <span class="v-meter-num" id="pn">0%</span>
+                                        </div>
+                                        <div class="v-meter emb">
+                                            <div class="v-meter-dot"></div>
+                                            <div class="v-meter-track"><div class="v-meter-fill" id="em" style="width:0%"></div></div>
+                                            <span class="v-meter-num" id="en">0%</span>
+                                        </div>
                                     </div>
-                                    <div class="v-meter emb">
-                                        <div class="v-meter-dot"></div>
-                                        <div class="v-meter-track"><div class="v-meter-fill" id="em" style="width:0%"></div></div>
-                                        <span class="v-meter-num" id="en">0%</span>
+                                </div>
+
+                                <div class="canvas-wrap" id="canvasWrap">
+                                    <div class="load-overlay" id="loadOverlay">
+                                        <div class="load-dots">
+                                            <div class="load-dot"></div><div class="load-dot"></div><div class="load-dot"></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="canvas-wrap" id="canvasWrap">
-                                <div class="load-overlay" id="loadOverlay">
-                                    <div class="load-dots">
-                                        <div class="load-dot"></div><div class="load-dot"></div><div class="load-dot"></div>
+                            <div class="stages-frame">
+                                <div class="profile-strip" id="pstrip">
+                                    <div class="profile-pip"></div>
+                                    <div class="profile-text">
+                                        <div class="profile-idle" id="pidle">Adjust parameters to discover session states...</div>
+                                        <div class="profile-name" id="pname"></div>
+                                        <div class="profile-quote" id="pquote"></div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="profile-strip" id="pstrip">
-                                <div class="profile-pip"></div>
-                                <div class="profile-text">
-                                    <div class="profile-idle" id="pidle">Adjust parameters to discover session states...</div>
-                                    <div class="profile-name" id="pname"></div>
-                                    <div class="profile-quote" id="pquote"></div>
+                                <div class="profiles-grid">
+                                    <div class="profiles-grid-hdr">Six States to Discover</div>
+                                    <div class="pg-items" id="pgrid"></div>
                                 </div>
                             </div>
 
-                            <div class="profiles-grid">
-                                <div class="profiles-grid-hdr">Six States to Discover</div>
-                                <div class="pg-items" id="pgrid"></div>
+                            <div class="slider-desc-panel" id="descPanel">
+                                <div class="slider-desc-idle" id="descIdle">Touch a slider to learn what it controls...</div>
+                                <div class="slider-desc-name" id="descName"></div>
+                                <div class="slider-desc-text" id="descText"></div>
                             </div>
                         </div>
 
@@ -117,7 +131,7 @@
                                 <div class="slider-row">
                                     <div class="slider-top"><span class="slider-name">Body-Environment Synchrony</span></div>
                                     <div class="slider-ends"><span>Sluggish</span><span>Instantaneous</span></div>
-                                    <input type="range" class="p-range" id="s1" min="0" max="100" value="20" style="--v:20">
+                                    <input type="range" class="p-range" id="s1" min="0" max="100" value="75" style="--v:75">
                                 </div>
                                 <div class="slider-row">
                                     <div class="slider-top"><span class="slider-name">Environmental Responsiveness</span></div>
@@ -153,12 +167,6 @@
                                     <div class="slider-ends"><span>None</span><span>Thorough</span></div>
                                     <input type="range" class="b-range" id="s5" min="0" max="100" value="15" style="--v:15">
                                 </div>
-                            </div>
-
-                            <div class="slider-desc-panel" id="descPanel">
-                                <div class="slider-desc-idle" id="descIdle">Touch a slider to learn what it controls...</div>
-                                <div class="slider-desc-name" id="descName"></div>
-                                <div class="slider-desc-text" id="descText"></div>
                             </div>
                         </div>
                     </div>
