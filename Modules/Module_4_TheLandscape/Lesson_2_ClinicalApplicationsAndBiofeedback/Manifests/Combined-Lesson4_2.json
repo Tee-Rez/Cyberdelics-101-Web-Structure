@@ -132,27 +132,40 @@
                         "content": "<ul><li><strong>Measures:</strong> The variation in time between heartbeats. Higher HRV = resilience.</li><li><strong>Devices:</strong> Apple Watch, Polar H10, HeartMath emWave.</li><li><strong>Training Goal:</strong> Stress management, emotional regulation.</li><li><strong>VR Response:</strong> As HRV increases, the environment expands and becomes more vibrant (e.g., flowers blooming), rewarding your calm state.</li></ul>",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module4/hrv.webp",
-                            "alt": "User with heart rate sensor in VR, visualization of HRV coherence waveform",
-                            "aiPrompt": "Person wearing VR headset with a small heart rate sensor clipped to their earlobe, calm focused expression, subtle heart rate variability coherence waveform overlaid in soft blue-green, the VR environment visible through a translucent layer showing an expanding floral landscape that responds to a smooth heartbeat rhythm, modern wellness aesthetic, 16:9 aspect ratio"
+                            "src": "../assets/images/module4/hrv.webp"
                         },
-                        "triggerLabel": "Next: EEG",
-                        "mediaLayout": "right"
+                        "mediaLayout": "right",
+                        "triggerLabel": "Next: EEG"
                     },
                     {
                         "title": "2. EEG (Brainwaves)",
                         "content": "<ul><li><strong>Measures:</strong> Brainwave frequencies (Alpha, Beta, Theta, Gamma).</li><li><strong>Devices:</strong> Muse headband, OpenBCI.</li><li><strong>Training Goal:</strong> Focus, deep meditation, anxiety reduction.</li><li><strong>VR Response:</strong> High Alpha (relaxed awareness) might make the environment luminous and spacious. High Beta (stress/busy mind) might cause visual noise or storms.</li></ul>",
-                        "triggerLabel": "Next: Respiration"
+                        "triggerLabel": "Next: Respiration",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module4/EEG.webp"
+                        },
+                        "mediaLayout": "left"
                     },
                     {
                         "title": "3. Respiration (Breathing)",
                         "content": "<ul><li><strong>Measures:</strong> Rate and depth of breathing.</li><li><strong>Devices:</strong> Chest belt, pressure sensors, or VR controller motion (no extra hardware required).</li><li><strong>Training Goal:</strong> Anxiety management, vagus nerve stimulation, diaphragmatic breathing.</li><li><strong>VR Response:</strong> The world breathes with you. Inhale = environment expands/brightens; Exhale = contracts/settles. Synchronization creates deep regulation.</li></ul>",
-                        "triggerLabel": "Next: GSR"
+                        "triggerLabel": "Next: GSR",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module4/Respiration.webp"
+                        },
+                        "mediaLayout": "right"
                     },
                     {
                         "title": "4. Galvanic Skin Response (GSR)",
                         "content": "<ul><li><strong>Measures:</strong> Skin conductance (sweat gland activity) reflecting emotional arousal.</li><li><strong>Devices:</strong> Empatica wristband, Pip sensor.</li><li><strong>Training Goal:</strong> Arousal regulation, stress awareness.</li><li><strong>VR Response:</strong> High arousal makes the world intense/fast; low arousal makes it calm/slow.</li></ul>",
-                        "triggerLabel": "Case Study: HeartMath"
+                        "triggerLabel": "Case Study: HeartMath",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module4/GSR.webp"
+                        },
+                        "mediaLayout": "left"
                     },
                     {
                         "title": "Case Study: HeartMath & HRV Coherence",

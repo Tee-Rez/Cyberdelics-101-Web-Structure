@@ -19,16 +19,28 @@ for root, _, files in os.walk(start_dir):
             png_path = os.path.join(root, filename)
             webp_path = os.path.splitext(png_path)[0] + ".webp"
             
+            # If WEBP doesn't exist, convert it
             if not os.path.exists(webp_path):
                 try:
                     img = Image.open(png_path)
                     img.save(webp_path, "WEBP", quality=85) # Good default compression
                     converted_count += 1
                     print(f"Converted: {filename} -> {os.path.basename(webp_path)}")
+                    
+                    # Delete the PNG after successful conversion
+                    os.remove(png_path)
+                    print(f"Deleted original: {filename}")
                 except Exception as e:
                     print(f"Error converting {png_path}: {e}")
+            else:
+                # If WEBP already exists, still delete the PNG as requested
+                try:
+                    os.remove(png_path)
+                    print(f"WebP already exists. Deleted original: {filename}")
+                except Exception as e:
+                    print(f"Error deleting existing PNG {png_path}: {e}")
 
-print(f"\nFinished converting {converted_count} PNG files to WEBP.")
+print(f"\nFinished converting {converted_count} PNG files to WEBP and cleaned up original PNGs.")
 
 # 2. Update File References
 valid_extensions = {".json", ".js", ".tsx", ".html", ".css", ".md"}

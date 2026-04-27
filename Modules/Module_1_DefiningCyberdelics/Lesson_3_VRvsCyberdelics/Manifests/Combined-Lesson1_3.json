@@ -203,22 +203,42 @@
                     {
                         "title": "The Architecture of Experience",
                         "content": "<p>Every intentional cyberdelic experience is built across six dimensions. These are not arbitrary checkboxes. They are the fundamental questions a designer must answer to create a coherent intervention. When an experience feels fragmented or ineffective, it is usually because one or more of these dimensions was left undefined.</p>",
-                        "triggerLabel": "The Substrate"
+                        "triggerLabel": "The Substrate",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module1/ArchitectureOfExperience.webp"
+                        },
+                        "mediaLayout": "left"
                     },
                     {
                         "title": "Reality and Sensory Channels",
                         "content": "<p>The first two dimensions form the substrate of the experience. Reality is the world the experience inhabits, whether that is a fully digital environment, an augmented physical space, or your own biology. The Sensory dimension defines the perceptual channels used to access that reality. An experience might rely purely on sweeping visual landscapes, or it might center entirely on tactile feedback and acoustic resonance.</p>",
-                        "triggerLabel": "The Internal Shift"
+                        "triggerLabel": "The Internal Shift",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module1/Substrate.webp"
+                        },
+                        "mediaLayout": "right"
                     },
                     {
                         "title": "Presence and States",
                         "content": "<p>The next two dimensions address the internal shift. Presence is the quality of awareness the architecture cultivates, like grounded embodiment or focused mental clarity. States refers to the transient shifts in consciousness that occur during the session. A cyberdelic design might aim to facilitate a temporary ego softening or a profound emotional release, using the reality substrate and sensory channels as the catalyst.</p>",
-                        "triggerLabel": "The Lasting Impact"
+                        "triggerLabel": "The Lasting Impact",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module1/Internal.webp"
+                        },
+                        "mediaLayout": "left"
                     },
                     {
                         "title": "Traits and Meaning",
                         "content": "<p>The final two dimensions define the lasting impact and the soul of the work. Traits are what endure downward into the person's life long after the session ends, such as sustained cognitive flexibility or increased relational empathy. Meaning is the most critical dimension. It encompasses the overarching world, the narrative arc the person moves through, and the specific principle that makes the transformation possible.</p>",
-                        "triggerLabel": "Explore the Dimensions"
+                        "triggerLabel": "Explore the Dimensions",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module1/LastingImpact.webp"
+                        },
+                        "mediaLayout": "right"
                     }
                 ]
             }
@@ -289,18 +309,7 @@
                             "q1_2_b": "<p>Visual style is just aesthetics. Many games use psychedelic visuals for style or atmosphere while maintaining purely 'entertainment' mechanics (shooting, scoring, etc.). To be cyberdelic, the mechanics must turn attention inward. <strong>Try again.</strong></p>",
                             "q1_2_a": "<h3>Correct!</h3><p>Correct. Aesthetics alone don't define the category. An experience is cyberdelic based on its <em>design mechanics</em> and its ability to facilitate self-reflection, biofeedback, or altered states of consciousness, regardless of whether it 'looks' trippy or realistic.</p>"
                         }
-                    }
-                ]
-            }
-        },
-        {
-            "id": "dimensions_quiz_3.2",
-            "title": "Design Dimensions Quiz",
-            "type": "option-selector",
-            "config": {
-                "mode": "single",
-                "style": "text",
-                "questions": [
+                    },
                     {
                         "question": "A designer creates an experience where the environment is a bioluminescent forest that reacts to a learner's tactile touch on a physical controller. Which two dimensions form the substrate of this setup?",
                         "options": [

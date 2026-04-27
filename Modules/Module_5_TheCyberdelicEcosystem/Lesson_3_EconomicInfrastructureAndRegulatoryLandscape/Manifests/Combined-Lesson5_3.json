@@ -27,24 +27,32 @@
                     {
                         "title": "The Sustainability Tension, Mission vs. Profit vs. Growth vs. Quality",
                         "content": "<p>Every cyberdelic platform navigates a four-way tension that has no clean resolution, only ongoing management,</p><ul><li><strong>Mission:</strong> Serve the highest number of people with the deepest possible transformational impact.</li><li><strong>Profit:</strong> Generate sufficient revenue to sustain operations, compensate the team, and fund development.</li><li><strong>Growth:</strong> Expand the user base fast enough to satisfy investors or reach viability thresholds.</li><li><strong>Quality:</strong> Maintain the depth, integrity, and effectiveness of the experience, the thing that makes it genuinely cyberdelic rather than just VR content.</li></ul><p>These four pull in different directions constantly. Maximizing reach often requires reducing price, which undermines sustainability. Maintaining depth of experience often limits the scale of audience that can engage with it meaningfully. Investor expectations can push platforms toward engagement optimization rather than transformation optimization.</p><p>The platforms that navigate this best tend to choose their primary audience clearly, build business models that align financial incentives with mission outcomes, resist feature creep driven by engagement metrics, and communicate the trade-offs honestly to their communities.</p>",
-                        "triggerLabel": "The Calm & Headspace Precedent"
+                        "triggerLabel": "The Calm & Headspace Precedent",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module5/Sustainability.webp"
+                        },
+                        "mediaLayout": "right"
                     },
                     {
                         "title": "The Calm and Headspace Precedent, Mission and Profit Can Coexist",
                         "content": "<p>Before cyberdelic platforms existed, the meditation app category demonstrated something important, wellness technology built around genuine practice depth can achieve both scale and mission alignment.</p><p>Calm (valued at $2B) and Headspace ($3B) proved that millions of people will pay recurring subscriptions for mental wellness technology, and that apps built around real contemplative content can become significant businesses without abandoning their core purpose.</p><h3>Lessons for the Cyberdelic Field</h3><ul><li><strong>Scale is possible:</strong> The total addressable market for mental wellness technology is enormous, tens of millions of people globally seeking better tools for anxiety, sleep, stress, and self-development.</li><li><strong>Mission and profit can coexist:</strong> Both platforms maintained content depth as they scaled, resisting the temptation to dilute into generic relaxation content. Depth can be a competitive moat, not just a mission commitment.</li><li><strong>B2B creates the economic foundation:</strong> Both platforms built significant revenue through employer wellness programs and healthcare partnerships. This hybrid model (B2C for mission reach, B2B for economic stability) is the template most sophisticated cyberdelic platforms are building toward.</li><li><strong>The VR-specific challenge:</strong> Headspace and Calm didn't require users to own additional hardware. Cyberdelic platforms do. Quest headset prices have dropped from $1,500 to $299 in a decade, but the hardware barrier remains a meaningful constraint on consumer TAM.</li></ul>",
-                        "triggerLabel": "Insurance Reimbursement"
+                        "triggerLabel": "Insurance Reimbursement",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module5/CalmHeadspace.webp"
+                        },
+                        "mediaLayout": "left"
                     },
                     {
                         "title": "Insurance Reimbursement, The Field's Most Important Economic Frontier",
                         "content": "<p>The single most transformative economic development possible for the cyberdelic field is insurance reimbursement, and it has already begun.</p><h3>Why Reimbursement Changes Everything</h3><p>Insurance coverage doesn't just make a platform more affordable; it legitimizes the entire category. It signals that a regulatory and clinical body has evaluated the evidence and concluded, this intervention is worth paying for. That signal reverberates across all eight ecosystem components simultaneously. Investors see de-risked market access. Developers see a pathway to sustainable clinical revenue. Clinicians see institutional support for integration. Users see reduced cost barriers.</p><h3>RelieVRx, FDA Breakthrough, Partial Reimbursement</h3><p>AppliedVR's RelieVRx received FDA Breakthrough Device Designation and De Novo authorization for chronic lower back pain treatment. It remains primarily out-of-pocket for most patients, but it established the regulatory precedent, a VR software application can navigate the FDA pathway and receive authorization as a treatment.</p><h3>XRHealth, Medicare Coverage (HCPCS Code E1905)</h3><p>XRHealth's Medicare coverage under HCPCS Code E1905 is the field's most concrete reimbursement milestone as of 2026. A federal healthcare program actively reimburses VR therapeutic applications. The implications for other clinical platforms seeking similar coverage pathways are substantial, the precedent exists, the billing code exists.</p><p><strong>What comes next,</strong> The pathway from FDA authorization to widespread insurance coverage is still navigating. Commercial insurers follow Medicare precedents slowly. The field needs more RelieVRx-scale clinical trials producing peer-reviewed outcome data to sustain the reimbursement expansion that XRHealth's milestone opened.</p>",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module5/reimbursement.webp",
-                            "alt": "Split composition showing VR headset and health insurance card connected by glowing line",
-                            "aiPrompt": "Clean split composition with a standalone VR headset (Quest-style) on the left side against a soft purple gradient, a health insurance card on the right side against a soft teal gradient, connected in the center by a single glowing line. Professional, clinical aesthetic. No text overlay needed."
+                            "src": "../assets/images/module5/reimbursement.webp"
                         },
-                        "triggerLabel": "Take the Quiz",
-                        "mediaLayout": "left"
+                        "mediaLayout": "left",
+                        "triggerLabel": "Take the Quiz"
                     }
                 ]
             }
@@ -99,7 +107,12 @@
                     {
                         "title": "Academic Journals, The Field's Credibility Infrastructure",
                         "content": "<p>Peer-reviewed publication is where the cyberdelic field's evidence base is formally established. Understanding which journals publish relevant work, and what their different roles are, helps practitioners evaluate sources and stay current without getting lost in the literature.</p><h3>VR-Specific Journals</h3><ul><li><strong>Frontiers in Virtual Reality,</strong> Open-access, relatively fast review cycles, covers the full range of VR research including therapeutic and consciousness applications. A good first destination for platform-specific research.</li><li><strong>PRESENCE: Virtual and Augmented Reality</strong> (MIT Press), The field's oldest dedicated VR journal, with particular depth on presence, immersion, and embodiment research. High prestige; slower publication timelines.</li><li><strong>Cyberpsychology, Behavior, and Social Networking,</strong> Covers the psychological and behavioral effects of digital technology, including VR. Strong on mechanism and phenomenology research.</li></ul><h3>General Science Journals (High Impact)</h3><ul><li><strong>Nature and Science,</strong> The field's most prestigious publications. Cyberdelic-adjacent work appears rarely but carries enormous credibility when it does.</li><li><strong>PLOS ONE,</strong> Open-access, rigorous peer review, publishes across scientific disciplines. Published the original Isness-D mystical experience study. High credibility, freely accessible to anyone.</li></ul><p><strong>Publication Lag,</strong> The typical timeline from study completion to published results is 1 to 2 years, sometimes longer. In a fast-moving field, this means the published literature is always somewhat behind current practice. Practitioners need to hold both the rigor of published evidence and the reality that the field's working knowledge is ahead of its published knowledge simultaneously.</p>",
-                        "triggerLabel": "Conferences & Foundational Books"
+                        "triggerLabel": "Conferences & Foundational Books",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module5/PeerReview.webp"
+                        },
+                        "mediaLayout": "left"
                     },
                     {
                         "title": "Conferences and Foundational Books",
