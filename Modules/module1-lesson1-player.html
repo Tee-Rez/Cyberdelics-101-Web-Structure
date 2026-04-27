@@ -27,6 +27,7 @@
             background: #000;
             overflow: hidden;
             font-family: 'Rajdhani', sans-serif;
+            font-weight: 700;
         }
 
         #lesson-root {
@@ -87,14 +88,34 @@
         }
 
         @keyframes load-fill {
-            0% { width: 0%; transform: translateX(0%); }
-            50% { width: 100%; transform: translateX(0%); }
-            100% { width: 100%; transform: translateX(100%); }
+            0% {
+                width: 0%;
+                transform: translateX(0%);
+            }
+
+            50% {
+                width: 100%;
+                transform: translateX(0%);
+            }
+
+            100% {
+                width: 100%;
+                transform: translateX(100%);
+            }
         }
-        
+
         @keyframes pulse-text {
-            0%, 100% { opacity: 0.6; text-shadow: 0 0 8px rgba(0,255,255,0.3); }
-            50% { opacity: 1; text-shadow: 0 0 15px rgba(0,255,255,0.8); }
+
+            0%,
+            100% {
+                opacity: 0.6;
+                text-shadow: 0 0 8px rgba(0, 255, 255, 0.3);
+            }
+
+            50% {
+                opacity: 1;
+                text-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
+            }
         }
     </style>
 </head>

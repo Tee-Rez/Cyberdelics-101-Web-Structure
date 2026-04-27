@@ -46,7 +46,7 @@
     border-image-slice: 4; 
     border-image-repeat: stretch;
     border-radius: 4px;
-    padding: var(--space-xl) var(--space-lg);
+    padding: var(--space-xl) var(--space-2xl);
 }
 
 .pd-corner-node {
@@ -272,7 +272,7 @@
     max-width: 800px;
     /* Constrain width for readability & side interaction */
     margin: 0 auto;
-    padding: var(--space-xl);
+    padding: var(--space-xl) var(--space-2xl);
     /* Match image panel content padding on all sides */
 }
 

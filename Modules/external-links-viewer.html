@@ -7,7 +7,9 @@
     <title>External Links Embed</title>
 
     <!-- GOOGLE FONTS: Font Pairings -->
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;500&family=Oxanium:wght@400;700&family=Space+Mono&family=Sora:wght@300;600&family=Montserrat:wght@300;500&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;500&family=Oxanium:wght@400;700&family=Space+Mono&family=Sora:wght@300;600&family=Montserrat:wght@300;500&family=Rajdhani:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
     <!-- CORE STYLES -->
     <link rel="stylesheet" href="../core/styles.css">
@@ -22,6 +24,7 @@
             overflow-x: hidden;
             overflow-y: auto;
             font-family: 'Rajdhani', sans-serif;
+            font-weight: 700;
             min-height: 100vh;
         }
 
@@ -133,7 +136,7 @@
             setTimeout(() => {
                 removeLoader();
                 LessonRunner.loadLesson(manifest);
-                
+
                 // Hide the lesson progress UI header since this is a standalone embed
                 const uiHeader = document.querySelector('.lesson-ui-header');
                 if (uiHeader) {
