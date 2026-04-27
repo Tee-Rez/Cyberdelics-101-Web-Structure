@@ -35,9 +35,7 @@
                         "title": "VR Meditation With Biofeedback",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module1/vr_meditation_biofeedback.webp",
-                            "alt": "Person in meditation posture wearing a VR headset and EEG sensor band",
-                            "notes": "AI Prompt: Person in meditation posture wearing a VR headset and EEG sensor band, immersed in a responsive virtual environment shown in soft translucent overlay, flowing sacred geometry patterns pulsing in sync with a heartbeat monitor on their wrist, sense of deep immersion and inner state being reflected outward, purple and teal color palette, 16:9 aspect ratio"
+                            "src": "../assets/images/module1/vr_meditation_biofeedback.webp"
                         },
                         "mediaLayout": "right",
                         "content": "<p>When meditation practice moves into immersive VR environments with biofeedback sensors that respond to your physiological state, creating responsive environments that shift based on heart rate, brainwaves, or breath rhythm, you've crossed into cyberdelic territory. The technology becomes a catalyst for consciousness exploration, not just a delivery mechanism for guided audio.</p>",
@@ -258,17 +256,32 @@
                     {
                         "title": "The Intention Shift",
                         "content": "<p>Technology becomes cyberdelic when the primary intention shifts from optimization to exploration. Wellness tech asks. how can I function better? Cyberdelics asks. what can I discover about consciousness itself? Both are valid questions. They just lead to fundamentally different tools, designs, and experiences.</p>",
-                        "triggerLabel": "From Outcome to Process"
+                        "triggerLabel": "From Outcome to Process",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module1/Intention.webp"
+                        },
+                        "mediaLayout": "right"
                     },
                     {
                         "title": "From Outcome to Process",
-                        "content": "<p>Wellness tech focuses on outcomes. better sleep, reduced stress, improved focus, faster recovery. These are external measures of improvement. Cyberdelics focuses on the process. exploring consciousness, transforming your relationship with experience, cultivating presence. The journey is the destination. Neither orientation is wrong, they're aimed at different things.</p>",
-                        "triggerLabel": "Same Device, Different Use"
+                        "content": "<p>Wellness tech focuses on outcomes: better sleep, reduced stress, improved focus, faster recovery. These are external measures of improvement. Cyberdelics focuses on the process: exploring consciousness, transforming your relationship with experience, cultivating presence. The journey is the destination. Neither orientation is wrong, they're aimed at different things.</p>",
+                        "triggerLabel": "Same Device, Different Use",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module1/OutcomeToProcess.webp"
+                        },
+                        "mediaLayout": "right"
                     },
                     {
                         "title": "Same Device, Different Use",
                         "content": "<p>The same biofeedback device can be used for wellness or cyberdelics depending entirely on context and intention. HRV training for athletic recovery is wellness tech. HRV biofeedback integrated into an immersive VR experience designed to facilitate altered states is cyberdelic. The device itself doesn't determine the category, the use does.</p>",
-                        "triggerLabel": "User Intention Matters"
+                        "triggerLabel": "User Intention Matters",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module1/SameTech.webp"
+                        },
+                        "mediaLayout": "right"
                     },
                     {
                         "title": "User Intention Matters",
@@ -277,13 +290,6 @@
                     },
                     {
                         "title": "Multiple Valid Tools",
-                        "media": {
-                            "type": "image",
-                            "src": "../assets/images/module1/lesson4/pathways_comparison.webp",
-                            "alt": "Three parallel illuminated pathways showing different levels of meditative tech",
-                            "notes": "AI Prompt: Three parallel pathways shown side by side, each equally illuminated and equally valid, left pathway shows a person using a simple phone app for meditation (soft ambient light, relaxed posture), center pathway shows a person in a basic VR headset in an immersive meditation environment (moderate tech, deeper immersion), right pathway shows a person with VR headset and multiple biofeedback sensors in a full cyberdelic protocol (full tech stack, deep immersion). Progressive intensity without hierarchy, clean educational visualization, purple and teal gradient, 16:9 aspect ratio"
-                        },
-                        "mediaLayout": "full",
                         "content": "<p>The consciousness and wellness technology landscape is stronger for having tools at different intensity levels serving different purposes. Simple apps, wellness tech, meditation VR, and full cyberdelic protocols all have their place. The skill isn't knowing which category is best, it's knowing which fits the specific person, goal, and moment in front of you.</p>",
                         "triggerLabel": "Take the Quiz"
                     }
@@ -388,7 +394,7 @@
                             "q2_1_a": "<p>Cost doesn't determine the category. Free experiences can be cyberdelic, and expensive wellness tech can be purely optimization-focused. What matters is the intention. optimizing function (wellness) versus exploring consciousness (cyberdelic). <strong>Try again.</strong></p>",
                             "q2_1_c": "<p>The same biofeedback sensors can be used for wellness or cyberdelics. HRV monitoring can track athletic recovery (wellness) or facilitate altered state exploration (cyberdelic). The sensors themselves don't determine the category, the intention and application do. <strong>Try again.</strong></p>",
                             "q2_1_d": "<p>Facilitation can be part of either wellness tech or cyberdelic experiences. Some wellness programs use coaches. Some cyberdelic experiences are self-guided. The presence of a facilitator doesn't determine whether the focus is optimization or exploration. <strong>Try again.</strong></p>",
-                            "q2_1_b": "<h3>Correct!</h3><p>Exactly. Wellness tech aims to optimize how you function . better sleep, less stress, improved performance. Cyberdelics aims to explore consciousness itself . altered states, transformation, self-discovery. The same technologies can serve either purpose depending on design intent and user engagement.</p>"
+                            "q2_1_b": "<h3>Correct!</h3><p>Exactly. Wellness tech aims to optimize how you function. Better sleep, less stress, improved performance. Cyberdelics aims to explore consciousness itself. Altered states, transformation, self-discovery. The same technologies can serve either purpose depending on design intent and user engagement.</p>"
                         }
                     },
                     {

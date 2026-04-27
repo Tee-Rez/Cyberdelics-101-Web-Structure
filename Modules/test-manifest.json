@@ -1,346 +1,544 @@
 {
-    "id": "combined_lesson_4_2",
-    "title": "Clinical VR & Biofeedback: From Pain Labs to the Cybernetic Loop",
-    "description": "Examine the clinical evidence base for VR in anxiety, PTSD, and pain management, then explore the biofeedback loop that elevates standard VR into a cyberdelic experience, including all four biofeedback types and the Healium case study.",
-    "framerDescription": "Clinical VR and biofeedback are where the science gets hardest and the stakes get highest. This lesson covers what's proven, what makes it work, and what tools you need to recognize it.",
+    "id": "combined_lesson_2_1",
+    "title": "The Visionaries: Leary, the Pioneers & the Culture That Made It Possible",
+    "description": "Meet the visionaries who imagined the cyberdelic future before it existed, from Timothy Leary's digital prophecy to the VR pioneers who built the foundation, and the cultural movements that prepared the soil.",
+    "framerDescription": "Before there was an industry, there were people who looked at the technology of their era and saw something nobody else did. This lesson introduces three groups of visionaries who made today's cyberdelic field possible.",
     "theme": {
         "primaryColor": "#5900ff",
         "fontBody": "Rajdhani, sans-serif"
     },
     "modules": [
         {
-            "id": "module_4_2_1_progressive",
-            "title": "The Clinical Standard",
+            "id": "leary_pd_2.1",
+            "title": "The Evolution of a Visionary",
             "type": "progressive-disclosure",
             "content": {
                 "sections": [
                     {
-                        "title": "How VRET Works - The Mechanism",
-                        "content": "<p>Virtual Reality Exposure Therapy (VRET) works by exposing patients to the thing they fear in a controlled, graduated, safe environment. If you have a phobia of flying, you don't board an actual plane - you experience a virtual flight that your therapist can control and adjust in real time.</p><p>This triggers <strong>extinction learning</strong> - the gradual weakening of the fear response through repeated safe exposure. It works because VR creates genuine physiological arousal (sweating, heart rate increase) that imagination alone rarely triggers, allowing the brain to learn safety in the presence of the threat.</p>",
+                        "title": "The Evolution Nobody Knows About",
+                        "content": "<p>Most people know Timothy Leary for his 1960s psychedelic research at Harvard. But by the 1990s, Leary had completely evolved his thinking. He became fascinated by personal computers and virtual reality, seeing in them the potential to achieve what psychedelics promised - consciousness expansion, reality hacking, liberation from consensus limitations - but through digital means.</p><p>He didn't abandon his earlier work. He extended it. The question driving both phases of his career was the same. how do humans access deeper levels of awareness? The medium changed; the mission didn't.</p>",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module4/vret-therapy.webp",
-                            "alt": "Clinical VR exposure therapy session with therapist monitoring patient",
-                            "aiPrompt": "Clinical VR exposure therapy session - professional therapist (woman in her 40s, warm but focused expression) sitting beside patient in VR headset, therapist holding tablet showing session controls and patient's heart rate graph, patient appears engaged but slightly tense (hands gripping armrests), calm modern therapy office with plants and certificates on wall, sense of safe container for difficult work, natural lighting, professional medical aesthetic, 16:9 aspect ratio"
+                            "src": "../assets/images/module2/TimLeary1960-2020.webp"
                         },
-                        "triggerLabel": "See Success Rates",
-                        "mediaLayout": "left"
+                        "mediaLayout": "right",
+                        "triggerLabel": "The Prophecy"
                     },
                     {
-                        "title": "Success Rates - The Evidence",
-                        "content": "<p>VRET isn't experimental. The research base spans over 20 years</p><ul><li><strong>Specific Phobias:</strong> 80-90% success rate (comparable to in-vivo exposure).</li><li><strong>Social Anxiety:</strong> 60-75% significant symptom reduction.</li><li><strong>PTSD:</strong> 50-70% clinically significant improvement, especially for combat-related PTSD.</li><li><strong>Panic Disorder:</strong> 60-80% improvement in functioning.</li></ul><p>These are standardized clinical measures showing lasting reduction in avoidance behaviors and symptoms.</p>",
-                        "triggerLabel": "European Standard"
+                        "title": "The Prophetic Quote (1994)",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module2/leary_prophecy.webp"
+                        },
+                        "mediaLayout": "left",
+                        "content": "<p>In 1994, Leary made his most prescient prediction. \"The PC is the LSD of the 1990s.\" Think about what this meant. He was declaring that personal computers would become tools for consciousness exploration comparable to psychedelic substances.</p><p>In 1994, VR was primitive, consumer internet was brand new, there were no smartphones. Yet Leary saw where it was heading. He wasn't predicting better productivity software. He was predicting a new category of consciousness technology, something that would let people explore inner space the way psychedelics did, but without the legal and physiological complexity of substances.</p>",
+                        "triggerLabel": "Key Concepts"
                     },
                     {
-                        "title": "Psious - The European Clinical Standard",
-                        "content": "<p><strong>Psious</strong> was founded in Barcelona and built around a single practical constraint. most therapists who wanted to offer VRET couldn't afford or operate the expensive, technically complex systems that research labs used. Psious solved that by designing for the clinic, not the lab. Its platform is hardware agnostic, runs on a standard VR headset, and includes a web-based clinician control panel that requires no installation or technical expertise.</p><p>The platform offers over 70 virtual environments covering specific phobias, social anxiety, OCD, PTSD, panic disorder, and agoraphobia, alongside relaxation and mindfulness modules. What distinguishes the clinical experience is the real-time therapist dashboard. the clinician sees exactly what the patient sees, controls exposure intensity from a tablet, and can adjust or stop any scenario at any moment. Psious also ships with an electrodermal activity sensor, making physiological monitoring a standard part of the session rather than an add-on.</p><p>Its regulatory trajectory reflects the platform's growing reach. Psious expanded from Spain into the wider European market and then into the United States in 2019. In February 2024 it received FDA 510(k) authorization for its VR therapy program to treat adult anxiety disorders, which gave it a regulatory foothold in the US clinical market alongside its established European presence. In 2023 the company had rebranded as Amelia Virtual Care and subsequently merged with XRHealth, consolidating its mental health VR content library and clinical infrastructure into that platform.</p><p>For learners, Psious matters for two reasons. It is the clearest demonstration that VRET adoption was never limited to US research institutions, it became a clinical standard across Spain, the UK, France, and Germany before achieving US regulatory clearance. And its journey from Spanish startup to FDA-authorized platform absorbed into a larger telehealth company illustrates how the clinical VR field matures. validation, international expansion, regulatory clearance, consolidation.</p>",
-                        "triggerLabel": "US & UK Innovations"
+                        "title": "Key Concepts He Introduced",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module2/leary_concepts.webp"
+                        },
+                        "mediaLayout": "right",
+                        "content": "<p>Leary articulated several ideas that became foundational for cyberdelics.</p><ul><li><strong>Electronic spirituality:</strong> technology serving consciousness development, not just convenience or entertainment.</li><li><strong>Digital shamanism:</strong> programmers as modern shamans navigating between realities, mapping inner space through code.</li><li><strong>Reality hacking:</strong> using digital tools to reshape perception the way psychedelics do, treating consensus reality as editable.</li><li><strong>Neurological self-determination:</strong> consciously designing your own consciousness through technology rather than accepting default programming.</li></ul><p>These weren't just provocative phrases. They were a philosophical framework that still describes what cyberdelic practitioners do today.</p>",
+                        "triggerLabel": "Right But Early"
                     },
                     {
-                        "title": "What This Evidence Means for the Field",
-                        "content": "<p>VRET is the field's proof of concept. When skeptics question if 'headset experiences' can be therapeutic, VRET is the answer.</p><p><strong>Three Implications</strong></p><ul><li><strong>Credibility:</strong> 80%+ success rates lend weight to newer applications.</li><li><strong>Regulatory Pathways:</strong> FDA clearances for VRET pave the way for other tools.</li><li><strong>Infrastructure:</strong> 20+ years of research created the safety protocols and ethical frameworks we use today.</li></ul>",
-                        "triggerLabel": "Take Concept Check"
+                        "title": "Why He Was Early, Not Wrong",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module2/vision_growth.webp"
+                        },
+                        "mediaLayout": "left",
+                        "content": "<p>Leary died in 1996, decades before seeing his vision validated. The technology he imagined took 20-30 more years to mature. Research proving VR could produce mystical experiences wouldn't emerge until 2020. But he got the essential insight right. technology could serve consciousness exploration and transformation, not just entertainment or productivity.</p><p>This matters for how you understand the field's history. The gap between his prediction and its proof wasn't evidence that he was wrong. It was evidence that visionary ideas routinely precede the technology required to demonstrate them.</p>",
+                        "triggerLabel": "His Legacy"
                     },
                     {
-                        "title": "Bravemind, Oxford VR, and Limbix",
-                        "content": "<p>Three platforms that shaped what clinical VR looks like in practice.</p><p><strong>Bravemind (USC Institute for Creative Technologies)</strong> was created by Dr. Albert 'Skip' Rizzo and his team, originally funded by the Office of Naval Research. It places veterans inside 14 reconstructed combat environments - Iraqi roads, Afghan villages, military bases - where a therapist controls the intensity in real time, allowing graduated exposure at a pace the patient can tolerate. In the largest randomised controlled trial to date, Bravemind performed equivalent to Prolonged Exposure, the gold standard PTSD treatment, and outperformed it in patients with co-morbid major depression. 76% of incoming patients preferred VR over traditional therapy. It has now been distributed to over 170 clinical sites, and through a partnership with the SoldierStrong Foundation, the software, equipment, and clinical training are provided free of charge to VA medical centers.</p><p><strong>Oxford VR's gameChangeVR</strong> is a University of Oxford spin-out that automated the delivery of CBT inside VR entirely - meaning a trained virtual coach guides patients through the program without a therapist present in real time. The therapy runs across six sessions totalling three hours, placing patients in simulated everyday situations - a café, a bus, a doctor's surgery - that many people with psychosis find too anxiety-provoking to enter in real life. Tested in the largest ever clinical trial of VR for mental health, a 346-patient randomised controlled trial across nine NHS Trusts published in The Lancet Psychiatry in 2022, gameChange produced significant reductions in agoraphobic avoidance and distress. The greatest benefits were in the most severely affected patients, and they held at the six-month follow-up. gameChange subsequently received NICE Early Value Assessment approval, making it the first VR therapy recommended for use in NHS mental health services.</p><p><strong>Limbix</strong> began as a VR platform building therapist-administered exposure therapy tools for adolescents, and its early work demonstrated the category's viability for that population. It pivoted to a smartphone-based format in 2019 and was acquired by digital health company Big Health in 2023, where its adolescent depression product SparkRx continues under that portfolio. Limbix is included here as a marker of how the clinical VR field has evolved. companies that validated concepts in VR sometimes carry that evidence base into adjacent formats as the technology and market mature.</p>",
-                        "triggerLabel": "Why Evidence Matters"
+                        "title": "His Legacy Lives On",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module2/leary_legacy.webp"
+                        },
+                        "mediaLayout": "right",
+                        "content": "<p>Every time we talk about using VR for transformation, we're echoing Leary's vision. The term \"cyberdelic\" itself combines his psychedelic thinking with cyber technology. The integration of tech with ancient wisdom, the focus on personal agency, the vision of democratized access to transformative experiences - all trace back to him.</p><p>He planted seeds that took 30 years to sprout. The field you're learning about is, in part, his extended legacy.</p>",
+                        "triggerLabel": "Experience 1995"
                     }
                 ]
             }
         },
         {
-            "id": "module_4_2_2_progressive",
-            "title": "The Breakthrough",
-            "type": "progressive-disclosure",
+            "id": "leary_scenario_2.1",
+            "title": "1995: The Conference",
+            "type": "scenario-based",
             "content": {
-                "sections": [
+                "scenes": [
                     {
-                        "title": "SnowWorld - Where It Started",
-                        "content": "<p>In the late 90s, researchers Hunter Hoffman and David Patterson created <strong>SnowWorld</strong> for burn patients undergoing excruciating wound care. Patients threw virtual snowballs at penguins while nurses worked.</p><p><strong>The Result.</strong> 30-50% pain reduction (comparable to opioids). fMRI scans showed significantly less pain activity in the brain. It proved that if VR captures enough attention, pain processing literally gets less neural real estate.</p>",
-                        "media": {
-                            "type": "image",
-                            "src": "../assets/images/module4/snowworld.webp",
-                            "alt": "Split view: Real hospital burn unit vs SnowWorld VR icy landscape",
-                            "aiPrompt": "Split composition - left half shows real hospital burn unit (sterile, clinical, person in bed receiving wound care treatment, medical staff in protective gear, sense of medical necessity but discomfort), right half shows the same person's perspective in SnowWorld VR (beautiful icy landscape, snowmen, playful snowball throwing, sense of wonder and distraction from pain), connecting line between the two sides showing the contrast, hope and innovation meeting medical reality, 16:9 aspect ratio"
-                        },
-                        "triggerLabel": "The 4 Mechanisms",
-                        "mediaLayout": "right"
+                        "id": "start",
+                        "narrative": "<h3>1995 Tech Conference</h3><p>It's 1995. You're at a technology conference where Timothy Leary is presenting. Most attendees are skeptical. VR has failed commercially, and this former psychedelic advocate is making bold claims about computers becoming consciousness tools.</p><p><strong>How do you react to Leary's vision?</strong></p>",
+                        "choices": [
+                            {
+                                "id": "choice_a",
+                                "label": "Dismiss the vision",
+                                "outcome": "outcome_a"
+                            },
+                            {
+                                "id": "choice_b",
+                                "label": "Right vision, wrong timing",
+                                "outcome": "outcome_b"
+                            },
+                            {
+                                "id": "choice_c",
+                                "label": "Commit to the vision",
+                                "outcome": "outcome_c"
+                            }
+                        ]
                     },
                     {
-                        "title": "The Four Mechanisms",
-                        "content": "<p>VR engages four distinct pathways</p><ul><li><strong>Attentional Capture (Cognitive):</strong> VR floods the senses, leaving limited bandwidth for pain processing.</li><li><strong>Gate Control (Neurological):</strong> Sensory input closes spinal 'gates', blocking pain signals.</li><li><strong>Emotional Regulation (Psychological):</strong> Shifting emotional state reduces pain <em>suffering</em>.</li><li><strong>Expectation Effects (Psychophysiological):</strong> Neural changes driven by the belief in the treatment (placebo effect).</li></ul>",
-                        "triggerLabel": "Beyond Pain"
+                        "id": "outcome_a",
+                        "narrative": "<h3>Outcome. Dismiss the vision</h3><p>You join the majority of tech industry professionals in 1995 who dismissed Leary's vision. VR headsets are clunky and cause motion sickness. The idea of mystical experiences through computers seems absurd. You write it off as the rambling of someone stuck in the psychedelic era.</p><p>Fast forward to 2020. The Isness VR study validates exactly what Leary predicted - VR producing mystical experiences comparable to psychedelics. You realize you witnessed prophecy but mistook it for fantasy.</p><p><em>Reflection. Vision often looks like delusion until technology catches up. The question isn't whether the vision is crazy. it's whether the timing is right.</em></p>",
+                        "choices": [
+                            {
+                                "id": "next",
+                                "label": "Continue",
+                                "outcome": "quiz_intro"
+                            }
+                        ]
                     },
                     {
-                        "title": "The Same Mechanisms, A Broader Question",
-                        "content": "<p>SnowWorld used these four mechanisms as a side effect. The goal was pain relief, and immersion delivered it by accident of attention. Nobody designed SnowWorld to teach burn patients how to regulate their nervous systems. It worked because VR captured attention so completely that the brain had less left over for suffering.</p><p>That observation raised a different question for the researchers and designers who came after. what happens when you build an experience that targets these mechanisms on purpose? Not as a byproduct of distraction, but as the primary design intent.</p><p>Attentional capture becomes presence training. Emotional regulation becomes mood architecture. Expectation effects become intention-setting protocols. The same four pathways that reduce pain in a burn unit become the foundation for deliberate consciousness work.</p>",
-                        "triggerLabel": "Designing for the Loop"
+                        "id": "outcome_b",
+                        "narrative": "<h3>Outcome. Right vision, wrong timing</h3><p>You understand what Leary is pointing toward - the potential for technology to facilitate consciousness work. But looking at current VR technology (heavy headsets, low resolution, limited computing power), you think it's at least 20-30 years away.</p><p>You're exactly right. Leary's vision was correct, but the timeline was off by 25+ years. The technology needed smartphones to improve displays, gaming to advance GPUs, and neuroscience to validate mechanisms. Sometimes being right about direction is different from being right about when.</p><p><em>Reflection. Great visions require patience. The gap between seeing possibility and achieving viability can span decades.</em></p>",
+                        "choices": [
+                            {
+                                "id": "next",
+                                "label": "Continue",
+                                "outcome": "quiz_intro"
+                            }
+                        ]
                     },
                     {
-                        "title": "From Side Effect to Design Intent",
-                        "content": "<p>This shift matters practically. When you evaluate a cyberdelic platform, you are asking which of these mechanisms it is activating and whether it is doing so deliberately or incidentally.</p><p>A wellness VR environment that is simply beautiful is using attentional capture and emotional regulation, but passively. The experience shapes your state because immersion tends to do that. A biofeedback-enhanced platform uses those same mechanisms, but closes the loop. your state shapes the experience, which shapes your state again. The mechanism becomes bidirectional.</p><p>That bidirectional loop is what separates standard VR from the cyberdelic category. SnowWorld proved the mechanisms were real. What follows in this lesson is what happens when designers build for them directly.</p>",
-                        "triggerLabel": "The Cybernetic Loop"
+                        "id": "outcome_c",
+                        "narrative": "<h3>Outcome. Commit to the vision</h3><p>Leary's talk ignites your imagination. Despite primitive technology, you begin exploring how computers might facilitate consciousness work. You spend the next 20 years in academic labs, meditation tech startups, and VR experiments, often dismissed as fringe.</p><p>By 2020, when breakthrough research validates the vision, you're already an established expert. You were one of the few who kept working during the \"wilderness years\" when everyone else had moved on. Your persistence made the validation possible.</p><p><em>Reflection. Someone has to keep the vision alive during the gap between prophecy and proof. Early believers enable later breakthroughs.</em></p>",
+                        "choices": [
+                            {
+                                "id": "next",
+                                "label": "Continue",
+                                "outcome": "quiz_intro"
+                            }
+                        ]
                     },
                     {
-                        "title": "What SnowWorld Actually Proved",
-                        "content": "<p>SnowWorld's legacy is not the snowballs. It is the demonstration that a digital environment can intervene in a biological process that medicine had previously only addressed with chemistry. That is a significant claim, and it held up across replications and fMRI validation.</p><p>The field built on that proof in two directions. One went toward clinical infrastructure. FDA authorization, insurance reimbursement, hospital adoption. The other went toward intentional design. if these mechanisms work under clinical constraints, what becomes possible when the environment is built specifically to engage them? The biofeedback section of this lesson is that second direction.</p>",
-                        "triggerLabel": "Build The Framework"
+                        "id": "quiz_intro",
+                        "narrative": "<h3>Scenario Complete</h3><p>History reveals Leary was prescient, not deluded. But in 1995, with the technology not yet ready, it was impossible to know for certain. The lesson holds across every emerging field . visionary ideas routinely require decades before technology enables them. Distinguishing vision from fantasy in real time requires both imagination and patience.</p>",
+                        "choices": [
+                            {
+                                "id": "finish_scenario",
+                                "label": "Reflect on This Journey",
+                                "outcome": "reflection"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "reflection",
+                        "narrative": "<h3>Reflection</h3><p>All three paths through 1995 led to the same truth. Leary's vision was real, but only those who held onto it, or who remained open to recognizing <em>when</em> it arrived, were positioned to participate in its validation. The dismissers missed the inflection point. The cautious hedgers bridged both worlds. The full believers built the foundations others would stand on.</p><p>This is the lesson of every field that matures across decades. the gap between vision and proof requires someone to carry the torch. In 1995, the technology wasn't ready. By 2020, the science confirmed what Leary saw. The distance between those two moments was filled by people who didn't abandon the question.</p>",
+                        "choices": [
+                            {
+                                "id": "continue",
+                                "label": "Establish Foundation",
+                                "outcome": "flow_next_module"
+                            }
+                        ]
                     }
                 ]
             }
         },
         {
-            "id": "module_4_2_3_progressive",
-            "title": "Biofeedback Integration",
+            "id": "pioneers_pd_2.2",
+            "title": "Establishing the Foundations",
             "type": "progressive-disclosure",
             "content": {
                 "sections": [
                     {
-                        "title": "What Makes Biofeedback Different",
-                        "content": "<p>Standard VR delivers preset content. Biofeedback-enhanced VR creates a <strong>two-way conversation</strong>.</p><p>It creates a cybernetic loop, your body signal shapes the environment, which shapes your body signal. This makes internal states (calm, focus, anxiety) <strong>visible</strong> in real-time, accelerating self-regulation learning.</p>",
-                        "triggerLabel": "The 5-Step Loop"
-                    },
-                    {
-                        "title": "The 5 Steps of the Loop",
-                        "content": "<ul><li><strong>Signal Generation:</strong> Body produces data (heart rate, brainwaves).</li><li><strong>Sensor Detection:</strong> Device (watch, headband) reads the signal.</li><li><strong>Processing:</strong> Algorithm interprets state (e.g., 'high stress').</li><li><strong>Response:</strong> VR environment changes (colors dim, geometry contracts).</li><li><strong>Adjustment:</strong> You perceive the change and shift your state, starting the loop again.</li></ul>",
+                        "title": "Jaron Lanier : Naming Virtual Reality",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module4/cybernetic_loop.webp",
-                            "alt": "Diagram of the 5-step cybernetic feedback loop between user and VR system",
-                            "aiPrompt": "Circular diagram showing the five-step cybernetic feedback loop - starting with person's silhouette at top, moving clockwise through: (1) heart rate waveform emerging from chest, (2) wrist-worn sensor capturing signal, (3) floating algorithm visualization (geometric processing), (4) VR landscape responding with visual changes, (5) arrow back to person showing adjustment - continuous flow indicated by circular arrangement, purple/teal sacred geometry aesthetic, clean infographic style, sense of living system not mechanical process, 16:9 aspect ratio"
+                            "src": "../assets/images/module2/lanier_pioneer.webp",
+                            "alt": "Jaron Lanier in late 1980s with DataGlove"
                         },
-                        "triggerLabel": "The Mirror Relationship",
-                        "mediaLayout": "right"
+                        "mediaLayout": "left",
+                        "content": "<p>In 1987, computer scientist and musician Jaron Lanier coined the term 'virtual reality' and founded VPL Research, selling the first VR equipment - the DataGlove and EyePhone head-mounted display. His systems cost hundreds of thousands of dollars, but more importantly, he articulated a humanistic vision. 'Virtual reality is the first medium that doesn't narrow us. Instead, it expands what we can be and what we can communicate.'</p><p>He saw VR not as a display technology but as a consciousness expansion tool. That distinction - between VR as medium for entertainment versus VR as medium for transformation - is still one of the defining questions in the field today.</p>",
+                        "triggerLabel": "Transformation"
                     },
                     {
-                        "title": "The Mirror Relationship",
-                        "content": "<p>The cybernetic loop creates an honest mirror. In meditation, you might <em>think</em> you're calm when you're not. Biofeedback shows you the truth.</p><p>This is 'steering through feedback' - adjusting based on real-time data. It makes the invisible visible.</p>",
-                        "triggerLabel": "Explore Biofeedback Types"
+                        "title": "Brenda Laurel : Transformation Through Technology",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module2/laurel_theatre.webp",
+                            "alt": "Portrait of Brenda Laurel from 1990s"
+                        },
+                        "mediaLayout": "right",
+                        "content": "<p>Brenda Laurel brought theatrical thinking to VR in her groundbreaking book 'Computers as Theatre' (1991). She argued that human-computer interaction should create transformative experiences, not just functional ones. Her company Purple Moon created virtual environments for emotional development.</p><p>She wrote. 'The goal of interaction design should not just be usability, but the transformation of the user through the experience.' That phrase - transformation through experience - became core to cyberdelic practice. It isn't enough for technology to work correctly; it should facilitate personal growth and change. Laurel was insisting on this in 1991.</p>",
+                        "triggerLabel": "Artificial Reality"
+                    },
+                    {
+                        "title": "Myron Krueger : Artificial Reality",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module2/videoplace.webp",
+                            "alt": "Early computer art lab showing Myron Krueger's VIDEOPLACE system"
+                        },
+                        "mediaLayout": "left",
+                        "content": "<p>Before 'virtual reality' became standard terminology, Myron Krueger coined 'artificial reality' to describe his VIDEOPLACE system (1974-1990). Users moved naturally in physical space while cameras tracked them, creating responsive virtual environments without headsets or gloves.</p><p>His key insight. responsive environments that react to human presence can alter consciousness even without blocking out the physical world. This understanding - that altered states don't require total sensory replacement - influenced later cyberdelic design significantly. You don't need to lock someone inside a headset to shift their state.</p>",
+                        "triggerLabel": "The Gap"
+                    },
+                    {
+                        "title": "The Gap They Couldn't Cross",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module2/vr_gap.webp",
+                            "alt": "Contrast between sleek conceptual VR vision and actual clunky 1980s hardware"
+                        },
+                        "mediaLayout": "right",
+                        "content": "<p>These pioneers had grand visions, but 1980s-90s technology couldn't deliver on them. Head-mounted displays weighed several pounds and caused neck strain. Resolution was extremely low. like looking through mesh. Refresh rates caused motion sickness within minutes. Complete systems cost $100,000-$250,000. Only universities and military budgets could afford them.</p><p>The vision existed. The capability didn't. And that gap - between what you can imagine and what you can actually build - is one of the most important recurring themes in the history of cyberdelics.</p>",
+                        "triggerLabel": "Legacy"
+                    },
+                    {
+                        "title": "What They Established",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module2/pioneer_foundations.webp",
+                            "alt": "Concept constellation showing Transformative Space, Embodied Interaction, Presence, Responsive Environments, and Transformative Potential"
+                        },
+                        "mediaLayout": "left",
+                        "content": "<p>Despite technical limitations, the pioneer circle established conceptual foundations that still hold today.</p><table style='width:100%; border-collapse:collapse; margin-top:10px; margin-bottom:16px; font-size:0.86em; text-align:left;'><thead><tr style='background:rgba(255,255,255,0.15); border-bottom:2px solid rgba(255,255,255,0.3);'><th style='padding:10px 12px; font-weight:600; letter-spacing:0.03em;'>Pioneer</th><th style='padding:10px 12px; font-weight:600; letter-spacing:0.03em;'>Term or Concept</th><th style='padding:10px 12px; font-weight:600; letter-spacing:0.03em;'>Key Contribution</th><th style='padding:10px 12px; font-weight:600; letter-spacing:0.03em;'>Why It Still Matters</th></tr></thead><tbody><tr style='border-bottom:1px solid rgba(255,255,255,0.1); background:rgba(255,255,255,0.03);'><td style='padding:9px 12px;'><strong>Jaron Lanier</strong></td><td style='padding:9px 12px;'>'Virtual Reality' (1987)</td><td style='padding:9px 12px;'>First commercial VR hardware; articulated VR as expansion of human capacity, not simulation</td><td style='padding:9px 12px;'>VR as transformation tool, not entertainment device, is still the defining question</td></tr><tr style='border-bottom:1px solid rgba(255,255,255,0.1);'><td style='padding:9px 12px;'><strong>Brenda Laurel</strong></td><td style='padding:9px 12px;'>'Transformation through experience' (1991)</td><td style='padding:9px 12px;'>Applied theatrical thinking to HCI; argued technology should change the user, not just function</td><td style='padding:9px 12px;'>Transformational intent as a design requirement is the third component of cyberdelic definition</td></tr><tr style='background:rgba(255,255,255,0.03);'><td style='padding:9px 12px;'><strong>Myron Krueger</strong></td><td style='padding:9px 12px;'>'Artificial Reality' (1974)</td><td style='padding:9px 12px;'>Responsive environments without headsets; showed altered states don't require total sensory replacement</td><td style='padding:9px 12px;'>AR experiences and non-immersive cyberdelic contexts trace directly to this insight</td></tr></tbody></table><p>These were proven principles waiting for hardware to catch up.</p>",
+                        "triggerLabel": "Take Pioneer Quiz"
                     }
                 ]
             }
         },
         {
-            "id": "module_4_2_4_progressive",
-            "title": "Biofeedback Types Explorer",
+            "id": "culture_pd_2.3",
+            "title": "Cultural Preparation",
             "type": "progressive-disclosure",
             "content": {
                 "sections": [
                     {
-                        "title": "1. Heart Rate Variability (HRV)",
-                        "content": "<ul><li><strong>Measures:</strong> The variation in time between heartbeats. Higher HRV = resilience.</li><li><strong>Devices:</strong> Apple Watch, Polar H10, HeartMath emWave.</li><li><strong>Training Goal:</strong> Stress management, emotional regulation.</li><li><strong>VR Response:</strong> As HRV increases, the environment expands and becomes more vibrant (e.g., flowers blooming), rewarding your calm state.</li></ul>",
+                        "title": "Cyberpunk : The Fictional Blueprint",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module4/hrv.webp",
-                            "alt": "User with heart rate sensor in VR, visualization of HRV coherence waveform",
-                            "aiPrompt": "Person wearing VR headset with a small heart rate sensor clipped to their earlobe, calm focused expression, subtle heart rate variability coherence waveform overlaid in soft blue-green, the VR environment visible through a translucent layer showing an expanding floral landscape that responds to a smooth heartbeat rhythm, modern wellness aesthetic, 16:9 aspect ratio"
+                            "src": "../assets/images/module2/cyberpunk_blueprint.webp"
                         },
-                        "triggerLabel": "Next: EEG",
-                        "mediaLayout": "right"
+                        "mediaLayout": "left",
+                        "content": "<p>In the 1980s, writers like William Gibson (Neuromancer, 1984) and Neal Stephenson (Snow Crash, 1992) imagined worlds where technology and consciousness directly interfaced. Gibson coined 'cyberspace' - a consensual hallucination experienced daily by billions. Stephenson imagined the 'metaverse.' These novels established cultural templates. neural interfaces, virtual reality as equally real as physical reality, identity fluidity, reality as hackable.</p><p>They made VR's eventual emergence feel inevitable rather than alien. When people first put on Oculus headsets in 2016, many described it as 'stepping into Neuromancer.' Fiction had been rehearsing this moment for thirty years.</p>",
+                        "triggerLabel": "Rave Culture"
                     },
                     {
-                        "title": "2. EEG (Brainwaves)",
-                        "content": "<ul><li><strong>Measures:</strong> Brainwave frequencies (Alpha, Beta, Theta, Gamma).</li><li><strong>Devices:</strong> Muse headband, OpenBCI.</li><li><strong>Training Goal:</strong> Focus, deep meditation, anxiety reduction.</li><li><strong>VR Response:</strong> High Alpha (relaxed awareness) might make the environment luminous and spacious. High Beta (stress/busy mind) might cause visual noise or storms.</li></ul>",
-                        "triggerLabel": "Next: Respiration"
-                    },
-                    {
-                        "title": "3. Respiration (Breathing)",
-                        "content": "<ul><li><strong>Measures:</strong> Rate and depth of breathing.</li><li><strong>Devices:</strong> Chest belt, pressure sensors, or VR controller motion (no extra hardware required).</li><li><strong>Training Goal:</strong> Anxiety management, vagus nerve stimulation, diaphragmatic breathing.</li><li><strong>VR Response:</strong> The world breathes with you. Inhale = environment expands/brightens; Exhale = contracts/settles. Synchronization creates deep regulation.</li></ul>",
-                        "triggerLabel": "Next: GSR"
-                    },
-                    {
-                        "title": "4. Galvanic Skin Response (GSR)",
-                        "content": "<ul><li><strong>Measures:</strong> Skin conductance (sweat gland activity) reflecting emotional arousal.</li><li><strong>Devices:</strong> Empatica wristband, Pip sensor.</li><li><strong>Training Goal:</strong> Arousal regulation, stress awareness.</li><li><strong>VR Response:</strong> High arousal makes the world intense/fast; low arousal makes it calm/slow.</li></ul>",
-                        "triggerLabel": "Case Study: HeartMath"
-                    },
-                    {
-                        "title": "Case Study: HeartMath & HRV Coherence",
-                        "content": "<p><strong>HeartMath Institute</strong> has been researching HRV coherence since 1991. Their emWave device and Inner Balance sensor are among the most studied biofeedback tools in existence, with over 300 peer-reviewed publications connected to their research program.</p><ul><li><strong>Mechanism:</strong> The emWave measures beat-to-beat HRV from an ear clip or fingertip sensor. When your HRV enters a smooth, coherent rhythm (achieved through slow, intentional breathing), the visual display shifts from incoherence to coherence : low, medium, or high, represented in real-time.</li><li><strong>VR Integration:</strong> HeartMath's coherence feedback can be layered into VR environments where the landscape literally brightens, blooms, or expands as coherence increases. The environment becomes a mirror for your nervous system state.</li><li><strong>Why it matters for facilitators:</strong> HeartMath gives you a teachable, research-backed framework for explaining HRV to clients. The visual feedback loop is immediate and convincing : people who are skeptical about 'feeling calm' often trust a coherence score.</li><li><strong>Evidence level:</strong> Strong. Independent replication across stress reduction, emotional regulation, and cardiac health contexts.</li></ul>",
+                        "title": "Rave Culture : Electronic Transcendence",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module4/heartmath.webp",
-                            "alt": "HeartMath emWave sensor showing coherence waveform moving from jagged to smooth",
-                            "aiPrompt": "Split display showing HeartMath biofeedback in action : left side shows a small ear-clip sensor attached to a person's ear, right side shows a waveform visualization transitioning from jagged red incoherence to smooth flowing green coherence, overlaid on a soft VR environment of blooming flowers or expanding light patterns, sense of the nervous system being made visible, clinical but beautiful aesthetic, purple and teal tones, 16:9 aspect ratio"
+                            "src": "../assets/images/module2/rave_electronic.webp"
                         },
-                        "triggerLabel": "Take Knowledge Check",
-                        "mediaLayout": "right"
+                        "mediaLayout": "right",
+                        "content": "<p>Starting in late 1980s UK and spreading globally through the 1990s, rave culture created massive gatherings centered on electronic music, light shows, and collective altered states. Ravers discovered that technology could facilitate collective transcendence. electronic music as consciousness technology, lighting creating immersive sensory environments, collective energy producing shared altered states.</p><p>The principle - technology enabling transcendence - was the same as cyberdelics would later demonstrate, just through sound and light rather than VR. Rave culture also normalized the idea of seeking altered states for transformation rather than just intoxication, which mattered for how later cyberdelic communities framed their work.</p>",
+                        "triggerLabel": "Burning Man"
+                    },
+                    {
+                        "title": "Burning Man : Art Meets Technology",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module2/burning_man_tech.webp"
+                        },
+                        "mediaLayout": "left",
+                        "content": "<p>Founded in 1986, Burning Man created a temporary city in Nevada's desert dedicated to radical self-expression, community, and art. Large-scale interactive installations, LED art, and tech-enhanced experiences became testing grounds for blending technology with transformation. Many early VR developers and consciousness researchers were Burners.</p><p>The festival demonstrated something important. technology-enhanced experiences could create genuine awe, foster deep community, facilitate personal transformation, and integrate rather than oppose nature and spirituality. Burning Man was a live proof-of-concept for ideas that cyberdelics would later develop into systematic practice.</p>",
+                        "triggerLabel": "Digital Art"
+                    },
+                    {
+                        "title": "Digital Art and Fractal Culture",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module2/fractal_digital.webp"
+                        },
+                        "mediaLayout": "right",
+                        "content": "<p>The 1990s saw an explosion of computer-generated art exploring consciousness themes. Fractal art revealed infinite mathematical complexity resembling psychedelic visions. Mandelbrot sets and Julia sets producing imagery that looked uncannily similar to what people described seeing on psychedelics. Early VR art like Char Davies' Osmose (1995) created contemplative spaces with breathing-controlled navigation.</p><p>Artists discovered that algorithms could produce imagery comparable to mystical geometric visions. This established a crucial cultural proof. technology could serve artistic and spiritual expression, not just calculation and commerce. It expanded who saw cyberdelics as relevant to them.</p>",
+                        "triggerLabel": "Ready for Convergence"
+                    },
+                    {
+                        "title": "Cultural Preparation Complete",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module2/culture_convergence.webp",
+                            "alt": "Four streams of culture converging into one larger Cyberdelic Culture river"
+                        },
+                        "mediaLayout": "left",
+                        "content": "<p>These movements didn't create cyberdelics. But they prepared the cultural ground in four ways.</p><ul><li><strong>Imagination:</strong> They made tech-consciousness fusion imaginable before it was achievable.</li><li><strong>Community:</strong> They created communities already oriented toward exploration and transformation.</li><li><strong>Language:</strong> They established shared language: cyberspace, metaverse, reality hacking, digital shamanism.</li><li><strong>Demand:</strong> They demonstrated demand: millions of people were seeking exactly what cyberdelics would eventually offer.</li></ul><p>When VR was reborn in the 2010s, it entered a culture that had been imagining and preparing for this for 30 years. The soil was prepared; technology finally arrived to plant seeds.</p>",
+                        "triggerLabel": "Explore the Map"
                     }
                 ]
             }
         },
         {
-            "id": "module_4_2_3_simulation",
-            "title": "The Cybernetic Loop",
-            "type": "interactive-simulation",
+            "id": "quiz_lesson_2_1_combined",
+            "title": "Module 2 Lesson 1 Quiz",
+            "type": "scenario-based",
             "content": {
-                "engine": "CyberneticLoop",
-                "params": {
-                    "speed": 4
-                }
-            }
-        },
-        {
-            "id": "quiz_4_2_1",
-            "title": "Concept Check: Mechanisms & Platforms",
-            "type": "option-selector",
-            "config": {
-                "mode": "single",
-                "style": "text",
-                "questions": [
+                "scenes": [
                     {
-                        "question": "<h3>Mechanism Check</h3><p>A colleague asks. 'Why is VR exposure more effective than just imagining the fear? Imagination is free.'</p><p><strong>How do you respond?</strong></p>",
-                        "options": [
+                        "id": "quiz1_q1",
+                        "narrative": "<p><strong>What was Timothy Leary's most famous prediction about technology and consciousness?</strong></p>",
+                        "choices": [
                             {
                                 "id": "q1_a",
-                                "label": "It's more entertaining, so patients stick with it.",
-                                "correct": false
+                                "label": "Virtual reality would completely replace physical reality by 2000",
+                                "outcome": "quiz1_q1_wrong_a"
                             },
                             {
                                 "id": "q1_b",
-                                "label": "It allows for more intense fears than imagination.",
-                                "correct": false
+                                "label": "Everyone should abandon meditation and use only technology",
+                                "outcome": "quiz1_q1_wrong_c"
                             },
                             {
                                 "id": "q1_c",
-                                "label": "It provides better insurance documentation.",
-                                "correct": false
+                                "label": "Psychedelics would soon be legalized worldwide",
+                                "outcome": "quiz1_q1_wrong_d"
                             },
                             {
                                 "id": "q1_d",
-                                "label": "It creates real physiological arousal needed for extinction learning.",
-                                "correct": true
+                                "label": "\"The PC is the LSD of the 1990s\" - computers as consciousness tools",
+                                "outcome": "quiz1_q2"
                             }
-                        ],
-                        "synthesis": {
-                            "q1_a": "<p>Engagement matters, but it's not the *therapeutic* mechanism. The key is what happens in the nervous system.</p>",
-                            "q1_b": "<p>Actually, therapists often want *controlled* intensity, not just maximum intensity. The key is the body's response, not just the scare factor.</p>",
-                            "q1_c": "<p>Administrative benefits are nice, but they don't explain why the *patient* gets better results.</p>",
-                            "q1_d": "<p><strong>Correct!</strong> VR triggers genuine physiological responses (sweating, heart rate) that imagination rarely matches. This arousal is essential for the brain to learn safety (extinction learning).</p>"
-                        }
+                        ]
                     },
                     {
-                        "question": "<h3>Platform Matching</h3><p>A London therapist wants to add VR for social anxiety but needs an <strong>automated</strong> solution for home use because they can't always be present.</p><p><strong>Which platform fits best?</strong></p>",
-                        "options": [
+                        "id": "quiz1_q1_wrong_a",
+                        "narrative": "<p>Leary didn't predict VR replacing physical reality. His vision was more nuanced. he believed computers could serve consciousness exploration and transformation similar to how psychedelics did. Technology as tool for inner work, not escape from reality. <strong>Try again.</strong></p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "quiz1_q1"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "quiz1_q1_wrong_c",
+                        "narrative": "<p>Leary never advocated abandoning traditional practices. He saw technology as an additional path, not a replacement. His vision was about expanding options for consciousness work, not eliminating existing methods. Both/and thinking, not either/or. <strong>Try again.</strong></p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "quiz1_q1"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "quiz1_q1_wrong_d",
+                        "narrative": "<p>While Leary may have hoped for psychedelic legalization, his key insight about technology was different. he recognized that digital tools could serve similar consciousness-exploring purposes as substances. This was about adding a new category of tools, not just advocating for legalizing old ones. <strong>Try again.</strong></p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "quiz1_q1"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "quiz1_q2",
+                        "narrative": "<p>Exactly right. In 1994, Leary predicted that personal computers would become tools for consciousness exploration comparable to psychedelic substances. He saw technology serving the same intentions . expanding awareness, facilitating transformation, enabling self-directed exploration. He was correct about the vision but 25+ years early on the timeline.</p><p>Now, <strong>Why was Leary \"right but early\" with his 1994 prediction?</strong></p>",
+                        "choices": [
                             {
                                 "id": "q2_a",
-                                "label": "Psious",
-                                "correct": false
+                                "label": "The technology to deliver on his vision didn't mature until 2016-2020, about 25 years later",
+                                "outcome": "quiz1_quiz_complete"
                             },
                             {
                                 "id": "q2_b",
-                                "label": "Limbix",
-                                "correct": false
+                                "label": "He underestimated how quickly people would embrace technology",
+                                "outcome": "quiz1_q2_wrong_b"
                             },
                             {
                                 "id": "q2_c",
-                                "label": "Oxford VR",
-                                "correct": true
+                                "label": "Governments banned the development of consciousness technologies",
+                                "outcome": "quiz1_q2_wrong_c"
                             },
                             {
                                 "id": "q2_d",
-                                "label": "Bravemind",
-                                "correct": false
+                                "label": "Nobody was interested in using technology for consciousness work",
+                                "outcome": "quiz1_q2_wrong_d"
                             }
-                        ],
-                        "synthesis": {
-                            "q2_a": "<p>Psious is great, but it's designed for therapist-led sessions, not automated home use.</p>",
-                            "q2_b": "<p>Limbix focuses on US adolescents, not the general UK adult population or automated delivery specifically.</p>",
-                            "q2_d": "<p>Bravemind is for military PTSD research, not social anxiety or general clinical use.</p>",
-                            "q2_c": "<p><strong>Correct!</strong> Oxford VR (UK-based) specializes in automated CBT using virtual coaches, specifically for conditions like social anxiety and agoraphobia. It matches the 'automated' and 'UK' context perfectly.</p>"
-                        }
+                        ]
                     },
                     {
-                        "question": "<h3>Focus Training Recommendation</h3><p>A client wants to train <strong>sustained attention</strong> and reduce mind-wandering. Which biofeedback type is best?</p>",
-                        "options": [
+                        "id": "quiz1_quiz_complete",
+                        "narrative": "<h3>Correct!</h3><p>Precisely. 1980s-90s VR had massive technical limitations . displays with terrible resolution (320x200 or worse), headsets weighing several pounds, 50-100ms tracking latency causing motion sickness, and complete systems costing $100,000-$250,000. The vision was clear, but the technology to realize it didn't exist yet. It would take 20-30 more years for hardware to catch up.</p>",
+                        "choices": [
+                            {
+                                "id": "next",
+                                "label": "Next Question",
+                                "outcome": "quiz2_q1"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "quiz1_q2_wrong_b",
+                        "narrative": "<p>Actually, cultural acceptance wasn't the main barrier. The technology simply didn't work well enough in the 1990s . headsets were clunky, caused motion sickness, and couldn't create compelling experiences. Even people open to the idea couldn't have meaningful experiences because the hardware wasn't ready. It was technical limitation, not cultural resistance. <strong>Try again.</strong></p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "quiz1_q2"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "quiz1_q2_wrong_c",
+                        "narrative": "<p>There were no government bans on VR or consciousness technology development. The barrier was purely technical . displays, processing power, tracking systems, and supporting technologies weren't mature enough. VR failed commercially in the 1990s because the technology couldn't deliver on its promise, not because of regulatory barriers. <strong>Try again.</strong></p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "quiz1_q2"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "quiz1_q2_wrong_d",
+                        "narrative": "<p>Interest wasn't the problem . capability was. Many people were intrigued by Leary's vision, but 1990s VR couldn't deliver meaningful consciousness experiences. The hardware caused headaches, the graphics were primitive, and the experiences were underwhelming. Interest existed, but viable technology didn't. <strong>Try again.</strong></p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "quiz1_q2"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "quiz2_q1",
+                        "narrative": "<p><strong>What key insight did Brenda Laurel contribute to early VR thinking?</strong></p>",
+                        "choices": [
                             {
                                 "id": "q1_a",
-                                "label": "EEG (Brainwaves)",
-                                "correct": true
+                                "label": "VR headsets should be as light as possible",
+                                "outcome": "quiz2_q1_wrong_a"
                             },
                             {
                                 "id": "q1_b",
-                                "label": "HRV (Heart Rate Variability)",
-                                "correct": false
+                                "label": "Virtual reality should completely replace physical reality",
+                                "outcome": "quiz2_q1_wrong_c"
                             },
                             {
                                 "id": "q1_c",
-                                "label": "Respiration",
-                                "correct": false
+                                "label": "The goal should be transformation of the user through experience, not just usability",
+                                "outcome": "quiz2_q2"
                             },
                             {
                                 "id": "q1_d",
-                                "label": "GSR (Skin Conductance)",
-                                "correct": false
+                                "label": "Only game developers should work on VR projects",
+                                "outcome": "quiz2_q1_wrong_d"
                             }
-                        ],
-                        "synthesis": {
-                            "q1_a": "<p><strong>Correct!</strong> EEG directly measures brain states (Alpha, Beta, Gamma) associated with attention and concentration. It is the primary tool for focus training.</p>",
-                            "q1_b": "<p>HRV measures stress resilience, which supports focus, but doesn't directly track attention states.</p>",
-                            "q1_c": "<p>Breathing supports focus, but doesn't measure cognitive attention state directly.</p>",
-                            "q1_d": "<p>GSR measures emotional arousal, which is ambiguous (could be excitement or anxiety).</p>"
-                        }
+                        ]
                     },
                     {
-                        "question": "<h3>HeartMath vs. Standard Fitness Tracker</h3><p>A client already owns an Apple Watch that tracks heart rate. Why would you recommend a dedicated HeartMath sensor instead for biofeedback training?</p>",
-                        "options": [
+                        "id": "quiz2_q1_wrong_a",
+                        "narrative": "<p>While hardware design was important, Laurel's contribution was conceptual, not technical. She focused on the purpose and design philosophy of interactive experiences, not the physical specifications of equipment. Her insight was about transformation, not comfort. <strong>Try again.</strong></p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "quiz2_q1"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "quiz2_q1_wrong_c",
+                        "narrative": "<p>Laurel never advocated for replacing physical reality. Her vision was about using technology as a medium for transformative experiences that enhance human development, not escape from the real world. It was about augmentation and growth, not replacement. <strong>Try again.</strong></p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "quiz2_q1"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "quiz2_q1_wrong_d",
+                        "narrative": "<p>Actually, Laurel brought theatrical and narrative thinking to VR, expanding beyond purely gaming applications. She wanted artists, storytellers, and designers from diverse fields to contribute. Her vision was inclusive of multiple perspectives, not restricted to game developers. <strong>Try again.</strong></p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "quiz2_q1"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "quiz2_q2",
+                        "narrative": "<p>Exactly. Laurel argued that technology should be designed to transform users, not just function well. This was radical in a commercial tech culture focused on productivity and usability. Her phrase \"transformation through experience\" became foundational for cyberdelic thinking. it's not enough for technology to work; it should facilitate personal growth and change.</p><p>Now, <strong>Why couldn't the early VR pioneers (1980s-1990s) fully realize their visions?</strong></p>",
+                        "choices": [
                             {
                                 "id": "q2_a",
-                                "label": "HeartMath is more accurate at measuring raw heart rate.",
-                                "correct": false
+                                "label": "Government regulations prevented VR development",
+                                "outcome": "quiz2_q2_wrong_a"
                             },
                             {
                                 "id": "q2_b",
-                                "label": "Apple Watch doesn't measure heart rate continuously.",
-                                "correct": false
+                                "label": "Nobody was interested in using VR technology",
+                                "outcome": "quiz2_q2_wrong_b"
                             },
                             {
                                 "id": "q2_c",
-                                "label": "HeartMath measures HRV coherence and feeds it back in real-time, enabling active self-regulation training.",
-                                "correct": true
+                                "label": "The technology wasn't ready. displays were poor, systems were expensive ($100K+), and experiences caused motion sickness",
+                                "outcome": "quiz2_quiz_complete"
                             },
                             {
                                 "id": "q2_d",
-                                "label": "HeartMath has better battery life.",
-                                "correct": false
+                                "label": "The pioneers disagreed on the direction for VR",
+                                "outcome": "quiz2_q2_wrong_d"
                             }
-                        ],
-                        "synthesis": {
-                            "q2_a": "<p>Both devices measure heart rate accurately. Raw heart rate accuracy isn't the distinction.</p>",
-                            "q2_b": "<p>Apple Watch does measure heart rate continuously. The issue isn't measurement frequency.</p>",
-                            "q2_c": "<p><strong>Correct.</strong> The Apple Watch reports a number. HeartMath trains a skill. The emWave provides real-time coherence feedback designed specifically for self-regulation practice . the feedback loop is the point. Passive measurement and active biofeedback training are functionally different tools even when they're measuring the same physiological signal.</p>",
-                            "q2_d": "<p>Battery life is a practical concern but not the therapeutic reason to choose HeartMath.</p>"
-                        }
+                        ]
                     },
                     {
-                        "question": "<h3>System Reliability</h3><p>If a biofeedback sensor is inaccurate or the algorithm misinterprets your state, what happens?</p>",
-                        "options": [
+                        "id": "quiz2_quiz_complete",
+                        "narrative": "<h3>Quiz Complete!</h3><p>Precisely. 1980s-90s VR had massive technical limitations. displays with terrible resolution (320x200 or worse), headsets weighing several pounds, 50-100ms tracking latency causing motion sickness, and complete systems costing $100,000-$250,000. The vision was clear, but the technology to realize it didn't exist yet. It would take 20-30 more years for hardware to catch up.</p> <strong>Quiz Complete.</strong>",
+                        "choices": [
                             {
-                                "id": "q3_a",
-                                "label": "The system crashes.",
-                                "correct": false
-                            },
-                            {
-                                "id": "q3_b",
-                                "label": "You verify the data manually.",
-                                "correct": false
-                            },
-                            {
-                                "id": "q3_c",
-                                "label": "You learn the wrong patterns.",
-                                "correct": true
-                            },
-                            {
-                                "id": "q3_d",
-                                "label": "Placebo effect fixes it.",
-                                "correct": false
+                                "id": "next",
+                                "label": "Explore Cultural Preparation",
+                                "outcome": "flow_next_module"
                             }
-                        ],
-                        "synthesis": {
-                            "q3_a": "<p>The system usually keeps running, just with bad data.</p>",
-                            "q3_d": "<p>Placebo isn't magic. Bad feedback teaches bad habits.</p>",
-                            "q3_c": "<p><strong>Correct!</strong> If the mirror is distorted, you adjust based on false info. You might learn to tense up if the system incorrectly rewards tension as 'calm'. Accuracy matters.</p>"
-                        }
+                        ]
+                    },
+                    {
+                        "id": "quiz2_q2_wrong_a",
+                        "narrative": "<p>There were no regulatory barriers to VR development. The problem was purely technical. the technology simply wasn't good enough. Displays were poor, tracking was inaccurate, processing power was insufficient, and systems were prohibitively expensive. Capability, not regulation, was the barrier. <strong>Try again.</strong></p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "quiz2_q2"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "quiz2_q2_wrong_b",
+                        "narrative": "<p>Interest existed. universities, military, and researchers were very invested. The problem was that the technology couldn't deliver meaningful experiences. Headsets were heavy, caused motion sickness, had terrible resolution, and cost over $100,000. The hardware limited adoption, not lack of interest. <strong>Try again.</strong></p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "quiz2_q2"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "quiz2_q2_wrong_d",
+                        "narrative": "<p>While pioneers had different emphases, they generally agreed on VR's transformative potential. The barrier wasn't conceptual disagreement but technical limitation. They shared similar visions but lacked the technology to realize them. The challenge was capability, not consensus. <strong>Try again.</strong></p>",
+                        "choices": [
+                            {
+                                "id": "retry",
+                                "label": "Try Again",
+                                "outcome": "quiz2_q2"
+                            }
+                        ]
                     }
                 ]
             }
