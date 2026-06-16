@@ -295,20 +295,6 @@
             }
         },
         {
-            "id": "module_4_5_2_summary_text",
-            "title": "Closing the Landscape",
-            "type": "progressive-disclosure",
-            "content": {
-                "sections": [
-                    {
-                        "title": "Organizing Your Knowledge",
-                        "content": "<p>Before you move forward, let's make sure the entire cyberdelic landscape you've just toured is organized clearly in your mind. You've covered five lessons of platforms, applications, clinical evidence, biofeedback technology, social VR, hardware, and selection frameworks - and it's a lot.</p><p>The exercise below is your chance to demonstrate that you haven't just learned facts, but that you can organize the landscape the way an expert would. Once you can place every major platform in its right category without hesitation, you're ready for Module 5 - where we zoom out from 'what exists' to 'who builds it and how.'</p>",
-                        "triggerLabel": "Map the Landscape"
-                    }
-                ]
-            }
-        },
-        {
             "id": "module_4_5_2_bridge",
             "title": "Bridge to Module 5",
             "type": "progressive-disclosure",
@@ -324,7 +310,7 @@
         },
         {
             "id": "quiz_4_5_1",
-            "title": "Concept Check: Framework Philosophy",
+            "title": "Module 4 Lesson 5 Quiz",
             "type": "option-selector",
             "config": {
                 "mode": "single",

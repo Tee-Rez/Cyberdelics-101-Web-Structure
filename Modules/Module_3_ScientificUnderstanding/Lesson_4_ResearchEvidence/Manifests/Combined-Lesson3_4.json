@@ -130,7 +130,7 @@
         },
         {
             "id": "ml_3_4_1_quiz",
-            "title": "Knowledge Check",
+            "title": "Module 3 Lesson 4 Quiz",
             "type": "option-selector",
             "config": {
                 "mode": "single",

@@ -254,7 +254,7 @@
         },
         {
             "id": "attention_quiz_3.1",
-            "title": "Direction of Attention Quiz",
+            "title": "Module 1 Lesson 3 Quiz",
             "type": "option-selector",
             "config": {
                 "mode": "single",

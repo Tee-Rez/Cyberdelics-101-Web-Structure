@@ -472,7 +472,7 @@
                         ],
                         technologies: [
                             'Consumer BCI headsets',
-                            'VR + real-time neurofeedback',
+                            'VR + real-time neuroSfeedback',
                             'AI consciousness models',
                             'Ultrasound brain stimulation',
                             'Closed-loop brain systems'
@@ -480,7 +480,7 @@
                         examples: [
                             { name: 'Neurable Headphones', description: 'BCI in everyday devices', url: 'https://neurable.com/' },
                             { name: 'TRIPP Neurofeedback', description: 'Standard VR wellness', url: 'https://www.neuroregulation.org/article/view/23484' },
-                            { name: 'Omnifit Brain', description: 'AI-guided brain training', url: 'https://www.tripp.com/' }
+                            { name: 'Omnifit Brain', description: 'AI-guided brain training', url: 'https://www.omnifit.co.kr/en/omnifit_brain' }
                         ]
                     }
                 }
@@ -533,7 +533,7 @@
                         examples: [
                             { name: 'Waking Up', description: 'Sam Harris meditation app', url: 'https://www.wakingup.com/' },
                             { name: 'Insight Timer', description: 'Free meditation community', url: 'https://insighttimer.com/' },
-                            { name: 'Guided Meditation VR', description: 'VR contemplative spaces', url: 'https://cubicworlds.net/gmedvr/' }
+                            { name: 'Guided Meditation VR', description: 'VR contemplative spaces', url: 'https://guidedmeditationvr.com/' }
                         ]
                     },
                     2020: {

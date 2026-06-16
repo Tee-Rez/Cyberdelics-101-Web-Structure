@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Render Reel</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Audiowide&family=Bungee&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Instrument+Serif:ital@0;1&family=Inter:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Monoton&family=Orbitron:wght@400..900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&family=Space+Grotesk:wght@300..700&family=Syncopate:wght@400;700&family=Unica+One&family=VT323&display=swap" rel="stylesheet">
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <style>
+        body { margin: 0; padding: 0; background-color: #000; overflow: hidden; }
+        #root { width: 1080px; height: 1920px; }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel" src="Components/reel-primitives.jsx"></script>
+    <script type="text/babel" src="Components/reel-themes.jsx"></script>
+    <script type="text/babel" src="Components/reel-backgrounds.jsx"></script>
+    <script type="text/babel" src="Components/reel-variant-b.jsx"></script>
+    <script type="text/babel" src="Components/reel-player.jsx"></script>
+
+    <script type="text/babel">
+        // Mount purely the player, perfectly unscaled at 1080x1920
+        function RenderApp() {
+            const bgProps = {
+                cosmicIntensity: 1.2,
+                starDensity: 180,
+                starTwinkle: 2,
+                scanIntensity: 2,
+                scanLineCount: 4,
+                scanSpeed: 3,
+                ctaColor: '#37a1e6',
+                ctaFlashRate: 6,
+            };
+            const gradientStops = ['#00f0ff', '#5ce0ff', '#b28aff', '#e85cf5', '#00f0ff']; // Electric preset
+
+            return (
+                <ReelPlayer 
+                    width={1080} 
+                    showChrome={false} 
+                    autoPlay={false} 
+                    colorTheme="prism" 
+                    fontTheme="audiowide" 
+                    gradientStops={gradientStops}
+                    gradientSpeed={2}
+                    bgProps={bgProps}
+                />
+            );
+        }
+        ReactDOM.createRoot(document.getElementById('root')).render(<RenderApp />);
+    </script>
+</body>
+</html>

@@ -223,7 +223,7 @@
         },
         {
             "id": "quiz_3_3_2",
-            "title": "Test Your Understanding",
+            "title": "Module 3 Lesson 3 Quiz",
             "type": "option-selector",
             "config": {
                 "mode": "single",
