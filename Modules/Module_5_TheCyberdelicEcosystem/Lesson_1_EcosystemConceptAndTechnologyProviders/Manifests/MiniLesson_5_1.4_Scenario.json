@@ -1,0 +1,57 @@
+{
+    "id": "MiniLesson 5 1.4 Scenario",
+    "title": "The Builder's Dilemma",
+    "description": "A colleague approaches you.  She has a PhD in clinical psychology, has been running breathwork sessions for five years, and has a clear vision for a VR breathwork guidance platform, specifically one that uses binaural audio, real-time breathing feedback, and guided visualization to create genuine altered states through breath alone, no substances.",
+    "theme": {
+        "primaryColor": "#00c9a7",
+        "fontBody": "Rajdhani, sans-serif"
+    },
+    "modules": [
+        {
+            "id": "module_5_1_3_scenario",
+            "title": "The Builder's Dilemma",
+            "type": "scenario-based",
+            "content": {
+                "title": "Advising a New Cyberdelic Creator",
+                "scenes": [
+                    {
+                        "id": "intro",
+                        "narrative": "<p>A colleague approaches you. She has a PhD in clinical psychology, has been running breathwork sessions for five years, and has a clear vision for a VR breathwork guidance platform, specifically one that uses binaural audio, real-time breathing feedback, and guided visualization to create genuine altered states through breath alone, no substances.</p><p>She has the clinical knowledge. She has the content. She has relationships with breathwork practitioners who would use it.</p><p><strong>What she doesn't have.</strong> software development experience, business experience, or funding. She's asking for your guidance on how to start navigating the development pipeline and business models.</p><p>Which path do you recommend she take?</p>",
+                        "choices": [
+                            {
+                                "id": "choice_a",
+                                "label": "Path A. Research prototype first, open source, web-based entry, grant-funded",
+                                "outcome": "outcome_a"
+                            },
+                            {
+                                "id": "choice_b",
+                                "label": "Path B. Commercial platform, proprietary, Meta Quest Store first, subscription",
+                                "outcome": "outcome_b"
+                            },
+                            {
+                                "id": "choice_c",
+                                "label": "Path C. Clinical licensing first, proprietary, partnership with an existing clinical network",
+                                "outcome": "outcome_c"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "outcome_a",
+                        "narrative": "<h3>Path A Selected. Research-First &amp; Grant-Funded</h3><p><strong>Outcome.</strong> She establishes credibility through validation. Publications give her leverage for clinical licensing down the road. Open source builds community. Web-based removes hardware barriers for initial testing. <em>The weakness. slow path to sustainability, depends heavily on grant cycles.</em></p><p><strong>Feedback.</strong> This path prioritizes mission and credibility over speed. It's strong if she has an institutional affiliation that can support grant applications and if her goal is clinical integration rather than rapid consumer adoption. The breathwork community she already has gives her a built-in validation cohort. Consider whether grant timelines match her financial runway.</p><p><strong>Reflection.</strong> <em>Which ecosystem components does this path strengthen most immediately, and which does it leave underdeveloped until later? Think about what the field gains when builders choose credibility over speed, and what it potentially loses in the meantime.</em></p>",
+                        "choices": []
+                    },
+                    {
+                        "id": "outcome_b",
+                        "narrative": "<h3>Path B Selected. Commercial &amp; Subscription-Based</h3><p><strong>Outcome.</strong> Fastest path to market and revenue. Maximum consumer reach. <em>But without research validation, cautious clinical practitioners won't refer clients. Without clinical referrals, subscription churn is high. Without a large development budget, polish and support are thin.</em></p><p><strong>Feedback.</strong> This path prioritizes speed and reach over credibility. Possible, but high-risk without funding. Her breathwork practitioner community may be willing to pilot-test, but wider clinical adoption requires the research path she'd be skipping. A hybrid approach, building the consumer product while doing a small validation study in parallel, could bridge the gap.</p><p><strong>Reflection.</strong> <em>What pressure does a consumer subscription model place on a platform's mission over time? Consider where a platform financially dependent on engagement metrics might drift from a platform accountable to transformation outcomes.</em></p>",
+                        "choices": []
+                    },
+                    {
+                        "id": "outcome_c",
+                        "narrative": "<h3>Path C Selected. B2B Clinical Licensing</h3><p><strong>Outcome.</strong> Her existing practitioner relationships become the distribution channel. The B2B model provides more stable revenue than consumer subscription. <em>But it requires significant sales effort and longer cycles. Needs enough polish for institutional approval.</em></p><p><strong>Feedback.</strong> This path fits her clinical background best. She already has the relationships and the clinical credibility, and the product just needs to meet institutional standards. The challenge is that clinical licensing requires resources for HIPAA compliance, liability documentation, and ongoing clinical support that go beyond the technical build.</p><p><strong>Reflection.</strong> <em>Of the three paths presented, which most naturally aligns with your own instincts or values? Not which one is 'right', but which one would you actually be drawn to if you were in her position, and what does that reveal about what you're optimizing for?</em></p>",
+                        "choices": []
+                    }
+                ]
+            }
+        }
+    ]
+}

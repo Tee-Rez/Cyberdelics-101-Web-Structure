@@ -1,0 +1,20 @@
+{
+    "id": "MiniLesson 1 3.3 Simulation",
+    "title": "The Cyberdelic Design Dimension Explorer",
+    "description": "An interactive simulation exploring: The Cyberdelic Design Dimension Explorer. Engage with the content to deepen your understanding.",
+    "theme": {
+        "primaryColor": "#00d9ff",
+        "fontBody": "Rajdhani, sans-serif"
+    },
+    "modules": [
+        {
+            "id": "dimension_explorer_3.2",
+            "title": "The Cyberdelic Design Dimension Explorer",
+            "type": "interactive-simulation",
+            "content": {
+                "engine": "TesseractExplorer",
+                "params": {}
+            }
+        }
+    ]
+}

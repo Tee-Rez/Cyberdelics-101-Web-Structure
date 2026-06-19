@@ -1,0 +1,122 @@
+{
+    "id": "MiniLesson 1 3.4 Overview",
+    "title": "Module 1 Lesson 3 Overview",
+    "description": "A knowledge check overview containing 4 question(s) to test your understanding of the lesson.",
+    "theme": {
+        "primaryColor": "#00d9ff",
+        "fontBody": "Rajdhani, sans-serif"
+    },
+    "modules": [
+        {
+            "id": "attention_quiz_3.1",
+            "title": "Module 1 Lesson 3 Overview",
+            "type": "option-selector",
+            "config": {
+                "mode": "single",
+                "style": "text",
+                "questions": [
+                    {
+                        "question": "What is the primary difference between Entertainment VR and Cyberdelic VR?",
+                        "options": [
+                            {
+                                "id": "q1_1_a",
+                                "label": "The quality of the graphics",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_1_b",
+                                "label": "The price of the headset",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_1_c",
+                                "label": "The direction of the user's attention (Outward vs. Inward)",
+                                "correct": true
+                            },
+                            {
+                                "id": "q1_1_d",
+                                "label": "The speed of the internet connection",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "q1_1_a": "<p>Graphics quality varies in both fields. High-fidelity visuals are used for both games and transformational tools. The real difference lies in the <em>purpose</em> and <em>direction of attention</em>, not the resolution. <strong>Try again.</strong></p>",
+                            "q1_1_b": "<p>Both types of experiences run on the same hardware. The distinction is in the software design and psychological intent, not the physical cost of the device. <strong>Try again.</strong></p>",
+                            "q1_1_d": "<p>Connection speed is a technical requirement that doesn't define the nature of the experience itself. The distinction is psychological. <strong>Try again.</strong></p>",
+                            "q1_1_c": "<h3>Correct!</h3><p>Exactly. While the technology is secondary, the psychological direction of attention is primary. Entertainment pulls you into a fictional external world; Cyberdelics uses technology to reveal and explore your internal world.</p>"
+                        }
+                    },
+                    {
+                        "question": "True or False - A 'trippy' visual style automatically makes a VR experience cyberdelic.",
+                        "options": [
+                            {
+                                "id": "q1_2_a",
+                                "label": "False",
+                                "correct": true
+                            },
+                            {
+                                "id": "q1_2_b",
+                                "label": "True",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "q1_2_b": "<p>Visual style is just aesthetics. Many games use psychedelic visuals for style or atmosphere while maintaining purely 'entertainment' mechanics (shooting, scoring, etc.). To be cyberdelic, the mechanics must turn attention inward. <strong>Try again.</strong></p>",
+                            "q1_2_a": "<h3>Correct!</h3><p>Correct. Aesthetics alone don't define the category. An experience is cyberdelic based on its <em>design mechanics</em> and its ability to facilitate self-reflection, biofeedback, or altered states of consciousness, regardless of whether it 'looks' trippy or realistic.</p>"
+                        }
+                    },
+                    {
+                        "question": "A designer creates an experience where the environment is a bioluminescent forest that reacts to a learner's tactile touch on a physical controller. Which two dimensions form the substrate of this setup?",
+                        "options": [
+                            {
+                                "id": "q2_1_a",
+                                "label": "Reality and Sensory Channels",
+                                "correct": true
+                            },
+                            {
+                                "id": "q2_1_b",
+                                "label": "Presence and States",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_1_c",
+                                "label": "Traits and Meaning",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "q2_1_a": "<h3>Correct!</h3><p>The bioluminescent forest is the Reality dimension. The tactile feedback from the controller is the Sensory dimension. Together, they form the perceptual substrate of the experience.</p>",
+                            "q2_1_b": "<p>These dimensions describe the internal shift of the learner. The forest and the controller are the external building blocks used to create that shift. <strong>Try again.</strong></p>",
+                            "q2_1_c": "<p>Traits and Meaning focus on the lasting impact and the narrative soul of the work. The forest and the controller are the immediate perceptual tools. <strong>Try again.</strong></p>"
+                        }
+                    },
+                    {
+                        "question": "A learner feels a temporary sense of deep calm during a session. Six weeks later, they notice they are consistently less reactive during stressful work meetings. Which dimension describes this long-term shift?",
+                        "options": [
+                            {
+                                "id": "q2_2_a",
+                                "label": "States",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_2_b",
+                                "label": "Traits",
+                                "correct": true
+                            },
+                            {
+                                "id": "q2_2_c",
+                                "label": "Presence",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "q2_2_a": "<p>The temporary calm felt during the session was a State. The shift that persists weeks later belongs to a different dimension. <strong>Try again.</strong></p>",
+                            "q2_2_b": "<h3>Quiz Complete!</h3><p>Correct. Traits are the enduring changes that remain with a person long after the technology is removed. This long-term shift is the ultimate goal of many cyberdelic interventions. <strong>Quiz Complete.</strong></p>",
+                            "q2_2_c": "<p>Presence refers to the quality of awareness during the experience itself. The lasting change in daily life is an enduring Trait. <strong>Try again.</strong></p>"
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

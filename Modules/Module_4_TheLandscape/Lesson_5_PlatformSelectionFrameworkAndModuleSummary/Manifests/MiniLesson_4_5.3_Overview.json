@@ -1,0 +1,84 @@
+{
+    "id": "MiniLesson 4 5.3 Overview",
+    "title": "Module 4 Lesson 5 Overview",
+    "description": "A knowledge check overview containing 2 question(s) to test your understanding of the lesson.",
+    "theme": {
+        "primaryColor": "#00ffcc",
+        "fontBody": "Rajdhani, sans-serif"
+    },
+    "modules": [
+        {
+            "id": "quiz_4_5_1",
+            "title": "Module 4 Lesson 5 Overview",
+            "type": "option-selector",
+            "config": {
+                "mode": "single",
+                "style": "card",
+                "questions": [
+                    {
+                        "question": "<h3>Trial & Iterate</h3><p>In the four-step selection framework, why is 'Trial & Iterate' the final step rather than 'Choose the Perfect Platform'?</p>",
+                        "options": [
+                            {
+                                "id": "q1_a",
+                                "label": "Because no platform is perfect so expectations should be lowered.",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_b",
+                                "label": "Because platforms frequently shut down so users need backup options.",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_c",
+                                "label": "Because it's impossible to know what someone needs without trying everything.",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_d",
+                                "label": "Because what serves someone changes over time, and trial reveals fit better than analysis alone.",
+                                "correct": true
+                            }
+                        ],
+                        "synthesis": {
+                            "q1_a": "<p>This is too pessimistic. The point is that the right platform for someone evolves as their practice deepens.</p>",
+                            "q1_b": "<p>Stability is a factor, but not the core reason for iteration in facilitation.</p>",
+                            "q1_c": "<p>Trial & Iterate doesn't mean random testing; it means informed starting choices followed by refinement.</p>",
+                            "q1_d": "<p><strong>Correct!</strong> Beginners outgrow beginner platforms, and clinical needs shift as healing progresses. The right answer now isn't the right answer forever.</p>"
+                        }
+                    },
+                    {
+                        "question": "<h3>Assessing Readiness</h3><p>A client says. 'I want the most powerful VR consciousness experience available - whatever produces the deepest altered states.' What's your most important first response?</p>",
+                        "options": [
+                            {
+                                "id": "q2_a",
+                                "label": "Identify their budget for equipment.",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_b",
+                                "label": "Check their tech comfort level.",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_c",
+                                "label": "Ask about their hoped-for outcome and support systems.",
+                                "correct": true
+                            },
+                            {
+                                "id": "q2_d",
+                                "label": "Discuss privacy concerns vs. content access.",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "q2_a": "<p>Budget matters eventually, but safety and readiness come first.</p>",
+                            "q2_b": "<p>Tech skills are practical, but psychological readiness for intensity is more critical.</p>",
+                            "q2_c": "<p><strong>Correct!</strong> This explores the underlying need (what are they seeking?) and assesses readiness (do they have preparation and support?). High-intensity work requires a container, not just an app.</p>",
+                            "q2_d": "<p>Privacy is important, but secondary to the safety implications of altered-state requests.</p>"
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

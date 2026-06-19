@@ -1,151 +1,303 @@
 {
-    "id": "combined_lesson_2_1",
-    "title": "The Visionaries: Leary, the Pioneers & the Culture That Made It Possible",
-    "description": "Meet the visionaries who imagined the cyberdelic future before it existed, from Timothy Leary's digital prophecy to the VR pioneers who built the foundation, and the cultural movements that prepared the soil.",
-    "framerDescription": "Before there was an industry, there were people who looked at the technology of their era and saw something nobody else did. This lesson introduces three groups of visionaries who made today's cyberdelic field possible.",
+    "id": "combined_lesson_1_1",
+    "title": "What Cyberdelics Actually Are: From Etymology to Principle",
+    "description": "A complete foundation in the definition, components, and guiding principles of cyberdelics, from the meaning of the word itself to the technology-first, none-substance approach that defines this field.",
+    "framerDescription": "This lesson takes you from the very first question, what does the word cyberdelics even mean?, all the way through to the core principles that make this field unique. You'll understand where the word came from, what three components must always be present, how to tell cyberdelic from non-cyberdelic use of the same hardware, and why the none-substance principle opens doors that other paths cannot reach. By the end, you'll be able to define, recognize, and evaluate cyberdelic experiences with precision.",
     "theme": {
         "primaryColor": "#5900ff",
         "fontBody": "Rajdhani, sans-serif"
     },
     "modules": [
         {
-            "id": "leary_pd_2.1",
-            "title": "The Evolution of a Visionary",
+            "id": "progressive_disclosure_1.1.1",
+            "title": "Breaking Down 'Cyberdelics'",
             "type": "progressive-disclosure",
             "content": {
                 "sections": [
                     {
-                        "title": "The Evolution Nobody Knows About",
-                        "content": "<p>Most people know Timothy Leary for his 1960s psychedelic research at Harvard. But by the 1990s, Leary had completely evolved his thinking. He became fascinated by personal computers and virtual reality, seeing in them the potential to achieve what psychedelics promised - consciousness expansion, reality hacking, liberation from consensus limitations - but through digital means.</p><p>He didn't abandon his earlier work. He extended it. The question driving both phases of his career was the same. how do humans access deeper levels of awareness? The medium changed; the mission didn't.</p>",
-                        "media": {
-                            "type": "image",
-                            "src": "../assets/images/module2/TimLeary1960-2020.webp"
-                        },
-                        "mediaLayout": "right",
-                        "triggerLabel": "The Prophecy"
+                        "title": "A Fusion Word",
+                        "content": "<p>The word 'cyberdelics' isn't random. It's a deliberate fusion of two powerful concepts. Understanding where this word comes from helps us grasp what the field actually is. Let's break it down piece by piece.</p>",
+                        "triggerLabel": "Let's break it down"
                     },
                     {
-                        "title": "The Prophetic Quote (1994)",
+                        "title": "\"Cyber\" : The Digital Realm",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module2/leary_prophecy.webp"
+                            "src": "../assets/images/module1/Cyber.webp",
+                            "aiPrompt": "The word CYBER in bold futuristic typography with circuit board patterns and digital nodes flowing through the letters, electric blue and white color scheme, representing technology and digital systems, clean modern design with subtle binary code in background, 16:9 aspect ratio"
                         },
                         "mediaLayout": "left",
-                        "content": "<p>In 1994, Leary made his most prescient prediction. \"The PC is the LSD of the 1990s.\" Think about what this meant. He was declaring that personal computers would become tools for consciousness exploration comparable to psychedelic substances.</p><p>In 1994, VR was primitive, consumer internet was brand new, there were no smartphones. Yet Leary saw where it was heading. He wasn't predicting better productivity software. He was predicting a new category of consciousness technology, something that would let people explore inner space the way psychedelics did, but without the legal and physiological complexity of substances.</p>",
-                        "triggerLabel": "Key Concepts"
+                        "content": "<p>'Cyber' comes from 'cybernetics,' coined by Norbert Wiener in 1948. It refers to systems of communication and control, particularly involving technology and feedback loops. In modern usage, 'cyber' represents the digital, technological, and virtual dimensions of experience. It's the realm of VR headsets, AR overlays, biofeedback devices, and human-computer interaction. The medium through which we engage the world digitally.</p>",
+                        "triggerLabel": "Next Component"
                     },
                     {
-                        "title": "Key Concepts He Introduced",
+                        "title": "\"Delic\" : Mind-Manifesting",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module2/leary_concepts.webp"
+                            "src": "../assets/images/module1/delic.webp",
+                            "aiPrompt": "The word DELIC in flowing organic typography with mandala patterns, sacred geometry (Flower of Life), and radiating light waves emanating outward from the letters, purple and teal color scheme, representing consciousness and inner exploration, mystical yet modern aesthetic, 16:9 aspect ratio"
                         },
                         "mediaLayout": "right",
-                        "content": "<p>Leary articulated several ideas that became foundational for cyberdelics.</p><ul><li><strong>Electronic spirituality:</strong> technology serving consciousness development, not just convenience or entertainment.</li><li><strong>Digital shamanism:</strong> programmers as modern shamans navigating between realities, mapping inner space through code.</li><li><strong>Reality hacking:</strong> using digital tools to reshape perception the way psychedelics do, treating consensus reality as editable.</li><li><strong>Neurological self-determination:</strong> consciously designing your own consciousness through technology rather than accepting default programming.</li></ul><p>These weren't just provocative phrases. They were a philosophical framework that still describes what cyberdelic practitioners do today.</p>",
-                        "triggerLabel": "Right But Early"
+                        "content": "<p>'Delic' comes from 'psychedelic,' which literally means 'mind-manifesting' (from Greek. psyche = mind/soul, delos = manifest/reveal). This suffix carries the essence of consciousness exploration, expanded awareness, and transformative experiences. It's about revealing what's hidden in consciousness, making the invisible visible. The goal is revelation, not hallucinations..</p>",
+                        "triggerLabel": "The Fusion"
                     },
                     {
-                        "title": "Why He Was Early, Not Wrong",
+                        "title": "The Fusion",
+                        "content": "<p>When you combine 'cyber' and 'delic,' you get a field that uses digital technology (cyber) to manifest and explore consciousness (delic). Technology in service of inner revelation. The word itself tells you what the field is about. using computers and sensors as tools for mind-manifesting experiences. This wasn't accidental naming. It was a deliberate declaration of intent.</p>",
+                        "triggerLabel": "Historical Context"
+                    },
+                    {
+                        "title": "Historical Context",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module2/vision_growth.webp"
+                            "src": "../assets/images/module1/tim-leary.webp"
                         },
                         "mediaLayout": "left",
-                        "content": "<p>Leary died in 1996, decades before seeing his vision validated. The technology he imagined took 20-30 more years to mature. Research proving VR could produce mystical experiences wouldn't emerge until 2020. But he got the essential insight right. technology could serve consciousness exploration and transformation, not just entertainment or productivity.</p><p>This matters for how you understand the field's history. The gap between his prediction and its proof wasn't evidence that he was wrong. It was evidence that visionary ideas routinely precede the technology required to demonstrate them.</p>",
-                        "triggerLabel": "His Legacy"
-                    },
-                    {
-                        "title": "His Legacy Lives On",
-                        "media": {
-                            "type": "image",
-                            "src": "../assets/images/module2/leary_legacy.webp"
-                        },
-                        "mediaLayout": "right",
-                        "content": "<p>Every time we talk about using VR for transformation, we're echoing Leary's vision. The term \"cyberdelic\" itself combines his psychedelic thinking with cyber technology. The integration of tech with ancient wisdom, the focus on personal agency, the vision of democratized access to transformative experiences - all trace back to him.</p><p>He planted seeds that took 30 years to sprout. The field you're learning about is, in part, his extended legacy.</p>",
-                        "triggerLabel": "Experience 1995"
+                        "content": "<p>The term 'cyberdelics' was popularized by Timothy Leary in the 1990s. Leary, known for his earlier psychedelic research, recognized that technology could serve similar consciousness-expanding purposes as substances. He foresaw a future where virtual reality and digital tools would become valid paths for inner exploration. We're now living in that future he envisioned.</p>",
+                        "triggerLabel": "Try the Simulation"
                     }
                 ]
             }
         },
         {
-            "id": "leary_scenario_2.1",
-            "title": "1995: The Conference",
+            "id": "progressive_disclosure_1.1.2",
+            "title": "The Three Essential Components",
+            "type": "progressive-disclosure",
+            "content": {
+                "sections": [
+                    {
+                        "title": "Three Legs of the Same Stool",
+                        "content": "<p>A cyberdelic experience requires three essential components working together. Remove any one of these, and it's no longer cyberdelic. Think of them as three legs of a stool, all must be present for it to stand. This framework is your primary evaluation tool for the rest of this course.</p>",
+                        "triggerLabel": "Component 1"
+                    },
+                    {
+                        "title": "Component 1 : Digital Technologies",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module1/DigitalTechnologies.webp",
+                            "aiPrompt": "Modern VR headset (Meta Quest style), EEG headband, and HRV chest strap sensor arranged on a minimalist surface, professional product photography, soft directional lighting, tech-forward aesthetic, subtle Flower of Life sacred geometry pattern faintly visible in background, clean composition, 16:9 aspect ratio"
+                        },
+                        "mediaLayout": "right",
+                        "content": "<p>The first component is digital technology as the medium. This includes VR headsets, AR experiences, and biofeedback devices like EEG sensors or heart rate monitors. But not just any tech use qualifies, the technology must be purposefully designed to facilitate consciousness exploration. The device is the delivery system, not the destination.</p>",
+                        "triggerLabel": "Component 2"
+                    },
+                    {
+                        "title": "Component 2 : Altered States",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module1/meditation-comparison.webp",
+                            "aiPrompt": "Split-screen composition : person in traditional meditation pose with eyes closed on the left side, and the same person wearing a VR headset in a similar meditative pose on the right side, both surrounded by soft glowing mandala patterns and sacred geometry, ethereal purple and teal color palette, spiritual atmosphere meeting technology, sense of expanded consciousness, 16:9 aspect ratio"
+                        },
+                        "mediaLayout": "left",
+                        "content": "<p>The second component is the intentional cultivation of altered or expanded states of consciousness. This isn't accidental entertainment-induced immersion. It's a deliberate shift in awareness, whether that's deep meditative states, expanded perception, or transcendent experiences. The technology is used specifically to facilitate these states, not just to entertain or distract.</p>",
+                        "triggerLabel": "Component 3"
+                    },
+                    {
+                        "title": "Component 3 : Transformational Intent",
+                        "content": "<p>The third component is transformational purpose. The experience is designed for personal growth, healing, spiritual exploration, or consciousness development. This is the 'why' behind everything. Entertainment might be enjoyable. Wellness might be beneficial. But cyberdelics aim for transformation at a deeper level . a shift in how you see yourself and the world.</p>",
+                        "triggerLabel": "All Three Required"
+                    },
+                    {
+                        "title": "All Three Required",
+                        "media": {
+                            "type": "image",
+                            "src": "../assets/images/module1/AllThree.webp",
+                            "aiPrompt": "Three overlapping circles forming a Venn diagram, each circle labeled and colored differently : Technology in electric blue, Altered States in deep purple, Transformation in teal. Glowing bright white center where all three intersect. Clean infographic style, modern educational design, dark background, subtle sacred geometry texture in circle fill areas, 16:9 aspect ratio"
+                        },
+                        "mediaLayout": "full",
+                        "content": "<p>All three components must be present. A VR game might use technology and create immersion, but without transformational intent it's not cyberdelic. A meditation app might aim for transformation and use some tech, but without intentionally facilitating altered states through immersive technology it's not fully cyberdelic. The intersection of all three is what defines the field.</p><table style='width:100%; border-collapse:collapse; margin-top:10px; margin-bottom:16px; font-size:0.86em; text-align:left;'><thead><tr style='background:rgba(255,255,255,0.15); border-bottom:2px solid rgba(255,255,255,0.3);'><th style='padding:10px 12px; font-weight:600; letter-spacing:0.03em;'>Experience Type</th><th style='padding:10px 12px; font-weight:600; letter-spacing:0.03em;'>Digital Technology</th><th style='padding:10px 12px; font-weight:600; letter-spacing:0.03em;'>Altered States</th><th style='padding:10px 12px; font-weight:600; letter-spacing:0.03em;'>Transformational Intent</th><th style='padding:10px 12px; font-weight:600; letter-spacing:0.03em;'>Cyberdelic?</th></tr></thead><tbody><tr style='border-bottom:1px solid rgba(255,255,255,0.1); background:rgba(255,255,255,0.03);'><td style='padding:9px 12px;'><strong>VR game</strong></td><td style='padding:9px 12px;'>Yes</td><td style='padding:9px 12px;'>Sometimes</td><td style='padding:9px 12px;'>No</td><td style='padding:9px 12px;'>No</td></tr><tr style='border-bottom:1px solid rgba(255,255,255,0.1);'><td style='padding:9px 12px;'><strong>Meditation app</strong></td><td style='padding:9px 12px;'>Partial</td><td style='padding:9px 12px;'>Sometimes</td><td style='padding:9px 12px;'>Sometimes</td><td style='padding:9px 12px;'>Borderline</td></tr><tr style='background:rgba(255,255,255,0.03);'><td style='padding:9px 12px;'><strong>Cyberdelic experience</strong></td><td style='padding:9px 12px;'>Yes</td><td style='padding:9px 12px;'>Yes</td><td style='padding:9px 12px;'>Yes</td><td style='padding:9px 12px;'>Yes</td></tr></tbody></table>",
+                        "triggerLabel": "Evaluate Experiences"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "scenario_1.1.3",
+            "title": "Experience Evaluation",
             "type": "scenario-based",
             "content": {
                 "scenes": [
                     {
-                        "id": "start",
-                        "narrative": "<h3>1995 Tech Conference</h3><p>It's 1995. You're at a technology conference where Timothy Leary is presenting. Most attendees are skeptical. VR has failed commercially, and this former psychedelic advocate is making bold claims about computers becoming consciousness tools.</p><p><strong>How do you react to Leary's vision?</strong></p>",
+                        "id": "intro",
+                        "narrative": "<p>You're evaluating three VR experiences to determine which qualify as cyberdelic. Same hardware, different intentions. Let's see how your understanding holds up.</p>",
                         "choices": [
                             {
-                                "id": "choice_a",
-                                "label": "Dismiss the vision",
-                                "outcome": "outcome_a"
+                                "id": "start",
+                                "label": "Begin Evaluation",
+                                "outcome": "exp1"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "exp1",
+                        "narrative": "<h3>EXPERIENCE 1 . Virtual Temple Meditation</h3><p>A VR meditation environment where users sit in a virtual temple, follow guided breathwork, and practice present-moment awareness. The visuals are serene and minimal. Biofeedback adjusts the ambient lighting based on heart rate variability. The technology fades into the background as users turn attention inward.</p><p><strong>Is this cyberdelic?</strong></p>",
+                        "choices": [
+                            {
+                                "id": "exp1_a",
+                                "label": "No, because it uses technology instead of traditional meditation",
+                                "outcome": "exp1_a_out"
                             },
                             {
-                                "id": "choice_b",
-                                "label": "Right vision, wrong timing",
-                                "outcome": "outcome_b"
+                                "id": "exp1_b",
+                                "label": "Yes, it uses technology to facilitate altered states and transformation",
+                                "outcome": "exp1_b_out"
                             },
                             {
-                                "id": "choice_c",
-                                "label": "Commit to the vision",
-                                "outcome": "outcome_c"
+                                "id": "exp1_c",
+                                "label": "Only if the graphics are high-resolution and photorealistic",
+                                "outcome": "exp1_c_out"
                             }
                         ]
                     },
                     {
-                        "id": "outcome_a",
-                        "narrative": "<h3>Outcome. Dismiss the vision</h3><p>You join the majority of tech industry professionals in 1995 who dismissed Leary's vision. VR headsets are clunky and cause motion sickness. The idea of mystical experiences through computers seems absurd. You write it off as the rambling of someone stuck in the psychedelic era.</p><p>Fast forward to 2020. The Isness VR study validates exactly what Leary predicted - VR producing mystical experiences comparable to psychedelics. You realize you witnessed prophecy but mistook it for fantasy.</p><p><em>Reflection. Vision often looks like delusion until technology catches up. The question isn't whether the vision is crazy. it's whether the timing is right.</em></p>",
+                        "id": "exp1_a_out",
+                        "narrative": "<p>This misunderstands what cyberdelics is. The field isn't opposed to technology; it uses technology purposefully for consciousness exploration. This experience has all three components. digital technology (VR and biofeedback), intentional altered states (meditative awareness), and transformational intent (inner exploration and development). It's cyberdelic.</p><p><em>Reflection. Technology serving consciousness exploration is exactly what cyberdelics means.</em></p>",
                         "choices": [
                             {
                                 "id": "next",
-                                "label": "Continue",
-                                "outcome": "quiz_intro"
+                                "label": "Next Experience",
+                                "outcome": "exp2"
                             }
                         ]
                     },
                     {
-                        "id": "outcome_b",
-                        "narrative": "<h3>Outcome. Right vision, wrong timing</h3><p>You understand what Leary is pointing toward - the potential for technology to facilitate consciousness work. But looking at current VR technology (heavy headsets, low resolution, limited computing power), you think it's at least 20-30 years away.</p><p>You're exactly right. Leary's vision was correct, but the timeline was off by 25+ years. The technology needed smartphones to improve displays, gaming to advance GPUs, and neuroscience to validate mechanisms. Sometimes being right about direction is different from being right about when.</p><p><em>Reflection. Great visions require patience. The gap between seeing possibility and achieving viability can span decades.</em></p>",
+                        "id": "exp1_b_out",
+                        "narrative": "<p>Correct. This is a cyberdelic experience. It has all three essential components. technology as medium (VR and biofeedback), intentional cultivation of altered states (meditative awareness), and transformational purpose (consciousness exploration and inner development). The technology serves the inward journey.</p><p><em>Reflection. When technology facilitates consciousness work, that's cyberdelic.</em></p>",
                         "choices": [
                             {
                                 "id": "next",
-                                "label": "Continue",
-                                "outcome": "quiz_intro"
+                                "label": "Next Experience",
+                                "outcome": "exp2"
                             }
                         ]
                     },
                     {
-                        "id": "outcome_c",
-                        "narrative": "<h3>Outcome. Commit to the vision</h3><p>Leary's talk ignites your imagination. Despite primitive technology, you begin exploring how computers might facilitate consciousness work. You spend the next 20 years in academic labs, meditation tech startups, and VR experiments, often dismissed as fringe.</p><p>By 2020, when breakthrough research validates the vision, you're already an established expert. You were one of the few who kept working during the \"wilderness years\" when everyone else had moved on. Your persistence made the validation possible.</p><p><em>Reflection. Someone has to keep the vision alive during the gap between prophecy and proof. Early believers enable later breakthroughs.</em></p>",
+                        "id": "exp1_c_out",
+                        "narrative": "<p>Visual quality doesn't determine what's cyberdelic. This experience could have simple graphics and still be deeply cyberdelic because of its intention and design. What matters is the purpose. facilitating consciousness exploration, not the technical specifications of the visuals.</p><p><em>Reflection. Design intent, not technical specs, defines cyberdelic nature.</em></p>",
                         "choices": [
                             {
                                 "id": "next",
-                                "label": "Continue",
-                                "outcome": "quiz_intro"
+                                "label": "Next Experience",
+                                "outcome": "exp2"
                             }
                         ]
                     },
                     {
-                        "id": "quiz_intro",
-                        "narrative": "<h3>Scenario Complete</h3><p>History reveals Leary was prescient, not deluded. But in 1995, with the technology not yet ready, it was impossible to know for certain. The lesson holds across every emerging field . visionary ideas routinely require decades before technology enables them. Distinguishing vision from fantasy in real time requires both imagination and patience.</p>",
+                        "id": "exp2",
+                        "narrative": "<h3>EXPERIENCE 2 . VR Roller Coaster</h3><p>A thrilling VR roller coaster experience with loops, drops, and high-speed turns. Users experience adrenaline, excitement, and sensory intensity. The technology creates full immersion in an external adventure. Heart rate monitoring displays your excitement level as a score.</p><p><strong>Is this cyberdelic?</strong></p>",
                         "choices": [
                             {
-                                "id": "finish_scenario",
-                                "label": "Reflect on This Journey",
+                                "id": "exp2_a",
+                                "label": "Yes, because it uses VR technology and affects consciousness",
+                                "outcome": "exp2_a_out"
+                            },
+                            {
+                                "id": "exp2_b",
+                                "label": "Yes, because biofeedback is monitoring heart rate",
+                                "outcome": "exp2_b_out"
+                            },
+                            {
+                                "id": "exp2_c",
+                                "label": "No, the purpose is entertainment rather than consciousness exploration",
+                                "outcome": "exp2_c_out"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "exp2_a_out",
+                        "narrative": "<p>Not quite. While it uses technology and creates an experience, it lacks two critical components. There's no intentional cultivation of altered states, only entertainment-induced excitement. And the purpose is external entertainment, not transformation or inner exploration. This is entertainment VR, not cyberdelic.</p><p><em>Reflection. Technology alone doesn't make something cyberdelic. Intention matters.</em></p>",
+                        "choices": [
+                            {
+                                "id": "next",
+                                "label": "Next Experience",
+                                "outcome": "exp3"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "exp2_b_out",
+                        "narrative": "<p>The presence of biofeedback sensors doesn't automatically make something cyberdelic. Here, heart rate is gamified as a score for entertainment, not used to facilitate consciousness exploration or altered states. The purpose is still external thrills, not transformational inner work.</p><p><em>Reflection. How technology is used matters more than which technologies are present.</em></p>",
+                        "choices": [
+                            {
+                                "id": "next",
+                                "label": "Next Experience",
+                                "outcome": "exp3"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "exp2_c_out",
+                        "narrative": "<p>Correct. Despite using the same VR headset and even biofeedback, this experience isn't cyberdelic. It lacks transformational intent and doesn't facilitate consciousness-exploring altered states. The technology serves entertainment and external engagement, not inner exploration. Same tools, different purpose.</p><p><em>Reflection. The medium is neutral; purpose determines whether it's cyberdelic.</em></p>",
+                        "choices": [
+                            {
+                                "id": "next",
+                                "label": "Next Experience",
+                                "outcome": "exp3"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "exp3",
+                        "narrative": "<h3>EXPERIENCE 3 . Social VR Hangout</h3><p>A VR platform where users hang out together in virtual spaces, chat, attend events, play casual games, and socialize. The technology creates presence and connection. Users feel like they're really together despite physical distance.</p><p><strong>Is this cyberdelic?</strong></p>",
+                        "choices": [
+                            {
+                                "id": "exp3_a",
+                                "label": "Yes, because connection and presence are forms of consciousness",
+                                "outcome": "exp3_a_out"
+                            },
+                            {
+                                "id": "exp3_b",
+                                "label": "No, it's designed for social connection rather than consciousness exploration",
+                                "outcome": "exp3_b_out"
+                            },
+                            {
+                                "id": "exp3_c",
+                                "label": "It depends on how self-aware users are during conversations",
+                                "outcome": "exp3_c_out"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "exp3_a_out",
+                        "narrative": "<p>While connection is valuable and VR creates meaningful presence, this experience lacks the intentional cultivation of altered states and transformational purpose that define cyberdelics. It's designed for social interaction and entertainment, not consciousness exploration or inner development. This is social VR, not cyberdelic.</p><p><em>Reflection. NNot all meaningful VR experiences are cyberdelic. Intention matters.</em></p>",
+                        "choices": [
+                            {
+                                "id": "finish",
+                                "label": "Final Reflection",
+                                "outcome": "reflection"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "exp3_b_out",
+                        "narrative": "<p>Correct. This is social VR, not cyberdelics. While valuable for connection, it lacks the transformational intent and altered state cultivation that define cyberdelic experiences. The technology facilitates external social engagement rather than internal exploration.</p><p><em>Reflection. Different VR applications serve different purposes. Not all are cyberdelic.</em></p>",
+                        "choices": [
+                            {
+                                "id": "finish",
+                                "label": "Final Reflection",
+                                "outcome": "reflection"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "exp3_c_out",
+                        "narrative": "<p>User mindfulness doesn't change the experience's design intent. This platform is designed for social entertainment, not consciousness exploration. Even if someone brings awareness to their social interactions, that doesn't make the platform itself cyberdelic. The design purpose matters more than individual user intention.</p><p><em>Reflection. Individual awareness doesn't override design intention when categorizing experiences.</em></p>",
+                        "choices": [
+                            {
+                                "id": "finish",
+                                "label": "Final Reflection",
                                 "outcome": "reflection"
                             }
                         ]
                     },
                     {
                         "id": "reflection",
-                        "narrative": "<h3>Reflection</h3><p>All three paths through 1995 led to the same truth. Leary's vision was real, but only those who held onto it, or who remained open to recognizing <em>when</em> it arrived, were positioned to participate in its validation. The dismissers missed the inflection point. The cautious hedgers bridged both worlds. The full believers built the foundations others would stand on.</p><p>This is the lesson of every field that matures across decades. the gap between vision and proof requires someone to carry the torch. In 1995, the technology wasn't ready. By 2020, the science confirmed what Leary saw. The distance between those two moments was filled by people who didn't abandon the question.</p>",
+                        "narrative": "<p>You've now evaluated three VR experiences using the same hardware. One is cyberdelic (the meditation temple). Two are not (the roller coaster, the social hangout). The technology is neutral, what makes something cyberdelic is the purpose it serves. When technology is designed to facilitate inward exploration and transformation, that's cyberdelics.</p>",
                         "choices": [
                             {
                                 "id": "continue",
-                                "label": "Establish Foundation",
-                                "outcome": "flow_next_module"
+                                "label": "Explore The Principles",
+                                "outcome": "complete"
                             }
                         ]
                     }
@@ -153,392 +305,364 @@
             }
         },
         {
-            "id": "pioneers_pd_2.2",
-            "title": "Establishing the Foundations",
+            "id": "progressive_disclosure_1.1.3b",
+            "title": "The Medium is the Message",
             "type": "progressive-disclosure",
             "content": {
                 "sections": [
                     {
-                        "title": "Jaron Lanier : Naming Virtual Reality",
+                        "title": "The Message in the Medium",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module2/lanier_pioneer.webp",
-                            "alt": "Jaron Lanier in late 1980s with DataGlove"
+                            "src": "../assets/images/module1/medium-is-message.webp",
+                            "aiPrompt": "A glowing, ethereal VR headset floating in a dark void, with radiant light waves and sacred geometry overflowing from the lenses, representing technology as purely a vessel for consciousness, electric blue and vibrant purple, mystical and modern, 16:9 aspect ratio"
                         },
                         "mediaLayout": "left",
-                        "content": "<p>In 1987, computer scientist and musician Jaron Lanier coined the term 'virtual reality' and founded VPL Research, selling the first VR equipment - the DataGlove and EyePhone head-mounted display. His systems cost hundreds of thousands of dollars, but more importantly, he articulated a humanistic vision. 'Virtual reality is the first medium that doesn't narrow us. Instead, it expands what we can be and what we can communicate.'</p><p>He saw VR not as a display technology but as a consciousness expansion tool. That distinction - between VR as medium for entertainment versus VR as medium for transformation - is still one of the defining questions in the field today.</p>",
-                        "triggerLabel": "Transformation"
+                        "content": "<p>'The medium is the message' is a famous phrase from media theorist Marshall McLuhan. In cyberdelics it's reversed, the technology is the medium, but consciousness exploration is the message. The tool doesn't define the purpose, the purpose defines how the tool is used.</p>",
+                        "triggerLabel": "Asking the Right Question"
                     },
                     {
-                        "title": "Brenda Laurel : Transformation Through Technology",
+                        "title": "Asking the Right Question",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module2/laurel_theatre.webp",
-                            "alt": "Portrait of Brenda Laurel from 1990s"
+                            "src": "../assets/images/module1/asking-right-question.webp",
+                            "aiPrompt": "A split conceptual image showing two paths extending from a futuristic interface, one path leading towards a brightly lit amusement park (entertainment), the other leading towards a serene, glowing mandala-filled meditation temple (transformation), high contrast lighting, cyberdelic aesthetic, 16:9 aspect ratio"
                         },
                         "mediaLayout": "right",
-                        "content": "<p>Brenda Laurel brought theatrical thinking to VR in her groundbreaking book 'Computers as Theatre' (1991). She argued that human-computer interaction should create transformative experiences, not just functional ones. Her company Purple Moon created virtual environments for emotional development.</p><p>She wrote. 'The goal of interaction design should not just be usability, but the transformation of the user through the experience.' That phrase - transformation through experience - became core to cyberdelic practice. It isn't enough for technology to work correctly; it should facilitate personal growth and change. Laurel was insisting on this in 1991.</p>",
-                        "triggerLabel": "Artificial Reality"
+                        "content": "<p>When evaluating any technology-based experience, ask one question. What is this designed to facilitate? Entertainment or transformation? External engagement or internal exploration? Distraction or presence? The answer to that question tells you whether you're looking at cyberdelics or something else entirely.</p>",
+                        "triggerLabel": "Same Headset, Different Worlds"
                     },
                     {
-                        "title": "Myron Krueger : Artificial Reality",
+                        "title": "Same Headset, Different Worlds",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module2/videoplace.webp",
-                            "alt": "Early computer art lab showing Myron Krueger's VIDEOPLACE system"
+                            "src": "../assets/images/module1/same-headset-different-worlds.webp",
+                            "aiPrompt": "A single sleek VR headset seen from the front, reflecting a chaotic neon game world in one lens and a calm, deep space nebula with geometric patterns in the second lens, emphasizing the duality of purpose, hyper-realistic, vivid colors, 16:9 aspect ratio"
                         },
                         "mediaLayout": "left",
-                        "content": "<p>Before 'virtual reality' became standard terminology, Myron Krueger coined 'artificial reality' to describe his VIDEOPLACE system (1974-1990). Users moved naturally in physical space while cameras tracked them, creating responsive virtual environments without headsets or gloves.</p><p>His key insight. responsive environments that react to human presence can alter consciousness even without blocking out the physical world. This understanding - that altered states don't require total sensory replacement - influenced later cyberdelic design significantly. You don't need to lock someone inside a headset to shift their state.</p>",
-                        "triggerLabel": "The Gap"
+                        "content": "<p>The same VR headset can transport you into a zombie shooter or into a guided journey through your own consciousness. The same biofeedback sensor can gamify productivity or reveal patterns in your meditative practice. Hardware is neutral, intention determines the category.</p>",
+                        "triggerLabel": "Intention as the OS"
                     },
                     {
-                        "title": "The Gap They Couldn't Cross",
+                        "title": "Intention as the Operating System",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module2/vr_gap.webp",
-                            "alt": "Contrast between sleek conceptual VR vision and actual clunky 1980s hardware"
+                            "src": "../assets/images/module1/intention-operating-system.webp",
+                            "aiPrompt": "An abstract representation of a human mind intersecting with a digital neural network, glowing lines of code transforming into organic glowing roots and branches, symbolizing intention overriding hardware, soft teal and gold color palette, complex and beautiful, 16:9 aspect ratio"
                         },
                         "mediaLayout": "right",
-                        "content": "<p>These pioneers had grand visions, but 1980s-90s technology couldn't deliver on them. Head-mounted displays weighed several pounds and caused neck strain. Resolution was extremely low. like looking through mesh. Refresh rates caused motion sickness within minutes. Complete systems cost $100,000-$250,000. Only universities and military budgets could afford them.</p><p>The vision existed. The capability didn't. And that gap - between what you can imagine and what you can actually build - is one of the most important recurring themes in the history of cyberdelics.</p>",
-                        "triggerLabel": "Legacy"
-                    },
-                    {
-                        "title": "What They Established",
-                        "media": {
-                            "type": "image",
-                            "src": "../assets/images/module2/pioneer_foundations.webp",
-                            "alt": "Concept constellation showing Transformative Space, Embodied Interaction, Presence, Responsive Environments, and Transformative Potential"
-                        },
-                        "mediaLayout": "left",
-                        "content": "<p>Despite technical limitations, the pioneer circle established conceptual foundations that still hold today.</p><table style='width:100%; border-collapse:collapse; margin-top:10px; margin-bottom:16px; font-size:0.86em; text-align:left;'><thead><tr style='background:rgba(255,255,255,0.15); border-bottom:2px solid rgba(255,255,255,0.3);'><th style='padding:10px 12px; font-weight:600; letter-spacing:0.03em;'>Pioneer</th><th style='padding:10px 12px; font-weight:600; letter-spacing:0.03em;'>Term or Concept</th><th style='padding:10px 12px; font-weight:600; letter-spacing:0.03em;'>Key Contribution</th><th style='padding:10px 12px; font-weight:600; letter-spacing:0.03em;'>Why It Still Matters</th></tr></thead><tbody><tr style='border-bottom:1px solid rgba(255,255,255,0.1); background:rgba(255,255,255,0.03);'><td style='padding:9px 12px;'><strong>Jaron Lanier</strong></td><td style='padding:9px 12px;'>'Virtual Reality' (1987)</td><td style='padding:9px 12px;'>First commercial VR hardware; articulated VR as expansion of human capacity, not simulation</td><td style='padding:9px 12px;'>VR as transformation tool, not entertainment device, is still the defining question</td></tr><tr style='border-bottom:1px solid rgba(255,255,255,0.1);'><td style='padding:9px 12px;'><strong>Brenda Laurel</strong></td><td style='padding:9px 12px;'>'Transformation through experience' (1991)</td><td style='padding:9px 12px;'>Applied theatrical thinking to HCI; argued technology should change the user, not just function</td><td style='padding:9px 12px;'>Transformational intent as a design requirement is the third component of cyberdelic definition</td></tr><tr style='background:rgba(255,255,255,0.03);'><td style='padding:9px 12px;'><strong>Myron Krueger</strong></td><td style='padding:9px 12px;'>'Artificial Reality' (1974)</td><td style='padding:9px 12px;'>Responsive environments without headsets; showed altered states don't require total sensory replacement</td><td style='padding:9px 12px;'>AR experiences and non-immersive cyberdelic contexts trace directly to this insight</td></tr></tbody></table><p>These were proven principles waiting for hardware to catch up.</p>",
-                        "triggerLabel": "Take Pioneer Quiz"
+                        "content": "<p>In the end, the most important software running any cyberdelic experience isn't written in code, it's the intention of both the creator and the participant. The hardware is just the vehicle. The true operating system of cyberdelics is the transformational intent.</p>",
+                        "triggerLabel": "Explore None-Substance Principle"
                     }
                 ]
             }
         },
         {
-            "id": "culture_pd_2.3",
-            "title": "Cultural Preparation",
+            "id": "progressive_disclosure_1.1.4",
+            "title": "The 'None-Substance' Principle",
             "type": "progressive-disclosure",
             "content": {
                 "sections": [
                     {
-                        "title": "Cyberpunk : The Fictional Blueprint",
-                        "media": {
-                            "type": "image",
-                            "src": "../assets/images/module2/cyberpunk_blueprint.webp"
-                        },
-                        "mediaLayout": "left",
-                        "content": "<p>In the 1980s, writers like William Gibson (Neuromancer, 1984) and Neal Stephenson (Snow Crash, 1992) imagined worlds where technology and consciousness directly interfaced. Gibson coined 'cyberspace' - a consensual hallucination experienced daily by billions. Stephenson imagined the 'metaverse.' These novels established cultural templates. neural interfaces, virtual reality as equally real as physical reality, identity fluidity, reality as hackable.</p><p>They made VR's eventual emergence feel inevitable rather than alien. When people first put on Oculus headsets in 2016, many described it as 'stepping into Neuromancer.' Fiction had been rehearsing this moment for thirty years.</p>",
-                        "triggerLabel": "Rave Culture"
+                        "title": "Focus on Technology",
+                        "content": "<p>While the word 'cyberdelics' draws from 'psychedelic,' our definition specifically focuses on experiences facilitated by technology without the use of chemical substances. This isn't a judgment on substances; it's a focus on the unique possibilities of digital tools. Let's explore why this distinction matters.</p>",
+                        "triggerLabel": "Why None-Substance?"
                     },
                     {
-                        "title": "Rave Culture : Electronic Transcendence",
+                        "title": "Reliability & Repeatability",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module2/rave_electronic.webp"
+                            "src": "../assets/images/module1/futurecontrolknobs.webp",
+                            "aiPrompt": "Close-up of futuristic control knobs and sliders on a glowing interface, with labels like 'Dose', 'Intensity', 'Frequency', and 'Clarity', electric blue and purple lighting, representing the precision and control offered by technology-based consciousness tools, modern minimalist tech aesthetic, 16:9 aspect ratio"
                         },
                         "mediaLayout": "right",
-                        "content": "<p>Starting in late 1980s UK and spreading globally through the 1990s, rave culture created massive gatherings centered on electronic music, light shows, and collective altered states. Ravers discovered that technology could facilitate collective transcendence. electronic music as consciousness technology, lighting creating immersive sensory environments, collective energy producing shared altered states.</p><p>The principle - technology enabling transcendence - was the same as cyberdelics would later demonstrate, just through sound and light rather than VR. Rave culture also normalized the idea of seeking altered states for transformation rather than just intoxication, which mattered for how later cyberdelic communities framed their work.</p>",
-                        "triggerLabel": "Burning Man"
+                        "content": "<p>One major advantage of technology is control. You can 'turn it off' instantly. You can adjust the intensity, duration, and specific parameters of the experience with precision. Digital tools offer a level of repeatability and safety that is difficult to achieve with biological substances. This makes them highly accessible for a wider range of people and contexts.</p>",
+                        "triggerLabel": "Next Reason"
                     },
                     {
-                        "title": "Burning Man : Art Meets Technology",
+                        "title": "Wider Accessibility",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module2/burning_man_tech.webp"
+                            "src": "../assets/images/module1/accessible-tech-future.webp"
                         },
                         "mediaLayout": "left",
-                        "content": "<p>Founded in 1986, Burning Man created a temporary city in Nevada's desert dedicated to radical self-expression, community, and art. Large-scale interactive installations, LED art, and tech-enhanced experiences became testing grounds for blending technology with transformation. Many early VR developers and consciousness researchers were Burners.</p><p>The festival demonstrated something important. technology-enhanced experiences could create genuine awe, foster deep community, facilitate personal transformation, and integrate rather than oppose nature and spirituality. Burning Man was a live proof-of-concept for ideas that cyberdelics would later develop into systematic practice.</p>",
-                        "triggerLabel": "Digital Art"
+                        "content": "<p>Cyberdelic tools can be used in many places where substances cannot . schools, workplaces, wellness centers, and homes. Because they don't involve pharmaceutical intervention, they bypass many legal, medical, and social barriers. This allows more people to explore consciousness safely and legally across different cultures and regulatory environments.</p>",
+                        "triggerLabel": "Next Reason"
                     },
                     {
-                        "title": "Digital Art and Fractal Culture",
+                        "title": "The 'Skill' of Presence",
                         "media": {
                             "type": "image",
-                            "src": "../assets/images/module2/fractal_digital.webp"
+                            "src": "../assets/images/module1/mindfulness-brain-sync.webp",
+                            "aiPrompt": "Abstract visualization of a human brain synchronized with a digital geometric pattern (like a Metatron's Cube), representing the development of mental skills through technology-aided practice, glowing teal and white energy lines, sophisticated and intelligent aesthetic, 16:9 aspect ratio"
                         },
                         "mediaLayout": "right",
-                        "content": "<p>The 1990s saw an explosion of computer-generated art exploring consciousness themes. Fractal art revealed infinite mathematical complexity resembling psychedelic visions. Mandelbrot sets and Julia sets producing imagery that looked uncannily similar to what people described seeing on psychedelics. Early VR art like Char Davies' Osmose (1995) created contemplative spaces with breathing-controlled navigation.</p><p>Artists discovered that algorithms could produce imagery comparable to mystical geometric visions. This established a crucial cultural proof. technology could serve artistic and spiritual expression, not just calculation and commerce. It expanded who saw cyberdelics as relevant to them.</p>",
-                        "triggerLabel": "Ready for Convergence"
+                        "content": "<p>Cyberdelics often focus on 'training' the mind. Instead of a substance doing the work for you, technology facilitates you doing the work yourself. Biofeedback, for example, rewards your brain for reaching specific states. This builds mental 'muscles' and skills that you can carry with you even after you take the headset off. It's an active practice, not a passive experience.</p>",
+                        "triggerLabel": "Summary"
                     },
                     {
-                        "title": "Cultural Preparation Complete",
-                        "media": {
-                            "type": "image",
-                            "src": "../assets/images/module2/culture_convergence.webp",
-                            "alt": "Four streams of culture converging into one larger Cyberdelic Culture river"
-                        },
-                        "mediaLayout": "left",
-                        "content": "<p>These movements didn't create cyberdelics. But they prepared the cultural ground in four ways.</p><ul><li><strong>Imagination:</strong> They made tech-consciousness fusion imaginable before it was achievable.</li><li><strong>Community:</strong> They created communities already oriented toward exploration and transformation.</li><li><strong>Language:</strong> They established shared language: cyberspace, metaverse, reality hacking, digital shamanism.</li><li><strong>Demand:</strong> They demonstrated demand: millions of people were seeking exactly what cyberdelics would eventually offer.</li></ul><p>When VR was reborn in the 2010s, it entered a culture that had been imagining and preparing for this for 30 years. The soil was prepared; technology finally arrived to plant seeds.</p>",
-                        "triggerLabel": "Explore the Map"
+                        "title": "A Unique Path",
+                        "content": "<p>In summary, the 'none-substance' principle defines cyberdelics as a technology-first approach to consciousness exploration. It emphasizes safety, control, accessibility, and skill-building. It's not a replacement for other paths it's a unique and increasingly important field of its own, built for the digital age.</p>",
+                        "triggerLabel": "Take the Quiz"
                     }
                 ]
             }
         },
         {
-            "id": "quiz_lesson_2_1_combined",
-            "title": "Module 2 Lesson 1 Quiz",
-            "type": "scenario-based",
-            "content": {
-                "scenes": [
+            "id": "quiz_1.1_combined",
+            "title": "Module 1 Lesson 1 Quiz",
+            "type": "option-selector",
+            "config": {
+                "mode": "single",
+                "style": "text",
+                "questions": [
                     {
-                        "id": "quiz1_q1",
-                        "narrative": "<p><strong>What was Timothy Leary's most famous prediction about technology and consciousness?</strong></p>",
-                        "choices": [
+                        "question": "What does the 'cyber' in cyberdelics primarily refer to?",
+                        "options": [
                             {
-                                "id": "q1_a",
-                                "label": "Virtual reality would completely replace physical reality by 2000",
-                                "outcome": "quiz1_q1_wrong_a"
+                                "id": "q1_1_a",
+                                "label": "Cybersecurity and protecting digital information",
+                                "correct": false
                             },
                             {
-                                "id": "q1_b",
-                                "label": "Everyone should abandon meditation and use only technology",
-                                "outcome": "quiz1_q1_wrong_c"
+                                "id": "q1_1_b",
+                                "label": "Digital technology and virtual environments as tools for experience",
+                                "correct": true
                             },
                             {
-                                "id": "q1_c",
-                                "label": "Psychedelics would soon be legalized worldwide",
-                                "outcome": "quiz1_q1_wrong_d"
+                                "id": "q1_1_c",
+                                "label": "Social media and online communication platforms",
+                                "correct": false
                             },
                             {
-                                "id": "q1_d",
-                                "label": "\"The PC is the LSD of the 1990s\" - computers as consciousness tools",
-                                "outcome": "quiz1_q2"
+                                "id": "q1_1_d",
+                                "label": "Artificial intelligence and machine learning systems",
+                                "correct": false
                             }
-                        ]
+                        ],
+                        "synthesis": {
+                            "q1_1_a": "<p>While 'cyber' is used in cybersecurity, that's not what it means in cyberdelics. Here, 'cyber' refers to the broader realm of digital technology, virtual environments, and human-computer interaction, which are the tools we use to facilitate consciousness exploration. Think cybernetics and feedback systems, not security. <strong>Try again.</strong></p>",
+                            "q1_1_c": "<p>While social media exists in the digital realm, 'cyber' in cyberdelics specifically refers to immersive and biofeedback technologies used for consciousness exploration. Social platforms are about external communication, while cyberdelics focus on internal exploration using specialized tech. <strong>Try again.</strong></p>",
+                            "q1_1_d": "<p>AI and machine learning might be tools within cyberdelic experiences, but 'cyber' here primarily refers to the immersive digital technologies (VR, AR, biofeedback) that create the environment for consciousness exploration. It's about the interface between human and technology, not autonomous intelligent systems. <strong>Try again.</strong></p>",
+                            "q1_1_b": "<p>Exactly. 'Cyber' in cyberdelics refers to the digital technological realm . VR, AR, biofeedback devices, and computer-mediated experiences. It's about using technology as the medium for consciousness work. This connects back to cybernetics, the study of communication and control systems.</p>"
+                        }
                     },
                     {
-                        "id": "quiz1_q1_wrong_a",
-                        "narrative": "<p>Leary didn't predict VR replacing physical reality. His vision was more nuanced. he believed computers could serve consciousness exploration and transformation similar to how psychedelics did. Technology as tool for inner work, not escape from reality. <strong>Try again.</strong></p>",
-                        "choices": [
+                        "question": "What does 'delic' (from psychedelic) literally mean?",
+                        "options": [
                             {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "quiz1_q1"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "quiz1_q1_wrong_c",
-                        "narrative": "<p>Leary never advocated abandoning traditional practices. He saw technology as an additional path, not a replacement. His vision was about expanding options for consciousness work, not eliminating existing methods. Both/and thinking, not either/or. <strong>Try again.</strong></p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "quiz1_q1"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "quiz1_q1_wrong_d",
-                        "narrative": "<p>While Leary may have hoped for psychedelic legalization, his key insight about technology was different. he recognized that digital tools could serve similar consciousness-exploring purposes as substances. This was about adding a new category of tools, not just advocating for legalizing old ones. <strong>Try again.</strong></p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "quiz1_q1"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "quiz1_q2",
-                        "narrative": "<p>Exactly right. In 1994, Leary predicted that personal computers would become tools for consciousness exploration comparable to psychedelic substances. He saw technology serving the same intentions . expanding awareness, facilitating transformation, enabling self-directed exploration. He was correct about the vision but 25+ years early on the timeline.</p><p>Now, <strong>Why was Leary \"right but early\" with his 1994 prediction?</strong></p>",
-                        "choices": [
-                            {
-                                "id": "q2_a",
-                                "label": "The technology to deliver on his vision didn't mature until 2016-2020, about 25 years later",
-                                "outcome": "quiz1_quiz_complete"
+                                "id": "q1_2_a",
+                                "label": "Creating hallucinations or visual distortions",
+                                "correct": false
                             },
                             {
-                                "id": "q2_b",
-                                "label": "He underestimated how quickly people would embrace technology",
-                                "outcome": "quiz1_q2_wrong_b"
+                                "id": "q1_2_b",
+                                "label": "Mind-manifesting or revealing consciousness",
+                                "correct": true
                             },
                             {
-                                "id": "q2_c",
-                                "label": "Governments banned the development of consciousness technologies",
-                                "outcome": "quiz1_q2_wrong_c"
+                                "id": "q1_2_c",
+                                "label": "Causing euphoria and pleasure",
+                                "correct": false
                             },
                             {
-                                "id": "q2_d",
-                                "label": "Nobody was interested in using technology for consciousness work",
-                                "outcome": "quiz1_q2_wrong_d"
+                                "id": "q1_2_d",
+                                "label": "Altering brain chemistry through substances",
+                                "correct": false
                             }
-                        ]
+                        ],
+                        "synthesis": {
+                            "q1_2_a": "<p>This is a common misconception. 'Delic' comes from Greek words meaning 'mind-manifesting' or 'revealing the mind/soul.' It's about making consciousness visible and exploring inner dimensions, not just creating visual effects. Hallucinations might occur, but they're not the definition; revelation of consciousness is. <strong>Try again.</strong></p>",
+                            "q1_2_c": "<p>While consciousness exploration might involve pleasurable states, 'delic' doesn't mean pleasure. It means 'mind-manifesting' . revealing and exploring consciousness. The focus is on revelation and awareness expansion, not just feeling good. Transformation can be challenging, not always euphoric. <strong>Try again.</strong></p>",
+                            "q1_2_d": "<p>That's one method of creating mind-manifesting experiences (psychedelics), but 'delic' itself just means 'mind-manifesting.' It doesn't specify the method. This is exactly why cyberdelics can use the same suffix . both psychedelics and cyberdelics aim to manifest consciousness, just through different means. <strong>Try again.</strong></p>",
+                            "q1_2_b": "<p>Exactly right. 'Delic' comes from the Greek 'delos' (to manifest/reveal) and relates to 'psyche' (mind/soul). It's about revealing what's hidden in consciousness, expanding awareness, and making the invisible aspects of mind visible. This is the core of what both psychedelics and cyberdelics aim to do.</p>"
+                        }
                     },
                     {
-                        "id": "quiz1_quiz_complete",
-                        "narrative": "<h3>Correct!</h3><p>Precisely. 1980s-90s VR had massive technical limitations . displays with terrible resolution (320x200 or worse), headsets weighing several pounds, 50-100ms tracking latency causing motion sickness, and complete systems costing $100,000-$250,000. The vision was clear, but the technology to realize it didn't exist yet. It would take 20-30 more years for hardware to catch up.</p>",
-                        "choices": [
+                        "question": "You're evaluating three different VR experiences. Which one demonstrates all three cyberdelic components?",
+                        "options": [
                             {
-                                "id": "next",
-                                "label": "Next Question",
-                                "outcome": "quiz2_q1"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "quiz1_q2_wrong_b",
-                        "narrative": "<p>Actually, cultural acceptance wasn't the main barrier. The technology simply didn't work well enough in the 1990s . headsets were clunky, caused motion sickness, and couldn't create compelling experiences. Even people open to the idea couldn't have meaningful experiences because the hardware wasn't ready. It was technical limitation, not cultural resistance. <strong>Try again.</strong></p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "quiz1_q2"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "quiz1_q2_wrong_c",
-                        "narrative": "<p>There were no government bans on VR or consciousness technology development. The barrier was purely technical . displays, processing power, tracking systems, and supporting technologies weren't mature enough. VR failed commercially in the 1990s because the technology couldn't deliver on its promise, not because of regulatory barriers. <strong>Try again.</strong></p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "quiz1_q2"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "quiz1_q2_wrong_d",
-                        "narrative": "<p>Interest wasn't the problem . capability was. Many people were intrigued by Leary's vision, but 1990s VR couldn't deliver meaningful consciousness experiences. The hardware caused headaches, the graphics were primitive, and the experiences were underwhelming. Interest existed, but viable technology didn't. <strong>Try again.</strong></p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "quiz1_q2"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "quiz2_q1",
-                        "narrative": "<p><strong>What key insight did Brenda Laurel contribute to early VR thinking?</strong></p>",
-                        "choices": [
-                            {
-                                "id": "q1_a",
-                                "label": "VR headsets should be as light as possible",
-                                "outcome": "quiz2_q1_wrong_a"
+                                "id": "q2_1_a",
+                                "label": "A VR fitness game that tracks heart rate and makes workouts more engaging through gamification",
+                                "correct": false
                             },
                             {
-                                "id": "q1_b",
-                                "label": "Virtual reality should completely replace physical reality",
-                                "outcome": "quiz2_q1_wrong_c"
+                                "id": "q2_1_b",
+                                "label": "A VR meditation environment with biofeedback that adapts based on brainwave patterns, designed to facilitate deep contemplative states",
+                                "correct": true
                             },
                             {
-                                "id": "q1_c",
-                                "label": "The goal should be transformation of the user through experience, not just usability",
-                                "outcome": "quiz2_q2"
+                                "id": "q2_1_c",
+                                "label": "A beautifully designed VR nature walk with calming music for stress relief",
+                                "correct": false
                             },
                             {
-                                "id": "q1_d",
-                                "label": "Only game developers should work on VR projects",
-                                "outcome": "quiz2_q1_wrong_d"
+                                "id": "q2_1_d",
+                                "label": "A VR social platform where users hang out in virtual spaces and attend events together",
+                                "correct": false
                             }
-                        ]
+                        ],
+                        "synthesis": {
+                            "q2_1_a": "<p>This uses technology and biofeedback, but the purpose is fitness optimization, not consciousness exploration or personal transformation. The altered state here is just elevated heart rate from exercise, not an intentional shift in awareness. Without transformational intent focused on consciousness, this is wellness tech rather than cyberdelic. <strong>Try again.</strong></p>",
+                            "q2_1_c": "<p>While this uses VR technology and might help you relax, it's missing two critical components. There's no biofeedback or intentional cultivation of altered states, only passive relaxation. And the purpose is stress relief (wellness), not consciousness exploration or transformation. Relaxation and transformation are different goals. <strong>Try again.</strong></p>",
+                            "q2_1_d": "<p>This is social VR or entertainment. While it uses immersive technology, there's no intention to facilitate altered states of consciousness or serve transformational purposes. It's designed for connection and fun, which are valuable but different from cyberdelic aims. <strong>Try again.</strong></p>",
+                            "q2_1_b": "<p>Exactly right. This has all three components. technology (VR and EEG biofeedback), altered states (deep contemplative states intentionally cultivated), and transformational intent (designed for consciousness exploration and meditation practice). All three legs of the stool are present. This is a cyberdelic experience.</p>"
+                        }
                     },
                     {
-                        "id": "quiz2_q1_wrong_a",
-                        "narrative": "<p>While hardware design was important, Laurel's contribution was conceptual, not technical. She focused on the purpose and design philosophy of interactive experiences, not the physical specifications of equipment. Her insight was about transformation, not comfort. <strong>Try again.</strong></p>",
-                        "choices": [
+                        "question": "A company adds biofeedback sensors to their existing VR game. Does this automatically make it cyberdelic?",
+                        "options": [
                             {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "quiz2_q1"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "quiz2_q1_wrong_c",
-                        "narrative": "<p>Laurel never advocated for replacing physical reality. Her vision was about using technology as a medium for transformative experiences that enhance human development, not escape from the real world. It was about augmentation and growth, not replacement. <strong>Try again.</strong></p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "quiz2_q1"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "quiz2_q1_wrong_d",
-                        "narrative": "<p>Actually, Laurel brought theatrical and narrative thinking to VR, expanding beyond purely gaming applications. She wanted artists, storytellers, and designers from diverse fields to contribute. Her vision was inclusive of multiple perspectives, not restricted to game developers. <strong>Try again.</strong></p>",
-                        "choices": [
-                            {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "quiz2_q1"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "quiz2_q2",
-                        "narrative": "<p>Exactly. Laurel argued that technology should be designed to transform users, not just function well. This was radical in a commercial tech culture focused on productivity and usability. Her phrase \"transformation through experience\" became foundational for cyberdelic thinking. it's not enough for technology to work; it should facilitate personal growth and change.</p><p>Now, <strong>Why couldn't the early VR pioneers (1980s-1990s) fully realize their visions?</strong></p>",
-                        "choices": [
-                            {
-                                "id": "q2_a",
-                                "label": "Government regulations prevented VR development",
-                                "outcome": "quiz2_q2_wrong_a"
+                                "id": "q2_2_a",
+                                "label": "Yes, because it now has technology and biofeedback working together",
+                                "correct": false
                             },
                             {
-                                "id": "q2_b",
-                                "label": "Nobody was interested in using VR technology",
-                                "outcome": "quiz2_q2_wrong_b"
+                                "id": "q2_2_b",
+                                "label": "No, unless the experience is redesigned to intentionally facilitate altered states and serve transformational purposes",
+                                "correct": true
                             },
                             {
-                                "id": "q2_c",
-                                "label": "The technology wasn't ready. displays were poor, systems were expensive ($100K+), and experiences caused motion sickness",
-                                "outcome": "quiz2_quiz_complete"
+                                "id": "q2_2_c",
+                                "label": "Yes, because biofeedback sensors create altered states automatically",
+                                "correct": false
                             },
                             {
-                                "id": "q2_d",
-                                "label": "The pioneers disagreed on the direction for VR",
-                                "outcome": "quiz2_q2_wrong_d"
+                                "id": "q2_2_d",
+                                "label": "It depends on whether the graphics are high quality and immersive",
+                                "correct": false
                             }
-                        ]
+                        ],
+                        "synthesis": {
+                            "q2_2_a": "<p>Technology and biofeedback are necessary but not sufficient. You also need the experience to intentionally facilitate altered states AND have transformational purpose. If the game is still focused on entertainment or competition rather than consciousness exploration, adding sensors doesn't change its fundamental nature. All three components must be present. <strong>Try again.</strong></p>",
+                            "q2_2_c": "<p>Biofeedback sensors measure physiological states, but they don't automatically create altered states of consciousness. The experience design must intentionally use that data to facilitate shifts in awareness. Sensors alone are just measurement tools; they need to be part of a larger system designed for consciousness exploration. <strong>Try again.</strong></p>",
+                            "q2_2_d": "<p>Visual quality and immersion don't determine whether something is cyberdelic. You can have stunning graphics that serve entertainment, or simple visuals that facilitate deep transformation. What matters is the design intent . whether the experience is purposefully created to explore consciousness and facilitate personal growth, regardless of graphical fidelity. <strong>Try again.</strong></p>",
+                            "q2_2_b": "<p>Exactly. Simply adding biofeedback to a game doesn't make it cyberdelic. The entire experience must be designed with the intention of facilitating consciousness exploration and transformation. The technology serves the transformational purpose; it's not about the devices themselves, but how they're used and why.</p>"
+                        }
                     },
                     {
-                        "id": "quiz2_quiz_complete",
-                        "narrative": "<h3>Quiz Complete!</h3><p>Precisely. 1980s-90s VR had massive technical limitations. displays with terrible resolution (320x200 or worse), headsets weighing several pounds, 50-100ms tracking latency causing motion sickness, and complete systems costing $100,000-$250,000. The vision was clear, but the technology to realize it didn't exist yet. It would take 20-30 more years for hardware to catch up.</p> <strong>Quiz Complete.</strong>",
-                        "choices": [
+                        "question": "A developer wants to create a cyberdelic experience. What should they prioritize in their design?",
+                        "options": [
                             {
-                                "id": "next",
-                                "label": "Explore Cultural Preparation",
-                                "outcome": "flow_next_module"
+                                "id": "q3_1_a",
+                                "label": "The highest resolution graphics and most realistic environments possible",
+                                "correct": false
+                            },
+                            {
+                                "id": "q3_1_b",
+                                "label": "Facilitating inward exploration and consciousness shifts, with technology supporting that purpose",
+                                "correct": true
+                            },
+                            {
+                                "id": "q3_1_c",
+                                "label": "Making the experience as entertaining and engaging as possible to keep users coming back",
+                                "correct": false
+                            },
+                            {
+                                "id": "q3_1_d",
+                                "label": "Adding as many technological features as possible to seem cutting-edge",
+                                "correct": false
                             }
-                        ]
+                        ],
+                        "synthesis": {
+                            "q3_1_a": "<p>Graphics quality doesn't determine whether something is cyberdelic. Some of the most effective consciousness exploration tools use simple visuals. What matters is whether the experience facilitates inner exploration and transformation, not how photorealistic it looks. <strong>Try again.</strong></p>",
+                            "q3_1_c": "<p>Entertainment and engagement are different from transformation. While cyberdelic experiences can be engaging, entertainment shouldn't be the primary goal. Entertainment focuses on external stimulation and distraction, while cyberdelics focus on inner exploration and presence. These are fundamentally different design intentions. <strong>Try again.</strong></p>",
+                            "q3_1_d": "<p>More technology doesn't equal more cyberdelic. You could have a simple breath-awareness experience with minimal tech that's deeply cyberdelic, or a feature-packed VR game with every sensor imaginable that's pure entertainment. Technology serves the purpose. It isn't the purpose itself. <strong>Try again.</strong></p>",
+                            "q3_1_b": "<p>Exactly right. The primary design goal should be facilitating consciousness exploration and transformation. The technology, whether VR, biofeedback, or AR, exists to serve that purpose. Start with the transformational intention, then choose the tools that best support it. This is what makes an experience cyberdelic rather than just technically impressive.</p>"
+                        }
                     },
                     {
-                        "id": "quiz2_q2_wrong_a",
-                        "narrative": "<p>There were no regulatory barriers to VR development. The problem was purely technical. the technology simply wasn't good enough. Displays were poor, tracking was inaccurate, processing power was insufficient, and systems were prohibitively expensive. Capability, not regulation, was the barrier. <strong>Try again.</strong></p>",
-                        "choices": [
+                        "question": "What's the key difference between a VR roller coaster and a VR meditation experience?",
+                        "options": [
                             {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "quiz2_q2"
+                                "id": "q3_2_a",
+                                "label": "The meditation experience is slower-paced",
+                                "correct": false
+                            },
+                            {
+                                "id": "q3_2_b",
+                                "label": "The roller coaster is more immersive and engaging",
+                                "correct": false
+                            },
+                            {
+                                "id": "q3_2_c",
+                                "label": "The meditation experience is designed for inward exploration, while the roller coaster is designed for external entertainment",
+                                "correct": true
+                            },
+                            {
+                                "id": "q3_2_d",
+                                "label": "The meditation experience requires biofeedback sensors",
+                                "correct": false
                             }
-                        ]
+                        ],
+                        "synthesis": {
+                            "q3_2_a": "<p>Pacing alone doesn't determine what's cyberdelic. Some consciousness exploration experiences might be dynamic and fast-moving, while some entertainment experiences might be slow and contemplative. What matters is the intention behind the design . whether it's facilitating inner exploration or external entertainment. <strong>Try again.</strong></p>",
+                            "q3_2_b": "<p>Both can be equally immersive. Immersion and engagement don't determine what's cyberdelic; purpose does. A VR roller coaster creates immersion for entertainment, while VR meditation creates immersion for consciousness exploration. Both are immersive, but serve different intentions. <strong>Try again.</strong></p>",
+                            "q3_2_d": "<p>Not all cyberdelic experiences require biofeedback sensors, and not all experiences with biofeedback are cyberdelic. Sensors are one possible tool, but what makes something cyberdelic is the intention to facilitate consciousness exploration and transformation, not the specific technologies used. <strong>Try again.</strong></p>",
+                            "q3_2_c": "<p>Exactly. The fundamental difference is design intention. The meditation experience uses technology to facilitate turning attention inward and exploring consciousness. The roller coaster uses technology to create external thrills and entertainment. Same medium, different messages. This is what distinguishes cyberdelic from non-cyberdelic uses of technology.</p>"
+                        }
                     },
                     {
-                        "id": "quiz2_q2_wrong_b",
-                        "narrative": "<p>Interest existed. universities, military, and researchers were very invested. The problem was that the technology couldn't deliver meaningful experiences. Headsets were heavy, caused motion sickness, had terrible resolution, and cost over $100,000. The hardware limited adoption, not lack of interest. <strong>Try again.</strong></p>",
-                        "choices": [
+                        "question": "Why is the 'none-substance' distinction important in cyberdelics?",
+                        "options": [
                             {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "quiz2_q2"
+                                "id": "q4_1_a",
+                                "label": "Because technology is better and more powerful than substances in every way",
+                                "correct": false
+                            },
+                            {
+                                "id": "q4_1_b",
+                                "label": "Because it emphasizes safety, precision control, and wider accessibility for consciousness exploration",
+                                "correct": true
+                            },
+                            {
+                                "id": "q4_1_c",
+                                "label": "Because substances are illegal everywhere, so we have to use technology instead",
+                                "correct": false
+                            },
+                            {
+                                "id": "q4_1_d",
+                                "label": "Because substances don't actually work, while technology does",
+                                "correct": false
                             }
-                        ]
+                        ],
+                        "synthesis": {
+                            "q4_1_a": "<p>This isn't about one being 'better' than the other. Both paths have value. Cyberdelics focuses on technology because of specific benefits it offers (like repeatability and control), not because it's trying to replace or compete with other methods. <strong>Try again.</strong></p>",
+                            "q4_1_c": "<p>Legal status varies widely around the world and isn't the primary reason for the focus on technology. The core reasons are functional . precision, safety, and the ability to build mental skills through active participation. <strong>Try again.</strong></p>",
+                            "q4_1_d": "<p>Both technology and substances have documented effects on consciousness. The 'none-substance' principle isn't about effectiveness; it's about the medium and the methodology. Cyberdelics specifically explores the potential of digital tools for this work. <strong>Try again.</strong></p>",
+                            "q4_1_b": "<p>Exactly. By focusing on technology alone, cyberdelics offers a path for consciousness exploration that is highly controllable, repeatable, and accessible to a broad audience without the medical or legal complexities of pharmaceutical substances.</p>"
+                        }
                     },
                     {
-                        "id": "quiz2_q2_wrong_d",
-                        "narrative": "<p>While pioneers had different emphases, they generally agreed on VR's transformative potential. The barrier wasn't conceptual disagreement but technical limitation. They shared similar visions but lacked the technology to realize them. The challenge was capability, not consensus. <strong>Try again.</strong></p>",
-                        "choices": [
+                        "question": "What does it mean that cyberdelics is an 'active' practice?",
+                        "options": [
                             {
-                                "id": "retry",
-                                "label": "Try Again",
-                                "outcome": "quiz2_q2"
+                                "id": "q4_2_a",
+                                "label": "You have to move around physically while using the technology",
+                                "correct": false
+                            },
+                            {
+                                "id": "q4_2_b",
+                                "label": "The technology helps you train your own mental skills (like focus or calm) rather than doing it for you",
+                                "correct": true
+                            },
+                            {
+                                "id": "q4_2_c",
+                                "label": "You have to be an expert in technology to use the tools",
+                                "correct": false
+                            },
+                            {
+                                "id": "q4_2_d",
+                                "label": "The experiences are always fast-paced and high-energy",
+                                "correct": false
                             }
-                        ]
+                        ],
+                        "synthesis": {
+                            "q4_2_a": "<p>While some experiences might involve physical movement, 'active' in this context refers to mental engagement. It's about how you use your mind during the experience, not necessarily horizontal or vertical movement. <strong>Try again.</strong></p>",
+                            "q4_2_c": "<p>Cyberdelic tools are designed to be intuitive and accessible to everyone, regardless of technical expertise. You don't need to be a 'techie' to benefit from consciousness exploration. <strong>Try again.</strong></p>",
+                            "q4_2_d": "<p>Many cyberdelic experiences are actually very calm and slow-paced (like meditation). 'Active' refers to the mental effort and skill-building involved, not the visual or sensory intensity of the experience. <strong>Try again.</strong></p>",
+                            "q4_2_b": "<p>Precisely. Unlike pharmaceutical interventions where the effect is passive, cyberdelic tools often use biofeedback or interactive elements to help you learn how to navigate your own mind. This builds skills that you maintain after the experience is over. <strong>Quiz Complete.</strong></p>"
+                        }
                     }
                 ]
             }

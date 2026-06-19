@@ -1,0 +1,21 @@
+{
+    "id": "MiniLesson 2 4.4 Simulation",
+    "title": "Cyberdelic Convergence Map",
+    "description": "An interactive simulation exploring: Cyberdelic Convergence Map. Engage with the content to deepen your understanding.",
+    "theme": {
+        "primaryColor": "#5900ff",
+        "fontBody": "Rajdhani, sans-serif"
+    },
+    "modules": [
+        {
+            "id": "culture_map_2.3",
+            "title": "Cyberdelic Convergence Map",
+            "type": "interactive-simulation",
+            "content": {
+                "engine": "CyberdelicConvergence",
+                "placeholder": true,
+                "notes": "Interactive visualization of 1980-2020 timeline comparing Cultural Movements vs Tech Development. Convergence points highlighted."
+            }
+        }
+    ]
+}

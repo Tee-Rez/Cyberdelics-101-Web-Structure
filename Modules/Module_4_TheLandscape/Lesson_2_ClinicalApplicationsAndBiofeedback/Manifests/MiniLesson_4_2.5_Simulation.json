@@ -1,0 +1,22 @@
+{
+    "id": "MiniLesson 4 2.5 Simulation",
+    "title": "The Cybernetic Loop",
+    "description": "An interactive simulation exploring: The Cybernetic Loop. Engage with the content to deepen your understanding.",
+    "theme": {
+        "primaryColor": "#5900ff",
+        "fontBody": "Rajdhani, sans-serif"
+    },
+    "modules": [
+        {
+            "id": "module_4_2_3_simulation",
+            "title": "The Cybernetic Loop",
+            "type": "interactive-simulation",
+            "content": {
+                "engine": "CyberneticLoop",
+                "params": {
+                    "speed": 4
+                }
+            }
+        }
+    ]
+}

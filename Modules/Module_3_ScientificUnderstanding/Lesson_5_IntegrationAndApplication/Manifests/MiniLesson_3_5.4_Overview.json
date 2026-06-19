@@ -1,0 +1,78 @@
+{
+    "id": "MiniLesson 3 5.4 Overview",
+    "title": "Applying the Frameworks",
+    "description": "A knowledge check overview containing 2 question(s) to test your understanding of the lesson.",
+    "theme": {
+        "primaryColor": "#5900ff",
+        "fontBody": "Rajdhani, sans-serif"
+    },
+    "modules": [
+        {
+            "id": "ml_3_5_knowledge_check",
+            "title": "Applying the Frameworks",
+            "type": "option-selector",
+            "config": {
+                "mode": "single",
+                "style": "text",
+                "questions": [
+                    {
+                        "question": "<h3>A user engages in a deep meditation and discovers a profound feeling of connection to nature. The next day, they quickly forget the feeling and return to normal routines. Which phase of the States to Traits protocol did they primarily fail to practice?</h3>",
+                        "options": [
+                            {
+                                "id": "opt_a",
+                                "label": "Induction, because the meditation wasn't strong enough.",
+                                "correct": false
+                            },
+                            {
+                                "id": "opt_b",
+                                "label": "Encoding, because they did not immediately make sense of or anchor the experience.",
+                                "correct": true
+                            },
+                            {
+                                "id": "opt_c",
+                                "label": "Reinforcement, because tracking wasn't taking place.",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "opt_a": "Incorrect. The meditation induced the state successfully, bringing profound feeling.",
+                            "opt_b": "Correct! They failed the Encoding phase, which involves guided reflection and sensemaking immediately after the experience to prevent the insight from fading.",
+                            "opt_c": "Incorrect. While Reinforcement tracking would be helpful eventually, the immediate failure was not anchoring the experience in the moments after it occurred (Encoding)."
+                        }
+                    },
+                    {
+                        "question": "<h3>If a practitioner finds they are much more comfortable with not knowing the 'right answer' and find themselves holding multiple perspectives with curiosity rather than threat, which SWIM domain is showing significant shifts?</h3>",
+                        "options": [
+                            {
+                                "id": "opt_a",
+                                "label": "Somatic",
+                                "correct": false
+                            },
+                            {
+                                "id": "opt_b",
+                                "label": "Wisdom",
+                                "correct": true
+                            },
+                            {
+                                "id": "opt_c",
+                                "label": "Interdependence",
+                                "correct": false
+                            },
+                            {
+                                "id": "opt_d",
+                                "label": "Metacognition",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "opt_a": "Incorrect. Somatic deals with bodily awareness and regulation.",
+                            "opt_b": "Correct! Wisdom is precisely about shifts in values, holding multiple perspectives, and the capacity to meet uncertainty with curiosity rather than a threat response.",
+                            "opt_c": "Incorrect. Interdependence deals with self-other boundaries.",
+                            "opt_d": "Incorrect. While Metacognition watches the machinery of thought, the specific shift in holding perspectives and ethical comfort with uncertainty belongs to the Wisdom domain."
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

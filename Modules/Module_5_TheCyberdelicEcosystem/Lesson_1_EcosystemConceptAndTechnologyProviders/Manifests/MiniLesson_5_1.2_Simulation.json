@@ -1,0 +1,21 @@
+{
+    "id": "MiniLesson 5 1.2 Simulation",
+    "title": "The Cyberdelic Ecosystem: Living Map",
+    "description": "An interactive simulation exploring: The Cyberdelic Ecosystem: Living Map. Engage with the content to deepen your understanding.",
+    "theme": {
+        "primaryColor": "#00c9a7",
+        "fontBody": "Rajdhani, sans-serif"
+    },
+    "modules": [
+        {
+            "id": "module_5_1_sim",
+            "title": "The Cyberdelic Ecosystem: Living Map",
+            "type": "interactive-simulation",
+            "content": {
+                "engine": "EcosystemMap",
+                "title": "The Cyberdelic Ecosystem",
+                "description": "Explore all eight ecosystem components. Click each node to understand its role, key players, challenge, and opportunity. Visit all eight to continue."
+            }
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "id": "MiniLesson 3 2.3 Simulation",
+    "title": "Presence & Embodiment Parameter Explorer",
+    "description": "An interactive simulation exploring: Presence & Embodiment Parameter Explorer. Engage with the content to deepen your understanding.",
+    "theme": null,
+    "modules": [
+        {
+            "id": "simulation_3_2_3",
+            "title": "Presence & Embodiment Parameter Explorer",
+            "type": "interactive-simulation",
+            "content": {
+                "engine": "PresenceEmbodimentSim",
+                "params": {}
+            }
+        }
+    ]
+}

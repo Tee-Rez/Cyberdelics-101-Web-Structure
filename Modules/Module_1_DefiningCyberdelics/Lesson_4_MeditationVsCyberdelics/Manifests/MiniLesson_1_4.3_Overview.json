@@ -1,0 +1,146 @@
+{
+    "id": "MiniLesson 1 4.3 Overview",
+    "title": "Module 1 Lesson 4 Overview",
+    "description": "A knowledge check overview containing 4 question(s) to test your understanding of the lesson.",
+    "theme": {
+        "primaryColor": "#5900ff",
+        "fontBody": "Rajdhani, sans-serif"
+    },
+    "modules": [
+        {
+            "id": "quiz_1.4_combined",
+            "title": "Module 1 Lesson 4 Overview",
+            "type": "option-selector",
+            "config": {
+                "mode": "single",
+                "style": "text",
+                "questions": [
+                    {
+                        "question": "What pushes a meditation app from basic meditation tech into cyberdelic territory?",
+                        "options": [
+                            {
+                                "id": "q1_1_a",
+                                "label": "The number of guided meditations available",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_1_c",
+                                "label": "Whether it costs money or is free",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_1_d",
+                                "label": "How many users it has",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_1_b",
+                                "label": "Immersive VR environments with biofeedback creating responsive, altered state-inducing experiences",
+                                "correct": true
+                            }
+                        ],
+                        "synthesis": {
+                            "q1_1_a": "<p>Content quantity doesn't determine what's cyberdelic. An app could have thousands of guided meditations and still be basic meditation tech. What matters is the use of immersive technology and biofeedback to intentionally facilitate altered states and consciousness exploration. <strong>Try again.</strong></p>",
+                            "q1_1_c": "<p>Price doesn't determine what's cyberdelic. Free experiences can be cyberdelic, and expensive apps can be basic meditation tech. What matters is the technology used (VR, biofeedback), the depth of altered states facilitated, and the transformational intent behind the design. <strong>Try again.</strong></p>",
+                            "q1_1_d": "<p>Popularity doesn't define the category. Simple meditation apps often have more users than cyberdelic experiences, but that doesn't change their nature. What makes something cyberdelic is immersive technology, biofeedback integration, and intentional altered state cultivation, not user count. <strong>Try again.</strong></p>",
+                            "q1_1_b": "<h3>Correct!</h3><p>Exactly. When meditation practice combines immersive VR, sophisticated biofeedback integration, and intentional design to facilitate profound altered states, it crosses into cyberdelic territory. The technology becomes a catalyst for consciousness exploration, not just a content delivery system.</p>"
+                        }
+                    },
+                    {
+                        "question": "Where would a VR meditation environment without any biofeedback sensors fall on the spectrum?",
+                        "options": [
+                            {
+                                "id": "q1_2_b",
+                                "label": "In the overlap zone between meditation tech and cyberdelics",
+                                "correct": true
+                            },
+                            {
+                                "id": "q1_2_a",
+                                "label": "Purely meditation tech, never cyberdelic",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_2_c",
+                                "label": "Purely cyberdelic because it uses VR",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_2_d",
+                                "label": "It depends entirely on the user's meditation experience level",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "q1_2_a": "<p>This is too rigid. A VR meditation environment creates more immersion than a simple app, even without biofeedback. It exists in the overlap zone. Some VR meditation experiences can facilitate altered states through immersion alone, placing them closer to cyberdelic territory than a simple audio app. <strong>Try again.</strong></p>",
+                            "q1_2_c": "<p>VR alone doesn't make something fully cyberdelic. While it adds immersion, cyberdelic experiences typically combine VR with biofeedback and intentional design to facilitate profound altered states. This VR meditation is closer to cyberdelic than basic apps, but without biofeedback it sits in the overlap zone. <strong>Try again.</strong></p>",
+                            "q1_2_d": "<p>The categorization depends on the design and technology of the experience itself, not the user's background. While experienced meditators might get more from any tool, what makes something meditation tech versus cyberdelic is the immersion level, biofeedback integration, and design intent. <strong>Try again.</strong></p>",
+                            "q1_2_b": "<h3>Correct!</h3><p>Correct. VR meditation without biofeedback sits in the overlap zone. It's more immersive than basic apps but lacks the sophisticated feedback integration of full cyberdelic protocols. This middle ground is valuable and serves people seeking more than basic meditation apps but not full-intensity cyberdelic experiences.</p>"
+                        }
+                    },
+                    {
+                        "question": "What primarily determines whether an experience is wellness tech or cyberdelic?",
+                        "options": [
+                            {
+                                "id": "q2_1_a",
+                                "label": "The price point and accessibility",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_1_c",
+                                "label": "The specific biofeedback sensors being used",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_1_b",
+                                "label": "Whether the focus is on optimizing function or exploring consciousness",
+                                "correct": true
+                            },
+                            {
+                                "id": "q2_1_d",
+                                "label": "Whether a facilitator is present",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "q2_1_a": "<p>Cost doesn't determine the category. Free experiences can be cyberdelic, and expensive wellness tech can be purely optimization-focused. What matters is the intention. optimizing function (wellness) versus exploring consciousness (cyberdelic). <strong>Try again.</strong></p>",
+                            "q2_1_c": "<p>The same biofeedback sensors can be used for wellness or cyberdelics. HRV monitoring can track athletic recovery (wellness) or facilitate altered state exploration (cyberdelic). The sensors themselves don't determine the category, the intention and application do. <strong>Try again.</strong></p>",
+                            "q2_1_d": "<p>Facilitation can be part of either wellness tech or cyberdelic experiences. Some wellness programs use coaches. Some cyberdelic experiences are self-guided. The presence of a facilitator doesn't determine whether the focus is optimization or exploration. <strong>Try again.</strong></p>",
+                            "q2_1_b": "<h3>Correct!</h3><p>Exactly. Wellness tech aims to optimize how you function. Better sleep, less stress, improved performance. Cyberdelics aims to explore consciousness itself. Altered states, transformation, self-discovery. The same technologies can serve either purpose depending on design intent and user engagement.</p>"
+                        }
+                    },
+                    {
+                        "question": "Can the same technology be both wellness tech and cyberdelic depending on how it's used?",
+                        "options": [
+                            {
+                                "id": "q2_2_b",
+                                "label": "Yes, the same device can serve wellness or cyberdelic purposes depending on intention and context",
+                                "correct": true
+                            },
+                            {
+                                "id": "q2_2_a",
+                                "label": "No, technology is designed for one purpose and can't meaningfully serve another",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_2_c",
+                                "label": "Only if the manufacturer explicitly markets it for both purposes",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_2_d",
+                                "label": "Technology should only ever be used for its originally designed purpose",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "q2_2_a": "<p>Technology is often more flexible than its original design intent. A biofeedback device designed for stress management (wellness) could be used by someone exploring altered states (cyberdelic). While design intent matters, user intention and application also shape what the technology actually becomes in practice. <strong>Try again.</strong></p>",
+                            "q2_2_c": "<p>Marketing doesn't determine what technology can be used for. People regularly use tools in ways manufacturers never intended. A device marketed for wellness could be used for consciousness exploration, and vice versa. The actual use matters more than the marketing claims. <strong>Try again.</strong></p>",
+                            "q2_2_d": "<p>This is unnecessarily limiting. Innovation often comes from using tools in novel ways. While design intent is important context, user intention and creative application can legitimately transform how technology serves consciousness work. The same device can serve multiple purposes. <strong>Try again.</strong></p>",
+                            "q2_2_b": "<h3>Quiz Complete!</h3><p>Correct. The same HRV sensor, VR headset, or meditation app can serve different purposes based on how it's engaged with. Using tech to optimize sleep is wellness. Using the same tech to explore consciousness is cyberdelic. Context and intention matter as much as design, sometimes more. <strong>Quiz Complete.</strong></p>"
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}
