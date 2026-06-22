@@ -1,6 +1,6 @@
 {
     "id": "MiniLesson 5 5.2 Overview",
-    "title": "Pathway Reasoning Check",
+    "title": "Module 5 Lesson 5 Overview",
     "description": "A knowledge check overview containing 2 question(s) to test your understanding of the lesson.",
     "theme": {
         "primaryColor": "#5900ff",
@@ -9,7 +9,7 @@
     "modules": [
         {
             "id": "module_5_5_1_quiz",
-            "title": "Pathway Reasoning Check",
+            "title": "Module 5 Lesson 5 Overview",
             "type": "option-selector",
             "config": {
                 "mode": "single",

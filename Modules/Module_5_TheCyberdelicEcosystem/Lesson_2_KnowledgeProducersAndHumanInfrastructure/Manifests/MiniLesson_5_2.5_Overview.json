@@ -1,6 +1,6 @@
 {
     "id": "MiniLesson 5 2.5 Overview",
-    "title": "Research Validation Check",
+    "title": "Module 5 Lesson 2 Overview",
     "description": "A knowledge check overview containing 4 question(s) to test your understanding of the lesson.",
     "theme": {
         "primaryColor": "#00c9a7",
@@ -9,7 +9,7 @@
     "modules": [
         {
             "id": "module_5_2_1_quiz",
-            "title": "Research Validation Check",
+            "title": "Module 5 Lesson 2 Overview",
             "type": "option-selector",
             "config": {
                 "mode": "single",

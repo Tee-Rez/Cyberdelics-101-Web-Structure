@@ -1,6 +1,6 @@
 {
-    "id": "MiniLesson 4 4.5 Overview",
-    "title": "Lesson 4 Overview",
+    "id": "MiniLesson_4_4.5_Overview",
+    "title": "Module 4 Lesson 4 Overview",
     "description": "A knowledge check overview containing 8 question(s) to test your understanding of the lesson.",
     "theme": {
         "primaryColor": "#00d9ff",
@@ -9,7 +9,7 @@
     "modules": [
         {
             "id": "quiz_4_4_1",
-            "title": "Lesson 4 Overview",
+            "title": "Module 4 Lesson 4 Overview",
             "type": "option-selector",
             "config": {
                 "mode": "single",

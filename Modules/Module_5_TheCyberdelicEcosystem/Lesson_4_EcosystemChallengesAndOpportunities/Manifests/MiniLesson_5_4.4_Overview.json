@@ -1,6 +1,6 @@
 {
     "id": "MiniLesson 5 4.4 Overview",
-    "title": "Technological and Social Challenges Check",
+    "title": "Module 5 Lesson 4 Overview",
     "description": "A knowledge check overview containing 4 question(s) to test your understanding of the lesson.",
     "theme": {
         "primaryColor": "#5900ff",
@@ -9,7 +9,7 @@
     "modules": [
         {
             "id": "module_5_4_1_quiz",
-            "title": "Technological and Social Challenges Check",
+            "title": "Module 5 Lesson 4 Overview",
             "type": "option-selector",
             "config": {
                 "mode": "single",

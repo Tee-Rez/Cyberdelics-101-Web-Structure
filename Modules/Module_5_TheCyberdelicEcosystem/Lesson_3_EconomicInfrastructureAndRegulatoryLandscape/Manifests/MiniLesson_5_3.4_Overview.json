@@ -1,6 +1,6 @@
 {
     "id": "MiniLesson 5 3.4 Overview",
-    "title": "Investment and Business Model Check",
+    "title": "Module 5 Lesson 3 Overview",
     "description": "A knowledge check overview containing 4 question(s) to test your understanding of the lesson.",
     "theme": {
         "primaryColor": "#5900ff",
@@ -9,7 +9,7 @@
     "modules": [
         {
             "id": "module_5_3_1_quiz",
-            "title": "Investment and Business Model Check",
+            "title": "Module 5 Lesson 3 Overview",
             "type": "option-selector",
             "config": {
                 "mode": "single",

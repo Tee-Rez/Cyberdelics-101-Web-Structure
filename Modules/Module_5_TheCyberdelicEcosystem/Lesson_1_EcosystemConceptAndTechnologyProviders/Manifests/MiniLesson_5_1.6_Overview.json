@@ -1,6 +1,6 @@
 {
     "id": "MiniLesson 5 1.6 Overview",
-    "title": "Systems Thinking Check",
+    "title": "Module 5 Lesson 1 Overview",
     "description": "A knowledge check overview containing 6 question(s) to test your understanding of the lesson.",
     "theme": {
         "primaryColor": "#00c9a7",
@@ -9,7 +9,7 @@
     "modules": [
         {
             "id": "module_5_1_1_quiz",
-            "title": "Systems Thinking Check",
+            "title": "Module 5 Lesson 1 Overview",
             "type": "option-selector",
             "config": {
                 "mode": "single",

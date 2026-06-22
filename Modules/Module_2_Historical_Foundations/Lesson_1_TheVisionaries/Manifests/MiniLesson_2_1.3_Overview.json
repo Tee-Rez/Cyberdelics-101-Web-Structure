@@ -1,0 +1,146 @@
+{
+    "id": "MiniLesson 2 1.3 Overview",
+    "title": "Module 2 Lesson 1 Overview",
+    "description": "A knowledge check overview containing 4 question(s) to test your understanding of the lesson.",
+    "theme": {
+        "primaryColor": "#5900ff",
+        "fontBody": "Rajdhani, sans-serif"
+    },
+    "modules": [
+        {
+            "id": "quiz_lesson_2_1_combined",
+            "title": "Module 2 Lesson 1 Overview",
+            "type": "option-selector",
+            "config": {
+                "mode": "single",
+                "style": "text",
+                "questions": [
+                    {
+                        "question": "<p><strong>What was Timothy Leary's most famous prediction about technology and consciousness?</strong></p>",
+                        "options": [
+                            {
+                                "id": "q1_a",
+                                "label": "Virtual reality would completely replace physical reality by 2000",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_b",
+                                "label": "Everyone should abandon meditation and use only technology",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_c",
+                                "label": "Psychedelics would soon be legalized worldwide",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_d",
+                                "label": "\"The PC is the LSD of the 1990s\" - computers as consciousness tools",
+                                "correct": true
+                            }
+                        ],
+                        "synthesis": {
+                            "q1_a": "<p>Leary didn't predict VR replacing physical reality. His vision was more nuanced. he believed computers could serve consciousness exploration and transformation similar to how psychedelics did. Technology as tool for inner work, not escape from reality. <strong>Try again.</strong></p>",
+                            "q1_b": "<p>Leary never advocated abandoning traditional practices. He saw technology as an additional path, not a replacement. His vision was about expanding options for consciousness work, not eliminating existing methods. Both/and thinking, not either/or. <strong>Try again.</strong></p>",
+                            "q1_c": "<p>While Leary may have hoped for psychedelic legalization, his key insight about technology was different. he recognized that digital tools could serve similar consciousness-exploring purposes as substances. This was about adding a new category of tools, not just advocating for legalizing old ones. <strong>Try again.</strong></p>",
+                            "q1_d": "<p>Exactly right. In 1994, Leary predicted that personal computers would become tools for consciousness exploration comparable to psychedelic substances. He saw technology serving the same intentions . expanding awareness, facilitating transformation, enabling self-directed exploration. He was correct about the vision but 25+ years early on the timeline.</p><p>Now, <strong>Why was Leary \"right but early\" with his 1994 prediction?</strong></p>"
+                        }
+                    },
+                    {
+                        "question": "<p>Exactly right. In 1994, Leary predicted that personal computers would become tools for consciousness exploration comparable to psychedelic substances. He saw technology serving the same intentions . expanding awareness, facilitating transformation, enabling self-directed exploration. He was correct about the vision but 25+ years early on the timeline.</p><p>Now, <strong>Why was Leary \"right but early\" with his 1994 prediction?</strong></p>",
+                        "options": [
+                            {
+                                "id": "q2_a",
+                                "label": "The technology to deliver on his vision didn't mature until 2016-2020, about 25 years later",
+                                "correct": true
+                            },
+                            {
+                                "id": "q2_b",
+                                "label": "He underestimated how quickly people would embrace technology",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_c",
+                                "label": "Governments banned the development of consciousness technologies",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_d",
+                                "label": "Nobody was interested in using technology for consciousness work",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "q2_a": "<h3>Correct!</h3><p>Precisely. 1980s-90s VR had massive technical limitations . displays with terrible resolution (320x200 or worse), headsets weighing several pounds, 50-100ms tracking latency causing motion sickness, and complete systems costing $100,000-$250,000. The vision was clear, but the technology to realize it didn't exist yet. It would take 20-30 more years for hardware to catch up.</p>",
+                            "q2_b": "<p>Actually, cultural acceptance wasn't the main barrier. The technology simply didn't work well enough in the 1990s . headsets were clunky, caused motion sickness, and couldn't create compelling experiences. Even people open to the idea couldn't have meaningful experiences because the hardware wasn't ready. It was technical limitation, not cultural resistance. <strong>Try again.</strong></p>",
+                            "q2_c": "<p>There were no government bans on VR or consciousness technology development. The barrier was purely technical . displays, processing power, tracking systems, and supporting technologies weren't mature enough. VR failed commercially in the 1990s because the technology couldn't deliver on its promise, not because of regulatory barriers. <strong>Try again.</strong></p>",
+                            "q2_d": "<p>Interest wasn't the problem . capability was. Many people were intrigued by Leary's vision, but 1990s VR couldn't deliver meaningful consciousness experiences. The hardware caused headaches, the graphics were primitive, and the experiences were underwhelming. Interest existed, but viable technology didn't. <strong>Try again.</strong></p>"
+                        }
+                    },
+                    {
+                        "question": "<p><strong>What key insight did Brenda Laurel contribute to early VR thinking?</strong></p>",
+                        "options": [
+                            {
+                                "id": "q1_a",
+                                "label": "VR headsets should be as light as possible",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_b",
+                                "label": "Virtual reality should completely replace physical reality",
+                                "correct": false
+                            },
+                            {
+                                "id": "q1_c",
+                                "label": "The goal should be transformation of the user through experience, not just usability",
+                                "correct": true
+                            },
+                            {
+                                "id": "q1_d",
+                                "label": "Only game developers should work on VR projects",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "q1_a": "<p>While hardware design was important, Laurel's contribution was conceptual, not technical. She focused on the purpose and design philosophy of interactive experiences, not the physical specifications of equipment. Her insight was about transformation, not comfort. <strong>Try again.</strong></p>",
+                            "q1_b": "<p>Laurel never advocated for replacing physical reality. Her vision was about using technology as a medium for transformative experiences that enhance human development, not escape from the real world. It was about augmentation and growth, not replacement. <strong>Try again.</strong></p>",
+                            "q1_c": "<p>Exactly. Laurel argued that technology should be designed to transform users, not just function well. This was radical in a commercial tech culture focused on productivity and usability. Her phrase \"transformation through experience\" became foundational for cyberdelic thinking. it's not enough for technology to work; it should facilitate personal growth and change.</p><p>Now, <strong>Why couldn't the early VR pioneers (1980s-1990s) fully realize their visions?</strong></p>",
+                            "q1_d": "<p>Actually, Laurel brought theatrical and narrative thinking to VR, expanding beyond purely gaming applications. She wanted artists, storytellers, and designers from diverse fields to contribute. Her vision was inclusive of multiple perspectives, not restricted to game developers. <strong>Try again.</strong></p>"
+                        }
+                    },
+                    {
+                        "question": "<p>Exactly. Laurel argued that technology should be designed to transform users, not just function well. This was radical in a commercial tech culture focused on productivity and usability. Her phrase \"transformation through experience\" became foundational for cyberdelic thinking. it's not enough for technology to work; it should facilitate personal growth and change.</p><p>Now, <strong>Why couldn't the early VR pioneers (1980s-1990s) fully realize their visions?</strong></p>",
+                        "options": [
+                            {
+                                "id": "q2_a",
+                                "label": "Government regulations prevented VR development",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_b",
+                                "label": "Nobody was interested in using VR technology",
+                                "correct": false
+                            },
+                            {
+                                "id": "q2_c",
+                                "label": "The technology wasn't ready. displays were poor, systems were expensive ($100K+), and experiences caused motion sickness",
+                                "correct": true
+                            },
+                            {
+                                "id": "q2_d",
+                                "label": "The pioneers disagreed on the direction for VR",
+                                "correct": false
+                            }
+                        ],
+                        "synthesis": {
+                            "q2_a": "<p>There were no regulatory barriers to VR development. The problem was purely technical. the technology simply wasn't good enough. Displays were poor, tracking was inaccurate, processing power was insufficient, and systems were prohibitively expensive. Capability, not regulation, was the barrier. <strong>Try again.</strong></p>",
+                            "q2_b": "<p>Interest existed. universities, military, and researchers were very invested. The problem was that the technology couldn't deliver meaningful experiences. Headsets were heavy, caused motion sickness, had terrible resolution, and cost over $100,000. The hardware limited adoption, not lack of interest. <strong>Try again.</strong></p>",
+                            "q2_c": "<h3>Quiz Complete!</h3><p>Precisely. 1980s-90s VR had massive technical limitations. displays with terrible resolution (320x200 or worse), headsets weighing several pounds, 50-100ms tracking latency causing motion sickness, and complete systems costing $100,000-$250,000. The vision was clear, but the technology to realize it didn't exist yet. It would take 20-30 more years for hardware to catch up.</p> <strong>Quiz Complete.</strong>",
+                            "q2_d": "<p>While pioneers had different emphases, they generally agreed on VR's transformative potential. The barrier wasn't conceptual disagreement but technical limitation. They shared similar visions but lacked the technology to realize them. The challenge was capability, not consensus. <strong>Try again.</strong></p>"
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}
