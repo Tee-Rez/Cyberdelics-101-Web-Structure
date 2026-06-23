@@ -1,6 +1,6 @@
 # Progressive Panels Content: Presence & Embodiment: The Science of Being There and Becoming Someone
 
-## Panel: Presence: The Science of Being There
+## Panel: The Psychology of Presence and Immersion
 
 ### Section: Not All VR Is Equally Real to the Brain
 
@@ -46,7 +46,7 @@
 
 ---
 
-## Panel: Embodiment: The Science of Virtual Bodies
+## Panel: Virtual Embodiment and the Proteus Effect
 
 ### Section: The Rubber Hand Illusion as Foundation
 

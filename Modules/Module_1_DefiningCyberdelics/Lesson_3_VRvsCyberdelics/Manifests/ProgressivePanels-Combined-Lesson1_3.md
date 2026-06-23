@@ -1,6 +1,6 @@
 # Progressive Panels Content: Entertainment vs. Cyberdelics: Direction of Attention & Design Dimensions
 
-## Panel: The Direction of Attention
+## Panel: Shifting Intentions: Entertainment vs. Cyberdelic VR
 
 ### Section: The Technology is the Same
 
@@ -44,7 +44,7 @@
 
 ---
 
-## Panel: The Six Design Dimensions
+## Panel: The Architectural Dimensions of Cyberdelic Design
 
 ### Section: The Architecture of Experience
 

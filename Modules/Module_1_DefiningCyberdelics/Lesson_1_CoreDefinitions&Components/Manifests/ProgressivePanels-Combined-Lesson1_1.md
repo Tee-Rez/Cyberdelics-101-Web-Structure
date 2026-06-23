@@ -1,6 +1,6 @@
 # Progressive Panels Content: What Cyberdelics Actually Are: From Etymology to Principle
 
-## Panel: Breaking Down 'Cyberdelics'
+## Panel: Etymology and Historical Context of Cyberdelics
 
 ### Section: A Fusion Word
 
@@ -48,7 +48,7 @@
 
 ---
 
-## Panel: The Three Essential Components
+## Panel: The Triad of Cyberdelic Experiences
 
 ### Section: Three Legs of the Same Stool
 
@@ -96,7 +96,7 @@
 
 ---
 
-## Panel: The Medium is the Message
+## Panel: Intention and the Role of the Medium
 
 ### Section: The Message in the Medium
 
@@ -138,7 +138,7 @@
 
 ---
 
-## Panel: The 'None-Substance' Principle
+## Panel: The Unique Advantages of Non-Substance Technologies
 
 ### Section: Focus on Technology
 

@@ -1,6 +1,6 @@
 # Progressive Panels Content: Meditation/Wellness Tech & Cyberdelics: Mapping the Overlap
 
-## Panel: Mapping the Boundary
+## Panel: Navigating the Spectrum from Meditation to Cyberdelics
 
 ### Section: Significant Common Ground
 
@@ -46,7 +46,7 @@
 
 ---
 
-## Panel: The Core of the Distinction
+## Panel: Process vs. Outcome: The Role of User Intention
 
 ### Section: The Intention Shift
 

@@ -1,6 +1,6 @@
 # Progressive Panels Content: The Research Evidence: What Science Has Actually Proven
 
-## Panel: Experiential Validation: The Isness Study
+## Panel: Experiential Validation and Design Principles
 
 ### Section: Why Methodology Matters Here
 
@@ -44,7 +44,7 @@
 
 ---
 
-## Panel: Neural Validation: What Happens in the Brain
+## Panel: Neural Validation and the DeepDream Findings
 
 ### Section: The DeepDream VR Research
 
@@ -88,7 +88,7 @@
 
 ---
 
-## Panel: Therapeutic Evidence and Honest Calibration
+## Panel: The Spectrum of Therapeutic Evidence
 
 ### Section: The Evidence Spectrum
 

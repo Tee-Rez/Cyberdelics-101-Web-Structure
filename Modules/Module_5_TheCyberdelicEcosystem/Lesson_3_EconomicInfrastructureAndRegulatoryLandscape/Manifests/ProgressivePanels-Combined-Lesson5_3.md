@@ -1,6 +1,6 @@
 # Progressive Panels Content: Economic Infrastructure and Regulatory Landscape: Funding, Rules and Knowledge Flow
 
-## Panel: Investment Sources and Business Models
+## Panel: Investment Streams and Business Model Sustainability
 
 ### Section: Where the Money Comes From, Investment Sources
 
@@ -48,7 +48,7 @@
 
 ---
 
-## Panel: Regulatory Landscape and Data Privacy
+## Panel: Navigating Regulation, Exemptions, and Data Privacy
 
 ### Section: The FDA Medical Device Pathway, Three Tiers
 
@@ -92,7 +92,7 @@
 
 ---
 
-## Panel: Knowledge Sharing Infrastructure
+## Panel: The Infrastructure of Knowledge Sharing and Credibility
 
 ### Section: Academic Journals, The Field's Credibility Infrastructure
 

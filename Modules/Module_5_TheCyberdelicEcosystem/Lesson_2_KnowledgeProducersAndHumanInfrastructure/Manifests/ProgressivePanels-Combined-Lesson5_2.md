@@ -1,6 +1,6 @@
 # Progressive Panels Content: Knowledge Producers & Human Infrastructure: Research, Practitioners & Community
 
-## Panel: Research Institutions, Who Validates the Field
+## Panel: The Role of Research Institutions in Field Validation
 
 ### Section: Why Research Validation Is Non-Negotiable
 
@@ -52,7 +52,7 @@
 
 ---
 
-## Panel: Clinical Practitioners, From Research to Real Care
+## Panel: Translating Research to Clinical Practice
 
 ### Section: The Translation Challenge
 
@@ -88,7 +88,7 @@
 
 ---
 
-## Panel: Facilitators, An Emerging Profession
+## Panel: The Emerging Role of the Professional Facilitator
 
 ### Section: Who Facilitators Are, A Genuinely New Role
 
@@ -134,7 +134,7 @@
 
 ---
 
-## Panel: Communities, The Peer Infrastructure
+## Panel: Communities and the Peer-to-Peer Infrastructure
 
 ### Section: Online Communities, Where the Field Lives Day-to-Day
 

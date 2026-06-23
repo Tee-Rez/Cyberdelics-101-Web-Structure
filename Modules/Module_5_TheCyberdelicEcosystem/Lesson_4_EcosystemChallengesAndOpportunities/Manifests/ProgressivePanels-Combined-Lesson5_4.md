@@ -1,6 +1,6 @@
 # Progressive Panels Content: Ecosystem Challenges and Opportunities, What is Holding It Back and What is Coming
 
-## Panel: Technological and Social Challenges
+## Panel: Overcoming Technological Limitations and Social Skepticism
 
 ### Section: Hardware Limitations, The Physical Ceiling
 
@@ -44,7 +44,7 @@
 
 ---
 
-## Panel: The Ecology of Practices
+## Panel: Building a Sustainable Ecology of Practices
 
 ### Section: Experiences Don't Transform People. Practices Do.
 
@@ -88,7 +88,7 @@
 
 ---
 
-## Panel: Opportunities, Where the Field Is Heading
+## Panel: Future Opportunities and the Convergence Scenario
 
 ### Section: Technology Opportunities, The Hardware Horizon
 

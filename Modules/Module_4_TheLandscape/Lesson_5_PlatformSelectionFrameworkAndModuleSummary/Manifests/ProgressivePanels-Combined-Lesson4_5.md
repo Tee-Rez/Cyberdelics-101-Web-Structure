@@ -1,6 +1,6 @@
 # Progressive Panels Content: Platform Selection & Module Synthesis: From Framework to Full Mental Model
 
-## Panel: Introduction to the Framework
+## Panel: The Four-Step Platform Selection Framework
 
 ### Section: The Systematic Approach
 
@@ -42,7 +42,7 @@
 
 ---
 
-## Panel: Bridge to Module 5
+## Panel: Transition: Preparing for the Cyberdelic Ecosystem
 
 ### Section: Summary & Transition
 

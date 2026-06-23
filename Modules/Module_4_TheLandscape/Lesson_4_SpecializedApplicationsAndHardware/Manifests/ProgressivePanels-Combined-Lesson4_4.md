@@ -1,6 +1,6 @@
 # Progressive Panels Content: Specialized Applications & Hardware: From Breathwork to Headset Selection
 
-## Panel: Breath & Sound Technologies
+## Panel: Breathwork and Sound as Therapeutic Modalities
 
 ### Section: What VR Adds to Breathwork
 
@@ -54,7 +54,7 @@
 
 ---
 
-## Panel: Movement & Nature Psychology
+## Panel: Movement, Flow States, and Nature Psychology
 
 ### Section: Flow State in Movement VR
 
@@ -98,7 +98,7 @@
 
 ---
 
-## Panel: The Experimental Frontier
+## Panel: The Experimental Frontier and Ethical Pathways
 
 ### Section: Open Brush as Consciousness Tool
 
@@ -142,7 +142,7 @@
 
 ---
 
-## Panel: Hardware Decision Matrix
+## Panel: Navigating Hardware Choices and Trade-offs
 
 ### Section: The 4 Factors That Matter
 

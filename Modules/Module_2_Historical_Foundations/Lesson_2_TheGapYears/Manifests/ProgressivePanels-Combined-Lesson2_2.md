@@ -1,6 +1,6 @@
 # Progressive Panels Content: The Gap Years: VR Winter & the Rise of Meditation Apps
 
-## Panel: The Fall and The Void
+## Panel: The Wilderness Years: Failures and Backlash
 
 ### Section: The Spectacular Failures
 
@@ -44,7 +44,7 @@
 
 ---
 
-## Panel: The Quiet Revolution
+## Panel: The Rise of Meditation Apps and Mobile Technologies
 
 ### Section: The Meditation App Revolution
 

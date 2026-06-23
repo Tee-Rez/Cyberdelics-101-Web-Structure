@@ -1,6 +1,6 @@
 # Progressive Panels Content: Psychedelics & Cyberdelics: Shared Ground, Different Paths
 
-## Panel: Common Ground
+## Panel: Foundational Similarities Between Psychedelics and Cyberdelics
 
 ### Section: Common Ground
 
@@ -36,7 +36,7 @@
 
 ---
 
-## Panel: Both/And
+## Panel: A Synergistic Approach: Integrating Both Modalities
 
 ### Section: Both/And, Not Either/Or
 

@@ -1,6 +1,6 @@
 # Progressive Panels Content: The Visionaries: Leary, the Pioneers & the Culture That Made It Possible
 
-## Panel: The Evolution of a Visionary
+## Panel: Timothy Leary's Prophetic Vision and Legacy
 
 ### Section: The Evolution Nobody Knows About
 
@@ -52,7 +52,7 @@
 
 ---
 
-## Panel: Establishing the Foundations
+## Panel: Pioneers of Virtual Reality and Transformation
 
 ### Section: Jaron Lanier : Naming Virtual Reality
 
@@ -104,7 +104,7 @@
 
 ---
 
-## Panel: Cultural Preparation
+## Panel: Cultural Movements That Paved the Way
 
 ### Section: Cyberpunk : The Fictional Blueprint
 

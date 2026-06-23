@@ -1,6 +1,6 @@
 # Progressive Panels Content: Your Role in the Ecosystem: Pathways, Participation and Module Synthesis
 
-## Panel: Six Pathways for Participation
+## Panel: The Six Pathways for Active Ecosystem Participation
 
 ### Section: The Ecosystem Needs All of It
 

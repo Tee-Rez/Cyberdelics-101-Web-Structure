@@ -1,6 +1,6 @@
 # Progressive Panels Content: Purpose-Built Platforms: Mapping the Cyberdelic Application Landscape
 
-## Panel: Mapping the Landscape
+## Panel: Categorizing the Cyberdelic Landscape
 
 ### Section: Meditation & Mindfulness
 
@@ -52,7 +52,7 @@
 
 ---
 
-## Panel: Two Philosophies
+## Panel: Engagement vs. Fascination: Differing Design Philosophies
 
 ### Section: TRIPP: The Engagement Philosophy
 
@@ -106,7 +106,7 @@
 
 ---
 
-## Panel: Enosis Therapeutics & Emerging Platforms
+## Panel: Emerging Platforms and Therapeutic Models
 
 ### Section: Enosis Therapeutics: VR as a Therapy Adjunct
 

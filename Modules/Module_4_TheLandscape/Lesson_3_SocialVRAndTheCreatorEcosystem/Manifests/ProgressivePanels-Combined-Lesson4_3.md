@@ -1,6 +1,6 @@
 # Progressive Panels Content: Social VR & the Creator Ecosystem: Amplification, Platforms & Quality
 
-## Panel: The Science of Shared Virtual Space
+## Panel: The Psychology of Shared Virtual Spaces
 
 ### Section: Social Facilitation Theory
 
@@ -36,7 +36,7 @@
 
 ---
 
-## Panel: The Spectrum of Shared Space
+## Panel: Platforms for Shared Cyberdelic Experiences
 
 ### Section: Isness-D - Validated Mystical Experience
 
@@ -68,7 +68,7 @@
 
 ---
 
-## Panel: The Creator's Pipeline
+## Panel: Navigating the Creator and Distribution Ecosystem
 
 ### Section: The Engine Layer
 
@@ -108,7 +108,7 @@
 
 ---
 
-## Panel: Evaluating Quality
+## Panel: Evaluating Quality Within Creator Ecosystems
 
 ### Section: The Four Creator Ecosystems
 

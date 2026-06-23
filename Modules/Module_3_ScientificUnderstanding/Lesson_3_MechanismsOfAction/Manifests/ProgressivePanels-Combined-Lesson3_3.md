@@ -1,6 +1,6 @@
 # Progressive Panels Content: The Seven Mechanisms of Action: How VR Changes the Brain
 
-## Panel: Mechanisms 1 & 2: Attentional Capture & DMN Modulation
+## Panel: Attention and Default Mode Network Modulation
 
 ### Section: Why Mechanisms Matter for Practitioners
 
@@ -46,7 +46,7 @@
 
 ---
 
-## Panel: Mechanisms 3 & 4: Emotional Regulation & Perspective Shift
+## Panel: Emotional Regulation and Shifts in Perspective
 
 ### Section: Mechanism 3: Emotional Regulation
 
@@ -92,7 +92,7 @@
 
 ---
 
-## Panel: Mechanisms 5, 6 & 7
+## Panel: Integration and Neuroplasticity Mechanisms
 
 ### Section: Mechanism 5: Neuroplasticity
 

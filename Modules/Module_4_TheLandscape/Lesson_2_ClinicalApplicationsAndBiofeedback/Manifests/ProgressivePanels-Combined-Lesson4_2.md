@@ -1,6 +1,6 @@
 # Progressive Panels Content: Clinical VR & Biofeedback: From Pain Labs to the Cybernetic Loop
 
-## Panel: The Clinical Standard
+## Panel: Virtual Reality Exposure Therapy (VRET) as a Clinical Standard
 
 ### Section: How VRET Works - The Mechanism
 
@@ -44,7 +44,7 @@
 
 ---
 
-## Panel: The Breakthrough
+## Panel: SnowWorld and the Mechanisms of Pain Distraction
 
 ### Section: SnowWorld - Where It Started
 
@@ -88,7 +88,7 @@
 
 ---
 
-## Panel: Biofeedback Integration
+## Panel: The Mechanisms of Biofeedback Integration
 
 ### Section: What Makes Biofeedback Different
 
@@ -116,7 +116,7 @@
 
 ---
 
-## Panel: Biofeedback Types Explorer
+## Panel: Exploring Modalities of Biofeedback
 
 ### Section: 1. Heart Rate Variability (HRV)
 

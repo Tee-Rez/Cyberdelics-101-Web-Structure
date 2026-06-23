@@ -1,6 +1,6 @@
 # Progressive Panels Content: The Cyberdelic Ecosystem: Systems Thinking, Hardware, Software & Open Source
 
-## Panel: Thinking in Ecosystems
+## Panel: The Necessity of Ecosystem Thinking
 
 ### Section: The Ecosystem Concept, why Isolated Product Thinking Fails
 
@@ -44,7 +44,7 @@
 
 ---
 
-## Panel: Hardware Manufacturers: Strategic Players
+## Panel: The Role of Hardware Manufacturers
 
 ### Section: Hardware Manufacturers as Ecosystem Players
 
@@ -88,7 +88,7 @@
 
 ---
 
-## Panel: Software Developers: The Builder Landscape
+## Panel: The Builder Landscape and Software Ecosystem
 
 ### Section: Four Categories of Software Developers
 
@@ -132,7 +132,7 @@
 
 ---
 
-## Panel: Open Source & Cross-Pollination
+## Panel: Open Source Collaboration and Cross-Pollination
 
 ### Section: Major Open Source Contributions
 

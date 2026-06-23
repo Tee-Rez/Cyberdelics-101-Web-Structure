@@ -1,6 +1,6 @@
 # Progressive Panels Content: Science to Session: Translating Research Into Practice
 
-## Panel: States to Traits: The Protocol of Transformation
+## Panel: The Protocol of Transformation: From States to Traits
 
 ### Section: From Experience to Orientation
 
@@ -58,7 +58,7 @@
 
 ---
 
-## Panel: The SWIM Model: Mapping Change
+## Panel: The SWIM Model: A Phenomenological Framework for Change
 
 ### Section: A Phenomenological Framework
 
@@ -116,7 +116,7 @@
 
 ---
 
-## Panel: Bridge to The Landscape
+## Panel: Transition: Bridging Science and the Ecosystem
 
 ### Section: From Science to the Current Landscape
 

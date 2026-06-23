@@ -1,6 +1,6 @@
 # Progressive Panels Content: Theories of Consciousness: Four Frameworks for Understanding Altered States
 
-## Panel: Global Workspace Theory & Integrated Information Theory
+## Panel: Core Theories of Consciousness: GWT and IIT
 
 ### Section: Why Theories Matter for Practitioners
 
@@ -46,7 +46,7 @@
 
 ---
 
-## Panel: Predictive Processing & Embodied Cognition
+## Panel: Perception Models: Predictive Processing and Embodied Cognition
 
 ### Section: The Brain Doesn't Perceive Reality. It Predicts It.
 

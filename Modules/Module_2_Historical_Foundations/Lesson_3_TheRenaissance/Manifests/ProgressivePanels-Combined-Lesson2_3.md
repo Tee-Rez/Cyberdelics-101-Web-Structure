@@ -1,6 +1,6 @@
 # Progressive Panels Content: The VR Renaissance: From Duct Tape to an Ecosystem
 
-## Panel: The Garage Revolution
+## Panel: The Resurgence of VR: From Oculus to Convergence
 
 ### Section: The Garage Prototype
 
@@ -46,7 +46,7 @@
 
 ---
 
-## Panel: A Competitive Revolution
+## Panel: The Ecosystem Effect and Broad Market Adoption
 
 ### Section: HTC Vive - Room-Scale Revolution
 
